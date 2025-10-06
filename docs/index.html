@@ -1,0 +1,3208 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+ <title>Offshore Wind Power Platform Ontology for OPTiMAR</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl","name":"Offshore Wind Power Platform Ontology for OPTiMAR", "headline":"Ontology modeling structural elements, sensors, events, and failures in offshore wind platforms, including measurement data and involved actors.", "dateReleased":"2025-09-30", "dateModified":"2025-10-06", "version":"Versión 1.0 of the Ontology", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Alejandro Flores (USAL), Alberto Montero (USAL), Oihana Garcia (Tekniker) and Cristina Aceta (Tekniker)"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="resources/marked.min.js"></script> 
+    <script> 
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+	var hash = location.hash;
+	if($(hash).offset()!=null){
+	  $('html, body').animate({scrollTop: $(hash).offset().top}, 0);
+}
+	loadTOC();
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+$(function(){
+    loadHash();
+}); $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ }; 
+   </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index.html"><b>en</b></a> </div>
+<h1>Offshore Wind Power Platform Ontology for OPTiMAR</h1>
+<h2>Release: 2025-09-30</h2>
+
+
+<dl>
+<dt>Modified on: 2025-10-06</dt>
+<dt>This version:</dt>
+<dd><a href="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl">https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl">https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl</a></dd>
+<dt>Revision:</dt>
+<dd>Versión 1.0 of the Ontology</dd>
+<dt>Issued on:</dt>
+<dd>2025-09-30</dd>
+<dt>Authors:</dt>
+<dd>Alejandro Flores (USAL), Alberto Montero (USAL), Oihana Garcia (Tekniker) and Cristina Aceta (Tekniker)</dd>
+
+<dt>Publisher:</dt>
+<dd>University of Salamanca, Technology and Research Centre - Tekniker</dd>
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://purl.org/NET/rdflicense/MIT1.0" target="_blank"><img src="https://img.shields.io/badge/License-MIT%20License-blue.svg" alt="http://purl.org/NET/rdflicense/MIT1.0" /></a>
+</dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.1234/abcd</dd>
+<dt>Compatible with:</dt>
+<dd><a href="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v0.2.ttl">https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v0.2.ttl</a></dd>
+</dl>
+
+<hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
+Ontology modeling structural elements, sensors, events, and failures in offshore wind platforms, including measurement data and involved actors.</span>
+</div>
+<div id="toc"></div> 
+
+<!--INTRODUCTION SECTION-->
+    <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This is a place holder text for the introduction. The introduction should briefly describe the ontology, its motivation, state of the art and goals.</span>
+<div id="namespacedeclarations">
+<h3 id="ns" class="list">Namespace declarations</h3>
+<div id="ns" align="center">
+<table>
+<caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+<tbody>
+<tr><td><b>bibo</b></td><td>&lt;http://purl.org/ontology/bibo/&gt;</td></tr>
+<tr><td><b>dc</b></td><td>&lt;http://purl.org/dc/elements/1.1/&gt;</td></tr>
+<tr><td><b>dcterms</b></td><td>&lt;http://purl.org/dc/terms/&gt;</td></tr>
+<tr><td><b>ex</b></td><td>&lt;https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#&gt;</td></tr>
+<tr><td><b>foaf</b></td><td>&lt;http://xmlns.com/foaf/0.1/&gt;</td></tr>
+<tr><td><b>owl</b></td><td>&lt;http://www.w3.org/2002/07/owl#&gt;</td></tr>
+<tr><td><b>prov</b></td><td>&lt;http://www.w3.org/ns/prov#&gt;</td></tr>
+<tr><td><b>qudt</b></td><td>&lt;http://qudt.org/schema/qudt/&gt;</td></tr>
+<tr><td><b>rdf</b></td><td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td></tr>
+<tr><td><b>rdfs</b></td><td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td></tr>
+<tr><td><b>sosa</b></td><td>&lt;https://www.w3.org/ns/sosa/&gt;</td></tr>
+<tr><td><b>unit</b></td><td>&lt;http://qudt.org/vocab/unit/&gt;</td></tr>
+<tr><td><b>vann</b></td><td>&lt;http://purl.org/vocab/vann/&gt;</td></tr>
+<tr><td><b>xml</b></td><td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td></tr>
+<tr><td><b>xsd</b></td><td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+  
+
+<!--OVERVIEW SECTION-->
+    <div id="overview"><h2 id="overv" class="list">Offshore Wind Power Platform Ontology for OPTiMAR: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+This ontology has the following classes and properties.</span>
+<h4>Classes</h4>
+<ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#Actor"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor">Actor</a>
+   </li>
+   <li>
+      <a href="#AnalyticalRole"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#AnalyticalRole">Analytical Role</a>
+   </li>
+   <li>
+      <a href="#Anemometer"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Anemometer">Anemometer</a>
+   </li>
+   <li>
+      <a href="#Base"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Base">Base (floating substructure)</a>
+   </li>
+   <li>
+      <a href="#Blade"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Blade">Blade</a>
+   </li>
+   <li>
+      <a href="#CloudAdministrator"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CloudAdministrator">Cloud Administrator</a>
+   </li>
+   <li>
+      <a href="#Component"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a>
+   </li>
+   <li>
+      <a href="#ComponentBreakage"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ComponentBreakage">Component Breakage</a>
+   </li>
+   <li>
+      <a href="#CorrosionCamera"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionCamera">Corrosion Camera</a>
+   </li>
+   <li>
+      <a href="#CorrosionEvent"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionEvent">Corrosion Event</a>
+   </li>
+   <li>
+      <a href="#Data"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data">Data</a>
+   </li>
+   <li>
+      <a href="#DataAnalyst"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DataAnalyst">Data Analyst</a>
+   </li>
+   <li>
+      <a href="#DynamicMonitor"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DynamicMonitor">Dynamic Monitor</a>
+   </li>
+   <li>
+      <a href="#EnvironmentalCondition"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#EnvironmentalCondition">Environmental Condition</a>
+   </li>
+   <li>
+      <a href="#Event"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event">Event</a>
+   </li>
+   <li>
+      <a href="#Failure"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure">Failure</a>
+   </li>
+   <li>
+      <a href="#FailureEvent"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FailureEvent">Failure Event</a>
+   </li>
+   <li>
+      <a href="#FloatingPlatform"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FloatingPlatform">Floating Platform</a>
+   </li>
+   <li>
+      <a href="#FloatingSubstructure"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FloatingSubstructure">Floating Substructure</a>
+   </li>
+   <li>
+      <a href="#GaugeSystem"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#GaugeSystem">Gauge System</a>
+   </li>
+   <li>
+      <a href="#Hub"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Hub">Hub</a>
+   </li>
+   <li>
+      <a href="#Image"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Image">Image</a>
+   </li>
+   <li>
+      <a href="#ISUMSystem"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ISUMSystem">ISUM System</a>
+   </li>
+   <li>
+      <a href="#Location"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Location">Location</a>
+   </li>
+   <li>
+      <a href="#Maintenance"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Maintenance">Maintenance</a>
+   </li>
+   <li>
+      <a href="#MaintenanceOperator"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaintenanceOperator">Maintenance Operator</a>
+   </li>
+   <li>
+      <a href="#ManagementRole"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ManagementRole">Management Role</a>
+   </li>
+   <li>
+      <a href="#MaterialFatigue"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaterialFatigue">Material Fatigue</a>
+   </li>
+   <li>
+      <a href="#Measurement"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement">Measurement</a>
+   </li>
+   <li>
+      <a href="#Misalignment"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Misalignment">Misalignment</a>
+   </li>
+   <li>
+      <a href="#MonitoringTask"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MonitoringTask">Monitoring Task</a>
+   </li>
+   <li>
+      <a href="#MooringSystem"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MooringSystem">Mooring System</a>
+   </li>
+   <li>
+      <a href="#Nacelle"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Nacelle">Nacelle</a>
+   </li>
+   <li>
+      <a href="#Observation"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Observation">
+         <span>Observation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#WindPowerPlatform"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#WindPowerPlatform">Offshore Wind Power Platform</a>
+   </li>
+   <li>
+      <a href="#ParkOwner"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ParkOwner">Park Owner</a>
+   </li>
+   <li>
+      <a href="#PitchSystem"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#PitchSystem">Pitch System</a>
+   </li>
+   <li>
+      <a href="#PlatformActuator"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#PlatformActuator">Platform Actuator</a>
+   </li>
+   <li>
+      <a href="#Role"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Role">Role</a>
+   </li>
+   <li>
+      <a href="#Sensor"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor">Sensor</a>
+   </li>
+   <li>
+      <a href="#StressData"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StressData">Stress Data</a>
+   </li>
+   <li>
+      <a href="#StructuralCamera"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralCamera">Structural Camera</a>
+   </li>
+   <li>
+      <a href="#StructuralComponent"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralComponent">Structural Components</a>
+   </li>
+   <li>
+      <a href="#StructuralInstability"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralInstability">Structural Instability</a>
+   </li>
+   <li>
+      <a href="#Task"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Task">Task</a>
+   </li>
+   <li>
+      <a href="#TechnicalRole"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TechnicalRole">Technical Role</a>
+   </li>
+   <li>
+      <a href="#Tower"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Tower">Tower</a>
+   </li>
+   <li>
+      <a href="#Turbine"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Turbine">Turbine</a>
+   </li>
+   <li>
+      <a href="#TurbineComponent"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TurbineComponent">Turbine Components</a>
+   </li>
+   <li>
+      <a href="#VibrationData"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#VibrationData">Vibration Data</a>
+   </li>
+</ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#adjusts"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#adjusts">Adjusts</a>
+   </li>
+   <li>
+      <a href="#analyzes"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#analyzes">Analyzes</a>
+   </li>
+   <li>
+      <a href="#causedBy"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#causedBy">Caused by</a>
+   </li>
+   <li>
+      <a href="#connectedTo"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#connectedTo">Connected to</a>
+   </li>
+   <li>
+      <a href="#detectedBy"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#detectedBy">Detected by</a>
+   </li>
+   <li>
+      <a href="#detectsCorrosion"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#detectsCorrosion">Detects corrosion</a>
+   </li>
+   <li>
+      <a href="#diameter"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#diameter">Diameter</a>
+   </li>
+   <li>
+      <a href="#hasFailureCause"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasFailureCause">Failure cause</a>
+   </li>
+   <li>
+      <a href="#failureObservation"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#failureObservation">Failure observation</a>
+   </li>
+   <li>
+      <a href="#http://www.w3.org/ns/prov#generated" title="http://www.w3.org/ns/prov#generated">Generates</a>
+   </li>
+   <li>
+      <a href="#hasRole"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasRole">Has role</a>
+   </li>
+   <li>
+      <a href="#height"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#height">Height</a>
+   </li>
+   <li>
+      <a href="#houses"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#houses">Houses</a>
+   </li>
+   <li>
+      <a href="#isSupportedBy"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#isSupportedBy">Is supported by</a>
+   </li>
+   <li>
+      <a href="#length"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#length">Length</a>
+   </li>
+   <li>
+      <a href="#locatedIn"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#locatedIn">Located in</a>
+   </li>
+   <li>
+      <a href="#madeBySensor"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#madeBySensor">Made by sensor</a>
+   </li>
+   <li>
+      <a href="#manages"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#manages">Manages</a>
+   </li>
+   <li>
+      <a href="#mass"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#mass">Mass</a>
+   </li>
+   <li>
+      <a href="#measuresStress"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresStress">Measures stress</a>
+   </li>
+   <li>
+      <a href="#measuresVibration"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresVibration">Measures vibration</a>
+   </li>
+   <li>
+      <a href="#measuresWind"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresWind">Measures wind</a>
+   </li>
+   <li>
+      <a href="#monitors"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#monitors">Monitors</a>
+   </li>
+   <li>
+      <a href="#monitorsDeformation"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#monitorsDeformation">Monitors deformation</a>
+   </li>
+   <li>
+      <a href="#performedMaintenance"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performedMaintenance">Performs maintenance</a>
+   </li>
+   <li>
+      <a href="#performsTask"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performsTask">Performs task</a>
+   </li>
+   <li>
+      <a href="#relatedToComponent"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#relatedToComponent">Related to component</a>
+   </li>
+   <li>
+      <a href="#rotationSpeed"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#rotationSpeed">Rotation speed</a>
+   </li>
+   <li>
+      <a href="#supports"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#supports">Supports</a>
+   </li>
+   <li>
+      <a href="#temperature"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#temperature">Temperature</a>
+   </li>
+   <li>
+      <a href="#thickness"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#thickness">Thickness</a>
+   </li>
+   <li>
+      <a href="#transmitsMovementTo"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#transmitsMovementTo">Transmits movement to</a>
+   </li>
+   <li>
+      <a href="#width"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#width">Width</a>
+   </li>
+   <li>
+      <a href="#windDirection"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#windDirection">Wind direction</a>
+   </li>
+   <li>
+      <a href="#windSpeed"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#windSpeed">Wind speed</a>
+   </li>
+</ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#hasCapacity"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasCapacity">Capacity</a>
+   </li>
+   <li>
+      <a href="#Corrosion"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion">
+         <span>Corrosion</span>
+      </a>
+   </li>
+   <li>
+      <a href="#darkCorrosion"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#darkCorrosion">Dark corrosion</a>
+   </li>
+   <li>
+      <a href="#dateTime"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#dateTime">Date and time</a>
+   </li>
+   <li>
+      <a href="#Deformation"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Deformation">
+         <span>Deformation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#displacement"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#displacement">Displacement</a>
+   </li>
+   <li>
+      <a href="#externalShape"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#externalShape">External shape</a>
+   </li>
+   <li>
+      <a href="#imageURL"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#imageURL">Image URL</a>
+   </li>
+   <li>
+      <a href="#lightCorrosion"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#lightCorrosion">Light corrosion</a>
+   </li>
+   <li>
+      <a href="#material"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#material">Material</a>
+   </li>
+   <li>
+      <a href="#materialFatigue"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#materialFatigue">Material fatigue</a>
+   </li>
+   <li>
+      <a href="#materialWear"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#materialWear">Material wear</a>
+   </li>
+   <li>
+      <a href="#misalignment"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#misalignment">Misalignment</a>
+   </li>
+   <li>
+      <a href="#operationalStatus"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#operationalStatus">Operational status</a>
+   </li>
+   <li>
+      <a href="#pressure"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#pressure">Pressure</a>
+   </li>
+   <li>
+      <a href="#stress"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#stress">Stress</a>
+   </li>
+   <li>
+      <a href="#unit"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#unit">Unit</a>
+   </li>
+   <li>
+      <a href="#value"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#value">Value</a>
+   </li>
+   <li>
+      <a href="#vibrations"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#vibrations">Vibrations</a>
+   </li>
+</ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract">
+         <span>abstract</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/bibliographicCitation" title="http://purl.org/dc/terms/bibliographicCitation">
+         <span>bibliographic Citation</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created">
+         <span>created</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator">
+         <span>creator</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/date" title="http://purl.org/dc/elements/1.1/date">
+         <span>date</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description">
+         <span>description</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://xmlns.com/foaf/0.1/homepage" title="http://xmlns.com/foaf/0.1/homepage">
+         <span>homepage</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued">
+         <span>issued</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/language" title="http://purl.org/dc/elements/1.1/language">
+         <span>language</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license">
+         <span>license</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified">
+         <span>modified</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/name" title="http://purl.org/dc/elements/1.1/name">
+         <span>name</span>
+      </a>
+   </li>
+   <li>
+      <a href="#performedBy"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performedBy">
+         <span>performed By</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
+         title="http://purl.org/vocab/vann/preferredNamespacePrefix">
+         <span>preferred Namespace Prefix</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri">
+         <span>preferred Namespace Uri</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher">
+         <span>publisher</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/rights" title="http://purl.org/dc/terms/rights">
+         <span>rights</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/terms/status" title="http://purl.org/dc/terms/status">
+         <span>status</span>
+      </a>
+   </li>
+   <li>
+      <a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title">
+         <span>title</span>
+      </a>
+   </li>
+</ul><h4>Named Individuals</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    class="hlist">
+   <li>
+      <a href="#Observation"
+         title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Observation">
+         <span>Observation</span>
+      </a>
+   </li>
+</ul><iframe src="webvowl/index.html"></iframe> 
+</div>
+  
+
+<!--DESCRIPTION SECTION-->
+    <div id="description"><h2 id="desc" class="list">Offshore Wind Power Platform Ontology for OPTiMAR: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+<span class="markdown">This ontology describes the components, failures, sensors, and events related to offshore wind platforms.</span></div>
+   
+
+<!--CROSSREF SECTION-->
+   <div id="crossref"><h2 id="crossreference" class="list">Cross-reference for Offshore Wind Power Platform Ontology for OPTiMAR classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by Offshore Wind Power Platform Ontology for OPTiMAR.
+<div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+ <h3 id="classes-headline" class="list">Classes</h3>
+ <ul class="hlist">
+  <li><a href="#Actor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor">Actor</a></li>
+  <li><a href="#AnalyticalRole" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#AnalyticalRole">Analytical Role</a></li>
+  <li><a href="#Anemometer" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Anemometer">Anemometer</a></li>
+  <li><a href="#Base" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Base">Base (floating substructure)</a></li>
+  <li><a href="#Blade" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Blade">Blade</a></li>
+  <li><a href="#CloudAdministrator" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CloudAdministrator">Cloud Administrator</a></li>
+  <li><a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a></li>
+  <li><a href="#ComponentBreakage" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ComponentBreakage">Component Breakage</a></li>
+  <li><a href="#CorrosionCamera" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionCamera">Corrosion Camera</a></li>
+  <li><a href="#CorrosionEvent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionEvent">Corrosion Event</a></li>
+  <li><a href="#Data" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data">Data</a></li>
+  <li><a href="#DataAnalyst" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DataAnalyst">Data Analyst</a></li>
+  <li><a href="#DynamicMonitor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DynamicMonitor">Dynamic Monitor</a></li>
+  <li><a href="#EnvironmentalCondition" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#EnvironmentalCondition">Environmental Condition</a></li>
+  <li><a href="#Event" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event">Event</a></li>
+  <li><a href="#Failure" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure">Failure</a></li>
+  <li><a href="#FailureEvent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FailureEvent">Failure Event</a></li>
+  <li><a href="#FloatingPlatform" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FloatingPlatform">Floating Platform</a></li>
+  <li><a href="#FloatingSubstructure" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FloatingSubstructure">Floating Substructure</a></li>
+  <li><a href="#GaugeSystem" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#GaugeSystem">Gauge System</a></li>
+  <li><a href="#Hub" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Hub">Hub</a></li>
+  <li><a href="#Image" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Image">Image</a></li>
+  <li><a href="#ISUMSystem" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ISUMSystem">ISUM System</a></li>
+  <li><a href="#Location" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Location">Location</a></li>
+  <li><a href="#Maintenance" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Maintenance">Maintenance</a></li>
+  <li><a href="#MaintenanceOperator" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaintenanceOperator">Maintenance Operator</a></li>
+  <li><a href="#ManagementRole" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ManagementRole">Management Role</a></li>
+  <li><a href="#MaterialFatigue" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaterialFatigue">Material Fatigue</a></li>
+  <li><a href="#Measurement" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement">Measurement</a></li>
+  <li><a href="#Misalignment" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Misalignment">Misalignment</a></li>
+  <li><a href="#MonitoringTask" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MonitoringTask">Monitoring Task</a></li>
+  <li><a href="#MooringSystem" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MooringSystem">Mooring System</a></li>
+  <li><a href="#Nacelle" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Nacelle">Nacelle</a></li>
+  <li><a href="#Observation" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Observation"> <span>Observation</span> </a></li>
+  <li><a href="#WindPowerPlatform" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#WindPowerPlatform">Offshore Wind Power Platform</a></li>
+  <li><a href="#ParkOwner" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ParkOwner">Park Owner</a></li>
+  <li><a href="#PitchSystem" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#PitchSystem">Pitch System</a></li>
+  <li><a href="#PlatformActuator" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#PlatformActuator">Platform Actuator</a></li>
+  <li><a href="#Role" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Role">Role</a></li>
+  <li><a href="#Sensor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor">Sensor</a></li>
+  <li><a href="#StressData" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StressData">Stress Data</a></li>
+  <li><a href="#StructuralCamera" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralCamera">Structural Camera</a></li>
+  <li><a href="#StructuralComponent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralComponent">Structural Components</a></li>
+  <li><a href="#StructuralInstability" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralInstability">Structural Instability</a></li>
+  <li><a href="#Task" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Task">Task</a></li>
+  <li><a href="#TechnicalRole" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TechnicalRole">Technical Role</a></li>
+  <li><a href="#Tower" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Tower">Tower</a></li>
+  <li><a href="#Turbine" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Turbine">Turbine</a></li>
+  <li><a href="#TurbineComponent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TurbineComponent">Turbine Components</a></li>
+  <li><a href="#VibrationData" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#VibrationData">Vibration Data</a></li>
+ </ul>
+ <div class="entity" id="Actor">
+  <h3>Actor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor</p>
+  <div class="comment">
+   <span class="markdown">An actor that interacts or manages the offshore wind power platform.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CloudAdministrator" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CloudAdministrator">Cloud Administrator</a> <sup class="type-c" title="class">c</sup>, <a href="#DataAnalyst" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DataAnalyst">Data Analyst</a> <sup class="type-c" title="class">c</sup>, <a href="#MaintenanceOperator" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaintenanceOperator">Maintenance Operator</a> <sup class="type-c" title="class">c</sup>, <a href="#ParkOwner" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ParkOwner">Park Owner</a> <sup class="type-c" title="class">c</sup>, <a href="#PlatformActuator" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#PlatformActuator">Platform Actuator</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#adjusts" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#adjusts">Adjusts</a> <sup class="type-op" title="object property">op</sup>, <a href="#analyzes" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#analyzes">Analyzes</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRole" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasRole">Has role</a> <sup class="type-op" title="object property">op</sup>, <a href="#manages" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#manages">Manages</a> <sup class="type-op" title="object property">op</sup>, <a href="#monitors" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#monitors">Monitors</a> <sup class="type-op" title="object property">op</sup>, <a href="#performedMaintenance" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performedMaintenance">Performs maintenance</a> <sup class="type-op" title="object property">op</sup>, <a href="#performsTask" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performsTask">Performs task</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="AnalyticalRole">
+  <h3>Analytical Role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#AnalyticalRole</p>
+  <div class="comment">
+   <span class="markdown">Role focused on data analysis and generation of useful information for decision-making.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Role" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Role">Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Anemometer">
+  <h3>Anemometer<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Anemometer</p>
+  <div class="comment">
+   <span class="markdown">Sensor that measures wind speed and direction in the wind farm.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Sensor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CorrosionCamera" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Base">
+  <h3>Base (floating substructure)<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Base</p>
+  <div class="comment">
+   <span class="markdown">The base that supports the floating platform.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#StructuralComponent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralComponent">Structural Components</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Blade">
+  <h3>Blade<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Blade</p>
+  <div class="comment">
+   <span class="markdown">The blades of the turbine that capture the wind energy.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TurbineComponent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TurbineComponent">Turbine Components</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CloudAdministrator">
+  <h3>Cloud Administrator<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CloudAdministrator</p>
+  <div class="comment">
+   <span class="markdown">Responsible for managing and securing cloud services that process data from the platform.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Actor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Component">
+  <h3>Component<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component</p>
+  <div class="comment">
+   <span class="markdown">An component of an offshore wind power platform, such as blades, towers, pitch system, etc.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FloatingPlatform" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FloatingPlatform">Floating Platform</a> <sup class="type-c" title="class">c</sup>, <a href="#PitchSystem" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#PitchSystem">Pitch System</a> <sup class="type-c" title="class">c</sup>, <a href="#Turbine" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Turbine">Turbine</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#connectedTo" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#connectedTo">Connected to</a> <sup class="type-op" title="object property">op</sup>, <a href="#diameter" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#diameter">Diameter</a> <sup class="type-op" title="object property">op</sup>, <a href="#externalShape" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#externalShape">External shape</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#height" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#height">Height</a> <sup class="type-op" title="object property">op</sup>, <a href="#houses" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#houses">Houses</a> <sup class="type-op" title="object property">op</sup>, <a href="#isSupportedBy" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#isSupportedBy">Is supported by</a> <sup class="type-op" title="object property">op</sup>, <a href="#length" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#length">Length</a> <sup class="type-op" title="object property">op</sup>, <a href="#mass" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#mass">Mass</a> <sup class="type-op" title="object property">op</sup>, <a href="#material" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#material">Material</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#rotationSpeed" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#rotationSpeed">Rotation speed</a> <sup class="type-op" title="object property">op</sup>, <a href="#supports" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#supports">Supports</a> <sup class="type-op" title="object property">op</sup>, <a href="#thickness" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#thickness">Thickness</a> <sup class="type-op" title="object property">op</sup>, <a href="#transmitsMovementTo" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#transmitsMovementTo">Transmits movement to</a> <sup class="type-op" title="object property">op</sup>, <a href="#width" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#width">Width</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#adjusts" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#adjusts">Adjusts</a> <sup class="type-op" title="object property">op</sup>, <a href="#connectedTo" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#connectedTo">Connected to</a> <sup class="type-op" title="object property">op</sup>, <a href="#houses" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#houses">Houses</a> <sup class="type-op" title="object property">op</sup>, <a href="#isSupportedBy" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#isSupportedBy">Is supported by</a> <sup class="type-op" title="object property">op</sup>, <a href="#monitors" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#monitors">Monitors</a> <sup class="type-op" title="object property">op</sup>, <a href="#relatedToComponent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#relatedToComponent">Related to component</a> <sup class="type-op" title="object property">op</sup>, <a href="#supports" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#supports">Supports</a> <sup class="type-op" title="object property">op</sup>, <a href="#transmitsMovementTo" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#transmitsMovementTo">Transmits movement to</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ComponentBreakage">
+  <h3>Component Breakage<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ComponentBreakage</p>
+  <div class="comment">
+   <span class="markdown">Failure caused by the fracture or breakage of an offshore wind turbine component.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Failure" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure">Failure</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CorrosionCamera">
+  <h3>Corrosion Camera<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionCamera</p>
+  <div class="comment">
+   <span class="markdown">Camera used to detect and monitor corrosion in the platform structure.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Sensor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Anemometer" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="CorrosionEvent">
+  <h3>Corrosion Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionEvent</p>
+  <div class="comment">
+   <span class="markdown">Degradation of the platform's metallic structure due to corrosion effects.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#FailureEvent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FailureEvent">Failure Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#Corrosion" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion">Corrosion</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#darkCorrosion" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#darkCorrosion">Dark corrosion</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#lightCorrosion" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#lightCorrosion">Light corrosion</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#MaterialFatigue" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaterialFatigue">Material Fatigue</a> <sup class="type-c" title="class">c</sup>, <a href="#Misalignment" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Misalignment">Misalignment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Data">
+  <h3>Data<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data</p>
+  <div class="comment">
+   <span class="markdown">A class for representing the measurement data collected by sensors or other systems.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Image" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Image">Image</a> <sup class="type-c" title="class">c</sup>, <a href="#Measurement" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement">Measurement</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#Deformation" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Deformation">Deformation</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#displacement" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#displacement">Displacement</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#materialFatigue" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#materialFatigue">Material fatigue</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#materialWear" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#materialWear">Material wear</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#misalignment" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#misalignment">Misalignment</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#pressure" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#pressure">Pressure</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#stress" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#stress">Stress</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#temperature" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#temperature">Temperature</a> <sup class="type-op" title="object property">op</sup>, <a href="#vibrations" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#vibrations">Vibrations</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#analyzes" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#analyzes">Analyzes</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#generated" title="http://www.w3.org/ns/prov#generated">Generates</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DataAnalyst">
+  <h3>Data Analyst<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DataAnalyst</p>
+  <div class="comment">
+   <span class="markdown">Specialist who analyzes collected data to detect patterns, failures, and optimization opportunities.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Actor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="DynamicMonitor">
+  <h3>Dynamic Monitor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DynamicMonitor</p>
+  <div class="comment">
+   <span class="markdown">Device that measures dynamic parameters of the platform, such as vibrations and movements.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Sensor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CorrosionCamera" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="EnvironmentalCondition">
+  <h3>Environmental Condition<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#EnvironmentalCondition</p>
+  <div class="comment">
+   <span class="markdown">The environmental conditions that affect the offshore wind power platform, such as wind speed, temperature, etc.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#windDirection" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#windDirection">Wind direction</a> <sup class="type-op" title="object property">op</sup>, <a href="#windSpeed" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#windSpeed">Wind speed</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasFailureCause" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasFailureCause">Failure cause</a> <sup class="type-op" title="object property">op</sup>, <a href="#measuresWind" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresWind">Measures wind</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Event">
+  <h3>Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event</p>
+  <div class="comment">
+   <span class="markdown">An event that occurs in the offshore wind power platform, such as a failure detection.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FailureEvent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FailureEvent">Failure Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#causedBy" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#causedBy">Caused by</a> <sup class="type-op" title="object property">op</sup>, <a href="#detectedBy" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#detectedBy">Detected by</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#generated" title="http://www.w3.org/ns/prov#generated">Generates</a> <sup class="type-op" title="object property">op</sup>, <a href="#relatedToComponent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#relatedToComponent">Related to component</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Failure">
+  <h3>Failure<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure</p>
+  <div class="comment">
+   <span class="markdown">A class that represents identified failures in the wind platform.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#ComponentBreakage" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ComponentBreakage">Component Breakage</a> <sup class="type-c" title="class">c</sup>, <a href="#MaterialFatigue" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaterialFatigue">Material Fatigue</a> <sup class="type-c" title="class">c</sup>, <a href="#Misalignment" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Misalignment">Misalignment</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralInstability" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralInstability">Structural Instability</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasFailureCause" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasFailureCause">Failure cause</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#analyzes" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#analyzes">Analyzes</a> <sup class="type-op" title="object property">op</sup>, <a href="#causedBy" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#causedBy">Caused by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FailureEvent">
+  <h3>Failure Event<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FailureEvent</p>
+  <div class="comment">
+   <span class="markdown">Event that represents a detected failure in the system, must be caused by at least one failure.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Event" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event">Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#CorrosionEvent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionEvent">Corrosion Event</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#failureObservation" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#failureObservation">Failure observation</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FloatingPlatform">
+  <h3>Floating Platform<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FloatingPlatform</p>
+  <div class="comment">
+   <span class="markdown">A floating platform that serves as a base for the wind turbine.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FloatingSubstructure">
+  <h3>Floating Substructure<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FloatingSubstructure</p>
+  <div class="comment">
+   <span class="markdown">The floating substructure that allows the platform to be stable at sea.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#StructuralComponent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralComponent">Structural Components</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="GaugeSystem">
+  <h3>Gauge System<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#GaugeSystem</p>
+  <div class="comment">
+   <span class="markdown">Strain gauge system used to measure stresses and deformations in the structure.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Sensor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Hub">
+  <h3>Hub<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Hub</p>
+  <div class="comment">
+   <span class="markdown">The central part of the turbine where the blades are connected.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TurbineComponent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TurbineComponent">Turbine Components</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Image">
+  <h3>Image<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Image</p>
+  <div class="comment">
+   <span class="markdown">A class that represents an image that supports the measurement.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Data" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data">Data</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#imageURL" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#imageURL">Image URL</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ISUMSystem">
+  <h3>ISUM System<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ISUMSystem</p>
+  <div class="comment">
+   <span class="markdown">Specialized system for integrated monitoring of the offshore platform.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Sensor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Location">
+  <h3>Location<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Location</p>
+  <div class="comment">
+   <span class="markdown">The geographic location of the wind platform.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#locatedIn" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#locatedIn">Located in</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Maintenance">
+  <h3>Maintenance<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Maintenance</p>
+  <div class="comment">
+   <span class="markdown">A class that represents the maintenance of the wind platform.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#performedMaintenance" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performedMaintenance">Performs maintenance</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MaintenanceOperator">
+  <h3>Maintenance Operator<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaintenanceOperator</p>
+  <div class="comment">
+   <span class="markdown">Person responsible for carrying out preventive and corrective maintenance on the platform.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Actor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ManagementRole">
+  <h3>Management Role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ManagementRole</p>
+  <div class="comment">
+   <span class="markdown">Role responsible for coordination, planning, and resource management in the wind platform.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Role" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Role">Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MaterialFatigue">
+  <h3>Material Fatigue<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaterialFatigue</p>
+  <div class="comment">
+   <span class="markdown">Structural material failure caused by repeated load cycles.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Failure" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure">Failure</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CorrosionEvent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionEvent">Corrosion Event</a> <sup class="type-c" title="class">c</sup>, <a href="#Misalignment" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Misalignment">Misalignment</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Measurement">
+  <h3>Measurement<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement</p>
+  <div class="comment">
+   <span class="markdown">Represents a measurement taken by a sensor.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Data" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data">Data</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#StressData" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StressData">Stress Data</a> <sup class="type-c" title="class">c</sup>, <a href="#VibrationData" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#VibrationData">Vibration Data</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#dateTime" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#dateTime">Date and time</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#unit" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#unit">Unit</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#value" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#value">Value</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Misalignment">
+  <h3>Misalignment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Misalignment</p>
+  <div class="comment">
+   <span class="markdown">Failure caused by misalignment or lack of proper adjustment between platform components.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Failure" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure">Failure</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#CorrosionEvent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionEvent">Corrosion Event</a> <sup class="type-c" title="class">c</sup>, <a href="#MaterialFatigue" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaterialFatigue">Material Fatigue</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MonitoringTask">
+  <h3>Monitoring Task<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MonitoringTask</p>
+  <div class="comment">
+   <span class="markdown">A task aimed at supervising the condition of the platform through sensors and monitoring systems.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Task" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Task">Task</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="MooringSystem">
+  <h3>Mooring System<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MooringSystem</p>
+  <div class="comment">
+   <span class="markdown">The mooring system that keeps the floating platform in place.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#StructuralComponent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralComponent">Structural Components</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#manages" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#manages">Manages</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Nacelle">
+  <h3>Nacelle<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Nacelle</p>
+  <div class="comment">
+   <span class="markdown">The turbine component that houses the generator and other mechanical components.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TurbineComponent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TurbineComponent">Turbine Components</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Observation">
+  <h3>Observation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Observation</p>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://www.w3.org/ns/sosa/Observation" target="_blank" title="https://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#failureObservation" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#failureObservation">Failure observation</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#Observation">named individual</a>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="WindPowerPlatform">
+  <h3>Offshore Wind Power Platform<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#WindPowerPlatform</p>
+  <div class="comment">
+   <span class="markdown">An offshore wind power platform that generates electricity from wind.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#locatedIn" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#locatedIn">Located in</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#manages" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#manages">Manages</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="ParkOwner">
+  <h3>Park Owner<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ParkOwner</p>
+  <div class="comment">
+   <span class="markdown">Entity or individual owning the offshore wind farm and responsible for its overall operation.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Actor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PitchSystem">
+  <h3>Pitch System<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#PitchSystem</p>
+  <div class="comment">
+   <span class="markdown">The system that adjusts the angle of the blades of the turbine.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#adjusts" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#adjusts">Adjusts</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PlatformActuator">
+  <h3>Platform Actuator<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#PlatformActuator</p>
+  <div class="comment">
+   <span class="markdown">Responsible for making adjustments on the platform, such as mechanical or hydraulic adjustments.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Actor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Role">
+  <h3>Role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Role</p>
+  <div class="comment">
+   <span class="markdown">The roles of the actors that manage, operate or maintain the offshore wind power platform.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#AnalyticalRole" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#AnalyticalRole">Analytical Role</a> <sup class="type-c" title="class">c</sup>, <a href="#ManagementRole" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ManagementRole">Management Role</a> <sup class="type-c" title="class">c</sup>, <a href="#TechnicalRole" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TechnicalRole">Technical Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasRole" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasRole">Has role</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Sensor">
+  <h3>Sensor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor</p>
+  <div class="comment">
+   <span class="markdown">A device that measures or monitors parameters of the wind platform, such as wind, corrosion, vibrations, etc.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="https://www.w3.org/ns/sosa/Sensor" target="_blank" title="https://www.w3.org/ns/sosa/Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Anemometer" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#detectsCorrosion" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#detectsCorrosion">Detects corrosion</a> <sup class="type-op" title="object property">op</sup>, <a href="#measuresStress" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresStress">Measures stress</a> <sup class="type-op" title="object property">op</sup>, <a href="#measuresVibration" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresVibration">Measures vibration</a> <sup class="type-op" title="object property">op</sup>, <a href="#measuresWind" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresWind">Measures wind</a> <sup class="type-op" title="object property">op</sup>, <a href="#monitorsDeformation" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#monitorsDeformation">Monitors deformation</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#detectedBy" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#detectedBy">Detected by</a> <sup class="type-op" title="object property">op</sup>, <a href="#monitors" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#monitors">Monitors</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="StressData">
+  <h3>Stress Data<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StressData</p>
+  <div class="comment">
+   <span class="markdown">Stress data measured by a sensor.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Measurement" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement">Measurement</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#measuresStress" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresStress">Measures stress</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="StructuralCamera">
+  <h3>Structural Camera<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralCamera</p>
+  <div class="comment">
+   <span class="markdown">Camera dedicated to visual inspection of the structural condition of the platform.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Sensor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Anemometer" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="StructuralComponent">
+  <h3>Structural Components<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralComponent</p>
+  <div class="comment">
+   <span class="markdown">The structural components that make up the basic infrastructure of the wind platform.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#Base" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Base">Base (floating substructure)</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#FloatingSubstructure" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FloatingSubstructure">Floating Substructure</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#MooringSystem" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MooringSystem">Mooring System</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Base" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Base">Base (floating substructure)</a> <sup class="type-c" title="class">c</sup>, <a href="#FloatingSubstructure" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FloatingSubstructure">Floating Substructure</a> <sup class="type-c" title="class">c</sup>, <a href="#MooringSystem" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MooringSystem">Mooring System</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="StructuralInstability">
+  <h3>Structural Instability<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralInstability</p>
+  <div class="comment">
+   <span class="markdown">Failure that compromises the structural stability of the floating platform.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Failure" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure">Failure</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Task">
+  <h3>Task<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Task</p>
+  <div class="comment">
+   <span class="markdown">A general task related to the operation, monitoring, or maintenance of the wind platform.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#MonitoringTask" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MonitoringTask">Monitoring Task</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#performsTask" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performsTask">Performs task</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TechnicalRole">
+  <h3>Technical Role<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TechnicalRole</p>
+  <div class="comment">
+   <span class="markdown">Role associated with technical activities such as operation, repair, and system supervision.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Role" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Role">Role</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Tower">
+  <h3>Tower<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Tower</p>
+  <div class="comment">
+   <span class="markdown">The structure that supports the wind turbine.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#TurbineComponent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TurbineComponent">Turbine Components</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Turbine">
+  <h3>Turbine<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Turbine</p>
+  <div class="comment">
+   <span class="markdown">A wind turbine that is part of the wind platform.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#hasCapacity" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasCapacity">Capacity</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#operationalStatus" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#operationalStatus">Operational status</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="TurbineComponent">
+  <h3>Turbine Components<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TurbineComponent</p>
+  <div class="comment">
+   <span class="markdown">The turbine components that generate energy from the wind.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    is equivalent to
+   </dt>
+   <dd>
+    <a href="#Blade" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Blade">Blade</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Hub" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Hub">Hub</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Nacelle" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Nacelle">Nacelle</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Tower" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Tower">Tower</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#Blade" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Blade">Blade</a> <sup class="type-c" title="class">c</sup>, <a href="#Hub" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Hub">Hub</a> <sup class="type-c" title="class">c</sup>, <a href="#Nacelle" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Nacelle">Nacelle</a> <sup class="type-c" title="class">c</sup>, <a href="#Tower" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Tower">Tower</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="VibrationData">
+  <h3>Vibration Data<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#VibrationData</p>
+  <div class="comment">
+   <span class="markdown">Vibration data measured by a sensor.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Measurement" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement">Measurement</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#measuresVibration" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresVibration">Measures vibration</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+ <h3 id="properties" class="list">Object Properties</h3>
+ <ul class="hlist">
+  <li><a href="#adjusts" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#adjusts">Adjusts</a></li>
+  <li><a href="#analyzes" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#analyzes">Analyzes</a></li>
+  <li><a href="#causedBy" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#causedBy">Caused by</a></li>
+  <li><a href="#connectedTo" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#connectedTo">Connected to</a></li>
+  <li><a href="#detectedBy" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#detectedBy">Detected by</a></li>
+  <li><a href="#detectsCorrosion" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#detectsCorrosion">Detects corrosion</a></li>
+  <li><a href="#diameter" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#diameter">Diameter</a></li>
+  <li><a href="#hasFailureCause" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasFailureCause">Failure cause</a></li>
+  <li><a href="#failureObservation" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#failureObservation">Failure observation</a></li>
+  <li><a href="#http://www.w3.org/ns/prov#generated" title="http://www.w3.org/ns/prov#generated">Generates</a></li>
+  <li><a href="#hasRole" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasRole">Has role</a></li>
+  <li><a href="#height" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#height">Height</a></li>
+  <li><a href="#houses" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#houses">Houses</a></li>
+  <li><a href="#isSupportedBy" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#isSupportedBy">Is supported by</a></li>
+  <li><a href="#length" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#length">Length</a></li>
+  <li><a href="#locatedIn" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#locatedIn">Located in</a></li>
+  <li><a href="#madeBySensor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#madeBySensor">Made by sensor</a></li>
+  <li><a href="#manages" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#manages">Manages</a></li>
+  <li><a href="#mass" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#mass">Mass</a></li>
+  <li><a href="#measuresStress" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresStress">Measures stress</a></li>
+  <li><a href="#measuresVibration" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresVibration">Measures vibration</a></li>
+  <li><a href="#measuresWind" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresWind">Measures wind</a></li>
+  <li><a href="#monitors" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#monitors">Monitors</a></li>
+  <li><a href="#monitorsDeformation" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#monitorsDeformation">Monitors deformation</a></li>
+  <li><a href="#performedMaintenance" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performedMaintenance">Performs maintenance</a></li>
+  <li><a href="#performsTask" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performsTask">Performs task</a></li>
+  <li><a href="#relatedToComponent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#relatedToComponent">Related to component</a></li>
+  <li><a href="#rotationSpeed" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#rotationSpeed">Rotation speed</a></li>
+  <li><a href="#supports" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#supports">Supports</a></li>
+  <li><a href="#temperature" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#temperature">Temperature</a></li>
+  <li><a href="#thickness" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#thickness">Thickness</a></li>
+  <li><a href="#transmitsMovementTo" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#transmitsMovementTo">Transmits movement to</a></li>
+  <li><a href="#width" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#width">Width</a></li>
+  <li><a href="#windDirection" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#windDirection">Wind direction</a></li>
+  <li><a href="#windSpeed" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#windSpeed">Wind speed</a></li>
+ </ul>
+ <div class="entity" id="adjusts">
+  <h3>Adjusts<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#adjusts</p>
+  <div class="comment">
+   <span class="markdown">Indicas that an actor makes adjustments on a component or pitch system.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Actor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#PitchSystem" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#PitchSystem">Pitch System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="analyzes">
+  <h3>Analyzes<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#analyzes</p>
+  <div class="comment">
+   <span class="markdown">Relates an actor to the data or failures that it studies or interprets.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Actor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Data" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data">Data</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Failure" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure">Failure</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="causedBy">
+  <h3>Caused by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#causedBy</p>
+  <div class="comment">
+   <span class="markdown">Relates an event with the failure that caused it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Event" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Failure" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure">Failure</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="connectedTo">
+  <h3>Connected to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#connectedTo</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a component is connected to another.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="detectedBy">
+  <h3>Detected by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#detectedBy</p>
+  <div class="comment">
+   <span class="markdown">Relates an event to the sensor that detected it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Event" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Sensor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="detectsCorrosion">
+  <h3>Detects corrosion<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#detectsCorrosion</p>
+  <div class="comment">
+   <span class="markdown">Relates a sensor with the detected corrosion measurement.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Sensor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion" target="_blank" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion">Corrosion</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="diameter">
+  <h3>Diameter<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#diameter</p>
+  <div class="comment">
+   <span class="markdown">Diameter of the component measured in QUDT units.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasFailureCause">
+  <h3>Failure cause<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasFailureCause</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a failure is caused by a specific environmental condition.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Failure" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure">Failure</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EnvironmentalCondition" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#EnvironmentalCondition">Environmental Condition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="failureObservation">
+  <h3>Failure observation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#failureObservation</p>
+  <div class="comment">
+   <span class="markdown">Relationship between a failure event and the observation made by a sensor.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#FailureEvent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FailureEvent">Failure Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Observation" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Observation">Observation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="http://www.w3.org/ns/prov#generated">
+  <h3>Generates<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://www.w3.org/ns/prov#generated</p>
+  <div class="comment">
+   <span class="markdown">Relates an event to the generated data by the same.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Event" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Data" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data">Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasRole">
+  <h3>Has role<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasRole</p>
+  <div class="comment">
+   <span class="markdown">Indicas the role that an actor performs within the system.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Actor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Role" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Role">Role</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="height">
+  <h3>Height<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#height</p>
+  <div class="comment">
+   <span class="markdown">Height of the component expressed as a QUDT quantity value.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="houses">
+  <h3>Houses<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#houses</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a component contains or houses physically another in its structure.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isSupportedBy">
+  <h3>Is supported by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#isSupportedBy</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a component is structurally or functionally supported by another.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#supports" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#supports">Supports</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="length">
+  <h3>Length<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#length</p>
+  <div class="comment">
+   <span class="markdown">Length of a component, expressed as a QUDT quantity value</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="locatedIn">
+  <h3>Located in<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#locatedIn</p>
+  <div class="comment">
+   <span class="markdown">Indicates the location where the wind power platform is located.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#WindPowerPlatform" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#WindPowerPlatform">Offshore Wind Power Platform</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Location" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Location">Location</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="madeBySensor">
+  <h3>Made by sensor<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#madeBySensor</p>
+  <div class="comment">
+   <span class="markdown">Relates an observation to the sensor that made it.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="https://www.w3.org/ns/sosa/Observation" target="_blank" title="https://www.w3.org/ns/sosa/Observation">Observation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://www.w3.org/ns/sosa/Sensor" target="_blank" title="https://www.w3.org/ns/sosa/Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="manages">
+  <h3>Manages<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#manages</p>
+  <div class="comment">
+   <span class="markdown">Indicates that an actor is responsible for managing a wind power platform or its mooring system.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Actor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#MooringSystem" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MooringSystem">Mooring System</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#WindPowerPlatform" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#WindPowerPlatform">Offshore Wind Power Platform</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="mass">
+  <h3>Mass<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#mass</p>
+  <div class="comment">
+   <span class="markdown">Mass of the component expressed as a QUDT quantity value</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="measuresStress">
+  <h3>Measures stress<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresStress</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a sensor measures the stress exerted on a component.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Sensor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#StressData" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StressData">Stress Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="measuresVibration">
+  <h3>Measures vibration<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresVibration</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a sensor collects vibration data from a component.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Sensor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#VibrationData" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#VibrationData">Vibration Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="measuresWind">
+  <h3>Measures wind<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresWind</p>
+  <div class="comment">
+   <span class="markdown">Relates a sensor with the measurement of wind speed or direction.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Sensor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#EnvironmentalCondition" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#EnvironmentalCondition">Environmental Condition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="monitors">
+  <h3>Monitors<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#monitors</p>
+  <div class="comment">
+   <span class="markdown">Relates an actor to the components or sensors they monitor.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Actor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Sensor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="monitorsDeformation">
+  <h3>Monitors deformation<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#monitorsDeformation</p>
+  <div class="comment">
+   <span class="markdown">Relates a sensor to the structural deformation it measures or monitors.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Sensor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Deformation" target="_blank" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Deformation">Deformation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="performedMaintenance">
+  <h3>Performs maintenance<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performedMaintenance</p>
+  <div class="comment">
+   <span class="markdown">Relates an actor with the maintenance that it performs.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Actor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Maintenance" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Maintenance">Maintenance</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="performsTask">
+  <h3>Performs task<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performsTask</p>
+  <div class="comment">
+   <span class="markdown">Relates an actor with a task that it performs as part of its role.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Actor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Task" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="relatedToComponent">
+  <h3>Related to component<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#relatedToComponent</p>
+  <div class="comment">
+   <span class="markdown">Relates an event to the platform component that is affected.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Event" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="rotationSpeed">
+  <h3>Rotation speed<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#rotationSpeed</p>
+  <div class="comment">
+   <span class="markdown">Angular speed of a component expressed as a QUDT quantity value.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="supports">
+  <h3>Supports<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#supports</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a component provides structural or functional support to another.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isSupportedBy" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#isSupportedBy">Is supported by</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="temperature">
+  <h3>Temperature<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#temperature</p>
+  <div class="comment">
+   <span class="markdown">Temperature recorded expressed as a QUDT quantity value.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data">Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="thickness">
+  <h3>Thickness<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#thickness</p>
+  <div class="comment">
+   <span class="markdown">Thickness of the section or wall of a component measured in QUDT units.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="transmitsMovementTo">
+  <h3>Transmits movement to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#transmitsMovementTo</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a component transmits mechanical movement to another.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="width">
+  <h3>Width<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#width</p>
+  <div class="comment">
+   <span class="markdown">Width of the component expressed as a QUDT quantity value.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="windDirection">
+  <h3>Wind direction<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#windDirection</p>
+  <div class="comment">
+   <span class="markdown">Direction from which the wind blows expressed as a QUDT quantity value.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EnvironmentalCondition" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#EnvironmentalCondition">Environmental Condition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="windSpeed">
+  <h3>Wind speed<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#windSpeed</p>
+  <div class="comment">
+   <span class="markdown">Wind speed expressed as a QUDT quantity value.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#EnvironmentalCondition" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#EnvironmentalCondition">Environmental Condition</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+ <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+ <ul class="hlist">
+  <li><a href="#hasCapacity" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasCapacity">Capacity</a></li>
+  <li><a href="#Corrosion" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion"> <span>Corrosion</span> </a></li>
+  <li><a href="#darkCorrosion" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#darkCorrosion">Dark corrosion</a></li>
+  <li><a href="#dateTime" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#dateTime">Date and time</a></li>
+  <li><a href="#Deformation" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Deformation"> <span>Deformation</span> </a></li>
+  <li><a href="#displacement" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#displacement">Displacement</a></li>
+  <li><a href="#externalShape" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#externalShape">External shape</a></li>
+  <li><a href="#imageURL" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#imageURL">Image URL</a></li>
+  <li><a href="#lightCorrosion" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#lightCorrosion">Light corrosion</a></li>
+  <li><a href="#material" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#material">Material</a></li>
+  <li><a href="#materialFatigue" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#materialFatigue">Material fatigue</a></li>
+  <li><a href="#materialWear" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#materialWear">Material wear</a></li>
+  <li><a href="#misalignment" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#misalignment">Misalignment</a></li>
+  <li><a href="#operationalStatus" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#operationalStatus">Operational status</a></li>
+  <li><a href="#pressure" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#pressure">Pressure</a></li>
+  <li><a href="#stress" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#stress">Stress</a></li>
+  <li><a href="#unit" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#unit">Unit</a></li>
+  <li><a href="#value" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#value">Value</a></li>
+  <li><a href="#vibrations" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#vibrations">Vibrations</a></li>
+ </ul>
+ <div class="entity" id="hasCapacity">
+  <h3>Capacity<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasCapacity</p>
+  <div class="comment">
+   <span class="markdown">Rated generation capacity of the turbine.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Turbine" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Turbine">Turbine</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Corrosion">
+  <h3>Corrosion<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has sub-properties
+    </dt>
+    <dd>
+     <a href="#darkCorrosion" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#darkCorrosion">Dark corrosion</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#lightCorrosion" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#lightCorrosion">Light corrosion</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CorrosionEvent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionEvent">Corrosion Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     class
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="darkCorrosion">
+  <h3>Dark corrosion<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#darkCorrosion</p>
+  <div class="comment">
+   <span class="markdown">Level of dark corrosion detected on the mmaterial surface.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#Corrosion" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion">Corrosion</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CorrosionEvent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionEvent">Corrosion Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="dateTime">
+  <h3>Date and time<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#dateTime</p>
+  <div class="comment">
+   <span class="markdown">Associated temporal mark to the measurement.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Measurement" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement">Measurement</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="Deformation">
+  <h3>Deformation<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Deformation</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data">Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     class
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="displacement">
+  <h3>Displacement<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#displacement</p>
+  <div class="comment">
+   <span class="markdown">Displacement or position change recorded in the component.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data">Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="externalShape">
+  <h3>External shape<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#externalShape</p>
+  <div class="comment">
+   <span class="markdown">Describe the external shape or geometric of the component.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="imageURL">
+  <h3>Image URL<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#imageURL</p>
+  <div class="comment">
+   <span class="markdown">Access URL of the generated or stored image.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Image" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Image">Image</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="lightCorrosion">
+  <h3>Light corrosion<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#lightCorrosion</p>
+  <div class="comment">
+   <span class="markdown">Level of light corrosion detected on the material surface.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has super-properties
+    </dt>
+    <dd>
+     <a href="#Corrosion" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion">Corrosion</a> <sup class="type-dp" title="data property">dp</sup>
+    </dd>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#CorrosionEvent" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionEvent">Corrosion Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="material">
+  <h3>Material<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#material</p>
+  <div class="comment">
+   <span class="markdown">Material of manufacturing of the component (e.g. steel, composite, fiberglass, etc.).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="materialFatigue">
+  <h3>Material fatigue<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#materialFatigue</p>
+  <div class="comment">
+   <span class="markdown">Accumulated material fatigue degree.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data">Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="materialWear">
+  <h3>Material wear<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#materialWear</p>
+  <div class="comment">
+   <span class="markdown">Degree of material wear in a component.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data">Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="misalignment">
+  <h3>Misalignment<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#misalignment</p>
+  <div class="comment">
+   <span class="markdown">Measure of the misalignment detected in a component.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data">Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="operationalStatus">
+  <h3>Operational status<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#operationalStatus</p>
+  <div class="comment">
+   <span class="markdown">Current operational status of the turbine (e.g. operative, stopped, under maintenance, etc.).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Turbine" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Turbine">Turbine</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="pressure">
+  <h3>Pressure<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#pressure</p>
+  <div class="comment">
+   <span class="markdown">Pressure exerted on a component.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data">Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="stress">
+  <h3>Stress<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#stress</p>
+  <div class="comment">
+   <span class="markdown">Stress level recorded in a component.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data">Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="unit">
+  <h3>Unit<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#unit</p>
+  <div class="comment">
+   <span class="markdown">Measurement unit of the recorded value (e.g. m/s, rpm, °C, etc.).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Measurement" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement">Measurement</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="value">
+  <h3>Value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#value</p>
+  <div class="comment">
+   <span class="markdown">Numeric value of the measurement taken by a sensor.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Measurement" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement">Measurement</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="vibrations">
+  <h3>Vibrations<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#vibrations</p>
+  <div class="comment">
+   <span class="markdown">Level of vibrations recorded in a component or system.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data">Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+    </dd>
+   </dl>
+  </div>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
+ <h3 id="annotationproperties" class="list">Annotation Properties</h3>
+ <ul class="hlist">
+  <li><a href="#http://purl.org/dc/terms/abstract" title="http://purl.org/dc/terms/abstract"> <span>abstract</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/bibliographicCitation" title="http://purl.org/dc/terms/bibliographicCitation"> <span>bibliographic Citation</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/created" title="http://purl.org/dc/terms/created"> <span>created</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/creator" title="http://purl.org/dc/elements/1.1/creator"> <span>creator</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/date" title="http://purl.org/dc/elements/1.1/date"> <span>date</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/description" title="http://purl.org/dc/elements/1.1/description"> <span>description</span> </a></li>
+  <li><a href="#http://xmlns.com/foaf/0.1/homepage" title="http://xmlns.com/foaf/0.1/homepage"> <span>homepage</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/issued" title="http://purl.org/dc/terms/issued"> <span>issued</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/language" title="http://purl.org/dc/elements/1.1/language"> <span>language</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified"> <span>modified</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/name" title="http://purl.org/dc/elements/1.1/name"> <span>name</span> </a></li>
+  <li><a href="#performedBy" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performedBy"> <span>performed By</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespacePrefix" title="http://purl.org/vocab/vann/preferredNamespacePrefix"> <span>preferred Namespace Prefix</span> </a></li>
+  <li><a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri"> <span>preferred Namespace Uri</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher"> <span>publisher</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/rights" title="http://purl.org/dc/terms/rights"> <span>rights</span> </a></li>
+  <li><a href="#http://purl.org/dc/terms/status" title="http://purl.org/dc/terms/status"> <span>status</span> </a></li>
+  <li><a href="#http://purl.org/dc/elements/1.1/title" title="http://purl.org/dc/elements/1.1/title"> <span>title</span> </a></li>
+ </ul>
+ <div class="entity" id="http://purl.org/dc/terms/abstract">
+  <h3>abstract<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/abstract</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/bibliographicCitation">
+  <h3>bibliographic Citation<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/bibliographicCitation</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/created">
+  <h3>created<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/created</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/creator">
+  <h3>creator<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/creator</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/date">
+  <h3>date<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/date</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/description">
+  <h3>description<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/description</p>
+ </div>
+ <div class="entity" id="http://xmlns.com/foaf/0.1/homepage">
+  <h3>homepage<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://xmlns.com/foaf/0.1/homepage</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/issued">
+  <h3>issued<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/issued</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/language">
+  <h3>language<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/language</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/license">
+  <h3>license<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/license</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/modified">
+  <h3>modified<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/modified</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/name">
+  <h3>name<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/name</p>
+ </div>
+ <div class="entity" id="performedBy">
+  <h3>performed By<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performedBy</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
+  <h3>preferred Namespace Prefix<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
+ </div>
+ <div class="entity" id="http://purl.org/vocab/vann/preferredNamespaceUri">
+  <h3>preferred Namespace Uri<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespaceUri</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/publisher">
+  <h3>publisher<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/publisher</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/rights">
+  <h3>rights<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/rights</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/terms/status">
+  <h3>status<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/terms/status</p>
+ </div>
+ <div class="entity" id="http://purl.org/dc/elements/1.1/title">
+  <h3>title<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/title</p>
+ </div>
+</div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+ <h3 id="namedindividuals" class="list">Named Individuals</h3>
+ <ul class="hlist">
+  <li><a href="#Observation" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Observation"> <span>Observation</span> </a></li>
+ </ul>
+ <div class="entity" id="Observation">
+  <h3>Observation<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Observation</p>
+  <dl class="description">
+   <dt>
+    has facts
+   </dt>
+   <dd>
+    <a href="#madeBySensor" title="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#madeBySensor">Made by sensor</a> <sup class="type-op" title="object property">op</sup> <a href="https://www.w3.org/ns/sosa/Sensor" target="_blank" title="https://www.w3.org/ns/sosa/Sensor">Sensor</a> <sup class="type-ni" title="named individual">ni</sup>
+   </dd>
+   <dt>
+    is also defined as
+   </dt>
+   <dd>
+    <a href="#Observation">class</a>
+   </dd>
+  </dl>
+ </div>
+</div><div id="legend">
+<h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<div   class="entity">
+<sup class="type-c" title="Classes">c</sup>: Classes <br/>
+<sup class="type-op" title="Object Properties">op</sup>: Object Properties <br/>
+<sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br/>
+<sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br/>
+</div>
+</div>
+</div>
+    
+
+<!--REFERENCES SECTION-->
+  <div id="references">
+<h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<span class="markdown">
+Add your references here. It is recommended to have them as a list.</span>
+
+</div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
