@@ -1,0 +1,86 @@
+
+@prefix ex: <https://bisite.github.io/OPTIMAR-Ontology/v0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Platform and location
+ex:OffshorePlatform1 a ex:WindPowerPlatform ;
+    ex:locatedIn ex:NorthSeaLocation ;
+    ex:containsTurbine ex:Turbine1, ex:Turbine2 ;
+    rdfs:label "Plataforma offshore Mar del Norte"@es ;
+    rdfs:label "North Sea Offshore Platform"@en .
+
+ex:NorthSeaLocation a ex:Location ;
+    rdfs:label "Mar del Norte"@es ;
+    rdfs:label "North Sea"@en .
+
+# Turbines
+ex:Turbine1 a ex:Turbine ;
+    rdfs:label "Turbina 1"@es ;
+    rdfs:label "Turbine 1"@en ;
+    ex:hasCapacity "5MW" ;
+    ex:operationalStatus "Operativa"@es ;
+    ex:operationalStatus "Operational"@en .
+
+ex:Turbine2 a ex:Turbine ;
+    rdfs:label "Turbina 2"@es ;
+    rdfs:label "Turbine 2"@en ;
+    ex:hasCapacity "5.5MW" ;
+    ex:operationalStatus "Operativa"@es ;
+    ex:operationalStatus "Operational"@en .
+
+# Turbine components
+ex:Blade1 a ex:Blade ;
+    rdfs:label "Pala 1"@es ;
+    rdfs:label "Blade 1"@en ;
+    ex:externalShape "Aerodinámica"@es ;
+    ex:externalShape "Aerodynamic"@en ;
+    ex:length "60"^^xsd:decimal ;
+    ex:mass "12000"^^xsd:decimal .
+
+# Sensors
+ex:AnemoSensor1 a ex:Anemometer ;
+    rdfs:label "Anemómetro Turbina 1"@es ;
+    rdfs:label "Anemometer Turbine 1"@en ;
+    ex:measurement "Velocidad y dirección del viento"@es ;
+    ex:measurement "Wind speed and direction"@en ;
+    ex:measurementUnit "m/s y grados"@es ;
+    ex:measurementUnit "m/s and degrees"@en ;
+    ex:hasFrequency ex:FrequencyEveryMinute ;
+    ex:outputFormat "numérico"@es ;
+    ex:outputFormat "numeric"@en ;
+    sosa:observes ex:Turbine1 .
+
+ex:CorrosionCamSensor1 a ex:CorrosionCamera ;
+    rdfs:label "Cámara corrosión Turbina 2"@es ;
+    rdfs:label "Corrosion Camera Turbine 2"@en ;
+    ex:measurement "Corrosión"@es ;
+    ex:measurement "Corrosion"@en ;
+    ex:measurementUnit "índice"@es ;
+    ex:measurementUnit "index"@en ;
+    ex:hasFrequency ex:FrequencyEveryMinute ;
+    ex:outputFormat "imagen"@es ;
+    ex:outputFormat "image"@en ;
+    sosa:observes ex:Turbine2 .
+
+# Data frequency
+ex:FrequencyEveryMinute a ex:Frequency ;
+    ex:frequencyValue "1"^^xsd:decimal ;
+    ex:frequencyUnit "minuto"@es ;
+    ex:frequencyUnit "minute"@en ;
+    rdfs:label "Frecuencia de datos por minuto"@es ;
+    rdfs:label "Data frequency per minute"@en .
+
+# Failure event
+ex:FailureEvent1 a ex:FailureEvent ;
+    ex:causedBy ex:Corrosion ;
+    ex:detectedBy ex:CorrosionCamSensor1 ;
+    ex:relatedToComponent ex:Blade1 ;
+    rdfs:label "Evento de corrosión detectado en Pala 1"@es ;
+    rdfs:label "Corrosion event detected on Blade 1"@en .
+
+# Example actor
+ex:Operator1 a ex:MaintenanceOperator ;
+    rdfs:label "Operador de mantenimiento 1"@es ;
+    rdfs:label "Maintenance Operator 1"@en ;
+    ex:hasRole ex:TechnicalRole ;
+    ex:monitors ex:Turbine1 .

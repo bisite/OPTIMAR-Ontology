@@ -1,0 +1,593 @@
+@prefix ex: <https://bisite.github.io/OPTIMAR-Ontology/v0.1/> .
+@prefix sosa: <https://www.w3.org/ns/sosa/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+
+ex:OPTIMAR_Ontology a owl:Ontology ;
+    dcterms:title "OptiMAR ontology"@en ;
+    dcterms:title "Ontología OptiMAR"@es ;
+    dcterms:description "Ontología para modelado de plataformas eólicas offshore, componentes, sensores, datos y eventos de fallo."@es ;
+    dcterms:description "Ontology for modeling offshore wind power platforms, components, sensors, data, and failure events."@en ;
+    dcterms:issued "2025-06-05"^^xsd:date ;
+    dcterms:license <https://opensource.org/licenses/MIT> ;
+    dcterms:hasVersion "0.1" .
+
+##########################################################
+# Main classes and subclasses #
+##########################################################
+
+ex:WindPowerPlatform a owl:Class ;
+    rdfs:label "Plataforma eólica offshore"@es ;
+    rdfs:label "Offshore Wind Power Platform"@en .
+
+ex:Component a owl:Class ;
+    rdfs:label "Componente"@es ;
+    rdfs:label "Component"@en .
+
+ex:Sensor a sosa:Sensor ;
+    rdfs:label "Sensor"@es ;
+    rdfs:label "Sensor"@en .
+
+ex:Data a owl:Class ;
+    rdfs:label "Dato"@es ;
+    rdfs:label "Data"@en .
+
+ex:Failure a owl:Class ;
+    rdfs:label "Fallo"@es ;
+    rdfs:label "Failure"@en .
+
+ex:Maintenance a owl:Class ;
+    rdfs:label "Mantenimiento"@es ;
+    rdfs:label "Maintenance"@en .
+
+ex:Event a owl:Class ;
+    rdfs:label "Evento"@es ;
+    rdfs:label "Event"@en .
+
+ex:Actor a owl:Class ;
+    rdfs:label "Actor"@es ;
+    rdfs:label "Actor"@en .
+
+ex:Role a owl:Class ;
+    rdfs:label "Rol"@es ;
+    rdfs:label "Role"@en .
+
+ex:Location a owl:Class ;
+    rdfs:label "Ubicación"@es ;
+    rdfs:label "Location"@en .
+
+ex:EnvironmentalCondition a owl:Class ;
+    rdfs:label "Condición ambiental"@es ;
+    rdfs:label "Environmental Condition"@en .
+
+# Structural components
+ex:StructuralComponents a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:unionOf ( ex:Base ex:MooringSystem ex:FloatingSubstructure )
+    ] ;
+    rdfs:label "Componentes estructurales"@es ;
+    rdfs:label "Structural Components"@en .
+
+ex:TurbineComponents a owl:Class ;
+    owl:equivalentClass [
+        a owl:Class ;
+        owl:unionOf ( ex:Hub ex:Nacelle ex:Blade ex:Tower )
+    ] ;
+    rdfs:label "Componentes de turbina"@es ;
+    rdfs:label "Turbine Components"@en .
+
+ex:Turbine a owl:Class ;
+    rdfs:subClassOf ex:component ;
+    rdfs:label "Turbina"@es ;
+    rdfs:label "Turbina"@es .
+
+ex:Hub a owl:Class ;
+    rdfs:subClassOf ex:TurbineComponents ;
+    rdfs:label "Hub"@es ;
+    rdfs:label "Hub"@en .
+
+ex:Nacelle a owl:Class ;
+    rdfs:subClassOf ex:TurbineComponents ;
+    rdfs:label "Nacelle"@es ;
+    rdfs:label "Nacelle"@en .
+
+ex:Blade a owl:Class ;
+    rdfs:subClassOf ex:TurbineComponents ;
+    rdfs:label "Pala"@es ;
+    rdfs:label "Blade"@en .
+
+ex:Tower a owl:Class ;
+    rdfs:subClassOf ex:TurbineComponents ;
+    rdfs:label "Torre"@es ;
+    rdfs:label "Tower"@en .
+
+ex:Base a owl:Class ;
+    rdfs:subClassOf ex:StructuralComponents ;
+    rdfs:label "Base (subestructura flotante)"@es ;
+    rdfs:label "Base (floating substructure)"@en .
+
+ex:MooringSystem a owl:Class ;
+    rdfs:subClassOf ex:StructuralComponents ;
+    rdfs:label "Sistema de amarre"@es ;
+    rdfs:label "Mooring System"@en .
+
+ex:FloatingSubstructure a owl:Class ;
+    rdfs:subClassOf ex:StructuralComponents ;
+    rdfs:label "Subestructura flotante"@es ;
+    rdfs:label "Floating Substructure"@en .
+
+ex:FloatingPlatform a owl:Class ;
+    rdfs:subClassOf ex:Component ;
+    rdfs:label "Plataforma flotante"@es ;
+    rdfs:label "Floating Platform"@en .
+
+ex:PitchSystem a owl:Class ;
+    rdfs:subClassOf ex:Component ;
+    rdfs:label "Sistema de pitch"@es ;
+    rdfs:label "Pitch System"@en .
+
+# Tasks
+ex:Task a owl:Class ;
+    rdfs:label "Tarea"@es ;
+    rdfs:label "Task"@en .
+
+ex:MonitoringTask a owl:Class ;
+    rdfs:subClassOf ex:Task ;
+    rdfs:label "Tarea de monitoreo"@es ;
+    rdfs:label "Monitoring Task"@en .
+
+# Observations
+ex:Observation a owl:Class ;
+    rdfs:label "Observación"@es ;
+    rdfs:label "Observation"@en .
+
+# Actors
+ex:MaintenanceOperator a owl:Class ;
+    rdfs:subClassOf ex:Actor ;
+    rdfs:label "Operador de mantenimiento"@es ;
+    rdfs:label "Maintenance Operator"@en .
+
+ex:PlatformActuator a owl:Class ;
+    rdfs:subClassOf ex:Actor ;
+    rdfs:label "Actuador de plataforma"@es ;
+    rdfs:label "Platform Actuator"@en .
+
+ex:CloudAdministrator a owl:Class ;
+    rdfs:subClassOf ex:Actor ;
+    rdfs:label "Administrador de nube"@es ;
+    rdfs:label "Cloud Administrator"@en .
+
+ex:DataAnalyst a owl:Class ;
+    rdfs:subClassOf ex:Actor ;
+    rdfs:label "Analista de datos"@es ;
+    rdfs:label "Data Analyst"@en .
+
+ex:ParkOwner a owl:Class ;
+    rdfs:subClassOf ex:Actor ;
+    rdfs:label "Propietario de parque"@es ;
+    rdfs:label "Park Owner"@en .
+
+# Roles
+ex:TechnicalRole a owl:Class ;
+    rdfs:subClassOf ex:Role ;
+    rdfs:label "Rol técnico"@es ;
+    rdfs:label "Technical Role"@en .
+
+ex:ManagementRole a owl:Class ;
+    rdfs:subClassOf ex:Role ;
+    rdfs:label "Rol de gestión"@es ;
+    rdfs:label "Management Role"@en .
+
+ex:AnalyticalRole a owl:Class ;
+    rdfs:subClassOf ex:Role ;
+    rdfs:label "Rol analítico"@es ;
+    rdfs:label "Analytical Role"@en .
+
+# Sensors and monitoring systems
+ex:CorrosionCamera a owl:Class ;
+    rdfs:subClassOf ex:Sensor ;
+    rdfs:label "Cámara corrosión"@es ;
+    rdfs:label "Corrosion Camera"@en .
+
+ex:StructuralCamera a owl:Class ;
+    rdfs:subClassOf ex:Sensor ;
+    rdfs:label "Cámara estructural"@es ;
+    rdfs:label "Structural Camera"@en .
+
+ex:Anemometer a owl:Class ;
+    rdfs:subClassOf ex:Sensor ;
+    rdfs:label "Anemómetro"@es ;
+    rdfs:label "Anemometer"@en .
+
+ex:DynamicMonitor a owl:Class ;
+    rdfs:subClassOf ex:Sensor ;
+    rdfs:label "Monitor dinámico"@es ;
+    rdfs:label "Dynamic Monitor"@en .
+
+ex:ISUMSystem a owl:Class ;
+    rdfs:subClassOf ex:Sensor ;
+    rdfs:label "Sistema ISUM"@es ;
+    rdfs:label "ISUM System"@en .
+
+ex:GaugeSystem a owl:Class ;
+    rdfs:subClassOf ex:Sensor ;
+    rdfs:label "Sistema de galgas"@es ;
+    rdfs:label "Gauge System"@en .
+
+# Events and failures
+ex:FailureEvent a owl:Class ;
+    rdfs:subClassOf ex:Event ;
+    rdfs:label "Evento fallo"@es ;
+    rdfs:label "Failure Event"@en .
+
+ex:CorrosionEvent a owl:Class ;
+    rdfs:subClassOf ex:FailureEvent ;
+    rdfs:label "Evento de Corrosión"@es ;
+    rdfs:label "Corrosion Event"@en .
+
+ex:MaterialFatigue a owl:Class ;
+    rdfs:subClassOf ex:Failure ;
+    rdfs:label "Fatiga del material"@es ;
+    rdfs:label "Material Fatigue"@en .
+
+ex:Misalignment a owl:Class ;
+    rdfs:subClassOf ex:Failure ;
+    rdfs:label "Desalineación"@es ;
+    rdfs:label "Misalignment"@en .
+
+ex:ComponentBreakage a owl:Class ;
+    rdfs:subClassOf ex:Failure ;
+    rdfs:label "Rotura de componente"@es ;
+    rdfs:label "Component Breakage"@en .
+
+ex:StructuralInstability a owl:Class ;
+    rdfs:subClassOf ex:Failure ;
+    rdfs:label "Inestabilidad estructural"@es ;
+    rdfs:label "Structural Instability"@en .
+
+# Measured data
+ex:Measurement a owl:Class ;
+    rdfs:subClassOf ex:Data ;
+    rdfs:label "Medición"@es ;
+    rdfs:label "Measurement"@en .
+
+ex:Image a owl:Class ;
+    rdfs:subClassOf ex:Data ;
+    rdfs:label "Imagen"@es ;
+    rdfs:label "Image"@en .
+
+ex:VibrationData a owl:Class ;
+    rdfs:subClassOf ex:Measurement ;
+    rdfs:label "Datos de vibración"@es ;
+    rdfs:label "Vibration Data"@en .
+
+ex:StressData a owl:Class ;
+    rdfs:subClassOf ex:Measurement ;
+    rdfs:label "Datos de tensión"@es ;
+    rdfs:label "Stress Data"@en .
+
+##########################################################
+# Data properties (DatatypeProperty) #
+##########################################################
+
+# Properties for components
+ex:externalShape a owl:DatatypeProperty ;
+    rdfs:domain ex:Component ;
+    rdfs:range xsd:string ;
+    rdfs:label "Forma externa"@es ;
+    rdfs:label "External shape"@en .
+
+ex:length a owl:DatatypeProperty ;
+    rdfs:domain ex:Component ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Longitud (m)"@es ;
+    rdfs:label "Length (m)"@en .
+
+ex:mass a owl:DatatypeProperty ;
+    rdfs:domain ex:Component ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Masa (kg)"@es ;
+    rdfs:label "Mass (kg)"@en .
+
+ex:rotationSpeed a owl:DatatypeProperty ;
+    rdfs:domain ex:Component ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Velocidad de rotación (rpm)"@es ;
+    rdfs:label "Rotation speed (rpm)"@en .
+
+ex:diameter a owl:DatatypeProperty ;
+    rdfs:domain ex:Component ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Diámetro (m)"@es ;
+    rdfs:label "Diameter (m)"@en .
+
+ex:thickness a owl:DatatypeProperty ;
+    rdfs:domain ex:Component ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Espesor (m)"@es ;
+    rdfs:label "Thickness (m)"@en .
+
+ex:material a owl:DatatypeProperty ;
+    rdfs:domain ex:Component ;
+    rdfs:range xsd:string ;
+    rdfs:label "Material"@es ;
+    rdfs:label "Material"@en .
+
+ex:height a owl:DatatypeProperty ;
+    rdfs:domain ex:Component ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Altura (m)"@es ;
+    rdfs:label "Height (m)"@en .
+
+ex:width a owl:DatatypeProperty ;
+    rdfs:domain ex:Component ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Anchura (m)"@es ;
+    rdfs:label "Width (m)"@en .
+
+# Properties for turbines
+ex:hasCapacity a owl:DatatypeProperty ;
+    rdfs:domain ex:Turbine ;
+    rdfs:range xsd:string ;
+    rdfs:label "Capacidad"@es ;
+    rdfs:label "Capacity"@en .
+
+ex:operationalStatus a owl:DatatypeProperty ;
+    rdfs:domain ex:Turbine ;
+    rdfs:range xsd:string ;
+    rdfs:label "Estado operativo"@es ;
+    rdfs:label "Operational status"@en .
+
+# Properties for measured data
+ex:value a owl:DatatypeProperty ;
+    rdfs:domain ex:Measurement ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Valor"@es ;
+    rdfs:label "Value"@en .
+
+ex:imageURL a owl:DatatypeProperty ;
+    rdfs:domain ex:Image ;
+    rdfs:range xsd:string ;
+    rdfs:label "URL de la imagen"@es ;
+    rdfs:label "Image URL"@en .
+
+ex:unit a owl:DatatypeProperty ;
+    rdfs:domain ex:Measurement ;
+    rdfs:range xsd:string ;
+    rdfs:label "Unidad"@es ;
+    rdfs:label "Unit"@en .
+
+ex:dateTime a owl:DatatypeProperty ;
+    rdfs:domain ex:Measurement ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "Fecha y hora"@es ;
+    rdfs:label "Date and time"@en .
+
+# Properties for relevant variables in failures (in Data or EnvironmentalCondition)
+ex:vibrations a owl:DatatypeProperty ;
+    rdfs:domain ex:Data ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Vibraciones"@es ;
+    rdfs:label "Vibrations"@en .
+
+ex:materialWear a owl:DatatypeProperty ;
+    rdfs:domain ex:Data ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Desgaste material"@es ;
+    rdfs:label "Material wear"@en .
+
+ex:temperature a owl:DatatypeProperty ;
+    rdfs:domain ex:Data ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Temperatura (°C)"@es ;
+    rdfs:label "Temperature (°C)"@en .
+
+ex:misalignment a owl:DatatypeProperty ;
+    rdfs:domain ex:Data ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Desalineación"@es ;
+    rdfs:label "Misalignment"@en .
+
+ex:corrosion a owl:DatatypeProperty ;
+    rdfs:domain ex:CorrosionEvent ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Corrosión"@es ;
+    rdfs:label "Corrosion"@en .
+
+ex:darkCorrosion a owl:DatatypeProperty ;
+    rdfs:domain ex:CorrosionEvent ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Corrosión oscura"@es ;
+    rdfs:label "Dark corrosion"@en ;
+    rdfs:subPropertyOf ex:corrosion .
+
+ex:lightCorrosion a owl:DatatypeProperty ;
+    rdfs:domain ex:CorrosionEvent ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Corrosión clara"@es ;
+    rdfs:label "Light corrosion"@en ;
+    rdfs:subPropertyOf ex:corrosion .
+
+ex:deformation a owl:DatatypeProperty ;
+    rdfs:domain ex:Data ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Deformación"@es ;
+    rdfs:label "Deformation"@en .
+
+ex:stress a owl:DatatypeProperty ;
+    rdfs:domain ex:Data ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Tensión"@es ;
+    rdfs:label "Stress"@en .
+
+ex:materialFatigue a owl:DatatypeProperty ;
+    rdfs:domain ex:Data ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Fatiga material"@es ;
+    rdfs:label "Material fatigue"@en .
+
+ex:displacement a owl:DatatypeProperty ;
+    rdfs:domain ex:Data ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Desplazamiento"@es ;
+    rdfs:label "Displacement"@en .
+
+ex:pressure a owl:DatatypeProperty ;
+    rdfs:domain ex:Data ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Presión"@es ;
+    rdfs:label "Pressure"@en .
+
+ex:windSpeed a owl:DatatypeProperty ;
+    rdfs:domain ex:EnvironmentalCondition ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "Velocidad del viento (m/s)"@es ;
+    rdfs:label "Wind speed (m/s)"@en .
+
+ex:windDirection a owl:DatatypeProperty ;
+    rdfs:domain ex:EnvironmentalCondition ;
+    rdfs:range xsd:string ;
+    rdfs:label "Dirección del viento"@es ;
+    rdfs:label "Wind direction"@en .
+
+
+##########################################################
+# Object properties (ObjectProperty) #
+##########################################################
+
+# Relationships between components
+ex:connectedTo a owl:ObjectProperty ;
+    rdfs:domain ex:Component ;
+    rdfs:range ex:Component ;
+    rdfs:label "Conectado a"@es ;
+    rdfs:label "Connected to"@en .
+
+ex:supports a owl:ObjectProperty ;
+    rdfs:domain ex:Component ;
+    rdfs:range ex:Component ;
+    rdfs:label "Soporta a"@es ;
+    rdfs:label "Supports"@en ;
+    owl:inverseOf ex:isSupportedBy .
+
+ex:isSupportedBy a owl:ObjectProperty ;
+    rdfs:domain ex:Component ;
+    rdfs:range ex:Component ;
+    rdfs:label "Es soportado por"@es ;
+    rdfs:label "Is supported by"@en .
+
+ex:transmitsMovementTo a owl:ObjectProperty ;
+    rdfs:domain ex:Component ;
+    rdfs:range ex:Component ;
+    rdfs:label "Transmite movimiento a"@es ;
+    rdfs:label "Transmits movement to"@en .
+
+ex:houses a owl:ObjectProperty ;
+    rdfs:domain ex:Component ;
+    rdfs:range ex:Component ;
+    rdfs:label "Aloja"@es ;
+    rdfs:label "Houses"@en .
+
+# Sensor-failure relationship
+ex:failureObservation a owl:ObjectProperty ;
+    rdfs:domain ex:FailureEvent ;
+    rdfs:range ex:Observation ;
+    rdfs:label "Observación de fallo"@es ;
+    rdfs:label "Failure observation"@en .
+
+ex:detectsCorrosion a owl:ObjectProperty ;
+    rdfs:domain ex:Sensor ;
+    rdfs:range ex:Corrosion ;
+    rdfs:label "Detecta corrosión"@es ;
+    rdfs:label "Detects corrosion"@en .
+
+ex:monitorsDeformation a owl:ObjectProperty ;
+    rdfs:domain ex:Sensor ;
+    rdfs:range ex:Deformation ;
+    rdfs:label "Monitorea deformación"@es ;
+    rdfs:label "Monitors deformation"@en .
+
+ex:measuresVibration a owl:ObjectProperty ;
+    rdfs:domain ex:Sensor ;
+    rdfs:range ex:VibrationData ;
+    rdfs:label "Mide vibración"@es ;
+    rdfs:label "Measures vibration"@en .
+
+ex:measuresWind a owl:ObjectProperty ;
+    rdfs:domain ex:Sensor ;
+    rdfs:range ex:EnvironmentalCondition ;
+    rdfs:label "Mide viento"@es ;
+    rdfs:label "Measures wind"@en .
+
+ex:measuresStress a owl:ObjectProperty ;
+    rdfs:domain ex:Sensor ;
+    rdfs:range ex:StressData ;
+    rdfs:label "Mide tensión"@es ;
+    rdfs:label "Measures stress"@en .
+
+# Event-failure relationships
+ex:causedBy a owl:ObjectProperty ;
+    rdfs:domain ex:Event ;
+    rdfs:range ex:Failure ;
+    rdfs:label "Causado por"@es ;
+    rdfs:label "Caused by"@en .
+
+ex:detectedBy a owl:ObjectProperty ;
+    rdfs:domain ex:Event ;
+    rdfs:range ex:Sensor ;
+    rdfs:label "Detectado por"@es ;
+    rdfs:label "Detected by"@en .
+
+ex:relatedToComponent a owl:ObjectProperty ;
+    rdfs:domain ex:Event ;
+    rdfs:range ex:Component ;
+    rdfs:label "Relacionado con componente"@es ;
+    rdfs:label "Related to component"@en .
+
+ex:hasFailureCause a owl:ObjectProperty ;
+    rdfs:domain ex:Failure ;
+    rdfs:range ex:EnvironmentalCondition ;
+    rdfs:label "Causa de fallo"@es ;
+    rdfs:label "Failure cause"@en .
+
+# Actor and role relationships
+ex:performsTask a owl:ObjectProperty ;
+    rdfs:domain ex:Actor ;
+    rdfs:range ex:Task ;
+    rdfs:label "Realiza tarea"@es ;
+    rdfs:label "Performs task"@en .
+
+ex:hasRole a owl:ObjectProperty ;
+    rdfs:domain ex:Actor ;
+    rdfs:range ex:Role ;
+    rdfs:label "Tiene rol"@es ;
+    rdfs:label "Has role"@en .
+
+ex:monitors a owl:ObjectProperty ;
+    rdfs:domain ex:Actor ;
+    rdfs:range [ owl:unionOf (ex:Component ex:Sensor) ] ;
+    rdfs:label "Monitorea"@es ;
+    rdfs:label "Monitors"@en .
+
+ex:adjusts a owl:ObjectProperty ;
+    rdfs:domain ex:Actor ;
+    rdfs:range [ owl:unionOf (ex:Component ex:PitchSystem) ] ;
+    rdfs:label "Ajusta"@es ;
+    rdfs:label "Adjusts"@en .
+
+ex:analyzes a owl:ObjectProperty ;
+    rdfs:domain ex:Actor ;
+    rdfs:range [ owl:unionOf (ex:Data ex:Failure) ] ;
+    rdfs:label "Analiza"@es ;
+    rdfs:label "Analyzes"@en .
+
+ex:manages a owl:ObjectProperty ;
+    rdfs:domain ex:Actor ;
+    rdfs:range [ owl:unionOf (ex:WindPowerPlatform ex:MooringSystem) ] ;
+    rdfs:label "Administra"@es ;
+    rdfs:label "Manages"@en .
