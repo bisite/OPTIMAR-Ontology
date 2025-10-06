@@ -1,0 +1,159 @@
+
+@prefix ex: <https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v0.2.ttl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+# Platform and location
+ex:OffshorePlatform1 a ex:WindPowerPlatform ;
+    ex:locatedIn ex:NorthSeaLocation ;
+    ex:containsTurbine ex:Turbine1, ex:Turbine2 ;
+    ex:containsComponent ex:FloatingPlatform, ex:PitchSystem ;
+    rdfs:label "Plataforma offshore Mar del Norte"@es ;
+    rdfs:label "North Sea Offshore Platform"@en .
+
+ex:NorthSeaLocation a ex:Location ;
+    rdfs:label "Mar del Norte"@es ;
+    rdfs:label "North Sea"@en .
+
+# Turbines
+ex:Turbine1 a ex:Turbine ;
+    rdfs:label "Turbina 1"@es ;
+    rdfs:label "Turbine 1"@en ;
+    ex:hasCapacity "5MW" ;
+    ex:operationalStatus "Operativa"@es ;
+    ex:operationalStatus "Operational"@en ;
+    ex:diameter [ qudt:hasValue "120"^^xsd:decimal ; qudt:unit unit:metre ] ;
+    ex:connectedTo ex:PitchSystem .
+
+ex:Turbine2 a ex:Turbine ;
+    rdfs:label "Turbina 2"@es ;
+    rdfs:label "Turbine 2"@en ;
+    ex:hasCapacity "5.5MW" ;
+    ex:operationalStatus "Operativa"@es ;
+    ex:operationalStatus "Operational"@en ;
+    ex:diameter [ qudt:hasValue "125"^^xsd:decimal ; qudt:unit unit:metre ] ;
+    ex:connectedTo ex:PitchSystem .
+
+# Turbine components
+ex:Blade1 a ex:Blade ;
+    rdfs:label "Pala 1"@es ;
+    rdfs:label "Blade 1"@en ;
+    ex:externalShape "Aerodinámica"@es ;
+    ex:externalShape "Aerodynamic"@en ;
+    ex:length [ qudt:hasValue "60"^^xsd:decimal ; qudt:unit unit:metre ] ;
+    ex:mass [ qudt:hasValue "12000"^^xsd:decimal ; qudt:unit unit:kilogram ] ;
+    ex:connectedTo ex:Hub1 .
+
+ex:Nacelle1 a ex:Nacelle ;
+    rdfs:label "Nacelle 1"@es ;
+    rdfs:label "Nacelle 1"@en ;
+    ex:connectedTo ex:Blade1 .
+
+ex:Hub1 a ex:Hub ;
+    rdfs:label "Hub 1"@es ;
+    rdfs:label "Hub 1"@en ;
+    ex:connectedTo ex:Nacelle1 .
+
+# Sensors
+ex:AnemoSensor1 a ex:Anemometer ;
+    rdfs:label "Anemómetro Turbina 1"@es ;
+    rdfs:label "Anemometer Turbine 1"@en ;
+    ex:measurement [ qudt:hasValue "12"^^xsd:decimal ; qudt:unit unit:metrePerSecond ] ;
+    ex:hasFrequency ex:FrequencyEveryMinute ;
+    ex:outputFormat "numérico"@es ;
+    ex:outputFormat "numeric"@en ;
+    sosa:observes ex:Turbine1 .
+
+ex:CorrosionCamSensor1 a ex:CorrosionCamera ;
+    rdfs:label "Cámara corrosión Turbina 2"@es ;
+    rdfs:label "Corrosion Camera Turbine 2"@en ;
+    ex:measurement [ qudt:hasValue "0.8"^^xsd:decimal ; qudt:unit unit:percent ] ;
+    ex:hasFrequency ex:FrequencyEveryMinute ;
+    ex:outputFormat "imagen"@es ;
+    ex:outputFormat "image"@en ;
+    sosa:observes ex:Turbine2 .
+
+# Data frequency
+ex:FrequencyEveryMinute a ex:Frequency ;
+    ex:frequencyValue [ qudt:hasValue "1"^^xsd:decimal ; qudt:unit unit:minute ] ;
+    rdfs:label "Frecuencia de datos por minuto"@es ;
+    rdfs:label "Data frequency per minute"@en .
+
+# Failure event
+ex:FailureEvent1 a ex:FailureEvent ;
+    ex:causedBy ex:Corrosion ;
+    ex:detectedBy ex:CorrosionCamSensor1 ;
+    ex:relatedToComponent ex:Blade1 ;
+    rdfs:label "Evento de corrosión detectado en Pala 1"@es ;
+    rdfs:label "Corrosion event detected on Blade 1"@en .
+
+# Example actors and roles
+ex:Operator1 a ex:MaintenanceOperator ;
+    rdfs:label "Operador de mantenimiento 1"@es ;
+    rdfs:label "Maintenance Operator 1"@en ;
+    ex:hasRole ex:TechnicalRole ;
+    ex:monitors ex:Turbine1 .
+
+ex:PlatformActuator1 a ex:PlatformActuator ;
+    rdfs:label "Actuador de plataforma 1"@es ;
+    rdfs:label "Platform Actuator 1"@en ;
+    ex:adjusts ex:PitchSystem .
+
+ex:CloudAdministrator1 a ex:CloudAdministrator ;
+    rdfs:label "Administrador de nube 1"@es ;
+    rdfs:label "Cloud Administrator 1"@en ;
+    ex:manages ex:OffshorePlatform1 .
+
+ex:DataAnalyst1 a ex:DataAnalyst ;
+    rdfs:label "Analista de datos 1"@es ;
+    rdfs:label "Data Analyst 1"@en ;
+    ex:analyzes ex:FailureEvent1 .
+
+# Task instantiation
+ex:MaintenanceTask1 a ex:MonitoringTask ;
+    ex:performedBy ex:Operator1 ;
+    ex:monitors ex:CorrosionCamSensor1 ;
+    rdfs:label "Monitoreo de corrosión en Turbina 2"@es ;
+    rdfs:label "Monitoring of corrosion on Turbine 2"@en .
+
+ex:WindSpeedTask a ex:MonitoringTask ;
+    ex:performedBy ex:Operator1 ;
+    ex:monitors ex:AnemoSensor1 ;
+    rdfs:label "Monitoreo de velocidad del viento en Turbina 1"@es ;
+    rdfs:label "Monitoring wind speed on Turbine 1"@en .
+
+# Observations
+ex:Observation1 a ex:Observation ;
+    rdfs:label "Observación de corrosión en Pala 1"@es ;
+    rdfs:label "Observation of corrosion on Blade 1"@en ;
+    ex:madeBySensor ex:CorrosionCamSensor1 ;
+    ex:detectsCorrosion [ qudt:hasValue "0.8"^^xsd:decimal ; qudt:unit unit:percent ] .
+
+ex:Observation2 a ex:Observation ;
+    rdfs:label "Observación de velocidad de viento en Turbina 1"@es ;
+    rdfs:label "Observation of wind speed on Turbine 1"@en ;
+    ex:madeBySensor ex:AnemoSensor1 ;
+    ex:measuresWind [ qudt:hasValue "12"^^xsd:decimal ; qudt:unit unit:metrePerSecond ] ;
+    ex:unit unit:metrePerSecond .
+
+# Environmental Conditions
+ex:EnvironmentalCondition1 a ex:EnvironmentalCondition ;
+    rdfs:label "Condición ambiental Mar del Norte"@es ;
+    rdfs:label "North Sea Environmental Condition"@en ;
+    ex:windSpeed [ qudt:hasValue "15"^^xsd:decimal ; qudt:unit unit:metrePerSecond ] ;
+    ex:windDirection [ qudt:hasValue "270"^^xsd:decimal ; qudt:unit unit:degree ] ;
+    ex:hasEffectOn ex:OffshorePlatform1 .
+
+# Detailed Event and Failure Relationships
+ex:FailureEvent2 a ex:FailureEvent ;
+    ex:causedBy ex:MaterialFatigue ;
+    ex:detectedBy ex:DynamicMonitor ;
+    ex:relatedToComponent ex:Turbine1 ;
+    rdfs:label "Evento de fatiga de material en Turbina 1"@es ;
+    rdfs:label "Material fatigue event in Turbine 1"@en .
+
+ex:CorrosionEvent2 a ex:CorrosionEvent ;
+    ex:relatedToComponent ex:Blade1 ;
+    ex:corrosion [ qudt:hasValue "0.8"^^xsd:decimal ; qudt:unit unit:percent ] ;
+    rdfs:label "Corrosión en Pala 1"@es ;
+    rdfs:label "Corrosion on Blade 1"@en .
