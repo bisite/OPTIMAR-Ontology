@@ -6,7 +6,7 @@ The ontology models platform components, turbines, sensors, failures, maintenanc
 
 ---
 
-## repository structure
+## Repository structure
 
 - `ontology/` : ontology files organized by version.
 - `instances/` : full instantiations aligned with each ontology version.
@@ -17,24 +17,20 @@ The ontology models platform components, turbines, sensors, failures, maintenanc
 
 ---
 
-## ontology versions
+## Ontology versions
 
-| Version | Description                                                                                                         | Release date  | URL                                                                           |
-|---------|---------------------------------------------------------------------------------------------------------------------|---------------|-------------------------------------------------------------------------------|
-| v0.1    | Initial version, basic ontology with main classes, properties, and example instances for offshore wind platforms.   | 2025-06-05    | [v0.1](https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v0.1.ttl)   |
-| v0.2    | Added detailed sensors, measured data, failures, actors and roles.                                                  | 2025-09-24    | [v0.2](https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v0.2.ttl)   |
-| v1.0    | Stable version of the ontology. Consolidation and extension of structural and turbine components.                   | 2025-10-06    | [v1.0](https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl)   |
-|         | Inclusion of actors and roles with their functional relationships.                                                  |               |                                                                               |
-|         | Detailed definition of specific sensor classes and associated measurement types.                                    |               |                                                                               |
-|         | More comprehensive modeling of failure events.                                                                      |               |                                                                               |
-|         | Inclusion of properties for measured data and environmental conditions.                                             |               |                                                                               |
+| Version | Description | Release date | URL |
+|---------|-------------|--------------|-----|
+| v0.1 | Initial version, basic ontology with main classes, properties, and example instances for offshore wind platforms. | 2025-06-05 | [v0.1](https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v0.1.ttl) |
+| v0.2 | Added detailed sensors, measured data, failures, actors and roles. | 2025-09-24 | [v0.2](https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v0.2.ttl) |
+| v1.0 | Stable version of the ontology.<br>Consolidation and extension of structural and turbine components.<br>Inclusion of actors and roles with their functional relationships.<br>Detailed definition of specific sensor classes and associated measurement types.<br>More comprehensive modeling of failure events.<br>Inclusion of properties for measured data and environmental conditions. | 2025-10-06 | [v1.0](https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl) |
 
 Each version of the ontology is stored in a separate file with its own namespace IRI.  
 Full instances for each version are stored under the `instances/` directory.
 
 ---
 
-## documentation
+## Documentation
 
 Full documentation generated with **Widoco** is available in the `docs/` folder.  
 Open `docs/index.html` in a browser to access a complete description of classes, properties, relationships, and ontology metadata.  
@@ -53,17 +49,17 @@ The `docs/` folder contains:
 
 ---
 
-## ontology IRI and usage
+## Ontology IRI and usage
 
-For version 0.1:
+For version 1.0:
 
-- Ontology TTL: `https://bisite.github.io/OPTIMAR-Ontology/ontology/v0.1/OPTiMAR-v0.1.ttl`
-- Instances TTL: `https://bisite.github.io/OPTIMAR-Ontology/instances/v0.1/instances.ttl`
+- Ontology TTL: `https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl`
+- Instances TTL: `https://bisite.github.io/OPTIMAR-Ontology/instances/v1.0/instances.ttl`
 
 The ontology uses the following common prefixes:
 
 ```turtle
-@prefix ex: <https://bisite.github.io/OPTIMAR-Ontology/ontology/v0.1/OPTiMAR-v0.1.ttl#> .
+@prefix ex: <https://bisite.github.io/OPTIMAR-Ontology/ontology/v1.0/OPTiMAR-v1.0.ttl#> .
 @prefix sosa: <https://www.w3.org/ns/sosa/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .

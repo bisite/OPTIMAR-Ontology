@@ -5,14 +5,14 @@
     "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://qudt.org/schema/qudt", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl", "http://www.w3.org/2001/XMLSchema", "https://www.w3.org/ns/sosa" ],
     "title" : {
       "en" : "Offshore Wind Power Platform Ontology for OPTiMAR",
-      "es" : "Ontología de Plataforma Eólica Offshore para OPTiMAR"
+      "es" : "Ontologï¿½a de Plataforma Eï¿½lica Offshore para OPTiMAR"
     },
     "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "version" : "Versión 1.0 de la ontología",
+    "version" : "1.0",
     "author" : [ "Alejandro Flores (USAL), Alberto Montero (USAL), Oihana Garcia (Tekniker) and Cristina Aceta (Tekniker)" ],
     "description" : {
       "en" : "This ontology describes the components, failures, sensors, and events related to offshore wind platforms.",
-      "es" : "Esta ontología describe los componentes, fallos, sensores y eventos relacionados con las plataformas eólicas offshore."
+      "es" : "Esta ontologï¿½a describe los componentes, fallos, sensores y eventos relacionados con las plataformas eï¿½licas offshore."
     },
     "other" : {
       "date" : [ {
@@ -42,7 +42,7 @@
       "abstract" : [ {
         "identifier" : "abstract",
         "language" : "es",
-        "value" : "Ontologia que modela los elementos estructurales, sensores, eventos y fallos de plataformas eólicas offshore, incluyendo datos de medición y actores involucrados.",
+        "value" : "Ontologia que modela los elementos estructurales, sensores, eventos y fallos de plataformas eï¿½licas offshore, incluyendo datos de mediciï¿½n y actores involucrados.",
         "type" : "label"
       }, {
         "identifier" : "abstract",
@@ -53,18 +53,18 @@
       "versionInfo" : [ {
         "identifier" : "versionInfo",
         "language" : "es",
-        "value" : "Versión 1.0 de la ontología",
+        "value" : "1.0",
         "type" : "label"
       }, {
         "identifier" : "versionInfo",
         "language" : "en",
-        "value" : "Version 1.0 of the Ontology",
+        "value" : "1.0",
         "type" : "label"
       } ],
       "title" : [ {
         "identifier" : "title",
         "language" : "es",
-        "value" : "Ontología de Plataforma Eólica Offshore para OPTiMAR",
+        "value" : "Ontologï¿½a de Plataforma Eï¿½lica Offshore para OPTiMAR",
         "type" : "label"
       }, {
         "identifier" : "title",
@@ -92,7 +92,7 @@
       }, {
         "identifier" : "rights",
         "language" : "es",
-        "value" : "Este trabajo se distribuye bajo la licencia MIT. Se permite copiar, modificar y distribuir bajo los términos de dicha licencia.",
+        "value" : "Este trabajo se distribuye bajo la licencia MIT. Se permite copiar, modificar y distribuir bajo los tï¿½rminos de dicha licencia.",
         "type" : "label"
       } ],
       "preferredNamespacePrefix" : [ {
@@ -104,7 +104,7 @@
       "name" : [ {
         "identifier" : "name",
         "language" : "es",
-        "value" : "Ontología Offshore OPTiMAR",
+        "value" : "Ontologï¿½a Offshore OPTiMAR",
         "type" : "label"
       }, {
         "identifier" : "name",
@@ -120,7 +120,7 @@
       }, {
         "identifier" : "publisher",
         "language" : "es",
-        "value" : "Universidad de Salamanca, Centro Tecnológico y de Investigación - Tekniker",
+        "value" : "Universidad de Salamanca, Centro Tecnolï¿½gico y de Investigaciï¿½n - Tekniker",
         "type" : "label"
       } ],
       "modified" : [ {
@@ -138,7 +138,7 @@
       "bibliographicCitation" : [ {
         "identifier" : "bibliographicCitation",
         "language" : "es",
-        "value" : "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.1234/abcd",
+        "value" : "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontologï¿½a de Plataforma Eï¿½lica Offshore para OPTiMAR. DOI: 10.1234/abcd",
         "type" : "label"
       }, {
         "identifier" : "bibliographicCitation",
@@ -412,7 +412,7 @@
     },
     "comment" : {
       "en" : "The turbine component that houses the generator and other mechanical components.",
-      "es" : "El compartimento de la turbina que aloja el generador y otros componentes mecánicos."
+      "es" : "El compartimento de la turbina que aloja el generador y otros componentes mecï¿½nicos."
     },
     "id" : "0",
     "superClasses" : [ "1" ]
@@ -423,11 +423,11 @@
     "label" : {
       "IRI-based" : "StressData",
       "en" : "Stress Data",
-      "es" : "Datos de tensión"
+      "es" : "Datos de tensiï¿½n"
     },
     "comment" : {
       "en" : "Stress data measured by a sensor.",
-      "es" : "Datos de tensión medidos por un sensor."
+      "es" : "Datos de tensiï¿½n medidos por un sensor."
     },
     "id" : "2",
     "superClasses" : [ "3" ]
@@ -464,7 +464,7 @@
     },
     "comment" : {
       "en" : "A wind turbine that is part of the wind platform.",
-      "es" : "Una turbina de viento que forma parte de la plataforma eólica."
+      "es" : "Una turbina de viento que forma parte de la plataforma eï¿½lica."
     },
     "id" : "7",
     "superClasses" : [ "8" ]
@@ -479,7 +479,7 @@
     },
     "comment" : {
       "en" : "A class that represents an image that supports the measurement.",
-      "es" : "Una clase que representa una imagen que soporta la medición."
+      "es" : "Una clase que representa una imagen que soporta la mediciï¿½n."
     },
     "id" : "9",
     "superClasses" : [ "10" ]
@@ -490,11 +490,11 @@
     "label" : {
       "IRI-based" : "AnalyticalRole",
       "en" : "Analytical Role",
-      "es" : "Rol analítico"
+      "es" : "Rol analï¿½tico"
     },
     "comment" : {
       "en" : "Role focused on data analysis and generation of useful information for decision-making.",
-      "es" : "Rol orientado al analisis de datos y generación de información útil para la toma de decisiones."
+      "es" : "Rol orientado al analisis de datos y generaciï¿½n de informaciï¿½n ï¿½til para la toma de decisiones."
     },
     "id" : "11",
     "superClasses" : [ "12" ]
@@ -523,7 +523,7 @@
     },
     "comment" : {
       "en" : "Responsible for managing and securing cloud services that process data from the platform.",
-      "es" : "Responsable de la administración y seguridad de los servicios en la nube que procesan los datos de la plataforma."
+      "es" : "Responsable de la administraciï¿½n y seguridad de los servicios en la nube que procesan los datos de la plataforma."
     },
     "id" : "15",
     "superClasses" : [ "16" ]
@@ -559,7 +559,7 @@
     },
     "comment" : {
       "en" : "The structure that supports the wind turbine.",
-      "es" : "La estructura que sostiene la turbina eólica."
+      "es" : "La estructura que sostiene la turbina eï¿½lica."
     },
     "id" : "22",
     "superClasses" : [ "1" ]
@@ -609,7 +609,7 @@
     },
     "comment" : {
       "en" : "The blades of the turbine that capture the wind energy.",
-      "es" : "Las palas de la turbina que capturan la energía eólica."
+      "es" : "Las palas de la turbina que capturan la energï¿½a eï¿½lica."
     },
     "id" : "30",
     "superClasses" : [ "1" ]
@@ -620,7 +620,7 @@
     "label" : {
       "IRI-based" : "VibrationData",
       "en" : "Vibration Data",
-      "es" : "Datos de vibración"
+      "es" : "Datos de vibraciï¿½n"
     },
     "comment" : {
       "en" : "Vibration data measured by a sensor.",
@@ -639,7 +639,7 @@
     },
     "comment" : {
       "en" : "The mooring system that keeps the floating platform in place.",
-      "es" : "El sistema de amarre que mantiene la plataforma flotante en su ubicación."
+      "es" : "El sistema de amarre que mantiene la plataforma flotante en su ubicaciï¿½n."
     },
     "id" : "36",
     "superClasses" : [ "37" ]
@@ -650,11 +650,11 @@
     "label" : {
       "IRI-based" : "Anemometer",
       "en" : "Anemometer",
-      "es" : "Anemómetro"
+      "es" : "Anemï¿½metro"
     },
     "comment" : {
       "en" : "Sensor that measures wind speed and direction in the wind farm.",
-      "es" : "Sensor que mide la velocidad y dirección del viento en el parque eólico."
+      "es" : "Sensor que mide la velocidad y direcciï¿½n del viento en el parque eï¿½lico."
     },
     "id" : "40",
     "superClasses" : [ "41" ]
@@ -665,11 +665,11 @@
     "label" : {
       "IRI-based" : "CorrosionEvent",
       "en" : "Corrosion Event",
-      "es" : "Evento de Corrosión"
+      "es" : "Evento de Corrosiï¿½n"
     },
     "comment" : {
       "en" : "Degradation of the platform's metallic structure due to corrosion effects.",
-      "es" : "Degradación de la estructura metálica de la plataforma por efectos de corrosión."
+      "es" : "Degradaciï¿½n de la estructura metï¿½lica de la plataforma por efectos de corrosiï¿½n."
     },
     "id" : "32",
     "superClasses" : [ "42" ]
@@ -680,11 +680,11 @@
     "label" : {
       "IRI-based" : "CorrosionCamera",
       "en" : "Corrosion Camera",
-      "es" : "Cámara corrosión"
+      "es" : "Cï¿½mara corrosiï¿½n"
     },
     "comment" : {
       "en" : "Camera used to detect and monitor corrosion in the platform structure.",
-      "es" : "Cámara utilizada para detectar y monitorear corrosión en la estructura de la plataforma."
+      "es" : "Cï¿½mara utilizada para detectar y monitorear corrosiï¿½n en la estructura de la plataforma."
     },
     "id" : "43",
     "superClasses" : [ "41" ]
@@ -714,7 +714,7 @@
     },
     "comment" : {
       "en" : "Strain gauge system used to measure stresses and deformations in the structure.",
-      "es" : "Sistema de galgas extensiométricas utilizado para medir tensiones y deformaciones en la estructura."
+      "es" : "Sistema de galgas extensiomï¿½tricas utilizado para medir tensiones y deformaciones en la estructura."
     },
     "id" : "45",
     "superClasses" : [ "41" ]
@@ -725,11 +725,11 @@
     "label" : {
       "IRI-based" : "DynamicMonitor",
       "en" : "Dynamic Monitor",
-      "es" : "Monitor dinámico"
+      "es" : "Monitor dinï¿½mico"
     },
     "comment" : {
       "en" : "Device that measures dynamic parameters of the platform, such as vibrations and movements.",
-      "es" : "Dispositivo que mide parámetros dinámicos de la plataforma como vibraciones y movimientos."
+      "es" : "Dispositivo que mide parï¿½metros dinï¿½micos de la plataforma como vibraciones y movimientos."
     },
     "id" : "46",
     "superClasses" : [ "41" ]
@@ -801,7 +801,7 @@
     },
     "comment" : {
       "en" : "A task aimed at supervising the condition of the platform through sensors and monitoring systems.",
-      "es" : "Una tarea destinada a supervisar el estado de la plataforma mediante sensores y sistemas de monitorización."
+      "es" : "Una tarea destinada a supervisar el estado de la plataforma mediante sensores y sistemas de monitorizaciï¿½n."
     },
     "id" : "57",
     "superClasses" : [ "58" ]
@@ -829,7 +829,7 @@
     "subClasses" : [ "61", "7", "62" ],
     "comment" : {
       "en" : "An component of an offshore wind power platform, such as blades, towers, pitch system, etc.",
-      "es" : "Un componente de una plataforma eólica offshore, como las palas, torres, sistema de pitch, etc."
+      "es" : "Un componente de una plataforma eï¿½lica offshore, como las palas, torres, sistema de pitch, etc."
     },
     "id" : "8"
   }, {
@@ -844,7 +844,7 @@
     "subClasses" : [ "44", "63", "64", "5" ],
     "comment" : {
       "en" : "A class that represents identified failures in the wind platform.",
-      "es" : "Una clase que representa fallos identificados en la plataforma eólica."
+      "es" : "Una clase que representa fallos identificados en la plataforma eï¿½lica."
     },
     "id" : "6"
   }, {
@@ -864,12 +864,12 @@
     "label" : {
       "IRI-based" : "Measurement",
       "en" : "Measurement",
-      "es" : "Medición"
+      "es" : "Mediciï¿½n"
     },
     "subClasses" : [ "2", "35" ],
     "comment" : {
       "en" : "Represents a measurement taken by a sensor.",
-      "es" : "Representa una medición tomada por un sensor."
+      "es" : "Representa una mediciï¿½n tomada por un sensor."
     },
     "id" : "3",
     "superClasses" : [ "10" ]
@@ -915,7 +915,7 @@
     },
     "comment" : {
       "en" : "Specialist who analyzes collected data to detect patterns, failures, and optimization opportunities.",
-      "es" : "Especialista que analiza los datos recolectados para detectar patrones, fallos y oportunidades de optimización."
+      "es" : "Especialista que analiza los datos recolectados para detectar patrones, fallos y oportunidades de optimizaciï¿½n."
     },
     "id" : "79",
     "superClasses" : [ "16" ]
@@ -926,11 +926,11 @@
     "label" : {
       "IRI-based" : "Location",
       "en" : "Location",
-      "es" : "Ubicación"
+      "es" : "Ubicaciï¿½n"
     },
     "comment" : {
       "en" : "The geographic location of the wind platform.",
-      "es" : "La ubicación geográfica de la plataforma eólica."
+      "es" : "La ubicaciï¿½n geogrï¿½fica de la plataforma eï¿½lica."
     },
     "id" : "90"
   }, {
@@ -946,7 +946,7 @@
     "subClasses" : [ "0", "30", "47", "22" ],
     "comment" : {
       "en" : "The turbine components that generate energy from the wind.",
-      "es" : "Los componentes de la turbina eólica que generan energía a partir del viento."
+      "es" : "Los componentes de la turbina eï¿½lica que generan energï¿½a a partir del viento."
     },
     "attributes" : [ "union" ],
     "id" : "1"
@@ -961,7 +961,7 @@
     },
     "comment" : {
       "en" : "Entity or individual owning the offshore wind farm and responsible for its overall operation.",
-      "es" : "Entidad o persona propietaria del parque eólico offshore y responsable de su operación general."
+      "es" : "Entidad o persona propietaria del parque eï¿½lico offshore y responsable de su operaciï¿½n general."
     },
     "id" : "100",
     "superClasses" : [ "16" ]
@@ -987,11 +987,11 @@
     "label" : {
       "IRI-based" : "Misalignment",
       "en" : "Misalignment",
-      "es" : "Desalineación"
+      "es" : "Desalineaciï¿½n"
     },
     "comment" : {
       "en" : "Failure caused by misalignment or lack of proper adjustment between platform components.",
-      "es" : "Fallo causado por el desajuste o falta de alineación entre los componentes de la plataforma."
+      "es" : "Fallo causado por el desajuste o falta de alineaciï¿½n entre los componentes de la plataforma."
     },
     "id" : "63",
     "superClasses" : [ "6" ]
@@ -1006,7 +1006,7 @@
     },
     "comment" : {
       "en" : "Failure caused by the fracture or breakage of an offshore wind turbine component.",
-      "es" : "Fallo originado por la fractura o rotura de un componente de la plataforma eólica."
+      "es" : "Fallo originado por la fractura o rotura de un componente de la plataforma eï¿½lica."
     },
     "id" : "64",
     "superClasses" : [ "6" ]
@@ -1017,11 +1017,11 @@
     "label" : {
       "IRI-based" : "TechnicalRole",
       "en" : "Technical Role",
-      "es" : "Rol técnico"
+      "es" : "Rol tï¿½cnico"
     },
     "comment" : {
       "en" : "Role associated with technical activities such as operation, repair, and system supervision.",
-      "es" : "Rol asociado a actividades técnicas como operación, reparación y supervisión de sistemas."
+      "es" : "Rol asociado a actividades tï¿½cnicas como operaciï¿½n, reparaciï¿½n y supervisiï¿½n de sistemas."
     },
     "id" : "72",
     "superClasses" : [ "12" ]
@@ -1036,7 +1036,7 @@
     },
     "comment" : {
       "en" : "The system that adjusts the angle of the blades of the turbine.",
-      "es" : "El sistema que ajusta el ángulo de las palas de la turbina."
+      "es" : "El sistema que ajusta el ï¿½ngulo de las palas de la turbina."
     },
     "id" : "62",
     "superClasses" : [ "8" ]
@@ -1053,7 +1053,7 @@
     "subClasses" : [ "36", "78", "88" ],
     "comment" : {
       "en" : "The structural components that make up the basic infrastructure of the wind platform.",
-      "es" : "Los componentes estructurales que componen la infraestructura básica de la plataforma eólica."
+      "es" : "Los componentes estructurales que componen la infraestructura bï¿½sica de la plataforma eï¿½lica."
     },
     "attributes" : [ "union" ],
     "id" : "37"
@@ -1076,7 +1076,7 @@
     "subClasses" : [ "57" ],
     "comment" : {
       "en" : "A general task related to the operation, monitoring, or maintenance of the wind platform.",
-      "es" : "Una tarea general relacionada con la operación, supervisión o mantenimiento de la plataforma eólica."
+      "es" : "Una tarea general relacionada con la operaciï¿½n, supervisiï¿½n o mantenimiento de la plataforma eï¿½lica."
     },
     "id" : "58"
   }, {
@@ -1086,11 +1086,11 @@
     "label" : {
       "IRI-based" : "WindPowerPlatform",
       "en" : "Offshore Wind Power Platform",
-      "es" : "Plataforma eólica offshore"
+      "es" : "Plataforma eï¿½lica offshore"
     },
     "comment" : {
       "en" : "An offshore wind power platform that generates electricity from wind.",
-      "es" : "Una plataforma eólica offshore que genera energía electrica a partir del viento."
+      "es" : "Una plataforma eï¿½lica offshore que genera energï¿½a electrica a partir del viento."
     },
     "id" : "66"
   }, {
@@ -1114,7 +1114,7 @@
     },
     "comment" : {
       "en" : "A floating platform that serves as a base for the wind turbine.",
-      "es" : "Una plataforma flotante que sirve de base para la turbina eólica."
+      "es" : "Una plataforma flotante que sirve de base para la turbina eï¿½lica."
     },
     "id" : "61",
     "superClasses" : [ "8" ]
@@ -1125,11 +1125,11 @@
     "label" : {
       "IRI-based" : "StructuralCamera",
       "en" : "Structural Camera",
-      "es" : "Cámara estructural"
+      "es" : "Cï¿½mara estructural"
     },
     "comment" : {
       "en" : "Camera dedicated to visual inspection of the structural condition of the platform.",
-      "es" : "Cámara dedicada a la inspección visual del estado estructural de la plataforma."
+      "es" : "Cï¿½mara dedicada a la inspecciï¿½n visual del estado estructural de la plataforma."
     },
     "id" : "118",
     "superClasses" : [ "41" ]
@@ -1145,7 +1145,7 @@
     "subClasses" : [ "74", "72", "11" ],
     "comment" : {
       "en" : "The roles of the actors that manage, operate or maintain the offshore wind power platform.",
-      "es" : "Los roles de los actores que gestionan, operan o mantienen la plataforma eólica."
+      "es" : "Los roles de los actores que gestionan, operan o mantienen la plataforma eï¿½lica."
     },
     "id" : "12"
   }, {
@@ -1159,7 +1159,7 @@
     },
     "comment" : {
       "en" : "Responsible for making adjustments on the platform, such as mechanical or hydraulic adjustments.",
-      "es" : "Encargado de realizar ajustes sobre la plataforma, como ajustes mecánicos o hidráulicos."
+      "es" : "Encargado de realizar ajustes sobre la plataforma, como ajustes mecï¿½nicos o hidrï¿½ulicos."
     },
     "id" : "120",
     "superClasses" : [ "16" ]
@@ -1174,7 +1174,7 @@
     },
     "comment" : {
       "en" : "Specialized system for integrated monitoring of the offshore platform.",
-      "es" : "Sistema especializado para la monitorización integrada de la plataforma offshore."
+      "es" : "Sistema especializado para la monitorizaciï¿½n integrada de la plataforma offshore."
     },
     "id" : "121",
     "superClasses" : [ "41" ]
@@ -1190,7 +1190,7 @@
     "subClasses" : [ "42" ],
     "comment" : {
       "en" : "An event that occurs in the offshore wind power platform, such as a failure detection.",
-      "es" : "Un evento que ocurre en la plataforma eólica, como la detección de un fallo."
+      "es" : "Un evento que ocurre en la plataforma eï¿½lica, como la detecciï¿½n de un fallo."
     },
     "id" : "77"
   }, {
@@ -1205,7 +1205,7 @@
     "subClasses" : [ "45", "46", "121", "40", "118", "43" ],
     "comment" : {
       "en" : "A device that measures or monitors parameters of the wind platform, such as wind, corrosion, vibrations, etc.",
-      "es" : "Un dispositivo que mide o monitorea parámetros de la plataforma eólica, como viento, corrosión, vibraciones, etc."
+      "es" : "Un dispositivo que mide o monitorea parï¿½metros de la plataforma eï¿½lica, como viento, corrosiï¿½n, vibraciones, etc."
     },
     "id" : "41",
     "superClasses" : [ "55" ]
@@ -1226,11 +1226,11 @@
     "label" : {
       "IRI-based" : "ManagementRole",
       "en" : "Management Role",
-      "es" : "Rol de gestión"
+      "es" : "Rol de gestiï¿½n"
     },
     "comment" : {
       "en" : "Role responsible for coordination, planning, and resource management in the wind platform.",
-      "es" : "Rol encargado de la coordinación, planificación y gestión de recursos en la plataforma eólica."
+      "es" : "Rol encargado de la coordinaciï¿½n, planificaciï¿½n y gestiï¿½n de recursos en la plataforma eï¿½lica."
     },
     "id" : "74",
     "superClasses" : [ "12" ]
@@ -1246,7 +1246,7 @@
     "subClasses" : [ "3", "9" ],
     "comment" : {
       "en" : "A class for representing the measurement data collected by sensors or other systems.",
-      "es" : "Una clase general para representar los datos de medición recolectados por sensores u otros sistemas."
+      "es" : "Una clase general para representar los datos de mediciï¿½n recolectados por sensores u otros sistemas."
     },
     "id" : "10"
   }, {
@@ -1268,7 +1268,7 @@
     },
     "comment" : {
       "en" : "A class that represents the maintenance of the wind platform.",
-      "es" : "Una clase que representa el mantenimiento de la plataforma eólica."
+      "es" : "Una clase que representa el mantenimiento de la plataforma eï¿½lica."
     },
     "id" : "135"
   }, {
@@ -1293,11 +1293,11 @@
     "label" : {
       "IRI-based" : "EnvironmentalCondition",
       "en" : "Environmental Condition",
-      "es" : "Condición ambiental"
+      "es" : "Condiciï¿½n ambiental"
     },
     "comment" : {
       "en" : "The environmental conditions that affect the offshore wind power platform, such as wind speed, temperature, etc.",
-      "es" : "Las condiciones ambientales que afectan a la plataforma eólica, como la velocidad del viento, la temperatura, etc."
+      "es" : "Las condiciones ambientales que afectan a la plataforma eï¿½lica, como la velocidad del viento, la temperatura, etc."
     },
     "id" : "76"
   }, {
@@ -1312,11 +1312,11 @@
     "label" : {
       "IRI-based" : "Observation",
       "en" : "Observation",
-      "es" : "Observación"
+      "es" : "Observaciï¿½n"
     },
     "comment" : {
       "en" : "The result of recording a phenomenon or condition, usually through a sensor or monitoring system.",
-      "es" : "El resultado de registrar un fenómeno o condición, normalmente a través de un sensor o sistema de monitorización."
+      "es" : "El resultado de registrar un fenï¿½meno o condiciï¿½n, normalmente a travï¿½s de un sensor o sistema de monitorizaciï¿½n."
     },
     "id" : "69",
     "superClasses" : [ "54" ]
@@ -1332,7 +1332,7 @@
     "subClasses" : [ "120", "15", "100", "79", "126" ],
     "comment" : {
       "en" : "An actor that interacts or manages the offshore wind power platform.",
-      "es" : "Un actor que interactúa o gestiona la plataforma eólica."
+      "es" : "Un actor que interactï¿½a o gestiona la plataforma eï¿½lica."
     },
     "id" : "16"
   }, {
@@ -1685,12 +1685,12 @@
     "label" : {
       "IRI-based" : "lightCorrosion",
       "en" : "Light corrosion",
-      "es" : "Corrosión clara"
+      "es" : "Corrosiï¿½n clara"
     },
     "domain" : "32",
     "comment" : {
       "en" : "Level of light corrosion detected on the material surface.",
-      "es" : "Nivel de corrosión clara detectada en la superficie del material."
+      "es" : "Nivel de corrosiï¿½n clara detectada en la superficie del material."
     },
     "attributes" : [ "datatype" ],
     "id" : "31"
@@ -1706,7 +1706,7 @@
     "domain" : "16",
     "comment" : {
       "en" : "Indicates that an actor is responsible for managing a wind power platform or its mooring system.",
-      "es" : "Infica que un actor se encarga de la gestión de una plataforma eólica o su sistema de anclaje."
+      "es" : "Infica que un actor se encarga de la gestiï¿½n de una plataforma eï¿½lica o su sistema de anclaje."
     },
     "attributes" : [ "object" ],
     "id" : "33"
@@ -1733,7 +1733,7 @@
     "label" : {
       "IRI-based" : "rotationSpeed",
       "en" : "Rotation speed",
-      "es" : "Velocidad de rotación"
+      "es" : "Velocidad de rotaciï¿½n"
     },
     "domain" : "8",
     "comment" : {
@@ -1754,7 +1754,7 @@
     "domain" : "54",
     "comment" : {
       "en" : "Relates an observation to the sensor that made it.",
-      "es" : "Relaciona una observación con el sensor que la realizó."
+      "es" : "Relaciona una observaciï¿½n con el sensor que la realizï¿½."
     },
     "attributes" : [ "object" ],
     "id" : "53"
@@ -1833,7 +1833,7 @@
     "domain" : "41",
     "comment" : {
       "en" : "Relates a sensor with the measurement of wind speed or direction.",
-      "es" : "Relaciona un sensor con la medición de velocidad o dirección del viento."
+      "es" : "Relaciona un sensor con la mediciï¿½n de velocidad o direcciï¿½n del viento."
     },
     "attributes" : [ "object" ],
     "id" : "75"
@@ -1849,7 +1849,7 @@
     "domain" : "8",
     "comment" : {
       "en" : "Material of manufacturing of the component (e.g. steel, composite, fiberglass, etc.).",
-      "es" : "Material de fabricación del componente (ej. acero, compuesto, fibra de vidrio, etc.)."
+      "es" : "Material de fabricaciï¿½n del componente (ej. acero, compuesto, fibra de vidrio, etc.)."
     },
     "attributes" : [ "datatype" ],
     "id" : "80"
@@ -1860,12 +1860,12 @@
     "label" : {
       "IRI-based" : "monitorsDeformation",
       "en" : "Monitors deformation",
-      "es" : "Monitorea deformación"
+      "es" : "Monitorea deformaciï¿½n"
     },
     "domain" : "41",
     "comment" : {
       "en" : "Relates a sensor to the structural deformation it measures or monitors.",
-      "es" : "Relaciona un sensor con la deformación estructural que mide o supervisa."
+      "es" : "Relaciona un sensor con la deformaciï¿½n estructural que mide o supervisa."
     },
     "attributes" : [ "object" ],
     "id" : "81"
@@ -1881,7 +1881,7 @@
     "domain" : "8",
     "comment" : {
       "en" : "Indicates that a component transmits mechanical movement to another.",
-      "es" : "Indica que un componente transmite movimiento mecánico a otro."
+      "es" : "Indica que un componente transmite movimiento mecï¿½nico a otro."
     },
     "attributes" : [ "object" ],
     "id" : "83"
@@ -1958,12 +1958,12 @@
     "label" : {
       "IRI-based" : "misalignment",
       "en" : "Misalignment",
-      "es" : "Desalineación"
+      "es" : "Desalineaciï¿½n"
     },
     "domain" : "10",
     "comment" : {
       "en" : "Measure of the misalignment detected in a component.",
-      "es" : "Medida de la falta de alineación detectada en un componente."
+      "es" : "Medida de la falta de alineaciï¿½n detectada en un componente."
     },
     "attributes" : [ "datatype" ],
     "id" : "97"
@@ -1974,12 +1974,12 @@
     "label" : {
       "IRI-based" : "pressure",
       "en" : "Pressure",
-      "es" : "Presión"
+      "es" : "Presiï¿½n"
     },
     "domain" : "10",
     "comment" : {
       "en" : "Pressure exerted on a component.",
-      "es" : "Presión ejercida sobre un componente."
+      "es" : "Presiï¿½n ejercida sobre un componente."
     },
     "attributes" : [ "datatype" ],
     "id" : "98"
@@ -1995,7 +1995,7 @@
     "domain" : "8",
     "comment" : {
       "en" : "Indicates that a component is connected to another.",
-      "es" : "Indica que un componente está conectado a otro."
+      "es" : "Indica que un componente estï¿½ conectado a otro."
     },
     "attributes" : [ "object" ],
     "id" : "99"
@@ -2047,7 +2047,7 @@
     "domain" : "10",
     "comment" : {
       "en" : "Displacement or position change recorded in the component.",
-      "es" : "Desplazamiento o cambio de posición registrado en el componente."
+      "es" : "Desplazamiento o cambio de posiciï¿½n registrado en el componente."
     },
     "attributes" : [ "datatype" ],
     "id" : "106"
@@ -2068,7 +2068,7 @@
     "domain" : "3",
     "comment" : {
       "en" : "Numeric value of the measurement taken by a sensor.",
-      "es" : "Valor numérico de la medición tomada por un sensor."
+      "es" : "Valor numï¿½rico de la mediciï¿½n tomada por un sensor."
     },
     "attributes" : [ "datatype" ],
     "id" : "108"
@@ -2084,12 +2084,12 @@
     "label" : {
       "IRI-based" : "detectsCorrosion",
       "en" : "Detects corrosion",
-      "es" : "Detecta corrosión"
+      "es" : "Detecta corrosiï¿½n"
     },
     "domain" : "41",
     "comment" : {
       "en" : "Relates a sensor with the detected corrosion measurement.",
-      "es" : "Relaciona un sensor con la medición de corrosión detectada."
+      "es" : "Relaciona un sensor con la mediciï¿½n de corrosiï¿½n detectada."
     },
     "attributes" : [ "object" ],
     "id" : "110"
@@ -2100,12 +2100,12 @@
     "label" : {
       "IRI-based" : "windDirection",
       "en" : "Wind direction",
-      "es" : "Dirección del viento"
+      "es" : "Direcciï¿½n del viento"
     },
     "domain" : "76",
     "comment" : {
       "en" : "Direction from which the wind blows expressed as a QUDT quantity value.",
-      "es" : "Dirección desde la que sopla el viento expresada en valores con unidad QUDT."
+      "es" : "Direcciï¿½n desde la que sopla el viento expresada en valores con unidad QUDT."
     },
     "attributes" : [ "object" ],
     "id" : "112"
@@ -2131,7 +2131,7 @@
     "domain" : "8",
     "comment" : {
       "en" : "Thickness of the section or wall of a component measured in QUDT units.",
-      "es" : "Espesor de la sección o pared de un componente medido en unidades QUDT."
+      "es" : "Espesor de la secciï¿½n o pared de un componente medido en unidades QUDT."
     },
     "attributes" : [ "object" ],
     "id" : "116"
@@ -2147,7 +2147,7 @@
     "domain" : "8",
     "comment" : {
       "en" : "Describe the external shape or geometric of the component.",
-      "es" : "Describe la forma externa o geometría del componente."
+      "es" : "Describe la forma externa o geometrï¿½a del componente."
     },
     "attributes" : [ "datatype" ],
     "id" : "117"
@@ -2163,7 +2163,7 @@
     "domain" : "66",
     "comment" : {
       "en" : "Indicates the location where the wind power platform is located.",
-      "es" : "Indica el lugar en el que se encuentra la plataforma eólica."
+      "es" : "Indica el lugar en el que se encuentra la plataforma eï¿½lica."
     },
     "attributes" : [ "object" ],
     "id" : "119"
@@ -2179,7 +2179,7 @@
     "domain" : "77",
     "comment" : {
       "en" : "Relates an event to the sensor that detected it.",
-      "es" : "Relaciona un evento con el sensor que lo detectó."
+      "es" : "Relaciona un evento con el sensor que lo detectï¿½."
     },
     "attributes" : [ "object" ],
     "id" : "122"
@@ -2227,12 +2227,12 @@
     "label" : {
       "IRI-based" : "Corrosion",
       "en" : "Corrosion",
-      "es" : "Corrosión"
+      "es" : "Corrosiï¿½n"
     },
     "domain" : "32",
     "comment" : {
       "en" : "General corrosion index detected in a component.",
-      "es" : "Índice general de corrosión detectada en un componente."
+      "es" : "ï¿½ndice general de corrosiï¿½n detectada en un componente."
     },
     "attributes" : [ "datatype" ],
     "id" : "111"
@@ -2288,7 +2288,7 @@
     "domain" : "77",
     "comment" : {
       "en" : "Relates an event with the failure that caused it.",
-      "es" : "Relaciona un evento con el fallo que lo provocó."
+      "es" : "Relaciona un evento con el fallo que lo provocï¿½."
     },
     "attributes" : [ "object" ],
     "id" : "136"
@@ -2304,7 +2304,7 @@
     "domain" : "9",
     "comment" : {
       "en" : "Access URL of the generated or stored image.",
-      "es" : "Dirección de acceso a la imagen generada o almacenada."
+      "es" : "Direcciï¿½n de acceso a la imagen generada o almacenada."
     },
     "attributes" : [ "datatype" ],
     "id" : "137"
@@ -2346,12 +2346,12 @@
     "label" : {
       "IRI-based" : "Deformation",
       "en" : "Deformation",
-      "es" : "Deformación"
+      "es" : "Deformaciï¿½n"
     },
     "domain" : "10",
     "comment" : {
       "en" : "Degree of deformation recorded in the component.",
-      "es" : "Grado de deformación registrado en el componente."
+      "es" : "Grado de deformaciï¿½n registrado en el componente."
     },
     "attributes" : [ "datatype" ],
     "id" : "82"
@@ -2420,7 +2420,7 @@
     "domain" : "3",
     "comment" : {
       "en" : "Associated temporal mark to the measurement.",
-      "es" : "Marca temporal asociada a la medición."
+      "es" : "Marca temporal asociada a la mediciï¿½n."
     },
     "attributes" : [ "datatype" ],
     "id" : "148"
@@ -2493,7 +2493,7 @@
     "domain" : "42",
     "comment" : {
       "en" : "Relates an event with the failure that caused it.",
-      "es" : "Relaciona un evento con el fallo que lo provocó."
+      "es" : "Relaciona un evento con el fallo que lo provocï¿½."
     },
     "attributes" : [ "object", "someValues" ],
     "id" : "156"
@@ -2529,8 +2529,8 @@
     },
     "domain" : "3",
     "comment" : {
-      "en" : "Measurement unit of the recorded value (e.g. m/s, rpm, °C, etc.).",
-      "es" : "Unidad de medida del valor registrado (ej. m/s, rpm, °C, etc.)."
+      "en" : "Measurement unit of the recorded value (e.g. m/s, rpm, ï¿½C, etc.).",
+      "es" : "Unidad de medida del valor registrado (ej. m/s, rpm, ï¿½C, etc.)."
     },
     "attributes" : [ "datatype" ],
     "id" : "160"
@@ -2556,7 +2556,7 @@
     "domain" : "7",
     "comment" : {
       "en" : "Rated generation capacity of the turbine.",
-      "es" : "Capacidad nominal de generación de la turbina."
+      "es" : "Capacidad nominal de generaciï¿½n de la turbina."
     },
     "attributes" : [ "datatype" ],
     "id" : "163"
@@ -2567,12 +2567,12 @@
     "label" : {
       "IRI-based" : "failureObservation",
       "en" : "Failure observation",
-      "es" : "Observación de fallo"
+      "es" : "Observaciï¿½n de fallo"
     },
     "domain" : "42",
     "comment" : {
       "en" : "Relationship between a failure event and the observation made by a sensor.",
-      "es" : "Relación entre un evento de fallo y la observación realizada por un sensor."
+      "es" : "Relaciï¿½n entre un evento de fallo y la observaciï¿½n realizada por un sensor."
     },
     "attributes" : [ "object" ],
     "id" : "164"
@@ -2588,7 +2588,7 @@
     "domain" : "16",
     "comment" : {
       "en" : "Indicas the role that an actor performs within the system.",
-      "es" : "Indica el rol que desempeña un actor dentro del sistema."
+      "es" : "Indica el rol que desempeï¿½a un actor dentro del sistema."
     },
     "attributes" : [ "object" ],
     "id" : "165"
@@ -2599,12 +2599,12 @@
     "label" : {
       "IRI-based" : "stress",
       "en" : "Stress",
-      "es" : "Tensión"
+      "es" : "Tensiï¿½n"
     },
     "domain" : "10",
     "comment" : {
       "en" : "Stress level recorded in a component.",
-      "es" : "Nivel de tensión registrado en un componente."
+      "es" : "Nivel de tensiï¿½n registrado en un componente."
     },
     "attributes" : [ "datatype" ],
     "id" : "166"
@@ -2636,7 +2636,7 @@
     "domain" : "6",
     "comment" : {
       "en" : "Indicates that a failure is caused by a specific environmental condition.",
-      "es" : "Indica que un fallo tiene su origen en una condición ambiental específica."
+      "es" : "Indica que un fallo tiene su origen en una condiciï¿½n ambiental especï¿½fica."
     },
     "attributes" : [ "object" ],
     "id" : "168"
@@ -2647,12 +2647,12 @@
     "label" : {
       "IRI-based" : "darkCorrosion",
       "en" : "Dark corrosion",
-      "es" : "Corrosión oscura"
+      "es" : "Corrosiï¿½n oscura"
     },
     "domain" : "32",
     "comment" : {
       "en" : "Level of dark corrosion detected on the mmaterial surface.",
-      "es" : "Nivel de corrosión oscura detectada en la superficie del material."
+      "es" : "Nivel de corrosiï¿½n oscura detectada en la superficie del material."
     },
     "attributes" : [ "datatype" ],
     "id" : "169"
@@ -2663,12 +2663,12 @@
     "label" : {
       "IRI-based" : "diameter",
       "en" : "Diameter",
-      "es" : "Diámetro"
+      "es" : "Diï¿½metro"
     },
     "domain" : "8",
     "comment" : {
       "en" : "Diameter of the component measured in QUDT units.",
-      "es" : "Diámetro del componente medido en unidades QUDT."
+      "es" : "Diï¿½metro del componente medido en unidades QUDT."
     },
     "attributes" : [ "object" ],
     "id" : "170"
@@ -2695,12 +2695,12 @@
     "label" : {
       "IRI-based" : "measuresVibration",
       "en" : "Measures vibration",
-      "es" : "Mide vibración"
+      "es" : "Mide vibraciï¿½n"
     },
     "domain" : "41",
     "comment" : {
       "en" : "Indicates that a sensor collects vibration data from a component.",
-      "es" : "Indica que un sensor obtiene datos de vibración de un componente."
+      "es" : "Indica que un sensor obtiene datos de vibraciï¿½n de un componente."
     },
     "attributes" : [ "object" ],
     "id" : "172"
@@ -2711,12 +2711,12 @@
     "label" : {
       "IRI-based" : "measuresStress",
       "en" : "Measures stress",
-      "es" : "Mide tensión"
+      "es" : "Mide tensiï¿½n"
     },
     "domain" : "41",
     "comment" : {
       "en" : "Indicates that a sensor measures the stress exerted on a component.",
-      "es" : "Indica que un sensor mide la tensión ejercida sobre un componente."
+      "es" : "Indica que un sensor mide la tensiï¿½n ejercida sobre un componente."
     },
     "attributes" : [ "object" ],
     "id" : "173"
