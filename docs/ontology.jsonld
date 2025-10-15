@@ -3,9 +3,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+      "@id" : "https://w3id.org/optimar#Component"
     }, {
-      "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#PitchSystem"
+      "@id" : "https://w3id.org/optimar#PitchSystem"
     } ]
   } ]
 }, {
@@ -13,30 +13,30 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+      "@id" : "https://w3id.org/optimar#Component"
     }, {
-      "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"
+      "@id" : "https://w3id.org/optimar#Sensor"
     } ]
   } ]
 }, {
   "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#causedBy"
+    "@id" : "https://w3id.org/optimar#causedBy"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure"
+    "@id" : "https://w3id.org/optimar#Failure"
   } ]
 }, {
   "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Base"
+      "@id" : "https://w3id.org/optimar#Base"
     }, {
-      "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FloatingSubstructure"
+      "@id" : "https://w3id.org/optimar#FloatingSubstructure"
     }, {
-      "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MooringSystem"
+      "@id" : "https://w3id.org/optimar#MooringSystem"
     } ]
   } ]
 }, {
@@ -44,13 +44,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Blade"
+      "@id" : "https://w3id.org/optimar#Blade"
     }, {
-      "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Hub"
+      "@id" : "https://w3id.org/optimar#Hub"
     }, {
-      "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Nacelle"
+      "@id" : "https://w3id.org/optimar#Nacelle"
     }, {
-      "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Tower"
+      "@id" : "https://w3id.org/optimar#Tower"
     } ]
   } ]
 }, {
@@ -58,9 +58,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"
+      "@id" : "https://w3id.org/optimar#Data"
     }, {
-      "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure"
+      "@id" : "https://w3id.org/optimar#Failure"
     } ]
   } ]
 }, {
@@ -68,9 +68,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MooringSystem"
+      "@id" : "https://w3id.org/optimar#MooringSystem"
     }, {
-      "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#WindPowerPlatform"
+      "@id" : "https://w3id.org/optimar#WindPowerPlatform"
     } ]
   } ]
 }, {
@@ -141,7 +141,7 @@
     "@value" : "Relates an event to the generated data by the same."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event"
+    "@id" : "https://w3id.org/optimar#Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -151,13 +151,13 @@
     "@value" : "Generates"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"
+    "@id" : "https://w3id.org/optimar#Data"
   } ]
 }, {
   "@id" : "http://xmlns.com/foaf/0.1/homepage",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+  "@id" : "https://w3id.org/optimar",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Alejandro Flores (USAL), Alberto Montero (USAL), Oihana Garcia (Tekniker) and Cristina Aceta (Tekniker)"
@@ -244,13 +244,13 @@
     "@value" : "ex"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl"
+    "@id" : "https://w3id.org/optimar#"
   } ],
   "http://www.w3.org/2002/07/owl#backwardCompatibleWith" : [ {
     "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v0.2.ttl"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl"
+    "@id" : "https://w3id.org/optimar/1.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
@@ -260,10 +260,10 @@
     "@value" : "Versión 1.0 de la ontología"
   } ],
   "http://xmlns.com/foaf/0.1/homepage" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/"
+    "@id" : "https://w3id.org/optimar"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor",
+  "@id" : "https://w3id.org/optimar#Actor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -280,7 +280,7 @@
     "@value" : "Actor"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#AnalyticalRole",
+  "@id" : "https://w3id.org/optimar#AnalyticalRole",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -297,10 +297,10 @@
     "@value" : "Rol analítico"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Role"
+    "@id" : "https://w3id.org/optimar#Role"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Anemometer",
+  "@id" : "https://w3id.org/optimar#Anemometer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -317,15 +317,15 @@
     "@value" : "Anemómetro"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"
+    "@id" : "https://w3id.org/optimar#Sensor"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionCamera"
+    "@id" : "https://w3id.org/optimar#CorrosionCamera"
   }, {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralCamera"
+    "@id" : "https://w3id.org/optimar#StructuralCamera"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Base",
+  "@id" : "https://w3id.org/optimar#Base",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -342,10 +342,10 @@
     "@value" : "Base (subestructura flotante)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralComponent"
+    "@id" : "https://w3id.org/optimar#StructuralComponent"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Blade",
+  "@id" : "https://w3id.org/optimar#Blade",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -362,10 +362,10 @@
     "@value" : "Pala"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TurbineComponent"
+    "@id" : "https://w3id.org/optimar#TurbineComponent"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CloudAdministrator",
+  "@id" : "https://w3id.org/optimar#CloudAdministrator",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -382,10 +382,10 @@
     "@value" : "Cloud Administrator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"
+    "@id" : "https://w3id.org/optimar#Actor"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component",
+  "@id" : "https://w3id.org/optimar#Component",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -402,7 +402,7 @@
     "@value" : "Componente"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ComponentBreakage",
+  "@id" : "https://w3id.org/optimar#ComponentBreakage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -419,10 +419,10 @@
     "@value" : "Rotura de componente"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure"
+    "@id" : "https://w3id.org/optimar#Failure"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion",
+  "@id" : "https://w3id.org/optimar#Corrosion",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -432,7 +432,7 @@
     "@value" : "Índice general de corrosión detectada en un componente."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionEvent"
+    "@id" : "https://w3id.org/optimar#CorrosionEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -445,7 +445,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionCamera",
+  "@id" : "https://w3id.org/optimar#CorrosionCamera",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -462,15 +462,15 @@
     "@value" : "Cámara corrosión"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"
+    "@id" : "https://w3id.org/optimar#Sensor"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DynamicMonitor"
+    "@id" : "https://w3id.org/optimar#DynamicMonitor"
   }, {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralCamera"
+    "@id" : "https://w3id.org/optimar#StructuralCamera"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionEvent",
+  "@id" : "https://w3id.org/optimar#CorrosionEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -487,15 +487,15 @@
     "@value" : "Evento de Corrosión"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FailureEvent"
+    "@id" : "https://w3id.org/optimar#FailureEvent"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaterialFatigue"
+    "@id" : "https://w3id.org/optimar#MaterialFatigue"
   }, {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Misalignment"
+    "@id" : "https://w3id.org/optimar#Misalignment"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data",
+  "@id" : "https://w3id.org/optimar#Data",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -512,7 +512,7 @@
     "@value" : "Dato"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DataAnalyst",
+  "@id" : "https://w3id.org/optimar#DataAnalyst",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -529,10 +529,10 @@
     "@value" : "Data Analyst"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"
+    "@id" : "https://w3id.org/optimar#Actor"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Deformation",
+  "@id" : "https://w3id.org/optimar#Deformation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -542,7 +542,7 @@
     "@value" : "Grado de deformación registrado en el componente."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"
+    "@id" : "https://w3id.org/optimar#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -555,7 +555,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DynamicMonitor",
+  "@id" : "https://w3id.org/optimar#DynamicMonitor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -572,13 +572,13 @@
     "@value" : "Monitor dinámico"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"
+    "@id" : "https://w3id.org/optimar#Sensor"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralCamera"
+    "@id" : "https://w3id.org/optimar#StructuralCamera"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#EnvironmentalCondition",
+  "@id" : "https://w3id.org/optimar#EnvironmentalCondition",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -595,7 +595,7 @@
     "@value" : "Environmental Condition"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event",
+  "@id" : "https://w3id.org/optimar#Event",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -612,7 +612,7 @@
     "@value" : "Evento"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure",
+  "@id" : "https://w3id.org/optimar#Failure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -629,7 +629,7 @@
     "@value" : "Fallo"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FailureEvent",
+  "@id" : "https://w3id.org/optimar#FailureEvent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -646,12 +646,12 @@
     "@value" : "Failure Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event"
+    "@id" : "https://w3id.org/optimar#Event"
   }, {
     "@id" : "_:genid13"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FloatingPlatform",
+  "@id" : "https://w3id.org/optimar#FloatingPlatform",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -668,10 +668,10 @@
     "@value" : "Plataforma flotante"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FloatingSubstructure",
+  "@id" : "https://w3id.org/optimar#FloatingSubstructure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -688,10 +688,10 @@
     "@value" : "Subestructura flotante"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralComponent"
+    "@id" : "https://w3id.org/optimar#StructuralComponent"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#GaugeSystem",
+  "@id" : "https://w3id.org/optimar#GaugeSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -708,10 +708,10 @@
     "@value" : "Sistema de galgas"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"
+    "@id" : "https://w3id.org/optimar#Sensor"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Hub",
+  "@id" : "https://w3id.org/optimar#Hub",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -728,10 +728,10 @@
     "@value" : "Hub"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TurbineComponent"
+    "@id" : "https://w3id.org/optimar#TurbineComponent"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ISUMSystem",
+  "@id" : "https://w3id.org/optimar#ISUMSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -748,10 +748,10 @@
     "@value" : "Sistema ISUM"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"
+    "@id" : "https://w3id.org/optimar#Sensor"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Image",
+  "@id" : "https://w3id.org/optimar#Image",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -768,10 +768,10 @@
     "@value" : "Imagen"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"
+    "@id" : "https://w3id.org/optimar#Data"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Location",
+  "@id" : "https://w3id.org/optimar#Location",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -788,7 +788,7 @@
     "@value" : "Ubicación"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Maintenance",
+  "@id" : "https://w3id.org/optimar#Maintenance",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -804,11 +804,11 @@
     "@language" : "es",
     "@value" : "Mantenimiento"
   } ],
-  "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performedBy" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaintenanceOperator"
+  "https://w3id.org/optimar#performedBy" : [ {
+    "@id" : "https://w3id.org/optimar#MaintenanceOperator"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaintenanceOperator",
+  "@id" : "https://w3id.org/optimar#MaintenanceOperator",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -825,10 +825,10 @@
     "@value" : "Operador de mantenimiento"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"
+    "@id" : "https://w3id.org/optimar#Actor"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ManagementRole",
+  "@id" : "https://w3id.org/optimar#ManagementRole",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -845,10 +845,10 @@
     "@value" : "Rol de gestión"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Role"
+    "@id" : "https://w3id.org/optimar#Role"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaterialFatigue",
+  "@id" : "https://w3id.org/optimar#MaterialFatigue",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -865,13 +865,13 @@
     "@value" : "Material Fatigue"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure"
+    "@id" : "https://w3id.org/optimar#Failure"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Misalignment"
+    "@id" : "https://w3id.org/optimar#Misalignment"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement",
+  "@id" : "https://w3id.org/optimar#Measurement",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -888,10 +888,10 @@
     "@value" : "Medición"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"
+    "@id" : "https://w3id.org/optimar#Data"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Misalignment",
+  "@id" : "https://w3id.org/optimar#Misalignment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -908,10 +908,10 @@
     "@value" : "Misalignment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure"
+    "@id" : "https://w3id.org/optimar#Failure"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MonitoringTask",
+  "@id" : "https://w3id.org/optimar#MonitoringTask",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -928,10 +928,10 @@
     "@value" : "Tarea de monitoreo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Task"
+    "@id" : "https://w3id.org/optimar#Task"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MooringSystem",
+  "@id" : "https://w3id.org/optimar#MooringSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -948,10 +948,10 @@
     "@value" : "Sistema de amarre"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralComponent"
+    "@id" : "https://w3id.org/optimar#StructuralComponent"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Nacelle",
+  "@id" : "https://w3id.org/optimar#Nacelle",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -968,10 +968,10 @@
     "@value" : "Nacelle"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TurbineComponent"
+    "@id" : "https://w3id.org/optimar#TurbineComponent"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Observation",
+  "@id" : "https://w3id.org/optimar#Observation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -990,11 +990,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3.org/ns/sosa/Observation"
   } ],
-  "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#madeBySensor" : [ {
+  "https://w3id.org/optimar#madeBySensor" : [ {
     "@id" : "https://www.w3.org/ns/sosa/Sensor"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ParkOwner",
+  "@id" : "https://w3id.org/optimar#ParkOwner",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1011,10 +1011,10 @@
     "@value" : "Propietario de parque"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"
+    "@id" : "https://w3id.org/optimar#Actor"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#PitchSystem",
+  "@id" : "https://w3id.org/optimar#PitchSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1031,10 +1031,10 @@
     "@value" : "Sistema de pitch"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#PlatformActuator",
+  "@id" : "https://w3id.org/optimar#PlatformActuator",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1051,10 +1051,10 @@
     "@value" : "Platform Actuator"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"
+    "@id" : "https://w3id.org/optimar#Actor"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Role",
+  "@id" : "https://w3id.org/optimar#Role",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1071,7 +1071,7 @@
     "@value" : "Role"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor",
+  "@id" : "https://w3id.org/optimar#Sensor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1091,7 +1091,7 @@
     "@id" : "https://www.w3.org/ns/sosa/Sensor"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StressData",
+  "@id" : "https://w3id.org/optimar#StressData",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1108,10 +1108,10 @@
     "@value" : "Stress Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement"
+    "@id" : "https://w3id.org/optimar#Measurement"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralCamera",
+  "@id" : "https://w3id.org/optimar#StructuralCamera",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1128,10 +1128,10 @@
     "@value" : "Structural Camera"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"
+    "@id" : "https://w3id.org/optimar#Sensor"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralComponent",
+  "@id" : "https://w3id.org/optimar#StructuralComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1151,7 +1151,7 @@
     "@id" : "_:genid14"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralInstability",
+  "@id" : "https://w3id.org/optimar#StructuralInstability",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1168,10 +1168,10 @@
     "@value" : "Structural Instability"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure"
+    "@id" : "https://w3id.org/optimar#Failure"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Task",
+  "@id" : "https://w3id.org/optimar#Task",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1188,7 +1188,7 @@
     "@value" : "Task"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TechnicalRole",
+  "@id" : "https://w3id.org/optimar#TechnicalRole",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1205,10 +1205,10 @@
     "@value" : "Technical Role"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Role"
+    "@id" : "https://w3id.org/optimar#Role"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Tower",
+  "@id" : "https://w3id.org/optimar#Tower",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1225,10 +1225,10 @@
     "@value" : "Tower"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TurbineComponent"
+    "@id" : "https://w3id.org/optimar#TurbineComponent"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Turbine",
+  "@id" : "https://w3id.org/optimar#Turbine",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1245,10 +1245,10 @@
     "@value" : "Turbine"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TurbineComponent",
+  "@id" : "https://w3id.org/optimar#TurbineComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1268,7 +1268,7 @@
     "@id" : "_:genid18"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#VibrationData",
+  "@id" : "https://w3id.org/optimar#VibrationData",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1285,10 +1285,10 @@
     "@value" : "Vibration Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement"
+    "@id" : "https://w3id.org/optimar#Measurement"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#WindPowerPlatform",
+  "@id" : "https://w3id.org/optimar#WindPowerPlatform",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1305,7 +1305,7 @@
     "@value" : "Plataforma eólica offshore"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#adjusts",
+  "@id" : "https://w3id.org/optimar#adjusts",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1315,7 +1315,7 @@
     "@value" : "Indicas that an actor makes adjustments on a component or pitch system."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"
+    "@id" : "https://w3id.org/optimar#Actor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1328,7 +1328,7 @@
     "@id" : "_:genid1"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#analyzes",
+  "@id" : "https://w3id.org/optimar#analyzes",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1338,7 +1338,7 @@
     "@value" : "Relates an actor to the data or failures that it studies or interprets."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"
+    "@id" : "https://w3id.org/optimar#Actor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -1351,7 +1351,7 @@
     "@id" : "_:genid4"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#causedBy",
+  "@id" : "https://w3id.org/optimar#causedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1361,7 +1361,7 @@
     "@value" : "Relates an event with the failure that caused it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event"
+    "@id" : "https://w3id.org/optimar#Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -1371,10 +1371,10 @@
     "@value" : "Caused by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure"
+    "@id" : "https://w3id.org/optimar#Failure"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#connectedTo",
+  "@id" : "https://w3id.org/optimar#connectedTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1384,7 +1384,7 @@
     "@value" : "Indicates that a component is connected to another."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -1394,10 +1394,10 @@
     "@value" : "Connected to"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#darkCorrosion",
+  "@id" : "https://w3id.org/optimar#darkCorrosion",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1407,7 +1407,7 @@
     "@value" : "Nivel de corrosión oscura detectada en la superficie del material."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionEvent"
+    "@id" : "https://w3id.org/optimar#CorrosionEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -1420,10 +1420,10 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion"
+    "@id" : "https://w3id.org/optimar#Corrosion"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#dateTime",
+  "@id" : "https://w3id.org/optimar#dateTime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1433,7 +1433,7 @@
     "@value" : "Marca temporal asociada a la medición."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement"
+    "@id" : "https://w3id.org/optimar#Measurement"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1446,7 +1446,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#detectedBy",
+  "@id" : "https://w3id.org/optimar#detectedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1456,7 +1456,7 @@
     "@value" : "Relates an event to the sensor that detected it."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event"
+    "@id" : "https://w3id.org/optimar#Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -1466,10 +1466,10 @@
     "@value" : "Detected by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"
+    "@id" : "https://w3id.org/optimar#Sensor"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#detectsCorrosion",
+  "@id" : "https://w3id.org/optimar#detectsCorrosion",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1479,7 +1479,7 @@
     "@value" : "Relates a sensor with the detected corrosion measurement."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"
+    "@id" : "https://w3id.org/optimar#Sensor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -1489,10 +1489,10 @@
     "@value" : "Detects corrosion"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion"
+    "@id" : "https://w3id.org/optimar#Corrosion"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#diameter",
+  "@id" : "https://w3id.org/optimar#diameter",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1502,7 +1502,7 @@
     "@value" : "Diámetro del componente medido en unidades QUDT."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1515,7 +1515,7 @@
     "@id" : "http://qudt.org/schema/qudt/QuantityValue"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#displacement",
+  "@id" : "https://w3id.org/optimar#displacement",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1525,7 +1525,7 @@
     "@value" : "Displacement or position change recorded in the component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"
+    "@id" : "https://w3id.org/optimar#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -1538,7 +1538,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#externalShape",
+  "@id" : "https://w3id.org/optimar#externalShape",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1548,7 +1548,7 @@
     "@value" : "Describe the external shape or geometric of the component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1561,7 +1561,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#failureObservation",
+  "@id" : "https://w3id.org/optimar#failureObservation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1571,7 +1571,7 @@
     "@value" : "Relationship between a failure event and the observation made by a sensor."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FailureEvent"
+    "@id" : "https://w3id.org/optimar#FailureEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1581,10 +1581,10 @@
     "@value" : "Observación de fallo"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Observation"
+    "@id" : "https://w3id.org/optimar#Observation"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasCapacity",
+  "@id" : "https://w3id.org/optimar#hasCapacity",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1594,7 +1594,7 @@
     "@value" : "Rated generation capacity of the turbine."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Turbine"
+    "@id" : "https://w3id.org/optimar#Turbine"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -1607,7 +1607,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasFailureCause",
+  "@id" : "https://w3id.org/optimar#hasFailureCause",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1617,7 +1617,7 @@
     "@value" : "Indicates that a failure is caused by a specific environmental condition."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure"
+    "@id" : "https://w3id.org/optimar#Failure"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -1627,10 +1627,10 @@
     "@value" : "Failure cause"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#EnvironmentalCondition"
+    "@id" : "https://w3id.org/optimar#EnvironmentalCondition"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasRole",
+  "@id" : "https://w3id.org/optimar#hasRole",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1640,7 +1640,7 @@
     "@value" : "Indicas the role that an actor performs within the system."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"
+    "@id" : "https://w3id.org/optimar#Actor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1650,10 +1650,10 @@
     "@value" : "Tiene rol"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Role"
+    "@id" : "https://w3id.org/optimar#Role"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#height",
+  "@id" : "https://w3id.org/optimar#height",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1663,7 +1663,7 @@
     "@value" : "Height of the component expressed as a QUDT quantity value."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -1676,7 +1676,7 @@
     "@id" : "http://qudt.org/schema/qudt/QuantityValue"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#houses",
+  "@id" : "https://w3id.org/optimar#houses",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1686,7 +1686,7 @@
     "@value" : "Indicates that a component contains or houses physically another in its structure."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -1696,10 +1696,10 @@
     "@value" : "Houses"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#imageURL",
+  "@id" : "https://w3id.org/optimar#imageURL",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1709,7 +1709,7 @@
     "@value" : "Dirección de acceso a la imagen generada o almacenada."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Image"
+    "@id" : "https://w3id.org/optimar#Image"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1722,7 +1722,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#isSupportedBy",
+  "@id" : "https://w3id.org/optimar#isSupportedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1732,7 +1732,7 @@
     "@value" : "Indicates that a component is structurally or functionally supported by another."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -1742,10 +1742,10 @@
     "@value" : "Is supported by"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#length",
+  "@id" : "https://w3id.org/optimar#length",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1755,7 +1755,7 @@
     "@value" : "Longitud de un componente, expresada como un valor con unidad QUDT"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1768,7 +1768,7 @@
     "@id" : "http://qudt.org/schema/qudt/QuantityValue"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#lightCorrosion",
+  "@id" : "https://w3id.org/optimar#lightCorrosion",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1778,7 +1778,7 @@
     "@value" : "Nivel de corrosión clara detectada en la superficie del material."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionEvent"
+    "@id" : "https://w3id.org/optimar#CorrosionEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -1791,10 +1791,10 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion"
+    "@id" : "https://w3id.org/optimar#Corrosion"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#locatedIn",
+  "@id" : "https://w3id.org/optimar#locatedIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1804,7 +1804,7 @@
     "@value" : "Indicates the location where the wind power platform is located."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#WindPowerPlatform"
+    "@id" : "https://w3id.org/optimar#WindPowerPlatform"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1814,10 +1814,10 @@
     "@value" : "Ubicado en"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Location"
+    "@id" : "https://w3id.org/optimar#Location"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#madeBySensor",
+  "@id" : "https://w3id.org/optimar#madeBySensor",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1840,7 +1840,7 @@
     "@id" : "https://www.w3.org/ns/sosa/Sensor"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#manages",
+  "@id" : "https://w3id.org/optimar#manages",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1850,7 +1850,7 @@
     "@value" : "Infica que un actor se encarga de la gestión de una plataforma eólica o su sistema de anclaje."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"
+    "@id" : "https://w3id.org/optimar#Actor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -1863,7 +1863,7 @@
     "@id" : "_:genid7"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#mass",
+  "@id" : "https://w3id.org/optimar#mass",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1873,7 +1873,7 @@
     "@value" : "Mass of the component expressed as a QUDT quantity value"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -1886,7 +1886,7 @@
     "@id" : "http://qudt.org/schema/qudt/QuantityValue"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#material",
+  "@id" : "https://w3id.org/optimar#material",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1896,7 +1896,7 @@
     "@value" : "Material of manufacturing of the component (e.g. steel, composite, fiberglass, etc.)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1909,7 +1909,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#materialFatigue",
+  "@id" : "https://w3id.org/optimar#materialFatigue",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1919,7 +1919,7 @@
     "@value" : "Grado de fatiga acumulada en el material."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"
+    "@id" : "https://w3id.org/optimar#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -1932,7 +1932,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#materialWear",
+  "@id" : "https://w3id.org/optimar#materialWear",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1942,7 +1942,7 @@
     "@value" : "Grado de desgaste de un material en un componente."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"
+    "@id" : "https://w3id.org/optimar#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -1955,7 +1955,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresStress",
+  "@id" : "https://w3id.org/optimar#measuresStress",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1965,7 +1965,7 @@
     "@value" : "Indicates that a sensor measures the stress exerted on a component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"
+    "@id" : "https://w3id.org/optimar#Sensor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1975,10 +1975,10 @@
     "@value" : "Mide tensión"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StressData"
+    "@id" : "https://w3id.org/optimar#StressData"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresVibration",
+  "@id" : "https://w3id.org/optimar#measuresVibration",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -1988,7 +1988,7 @@
     "@value" : "Indicates that a sensor collects vibration data from a component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"
+    "@id" : "https://w3id.org/optimar#Sensor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -1998,10 +1998,10 @@
     "@value" : "Mide vibración"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#VibrationData"
+    "@id" : "https://w3id.org/optimar#VibrationData"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresWind",
+  "@id" : "https://w3id.org/optimar#measuresWind",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2011,7 +2011,7 @@
     "@value" : "Relates a sensor with the measurement of wind speed or direction."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"
+    "@id" : "https://w3id.org/optimar#Sensor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2021,10 +2021,10 @@
     "@value" : "Mide viento"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#EnvironmentalCondition"
+    "@id" : "https://w3id.org/optimar#EnvironmentalCondition"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#misalignment",
+  "@id" : "https://w3id.org/optimar#misalignment",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -2034,7 +2034,7 @@
     "@value" : "Medida de la falta de alineación detectada en un componente."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"
+    "@id" : "https://w3id.org/optimar#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -2047,7 +2047,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#monitors",
+  "@id" : "https://w3id.org/optimar#monitors",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2057,7 +2057,7 @@
     "@value" : "Relates an actor to the components or sensors they monitor."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"
+    "@id" : "https://w3id.org/optimar#Actor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -2070,7 +2070,7 @@
     "@id" : "_:genid10"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#monitorsDeformation",
+  "@id" : "https://w3id.org/optimar#monitorsDeformation",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2080,7 +2080,7 @@
     "@value" : "Relates a sensor to the structural deformation it measures or monitors."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"
+    "@id" : "https://w3id.org/optimar#Sensor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -2090,10 +2090,10 @@
     "@value" : "Monitors deformation"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Deformation"
+    "@id" : "https://w3id.org/optimar#Deformation"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#operationalStatus",
+  "@id" : "https://w3id.org/optimar#operationalStatus",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -2103,7 +2103,7 @@
     "@value" : "Estado de funcionamiento actual de la turbina (ej. operativa, parada, en mantenimiento, etc.)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Turbine"
+    "@id" : "https://w3id.org/optimar#Turbine"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -2116,10 +2116,10 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performedBy",
+  "@id" : "https://w3id.org/optimar#performedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performedMaintenance",
+  "@id" : "https://w3id.org/optimar#performedMaintenance",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2129,7 +2129,7 @@
     "@value" : "Relates an actor with the maintenance that it performs."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"
+    "@id" : "https://w3id.org/optimar#Actor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2139,10 +2139,10 @@
     "@value" : "Realiza mantenimiento"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Maintenance"
+    "@id" : "https://w3id.org/optimar#Maintenance"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performsTask",
+  "@id" : "https://w3id.org/optimar#performsTask",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2152,7 +2152,7 @@
     "@value" : "Relates an actor with a task that it performs as part of its role."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"
+    "@id" : "https://w3id.org/optimar#Actor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2162,10 +2162,10 @@
     "@value" : "Realiza tarea"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Task"
+    "@id" : "https://w3id.org/optimar#Task"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#pressure",
+  "@id" : "https://w3id.org/optimar#pressure",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2175,7 +2175,7 @@
     "@value" : "Pressure exerted on a component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"
+    "@id" : "https://w3id.org/optimar#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -2188,7 +2188,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#relatedToComponent",
+  "@id" : "https://w3id.org/optimar#relatedToComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2198,7 +2198,7 @@
     "@value" : "Relates an event to the platform component that is affected."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event"
+    "@id" : "https://w3id.org/optimar#Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -2208,10 +2208,10 @@
     "@value" : "Related to component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#rotationSpeed",
+  "@id" : "https://w3id.org/optimar#rotationSpeed",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -2221,7 +2221,7 @@
     "@value" : "Velocidad angular de un componente expresada como un valor con unidad QUDT."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2234,7 +2234,7 @@
     "@id" : "http://qudt.org/schema/qudt/QuantityValue"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#stress",
+  "@id" : "https://w3id.org/optimar#stress",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2244,7 +2244,7 @@
     "@value" : "Stress level recorded in a component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"
+    "@id" : "https://w3id.org/optimar#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -2257,7 +2257,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#supports",
+  "@id" : "https://w3id.org/optimar#supports",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2267,7 +2267,7 @@
     "@value" : "Indicates that a component provides structural or functional support to another."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -2277,13 +2277,13 @@
     "@value" : "Supports"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#isSupportedBy"
+    "@id" : "https://w3id.org/optimar#isSupportedBy"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#temperature",
+  "@id" : "https://w3id.org/optimar#temperature",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2293,7 +2293,7 @@
     "@value" : "Temperature recorded expressed as a QUDT quantity value."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"
+    "@id" : "https://w3id.org/optimar#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -2306,7 +2306,7 @@
     "@id" : "http://qudt.org/schema/qudt/QuantityValue"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#thickness",
+  "@id" : "https://w3id.org/optimar#thickness",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2316,7 +2316,7 @@
     "@value" : "Thickness of the section or wall of a component measured in QUDT units."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -2329,7 +2329,7 @@
     "@id" : "http://qudt.org/schema/qudt/QuantityValue"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#transmitsMovementTo",
+  "@id" : "https://w3id.org/optimar#transmitsMovementTo",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2339,7 +2339,7 @@
     "@value" : "Indicates that a component transmits mechanical movement to another."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -2349,10 +2349,10 @@
     "@value" : "Transmits movement to"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#unit",
+  "@id" : "https://w3id.org/optimar#unit",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -2362,7 +2362,7 @@
     "@value" : "Unidad de medida del valor registrado (ej. m/s, rpm, °C, etc.)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement"
+    "@id" : "https://w3id.org/optimar#Measurement"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -2375,7 +2375,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#value",
+  "@id" : "https://w3id.org/optimar#value",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -2385,7 +2385,7 @@
     "@value" : "Valor numérico de la medición tomada por un sensor."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement"
+    "@id" : "https://w3id.org/optimar#Measurement"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -2398,7 +2398,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#vibrations",
+  "@id" : "https://w3id.org/optimar#vibrations",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -2408,7 +2408,7 @@
     "@value" : "Nivel de vibraciones registradas en un componente o sistema."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"
+    "@id" : "https://w3id.org/optimar#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -2421,7 +2421,7 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#width",
+  "@id" : "https://w3id.org/optimar#width",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2431,7 +2431,7 @@
     "@value" : "Width of the component expressed as a QUDT quantity value."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"
+    "@id" : "https://w3id.org/optimar#Component"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -2444,7 +2444,7 @@
     "@id" : "http://qudt.org/schema/qudt/QuantityValue"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#windDirection",
+  "@id" : "https://w3id.org/optimar#windDirection",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2454,7 +2454,7 @@
     "@value" : "Direction from which the wind blows expressed as a QUDT quantity value."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#EnvironmentalCondition"
+    "@id" : "https://w3id.org/optimar#EnvironmentalCondition"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -2467,7 +2467,7 @@
     "@id" : "http://qudt.org/schema/qudt/QuantityValue"
   } ]
 }, {
-  "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#windSpeed",
+  "@id" : "https://w3id.org/optimar#windSpeed",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
@@ -2477,7 +2477,7 @@
     "@value" : "Wind speed expressed as a QUDT quantity value."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#EnvironmentalCondition"
+    "@id" : "https://w3id.org/optimar#EnvironmentalCondition"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",

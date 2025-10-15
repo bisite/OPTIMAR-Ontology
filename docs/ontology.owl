@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#"
-     xml:base="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl"
+<rdf:RDF xmlns="https://w3id.org/optimar#"
+     xml:base="https://w3id.org/optimar"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -10,9 +10,9 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:OPTiMAR-v1="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#">
-    <owl:Ontology rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl">
-        <owl:versionIRI rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl"/>
+     xmlns:optimar="https://w3id.org/optimar#">
+    <owl:Ontology rdf:about="https://w3id.org/optimar">
+        <owl:versionIRI rdf:resource="https://w3id.org/optimar/1.0"/>
         <dc:creator>Alejandro Flores (USAL), Alberto Montero (USAL), Oihana Garcia (Tekniker) and Cristina Aceta (Tekniker)</dc:creator>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-10-06</dc:date>
         <dc:description xml:lang="es">Esta ontología describe los componentes, fallos, sensores y eventos relacionados con las plataformas eólicas offshore.</dc:description>
@@ -37,11 +37,11 @@
         <terms:status xml:lang="es">estable</terms:status>
         <terms:status xml:lang="en">stable</terms:status>
         <vann:preferredNamespacePrefix>ex</vann:preferredNamespacePrefix>
-        <vann:preferredNamespaceUri rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl"/>
+        <vann:preferredNamespaceUri rdf:resource="https://w3id.org/optimar#"/>
         <owl:backwardCompatibleWith rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v0.2.ttl"/>
         <owl:versionInfo xml:lang="en">Version 1.0 of the Ontology</owl:versionInfo>
         <owl:versionInfo xml:lang="es">Versión 1.0 de la ontología</owl:versionInfo>
-        <foaf:homepage rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/"/>
+        <foaf:homepage rdf:resource="https://w3id.org/optimar"/>
     </owl:Ontology>
     
 
@@ -184,10 +184,10 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performedBy -->
+    <!-- https://w3id.org/optimar#performedBy -->
 
 
-    <owl:AnnotationProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performedBy"/>
+    <owl:AnnotationProperty rdf:about="https://w3id.org/optimar#performedBy"/>
     
 
 
@@ -226,8 +226,8 @@
 
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#generated">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"/>
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Event"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#Data"/>
         <rdfs:comment xml:lang="es">Relaciona un evento con los datos generados por el mismo.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relates an event to the generated data by the same.</rdfs:comment>
         <rdfs:label xml:lang="es">Genera</rdfs:label>
@@ -236,16 +236,16 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#adjusts -->
+    <!-- https://w3id.org/optimar#adjusts -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#adjusts">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#adjusts">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Actor"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
-                    <rdf:Description rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#PitchSystem"/>
+                    <rdf:Description rdf:about="https://w3id.org/optimar#Component"/>
+                    <rdf:Description rdf:about="https://w3id.org/optimar#PitchSystem"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -257,16 +257,16 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#analyzes -->
+    <!-- https://w3id.org/optimar#analyzes -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#analyzes">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#analyzes">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Actor"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"/>
-                    <rdf:Description rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure"/>
+                    <rdf:Description rdf:about="https://w3id.org/optimar#Data"/>
+                    <rdf:Description rdf:about="https://w3id.org/optimar#Failure"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -278,12 +278,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#causedBy -->
+    <!-- https://w3id.org/optimar#causedBy -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#causedBy">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#causedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Event"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#Failure"/>
         <rdfs:comment xml:lang="es">Relaciona un evento con el fallo que lo provocó.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relates an event with the failure that caused it.</rdfs:comment>
         <rdfs:label xml:lang="es">Causado por</rdfs:label>
@@ -292,12 +292,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#connectedTo -->
+    <!-- https://w3id.org/optimar#connectedTo -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#connectedTo">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#connectedTo">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#Component"/>
         <rdfs:comment xml:lang="es">Indica que un componente está conectado a otro.</rdfs:comment>
         <rdfs:comment xml:lang="en">Indicates that a component is connected to another.</rdfs:comment>
         <rdfs:label xml:lang="es">Conectado a</rdfs:label>
@@ -306,12 +306,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#detectedBy -->
+    <!-- https://w3id.org/optimar#detectedBy -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#detectedBy">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#detectedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Event"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#Sensor"/>
         <rdfs:comment xml:lang="es">Relaciona un evento con el sensor que lo detectó.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relates an event to the sensor that detected it.</rdfs:comment>
         <rdfs:label xml:lang="es">Detectado por</rdfs:label>
@@ -320,12 +320,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#detectsCorrosion -->
+    <!-- https://w3id.org/optimar#detectsCorrosion -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#detectsCorrosion">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#detectsCorrosion">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Sensor"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#Corrosion"/>
         <rdfs:comment xml:lang="es">Relaciona un sensor con la medición de corrosión detectada.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relates a sensor with the detected corrosion measurement.</rdfs:comment>
         <rdfs:label xml:lang="es">Detecta corrosión</rdfs:label>
@@ -334,11 +334,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#diameter -->
+    <!-- https://w3id.org/optimar#diameter -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#diameter">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#diameter">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Component"/>
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
         <rdfs:comment xml:lang="en">Diameter of the component measured in QUDT units.</rdfs:comment>
         <rdfs:comment xml:lang="es">Diámetro del componente medido en unidades QUDT.</rdfs:comment>
@@ -348,12 +348,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#failureObservation -->
+    <!-- https://w3id.org/optimar#failureObservation -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#failureObservation">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FailureEvent"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Observation"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#failureObservation">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#FailureEvent"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#Observation"/>
         <rdfs:comment xml:lang="es">Relación entre un evento de fallo y la observación realizada por un sensor.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relationship between a failure event and the observation made by a sensor.</rdfs:comment>
         <rdfs:label xml:lang="en">Failure observation</rdfs:label>
@@ -362,12 +362,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasFailureCause -->
+    <!-- https://w3id.org/optimar#hasFailureCause -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasFailureCause">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#EnvironmentalCondition"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#hasFailureCause">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Failure"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#EnvironmentalCondition"/>
         <rdfs:comment xml:lang="es">Indica que un fallo tiene su origen en una condición ambiental específica.</rdfs:comment>
         <rdfs:comment xml:lang="en">Indicates that a failure is caused by a specific environmental condition.</rdfs:comment>
         <rdfs:label xml:lang="es">Causa de fallo</rdfs:label>
@@ -376,12 +376,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasRole -->
+    <!-- https://w3id.org/optimar#hasRole -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasRole">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Role"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#hasRole">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Actor"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#Role"/>
         <rdfs:comment xml:lang="es">Indica el rol que desempeña un actor dentro del sistema.</rdfs:comment>
         <rdfs:comment xml:lang="en">Indicas the role that an actor performs within the system.</rdfs:comment>
         <rdfs:label xml:lang="en">Has role</rdfs:label>
@@ -390,11 +390,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#height -->
+    <!-- https://w3id.org/optimar#height -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#height">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#height">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Component"/>
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
         <rdfs:comment xml:lang="es">Altura del componente expresada como un valor con unidad QUDT.</rdfs:comment>
         <rdfs:comment xml:lang="en">Height of the component expressed as a QUDT quantity value.</rdfs:comment>
@@ -404,12 +404,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#houses -->
+    <!-- https://w3id.org/optimar#houses -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#houses">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#houses">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#Component"/>
         <rdfs:comment xml:lang="es">Indica que un componente contiene o aloja fisicamente a otro en su estructura.</rdfs:comment>
         <rdfs:comment xml:lang="en">Indicates that a component contains or houses physically another in its structure.</rdfs:comment>
         <rdfs:label xml:lang="es">Aloja</rdfs:label>
@@ -418,12 +418,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#isSupportedBy -->
+    <!-- https://w3id.org/optimar#isSupportedBy -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#isSupportedBy">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#isSupportedBy">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#Component"/>
         <rdfs:comment xml:lang="es">Indica que un componente depende estructural o funcionalmente de otro para su soporte.</rdfs:comment>
         <rdfs:comment xml:lang="en">Indicates that a component is structurally or functionally supported by another.</rdfs:comment>
         <rdfs:label xml:lang="es">Es soportado por</rdfs:label>
@@ -432,11 +432,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#length -->
+    <!-- https://w3id.org/optimar#length -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#length">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#length">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Component"/>
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
         <rdfs:comment xml:lang="en">Length of a component, expressed as a QUDT quantity value</rdfs:comment>
         <rdfs:comment xml:lang="es">Longitud de un componente, expresada como un valor con unidad QUDT</rdfs:comment>
@@ -446,12 +446,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#locatedIn -->
+    <!-- https://w3id.org/optimar#locatedIn -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#locatedIn">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#WindPowerPlatform"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Location"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#locatedIn">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#WindPowerPlatform"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#Location"/>
         <rdfs:comment xml:lang="es">Indica el lugar en el que se encuentra la plataforma eólica.</rdfs:comment>
         <rdfs:comment xml:lang="en">Indicates the location where the wind power platform is located.</rdfs:comment>
         <rdfs:label xml:lang="en">Located in</rdfs:label>
@@ -460,10 +460,10 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#madeBySensor -->
+    <!-- https://w3id.org/optimar#madeBySensor -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#madeBySensor">
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#madeBySensor">
         <rdfs:domain rdf:resource="https://www.w3.org/ns/sosa/Observation"/>
         <rdfs:range rdf:resource="https://www.w3.org/ns/sosa/Sensor"/>
         <rdfs:comment xml:lang="es">Relaciona una observación con el sensor que la realizó.</rdfs:comment>
@@ -474,16 +474,16 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#manages -->
+    <!-- https://w3id.org/optimar#manages -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#manages">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#manages">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Actor"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MooringSystem"/>
-                    <rdf:Description rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#WindPowerPlatform"/>
+                    <rdf:Description rdf:about="https://w3id.org/optimar#MooringSystem"/>
+                    <rdf:Description rdf:about="https://w3id.org/optimar#WindPowerPlatform"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -495,11 +495,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#mass -->
+    <!-- https://w3id.org/optimar#mass -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#mass">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#mass">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Component"/>
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
         <rdfs:comment xml:lang="es">Masa del componente expresada expresada como un valor con unidad QUDT</rdfs:comment>
         <rdfs:comment xml:lang="en">Mass of the component expressed as a QUDT quantity value</rdfs:comment>
@@ -509,12 +509,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresStress -->
+    <!-- https://w3id.org/optimar#measuresStress -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresStress">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StressData"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#measuresStress">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Sensor"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#StressData"/>
         <rdfs:comment xml:lang="es">Indica que un sensor mide la tensión ejercida sobre un componente.</rdfs:comment>
         <rdfs:comment xml:lang="en">Indicates that a sensor measures the stress exerted on a component.</rdfs:comment>
         <rdfs:label xml:lang="en">Measures stress</rdfs:label>
@@ -523,12 +523,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresVibration -->
+    <!-- https://w3id.org/optimar#measuresVibration -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresVibration">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#VibrationData"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#measuresVibration">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Sensor"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#VibrationData"/>
         <rdfs:comment xml:lang="es">Indica que un sensor obtiene datos de vibración de un componente.</rdfs:comment>
         <rdfs:comment xml:lang="en">Indicates that a sensor collects vibration data from a component.</rdfs:comment>
         <rdfs:label xml:lang="en">Measures vibration</rdfs:label>
@@ -537,12 +537,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresWind -->
+    <!-- https://w3id.org/optimar#measuresWind -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresWind">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#EnvironmentalCondition"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#measuresWind">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Sensor"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#EnvironmentalCondition"/>
         <rdfs:comment xml:lang="es">Relaciona un sensor con la medición de velocidad o dirección del viento.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relates a sensor with the measurement of wind speed or direction.</rdfs:comment>
         <rdfs:label xml:lang="en">Measures wind</rdfs:label>
@@ -551,16 +551,16 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#monitors -->
+    <!-- https://w3id.org/optimar#monitors -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#monitors">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#monitors">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Actor"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
-                    <rdf:Description rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"/>
+                    <rdf:Description rdf:about="https://w3id.org/optimar#Component"/>
+                    <rdf:Description rdf:about="https://w3id.org/optimar#Sensor"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -572,12 +572,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#monitorsDeformation -->
+    <!-- https://w3id.org/optimar#monitorsDeformation -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#monitorsDeformation">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Deformation"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#monitorsDeformation">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Sensor"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#Deformation"/>
         <rdfs:comment xml:lang="es">Relaciona un sensor con la deformación estructural que mide o supervisa.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relates a sensor to the structural deformation it measures or monitors.</rdfs:comment>
         <rdfs:label xml:lang="es">Monitorea deformación</rdfs:label>
@@ -586,12 +586,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performedMaintenance -->
+    <!-- https://w3id.org/optimar#performedMaintenance -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performedMaintenance">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Maintenance"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#performedMaintenance">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Actor"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#Maintenance"/>
         <rdfs:comment xml:lang="es">Relaciona un actor con el mantenimiento que realiza.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relates an actor with the maintenance that it performs.</rdfs:comment>
         <rdfs:label xml:lang="en">Performs maintenance</rdfs:label>
@@ -600,12 +600,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performsTask -->
+    <!-- https://w3id.org/optimar#performsTask -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performsTask">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Task"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#performsTask">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Actor"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#Task"/>
         <rdfs:comment xml:lang="es">Relaciona un actor con una tarea que ejecuta como parte de su rol.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relates an actor with a task that it performs as part of its role.</rdfs:comment>
         <rdfs:label xml:lang="en">Performs task</rdfs:label>
@@ -614,12 +614,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#relatedToComponent -->
+    <!-- https://w3id.org/optimar#relatedToComponent -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#relatedToComponent">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#relatedToComponent">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Event"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#Component"/>
         <rdfs:comment xml:lang="es">Relaciona un evento con el componente de la plataforma que se ve afectado.</rdfs:comment>
         <rdfs:comment xml:lang="en">Relates an event to the platform component that is affected.</rdfs:comment>
         <rdfs:label xml:lang="es">Relacionado con componente</rdfs:label>
@@ -628,11 +628,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#rotationSpeed -->
+    <!-- https://w3id.org/optimar#rotationSpeed -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#rotationSpeed">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#rotationSpeed">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Component"/>
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
         <rdfs:comment xml:lang="en">Angular speed of a component expressed as a QUDT quantity value.</rdfs:comment>
         <rdfs:comment xml:lang="es">Velocidad angular de un componente expresada como un valor con unidad QUDT.</rdfs:comment>
@@ -642,13 +642,13 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#supports -->
+    <!-- https://w3id.org/optimar#supports -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#supports">
-        <owl:inverseOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#isSupportedBy"/>
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#supports">
+        <owl:inverseOf rdf:resource="https://w3id.org/optimar#isSupportedBy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#Component"/>
         <rdfs:comment xml:lang="es">Indica que un componente proporciona soporte estructural o funcional a otro.</rdfs:comment>
         <rdfs:comment xml:lang="en">Indicates that a component provides structural or functional support to another.</rdfs:comment>
         <rdfs:label xml:lang="es">Soporta a</rdfs:label>
@@ -657,11 +657,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#temperature -->
+    <!-- https://w3id.org/optimar#temperature -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#temperature">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#temperature">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Data"/>
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
         <rdfs:comment xml:lang="es">Temperatura registrada expresada como un valor con unidad QUDT.</rdfs:comment>
         <rdfs:comment xml:lang="en">Temperature recorded expressed as a QUDT quantity value.</rdfs:comment>
@@ -671,11 +671,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#thickness -->
+    <!-- https://w3id.org/optimar#thickness -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#thickness">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#thickness">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Component"/>
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
         <rdfs:comment xml:lang="es">Espesor de la sección o pared de un componente medido en unidades QUDT.</rdfs:comment>
         <rdfs:comment xml:lang="en">Thickness of the section or wall of a component measured in QUDT units.</rdfs:comment>
@@ -685,12 +685,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#transmitsMovementTo -->
+    <!-- https://w3id.org/optimar#transmitsMovementTo -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#transmitsMovementTo">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
-        <rdfs:range rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#transmitsMovementTo">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#Component"/>
         <rdfs:comment xml:lang="es">Indica que un componente transmite movimiento mecánico a otro.</rdfs:comment>
         <rdfs:comment xml:lang="en">Indicates that a component transmits mechanical movement to another.</rdfs:comment>
         <rdfs:label xml:lang="es">Transmite movimiento a</rdfs:label>
@@ -699,11 +699,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#width -->
+    <!-- https://w3id.org/optimar#width -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#width">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#width">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Component"/>
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
         <rdfs:comment xml:lang="es">Anchura del componente expresada como un valor con unidad QUDT.</rdfs:comment>
         <rdfs:comment xml:lang="en">Width of the component expressed as a QUDT quantity value.</rdfs:comment>
@@ -713,11 +713,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#windDirection -->
+    <!-- https://w3id.org/optimar#windDirection -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#windDirection">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#EnvironmentalCondition"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#windDirection">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#EnvironmentalCondition"/>
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
         <rdfs:comment xml:lang="es">Dirección desde la que sopla el viento expresada en valores con unidad QUDT.</rdfs:comment>
         <rdfs:comment xml:lang="en">Direction from which the wind blows expressed as a QUDT quantity value.</rdfs:comment>
@@ -727,11 +727,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#windSpeed -->
+    <!-- https://w3id.org/optimar#windSpeed -->
 
 
-    <owl:ObjectProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#windSpeed">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#EnvironmentalCondition"/>
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#windSpeed">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#EnvironmentalCondition"/>
         <rdfs:range rdf:resource="http://qudt.org/schema/qudt/QuantityValue"/>
         <rdfs:comment xml:lang="es">Velocidad del viento expresada como valor QUDT.</rdfs:comment>
         <rdfs:comment xml:lang="en">Wind speed expressed as a QUDT quantity value.</rdfs:comment>
@@ -753,32 +753,32 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion -->
+    <!-- https://w3id.org/optimar#Corrosion -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionEvent"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/optimar#Corrosion">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#CorrosionEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Deformation -->
+    <!-- https://w3id.org/optimar#Deformation -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Deformation">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/optimar#Deformation">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Data"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#darkCorrosion -->
+    <!-- https://w3id.org/optimar#darkCorrosion -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#darkCorrosion">
-        <rdfs:subPropertyOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion"/>
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionEvent"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/optimar#darkCorrosion">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/optimar#Corrosion"/>
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#CorrosionEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="en">Level of dark corrosion detected on the mmaterial surface.</rdfs:comment>
         <rdfs:comment xml:lang="es">Nivel de corrosión oscura detectada en la superficie del material.</rdfs:comment>
@@ -788,11 +788,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#dateTime -->
+    <!-- https://w3id.org/optimar#dateTime -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#dateTime">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/optimar#dateTime">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Measurement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
         <rdfs:comment xml:lang="en">Associated temporal mark to the measurement.</rdfs:comment>
         <rdfs:comment xml:lang="es">Marca temporal asociada a la medición.</rdfs:comment>
@@ -802,11 +802,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#displacement -->
+    <!-- https://w3id.org/optimar#displacement -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#displacement">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/optimar#displacement">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Data"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="es">Desplazamiento o cambio de posición registrado en el componente.</rdfs:comment>
         <rdfs:comment xml:lang="en">Displacement or position change recorded in the component.</rdfs:comment>
@@ -816,11 +816,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#externalShape -->
+    <!-- https://w3id.org/optimar#externalShape -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#externalShape">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/optimar#externalShape">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Component"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="es">Describe la forma externa o geometría del componente.</rdfs:comment>
         <rdfs:comment xml:lang="en">Describe the external shape or geometric of the component.</rdfs:comment>
@@ -830,11 +830,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasCapacity -->
+    <!-- https://w3id.org/optimar#hasCapacity -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasCapacity">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Turbine"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/optimar#hasCapacity">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Turbine"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="es">Capacidad nominal de generación de la turbina.</rdfs:comment>
         <rdfs:comment xml:lang="en">Rated generation capacity of the turbine.</rdfs:comment>
@@ -844,11 +844,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#imageURL -->
+    <!-- https://w3id.org/optimar#imageURL -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#imageURL">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Image"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/optimar#imageURL">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Image"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Access URL of the generated or stored image.</rdfs:comment>
         <rdfs:comment xml:lang="es">Dirección de acceso a la imagen generada o almacenada.</rdfs:comment>
@@ -858,12 +858,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#lightCorrosion -->
+    <!-- https://w3id.org/optimar#lightCorrosion -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#lightCorrosion">
-        <rdfs:subPropertyOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion"/>
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionEvent"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/optimar#lightCorrosion">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/optimar#Corrosion"/>
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#CorrosionEvent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="en">Level of light corrosion detected on the material surface.</rdfs:comment>
         <rdfs:comment xml:lang="es">Nivel de corrosión clara detectada en la superficie del material.</rdfs:comment>
@@ -873,11 +873,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#material -->
+    <!-- https://w3id.org/optimar#material -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#material">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/optimar#material">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Component"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="es">Material de fabricación del componente (ej. acero, compuesto, fibra de vidrio, etc.).</rdfs:comment>
         <rdfs:comment xml:lang="en">Material of manufacturing of the component (e.g. steel, composite, fiberglass, etc.).</rdfs:comment>
@@ -887,11 +887,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#materialFatigue -->
+    <!-- https://w3id.org/optimar#materialFatigue -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#materialFatigue">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/optimar#materialFatigue">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Data"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="en">Accumulated material fatigue degree.</rdfs:comment>
         <rdfs:comment xml:lang="es">Grado de fatiga acumulada en el material.</rdfs:comment>
@@ -901,11 +901,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#materialWear -->
+    <!-- https://w3id.org/optimar#materialWear -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#materialWear">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/optimar#materialWear">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Data"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="en">Degree of material wear in a component.</rdfs:comment>
         <rdfs:comment xml:lang="es">Grado de desgaste de un material en un componente.</rdfs:comment>
@@ -915,11 +915,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#misalignment -->
+    <!-- https://w3id.org/optimar#misalignment -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#misalignment">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/optimar#misalignment">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Data"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="en">Measure of the misalignment detected in a component.</rdfs:comment>
         <rdfs:comment xml:lang="es">Medida de la falta de alineación detectada en un componente.</rdfs:comment>
@@ -929,11 +929,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#operationalStatus -->
+    <!-- https://w3id.org/optimar#operationalStatus -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#operationalStatus">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Turbine"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/optimar#operationalStatus">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Turbine"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Current operational status of the turbine (e.g. operative, stopped, under maintenance, etc.).</rdfs:comment>
         <rdfs:comment xml:lang="es">Estado de funcionamiento actual de la turbina (ej. operativa, parada, en mantenimiento, etc.).</rdfs:comment>
@@ -943,11 +943,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#pressure -->
+    <!-- https://w3id.org/optimar#pressure -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#pressure">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/optimar#pressure">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Data"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="es">Presión ejercida sobre un componente.</rdfs:comment>
         <rdfs:comment xml:lang="en">Pressure exerted on a component.</rdfs:comment>
@@ -957,11 +957,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#stress -->
+    <!-- https://w3id.org/optimar#stress -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#stress">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/optimar#stress">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Data"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="es">Nivel de tensión registrado en un componente.</rdfs:comment>
         <rdfs:comment xml:lang="en">Stress level recorded in a component.</rdfs:comment>
@@ -971,11 +971,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#unit -->
+    <!-- https://w3id.org/optimar#unit -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#unit">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/optimar#unit">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Measurement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Measurement unit of the recorded value (e.g. m/s, rpm, °C, etc.).</rdfs:comment>
         <rdfs:comment xml:lang="es">Unidad de medida del valor registrado (ej. m/s, rpm, °C, etc.).</rdfs:comment>
@@ -985,11 +985,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#value -->
+    <!-- https://w3id.org/optimar#value -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#value">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/optimar#value">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Measurement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="en">Numeric value of the measurement taken by a sensor.</rdfs:comment>
         <rdfs:comment xml:lang="es">Valor numérico de la medición tomada por un sensor.</rdfs:comment>
@@ -999,11 +999,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#vibrations -->
+    <!-- https://w3id.org/optimar#vibrations -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#vibrations">
-        <rdfs:domain rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"/>
+    <owl:DatatypeProperty rdf:about="https://w3id.org/optimar#vibrations">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Data"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
         <rdfs:comment xml:lang="en">Level of vibrations recorded in a component or system.</rdfs:comment>
         <rdfs:comment xml:lang="es">Nivel de vibraciones registradas en un componente o sistema.</rdfs:comment>
@@ -1032,10 +1032,10 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor -->
+    <!-- https://w3id.org/optimar#Actor -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor">
+    <owl:Class rdf:about="https://w3id.org/optimar#Actor">
         <rdfs:comment xml:lang="en">An actor that interacts or manages the offshore wind power platform.</rdfs:comment>
         <rdfs:comment xml:lang="es">Un actor que interactúa o gestiona la plataforma eólica.</rdfs:comment>
         <rdfs:label xml:lang="en">Actor</rdfs:label>
@@ -1044,11 +1044,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#AnalyticalRole -->
+    <!-- https://w3id.org/optimar#AnalyticalRole -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#AnalyticalRole">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Role"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#AnalyticalRole">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Role"/>
         <rdfs:comment xml:lang="es">Rol orientado al analisis de datos y generación de información útil para la toma de decisiones.</rdfs:comment>
         <rdfs:comment xml:lang="en">Role focused on data analysis and generation of useful information for decision-making.</rdfs:comment>
         <rdfs:label xml:lang="en">Analytical Role</rdfs:label>
@@ -1057,13 +1057,13 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Anemometer -->
+    <!-- https://w3id.org/optimar#Anemometer -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Anemometer">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"/>
-        <owl:disjointWith rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionCamera"/>
-        <owl:disjointWith rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralCamera"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#Anemometer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Sensor"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/optimar#CorrosionCamera"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/optimar#StructuralCamera"/>
         <rdfs:comment xml:lang="es">Sensor que mide la velocidad y dirección del viento en el parque eólico.</rdfs:comment>
         <rdfs:comment xml:lang="en">Sensor that measures wind speed and direction in the wind farm.</rdfs:comment>
         <rdfs:label xml:lang="en">Anemometer</rdfs:label>
@@ -1072,11 +1072,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Base -->
+    <!-- https://w3id.org/optimar#Base -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Base">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralComponent"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#Base">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#StructuralComponent"/>
         <rdfs:comment xml:lang="es">La base que soporta la plataforma flotante.</rdfs:comment>
         <rdfs:comment xml:lang="en">The base that supports the floating platform.</rdfs:comment>
         <rdfs:label xml:lang="en">Base (floating substructure)</rdfs:label>
@@ -1085,11 +1085,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Blade -->
+    <!-- https://w3id.org/optimar#Blade -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Blade">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TurbineComponent"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#Blade">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#TurbineComponent"/>
         <rdfs:comment xml:lang="es">Las palas de la turbina que capturan la energía eólica.</rdfs:comment>
         <rdfs:comment xml:lang="en">The blades of the turbine that capture the wind energy.</rdfs:comment>
         <rdfs:label xml:lang="en">Blade</rdfs:label>
@@ -1098,11 +1098,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CloudAdministrator -->
+    <!-- https://w3id.org/optimar#CloudAdministrator -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CloudAdministrator">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#CloudAdministrator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Actor"/>
         <rdfs:comment xml:lang="es">Responsable de la administración y seguridad de los servicios en la nube que procesan los datos de la plataforma.</rdfs:comment>
         <rdfs:comment xml:lang="en">Responsible for managing and securing cloud services that process data from the platform.</rdfs:comment>
         <rdfs:label xml:lang="es">Administrador de nube</rdfs:label>
@@ -1111,10 +1111,10 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component -->
+    <!-- https://w3id.org/optimar#Component -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component">
+    <owl:Class rdf:about="https://w3id.org/optimar#Component">
         <rdfs:comment xml:lang="en">An component of an offshore wind power platform, such as blades, towers, pitch system, etc.</rdfs:comment>
         <rdfs:comment xml:lang="es">Un componente de una plataforma eólica offshore, como las palas, torres, sistema de pitch, etc.</rdfs:comment>
         <rdfs:label xml:lang="en">Component</rdfs:label>
@@ -1123,11 +1123,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ComponentBreakage -->
+    <!-- https://w3id.org/optimar#ComponentBreakage -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ComponentBreakage">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#ComponentBreakage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Failure"/>
         <rdfs:comment xml:lang="en">Failure caused by the fracture or breakage of an offshore wind turbine component.</rdfs:comment>
         <rdfs:comment xml:lang="es">Fallo originado por la fractura o rotura de un componente de la plataforma eólica.</rdfs:comment>
         <rdfs:label xml:lang="en">Component Breakage</rdfs:label>
@@ -1136,20 +1136,20 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion -->
+    <!-- https://w3id.org/optimar#Corrosion -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#Corrosion"/>
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionCamera -->
+    <!-- https://w3id.org/optimar#CorrosionCamera -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionCamera">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"/>
-        <owl:disjointWith rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DynamicMonitor"/>
-        <owl:disjointWith rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralCamera"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#CorrosionCamera">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Sensor"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/optimar#DynamicMonitor"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/optimar#StructuralCamera"/>
         <rdfs:comment xml:lang="en">Camera used to detect and monitor corrosion in the platform structure.</rdfs:comment>
         <rdfs:comment xml:lang="es">Cámara utilizada para detectar y monitorear corrosión en la estructura de la plataforma.</rdfs:comment>
         <rdfs:label xml:lang="en">Corrosion Camera</rdfs:label>
@@ -1158,13 +1158,13 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionEvent -->
+    <!-- https://w3id.org/optimar#CorrosionEvent -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionEvent">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FailureEvent"/>
-        <owl:disjointWith rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaterialFatigue"/>
-        <owl:disjointWith rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Misalignment"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#CorrosionEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#FailureEvent"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/optimar#MaterialFatigue"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/optimar#Misalignment"/>
         <rdfs:comment xml:lang="es">Degradación de la estructura metálica de la plataforma por efectos de corrosión.</rdfs:comment>
         <rdfs:comment xml:lang="en">Degradation of the platform&apos;s metallic structure due to corrosion effects.</rdfs:comment>
         <rdfs:label xml:lang="en">Corrosion Event</rdfs:label>
@@ -1173,10 +1173,10 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data -->
+    <!-- https://w3id.org/optimar#Data -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data">
+    <owl:Class rdf:about="https://w3id.org/optimar#Data">
         <rdfs:comment xml:lang="en">A class for representing the measurement data collected by sensors or other systems.</rdfs:comment>
         <rdfs:comment xml:lang="es">Una clase general para representar los datos de medición recolectados por sensores u otros sistemas.</rdfs:comment>
         <rdfs:label xml:lang="en">Data</rdfs:label>
@@ -1185,11 +1185,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DataAnalyst -->
+    <!-- https://w3id.org/optimar#DataAnalyst -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DataAnalyst">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#DataAnalyst">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Actor"/>
         <rdfs:comment xml:lang="es">Especialista que analiza los datos recolectados para detectar patrones, fallos y oportunidades de optimización.</rdfs:comment>
         <rdfs:comment xml:lang="en">Specialist who analyzes collected data to detect patterns, failures, and optimization opportunities.</rdfs:comment>
         <rdfs:label xml:lang="es">Analista de datos</rdfs:label>
@@ -1198,19 +1198,19 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Deformation -->
+    <!-- https://w3id.org/optimar#Deformation -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Deformation"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#Deformation"/>
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DynamicMonitor -->
+    <!-- https://w3id.org/optimar#DynamicMonitor -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DynamicMonitor">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"/>
-        <owl:disjointWith rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralCamera"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#DynamicMonitor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Sensor"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/optimar#StructuralCamera"/>
         <rdfs:comment xml:lang="en">Device that measures dynamic parameters of the platform, such as vibrations and movements.</rdfs:comment>
         <rdfs:comment xml:lang="es">Dispositivo que mide parámetros dinámicos de la plataforma como vibraciones y movimientos.</rdfs:comment>
         <rdfs:label xml:lang="en">Dynamic Monitor</rdfs:label>
@@ -1219,10 +1219,10 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#EnvironmentalCondition -->
+    <!-- https://w3id.org/optimar#EnvironmentalCondition -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#EnvironmentalCondition">
+    <owl:Class rdf:about="https://w3id.org/optimar#EnvironmentalCondition">
         <rdfs:comment xml:lang="es">Las condiciones ambientales que afectan a la plataforma eólica, como la velocidad del viento, la temperatura, etc.</rdfs:comment>
         <rdfs:comment xml:lang="en">The environmental conditions that affect the offshore wind power platform, such as wind speed, temperature, etc.</rdfs:comment>
         <rdfs:label xml:lang="es">Condición ambiental</rdfs:label>
@@ -1231,10 +1231,10 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event -->
+    <!-- https://w3id.org/optimar#Event -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event">
+    <owl:Class rdf:about="https://w3id.org/optimar#Event">
         <rdfs:comment xml:lang="en">An event that occurs in the offshore wind power platform, such as a failure detection.</rdfs:comment>
         <rdfs:comment xml:lang="es">Un evento que ocurre en la plataforma eólica, como la detección de un fallo.</rdfs:comment>
         <rdfs:label xml:lang="en">Event</rdfs:label>
@@ -1243,10 +1243,10 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure -->
+    <!-- https://w3id.org/optimar#Failure -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure">
+    <owl:Class rdf:about="https://w3id.org/optimar#Failure">
         <rdfs:comment xml:lang="en">A class that represents identified failures in the wind platform.</rdfs:comment>
         <rdfs:comment xml:lang="es">Una clase que representa fallos identificados en la plataforma eólica.</rdfs:comment>
         <rdfs:label xml:lang="en">Failure</rdfs:label>
@@ -1255,15 +1255,15 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FailureEvent -->
+    <!-- https://w3id.org/optimar#FailureEvent -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FailureEvent">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#FailureEvent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Event"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#causedBy"/>
-                <owl:someValuesFrom rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure"/>
+                <owl:onProperty rdf:resource="https://w3id.org/optimar#causedBy"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/optimar#Failure"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Event that represents a detected failure in the system, must be caused by at least one failure.</rdfs:comment>
@@ -1274,11 +1274,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FloatingPlatform -->
+    <!-- https://w3id.org/optimar#FloatingPlatform -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FloatingPlatform">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#FloatingPlatform">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Component"/>
         <rdfs:comment xml:lang="en">A floating platform that serves as a base for the wind turbine.</rdfs:comment>
         <rdfs:comment xml:lang="es">Una plataforma flotante que sirve de base para la turbina eólica.</rdfs:comment>
         <rdfs:label xml:lang="en">Floating Platform</rdfs:label>
@@ -1287,11 +1287,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FloatingSubstructure -->
+    <!-- https://w3id.org/optimar#FloatingSubstructure -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FloatingSubstructure">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralComponent"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#FloatingSubstructure">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#StructuralComponent"/>
         <rdfs:comment xml:lang="es">La subestructura flotante que permite que la plataforma sea estable en el mar.</rdfs:comment>
         <rdfs:comment xml:lang="en">The floating substructure that allows the platform to be stable at sea.</rdfs:comment>
         <rdfs:label xml:lang="en">Floating Substructure</rdfs:label>
@@ -1300,11 +1300,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#GaugeSystem -->
+    <!-- https://w3id.org/optimar#GaugeSystem -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#GaugeSystem">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#GaugeSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Sensor"/>
         <rdfs:comment xml:lang="es">Sistema de galgas extensiométricas utilizado para medir tensiones y deformaciones en la estructura.</rdfs:comment>
         <rdfs:comment xml:lang="en">Strain gauge system used to measure stresses and deformations in the structure.</rdfs:comment>
         <rdfs:label xml:lang="en">Gauge System</rdfs:label>
@@ -1313,11 +1313,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Hub -->
+    <!-- https://w3id.org/optimar#Hub -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Hub">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TurbineComponent"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#Hub">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#TurbineComponent"/>
         <rdfs:comment xml:lang="es">La parte central de la turbina donde se conectan las palas.</rdfs:comment>
         <rdfs:comment xml:lang="en">The central part of the turbine where the blades are connected.</rdfs:comment>
         <rdfs:label xml:lang="en">Hub</rdfs:label>
@@ -1326,11 +1326,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ISUMSystem -->
+    <!-- https://w3id.org/optimar#ISUMSystem -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ISUMSystem">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#ISUMSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Sensor"/>
         <rdfs:comment xml:lang="es">Sistema especializado para la monitorización integrada de la plataforma offshore.</rdfs:comment>
         <rdfs:comment xml:lang="en">Specialized system for integrated monitoring of the offshore platform.</rdfs:comment>
         <rdfs:label xml:lang="en">ISUM System</rdfs:label>
@@ -1339,11 +1339,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Image -->
+    <!-- https://w3id.org/optimar#Image -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Image">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#Image">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Data"/>
         <rdfs:comment xml:lang="en">A class that represents an image that supports the measurement.</rdfs:comment>
         <rdfs:comment xml:lang="es">Una clase que representa una imagen que soporta la medición.</rdfs:comment>
         <rdfs:label xml:lang="en">Image</rdfs:label>
@@ -1352,10 +1352,10 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Location -->
+    <!-- https://w3id.org/optimar#Location -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Location">
+    <owl:Class rdf:about="https://w3id.org/optimar#Location">
         <rdfs:comment xml:lang="es">La ubicación geográfica de la plataforma eólica.</rdfs:comment>
         <rdfs:comment xml:lang="en">The geographic location of the wind platform.</rdfs:comment>
         <rdfs:label xml:lang="en">Location</rdfs:label>
@@ -1364,24 +1364,24 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Maintenance -->
+    <!-- https://w3id.org/optimar#Maintenance -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Maintenance">
+    <owl:Class rdf:about="https://w3id.org/optimar#Maintenance">
         <rdfs:comment xml:lang="en">A class that represents the maintenance of the wind platform.</rdfs:comment>
         <rdfs:comment xml:lang="es">Una clase que representa el mantenimiento de la plataforma eólica.</rdfs:comment>
         <rdfs:label xml:lang="en">Maintenance</rdfs:label>
         <rdfs:label xml:lang="es">Mantenimiento</rdfs:label>
-        <performedBy rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaintenanceOperator"/>
+        <performedBy rdf:resource="https://w3id.org/optimar#MaintenanceOperator"/>
     </owl:Class>
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaintenanceOperator -->
+    <!-- https://w3id.org/optimar#MaintenanceOperator -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaintenanceOperator">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#MaintenanceOperator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Actor"/>
         <rdfs:comment xml:lang="en">Person responsible for carrying out preventive and corrective maintenance on the platform.</rdfs:comment>
         <rdfs:comment xml:lang="es">Persona encargada de realizar el mantenimiento preventivo y correctivo en la plataforma.</rdfs:comment>
         <rdfs:label xml:lang="en">Maintenance Operator</rdfs:label>
@@ -1390,11 +1390,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ManagementRole -->
+    <!-- https://w3id.org/optimar#ManagementRole -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ManagementRole">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Role"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#ManagementRole">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Role"/>
         <rdfs:comment xml:lang="es">Rol encargado de la coordinación, planificación y gestión de recursos en la plataforma eólica.</rdfs:comment>
         <rdfs:comment xml:lang="en">Role responsible for coordination, planning, and resource management in the wind platform.</rdfs:comment>
         <rdfs:label xml:lang="en">Management Role</rdfs:label>
@@ -1403,12 +1403,12 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaterialFatigue -->
+    <!-- https://w3id.org/optimar#MaterialFatigue -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaterialFatigue">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure"/>
-        <owl:disjointWith rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Misalignment"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#MaterialFatigue">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Failure"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/optimar#Misalignment"/>
         <rdfs:comment xml:lang="es">Fallo en el material estructural causado por ciclos repetidos de carga.</rdfs:comment>
         <rdfs:comment xml:lang="en">Structural material failure caused by repeated load cycles.</rdfs:comment>
         <rdfs:label xml:lang="es">Fatiga del material</rdfs:label>
@@ -1417,11 +1417,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement -->
+    <!-- https://w3id.org/optimar#Measurement -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#Measurement">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Data"/>
         <rdfs:comment xml:lang="es">Representa una medición tomada por un sensor.</rdfs:comment>
         <rdfs:comment xml:lang="en">Represents a measurement taken by a sensor.</rdfs:comment>
         <rdfs:label xml:lang="en">Measurement</rdfs:label>
@@ -1430,11 +1430,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Misalignment -->
+    <!-- https://w3id.org/optimar#Misalignment -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Misalignment">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#Misalignment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Failure"/>
         <rdfs:comment xml:lang="en">Failure caused by misalignment or lack of proper adjustment between platform components.</rdfs:comment>
         <rdfs:comment xml:lang="es">Fallo causado por el desajuste o falta de alineación entre los componentes de la plataforma.</rdfs:comment>
         <rdfs:label xml:lang="es">Desalineación</rdfs:label>
@@ -1443,11 +1443,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MonitoringTask -->
+    <!-- https://w3id.org/optimar#MonitoringTask -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MonitoringTask">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Task"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#MonitoringTask">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Task"/>
         <rdfs:comment xml:lang="en">A task aimed at supervising the condition of the platform through sensors and monitoring systems.</rdfs:comment>
         <rdfs:comment xml:lang="es">Una tarea destinada a supervisar el estado de la plataforma mediante sensores y sistemas de monitorización.</rdfs:comment>
         <rdfs:label xml:lang="en">Monitoring Task</rdfs:label>
@@ -1456,11 +1456,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MooringSystem -->
+    <!-- https://w3id.org/optimar#MooringSystem -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MooringSystem">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralComponent"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#MooringSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#StructuralComponent"/>
         <rdfs:comment xml:lang="es">El sistema de amarre que mantiene la plataforma flotante en su ubicación.</rdfs:comment>
         <rdfs:comment xml:lang="en">The mooring system that keeps the floating platform in place.</rdfs:comment>
         <rdfs:label xml:lang="en">Mooring System</rdfs:label>
@@ -1469,11 +1469,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Nacelle -->
+    <!-- https://w3id.org/optimar#Nacelle -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Nacelle">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TurbineComponent"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#Nacelle">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#TurbineComponent"/>
         <rdfs:comment xml:lang="es">El compartimento de la turbina que aloja el generador y otros componentes mecánicos.</rdfs:comment>
         <rdfs:comment xml:lang="en">The turbine component that houses the generator and other mechanical components.</rdfs:comment>
         <rdfs:label xml:lang="en">Nacelle</rdfs:label>
@@ -1482,20 +1482,20 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Observation -->
+    <!-- https://w3id.org/optimar#Observation -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Observation">
+    <owl:Class rdf:about="https://w3id.org/optimar#Observation">
         <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/sosa/Observation"/>
     </owl:Class>
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ParkOwner -->
+    <!-- https://w3id.org/optimar#ParkOwner -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ParkOwner">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#ParkOwner">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Actor"/>
         <rdfs:comment xml:lang="es">Entidad o persona propietaria del parque eólico offshore y responsable de su operación general.</rdfs:comment>
         <rdfs:comment xml:lang="en">Entity or individual owning the offshore wind farm and responsible for its overall operation.</rdfs:comment>
         <rdfs:label xml:lang="en">Park Owner</rdfs:label>
@@ -1504,11 +1504,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#PitchSystem -->
+    <!-- https://w3id.org/optimar#PitchSystem -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#PitchSystem">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#PitchSystem">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Component"/>
         <rdfs:comment xml:lang="es">El sistema que ajusta el ángulo de las palas de la turbina.</rdfs:comment>
         <rdfs:comment xml:lang="en">The system that adjusts the angle of the blades of the turbine.</rdfs:comment>
         <rdfs:label xml:lang="en">Pitch System</rdfs:label>
@@ -1517,11 +1517,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#PlatformActuator -->
+    <!-- https://w3id.org/optimar#PlatformActuator -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#PlatformActuator">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#PlatformActuator">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Actor"/>
         <rdfs:comment xml:lang="es">Encargado de realizar ajustes sobre la plataforma, como ajustes mecánicos o hidráulicos.</rdfs:comment>
         <rdfs:comment xml:lang="en">Responsible for making adjustments on the platform, such as mechanical or hydraulic adjustments.</rdfs:comment>
         <rdfs:label xml:lang="es">Actuador de plataforma</rdfs:label>
@@ -1530,10 +1530,10 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Role -->
+    <!-- https://w3id.org/optimar#Role -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Role">
+    <owl:Class rdf:about="https://w3id.org/optimar#Role">
         <rdfs:comment xml:lang="es">Los roles de los actores que gestionan, operan o mantienen la plataforma eólica.</rdfs:comment>
         <rdfs:comment xml:lang="en">The roles of the actors that manage, operate or maintain the offshore wind power platform.</rdfs:comment>
         <rdfs:label xml:lang="es">Rol</rdfs:label>
@@ -1542,10 +1542,10 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor -->
+    <!-- https://w3id.org/optimar#Sensor -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor">
+    <owl:Class rdf:about="https://w3id.org/optimar#Sensor">
         <rdfs:subClassOf rdf:resource="https://www.w3.org/ns/sosa/Sensor"/>
         <rdfs:comment xml:lang="en">A device that measures or monitors parameters of the wind platform, such as wind, corrosion, vibrations, etc.</rdfs:comment>
         <rdfs:comment xml:lang="es">Un dispositivo que mide o monitorea parámetros de la plataforma eólica, como viento, corrosión, vibraciones, etc.</rdfs:comment>
@@ -1555,11 +1555,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StressData -->
+    <!-- https://w3id.org/optimar#StressData -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StressData">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#StressData">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Measurement"/>
         <rdfs:comment xml:lang="es">Datos de tensión medidos por un sensor.</rdfs:comment>
         <rdfs:comment xml:lang="en">Stress data measured by a sensor.</rdfs:comment>
         <rdfs:label xml:lang="es">Datos de tensión</rdfs:label>
@@ -1568,11 +1568,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralCamera -->
+    <!-- https://w3id.org/optimar#StructuralCamera -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralCamera">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#StructuralCamera">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Sensor"/>
         <rdfs:comment xml:lang="en">Camera dedicated to visual inspection of the structural condition of the platform.</rdfs:comment>
         <rdfs:comment xml:lang="es">Cámara dedicada a la inspección visual del estado estructural de la plataforma.</rdfs:comment>
         <rdfs:label xml:lang="es">Cámara estructural</rdfs:label>
@@ -1581,16 +1581,16 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralComponent -->
+    <!-- https://w3id.org/optimar#StructuralComponent -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralComponent">
+    <owl:Class rdf:about="https://w3id.org/optimar#StructuralComponent">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Base"/>
-                    <rdf:Description rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FloatingSubstructure"/>
-                    <rdf:Description rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MooringSystem"/>
+                    <rdf:Description rdf:about="https://w3id.org/optimar#Base"/>
+                    <rdf:Description rdf:about="https://w3id.org/optimar#FloatingSubstructure"/>
+                    <rdf:Description rdf:about="https://w3id.org/optimar#MooringSystem"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1602,11 +1602,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralInstability -->
+    <!-- https://w3id.org/optimar#StructuralInstability -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralInstability">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#StructuralInstability">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Failure"/>
         <rdfs:comment xml:lang="en">Failure that compromises the structural stability of the floating platform.</rdfs:comment>
         <rdfs:comment xml:lang="es">Fallo que compromete la estabilidad estructural de la plataforma flotante.</rdfs:comment>
         <rdfs:label xml:lang="es">Inestabilidad estructural</rdfs:label>
@@ -1615,10 +1615,10 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Task -->
+    <!-- https://w3id.org/optimar#Task -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Task">
+    <owl:Class rdf:about="https://w3id.org/optimar#Task">
         <rdfs:comment xml:lang="en">A general task related to the operation, monitoring, or maintenance of the wind platform.</rdfs:comment>
         <rdfs:comment xml:lang="es">Una tarea general relacionada con la operación, supervisión o mantenimiento de la plataforma eólica.</rdfs:comment>
         <rdfs:label xml:lang="es">Tarea</rdfs:label>
@@ -1627,11 +1627,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TechnicalRole -->
+    <!-- https://w3id.org/optimar#TechnicalRole -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TechnicalRole">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Role"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#TechnicalRole">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Role"/>
         <rdfs:comment xml:lang="es">Rol asociado a actividades técnicas como operación, reparación y supervisión de sistemas.</rdfs:comment>
         <rdfs:comment xml:lang="en">Role associated with technical activities such as operation, repair, and system supervision.</rdfs:comment>
         <rdfs:label xml:lang="es">Rol técnico</rdfs:label>
@@ -1640,11 +1640,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Tower -->
+    <!-- https://w3id.org/optimar#Tower -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Tower">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TurbineComponent"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#Tower">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#TurbineComponent"/>
         <rdfs:comment xml:lang="es">La estructura que sostiene la turbina eólica.</rdfs:comment>
         <rdfs:comment xml:lang="en">The structure that supports the wind turbine.</rdfs:comment>
         <rdfs:label xml:lang="es">Torre</rdfs:label>
@@ -1653,11 +1653,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Turbine -->
+    <!-- https://w3id.org/optimar#Turbine -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Turbine">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#Turbine">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Component"/>
         <rdfs:comment xml:lang="en">A wind turbine that is part of the wind platform.</rdfs:comment>
         <rdfs:comment xml:lang="es">Una turbina de viento que forma parte de la plataforma eólica.</rdfs:comment>
         <rdfs:label xml:lang="es">Turbina</rdfs:label>
@@ -1666,17 +1666,17 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TurbineComponent -->
+    <!-- https://w3id.org/optimar#TurbineComponent -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TurbineComponent">
+    <owl:Class rdf:about="https://w3id.org/optimar#TurbineComponent">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Blade"/>
-                    <rdf:Description rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Hub"/>
-                    <rdf:Description rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Nacelle"/>
-                    <rdf:Description rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Tower"/>
+                    <rdf:Description rdf:about="https://w3id.org/optimar#Blade"/>
+                    <rdf:Description rdf:about="https://w3id.org/optimar#Hub"/>
+                    <rdf:Description rdf:about="https://w3id.org/optimar#Nacelle"/>
+                    <rdf:Description rdf:about="https://w3id.org/optimar#Tower"/>
                 </owl:unionOf>
             </owl:Class>
         </owl:equivalentClass>
@@ -1688,11 +1688,11 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#VibrationData -->
+    <!-- https://w3id.org/optimar#VibrationData -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#VibrationData">
-        <rdfs:subClassOf rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement"/>
+    <owl:Class rdf:about="https://w3id.org/optimar#VibrationData">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Measurement"/>
         <rdfs:comment xml:lang="es">Datos de vibracion medidos por un sensor.</rdfs:comment>
         <rdfs:comment xml:lang="en">Vibration data measured by a sensor.</rdfs:comment>
         <rdfs:label xml:lang="es">Datos de vibración</rdfs:label>
@@ -1701,10 +1701,10 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#WindPowerPlatform -->
+    <!-- https://w3id.org/optimar#WindPowerPlatform -->
 
 
-    <owl:Class rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#WindPowerPlatform">
+    <owl:Class rdf:about="https://w3id.org/optimar#WindPowerPlatform">
         <rdfs:comment xml:lang="en">An offshore wind power platform that generates electricity from wind.</rdfs:comment>
         <rdfs:comment xml:lang="es">Una plataforma eólica offshore que genera energía electrica a partir del viento.</rdfs:comment>
         <rdfs:label xml:lang="en">Offshore Wind Power Platform</rdfs:label>
@@ -1739,10 +1739,10 @@
     
 
 
-    <!-- https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Observation -->
+    <!-- https://w3id.org/optimar#Observation -->
 
 
-    <owl:NamedIndividual rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Observation">
+    <owl:NamedIndividual rdf:about="https://w3id.org/optimar#Observation">
         <madeBySensor rdf:resource="https://www.w3.org/ns/sosa/Sensor"/>
     </owl:NamedIndividual>
     
@@ -1764,19 +1764,19 @@
      -->
 
 
-    <rdf:Description rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion">
+    <rdf:Description rdf:about="https://w3id.org/optimar#Corrosion">
         <rdfs:comment xml:lang="en">General corrosion index detected in a component.</rdfs:comment>
         <rdfs:comment xml:lang="es">Índice general de corrosión detectada en un componente.</rdfs:comment>
         <rdfs:label xml:lang="en">Corrosion</rdfs:label>
         <rdfs:label xml:lang="es">Corrosión</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Deformation">
+    <rdf:Description rdf:about="https://w3id.org/optimar#Deformation">
         <rdfs:comment xml:lang="en">Degree of deformation recorded in the component.</rdfs:comment>
         <rdfs:comment xml:lang="es">Grado de deformación registrado en el componente.</rdfs:comment>
         <rdfs:label xml:lang="es">Deformación</rdfs:label>
         <rdfs:label xml:lang="en">Deformation</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Observation">
+    <rdf:Description rdf:about="https://w3id.org/optimar#Observation">
         <rdfs:comment xml:lang="es">El resultado de registrar un fenómeno o condición, normalmente a través de un sensor o sistema de monitorización.</rdfs:comment>
         <rdfs:comment xml:lang="en">The result of recording a phenomenon or condition, usually through a sensor or monitoring system.</rdfs:comment>
         <rdfs:label xml:lang="es">Observación</rdfs:label>

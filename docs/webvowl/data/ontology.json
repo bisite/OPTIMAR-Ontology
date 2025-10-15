@@ -2,13 +2,13 @@
   "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
   "header" : {
     "languages" : [ "en", "es", "undefined" ],
-    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://qudt.org/schema/qudt", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl", "http://www.w3.org/2001/XMLSchema", "https://www.w3.org/ns/sosa" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://qudt.org/schema/qudt", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/ns/prov", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/optimar", "https://www.w3.org/ns/sosa" ],
     "title" : {
       "en" : "Offshore Wind Power Platform Ontology for OPTiMAR",
       "es" : "Ontolog�a de Plataforma E�lica Offshore para OPTiMAR"
     },
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "version" : "1.0",
+    "iri" : "https://w3id.org/optimar",
+    "version" : "Version 1.0 of the Ontology",
     "author" : [ "Alejandro Flores (USAL), Alberto Montero (USAL), Oihana Garcia (Tekniker) and Cristina Aceta (Tekniker)" ],
     "description" : {
       "en" : "This ontology describes the components, failures, sensors, and events related to offshore wind platforms.",
@@ -41,23 +41,23 @@
       } ],
       "abstract" : [ {
         "identifier" : "abstract",
-        "language" : "es",
-        "value" : "Ontologia que modela los elementos estructurales, sensores, eventos y fallos de plataformas e�licas offshore, incluyendo datos de medici�n y actores involucrados.",
+        "language" : "en",
+        "value" : "Ontology modeling structural elements, sensors, events, and failures in offshore wind platforms, including measurement data and involved actors.",
         "type" : "label"
       }, {
         "identifier" : "abstract",
-        "language" : "en",
-        "value" : "Ontology modeling structural elements, sensors, events, and failures in offshore wind platforms, including measurement data and involved actors.",
+        "language" : "es",
+        "value" : "Ontologia que modela los elementos estructurales, sensores, eventos y fallos de plataformas e�licas offshore, incluyendo datos de medici�n y actores involucrados.",
         "type" : "label"
       } ],
       "versionInfo" : [ {
         "identifier" : "versionInfo",
-        "language" : "es",
+        "language" : "en",
         "value" : "1.0",
         "type" : "label"
       }, {
         "identifier" : "versionInfo",
-        "language" : "en",
+        "language" : "es",
         "value" : "1.0",
         "type" : "label"
       } ],
@@ -129,12 +129,6 @@
         "value" : "2025-10-06",
         "type" : "label"
       } ],
-      "preferredNamespaceUri" : [ {
-        "identifier" : "preferredNamespaceUri",
-        "language" : "undefined",
-        "value" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-        "type" : "iri"
-      } ],
       "bibliographicCitation" : [ {
         "identifier" : "bibliographicCitation",
         "language" : "es",
@@ -146,491 +140,270 @@
         "value" : "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Offshore Wind Power Platform Ontology for OPTiMAR. DOI: 10.1234/abcd",
         "type" : "label"
       } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/optimar#",
+        "type" : "iri"
+      } ],
       "issued" : [ {
         "identifier" : "issued",
         "language" : "undefined",
         "value" : "2025-09-30",
         "type" : "label"
       } ],
+      "homepage" : [ {
+        "identifier" : "homepage",
+        "language" : "undefined",
+        "value" : "https://w3id.org/optimar",
+        "type" : "iri"
+      } ],
       "status" : [ {
-        "identifier" : "status",
-        "language" : "en",
-        "value" : "stable",
-        "type" : "label"
-      }, {
         "identifier" : "status",
         "language" : "es",
         "value" : "estable",
         "type" : "label"
-      } ],
-      "homepage" : [ {
-        "identifier" : "homepage",
-        "language" : "undefined",
-        "value" : "https://bisite.github.io/OPTIMAR-Ontology/",
-        "type" : "iri"
+      }, {
+        "identifier" : "status",
+        "language" : "en",
+        "value" : "stable",
+        "type" : "label"
       } ]
     }
   },
   "namespace" : [ ],
   "class" : [ {
-    "id" : "0",
+    "id" : "3",
     "type" : "owl:Class"
-  }, {
-    "id" : "2",
-    "type" : "owl:Class"
-  }, {
-    "id" : "4",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "5",
-    "type" : "owl:Class"
-  }, {
-    "id" : "7",
-    "type" : "owl:Class"
-  }, {
-    "id" : "9",
-    "type" : "owl:Class"
-  }, {
-    "id" : "11",
-    "type" : "owl:Class"
-  }, {
-    "id" : "13",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "14",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "15",
-    "type" : "owl:Class"
-  }, {
-    "id" : "19",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "20",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "21",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "22",
-    "type" : "owl:Class"
-  }, {
-    "id" : "23",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "24",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "25",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "28",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "29",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "30",
-    "type" : "owl:Class"
-  }, {
-    "id" : "35",
-    "type" : "owl:Class"
-  }, {
-    "id" : "36",
-    "type" : "owl:Class"
-  }, {
-    "id" : "40",
-    "type" : "owl:Class"
-  }, {
-    "id" : "32",
-    "type" : "owl:Class"
-  }, {
-    "id" : "43",
-    "type" : "owl:Class"
-  }, {
-    "id" : "44",
-    "type" : "owl:Class"
-  }, {
-    "id" : "45",
-    "type" : "owl:Class"
-  }, {
-    "id" : "46",
-    "type" : "owl:Class"
-  }, {
-    "id" : "47",
-    "type" : "owl:Class"
-  }, {
-    "id" : "48",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "49",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "50",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "51",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "52",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "56",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "57",
-    "type" : "owl:Class"
-  }, {
-    "id" : "59",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "60",
-    "type" : "owl:unionOf"
   }, {
     "id" : "8",
     "type" : "owl:Class"
   }, {
-    "id" : "6",
+    "id" : "10",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "14",
     "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "4",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "49",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "69",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "70",
+    "type" : "owl:Class"
+  }, {
+    "id" : "64",
+    "type" : "owl:unionOf"
   }, {
     "id" : "27",
     "type" : "owl:unionOf"
   }, {
-    "id" : "34",
+    "id" : "13",
     "type" : "owl:unionOf"
   }, {
-    "id" : "3",
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "81",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
     "type" : "owl:Class"
   }, {
     "id" : "42",
     "type" : "owl:Class"
   }, {
-    "id" : "78",
-    "type" : "owl:Class"
-  }, {
-    "id" : "79",
+    "id" : "84",
     "type" : "owl:Class"
   }, {
     "id" : "90",
     "type" : "owl:Class"
   }, {
-    "id" : "1",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "100",
+    "id" : "23",
     "type" : "owl:Class"
   }, {
-    "id" : "88",
-    "type" : "owl:Class"
-  }, {
-    "id" : "63",
-    "type" : "owl:Class"
-  }, {
-    "id" : "64",
-    "type" : "owl:Class"
-  }, {
-    "id" : "72",
-    "type" : "owl:Class"
-  }, {
-    "id" : "62",
-    "type" : "owl:Class"
-  }, {
-    "id" : "37",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "113",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "58",
-    "type" : "owl:Class"
-  }, {
-    "id" : "66",
-    "type" : "owl:Class"
-  }, {
-    "id" : "54",
-    "type" : "owl:Class"
-  }, {
-    "id" : "61",
-    "type" : "owl:Class"
-  }, {
-    "id" : "118",
-    "type" : "owl:Class"
-  }, {
-    "id" : "12",
-    "type" : "owl:Class"
-  }, {
-    "id" : "120",
-    "type" : "owl:Class"
-  }, {
-    "id" : "121",
-    "type" : "owl:Class"
-  }, {
-    "id" : "77",
+    "id" : "29",
     "type" : "owl:Class"
   }, {
     "id" : "41",
     "type" : "owl:Class"
   }, {
-    "id" : "55",
+    "id" : "101",
     "type" : "owl:Class"
   }, {
-    "id" : "74",
+    "id" : "66",
     "type" : "owl:Class"
   }, {
-    "id" : "10",
+    "id" : "108",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "114",
     "type" : "owl:Class"
   }, {
-    "id" : "135",
+    "id" : "6",
     "type" : "owl:Class"
   }, {
-    "id" : "126",
+    "id" : "117",
     "type" : "owl:Class"
   }, {
-    "id" : "76",
+    "id" : "33",
     "type" : "owl:Class"
   }, {
-    "id" : "159",
-    "type" : "owl:unionOf"
+    "id" : "119",
+    "type" : "owl:Class"
   }, {
-    "id" : "69",
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
     "type" : "owl:Class"
   }, {
     "id" : "16",
     "type" : "owl:Class"
   }, {
-    "id" : "18",
+    "id" : "85",
+    "type" : "owl:Class"
+  }, {
+    "id" : "127",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "owl:Class"
+  }, {
+    "id" : "131",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "59",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "140",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "83",
+    "type" : "owl:Class"
+  }, {
+    "id" : "135",
+    "type" : "owl:Class"
+  }, {
+    "id" : "113",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
     "type" : "owl:Class"
   } ],
   "classAttribute" : [ {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Nacelle",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Nacelle",
-      "en" : "Nacelle",
-      "es" : "Nacelle"
-    },
-    "comment" : {
-      "en" : "The turbine component that houses the generator and other mechanical components.",
-      "es" : "El compartimento de la turbina que aloja el generador y otros componentes mec�nicos."
-    },
-    "id" : "0",
-    "superClasses" : [ "1" ]
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StressData",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "StressData",
-      "en" : "Stress Data",
-      "es" : "Datos de tensi�n"
-    },
-    "comment" : {
-      "en" : "Stress data measured by a sensor.",
-      "es" : "Datos de tensi�n medidos por un sensor."
-    },
-    "id" : "2",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "4",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralInstability",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "StructuralInstability",
-      "en" : "Structural Instability",
-      "es" : "Inestabilidad estructural"
-    },
-    "comment" : {
-      "en" : "Failure that compromises the structural stability of the floating platform.",
-      "es" : "Fallo que compromete la estabilidad estructural de la plataforma flotante."
-    },
-    "id" : "5",
-    "superClasses" : [ "6" ]
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Turbine",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Turbine",
-      "en" : "Turbine",
-      "es" : "Turbina"
-    },
-    "comment" : {
-      "en" : "A wind turbine that is part of the wind platform.",
-      "es" : "Una turbina de viento que forma parte de la plataforma e�lica."
-    },
-    "id" : "7",
-    "superClasses" : [ "8" ]
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Image",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Image",
-      "en" : "Image",
-      "es" : "Imagen"
-    },
-    "comment" : {
-      "en" : "A class that represents an image that supports the measurement.",
-      "es" : "Una clase que representa una imagen que soporta la medici�n."
-    },
-    "id" : "9",
-    "superClasses" : [ "10" ]
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#AnalyticalRole",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "AnalyticalRole",
-      "en" : "Analytical Role",
-      "es" : "Rol anal�tico"
-    },
-    "comment" : {
-      "en" : "Role focused on data analysis and generation of useful information for decision-making.",
-      "es" : "Rol orientado al analisis de datos y generaci�n de informaci�n �til para la toma de decisiones."
-    },
-    "id" : "11",
-    "superClasses" : [ "12" ]
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "13",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "14",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CloudAdministrator",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "CloudAdministrator",
-      "en" : "Cloud Administrator",
-      "es" : "Administrador de nube"
-    },
-    "comment" : {
-      "en" : "Responsible for managing and securing cloud services that process data from the platform.",
-      "es" : "Responsable de la administraci�n y seguridad de los servicios en la nube que procesan los datos de la plataforma."
-    },
-    "id" : "15",
-    "superClasses" : [ "16" ]
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "19",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "20",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "21",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Tower",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Tower",
-      "en" : "Tower",
-      "es" : "Torre"
-    },
-    "comment" : {
-      "en" : "The structure that supports the wind turbine.",
-      "es" : "La estructura que sostiene la turbina e�lica."
-    },
-    "id" : "22",
-    "superClasses" : [ "1" ]
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "23",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "24",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "25",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "28",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "29",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Blade",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Blade",
-      "en" : "Blade",
-      "es" : "Pala"
-    },
-    "comment" : {
-      "en" : "The blades of the turbine that capture the wind energy.",
-      "es" : "Las palas de la turbina que capturan la energ�a e�lica."
-    },
-    "id" : "30",
-    "superClasses" : [ "1" ]
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#VibrationData",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "VibrationData",
-      "en" : "Vibration Data",
-      "es" : "Datos de vibraci�n"
-    },
-    "comment" : {
-      "en" : "Vibration data measured by a sensor.",
-      "es" : "Datos de vibracion medidos por un sensor."
-    },
-    "id" : "35",
-    "superClasses" : [ "3" ]
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MooringSystem",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+    "iri" : "https://w3id.org/optimar#MooringSystem",
+    "baseIri" : "https://w3id.org/optimar",
     "instances" : 0,
     "label" : {
       "IRI-based" : "MooringSystem",
@@ -641,41 +414,11 @@
       "en" : "The mooring system that keeps the floating platform in place.",
       "es" : "El sistema de amarre que mantiene la plataforma flotante en su ubicaci�n."
     },
-    "id" : "36",
-    "superClasses" : [ "37" ]
+    "id" : "3",
+    "superClasses" : [ "4" ]
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Anemometer",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Anemometer",
-      "en" : "Anemometer",
-      "es" : "Anem�metro"
-    },
-    "comment" : {
-      "en" : "Sensor that measures wind speed and direction in the wind farm.",
-      "es" : "Sensor que mide la velocidad y direcci�n del viento en el parque e�lico."
-    },
-    "id" : "40",
-    "superClasses" : [ "41" ]
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionEvent",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "CorrosionEvent",
-      "en" : "Corrosion Event",
-      "es" : "Evento de Corrosi�n"
-    },
-    "comment" : {
-      "en" : "Degradation of the platform's metallic structure due to corrosion effects.",
-      "es" : "Degradaci�n de la estructura met�lica de la plataforma por efectos de corrosi�n."
-    },
-    "id" : "32",
-    "superClasses" : [ "42" ]
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#CorrosionCamera",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+    "iri" : "https://w3id.org/optimar#CorrosionCamera",
+    "baseIri" : "https://w3id.org/optimar",
     "instances" : 0,
     "label" : {
       "IRI-based" : "CorrosionCamera",
@@ -686,303 +429,33 @@
       "en" : "Camera used to detect and monitor corrosion in the platform structure.",
       "es" : "C�mara utilizada para detectar y monitorear corrosi�n en la estructura de la plataforma."
     },
-    "id" : "43",
-    "superClasses" : [ "41" ]
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaterialFatigue",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "MaterialFatigue",
-      "en" : "Material Fatigue",
-      "es" : "Fatiga del material"
-    },
-    "comment" : {
-      "en" : "Structural material failure caused by repeated load cycles.",
-      "es" : "Fallo en el material estructural causado por ciclos repetidos de carga."
-    },
-    "id" : "44",
-    "superClasses" : [ "6" ]
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#GaugeSystem",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "GaugeSystem",
-      "en" : "Gauge System",
-      "es" : "Sistema de galgas"
-    },
-    "comment" : {
-      "en" : "Strain gauge system used to measure stresses and deformations in the structure.",
-      "es" : "Sistema de galgas extensiom�tricas utilizado para medir tensiones y deformaciones en la estructura."
-    },
-    "id" : "45",
-    "superClasses" : [ "41" ]
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DynamicMonitor",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "DynamicMonitor",
-      "en" : "Dynamic Monitor",
-      "es" : "Monitor din�mico"
-    },
-    "comment" : {
-      "en" : "Device that measures dynamic parameters of the platform, such as vibrations and movements.",
-      "es" : "Dispositivo que mide par�metros din�micos de la plataforma como vibraciones y movimientos."
-    },
-    "id" : "46",
-    "superClasses" : [ "41" ]
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Hub",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Hub",
-      "en" : "Hub",
-      "es" : "Hub"
-    },
-    "comment" : {
-      "en" : "The central part of the turbine where the blades are connected.",
-      "es" : "La parte central de la turbina donde se conectan las palas."
-    },
-    "id" : "47",
-    "superClasses" : [ "1" ]
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "48",
-    "label" : {
-      "IRI-based" : "string"
-    }
+    "id" : "8",
+    "superClasses" : [ "9" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "49",
+    "id" : "10",
     "label" : {
       "IRI-based" : "decimal"
     }
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "50",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "51",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "52",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "56",
-    "label" : {
-      "IRI-based" : "dateTime"
-    }
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MonitoringTask",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+    "iri" : "https://w3id.org/optimar#Anemometer",
+    "baseIri" : "https://w3id.org/optimar",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "MonitoringTask",
-      "en" : "Monitoring Task",
-      "es" : "Tarea de monitoreo"
+      "IRI-based" : "Anemometer",
+      "en" : "Anemometer",
+      "es" : "Anem�metro"
     },
     "comment" : {
-      "en" : "A task aimed at supervising the condition of the platform through sensors and monitoring systems.",
-      "es" : "Una tarea destinada a supervisar el estado de la plataforma mediante sensores y sistemas de monitorizaci�n."
+      "en" : "Sensor that measures wind speed and direction in the wind farm.",
+      "es" : "Sensor que mide la velocidad y direcci�n del viento en el parque e�lico."
     },
-    "id" : "57",
-    "superClasses" : [ "58" ]
+    "id" : "14",
+    "superClasses" : [ "9" ]
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "59",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
-  }, {
-    "instances" : 0,
-    "union" : [ "10", "6" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "60"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Component",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Component",
-      "en" : "Component",
-      "es" : "Componente"
-    },
-    "subClasses" : [ "61", "7", "62" ],
-    "comment" : {
-      "en" : "An component of an offshore wind power platform, such as blades, towers, pitch system, etc.",
-      "es" : "Un componente de una plataforma e�lica offshore, como las palas, torres, sistema de pitch, etc."
-    },
-    "id" : "8"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Failure",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Failure",
-      "en" : "Failure",
-      "es" : "Fallo"
-    },
-    "subClasses" : [ "44", "63", "64", "5" ],
-    "comment" : {
-      "en" : "A class that represents identified failures in the wind platform.",
-      "es" : "Una clase que representa fallos identificados en la plataforma e�lica."
-    },
-    "id" : "6"
-  }, {
-    "instances" : 0,
-    "union" : [ "41", "8" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "27"
-  }, {
-    "instances" : 0,
-    "union" : [ "66", "36" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "34"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Measurement",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Measurement",
-      "en" : "Measurement",
-      "es" : "Medici�n"
-    },
-    "subClasses" : [ "2", "35" ],
-    "comment" : {
-      "en" : "Represents a measurement taken by a sensor.",
-      "es" : "Representa una medici�n tomada por un sensor."
-    },
-    "id" : "3",
-    "superClasses" : [ "10" ]
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FailureEvent",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "FailureEvent",
-      "en" : "Failure Event",
-      "es" : "Evento de fallo"
-    },
-    "subClasses" : [ "32" ],
-    "comment" : {
-      "en" : "Event that represents a detected failure in the system, must be caused by at least one failure.",
-      "es" : "Evento que representa un fallo detectado en el sistema, debe estar causado por al menos un fallo. "
-    },
-    "id" : "42",
-    "superClasses" : [ "77" ]
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FloatingSubstructure",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "FloatingSubstructure",
-      "en" : "Floating Substructure",
-      "es" : "Subestructura flotante"
-    },
-    "comment" : {
-      "en" : "The floating substructure that allows the platform to be stable at sea.",
-      "es" : "La subestructura flotante que permite que la plataforma sea estable en el mar."
-    },
-    "id" : "78",
-    "superClasses" : [ "37" ]
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#DataAnalyst",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "DataAnalyst",
-      "en" : "Data Analyst",
-      "es" : "Analista de datos"
-    },
-    "comment" : {
-      "en" : "Specialist who analyzes collected data to detect patterns, failures, and optimization opportunities.",
-      "es" : "Especialista que analiza los datos recolectados para detectar patrones, fallos y oportunidades de optimizaci�n."
-    },
-    "id" : "79",
-    "superClasses" : [ "16" ]
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Location",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Location",
-      "en" : "Location",
-      "es" : "Ubicaci�n"
-    },
-    "comment" : {
-      "en" : "The geographic location of the wind platform.",
-      "es" : "La ubicaci�n geogr�fica de la plataforma e�lica."
-    },
-    "id" : "90"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TurbineComponent",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "TurbineComponent",
-      "en" : "Turbine Components",
-      "es" : "Componentes de turbina"
-    },
-    "union" : [ "0", "30", "47", "22" ],
-    "subClasses" : [ "0", "30", "47", "22" ],
-    "comment" : {
-      "en" : "The turbine components that generate energy from the wind.",
-      "es" : "Los componentes de la turbina e�lica que generan energ�a a partir del viento."
-    },
-    "attributes" : [ "union" ],
-    "id" : "1"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ParkOwner",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "ParkOwner",
-      "en" : "Park Owner",
-      "es" : "Propietario de parque"
-    },
-    "comment" : {
-      "en" : "Entity or individual owning the offshore wind farm and responsible for its overall operation.",
-      "es" : "Entidad o persona propietaria del parque e�lico offshore y responsable de su operaci�n general."
-    },
-    "id" : "100",
-    "superClasses" : [ "16" ]
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Base",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Base",
-      "en" : "Base (floating substructure)",
-      "es" : "Base (subestructura flotante)"
-    },
-    "comment" : {
-      "en" : "The base that supports the floating platform.",
-      "es" : "La base que soporta la plataforma flotante."
-    },
-    "id" : "88",
-    "superClasses" : [ "37" ]
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Misalignment",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+    "iri" : "https://w3id.org/optimar#Misalignment",
+    "baseIri" : "https://w3id.org/optimar",
     "instances" : 0,
     "label" : {
       "IRI-based" : "Misalignment",
@@ -993,11 +466,203 @@
       "en" : "Failure caused by misalignment or lack of proper adjustment between platform components.",
       "es" : "Fallo causado por el desajuste o falta de alineaci�n entre los componentes de la plataforma."
     },
-    "id" : "63",
-    "superClasses" : [ "6" ]
+    "id" : "18",
+    "superClasses" : [ "19" ]
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ComponentBreakage",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+    "iri" : "https://w3id.org/optimar#Failure",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Failure",
+      "en" : "Failure",
+      "es" : "Fallo"
+    },
+    "subClasses" : [ "23", "18", "24", "25" ],
+    "comment" : {
+      "en" : "A class that represents identified failures in the wind platform.",
+      "es" : "Una clase que representa fallos identificados en la plataforma e�lica."
+    },
+    "id" : "19"
+  }, {
+    "iri" : "https://w3id.org/optimar#Hub",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Hub",
+      "en" : "Hub",
+      "es" : "Hub"
+    },
+    "comment" : {
+      "en" : "The central part of the turbine where the blades are connected.",
+      "es" : "La parte central de la turbina donde se conectan las palas."
+    },
+    "id" : "26",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "https://w3id.org/optimar#StructuralComponent",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StructuralComponent",
+      "en" : "Structural Components",
+      "es" : "Componentes estructurales"
+    },
+    "union" : [ "3", "29", "30" ],
+    "subClasses" : [ "3", "29", "30" ],
+    "comment" : {
+      "en" : "The structural components that make up the basic infrastructure of the wind platform.",
+      "es" : "Los componentes estructurales que componen la infraestructura b�sica de la plataforma e�lica."
+    },
+    "attributes" : [ "union" ],
+    "id" : "4"
+  }, {
+    "iri" : "https://w3id.org/optimar#GaugeSystem",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GaugeSystem",
+      "en" : "Gauge System",
+      "es" : "Sistema de galgas"
+    },
+    "comment" : {
+      "en" : "Strain gauge system used to measure stresses and deformations in the structure.",
+      "es" : "Sistema de galgas extensiom�tricas utilizado para medir tensiones y deformaciones en la estructura."
+    },
+    "id" : "31",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "35",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "https://w3id.org/optimar#Nacelle",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Nacelle",
+      "en" : "Nacelle",
+      "es" : "Nacelle"
+    },
+    "comment" : {
+      "en" : "The turbine component that houses the generator and other mechanical components.",
+      "es" : "El compartimento de la turbina que aloja el generador y otros componentes mec�nicos."
+    },
+    "id" : "38",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/optimar#Component",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Component",
+      "en" : "Component",
+      "es" : "Componente"
+    },
+    "subClasses" : [ "40", "41", "42" ],
+    "comment" : {
+      "en" : "An component of an offshore wind power platform, such as blades, towers, pitch system, etc.",
+      "es" : "Un componente de una plataforma e�lica offshore, como las palas, torres, sistema de pitch, etc."
+    },
+    "id" : "1"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "https://w3id.org/optimar#Turbine",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Turbine",
+      "en" : "Turbine",
+      "es" : "Turbina"
+    },
+    "comment" : {
+      "en" : "A wind turbine that is part of the wind platform.",
+      "es" : "Una turbina de viento que forma parte de la plataforma e�lica."
+    },
+    "id" : "40",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "https://w3id.org/optimar#AnalyticalRole",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AnalyticalRole",
+      "en" : "Analytical Role",
+      "es" : "Rol anal�tico"
+    },
+    "comment" : {
+      "en" : "Role focused on data analysis and generation of useful information for decision-making.",
+      "es" : "Rol orientado al analisis de datos y generaci�n de informaci�n �til para la toma de decisiones."
+    },
+    "id" : "49",
+    "superClasses" : [ "50" ]
+  }, {
+    "iri" : "https://w3id.org/optimar#ComponentBreakage",
+    "baseIri" : "https://w3id.org/optimar",
     "instances" : 0,
     "label" : {
       "IRI-based" : "ComponentBreakage",
@@ -1008,26 +673,211 @@
       "en" : "Failure caused by the fracture or breakage of an offshore wind turbine component.",
       "es" : "Fallo originado por la fractura o rotura de un componente de la plataforma e�lica."
     },
-    "id" : "64",
-    "superClasses" : [ "6" ]
+    "id" : "24",
+    "superClasses" : [ "19" ]
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#TechnicalRole",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+    "iri" : "https://w3id.org/optimar#FloatingSubstructure",
+    "baseIri" : "https://w3id.org/optimar",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "TechnicalRole",
-      "en" : "Technical Role",
-      "es" : "Rol t�cnico"
+      "IRI-based" : "FloatingSubstructure",
+      "en" : "Floating Substructure",
+      "es" : "Subestructura flotante"
     },
     "comment" : {
-      "en" : "Role associated with technical activities such as operation, repair, and system supervision.",
-      "es" : "Rol asociado a actividades t�cnicas como operaci�n, reparaci�n y supervisi�n de sistemas."
+      "en" : "The floating substructure that allows the platform to be stable at sea.",
+      "es" : "La subestructura flotante que permite que la plataforma sea estable en el mar."
     },
-    "id" : "72",
+    "id" : "30",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://w3id.org/optimar#StructuralInstability",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StructuralInstability",
+      "en" : "Structural Instability",
+      "es" : "Inestabilidad estructural"
+    },
+    "comment" : {
+      "en" : "Failure that compromises the structural stability of the floating platform.",
+      "es" : "Fallo que compromete la estabilidad estructural de la plataforma flotante."
+    },
+    "id" : "25",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "55",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "48",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "60",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "61",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "62",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "https://w3id.org/optimar#StressData",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StressData",
+      "en" : "Stress Data",
+      "es" : "Datos de tensi�n"
+    },
+    "comment" : {
+      "en" : "Stress data measured by a sensor.",
+      "es" : "Datos de tensi�n medidos por un sensor."
+    },
+    "id" : "65",
+    "superClasses" : [ "66" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "67",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "68",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "instances" : 0,
+    "union" : [ "19", "21" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "69"
+  }, {
+    "iri" : "https://w3id.org/optimar#Tower",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Tower",
+      "en" : "Tower",
+      "es" : "Torre"
+    },
+    "comment" : {
+      "en" : "The structure that supports the wind turbine.",
+      "es" : "La estructura que sostiene la turbina e�lica."
+    },
+    "id" : "70",
+    "superClasses" : [ "27" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "9", "1" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "64"
+  }, {
+    "iri" : "https://w3id.org/optimar#TurbineComponent",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TurbineComponent",
+      "en" : "Turbine Components",
+      "es" : "Componentes de turbina"
+    },
+    "union" : [ "26", "38", "71", "70" ],
+    "subClasses" : [ "26", "38", "71", "70" ],
+    "comment" : {
+      "en" : "The turbine components that generate energy from the wind.",
+      "es" : "Los componentes de la turbina e�lica que generan energ�a a partir del viento."
+    },
+    "attributes" : [ "union" ],
+    "id" : "27"
+  }, {
+    "instances" : 0,
+    "union" : [ "3", "72" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "13"
+  }, {
+    "iri" : "https://w3id.org/optimar#Location",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Location",
+      "en" : "Location",
+      "es" : "Ubicaci�n"
+    },
+    "comment" : {
+      "en" : "The geographic location of the wind platform.",
+      "es" : "La ubicaci�n geogr�fica de la plataforma e�lica."
+    },
+    "id" : "77"
+  }, {
+    "iri" : "https://w3id.org/optimar#MaintenanceOperator",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaintenanceOperator",
+      "en" : "Maintenance Operator",
+      "es" : "Operador de mantenimiento"
+    },
+    "comment" : {
+      "en" : "Person responsible for carrying out preventive and corrective maintenance on the platform.",
+      "es" : "Persona encargada de realizar el mantenimiento preventivo y correctivo en la plataforma."
+    },
+    "id" : "81",
     "superClasses" : [ "12" ]
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#PitchSystem",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+    "iri" : "https://w3id.org/optimar#Blade",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Blade",
+      "en" : "Blade",
+      "es" : "Pala"
+    },
+    "comment" : {
+      "en" : "The blades of the turbine that capture the wind energy.",
+      "es" : "Las palas de la turbina que capturan la energ�a e�lica."
+    },
+    "id" : "71",
+    "superClasses" : [ "27" ]
+  }, {
+    "iri" : "https://w3id.org/optimar#Data",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Data",
+      "en" : "Data",
+      "es" : "Dato"
+    },
+    "subClasses" : [ "83", "66" ],
+    "comment" : {
+      "en" : "A class for representing the measurement data collected by sensors or other systems.",
+      "es" : "Una clase general para representar los datos de medici�n recolectados por sensores u otros sistemas."
+    },
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/optimar#PitchSystem",
+    "baseIri" : "https://w3id.org/optimar",
     "instances" : 0,
     "label" : {
       "IRI-based" : "PitchSystem",
@@ -1038,74 +888,71 @@
       "en" : "The system that adjusts the angle of the blades of the turbine.",
       "es" : "El sistema que ajusta el �ngulo de las palas de la turbina."
     },
-    "id" : "62",
-    "superClasses" : [ "8" ]
+    "id" : "42",
+    "superClasses" : [ "1" ]
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralComponent",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+    "iri" : "https://w3id.org/optimar#MonitoringTask",
+    "baseIri" : "https://w3id.org/optimar",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "StructuralComponent",
-      "en" : "Structural Components",
-      "es" : "Componentes estructurales"
-    },
-    "union" : [ "36", "78", "88" ],
-    "subClasses" : [ "36", "78", "88" ],
-    "comment" : {
-      "en" : "The structural components that make up the basic infrastructure of the wind platform.",
-      "es" : "Los componentes estructurales que componen la infraestructura b�sica de la plataforma e�lica."
-    },
-    "attributes" : [ "union" ],
-    "id" : "37"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "113",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Task",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Task",
-      "en" : "Task",
-      "es" : "Tarea"
-    },
-    "subClasses" : [ "57" ],
-    "comment" : {
-      "en" : "A general task related to the operation, monitoring, or maintenance of the wind platform.",
-      "es" : "Una tarea general relacionada con la operaci�n, supervisi�n o mantenimiento de la plataforma e�lica."
-    },
-    "id" : "58"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#WindPowerPlatform",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "WindPowerPlatform",
-      "en" : "Offshore Wind Power Platform",
-      "es" : "Plataforma e�lica offshore"
+      "IRI-based" : "MonitoringTask",
+      "en" : "Monitoring Task",
+      "es" : "Tarea de monitoreo"
     },
     "comment" : {
-      "en" : "An offshore wind power platform that generates electricity from wind.",
-      "es" : "Una plataforma e�lica offshore que genera energ�a electrica a partir del viento."
+      "en" : "A task aimed at supervising the condition of the platform through sensors and monitoring systems.",
+      "es" : "Una tarea destinada a supervisar el estado de la plataforma mediante sensores y sistemas de monitorizaci�n."
     },
-    "id" : "66"
+    "id" : "84",
+    "superClasses" : [ "85" ]
   }, {
-    "iri" : "https://www.w3.org/ns/sosa/Observation",
-    "baseIri" : "https://www.w3.org/ns/sosa",
+    "iri" : "https://w3id.org/optimar#TechnicalRole",
+    "baseIri" : "https://w3id.org/optimar",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Observation"
+      "IRI-based" : "TechnicalRole",
+      "en" : "Technical Role",
+      "es" : "Rol t�cnico"
     },
-    "subClasses" : [ "69" ],
-    "attributes" : [ "external" ],
-    "id" : "54"
+    "comment" : {
+      "en" : "Role associated with technical activities such as operation, repair, and system supervision.",
+      "es" : "Rol asociado a actividades t�cnicas como operaci�n, reparaci�n y supervisi�n de sistemas."
+    },
+    "id" : "90",
+    "superClasses" : [ "50" ]
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#FloatingPlatform",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+    "iri" : "https://w3id.org/optimar#MaterialFatigue",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialFatigue",
+      "en" : "Material Fatigue",
+      "es" : "Fatiga del material"
+    },
+    "comment" : {
+      "en" : "Structural material failure caused by repeated load cycles.",
+      "es" : "Fallo en el material estructural causado por ciclos repetidos de carga."
+    },
+    "id" : "23",
+    "superClasses" : [ "19" ]
+  }, {
+    "iri" : "https://w3id.org/optimar#Base",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Base",
+      "en" : "Base (floating substructure)",
+      "es" : "Base (subestructura flotante)"
+    },
+    "comment" : {
+      "en" : "The base that supports the floating platform.",
+      "es" : "La base que soporta la plataforma flotante."
+    },
+    "id" : "29",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "https://w3id.org/optimar#FloatingPlatform",
+    "baseIri" : "https://w3id.org/optimar",
     "instances" : 0,
     "label" : {
       "IRI-based" : "FloatingPlatform",
@@ -1116,56 +963,49 @@
       "en" : "A floating platform that serves as a base for the wind turbine.",
       "es" : "Una plataforma flotante que sirve de base para la turbina e�lica."
     },
-    "id" : "61",
-    "superClasses" : [ "8" ]
+    "id" : "41",
+    "superClasses" : [ "1" ]
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#StructuralCamera",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+    "iri" : "https://w3id.org/optimar#DataAnalyst",
+    "baseIri" : "https://w3id.org/optimar",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "StructuralCamera",
-      "en" : "Structural Camera",
-      "es" : "C�mara estructural"
+      "IRI-based" : "DataAnalyst",
+      "en" : "Data Analyst",
+      "es" : "Analista de datos"
     },
     "comment" : {
-      "en" : "Camera dedicated to visual inspection of the structural condition of the platform.",
-      "es" : "C�mara dedicada a la inspecci�n visual del estado estructural de la plataforma."
+      "en" : "Specialist who analyzes collected data to detect patterns, failures, and optimization opportunities.",
+      "es" : "Especialista que analiza los datos recolectados para detectar patrones, fallos y oportunidades de optimizaci�n."
     },
-    "id" : "118",
-    "superClasses" : [ "41" ]
+    "id" : "101",
+    "superClasses" : [ "12" ]
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Role",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+    "iri" : "https://w3id.org/optimar#Measurement",
+    "baseIri" : "https://w3id.org/optimar",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Role",
-      "en" : "Role",
-      "es" : "Rol"
+      "IRI-based" : "Measurement",
+      "en" : "Measurement",
+      "es" : "Medici�n"
     },
-    "subClasses" : [ "74", "72", "11" ],
+    "subClasses" : [ "65", "53" ],
     "comment" : {
-      "en" : "The roles of the actors that manage, operate or maintain the offshore wind power platform.",
-      "es" : "Los roles de los actores que gestionan, operan o mantienen la plataforma e�lica."
+      "en" : "Represents a measurement taken by a sensor.",
+      "es" : "Representa una medici�n tomada por un sensor."
     },
-    "id" : "12"
+    "id" : "66",
+    "superClasses" : [ "21" ]
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#PlatformActuator",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "108",
     "label" : {
-      "IRI-based" : "PlatformActuator",
-      "en" : "Platform Actuator",
-      "es" : "Actuador de plataforma"
-    },
-    "comment" : {
-      "en" : "Responsible for making adjustments on the platform, such as mechanical or hydraulic adjustments.",
-      "es" : "Encargado de realizar ajustes sobre la plataforma, como ajustes mec�nicos o hidr�ulicos."
-    },
-    "id" : "120",
-    "superClasses" : [ "16" ]
+      "IRI-based" : "decimal"
+    }
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ISUMSystem",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+    "iri" : "https://w3id.org/optimar#ISUMSystem",
+    "baseIri" : "https://w3id.org/optimar",
     "instances" : 0,
     "label" : {
       "IRI-based" : "ISUMSystem",
@@ -1176,39 +1016,76 @@
       "en" : "Specialized system for integrated monitoring of the offshore platform.",
       "es" : "Sistema especializado para la monitorizaci�n integrada de la plataforma offshore."
     },
-    "id" : "121",
-    "superClasses" : [ "41" ]
+    "id" : "114",
+    "superClasses" : [ "9" ]
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Event",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+    "iri" : "https://www.w3.org/ns/sosa/Observation",
+    "baseIri" : "https://www.w3.org/ns/sosa",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Event",
-      "en" : "Event",
-      "es" : "Evento"
+      "IRI-based" : "Observation"
     },
-    "subClasses" : [ "42" ],
-    "comment" : {
-      "en" : "An event that occurs in the offshore wind power platform, such as a failure detection.",
-      "es" : "Un evento que ocurre en la plataforma e�lica, como la detecci�n de un fallo."
-    },
-    "id" : "77"
+    "subClasses" : [ "17" ],
+    "attributes" : [ "external" ],
+    "id" : "6"
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Sensor",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+    "iri" : "https://w3id.org/optimar#ParkOwner",
+    "baseIri" : "https://w3id.org/optimar",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "Sensor",
-      "en" : "Sensor",
-      "es" : "Sensor"
+      "IRI-based" : "ParkOwner",
+      "en" : "Park Owner",
+      "es" : "Propietario de parque"
     },
-    "subClasses" : [ "45", "46", "121", "40", "118", "43" ],
     "comment" : {
-      "en" : "A device that measures or monitors parameters of the wind platform, such as wind, corrosion, vibrations, etc.",
-      "es" : "Un dispositivo que mide o monitorea par�metros de la plataforma e�lica, como viento, corrosi�n, vibraciones, etc."
+      "en" : "Entity or individual owning the offshore wind farm and responsible for its overall operation.",
+      "es" : "Entidad o persona propietaria del parque e�lico offshore y responsable de su operaci�n general."
     },
-    "id" : "41",
-    "superClasses" : [ "55" ]
+    "id" : "117",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/optimar#EnvironmentalCondition",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnvironmentalCondition",
+      "en" : "Environmental Condition",
+      "es" : "Condici�n ambiental"
+    },
+    "comment" : {
+      "en" : "The environmental conditions that affect the offshore wind power platform, such as wind speed, temperature, etc.",
+      "es" : "Las condiciones ambientales que afectan a la plataforma e�lica, como la velocidad del viento, la temperatura, etc."
+    },
+    "id" : "33"
+  }, {
+    "iri" : "https://w3id.org/optimar#StructuralCamera",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "StructuralCamera",
+      "en" : "Structural Camera",
+      "es" : "C�mara estructural"
+    },
+    "comment" : {
+      "en" : "Camera dedicated to visual inspection of the structural condition of the platform.",
+      "es" : "C�mara dedicada a la inspecci�n visual del estado estructural de la plataforma."
+    },
+    "id" : "119",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://w3id.org/optimar#WindPowerPlatform",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WindPowerPlatform",
+      "en" : "Offshore Wind Power Platform",
+      "es" : "Plataforma e�lica offshore"
+    },
+    "comment" : {
+      "en" : "An offshore wind power platform that generates electricity from wind.",
+      "es" : "Una plataforma e�lica offshore que genera energ�a electrica a partir del viento."
+    },
+    "id" : "72"
   }, {
     "iri" : "https://www.w3.org/ns/sosa/Sensor",
     "baseIri" : "https://www.w3.org/ns/sosa",
@@ -1216,12 +1093,104 @@
     "label" : {
       "IRI-based" : "Sensor"
     },
-    "subClasses" : [ "41" ],
+    "subClasses" : [ "9" ],
     "attributes" : [ "external" ],
-    "id" : "55"
+    "id" : "7"
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#ManagementRole",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+    "iri" : "https://w3id.org/optimar#FailureEvent",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FailureEvent",
+      "en" : "Failure Event",
+      "es" : "Evento de fallo"
+    },
+    "subClasses" : [ "76" ],
+    "comment" : {
+      "en" : "Event that represents a detected failure in the system, must be caused by at least one failure.",
+      "es" : "Evento que representa un fallo detectado en el sistema, debe estar causado por al menos un fallo. "
+    },
+    "id" : "16",
+    "superClasses" : [ "113" ]
+  }, {
+    "iri" : "https://w3id.org/optimar#Task",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Task",
+      "en" : "Task",
+      "es" : "Tarea"
+    },
+    "subClasses" : [ "84" ],
+    "comment" : {
+      "en" : "A general task related to the operation, monitoring, or maintenance of the wind platform.",
+      "es" : "Una tarea general relacionada con la operaci�n, supervisi�n o mantenimiento de la plataforma e�lica."
+    },
+    "id" : "85"
+  }, {
+    "iri" : "https://w3id.org/optimar#PlatformActuator",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PlatformActuator",
+      "en" : "Platform Actuator",
+      "es" : "Actuador de plataforma"
+    },
+    "comment" : {
+      "en" : "Responsible for making adjustments on the platform, such as mechanical or hydraulic adjustments.",
+      "es" : "Encargado de realizar ajustes sobre la plataforma, como ajustes mec�nicos o hidr�ulicos."
+    },
+    "id" : "127",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/optimar#Observation",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Observation",
+      "en" : "Observation",
+      "es" : "Observaci�n"
+    },
+    "comment" : {
+      "en" : "The result of recording a phenomenon or condition, usually through a sensor or monitoring system.",
+      "es" : "El resultado de registrar un fen�meno o condici�n, normalmente a trav�s de un sensor o sistema de monitorizaci�n."
+    },
+    "id" : "17",
+    "superClasses" : [ "6" ]
+  }, {
+    "iri" : "https://w3id.org/optimar#Sensor",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Sensor",
+      "en" : "Sensor",
+      "es" : "Sensor"
+    },
+    "subClasses" : [ "8", "114", "119", "14", "140", "31" ],
+    "comment" : {
+      "en" : "A device that measures or monitors parameters of the wind platform, such as wind, corrosion, vibrations, etc.",
+      "es" : "Un dispositivo que mide o monitorea par�metros de la plataforma e�lica, como viento, corrosi�n, vibraciones, etc."
+    },
+    "id" : "9",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/optimar#Role",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Role",
+      "en" : "Role",
+      "es" : "Rol"
+    },
+    "subClasses" : [ "49", "131", "90" ],
+    "comment" : {
+      "en" : "The roles of the actors that manage, operate or maintain the offshore wind power platform.",
+      "es" : "Los roles de los actores que gestionan, operan o mantienen la plataforma e�lica."
+    },
+    "id" : "50"
+  }, {
+    "iri" : "https://w3id.org/optimar#ManagementRole",
+    "baseIri" : "https://w3id.org/optimar",
     "instances" : 0,
     "label" : {
       "IRI-based" : "ManagementRole",
@@ -1232,32 +1201,17 @@
       "en" : "Role responsible for coordination, planning, and resource management in the wind platform.",
       "es" : "Rol encargado de la coordinaci�n, planificaci�n y gesti�n de recursos en la plataforma e�lica."
     },
-    "id" : "74",
-    "superClasses" : [ "12" ]
+    "id" : "131",
+    "superClasses" : [ "50" ]
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Data",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Data",
-      "en" : "Data",
-      "es" : "Dato"
-    },
-    "subClasses" : [ "3", "9" ],
-    "comment" : {
-      "en" : "A class for representing the measurement data collected by sensors or other systems.",
-      "es" : "Una clase general para representar los datos de medici�n recolectados por sensores u otros sistemas."
-    },
-    "id" : "10"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Maintenance",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+    "iri" : "https://w3id.org/optimar#Maintenance",
+    "baseIri" : "https://w3id.org/optimar",
     "instances" : 0,
     "annotations" : {
       "performedBy" : [ {
         "identifier" : "performedBy",
         "language" : "undefined",
-        "value" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaintenanceOperator",
+        "value" : "https://w3id.org/optimar#MaintenanceOperator",
         "type" : "iri"
       } ]
     },
@@ -1270,71 +1224,117 @@
       "en" : "A class that represents the maintenance of the wind platform.",
       "es" : "Una clase que representa el mantenimiento de la plataforma e�lica."
     },
-    "id" : "135"
+    "id" : "57"
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#MaintenanceOperator",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+    "instances" : 0,
+    "union" : [ "42", "1" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "59"
+  }, {
+    "iri" : "https://w3id.org/optimar#DynamicMonitor",
+    "baseIri" : "https://w3id.org/optimar",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "MaintenanceOperator",
-      "en" : "Maintenance Operator",
-      "es" : "Operador de mantenimiento"
+      "IRI-based" : "DynamicMonitor",
+      "en" : "Dynamic Monitor",
+      "es" : "Monitor din�mico"
     },
     "comment" : {
-      "en" : "Person responsible for carrying out preventive and corrective maintenance on the platform.",
-      "es" : "Persona encargada de realizar el mantenimiento preventivo y correctivo en la plataforma."
+      "en" : "Device that measures dynamic parameters of the platform, such as vibrations and movements.",
+      "es" : "Dispositivo que mide par�metros din�micos de la plataforma como vibraciones y movimientos."
     },
-    "id" : "126",
-    "superClasses" : [ "16" ]
+    "id" : "140",
+    "superClasses" : [ "9" ]
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#EnvironmentalCondition",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "EnvironmentalCondition",
-      "en" : "Environmental Condition",
-      "es" : "Condici�n ambiental"
-    },
-    "comment" : {
-      "en" : "The environmental conditions that affect the offshore wind power platform, such as wind speed, temperature, etc.",
-      "es" : "Las condiciones ambientales que afectan a la plataforma e�lica, como la velocidad del viento, la temperatura, etc."
-    },
-    "id" : "76"
-  }, {
-    "instances" : 0,
-    "union" : [ "62", "8" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "159"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Observation",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "Observation",
-      "en" : "Observation",
-      "es" : "Observaci�n"
-    },
-    "comment" : {
-      "en" : "The result of recording a phenomenon or condition, usually through a sensor or monitoring system.",
-      "es" : "El resultado de registrar un fen�meno o condici�n, normalmente a trav�s de un sensor o sistema de monitorizaci�n."
-    },
-    "id" : "69",
-    "superClasses" : [ "54" ]
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Actor",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+    "iri" : "https://w3id.org/optimar#Actor",
+    "baseIri" : "https://w3id.org/optimar",
     "instances" : 0,
     "label" : {
       "IRI-based" : "Actor",
       "en" : "Actor",
       "es" : "Actor"
     },
-    "subClasses" : [ "120", "15", "100", "79", "126" ],
+    "subClasses" : [ "135", "101", "81", "117", "127" ],
     "comment" : {
       "en" : "An actor that interacts or manages the offshore wind power platform.",
       "es" : "Un actor que interact�a o gestiona la plataforma e�lica."
     },
-    "id" : "16"
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/optimar#VibrationData",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "VibrationData",
+      "en" : "Vibration Data",
+      "es" : "Datos de vibraci�n"
+    },
+    "comment" : {
+      "en" : "Vibration data measured by a sensor.",
+      "es" : "Datos de vibracion medidos por un sensor."
+    },
+    "id" : "53",
+    "superClasses" : [ "66" ]
+  }, {
+    "iri" : "https://w3id.org/optimar#Image",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Image",
+      "en" : "Image",
+      "es" : "Imagen"
+    },
+    "comment" : {
+      "en" : "A class that represents an image that supports the measurement.",
+      "es" : "Una clase que representa una imagen que soporta la medici�n."
+    },
+    "id" : "83",
+    "superClasses" : [ "21" ]
+  }, {
+    "iri" : "https://w3id.org/optimar#CloudAdministrator",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CloudAdministrator",
+      "en" : "Cloud Administrator",
+      "es" : "Administrador de nube"
+    },
+    "comment" : {
+      "en" : "Responsible for managing and securing cloud services that process data from the platform.",
+      "es" : "Responsable de la administraci�n y seguridad de los servicios en la nube que procesan los datos de la plataforma."
+    },
+    "id" : "135",
+    "superClasses" : [ "12" ]
+  }, {
+    "iri" : "https://w3id.org/optimar#Event",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event",
+      "en" : "Event",
+      "es" : "Evento"
+    },
+    "subClasses" : [ "16" ],
+    "comment" : {
+      "en" : "An event that occurs in the offshore wind power platform, such as a failure detection.",
+      "es" : "Un evento que ocurre en la plataforma e�lica, como la detecci�n de un fallo."
+    },
+    "id" : "113"
+  }, {
+    "iri" : "https://w3id.org/optimar#CorrosionEvent",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CorrosionEvent",
+      "en" : "Corrosion Event",
+      "es" : "Evento de Corrosi�n"
+    },
+    "comment" : {
+      "en" : "Degradation of the platform's metallic structure due to corrosion effects.",
+      "es" : "Degradaci�n de la estructura met�lica de la plataforma por efectos de corrosi�n."
+    },
+    "id" : "76",
+    "superClasses" : [ "16" ]
   }, {
     "iri" : "http://qudt.org/schema/qudt/QuantityValue",
     "baseIri" : "http://qudt.org/schema/qudt",
@@ -1343,65 +1343,68 @@
       "IRI-based" : "QuantityValue"
     },
     "attributes" : [ "external" ],
-    "id" : "18"
+    "id" : "2"
   } ],
   "property" : [ {
-    "id" : "17",
+    "id" : "0",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "26",
+    "id" : "5",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "31",
+    "id" : "11",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "20",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "33",
+    "id" : "32",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "38",
+    "id" : "36",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "39",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "53",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "65",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "67",
+    "id" : "47",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "68",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "70",
+    "id" : "51",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "71",
-    "type" : "rdfs:SubClassOf"
+    "id" : "52",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "73",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "75",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "80",
+    "id" : "74",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "81",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "83",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "84",
+    "id" : "75",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "85",
+    "id" : "78",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "79",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "86",
     "type" : "rdfs:SubClassOf"
@@ -1409,11 +1412,14 @@
     "id" : "87",
     "type" : "rdfs:SubClassOf"
   }, {
+    "id" : "88",
+    "type" : "rdfs:SubClassOf"
+  }, {
     "id" : "89",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "91",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "92",
     "type" : "rdfs:SubClassOf"
@@ -1422,7 +1428,7 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "94",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "95",
     "type" : "rdfs:SubClassOf"
@@ -1431,7 +1437,7 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "97",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "98",
     "type" : "owl:datatypeProperty"
@@ -1439,11 +1445,11 @@
     "id" : "99",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "101",
-    "type" : "rdfs:SubClassOf"
+    "id" : "100",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "102",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "103",
     "type" : "rdfs:SubClassOf"
@@ -1455,70 +1461,67 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "106",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "107",
     "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "108",
-    "type" : "owl:datatypeProperty"
   }, {
     "id" : "109",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "110",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "112",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "114",
-    "type" : "rdfs:SubClassOf"
+    "id" : "80",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "115",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "116",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "117",
+    "id" : "118",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "120",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "119",
-    "type" : "owl:objectProperty"
+    "id" : "121",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "122",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "123",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "124",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "125",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "111",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "127",
+    "id" : "126",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "128",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "129",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "130",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "131",
-    "type" : "rdfs:SubClassOf"
-  }, {
     "id" : "132",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "133",
     "type" : "rdfs:SubClassOf"
@@ -1527,79 +1530,76 @@
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "136",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "137",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "138",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "139",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "140",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "141",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "82",
     "type" : "owl:datatypeProperty"
   }, {
+    "id" : "139",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "141",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "142",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "143",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "144",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "145",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "146",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "147",
     "type" : "rdfs:SubClassOf"
   }, {
+    "id" : "147",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "148",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "149",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "150",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "151",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "152",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "153",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "154",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "155",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "156",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "157",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "158",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "160",
+    "id" : "152",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "153",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "154",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "155",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "156",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "157",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "158",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "159",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "160",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "161",
     "type" : "owl:disjointWith"
@@ -1608,22 +1608,22 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "163",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "164",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "165",
     "type" : "owl:objectProperty"
   }, {
     "id" : "166",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "167",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "168",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "169",
     "type" : "owl:datatypeProperty"
@@ -1641,1015 +1641,1015 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "174",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "175",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   } ],
   "propertyAttribute" : [ {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#width",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "18",
-    "label" : {
-      "IRI-based" : "width",
-      "en" : "Width",
-      "es" : "Anchura"
-    },
-    "domain" : "8",
-    "comment" : {
-      "en" : "Width of the component expressed as a QUDT quantity value.",
-      "es" : "Anchura del componente expresada como un valor con unidad QUDT."
-    },
-    "attributes" : [ "object" ],
-    "id" : "17"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#monitors",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "27",
-    "label" : {
-      "IRI-based" : "monitors",
-      "en" : "Monitors",
-      "es" : "Monitorea"
-    },
-    "domain" : "16",
-    "comment" : {
-      "en" : "Relates an actor to the components or sensors they monitor.",
-      "es" : "Relaciona a un actor con los componentes o sensores que supervisa."
-    },
-    "attributes" : [ "object" ],
-    "id" : "26"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#lightCorrosion",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "24",
-    "label" : {
-      "IRI-based" : "lightCorrosion",
-      "en" : "Light corrosion",
-      "es" : "Corrosi�n clara"
-    },
-    "domain" : "32",
-    "comment" : {
-      "en" : "Level of light corrosion detected on the material surface.",
-      "es" : "Nivel de corrosi�n clara detectada en la superficie del material."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "31"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#manages",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "34",
-    "label" : {
-      "IRI-based" : "manages",
-      "en" : "Manages",
-      "es" : "Administra"
-    },
-    "domain" : "16",
-    "comment" : {
-      "en" : "Indicates that an actor is responsible for managing a wind power platform or its mooring system.",
-      "es" : "Infica que un actor se encarga de la gesti�n de una plataforma e�lica o su sistema de anclaje."
-    },
-    "attributes" : [ "object" ],
-    "id" : "33"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#length",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "18",
-    "label" : {
-      "IRI-based" : "length",
-      "en" : "Length",
-      "es" : "Longitud"
-    },
-    "domain" : "8",
-    "comment" : {
-      "en" : "Length of a component, expressed as a QUDT quantity value",
-      "es" : "Longitud de un componente, expresada como un valor con unidad QUDT"
-    },
-    "attributes" : [ "object" ],
-    "id" : "38"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#rotationSpeed",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "18",
+    "iri" : "https://w3id.org/optimar#rotationSpeed",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "2",
     "label" : {
       "IRI-based" : "rotationSpeed",
       "en" : "Rotation speed",
       "es" : "Velocidad de rotaci�n"
     },
-    "domain" : "8",
+    "domain" : "1",
     "comment" : {
       "en" : "Angular speed of a component expressed as a QUDT quantity value.",
       "es" : "Velocidad angular de un componente expresada como un valor con unidad QUDT."
     },
     "attributes" : [ "object" ],
-    "id" : "39"
+    "id" : "0"
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#madeBySensor",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "55",
+    "iri" : "https://w3id.org/optimar#madeBySensor",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "7",
     "label" : {
       "IRI-based" : "madeBySensor",
       "en" : "Made by sensor",
       "es" : "Realizada por sensor"
     },
-    "domain" : "54",
+    "domain" : "6",
     "comment" : {
       "en" : "Relates an observation to the sensor that made it.",
       "es" : "Relaciona una observaci�n con el sensor que la realiz�."
     },
     "attributes" : [ "object" ],
-    "id" : "53"
+    "id" : "5"
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#height",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "18",
-    "label" : {
-      "IRI-based" : "height",
-      "en" : "Height",
-      "es" : "Altura"
-    },
-    "domain" : "8",
-    "comment" : {
-      "en" : "Height of the component expressed as a QUDT quantity value.",
-      "es" : "Altura del componente expresada como un valor con unidad QUDT."
-    },
-    "attributes" : [ "object" ],
-    "id" : "65"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#operationalStatus",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "23",
-    "label" : {
-      "IRI-based" : "operationalStatus",
-      "en" : "Operational status",
-      "es" : "Estado operativo"
-    },
-    "domain" : "7",
-    "comment" : {
-      "en" : "Current operational status of the turbine (e.g. operative, stopped, under maintenance, etc.).",
-      "es" : "Estado de funcionamiento actual de la turbina (ej. operativa, parada, en mantenimiento, etc.)."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "67"
-  }, {
-    "range" : "54",
-    "domain" : "69",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "68"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#mass",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "18",
-    "label" : {
-      "IRI-based" : "mass",
-      "en" : "Mass",
-      "es" : "Masa"
-    },
-    "domain" : "8",
-    "comment" : {
-      "en" : "Mass of the component expressed as a QUDT quantity value",
-      "es" : "Masa del componente expresada expresada como un valor con unidad QUDT"
-    },
-    "attributes" : [ "object" ],
-    "id" : "70"
-  }, {
-    "range" : "12",
-    "domain" : "72",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "71"
-  }, {
-    "range" : "12",
-    "domain" : "74",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "73"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresWind",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "76",
-    "label" : {
-      "IRI-based" : "measuresWind",
-      "en" : "Measures wind",
-      "es" : "Mide viento"
-    },
-    "domain" : "41",
-    "comment" : {
-      "en" : "Relates a sensor with the measurement of wind speed or direction.",
-      "es" : "Relaciona un sensor con la medici�n de velocidad o direcci�n del viento."
-    },
-    "attributes" : [ "object" ],
-    "id" : "75"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#material",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "29",
-    "label" : {
-      "IRI-based" : "material",
-      "en" : "Material",
-      "es" : "Material"
-    },
-    "domain" : "8",
-    "comment" : {
-      "en" : "Material of manufacturing of the component (e.g. steel, composite, fiberglass, etc.).",
-      "es" : "Material de fabricaci�n del componente (ej. acero, compuesto, fibra de vidrio, etc.)."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "80"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#monitorsDeformation",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "82",
-    "label" : {
-      "IRI-based" : "monitorsDeformation",
-      "en" : "Monitors deformation",
-      "es" : "Monitorea deformaci�n"
-    },
-    "domain" : "41",
-    "comment" : {
-      "en" : "Relates a sensor to the structural deformation it measures or monitors.",
-      "es" : "Relaciona un sensor con la deformaci�n estructural que mide o supervisa."
-    },
-    "attributes" : [ "object" ],
-    "id" : "81"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#transmitsMovementTo",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "8",
-    "label" : {
-      "IRI-based" : "transmitsMovementTo",
-      "en" : "Transmits movement to",
-      "es" : "Transmite movimiento a"
-    },
-    "domain" : "8",
-    "comment" : {
-      "en" : "Indicates that a component transmits mechanical movement to another.",
-      "es" : "Indica que un componente transmite movimiento mec�nico a otro."
-    },
-    "attributes" : [ "object" ],
-    "id" : "83"
-  }, {
-    "range" : "37",
-    "domain" : "78",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "84"
-  }, {
-    "range" : "37",
-    "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "85"
-  }, {
-    "range" : "58",
-    "domain" : "57",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "86"
-  }, {
-    "range" : "37",
-    "domain" : "88",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "87"
-  }, {
-    "range" : "1",
-    "domain" : "30",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "89"
-  }, {
-    "range" : "1",
-    "domain" : "0",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "91"
-  }, {
-    "range" : "1",
-    "domain" : "22",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "92"
-  }, {
-    "range" : "1",
-    "domain" : "47",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "93"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#materialWear",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "20",
-    "label" : {
-      "IRI-based" : "materialWear",
-      "en" : "Material wear",
-      "es" : "Desgaste material"
-    },
-    "domain" : "10",
-    "comment" : {
-      "en" : "Degree of material wear in a component.",
-      "es" : "Grado de desgaste de un material en un componente."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "94"
-  }, {
-    "range" : "42",
-    "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "95"
-  }, {
-    "range" : "3",
-    "domain" : "35",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "96"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#misalignment",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "19",
-    "label" : {
-      "IRI-based" : "misalignment",
-      "en" : "Misalignment",
-      "es" : "Desalineaci�n"
-    },
-    "domain" : "10",
-    "comment" : {
-      "en" : "Measure of the misalignment detected in a component.",
-      "es" : "Medida de la falta de alineaci�n detectada en un componente."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "97"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#pressure",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "21",
-    "label" : {
-      "IRI-based" : "pressure",
-      "en" : "Pressure",
-      "es" : "Presi�n"
-    },
-    "domain" : "10",
-    "comment" : {
-      "en" : "Pressure exerted on a component.",
-      "es" : "Presi�n ejercida sobre un componente."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "98"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#connectedTo",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "8",
-    "label" : {
-      "IRI-based" : "connectedTo",
-      "en" : "Connected to",
-      "es" : "Conectado a"
-    },
-    "domain" : "8",
-    "comment" : {
-      "en" : "Indicates that a component is connected to another.",
-      "es" : "Indica que un componente est� conectado a otro."
-    },
-    "attributes" : [ "object" ],
-    "id" : "99"
-  }, {
-    "range" : "3",
-    "domain" : "2",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "101"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#houses",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "8",
-    "label" : {
-      "IRI-based" : "houses",
-      "en" : "Houses",
-      "es" : "Aloja"
-    },
-    "domain" : "8",
-    "comment" : {
-      "en" : "Indicates that a component contains or houses physically another in its structure.",
-      "es" : "Indica que un componente contiene o aloja fisicamente a otro en su estructura."
-    },
-    "attributes" : [ "object" ],
-    "id" : "102"
-  }, {
-    "range" : "6",
-    "domain" : "63",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "103"
-  }, {
-    "range" : "6",
-    "domain" : "44",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "104"
-  }, {
-    "range" : "6",
-    "domain" : "5",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "105"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#displacement",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "49",
-    "label" : {
-      "IRI-based" : "displacement",
-      "en" : "Displacement",
-      "es" : "Desplazamiento"
-    },
-    "domain" : "10",
-    "comment" : {
-      "en" : "Displacement or position change recorded in the component.",
-      "es" : "Desplazamiento o cambio de posici�n registrado en el componente."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "106"
-  }, {
-    "range" : "6",
-    "domain" : "64",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "107"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#value",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "4",
-    "label" : {
-      "IRI-based" : "value",
-      "en" : "Value",
-      "es" : "Valor"
-    },
-    "domain" : "3",
-    "comment" : {
-      "en" : "Numeric value of the measurement taken by a sensor.",
-      "es" : "Valor num�rico de la medici�n tomada por un sensor."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "108"
-  }, {
-    "range" : "8",
-    "domain" : "61",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "109"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#detectsCorrosion",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "111",
-    "label" : {
-      "IRI-based" : "detectsCorrosion",
-      "en" : "Detects corrosion",
-      "es" : "Detecta corrosi�n"
-    },
-    "domain" : "41",
-    "comment" : {
-      "en" : "Relates a sensor with the detected corrosion measurement.",
-      "es" : "Relaciona un sensor con la medici�n de corrosi�n detectada."
-    },
-    "attributes" : [ "object" ],
-    "id" : "110"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#windDirection",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "18",
-    "label" : {
-      "IRI-based" : "windDirection",
-      "en" : "Wind direction",
-      "es" : "Direcci�n del viento"
-    },
-    "domain" : "76",
-    "comment" : {
-      "en" : "Direction from which the wind blows expressed as a QUDT quantity value.",
-      "es" : "Direcci�n desde la que sopla el viento expresada en valores con unidad QUDT."
-    },
-    "attributes" : [ "object" ],
-    "id" : "112"
-  }, {
-    "range" : "8",
-    "domain" : "62",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "114"
-  }, {
-    "range" : "8",
-    "domain" : "7",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "115"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#thickness",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "18",
-    "label" : {
-      "IRI-based" : "thickness",
-      "en" : "Thickness",
-      "es" : "Espesor"
-    },
-    "domain" : "8",
-    "comment" : {
-      "en" : "Thickness of the section or wall of a component measured in QUDT units.",
-      "es" : "Espesor de la secci�n o pared de un componente medido en unidades QUDT."
-    },
-    "attributes" : [ "object" ],
-    "id" : "116"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#externalShape",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "48",
-    "label" : {
-      "IRI-based" : "externalShape",
-      "en" : "External shape",
-      "es" : "Forma externa"
-    },
-    "domain" : "8",
-    "comment" : {
-      "en" : "Describe the external shape or geometric of the component.",
-      "es" : "Describe la forma externa o geometr�a del componente."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "117"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#locatedIn",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "90",
-    "label" : {
-      "IRI-based" : "locatedIn",
-      "en" : "Located in",
-      "es" : "Ubicado en"
-    },
-    "domain" : "66",
-    "comment" : {
-      "en" : "Indicates the location where the wind power platform is located.",
-      "es" : "Indica el lugar en el que se encuentra la plataforma e�lica."
-    },
-    "attributes" : [ "object" ],
-    "id" : "119"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#detectedBy",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "41",
-    "label" : {
-      "IRI-based" : "detectedBy",
-      "en" : "Detected by",
-      "es" : "Detectado por"
-    },
-    "domain" : "77",
-    "comment" : {
-      "en" : "Relates an event to the sensor that detected it.",
-      "es" : "Relaciona un evento con el sensor que lo detect�."
-    },
-    "attributes" : [ "object" ],
-    "id" : "122"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#relatedToComponent",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "8",
-    "label" : {
-      "IRI-based" : "relatedToComponent",
-      "en" : "Related to component",
-      "es" : "Relacionado con componente"
-    },
-    "domain" : "77",
-    "comment" : {
-      "en" : "Relates an event to the platform component that is affected.",
-      "es" : "Relaciona un evento con el componente de la plataforma que se ve afectado."
-    },
-    "attributes" : [ "object" ],
-    "id" : "123"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#isSupportedBy",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "8",
-    "label" : {
-      "IRI-based" : "isSupportedBy",
-      "en" : "Is supported by",
-      "es" : "Es soportado por"
-    },
-    "domain" : "8",
-    "comment" : {
-      "en" : "Indicates that a component is structurally or functionally supported by another.",
-      "es" : "Indica que un componente depende estructural o funcionalmente de otro para su soporte."
-    },
-    "attributes" : [ "object" ],
-    "id" : "124"
-  }, {
-    "range" : "16",
-    "domain" : "126",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "125"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Corrosion",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "52",
-    "label" : {
-      "IRI-based" : "Corrosion",
-      "en" : "Corrosion",
-      "es" : "Corrosi�n"
-    },
-    "domain" : "32",
-    "comment" : {
-      "en" : "General corrosion index detected in a component.",
-      "es" : "�ndice general de corrosi�n detectada en un componente."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "111"
-  }, {
-    "range" : "16",
-    "domain" : "15",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "127"
-  }, {
-    "range" : "16",
-    "domain" : "120",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "128"
-  }, {
-    "range" : "16",
-    "domain" : "79",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "129"
-  }, {
-    "range" : "16",
-    "domain" : "100",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "130"
-  }, {
-    "range" : "55",
-    "domain" : "41",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "131"
-  }, {
-    "range" : "41",
-    "domain" : "43",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "132"
-  }, {
-    "range" : "10",
-    "domain" : "9",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "133"
-  }, {
-    "range" : "10",
-    "domain" : "3",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "134"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#causedBy",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "6",
-    "label" : {
-      "IRI-based" : "causedBy",
-      "en" : "Caused by",
-      "es" : "Causado por"
-    },
-    "domain" : "77",
-    "comment" : {
-      "en" : "Relates an event with the failure that caused it.",
-      "es" : "Relaciona un evento con el fallo que lo provoc�."
-    },
-    "attributes" : [ "object" ],
-    "id" : "136"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#imageURL",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "25",
-    "label" : {
-      "IRI-based" : "imageURL",
-      "en" : "Image URL",
-      "es" : "URL de la imagen"
-    },
-    "domain" : "9",
-    "comment" : {
-      "en" : "Access URL of the generated or stored image.",
-      "es" : "Direcci�n de acceso a la imagen generada o almacenada."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "137"
-  }, {
-    "iri" : "http://www.w3.org/ns/prov#generated",
-    "baseIri" : "http://www.w3.org/ns/prov",
-    "range" : "10",
-    "label" : {
-      "IRI-based" : "generated",
-      "en" : "Generates",
-      "es" : "Genera"
-    },
-    "domain" : "77",
-    "comment" : {
-      "en" : "Relates an event to the generated data by the same.",
-      "es" : "Relaciona un evento con los datos generados por el mismo."
-    },
-    "attributes" : [ "object", "external" ],
-    "id" : "138"
-  }, {
-    "range" : "41",
-    "domain" : "40",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "139"
-  }, {
-    "range" : "41",
-    "domain" : "121",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "140"
-  }, {
-    "range" : "41",
-    "domain" : "118",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "141"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#Deformation",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "51",
-    "label" : {
-      "IRI-based" : "Deformation",
-      "en" : "Deformation",
-      "es" : "Deformaci�n"
-    },
-    "domain" : "10",
-    "comment" : {
-      "en" : "Degree of deformation recorded in the component.",
-      "es" : "Grado de deformaci�n registrado en el componente."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "82"
-  }, {
-    "range" : "77",
-    "domain" : "42",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "142"
-  }, {
-    "range" : "12",
-    "domain" : "11",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "143"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#supports",
-    "inverse" : "124",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "8",
-    "label" : {
-      "IRI-based" : "supports",
-      "en" : "Supports",
-      "es" : "Soporta a"
-    },
-    "domain" : "8",
-    "comment" : {
-      "en" : "Indicates that a component provides structural or functional support to another.",
-      "es" : "Indica que un componente proporciona soporte estructural o funcional a otro."
-    },
-    "attributes" : [ "object" ],
-    "id" : "144"
-  }, {
-    "range" : "41",
-    "domain" : "46",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "145"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#vibrations",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "113",
-    "label" : {
-      "IRI-based" : "vibrations",
-      "en" : "Vibrations",
-      "es" : "Vibraciones"
-    },
-    "domain" : "10",
-    "comment" : {
-      "en" : "Level of vibrations recorded in a component or system.",
-      "es" : "Nivel de vibraciones registradas en un componente o sistema."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "146"
-  }, {
-    "range" : "41",
-    "domain" : "45",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "147"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#dateTime",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "56",
-    "label" : {
-      "IRI-based" : "dateTime",
-      "en" : "Date and time",
-      "es" : "Fecha y hora"
-    },
-    "domain" : "3",
-    "comment" : {
-      "en" : "Associated temporal mark to the measurement.",
-      "es" : "Marca temporal asociada a la medici�n."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "148"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#materialFatigue",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "28",
-    "label" : {
-      "IRI-based" : "materialFatigue",
-      "en" : "Material fatigue",
-      "es" : "Fatiga material"
-    },
-    "domain" : "10",
-    "comment" : {
-      "en" : "Accumulated material fatigue degree.",
-      "es" : "Grado de fatiga acumulada en el material."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "149"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performsTask",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "58",
-    "label" : {
-      "IRI-based" : "performsTask",
-      "en" : "Performs task",
-      "es" : "Realiza tarea"
-    },
-    "domain" : "16",
-    "comment" : {
-      "en" : "Relates an actor with a task that it performs as part of its role.",
-      "es" : "Relaciona un actor con una tarea que ejecuta como parte de su rol."
-    },
-    "attributes" : [ "object" ],
-    "id" : "150"
-  }, {
-    "range" : "118",
-    "domain" : "43",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "151"
-  }, {
-    "range" : "46",
-    "domain" : "43",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "152"
-  }, {
-    "range" : "63",
-    "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "153"
-  }, {
-    "range" : "44",
-    "domain" : "32",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "154"
-  }, {
-    "range" : "118",
-    "domain" : "46",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "155"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#causedBy",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "6",
-    "label" : {
-      "IRI-based" : "causedBy",
-      "en" : "Caused by",
-      "es" : "Causado por"
-    },
-    "domain" : "42",
-    "comment" : {
-      "en" : "Relates an event with the failure that caused it.",
-      "es" : "Relaciona un evento con el fallo que lo provoc�."
-    },
-    "attributes" : [ "object", "someValues" ],
-    "id" : "156"
-  }, {
-    "range" : "63",
-    "domain" : "44",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "157"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#performedMaintenance",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "135",
-    "label" : {
-      "IRI-based" : "performedMaintenance",
-      "en" : "Performs maintenance",
-      "es" : "Realiza mantenimiento"
-    },
-    "domain" : "16",
-    "comment" : {
-      "en" : "Relates an actor with the maintenance that it performs.",
-      "es" : "Relaciona un actor con el mantenimiento que realiza."
-    },
-    "attributes" : [ "object" ],
-    "id" : "158"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#unit",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
+    "iri" : "https://w3id.org/optimar#manages",
+    "baseIri" : "https://w3id.org/optimar",
     "range" : "13",
     "label" : {
-      "IRI-based" : "unit",
-      "en" : "Unit",
-      "es" : "Unidad"
+      "IRI-based" : "manages",
+      "en" : "Manages",
+      "es" : "Administra"
     },
-    "domain" : "3",
+    "domain" : "12",
     "comment" : {
-      "en" : "Measurement unit of the recorded value (e.g. m/s, rpm, �C, etc.).",
-      "es" : "Unidad de medida del valor registrado (ej. m/s, rpm, �C, etc.)."
+      "en" : "Indicates that an actor is responsible for managing a wind power platform or its mooring system.",
+      "es" : "Infica que un actor se encarga de la gesti�n de una plataforma e�lica o su sistema de anclaje."
     },
-    "attributes" : [ "datatype" ],
-    "id" : "160"
+    "attributes" : [ "object" ],
+    "id" : "11"
   }, {
-    "range" : "43",
-    "domain" : "40",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "161"
-  }, {
-    "range" : "118",
-    "domain" : "40",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "162"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasCapacity",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "50",
-    "label" : {
-      "IRI-based" : "hasCapacity",
-      "en" : "Capacity",
-      "es" : "Capacidad"
-    },
-    "domain" : "7",
-    "comment" : {
-      "en" : "Rated generation capacity of the turbine.",
-      "es" : "Capacidad nominal de generaci�n de la turbina."
-    },
-    "attributes" : [ "datatype" ],
-    "id" : "163"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#failureObservation",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "69",
+    "iri" : "https://w3id.org/optimar#failureObservation",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "17",
     "label" : {
       "IRI-based" : "failureObservation",
       "en" : "Failure observation",
       "es" : "Observaci�n de fallo"
     },
-    "domain" : "42",
+    "domain" : "16",
     "comment" : {
       "en" : "Relationship between a failure event and the observation made by a sensor.",
       "es" : "Relaci�n entre un evento de fallo y la observaci�n realizada por un sensor."
     },
     "attributes" : [ "object" ],
-    "id" : "164"
+    "id" : "15"
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasRole",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "12",
-    "label" : {
-      "IRI-based" : "hasRole",
-      "en" : "Has role",
-      "es" : "Tiene rol"
-    },
-    "domain" : "16",
-    "comment" : {
-      "en" : "Indicas the role that an actor performs within the system.",
-      "es" : "Indica el rol que desempe�a un actor dentro del sistema."
-    },
-    "attributes" : [ "object" ],
-    "id" : "165"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#stress",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "14",
+    "iri" : "https://w3id.org/optimar#stress",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "22",
     "label" : {
       "IRI-based" : "stress",
       "en" : "Stress",
       "es" : "Tensi�n"
     },
-    "domain" : "10",
+    "domain" : "21",
     "comment" : {
       "en" : "Stress level recorded in a component.",
       "es" : "Nivel de tensi�n registrado en un componente."
     },
     "attributes" : [ "datatype" ],
-    "id" : "166"
+    "id" : "20"
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#adjusts",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "159",
-    "label" : {
-      "IRI-based" : "adjusts",
-      "en" : "Adjusts",
-      "es" : "Ajusta"
-    },
-    "domain" : "16",
-    "comment" : {
-      "en" : "Indicas that an actor makes adjustments on a component or pitch system.",
-      "es" : "Indica que un actor realiza ajustes sobre un componente o sistema de pitch."
-    },
-    "attributes" : [ "object" ],
-    "id" : "167"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#hasFailureCause",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "76",
+    "iri" : "https://w3id.org/optimar#hasFailureCause",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "33",
     "label" : {
       "IRI-based" : "hasFailureCause",
       "en" : "Failure cause",
       "es" : "Causa de fallo"
     },
-    "domain" : "6",
+    "domain" : "19",
     "comment" : {
       "en" : "Indicates that a failure is caused by a specific environmental condition.",
       "es" : "Indica que un fallo tiene su origen en una condici�n ambiental espec�fica."
     },
     "attributes" : [ "object" ],
+    "id" : "32"
+  }, {
+    "iri" : "https://w3id.org/optimar#height",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "height",
+      "en" : "Height",
+      "es" : "Altura"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Height of the component expressed as a QUDT quantity value.",
+      "es" : "Altura del componente expresada como un valor con unidad QUDT."
+    },
+    "attributes" : [ "object" ],
+    "id" : "36"
+  }, {
+    "iri" : "https://w3id.org/optimar#displacement",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "48",
+    "label" : {
+      "IRI-based" : "displacement",
+      "en" : "Displacement",
+      "es" : "Desplazamiento"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "Displacement or position change recorded in the component.",
+      "es" : "Desplazamiento o cambio de posici�n registrado en el componente."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "47"
+  }, {
+    "iri" : "https://w3id.org/optimar#measuresWind",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "33",
+    "label" : {
+      "IRI-based" : "measuresWind",
+      "en" : "Measures wind",
+      "es" : "Mide viento"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Relates a sensor with the measurement of wind speed or direction.",
+      "es" : "Relaciona un sensor con la medici�n de velocidad o direcci�n del viento."
+    },
+    "attributes" : [ "object" ],
+    "id" : "51"
+  }, {
+    "iri" : "https://w3id.org/optimar#measuresVibration",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "measuresVibration",
+      "en" : "Measures vibration",
+      "es" : "Mide vibraci�n"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Indicates that a sensor collects vibration data from a component.",
+      "es" : "Indica que un sensor obtiene datos de vibraci�n de un componente."
+    },
+    "attributes" : [ "object" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://w3id.org/optimar#mass",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "mass",
+      "en" : "Mass",
+      "es" : "Masa"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Mass of the component expressed as a QUDT quantity value",
+      "es" : "Masa del componente expresada expresada como un valor con unidad QUDT"
+    },
+    "attributes" : [ "object" ],
+    "id" : "54"
+  }, {
+    "iri" : "https://w3id.org/optimar#performedMaintenance",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "performedMaintenance",
+      "en" : "Performs maintenance",
+      "es" : "Realiza mantenimiento"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Relates an actor with the maintenance that it performs.",
+      "es" : "Relaciona un actor con el mantenimiento que realiza."
+    },
+    "attributes" : [ "object" ],
+    "id" : "56"
+  }, {
+    "iri" : "https://w3id.org/optimar#adjusts",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "59",
+    "label" : {
+      "IRI-based" : "adjusts",
+      "en" : "Adjusts",
+      "es" : "Ajusta"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Indicas that an actor makes adjustments on a component or pitch system.",
+      "es" : "Indica que un actor realiza ajustes sobre un componente o sistema de pitch."
+    },
+    "attributes" : [ "object" ],
+    "id" : "58"
+  }, {
+    "iri" : "https://w3id.org/optimar#monitors",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "64",
+    "label" : {
+      "IRI-based" : "monitors",
+      "en" : "Monitors",
+      "es" : "Monitorea"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Relates an actor to the components or sensors they monitor.",
+      "es" : "Relaciona a un actor con los componentes o sensores que supervisa."
+    },
+    "attributes" : [ "object" ],
+    "id" : "63"
+  }, {
+    "range" : "6",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "73"
+  }, {
+    "iri" : "https://w3id.org/optimar#hasCapacity",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "60",
+    "label" : {
+      "IRI-based" : "hasCapacity",
+      "en" : "Capacity",
+      "es" : "Capacidad"
+    },
+    "domain" : "40",
+    "comment" : {
+      "en" : "Rated generation capacity of the turbine.",
+      "es" : "Capacidad nominal de generaci�n de la turbina."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "74"
+  }, {
+    "range" : "16",
+    "domain" : "76",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "75"
+  }, {
+    "range" : "7",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://w3id.org/optimar#detectsCorrosion",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "detectsCorrosion",
+      "en" : "Detects corrosion",
+      "es" : "Detecta corrosi�n"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Relates a sensor with the detected corrosion measurement.",
+      "es" : "Relaciona un sensor con la medici�n de corrosi�n detectada."
+    },
+    "attributes" : [ "object" ],
+    "id" : "79"
+  }, {
+    "iri" : "https://w3id.org/optimar#lightCorrosion",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "lightCorrosion",
+      "en" : "Light corrosion",
+      "es" : "Corrosi�n clara"
+    },
+    "domain" : "76",
+    "comment" : {
+      "en" : "Level of light corrosion detected on the material surface.",
+      "es" : "Nivel de corrosi�n clara detectada en la superficie del material."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "82"
+  }, {
+    "range" : "21",
+    "domain" : "66",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "86"
+  }, {
+    "range" : "21",
+    "domain" : "83",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "87"
+  }, {
+    "range" : "66",
+    "domain" : "53",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "88"
+  }, {
+    "range" : "66",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "89"
+  }, {
+    "iri" : "https://w3id.org/optimar#value",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "value",
+      "en" : "Value",
+      "es" : "Valor"
+    },
+    "domain" : "66",
+    "comment" : {
+      "en" : "Numeric value of the measurement taken by a sensor.",
+      "es" : "Valor num�rico de la medici�n tomada por un sensor."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "91"
+  }, {
+    "range" : "27",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "92"
+  }, {
+    "range" : "27",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "93"
+  }, {
+    "range" : "27",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "94"
+  }, {
+    "range" : "27",
+    "domain" : "71",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "95"
+  }, {
+    "range" : "1",
+    "domain" : "42",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "96"
+  }, {
+    "range" : "1",
+    "domain" : "41",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "97"
+  }, {
+    "iri" : "https://w3id.org/optimar#operationalStatus",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "operationalStatus",
+      "en" : "Operational status",
+      "es" : "Estado operativo"
+    },
+    "domain" : "40",
+    "comment" : {
+      "en" : "Current operational status of the turbine (e.g. operative, stopped, under maintenance, etc.).",
+      "es" : "Estado de funcionamiento actual de la turbina (ej. operativa, parada, en mantenimiento, etc.)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://w3id.org/optimar#length",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "length",
+      "en" : "Length",
+      "es" : "Longitud"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Length of a component, expressed as a QUDT quantity value",
+      "es" : "Longitud de un componente, expresada como un valor con unidad QUDT"
+    },
+    "attributes" : [ "object" ],
+    "id" : "99"
+  }, {
+    "iri" : "https://w3id.org/optimar#transmitsMovementTo",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "transmitsMovementTo",
+      "en" : "Transmits movement to",
+      "es" : "Transmite movimiento a"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Indicates that a component transmits mechanical movement to another.",
+      "es" : "Indica que un componente transmite movimiento mec�nico a otro."
+    },
+    "attributes" : [ "object" ],
+    "id" : "100"
+  }, {
+    "range" : "1",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "102"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "103"
+  }, {
+    "range" : "19",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "104"
+  }, {
+    "range" : "4",
+    "domain" : "30",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "105"
+  }, {
+    "range" : "4",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "106"
+  }, {
+    "range" : "19",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "107"
+  }, {
+    "range" : "19",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "109"
+  }, {
+    "iri" : "https://w3id.org/optimar#material",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "material",
+      "en" : "Material",
+      "es" : "Material"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Material of manufacturing of the component (e.g. steel, composite, fiberglass, etc.).",
+      "es" : "Material de fabricaci�n del componente (ej. acero, compuesto, fibra de vidrio, etc.)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "110"
+  }, {
+    "range" : "19",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "111"
+  }, {
+    "iri" : "https://w3id.org/optimar#detectedBy",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "detectedBy",
+      "en" : "Detected by",
+      "es" : "Detectado por"
+    },
+    "domain" : "113",
+    "comment" : {
+      "en" : "Relates an event to the sensor that detected it.",
+      "es" : "Relaciona un evento con el sensor que lo detect�."
+    },
+    "attributes" : [ "object" ],
+    "id" : "112"
+  }, {
+    "iri" : "https://w3id.org/optimar#Corrosion",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "Corrosion",
+      "en" : "Corrosion",
+      "es" : "Corrosi�n"
+    },
+    "domain" : "76",
+    "comment" : {
+      "en" : "General corrosion index detected in a component.",
+      "es" : "�ndice general de corrosi�n detectada en un componente."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "80"
+  }, {
+    "iri" : "https://w3id.org/optimar#materialWear",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "35",
+    "label" : {
+      "IRI-based" : "materialWear",
+      "en" : "Material wear",
+      "es" : "Desgaste material"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "Degree of material wear in a component.",
+      "es" : "Grado de desgaste de un material en un componente."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "115"
+  }, {
+    "iri" : "https://w3id.org/optimar#diameter",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "diameter",
+      "en" : "Diameter",
+      "es" : "Di�metro"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Diameter of the component measured in QUDT units.",
+      "es" : "Di�metro del componente medido en unidades QUDT."
+    },
+    "attributes" : [ "object" ],
+    "id" : "116"
+  }, {
+    "iri" : "https://w3id.org/optimar#causedBy",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "causedBy",
+      "en" : "Caused by",
+      "es" : "Causado por"
+    },
+    "domain" : "113",
+    "comment" : {
+      "en" : "Relates an event with the failure that caused it.",
+      "es" : "Relaciona un evento con el fallo que lo provoc�."
+    },
+    "attributes" : [ "object" ],
+    "id" : "118"
+  }, {
+    "iri" : "https://w3id.org/optimar#Deformation",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "61",
+    "label" : {
+      "IRI-based" : "Deformation",
+      "en" : "Deformation",
+      "es" : "Deformaci�n"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "Degree of deformation recorded in the component.",
+      "es" : "Grado de deformaci�n registrado en el componente."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "120"
+  }, {
+    "iri" : "https://w3id.org/optimar#imageURL",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "imageURL",
+      "en" : "Image URL",
+      "es" : "URL de la imagen"
+    },
+    "domain" : "83",
+    "comment" : {
+      "en" : "Access URL of the generated or stored image.",
+      "es" : "Direcci�n de acceso a la imagen generada o almacenada."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "121"
+  }, {
+    "iri" : "https://w3id.org/optimar#vibrations",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "108",
+    "label" : {
+      "IRI-based" : "vibrations",
+      "en" : "Vibrations",
+      "es" : "Vibraciones"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "Level of vibrations recorded in a component or system.",
+      "es" : "Nivel de vibraciones registradas en un componente o sistema."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "122"
+  }, {
+    "range" : "113",
+    "domain" : "16",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "123"
+  }, {
+    "range" : "12",
+    "domain" : "81",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "124"
+  }, {
+    "range" : "12",
+    "domain" : "101",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "125"
+  }, {
+    "range" : "12",
+    "domain" : "127",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "126"
+  }, {
+    "range" : "12",
+    "domain" : "117",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "128"
+  }, {
+    "iri" : "https://w3id.org/optimar#houses",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "houses",
+      "en" : "Houses",
+      "es" : "Aloja"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Indicates that a component contains or houses physically another in its structure.",
+      "es" : "Indica que un componente contiene o aloja fisicamente a otro en su estructura."
+    },
+    "attributes" : [ "object" ],
+    "id" : "129"
+  }, {
+    "range" : "50",
+    "domain" : "131",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "130"
+  }, {
+    "iri" : "https://w3id.org/optimar#temperature",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "temperature",
+      "en" : "Temperature",
+      "es" : "Temperatura"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "Temperature recorded expressed as a QUDT quantity value.",
+      "es" : "Temperatura registrada expresada como un valor con unidad QUDT."
+    },
+    "attributes" : [ "object" ],
+    "id" : "132"
+  }, {
+    "range" : "50",
+    "domain" : "49",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "133"
+  }, {
+    "range" : "12",
+    "domain" : "135",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "134"
+  }, {
+    "range" : "50",
+    "domain" : "90",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "136"
+  }, {
+    "iri" : "https://w3id.org/optimar#windDirection",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "windDirection",
+      "en" : "Wind direction",
+      "es" : "Direcci�n del viento"
+    },
+    "domain" : "33",
+    "comment" : {
+      "en" : "Direction from which the wind blows expressed as a QUDT quantity value.",
+      "es" : "Direcci�n desde la que sopla el viento expresada en valores con unidad QUDT."
+    },
+    "attributes" : [ "object" ],
+    "id" : "137"
+  }, {
+    "iri" : "https://w3id.org/optimar#externalShape",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "55",
+    "label" : {
+      "IRI-based" : "externalShape",
+      "en" : "External shape",
+      "es" : "Forma externa"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Describe the external shape or geometric of the component.",
+      "es" : "Describe la forma externa o geometr�a del componente."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "138"
+  }, {
+    "iri" : "https://w3id.org/optimar#connectedTo",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "connectedTo",
+      "en" : "Connected to",
+      "es" : "Conectado a"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Indicates that a component is connected to another.",
+      "es" : "Indica que un componente est� conectado a otro."
+    },
+    "attributes" : [ "object" ],
+    "id" : "139"
+  }, {
+    "iri" : "https://w3id.org/optimar#isSupportedBy",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isSupportedBy",
+      "en" : "Is supported by",
+      "es" : "Es soportado por"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Indicates that a component is structurally or functionally supported by another.",
+      "es" : "Indica que un componente depende estructural o funcionalmente de otro para su soporte."
+    },
+    "attributes" : [ "object" ],
+    "id" : "141"
+  }, {
+    "iri" : "https://w3id.org/optimar#pressure",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "pressure",
+      "en" : "Pressure",
+      "es" : "Presi�n"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "Pressure exerted on a component.",
+      "es" : "Presi�n ejercida sobre un componente."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "142"
+  }, {
+    "iri" : "http://www.w3.org/ns/prov#generated",
+    "baseIri" : "http://www.w3.org/ns/prov",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "generated",
+      "en" : "Generates",
+      "es" : "Genera"
+    },
+    "domain" : "113",
+    "comment" : {
+      "en" : "Relates an event to the generated data by the same.",
+      "es" : "Relaciona un evento con los datos generados por el mismo."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "143"
+  }, {
+    "range" : "9",
+    "domain" : "140",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "144"
+  }, {
+    "range" : "9",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "145"
+  }, {
+    "range" : "9",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "146"
+  }, {
+    "iri" : "https://w3id.org/optimar#locatedIn",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "locatedIn",
+      "en" : "Located in",
+      "es" : "Ubicado en"
+    },
+    "domain" : "72",
+    "comment" : {
+      "en" : "Indicates the location where the wind power platform is located.",
+      "es" : "Indica el lugar en el que se encuentra la plataforma e�lica."
+    },
+    "attributes" : [ "object" ],
+    "id" : "147"
+  }, {
+    "range" : "9",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "148"
+  }, {
+    "iri" : "https://w3id.org/optimar#relatedToComponent",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "relatedToComponent",
+      "en" : "Related to component",
+      "es" : "Relacionado con componente"
+    },
+    "domain" : "113",
+    "comment" : {
+      "en" : "Relates an event to the platform component that is affected.",
+      "es" : "Relaciona un evento con el componente de la plataforma que se ve afectado."
+    },
+    "attributes" : [ "object" ],
+    "id" : "149"
+  }, {
+    "range" : "85",
+    "domain" : "84",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "150"
+  }, {
+    "iri" : "https://w3id.org/optimar#hasRole",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "hasRole",
+      "en" : "Has role",
+      "es" : "Tiene rol"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Indicas the role that an actor performs within the system.",
+      "es" : "Indica el rol que desempe�a un actor dentro del sistema."
+    },
+    "attributes" : [ "object" ],
+    "id" : "151"
+  }, {
+    "iri" : "https://w3id.org/optimar#misalignment",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "misalignment",
+      "en" : "Misalignment",
+      "es" : "Desalineaci�n"
+    },
+    "domain" : "21",
+    "comment" : {
+      "en" : "Measure of the misalignment detected in a component.",
+      "es" : "Medida de la falta de alineaci�n detectada en un componente."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "152"
+  }, {
+    "range" : "9",
+    "domain" : "119",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "153"
+  }, {
+    "iri" : "https://w3id.org/optimar#unit",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "28",
+    "label" : {
+      "IRI-based" : "unit",
+      "en" : "Unit",
+      "es" : "Unidad"
+    },
+    "domain" : "66",
+    "comment" : {
+      "en" : "Measurement unit of the recorded value (e.g. m/s, rpm, �C, etc.).",
+      "es" : "Unidad de medida del valor registrado (ej. m/s, rpm, �C, etc.)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "154"
+  }, {
+    "range" : "9",
+    "domain" : "114",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "155"
+  }, {
+    "iri" : "https://w3id.org/optimar#monitorsDeformation",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "120",
+    "label" : {
+      "IRI-based" : "monitorsDeformation",
+      "en" : "Monitors deformation",
+      "es" : "Monitorea deformaci�n"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Relates a sensor to the structural deformation it measures or monitors.",
+      "es" : "Relaciona un sensor con la deformaci�n estructural que mide o supervisa."
+    },
+    "attributes" : [ "object" ],
+    "id" : "156"
+  }, {
+    "iri" : "https://w3id.org/optimar#supports",
+    "inverse" : "141",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "supports",
+      "en" : "Supports",
+      "es" : "Soporta a"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Indicates that a component provides structural or functional support to another.",
+      "es" : "Indica que un componente proporciona soporte estructural o funcional a otro."
+    },
+    "attributes" : [ "object" ],
+    "id" : "157"
+  }, {
+    "range" : "119",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "158"
+  }, {
+    "range" : "140",
+    "domain" : "8",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "159"
+  }, {
+    "range" : "18",
+    "domain" : "76",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "160"
+  }, {
+    "range" : "23",
+    "domain" : "76",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "161"
+  }, {
+    "range" : "119",
+    "domain" : "140",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "162"
+  }, {
+    "iri" : "https://w3id.org/optimar#causedBy",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "causedBy",
+      "en" : "Caused by",
+      "es" : "Causado por"
+    },
+    "domain" : "16",
+    "comment" : {
+      "en" : "Relates an event with the failure that caused it.",
+      "es" : "Relaciona un evento con el fallo que lo provoc�."
+    },
+    "attributes" : [ "someValues", "object" ],
+    "id" : "163"
+  }, {
+    "range" : "18",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "164"
+  }, {
+    "iri" : "https://w3id.org/optimar#analyzes",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "analyzes",
+      "en" : "Analyzes",
+      "es" : "Analiza"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Relates an actor to the data or failures that it studies or interprets.",
+      "es" : "Relaciona a un actor con los datos o fallos que estudia o interpreta."
+    },
+    "attributes" : [ "object" ],
+    "id" : "165"
+  }, {
+    "iri" : "https://w3id.org/optimar#windSpeed",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "windSpeed",
+      "en" : "Wind speed",
+      "es" : "Velocidad del viento"
+    },
+    "domain" : "33",
+    "comment" : {
+      "en" : "Wind speed expressed as a QUDT quantity value.",
+      "es" : "Velocidad del viento expresada como valor QUDT."
+    },
+    "attributes" : [ "object" ],
+    "id" : "166"
+  }, {
+    "range" : "119",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "167"
+  }, {
+    "range" : "8",
+    "domain" : "14",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "168"
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#darkCorrosion",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "59",
+    "iri" : "https://w3id.org/optimar#darkCorrosion",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "68",
     "label" : {
       "IRI-based" : "darkCorrosion",
       "en" : "Dark corrosion",
       "es" : "Corrosi�n oscura"
     },
-    "domain" : "32",
+    "domain" : "76",
     "comment" : {
       "en" : "Level of dark corrosion detected on the mmaterial surface.",
       "es" : "Nivel de corrosi�n oscura detectada en la superficie del material."
@@ -2657,100 +2657,100 @@
     "attributes" : [ "datatype" ],
     "id" : "169"
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#diameter",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "18",
-    "label" : {
-      "IRI-based" : "diameter",
-      "en" : "Diameter",
-      "es" : "Di�metro"
-    },
-    "domain" : "8",
-    "comment" : {
-      "en" : "Diameter of the component measured in QUDT units.",
-      "es" : "Di�metro del componente medido en unidades QUDT."
-    },
-    "attributes" : [ "object" ],
-    "id" : "170"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#analyzes",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "60",
-    "label" : {
-      "IRI-based" : "analyzes",
-      "en" : "Analyzes",
-      "es" : "Analiza"
-    },
-    "domain" : "16",
-    "comment" : {
-      "en" : "Relates an actor to the data or failures that it studies or interprets.",
-      "es" : "Relaciona a un actor con los datos o fallos que estudia o interpreta."
-    },
-    "attributes" : [ "object" ],
-    "id" : "171"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresVibration",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "35",
-    "label" : {
-      "IRI-based" : "measuresVibration",
-      "en" : "Measures vibration",
-      "es" : "Mide vibraci�n"
-    },
-    "domain" : "41",
-    "comment" : {
-      "en" : "Indicates that a sensor collects vibration data from a component.",
-      "es" : "Indica que un sensor obtiene datos de vibraci�n de un componente."
-    },
-    "attributes" : [ "object" ],
-    "id" : "172"
-  }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#measuresStress",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "2",
+    "iri" : "https://w3id.org/optimar#measuresStress",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "65",
     "label" : {
       "IRI-based" : "measuresStress",
       "en" : "Measures stress",
       "es" : "Mide tensi�n"
     },
-    "domain" : "41",
+    "domain" : "9",
     "comment" : {
       "en" : "Indicates that a sensor measures the stress exerted on a component.",
       "es" : "Indica que un sensor mide la tensi�n ejercida sobre un componente."
     },
     "attributes" : [ "object" ],
+    "id" : "170"
+  }, {
+    "iri" : "https://w3id.org/optimar#width",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "width",
+      "en" : "Width",
+      "es" : "Anchura"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Width of the component expressed as a QUDT quantity value.",
+      "es" : "Anchura del componente expresada como un valor con unidad QUDT."
+    },
+    "attributes" : [ "object" ],
+    "id" : "171"
+  }, {
+    "iri" : "https://w3id.org/optimar#performsTask",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "85",
+    "label" : {
+      "IRI-based" : "performsTask",
+      "en" : "Performs task",
+      "es" : "Realiza tarea"
+    },
+    "domain" : "12",
+    "comment" : {
+      "en" : "Relates an actor with a task that it performs as part of its role.",
+      "es" : "Relaciona un actor con una tarea que ejecuta como parte de su rol."
+    },
+    "attributes" : [ "object" ],
+    "id" : "172"
+  }, {
+    "iri" : "https://w3id.org/optimar#thickness",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "thickness",
+      "en" : "Thickness",
+      "es" : "Espesor"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "Thickness of the section or wall of a component measured in QUDT units.",
+      "es" : "Espesor de la secci�n o pared de un componente medido en unidades QUDT."
+    },
+    "attributes" : [ "object" ],
     "id" : "173"
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#windSpeed",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "18",
+    "iri" : "https://w3id.org/optimar#dateTime",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "67",
     "label" : {
-      "IRI-based" : "windSpeed",
-      "en" : "Wind speed",
-      "es" : "Velocidad del viento"
+      "IRI-based" : "dateTime",
+      "en" : "Date and time",
+      "es" : "Fecha y hora"
     },
-    "domain" : "76",
+    "domain" : "66",
     "comment" : {
-      "en" : "Wind speed expressed as a QUDT quantity value.",
-      "es" : "Velocidad del viento expresada como valor QUDT."
+      "en" : "Associated temporal mark to the measurement.",
+      "es" : "Marca temporal asociada a la medici�n."
     },
-    "attributes" : [ "object" ],
+    "attributes" : [ "datatype" ],
     "id" : "174"
   }, {
-    "iri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#temperature",
-    "baseIri" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl",
-    "range" : "18",
+    "iri" : "https://w3id.org/optimar#materialFatigue",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "45",
     "label" : {
-      "IRI-based" : "temperature",
-      "en" : "Temperature",
-      "es" : "Temperatura"
+      "IRI-based" : "materialFatigue",
+      "en" : "Material fatigue",
+      "es" : "Fatiga material"
     },
-    "domain" : "10",
+    "domain" : "21",
     "comment" : {
-      "en" : "Temperature recorded expressed as a QUDT quantity value.",
-      "es" : "Temperatura registrada expresada como un valor con unidad QUDT."
+      "en" : "Accumulated material fatigue degree.",
+      "es" : "Grado de fatiga acumulada en el material."
     },
-    "attributes" : [ "object" ],
+    "attributes" : [ "datatype" ],
     "id" : "175"
   } ]
 }
