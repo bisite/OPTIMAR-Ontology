@@ -1,5 +1,5 @@
 
-@prefix ex: <https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#> .
+@prefix ex: <https://w3id.org/optimar> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 

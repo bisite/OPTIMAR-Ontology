@@ -1,5 +1,5 @@
 
-@prefix ex: <https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl#> .
+@prefix ex: <https://w3id.org/optimar> .
 @prefix sosa: <https://www.w3.org/ns/sosa/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -18,7 +18,7 @@
 # Ontology metadata
 ##########################################################
 
-<https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl>
+<https://w3id.org/optimar>
     a owl:Ontology ;
     dc:title "Ontología de Plataforma Eólica Offshore para OPTiMAR"@es ;
     dc:title "Offshore Wind Power Platform Ontology for OPTiMAR"@en ;
@@ -47,14 +47,14 @@
     dcterms:publisher "Universidad de Salamanca, Centro Tecnológico y de Investigación - Tekniker"@es ;
     dcterms:publisher "University of Salamanca, Technology and Research Centre - Tekniker"@en ;
 
-    owl:versionIRI <https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl> ;
+    owl:versionIRI <https://w3id.org/optimar/1.0> ;
     owl:versionInfo "Versión 1.0 de la ontología"@es ;
     owl:versionInfo "Version 1.0 of the Ontology"@en ;
 
     vann:preferredNamespacePrefix "ex" ;
-    vann:preferredNamespaceUri <https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl> ;
+    vann:preferredNamespaceUri <https://w3id.org/optimar#> ;
     
-    foaf:homepage <https://bisite.github.io/OPTIMAR-Ontology/> ;
+    foaf:homepage <https://w3id.org/optimar> ;
 
     dcterms:status "estable"@es ;
     dcterms:status "stable"@en ;
