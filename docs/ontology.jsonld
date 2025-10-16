@@ -247,7 +247,7 @@
     "@id" : "https://w3id.org/optimar#"
   } ],
   "http://www.w3.org/2002/07/owl#backwardCompatibleWith" : [ {
-    "@id" : "https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v0.2.ttl"
+    "@id" : "https://w3id.org/optimar/0.2"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@id" : "https://w3id.org/optimar/1.0"

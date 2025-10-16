@@ -25,7 +25,7 @@
 <https://w3id.org/optimar> <http://purl.org/dc/terms/status> "stable"@en .
 <https://w3id.org/optimar> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ex" .
 <https://w3id.org/optimar> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/optimar#> .
-<https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v0.2.ttl> .
+<https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <https://w3id.org/optimar/0.2> .
 <https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.0 of the Ontology"@en .
 <https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#versionInfo> "Versión 1.0 de la ontología"@es .
 <https://w3id.org/optimar> <http://xmlns.com/foaf/0.1/homepage> <https://w3id.org/optimar> .

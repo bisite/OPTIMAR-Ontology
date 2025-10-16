@@ -33,7 +33,7 @@
                                                               "stable"@en ;
                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "ex" ;
                             <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
-                            owl:backwardCompatibleWith <https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v0.2.ttl> ;
+                            owl:backwardCompatibleWith <https://w3id.org/optimar/0.2> ;
                             owl:versionInfo "Version 1.0 of the Ontology"@en ,
                                             "Versión 1.0 de la ontología"@es ;
                             <http://xmlns.com/foaf/0.1/homepage> <https://w3id.org/optimar> .

@@ -38,7 +38,7 @@
         <terms:status xml:lang="en">stable</terms:status>
         <vann:preferredNamespacePrefix>ex</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/optimar#"/>
-        <owl:backwardCompatibleWith rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v0.2.ttl"/>
+        <owl:backwardCompatibleWith rdf:resource="https://w3id.org/optimar/0.2"/>
         <owl:versionInfo xml:lang="en">Version 1.0 of the Ontology</owl:versionInfo>
         <owl:versionInfo xml:lang="es">Versión 1.0 de la ontología</owl:versionInfo>
         <foaf:homepage rdf:resource="https://w3id.org/optimar"/>
