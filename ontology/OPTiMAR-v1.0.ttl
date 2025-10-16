@@ -58,7 +58,7 @@
 
     dcterms:status "estable"@es ;
     dcterms:status "stable"@en ;
-    owl:backwardCompatibleWith <https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v0.2.ttl> ;
+    owl:backwardCompatibleWith <https://w3id.org/optimar/0.2> ;
     
     dcterms:bibliographicCitation "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.1234/abcd"@es ;
     dcterms:bibliographicCitation "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Offshore Wind Power Platform Ontology for OPTiMAR. DOI: 10.1234/abcd"@en .
