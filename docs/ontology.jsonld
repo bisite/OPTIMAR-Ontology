@@ -22,13 +22,85 @@
   "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/optimar#connectedTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/optimar#Hub"
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/optimar#causedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/optimar#Corrosion"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/optimar#causedBy"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "https://w3id.org/optimar#Failure"
   } ]
 }, {
-  "@id" : "_:genid14",
+  "@id" : "_:genid16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/optimar#connectedTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/optimar#Blade"
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/optimar#transmitsMovementTo"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/optimar#Generator"
+  } ]
+}, {
+  "@id" : "_:genid18",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/optimar#performedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/optimar#MaintenanceOperator"
+  } ]
+}, {
+  "@id" : "_:genid19",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/optimar#houses"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/optimar#Generator"
+  } ]
+}, {
+  "@id" : "_:genid20",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/optimar#isSupportedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/optimar#Tower"
+  } ]
+}, {
+  "@id" : "_:genid21",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/optimar#madeBySensor"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/optimar#Sensor"
+  } ]
+}, {
+  "@id" : "_:genid22",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -40,7 +112,77 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid18",
+  "@id" : "_:genid26",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/optimar#isSupportedBy"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/optimar#FloatingSubstructure"
+  } ]
+}, {
+  "@id" : "_:genid27",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/optimar#supports"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/optimar#Nacelle"
+  } ]
+}, {
+  "@id" : "_:genid28",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/optimar#Blade"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/optimar#hasTurbineComponent"
+  } ]
+}, {
+  "@id" : "_:genid29",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/optimar#Hub"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/optimar#hasTurbineComponent"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid30",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/optimar#Nacelle"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/optimar#hasTurbineComponent"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid31",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "https://w3id.org/optimar#Tower"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/optimar#hasTurbineComponent"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid32",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -131,6 +273,9 @@
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
+  "@id" : "http://www.w3.org/2002/07/owl#SymetricProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
   "@id" : "http://www.w3.org/ns/prov#generated",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -164,7 +309,7 @@
   } ],
   "http://purl.org/dc/elements/1.1/date" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-10-06"
+    "@value" : "2025-12-01"
   } ],
   "http://purl.org/dc/elements/1.1/description" : [ {
     "@language" : "es",
@@ -192,10 +337,10 @@
   } ],
   "http://purl.org/dc/terms/abstract" : [ {
     "@language" : "es",
-    "@value" : "Ontologia que modela los elementos estructurales, sensores, eventos y fallos de plataformas eólicas offshore, incluyendo datos de medición y actores involucrados."
+    "@value" : "Ontologia que modela los elementos estructurales, sensores, eventos y fallos de plataformas eólicas offshore, incluyendo datos de medición, actores involucrados y relaciones semánticas entre componentes. Compatible con SOSA para observaciones y QUDT para unidades de medida."
   }, {
     "@language" : "en",
-    "@value" : "Ontology modeling structural elements, sensors, events, and failures in offshore wind platforms, including measurement data and involved actors."
+    "@value" : "Ontology modeling structural elements, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. Compatible with SOSA for observations and QUDT for units of measure."
   } ],
   "http://purl.org/dc/terms/bibliographicCitation" : [ {
     "@language" : "en",
@@ -210,14 +355,14 @@
   } ],
   "http://purl.org/dc/terms/issued" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-09-30"
+    "@value" : "2025-12-02"
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://opensource.org/licenses/MIT"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-10-06"
+    "@value" : "2025-12-01"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@language" : "es",
@@ -246,18 +391,31 @@
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
     "@id" : "https://w3id.org/optimar#"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "\r\n        Version 2.0 (2025-12-02) - Major improvements:\r\n        - Added ex:Generator class for turbine generators\r\n        - Added inverse properties: ex:isHousedIn, ex:detects, ex:affects\r\n        - Declared ex:connectedTo as symmetric property\r\n        - Renamed properties to avoid class name collisions: ex:deformationLevel, ex:misalignmentLevel\r\n        - Corrected ex:affectedBy domain to ex:Component (previously ex:TurbineComponent)\r\n        - Added ex:StructuralComponent as subclass of ex:Component\r\n        - Added structural restrictions to TurbineComponent classes\r\n        - Separated failure classes from failure event classes\r\n        - Fixed restriction syntax in ex:Maintenance and ex:Observation\r\n        - Improved consistency in QUDT usage for physical quantities\r\n        - Added cardinality constraints to ex:Turbine class\r\n    "
+  }, {
+    "@language" : "es",
+    "@value" : "\r\n    Versión 2.0 (2025-12-02) - Mejoras principales:\r\n    - Añadida clase ex:Generator para generadores de turbina\r\n    - Añadidas propiedades inversas: ex:isHousedIn, ex:detects, ex:affects\r\n    - Declarada ex:connectedTo como propiedad simétrica\r\n    - Renombradas propiedades para evitar colisiones: ex:deformationLevel, ex:misalignmentLevel\r\n    - Corregido dominio de ex:affectedBy a ex:Component (antes ex:TurbineComponent)\r\n    - Añadido ex:StructuralComponent como subclase de ex:Component\r\n    - Añadidas restricciones estructurales a clases TurbineComponent\r\n    - Separadas clases de fallos de clases de eventos de fallos\r\n    - Corregida sintaxis de restricciones en ex:Maintenance y ex:Observation\r\n    - Mejorada consistencia en uso de QUDT para magnitudes físicas\r\n    - Añadidas restricciones de cardinalidad a clase ex:Turbine\r\n    "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://w3id.org/optimar#changelog"
+  } ],
   "http://www.w3.org/2002/07/owl#backwardCompatibleWith" : [ {
-    "@id" : "https://w3id.org/optimar/0.2"
+    "@id" : "https://w3id.org/optimar/1.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#priorVersion" : [ {
+    "@id" : "https://w3id.org/optimar/1.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/optimar/1.0"
+    "@id" : "https://w3id.org/optimar/2.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "Version 1.0 of the Ontology"
+    "@value" : "Version 2.0 of the Ontology"
   }, {
     "@language" : "es",
-    "@value" : "Versión 1.0 de la ontología"
+    "@value" : "Versión 2.0 de la ontología"
   } ],
   "http://xmlns.com/foaf/0.1/homepage" : [ {
     "@id" : "https://w3id.org/optimar"
@@ -284,7 +442,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Rol orientado al analisis de datos y generación de información útil para la toma de decisiones."
+    "@value" : "Rol orientado al análisis de datos y generación de información útil para la toma de decisiones."
   }, {
     "@language" : "en",
     "@value" : "Role focused on data analysis and generation of useful information for decision-making."
@@ -326,24 +484,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#Base",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "La base que soporta la plataforma flotante."
-  }, {
-    "@language" : "en",
-    "@value" : "The base that supports the floating platform."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Base (floating substructure)"
-  }, {
-    "@language" : "es",
-    "@value" : "Base (subestructura flotante)"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/optimar#StructuralComponent"
-  } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/optimar#Blade",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -363,6 +504,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/optimar#TurbineComponent"
+  }, {
+    "@id" : "_:genid13"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#CloudAdministrator",
@@ -423,16 +566,13 @@
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#Corrosion",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "General corrosion index detected in a component."
+    "@value" : "Failure caused by corrosion of the metallic structure of the platform."
   }, {
     "@language" : "es",
-    "@value" : "Índice general de corrosión detectada en un componente."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/optimar#CorrosionEvent"
+    "@value" : "Fallo causado por la corrosión de la estructura metálica de la plataforma."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -441,8 +581,15 @@
     "@language" : "es",
     "@value" : "Corrosión"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/optimar#Failure"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/optimar#Deformation"
+  }, {
+    "@id" : "https://w3id.org/optimar#MaterialFatigue"
+  }, {
+    "@id" : "https://w3id.org/optimar#Misalignment"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#CorrosionCamera",
@@ -484,16 +631,21 @@
     "@value" : "Corrosion Event"
   }, {
     "@language" : "es",
-    "@value" : "Evento de Corrosión"
+    "@value" : "Evento de dección de corrosión"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/optimar#FailureEvent"
+  }, {
+    "@id" : "_:genid14"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
     "@id" : "https://w3id.org/optimar#MaterialFatigue"
   }, {
     "@id" : "https://w3id.org/optimar#Misalignment"
   } ]
+}, {
+  "@id" : "https://w3id.org/optimar#CorrosionLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
   "@id" : "https://w3id.org/optimar#Data",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -533,26 +685,28 @@
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#Deformation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Degree of deformation recorded in the component."
+    "@value" : "Failure caused by structural deformation of a component."
   }, {
     "@language" : "es",
-    "@value" : "Grado de deformación registrado en el componente."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/optimar#Data"
+    "@value" : "Fallo causado por la deformación estructural de un componente."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "Deformación"
+    "@value" : "Deformación estructural"
   }, {
     "@language" : "en",
-    "@value" : "Deformation"
+    "@value" : "Structural deformation"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/optimar#Failure"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/optimar#MaterialFatigue"
+  }, {
+    "@id" : "https://w3id.org/optimar#Misalignment"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#DynamicMonitor",
@@ -648,37 +802,37 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/optimar#Event"
   }, {
-    "@id" : "_:genid13"
+    "@id" : "_:genid15"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#FloatingPlatform",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "A floating platform that serves as a base for the wind turbine."
+    "@value" : "An offshore wind power platform that includes a turbine, floating substructure, and mooring system"
   }, {
     "@language" : "es",
-    "@value" : "Una plataforma flotante que sirve de base para la turbina eólica."
+    "@value" : "Plataforma eólica offshore completa que incluye turbina, substructura flotante y sistema de amarre"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "Floating Platform"
+    "@value" : "Floating Wind Power Platform"
   }, {
     "@language" : "es",
-    "@value" : "Plataforma flotante"
+    "@value" : "Plataforma eólica flotante"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://w3id.org/optimar#Component"
+    "@id" : "https://w3id.org/optimar#WindPowerPlatform"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#FloatingSubstructure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "La subestructura flotante que permite que la plataforma sea estable en el mar."
+    "@value" : "La estructura sumergida que proporciona flotabilidad (spar, semi-sumergible, TLP, etc.)"
   }, {
     "@language" : "en",
-    "@value" : "The floating substructure that allows the platform to be stable at sea."
+    "@value" : "The floating substructure that provides stability (spar, semi-sumergible, TLP, etc.)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -711,6 +865,26 @@
     "@id" : "https://w3id.org/optimar#Sensor"
   } ]
 }, {
+  "@id" : "https://w3id.org/optimar#Generator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Electrical generator that converts mechanical energy into electrical energy."
+  }, {
+    "@language" : "es",
+    "@value" : "Generador eléctrico que convierte energía mecánica en eléctrica."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Generador"
+  }, {
+    "@language" : "en",
+    "@value" : "Generator"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/optimar#Component"
+  } ]
+}, {
   "@id" : "https://w3id.org/optimar#Hub",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -729,6 +903,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/optimar#TurbineComponent"
+  }, {
+    "@id" : "_:genid16"
+  }, {
+    "@id" : "_:genid17"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#ISUMSystem",
@@ -804,8 +982,8 @@
     "@language" : "es",
     "@value" : "Mantenimiento"
   } ],
-  "https://w3id.org/optimar#performedBy" : [ {
-    "@id" : "https://w3id.org/optimar#MaintenanceOperator"
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid18"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#MaintenanceOperator",
@@ -969,10 +1147,14 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/optimar#TurbineComponent"
+  }, {
+    "@id" : "_:genid19"
+  }, {
+    "@id" : "_:genid20"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#Observation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
     "@value" : "El resultado de registrar un fenómeno o condición, normalmente a través de un sensor o sistema de monitorización."
@@ -989,9 +1171,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://www.w3.org/ns/sosa/Observation"
-  } ],
-  "https://w3id.org/optimar#madeBySensor" : [ {
-    "@id" : "https://www.w3.org/ns/sosa/Sensor"
+  }, {
+    "@id" : "_:genid21"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#ParkOwner",
@@ -1147,8 +1328,11 @@
     "@language" : "en",
     "@value" : "Structural Components"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/optimar#Component"
+  } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid14"
+    "@id" : "_:genid22"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#StructuralInstability",
@@ -1226,6 +1410,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/optimar#TurbineComponent"
+  }, {
+    "@id" : "_:genid26"
+  }, {
+    "@id" : "_:genid27"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#Turbine",
@@ -1246,6 +1434,14 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/optimar#Component"
+  }, {
+    "@id" : "_:genid28"
+  }, {
+    "@id" : "_:genid29"
+  }, {
+    "@id" : "_:genid30"
+  }, {
+    "@id" : "_:genid31"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#TurbineComponent",
@@ -1264,8 +1460,11 @@
     "@language" : "en",
     "@value" : "Turbine Components"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/optimar#Component"
+  } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid18"
+    "@id" : "_:genid32"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#VibrationData",
@@ -1312,7 +1511,7 @@
     "@value" : "Indica que un actor realiza ajustes sobre un componente o sistema de pitch."
   }, {
     "@language" : "en",
-    "@value" : "Indicas that an actor makes adjustments on a component or pitch system."
+    "@value" : "Indicates that an actor makes adjustments on a component or pitch system."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/optimar#Actor"
@@ -1326,6 +1525,55 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#affectedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que un componente de turbina está afectado por un fallo específico."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates that a turbine component is affected by a specific failure."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Afectado por"
+  }, {
+    "@language" : "en",
+    "@value" : "Affected by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#Failure"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#affects",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que un fallo afecta un componente específico."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates that a failure affects a specific component."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#Failure"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Afecta"
+  }, {
+    "@language" : "en",
+    "@value" : "Affects"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#Component"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/optimar#affectedBy"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#analyzes",
@@ -1375,7 +1623,10 @@
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#connectedTo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#SymetricProperty"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
     "@value" : "Indica que un componente está conectado a otro."
@@ -1397,7 +1648,30 @@
     "@id" : "https://w3id.org/optimar#Component"
   } ]
 }, {
-  "@id" : "https://w3id.org/optimar#darkCorrosion",
+  "@id" : "https://w3id.org/optimar#corrosionLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "General corrosion index detected in a component."
+  }, {
+    "@language" : "es",
+    "@value" : "Índice general de corrosión detectada en un componente."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#CorrosionEvent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Corrosion level"
+  }, {
+    "@language" : "es",
+    "@value" : "Nivel de corrosión"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#darkCorrosionLevel",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -1410,17 +1684,17 @@
     "@id" : "https://w3id.org/optimar#CorrosionEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Corrosión oscura"
-  }, {
     "@language" : "en",
-    "@value" : "Dark corrosion"
+    "@value" : "Dark corrosion level"
+  }, {
+    "@language" : "es",
+    "@value" : "Nivel de corrosión oscura"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/optimar#Corrosion"
+    "@id" : "https://w3id.org/optimar#corrosionLevel"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#dateTime",
@@ -1446,6 +1720,29 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
   } ]
 }, {
+  "@id" : "https://w3id.org/optimar#deformationLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Degree of deformation recorded in the component."
+  }, {
+    "@language" : "es",
+    "@value" : "Grado de deformación registrado en el componente."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#Data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Deformation level"
+  }, {
+    "@language" : "es",
+    "@value" : "Nivel de Deformación"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
   "@id" : "https://w3id.org/optimar#detectedBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1467,6 +1764,32 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/optimar#Sensor"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/optimar#detects"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#detects",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relaciona un sensor con el evento que detecta."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates a sensor to the event that it detects."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#Sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Detecta"
+  }, {
+    "@language" : "en",
+    "@value" : "Detects"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#Event"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#detectsCorrosion",
@@ -1585,26 +1908,26 @@
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#hasCapacity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Capacidad nominal de generación de la turbina."
+    "@value" : "Capacidad nominal de generación expresada en unidades QUDT (tipicamente MW)."
   }, {
     "@language" : "en",
-    "@value" : "Rated generation capacity of the turbine."
+    "@value" : "Nominal generation capacity expressed in QUDT units (typically MW)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/optimar#Turbine"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "Capacidad"
+    "@value" : "Capacidad nominal"
   }, {
     "@language" : "en",
-    "@value" : "Capacity"
+    "@value" : "Nominal capacity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://qudt.org/schema/qudt/QuantityValue"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#hasFailureCause",
@@ -1637,7 +1960,7 @@
     "@value" : "Indica el rol que desempeña un actor dentro del sistema."
   }, {
     "@language" : "en",
-    "@value" : "Indicas the role that an actor performs within the system."
+    "@value" : "Indicates the role that an actor performs within the system."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/optimar#Actor"
@@ -1651,6 +1974,29 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/optimar#Role"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#hasTurbineComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que una turbina tiene un componente de turbina específico."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates that a turbine has a specific turbine component."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#Turbine"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Has turbine component"
+  }, {
+    "@language" : "es",
+    "@value" : "Tiene componente de turbina"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#TurbineComponent"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#height",
@@ -1697,6 +2043,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/optimar#Component"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/optimar#isHousedIn"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#imageURL",
@@ -1720,6 +2069,78 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#isHousedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que un componente está fisicamente contenido dentro de otro."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates that a component is physically contained within another."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Está alojado en"
+  }, {
+    "@language" : "en",
+    "@value" : "Is housed in"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#Component"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#isMonitoredBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relaciona un componente de turbina con los sensores que lo supervisan."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates a turbine component with the sensors it is monitored by."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#TurbineComponent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Es monitoreado por"
+  }, {
+    "@language" : "en",
+    "@value" : "Is monitored by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#Sensor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#isPartOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que un componente de turbina forma parte de una turbina específica."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates that a turbine component is part of a specific turbine."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#TurbineComponent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Es parte de"
+  }, {
+    "@language" : "en",
+    "@value" : "Is part of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#Turbine"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/optimar#hasTurbineComponent"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#isSupportedBy",
@@ -1781,17 +2202,17 @@
     "@id" : "https://w3id.org/optimar#CorrosionEvent"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Corrosión clara"
-  }, {
     "@language" : "en",
-    "@value" : "Light corrosion"
+    "@value" : "Light corrosion level"
+  }, {
+    "@language" : "es",
+    "@value" : "Nivel de corrosión clara"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/optimar#Corrosion"
+    "@id" : "https://w3id.org/optimar#CorrosionLevel"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#locatedIn",
@@ -1843,11 +2264,11 @@
   "@id" : "https://w3id.org/optimar#manages",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que un actor se encarga de la gestión de una plataforma eólica o su sistema de anclaje."
+  }, {
     "@language" : "en",
     "@value" : "Indicates that an actor is responsible for managing a wind power platform or its mooring system."
-  }, {
-    "@language" : "es",
-    "@value" : "Infica que un actor se encarga de la gestión de una plataforma eólica o su sistema de anclaje."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/optimar#Actor"
@@ -2024,24 +2445,24 @@
     "@id" : "https://w3id.org/optimar#EnvironmentalCondition"
   } ]
 }, {
-  "@id" : "https://w3id.org/optimar#misalignment",
+  "@id" : "https://w3id.org/optimar#misalignmentLevel",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Measure of the misalignment detected in a component."
+    "@value" : "Measure of the misalignment level detected in a component."
   }, {
     "@language" : "es",
-    "@value" : "Medida de la falta de alineación detectada en un componente."
+    "@value" : "Medida del grado de desalineación detectada en un componente."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/optimar#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "Desalineación"
-  }, {
     "@language" : "en",
-    "@value" : "Misalignment"
+    "@value" : "Misalignment level"
+  }, {
+    "@language" : "es",
+    "@value" : "Nivel de desalineación"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
@@ -2117,7 +2538,27 @@
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#performedBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que un mantenimiento se ha realizado por un actor."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates that a maintenance has been performed by an actor."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#Maintenance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Performed by"
+  }, {
+    "@language" : "es",
+    "@value" : "Realizado por"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#Actor"
+  } ]
 }, {
   "@id" : "https://w3id.org/optimar#performedMaintenance",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
@@ -2165,8 +2606,8 @@
     "@id" : "https://w3id.org/optimar#Task"
   } ]
 }, {
-  "@id" : "https://w3id.org/optimar#pressure",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@id" : "https://w3id.org/optimar#pressureLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
     "@value" : "Presión ejercida sobre un componente."
@@ -2179,13 +2620,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "Presión"
+    "@value" : "Nivel de presión"
   }, {
     "@language" : "en",
-    "@value" : "Pressure"
+    "@value" : "Pressure level"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+    "@id" : "http://qudt.org/schema/qudt/QuantityValue"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#relatedToComponent",
@@ -2211,6 +2652,29 @@
     "@id" : "https://w3id.org/optimar#Component"
   } ]
 }, {
+  "@id" : "https://w3id.org/optimar#requiresMaintenance",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relaciona un componente con las tareas de mantenimiento necesarias."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates a component with the required maintenance tasks."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#TurbineComponent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Requiere mantenimiento"
+  }, {
+    "@language" : "en",
+    "@value" : "Requires maintenance"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#Maintenance"
+  } ]
+}, {
   "@id" : "https://w3id.org/optimar#rotationSpeed",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2234,8 +2698,8 @@
     "@id" : "http://qudt.org/schema/qudt/QuantityValue"
   } ]
 }, {
-  "@id" : "https://w3id.org/optimar#stress",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@id" : "https://w3id.org/optimar#stressLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
     "@value" : "Nivel de tensión registrado en un componente."
@@ -2247,14 +2711,14 @@
     "@id" : "https://w3id.org/optimar#Data"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "Stress"
-  }, {
     "@language" : "es",
-    "@value" : "Tensión"
+    "@value" : "Nivel de tensión"
+  }, {
+    "@language" : "en",
+    "@value" : "Stress level"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+    "@id" : "http://qudt.org/schema/qudt/QuantityValue"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#supports",
@@ -2398,8 +2862,8 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
-  "@id" : "https://w3id.org/optimar#vibrations",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@id" : "https://w3id.org/optimar#vibrationLevel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Level of vibrations recorded in a component or system."
@@ -2412,13 +2876,13 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "Vibraciones"
+    "@value" : "Nivel de Vibracion"
   }, {
     "@language" : "en",
-    "@value" : "Vibrations"
+    "@value" : "Vibration level"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+    "@id" : "http://qudt.org/schema/qudt/QuantityValue"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#width",
@@ -2494,5 +2958,5 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://www.w3.org/ns/sosa/Sensor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class", "http://www.w3.org/2002/07/owl#NamedIndividual" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 } ]

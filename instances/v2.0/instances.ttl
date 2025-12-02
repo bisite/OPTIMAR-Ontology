@@ -1,0 +1,205 @@
+@prefix ex: <https://w3id.org/optimar#> .
+@prefix sosa: <https://www.w3.org/ns/sosa/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+##########################################################
+# Platform and Location
+##########################################################
+
+ex:NorthSeaLocation a ex:Location ;
+    rdfs:label "Mar del Norte"@es ;
+    rdfs:label "North Sea"@en .
+
+ex:OptimarPlatform01 a ex:FloatingPlatform ;
+    rdfs:label "Plataforma Flotante OPTiMAR 01"@es ;
+    rdfs:label "OPTiMAR Floating Platform 01"@en ;
+    ex:locatedIn ex:NorthSeaLocation .
+    # Nota: La relación estructural se define a través de la torre que se apoya en la subestructura
+
+##########################################################
+# Structural Components (Floating & Mooring)
+##########################################################
+
+ex:FloatingSubstructure01 a ex:FloatingSubstructure ;
+    rdfs:label "Subestructura flotante 01"@es ;
+    ex:material "Acero Naval"@es ;
+    ex:supports ex:Tower01 .
+
+ex:MooringSystem01 a ex:MooringSystem ;
+    rdfs:label "Sistema de amarre 01"@es ;
+    ex:connectedTo ex:FloatingSubstructure01 .
+
+##########################################################
+# Turbine and its components
+##########################################################
+
+ex:Turbine01 a ex:Turbine ;
+    rdfs:label "Turbina Eólica 01"@es ;
+    ex:operationalStatus "Operativa"@es ;
+    
+    # Propiedades QUDT (QuantityValue)
+    ex:hasCapacity [ 
+        a qudt:QuantityValue ; 
+        qudt:numericValue "15"^^xsd:decimal ; 
+        qudt:unit unit:MegaW 
+    ] ;
+    
+    # Relación con sus componentes principales
+    ex:hasTurbineComponent ex:Tower01, ex:Nacelle01, ex:Hub01, ex:Blade01, ex:Blade02, ex:Blade03 .
+
+ex:Tower01 a ex:Tower ;
+    rdfs:label "Torre T1"@es ;
+    ex:height [ 
+        a qudt:QuantityValue ; 
+        qudt:numericValue "120"^^xsd:decimal ; 
+        qudt:unit unit:M 
+    ] ;
+    ex:isSupportedBy ex:FloatingSubstructure01 ;
+    ex:supports ex:Nacelle01 .
+
+ex:Nacelle01 a ex:Nacelle ;
+    rdfs:label "Nacelle T1"@es ;
+    ex:houses ex:Generator01 ;
+    ex:isSupportedBy ex:Tower01 .
+
+ex:Generator01 a ex:Generator ;
+    rdfs:label "Generador T1"@es ;
+    ex:mass [ 
+        a qudt:QuantityValue ; 
+        qudt:numericValue "35000"^^xsd:decimal ; 
+        qudt:unit unit:KiloGM 
+    ] ;
+    ex:isHousedIn ex:Nacelle01 .
+
+ex:Hub01 a ex:Hub ;
+    rdfs:label "Hub T1"@es ;
+    ex:connectedTo ex:Nacelle01 ;
+    ex:transmitsMovementTo ex:Generator01 .
+
+ex:Blade01 a ex:Blade ;
+    rdfs:label "Pala 01"@es ;
+    ex:externalShape "Aerodinámica"@es ;
+    ex:length [ 
+        a qudt:QuantityValue ; 
+        qudt:numericValue "90"^^xsd:decimal ; 
+        qudt:unit unit:M 
+    ] ;
+    ex:material "Fibra de Carbono"@es ;
+    ex:connectedTo ex:Hub01 .
+
+ex:PitchSystem01 a ex:PitchSystem ;
+    rdfs:label "Sistema de Pitch Pala 01"@es ;
+    ex:connectedTo ex:Blade01 .
+
+##########################################################
+# Sensors
+##########################################################
+
+ex:Anemometer01 a ex:Anemometer ;
+    rdfs:label "Anemómetro Principal"@es ;
+    ex:measuresWind ex:CurrentWindCondition ;
+    ex:isMonitoredBy ex:Operator01 .
+
+ex:CorrosionCam01 a ex:CorrosionCamera ;
+    rdfs:label "Cámara de corrosión - Pala 01"@es ;
+    sosa:observes ex:Blade01 ; # Propiedad heredada de SOSA
+    ex:detectsCorrosion ex:BladeCorrosionFailure .
+
+ex:VibrationSensor01 a ex:DynamicMonitor ;
+    rdfs:label "Sensor de vibración de Torre"@es ;
+    ex:measuresVibration ex:TowerVibrationData01 .
+
+##########################################################
+# Actors and Roles
+##########################################################
+
+ex:Operator01 a ex:MaintenanceOperator ;
+    rdfs:label "Juan Pérez"@es ;
+    ex:hasRole ex:TechnicalRole ;
+    ex:monitors ex:Anemometer01 ;
+    ex:performsTask ex:RoutineInspection01 .
+
+ex:Analyst01 a ex:DataAnalyst ;
+    rdfs:label "Ana García"@es ;
+    ex:hasRole ex:AnalyticalRole ;
+    ex:analyzes ex:CorrosionEvent01 .
+
+ex:CloudAdmin01 a ex:CloudAdministrator ;
+    rdfs:label "Admin Cloud"@es ;
+    ex:manages ex:OptimarPlatform01 .
+
+##########################################################
+# Tasks and Maintenance
+##########################################################
+
+ex:RoutineInspection01 a ex:MonitoringTask ;
+    rdfs:label "Inspección Rutinaria de Sensores"@es ;
+    ex:performedBy ex:Operator01 .
+
+ex:BladeRepair01 a ex:Maintenance ;
+    rdfs:label "Reparación de superficie de Pala 01"@es ;
+    ex:performedBy ex:Operator01 ;
+    ex:requiresMaintenance ex:Blade01 .
+
+##########################################################
+# Failures and Events
+##########################################################
+
+# 1. El concepto abstracto del fallo (La causa)
+ex:BladeCorrosionFailure a ex:Corrosion ;
+    rdfs:label "Corrosión por salinidad"@es ;
+    ex:affects ex:Blade01 ;
+    ex:hasFailureCause ex:CurrentWindCondition . # Asumiendo que el viento/ambiente salino es la causa
+
+# 2. El evento específico de detección (El suceso en el tiempo)
+ex:CorrosionEvent01 a ex:CorrosionEvent ;
+    rdfs:label "Evento de detección de corrosión #234"@es ;
+    ex:causedBy ex:BladeCorrosionFailure ;
+    ex:detectedBy ex:CorrosionCam01 ;
+    ex:relatedToComponent ex:Blade01 ;
+    ex:corrosionLevel "0.45"^^xsd:decimal ;
+    prov:generated ex:CorrosionImage01 .
+
+##########################################################
+# Data and Measurements
+##########################################################
+
+# Imagen generada por el evento
+ex:CorrosionImage01 a ex:Image ;
+    rdfs:label "Imagen térmica de corrosión"@es ;
+    ex:imageURL "http://storage.optimar.w3id.org/img/corr_01.jpg"^^xsd:string .
+
+# Datos de vibración (Instancia de VibrationData)
+ex:TowerVibrationData01 a ex:VibrationData ;
+    rdfs:label "Lectura de vibración Torre T1"@es ;
+    ex:value "0.05"^^xsd:decimal ;
+    ex:unit "mm/s" ;
+    ex:dateTime "2025-10-06T10:30:00"^^xsd:dateTime .
+
+# Observación SOSA (Vinculando sensor y dato)
+ex:Observation01 a ex:Observation ;
+    rdfs:label "Observación de Vibración 10:30"@es ;
+    ex:madeBySensor ex:VibrationSensor01 ;
+    sosa:hasResult ex:TowerVibrationData01 .
+
+##########################################################
+# Environmental Conditions
+##########################################################
+
+ex:CurrentWindCondition a ex:EnvironmentalCondition ;
+    rdfs:label "Condiciones actuales Viento"@es ;
+    ex:windSpeed [ 
+        a qudt:QuantityValue ; 
+        qudt:numericValue "12.5"^^xsd:decimal ; 
+        qudt:unit unit:M-PER-SEC 
+    ] ;
+    ex:windDirection [ 
+        a qudt:QuantityValue ; 
+        qudt:numericValue "280"^^xsd:decimal ; 
+        qudt:unit unit:DEG 
+    ] .

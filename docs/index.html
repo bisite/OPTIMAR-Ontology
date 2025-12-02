@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/optimar#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/optimar#","name":"Offshore Wind Power Platform Ontology for OPTiMAR", "headline":"Ontology modeling structural elements, sensors, events, and failures in offshore wind platforms, including measurement data and involved actors.", "dateReleased":"2025-09-30", "dateModified":"2025-10-06", "version":"1.0", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Alejandro Flores (USAL), Alberto Montero (USAL), Oihana Garcia (Tekniker) and Cristina Aceta (Tekniker)"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/optimar#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/optimar#","name":"Offshore Wind Power Platform Ontology for OPTiMAR", "headline":"Ontology modeling structural elements, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. Compatible with SOSA for observations and QUDT for units of measure.", "dateReleased":"2025-09-30", "dateModified":"2025-12-01", "version":"2.0", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Alejandro Flores (USAL), Alberto Montero (USAL), Oihana Garcia (Tekniker) and Cristina Aceta (Tekniker)"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -70,36 +70,41 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2025-10-06</dt>
+<dt>Modified on: 2025-12-01</dt>
 <dt>This version:</dt>
-<dd><a href="https://w3id.org/optimar/1.0">https://w3id.org/optimar/1.0</a></dd>
+<dd><a href="https://w3id.org/optimar/2.0">https://w3id.org/optimar/2.0</a></dd>
 <dt>Latest version:</dt>
 <dd><a href="https://w3id.org/optimar#">https://w3id.org/optimar#</a></dd>
+<dt>Previous version:</dt>
+<dd><a href="https://w3id.org/optimar/1.0">https://w3id.org/optimar/1.0</a></dd>
 <dt>Revision:</dt>
-<dd>1.0</dd>
+<dd>2.0</dd>
 <dt>Issued on:</dt>
-<dd>2025-09-30</dd>
+<dd>2025-12-02</dd>
 <dt>Authors:</dt>
 <dd>Alejandro Flores (USAL), Alberto Montero (USAL), Oihana Garcia (Tekniker) and Cristina Aceta (Tekniker)</dd>
 
 <dt>Publisher:</dt>
 <dd>University of Salamanca, Technology and Research Centre - Tekniker</dd>
+<dt>See also:</dt>
+<dd><a href="https://w3id.org/optimar#changelog">https://w3id.org/optimar#changelog</a></dd>
+
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="http://purl.org/NET/rdflicense/MIT1.0" target="_blank"><img src="https://img.shields.io/badge/License-MIT%20License-blue.svg" alt="http://purl.org/NET/rdflicense/MIT1.0" /></a>
 </dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
 <dd>Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.1234/abcd</dd>
 <dt>Compatible with:</dt>
-<dd><a href="https://w3id.org/optimar/0.2">https://w3id.org/optimar/0.2</a></dd>
+<dd><a href="https://w3id.org/optimar/1.0">https://w3id.org/optimar/1.0</a></dd>
 </dl>
 
 <hr/>
 </div>
 <div class="status">
 <div>
-<span>Stable</span>
+<span>Ontology Specification Draft</span>
 </div>
 </div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
-Ontology modeling structural elements, sensors, events, and failures in offshore wind platforms, including measurement data and involved actors.</span>
+Ontology modeling structural elements, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. Compatible with SOSA for observations and QUDT for units of measure.</span>
 </div>
 <div id="toc"></div> 
 
@@ -153,9 +158,6 @@ This ontology has the following classes and properties.</span>
       <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a>
    </li>
    <li>
-      <a href="#Base" title="https://w3id.org/optimar#Base">Base (floating substructure)</a>
-   </li>
-   <li>
       <a href="#Blade" title="https://w3id.org/optimar#Blade">Blade</a>
    </li>
    <li>
@@ -166,6 +168,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#ComponentBreakage" title="https://w3id.org/optimar#ComponentBreakage">Component Breakage</a>
+   </li>
+   <li>
+      <a href="#Corrosion" title="https://w3id.org/optimar#Corrosion">Corrosion</a>
    </li>
    <li>
       <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a>
@@ -195,13 +200,16 @@ This ontology has the following classes and properties.</span>
       <a href="#FailureEvent" title="https://w3id.org/optimar#FailureEvent">Failure Event</a>
    </li>
    <li>
-      <a href="#FloatingPlatform" title="https://w3id.org/optimar#FloatingPlatform">Floating Platform</a>
-   </li>
-   <li>
       <a href="#FloatingSubstructure" title="https://w3id.org/optimar#FloatingSubstructure">Floating Substructure</a>
    </li>
    <li>
+      <a href="#FloatingPlatform" title="https://w3id.org/optimar#FloatingPlatform">Floating Wind Power Platform</a>
+   </li>
+   <li>
       <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a>
+   </li>
+   <li>
+      <a href="#Generator" title="https://w3id.org/optimar#Generator">Generator</a>
    </li>
    <li>
       <a href="#Hub" title="https://w3id.org/optimar#Hub">Hub</a>
@@ -243,9 +251,7 @@ This ontology has the following classes and properties.</span>
       <a href="#Nacelle" title="https://w3id.org/optimar#Nacelle">Nacelle</a>
    </li>
    <li>
-      <a href="#Observation" title="https://w3id.org/optimar#Observation">
-         <span>Observation</span>
-      </a>
+      <a href="#Observation" title="https://w3id.org/optimar#Observation">Observation</a>
    </li>
    <li>
       <a href="#WindPowerPlatform" title="https://w3id.org/optimar#WindPowerPlatform">Offshore Wind Power Platform</a>
@@ -275,6 +281,9 @@ This ontology has the following classes and properties.</span>
       <a href="#StructuralComponent" title="https://w3id.org/optimar#StructuralComponent">Structural Components</a>
    </li>
    <li>
+      <a href="#Deformation" title="https://w3id.org/optimar#Deformation">Structural deformation</a>
+   </li>
+   <li>
       <a href="#StructuralInstability" title="https://w3id.org/optimar#StructuralInstability">Structural Instability</a>
    </li>
    <li>
@@ -302,16 +311,27 @@ This ontology has the following classes and properties.</span>
       <a href="#adjusts" title="https://w3id.org/optimar#adjusts">Adjusts</a>
    </li>
    <li>
+      <a href="#affectedBy" title="https://w3id.org/optimar#affectedBy">Affected by</a>
+   </li>
+   <li>
+      <a href="#affects" title="https://w3id.org/optimar#affects">Affects</a>
+   </li>
+   <li>
       <a href="#analyzes" title="https://w3id.org/optimar#analyzes">Analyzes</a>
    </li>
    <li>
       <a href="#causedBy" title="https://w3id.org/optimar#causedBy">Caused by</a>
    </li>
    <li>
-      <a href="#connectedTo" title="https://w3id.org/optimar#connectedTo">Connected to</a>
+      <a href="#connectedTo" title="https://w3id.org/optimar#connectedTo">
+         <span>Connected to</span>
+      </a>
    </li>
    <li>
       <a href="#detectedBy" title="https://w3id.org/optimar#detectedBy">Detected by</a>
+   </li>
+   <li>
+      <a href="#detects" title="https://w3id.org/optimar#detects">Detects</a>
    </li>
    <li>
       <a href="#detectsCorrosion" title="https://w3id.org/optimar#detectsCorrosion">Detects corrosion</a>
@@ -332,10 +352,22 @@ This ontology has the following classes and properties.</span>
       <a href="#hasRole" title="https://w3id.org/optimar#hasRole">Has role</a>
    </li>
    <li>
+      <a href="#hasTurbineComponent" title="https://w3id.org/optimar#hasTurbineComponent">Has turbine component</a>
+   </li>
+   <li>
       <a href="#height" title="https://w3id.org/optimar#height">Height</a>
    </li>
    <li>
       <a href="#houses" title="https://w3id.org/optimar#houses">Houses</a>
+   </li>
+   <li>
+      <a href="#isHousedIn" title="https://w3id.org/optimar#isHousedIn">Is housed in</a>
+   </li>
+   <li>
+      <a href="#isMonitoredBy" title="https://w3id.org/optimar#isMonitoredBy">Is monitored by</a>
+   </li>
+   <li>
+      <a href="#isPartOf" title="https://w3id.org/optimar#isPartOf">Is part of</a>
    </li>
    <li>
       <a href="#isSupportedBy" title="https://w3id.org/optimar#isSupportedBy">Is supported by</a>
@@ -371,16 +403,35 @@ This ontology has the following classes and properties.</span>
       <a href="#monitorsDeformation" title="https://w3id.org/optimar#monitorsDeformation">Monitors deformation</a>
    </li>
    <li>
+      <a href="#hasCapacity" title="https://w3id.org/optimar#hasCapacity">Nominal capacity</a>
+   </li>
+   <li>
+      <a href="#performedBy" title="https://w3id.org/optimar#performedBy">Performed by</a>
+   </li>
+   <li>
       <a href="#performedMaintenance" title="https://w3id.org/optimar#performedMaintenance">Performs maintenance</a>
    </li>
    <li>
       <a href="#performsTask" title="https://w3id.org/optimar#performsTask">Performs task</a>
    </li>
    <li>
+      <a href="#pressureLevel" title="https://w3id.org/optimar#pressureLevel">
+         <span>Pressure level</span>
+      </a>
+   </li>
+   <li>
       <a href="#relatedToComponent" title="https://w3id.org/optimar#relatedToComponent">Related to component</a>
    </li>
    <li>
+      <a href="#requiresMaintenance" title="https://w3id.org/optimar#requiresMaintenance">Requires maintenance</a>
+   </li>
+   <li>
       <a href="#rotationSpeed" title="https://w3id.org/optimar#rotationSpeed">Rotation speed</a>
+   </li>
+   <li>
+      <a href="#stressLevel" title="https://w3id.org/optimar#stressLevel">
+         <span>Stress level</span>
+      </a>
    </li>
    <li>
       <a href="#supports" title="https://w3id.org/optimar#supports">Supports</a>
@@ -395,6 +446,11 @@ This ontology has the following classes and properties.</span>
       <a href="#transmitsMovementTo" title="https://w3id.org/optimar#transmitsMovementTo">Transmits movement to</a>
    </li>
    <li>
+      <a href="#vibrationLevel" title="https://w3id.org/optimar#vibrationLevel">
+         <span>Vibration level</span>
+      </a>
+   </li>
+   <li>
       <a href="#width" title="https://w3id.org/optimar#width">Width</a>
    </li>
    <li>
@@ -407,23 +463,16 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#hasCapacity" title="https://w3id.org/optimar#hasCapacity">Capacity</a>
+      <a href="#corrosionLevel" title="https://w3id.org/optimar#corrosionLevel">Corrosion level</a>
    </li>
    <li>
-      <a href="#Corrosion" title="https://w3id.org/optimar#Corrosion">
-         <span>Corrosion</span>
-      </a>
-   </li>
-   <li>
-      <a href="#darkCorrosion" title="https://w3id.org/optimar#darkCorrosion">Dark corrosion</a>
+      <a href="#darkCorrosionLevel" title="https://w3id.org/optimar#darkCorrosionLevel">Dark corrosion level</a>
    </li>
    <li>
       <a href="#dateTime" title="https://w3id.org/optimar#dateTime">Date and time</a>
    </li>
    <li>
-      <a href="#Deformation" title="https://w3id.org/optimar#Deformation">
-         <span>Deformation</span>
-      </a>
+      <a href="#deformationLevel" title="https://w3id.org/optimar#deformationLevel">Deformation level</a>
    </li>
    <li>
       <a href="#displacement" title="https://w3id.org/optimar#displacement">Displacement</a>
@@ -435,7 +484,7 @@ This ontology has the following classes and properties.</span>
       <a href="#imageURL" title="https://w3id.org/optimar#imageURL">Image URL</a>
    </li>
    <li>
-      <a href="#lightCorrosion" title="https://w3id.org/optimar#lightCorrosion">Light corrosion</a>
+      <a href="#lightCorrosion" title="https://w3id.org/optimar#lightCorrosion">Light corrosion level</a>
    </li>
    <li>
       <a href="#material" title="https://w3id.org/optimar#material">Material</a>
@@ -447,25 +496,16 @@ This ontology has the following classes and properties.</span>
       <a href="#materialWear" title="https://w3id.org/optimar#materialWear">Material wear</a>
    </li>
    <li>
-      <a href="#misalignment" title="https://w3id.org/optimar#misalignment">Misalignment</a>
+      <a href="#misalignmentLevel" title="https://w3id.org/optimar#misalignmentLevel">Misalignment level</a>
    </li>
    <li>
       <a href="#operationalStatus" title="https://w3id.org/optimar#operationalStatus">Operational status</a>
-   </li>
-   <li>
-      <a href="#pressure" title="https://w3id.org/optimar#pressure">Pressure</a>
-   </li>
-   <li>
-      <a href="#stress" title="https://w3id.org/optimar#stress">Stress</a>
    </li>
    <li>
       <a href="#unit" title="https://w3id.org/optimar#unit">Unit</a>
    </li>
    <li>
       <a href="#value" title="https://w3id.org/optimar#value">Value</a>
-   </li>
-   <li>
-      <a href="#vibrations" title="https://w3id.org/optimar#vibrations">Vibrations</a>
    </li>
 </ul><h4>Annotation Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -531,11 +571,6 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#performedBy" title="https://w3id.org/optimar#performedBy">
-         <span>performed By</span>
-      </a>
-   </li>
-   <li>
       <a href="#http://purl.org/vocab/vann/preferredNamespacePrefix"
          title="http://purl.org/vocab/vann/preferredNamespacePrefix">
          <span>preferred Namespace Prefix</span>
@@ -570,8 +605,8 @@ This ontology has the following classes and properties.</span>
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     class="hlist">
    <li>
-      <a href="#Observation" title="https://w3id.org/optimar#Observation">
-         <span>Observation</span>
+      <a href="#connectedTo" title="https://w3id.org/optimar#connectedTo">
+         <span>Connected to</span>
       </a>
    </li>
 </ul><iframe src="webvowl/index.html"></iframe> 
@@ -581,7 +616,19 @@ This ontology has the following classes and properties.</span>
 <!--DESCRIPTION SECTION-->
     <div id="description"><h2 id="desc" class="list">Offshore Wind Power Platform Ontology for OPTiMAR: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
-<span class="markdown">This ontology describes the components, failures, sensors, and events related to offshore wind platforms.</span></div>
+<span class="markdown">Version 2.0 (2025-12-02) - Major improvements:
+        - Added ex:Generator class for turbine generators
+        - Added inverse properties: ex:isHousedIn, ex:detects, ex:affects
+        - Declared ex:connectedTo as symmetric property
+        - Renamed properties to avoid class name collisions: ex:deformationLevel, ex:misalignmentLevel
+        - Corrected ex:affectedBy domain to ex:Component (previously ex:TurbineComponent)
+        - Added ex:StructuralComponent as subclass of ex:Component
+        - Added structural restrictions to TurbineComponent classes
+        - Separated failure classes from failure event classes
+        - Fixed restriction syntax in ex:Maintenance and ex:Observation
+        - Improved consistency in QUDT usage for physical quantities
+        - Added cardinality constraints to ex:Turbine class
+    </span></div>
    
 
 <!--CROSSREF SECTION-->
@@ -593,11 +640,11 @@ This section provides details for each class and property defined by Offshore Wi
   <li><a href="#Actor" title="https://w3id.org/optimar#Actor">Actor</a></li>
   <li><a href="#AnalyticalRole" title="https://w3id.org/optimar#AnalyticalRole">Analytical Role</a></li>
   <li><a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a></li>
-  <li><a href="#Base" title="https://w3id.org/optimar#Base">Base (floating substructure)</a></li>
   <li><a href="#Blade" title="https://w3id.org/optimar#Blade">Blade</a></li>
   <li><a href="#CloudAdministrator" title="https://w3id.org/optimar#CloudAdministrator">Cloud Administrator</a></li>
   <li><a href="#Component" title="https://w3id.org/optimar#Component">Component</a></li>
   <li><a href="#ComponentBreakage" title="https://w3id.org/optimar#ComponentBreakage">Component Breakage</a></li>
+  <li><a href="#Corrosion" title="https://w3id.org/optimar#Corrosion">Corrosion</a></li>
   <li><a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a></li>
   <li><a href="#CorrosionEvent" title="https://w3id.org/optimar#CorrosionEvent">Corrosion Event</a></li>
   <li><a href="#Data" title="https://w3id.org/optimar#Data">Data</a></li>
@@ -607,9 +654,10 @@ This section provides details for each class and property defined by Offshore Wi
   <li><a href="#Event" title="https://w3id.org/optimar#Event">Event</a></li>
   <li><a href="#Failure" title="https://w3id.org/optimar#Failure">Failure</a></li>
   <li><a href="#FailureEvent" title="https://w3id.org/optimar#FailureEvent">Failure Event</a></li>
-  <li><a href="#FloatingPlatform" title="https://w3id.org/optimar#FloatingPlatform">Floating Platform</a></li>
   <li><a href="#FloatingSubstructure" title="https://w3id.org/optimar#FloatingSubstructure">Floating Substructure</a></li>
+  <li><a href="#FloatingPlatform" title="https://w3id.org/optimar#FloatingPlatform">Floating Wind Power Platform</a></li>
   <li><a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a></li>
+  <li><a href="#Generator" title="https://w3id.org/optimar#Generator">Generator</a></li>
   <li><a href="#Hub" title="https://w3id.org/optimar#Hub">Hub</a></li>
   <li><a href="#Image" title="https://w3id.org/optimar#Image">Image</a></li>
   <li><a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a></li>
@@ -623,7 +671,7 @@ This section provides details for each class and property defined by Offshore Wi
   <li><a href="#MonitoringTask" title="https://w3id.org/optimar#MonitoringTask">Monitoring Task</a></li>
   <li><a href="#MooringSystem" title="https://w3id.org/optimar#MooringSystem">Mooring System</a></li>
   <li><a href="#Nacelle" title="https://w3id.org/optimar#Nacelle">Nacelle</a></li>
-  <li><a href="#Observation" title="https://w3id.org/optimar#Observation"> <span>Observation</span> </a></li>
+  <li><a href="#Observation" title="https://w3id.org/optimar#Observation">Observation</a></li>
   <li><a href="#WindPowerPlatform" title="https://w3id.org/optimar#WindPowerPlatform">Offshore Wind Power Platform</a></li>
   <li><a href="#ParkOwner" title="https://w3id.org/optimar#ParkOwner">Park Owner</a></li>
   <li><a href="#PitchSystem" title="https://w3id.org/optimar#PitchSystem">Pitch System</a></li>
@@ -633,6 +681,7 @@ This section provides details for each class and property defined by Offshore Wi
   <li><a href="#StressData" title="https://w3id.org/optimar#StressData">Stress Data</a></li>
   <li><a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a></li>
   <li><a href="#StructuralComponent" title="https://w3id.org/optimar#StructuralComponent">Structural Components</a></li>
+  <li><a href="#Deformation" title="https://w3id.org/optimar#Deformation">Structural deformation</a></li>
   <li><a href="#StructuralInstability" title="https://w3id.org/optimar#StructuralInstability">Structural Instability</a></li>
   <li><a href="#Task" title="https://w3id.org/optimar#Task">Task</a></li>
   <li><a href="#TechnicalRole" title="https://w3id.org/optimar#TechnicalRole">Technical Role</a></li>
@@ -659,6 +708,12 @@ This section provides details for each class and property defined by Offshore Wi
    </dt>
    <dd>
     <a href="#adjusts" title="https://w3id.org/optimar#adjusts">Adjusts</a> <sup class="type-op" title="object property">op</sup>, <a href="#analyzes" title="https://w3id.org/optimar#analyzes">Analyzes</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasRole" title="https://w3id.org/optimar#hasRole">Has role</a> <sup class="type-op" title="object property">op</sup>, <a href="#manages" title="https://w3id.org/optimar#manages">Manages</a> <sup class="type-op" title="object property">op</sup>, <a href="#monitors" title="https://w3id.org/optimar#monitors">Monitors</a> <sup class="type-op" title="object property">op</sup>, <a href="#performedMaintenance" title="https://w3id.org/optimar#performedMaintenance">Performs maintenance</a> <sup class="type-op" title="object property">op</sup>, <a href="#performsTask" title="https://w3id.org/optimar#performsTask">Performs task</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#performedBy" title="https://w3id.org/optimar#performedBy">Performed by</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -695,21 +750,6 @@ This section provides details for each class and property defined by Offshore Wi
    </dt>
    <dd>
     <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
- <div class="entity" id="Base">
-  <h3>Base (floating substructure)<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/optimar#Base</p>
-  <div class="comment">
-   <span class="markdown">The base that supports the floating platform.</span>
-  </div>
-  <dl class="description">
-   <dt>
-    has super-classes
-   </dt>
-   <dd>
-    <a href="#StructuralComponent" title="https://w3id.org/optimar#StructuralComponent">Structural Components</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -754,19 +794,19 @@ This section provides details for each class and property defined by Offshore Wi
     has sub-classes
    </dt>
    <dd>
-    <a href="#FloatingPlatform" title="https://w3id.org/optimar#FloatingPlatform">Floating Platform</a> <sup class="type-c" title="class">c</sup>, <a href="#PitchSystem" title="https://w3id.org/optimar#PitchSystem">Pitch System</a> <sup class="type-c" title="class">c</sup>, <a href="#Turbine" title="https://w3id.org/optimar#Turbine">Turbine</a> <sup class="type-c" title="class">c</sup>
+    <a href="#Generator" title="https://w3id.org/optimar#Generator">Generator</a> <sup class="type-c" title="class">c</sup>, <a href="#PitchSystem" title="https://w3id.org/optimar#PitchSystem">Pitch System</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralComponent" title="https://w3id.org/optimar#StructuralComponent">Structural Components</a> <sup class="type-c" title="class">c</sup>, <a href="#Turbine" title="https://w3id.org/optimar#Turbine">Turbine</a> <sup class="type-c" title="class">c</sup>, <a href="#TurbineComponent" title="https://w3id.org/optimar#TurbineComponent">Turbine Components</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#connectedTo" title="https://w3id.org/optimar#connectedTo">Connected to</a> <sup class="type-op" title="object property">op</sup>, <a href="#diameter" title="https://w3id.org/optimar#diameter">Diameter</a> <sup class="type-op" title="object property">op</sup>, <a href="#externalShape" title="https://w3id.org/optimar#externalShape">External shape</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#height" title="https://w3id.org/optimar#height">Height</a> <sup class="type-op" title="object property">op</sup>, <a href="#houses" title="https://w3id.org/optimar#houses">Houses</a> <sup class="type-op" title="object property">op</sup>, <a href="#isSupportedBy" title="https://w3id.org/optimar#isSupportedBy">Is supported by</a> <sup class="type-op" title="object property">op</sup>, <a href="#length" title="https://w3id.org/optimar#length">Length</a> <sup class="type-op" title="object property">op</sup>, <a href="#mass" title="https://w3id.org/optimar#mass">Mass</a> <sup class="type-op" title="object property">op</sup>, <a href="#material" title="https://w3id.org/optimar#material">Material</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#rotationSpeed" title="https://w3id.org/optimar#rotationSpeed">Rotation speed</a> <sup class="type-op" title="object property">op</sup>, <a href="#supports" title="https://w3id.org/optimar#supports">Supports</a> <sup class="type-op" title="object property">op</sup>, <a href="#thickness" title="https://w3id.org/optimar#thickness">Thickness</a> <sup class="type-op" title="object property">op</sup>, <a href="#transmitsMovementTo" title="https://w3id.org/optimar#transmitsMovementTo">Transmits movement to</a> <sup class="type-op" title="object property">op</sup>, <a href="#width" title="https://w3id.org/optimar#width">Width</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#affectedBy" title="https://w3id.org/optimar#affectedBy">Affected by</a> <sup class="type-op" title="object property">op</sup>, <a href="#connectedTo" title="https://w3id.org/optimar#connectedTo">Connected to</a> <sup class="type-op" title="object property">op</sup>, <a href="#diameter" title="https://w3id.org/optimar#diameter">Diameter</a> <sup class="type-op" title="object property">op</sup>, <a href="#externalShape" title="https://w3id.org/optimar#externalShape">External shape</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#height" title="https://w3id.org/optimar#height">Height</a> <sup class="type-op" title="object property">op</sup>, <a href="#houses" title="https://w3id.org/optimar#houses">Houses</a> <sup class="type-op" title="object property">op</sup>, <a href="#isHousedIn" title="https://w3id.org/optimar#isHousedIn">Is housed in</a> <sup class="type-op" title="object property">op</sup>, <a href="#isSupportedBy" title="https://w3id.org/optimar#isSupportedBy">Is supported by</a> <sup class="type-op" title="object property">op</sup>, <a href="#length" title="https://w3id.org/optimar#length">Length</a> <sup class="type-op" title="object property">op</sup>, <a href="#mass" title="https://w3id.org/optimar#mass">Mass</a> <sup class="type-op" title="object property">op</sup>, <a href="#material" title="https://w3id.org/optimar#material">Material</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#rotationSpeed" title="https://w3id.org/optimar#rotationSpeed">Rotation speed</a> <sup class="type-op" title="object property">op</sup>, <a href="#supports" title="https://w3id.org/optimar#supports">Supports</a> <sup class="type-op" title="object property">op</sup>, <a href="#thickness" title="https://w3id.org/optimar#thickness">Thickness</a> <sup class="type-op" title="object property">op</sup>, <a href="#transmitsMovementTo" title="https://w3id.org/optimar#transmitsMovementTo">Transmits movement to</a> <sup class="type-op" title="object property">op</sup>, <a href="#width" title="https://w3id.org/optimar#width">Width</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#adjusts" title="https://w3id.org/optimar#adjusts">Adjusts</a> <sup class="type-op" title="object property">op</sup>, <a href="#connectedTo" title="https://w3id.org/optimar#connectedTo">Connected to</a> <sup class="type-op" title="object property">op</sup>, <a href="#houses" title="https://w3id.org/optimar#houses">Houses</a> <sup class="type-op" title="object property">op</sup>, <a href="#isSupportedBy" title="https://w3id.org/optimar#isSupportedBy">Is supported by</a> <sup class="type-op" title="object property">op</sup>, <a href="#monitors" title="https://w3id.org/optimar#monitors">Monitors</a> <sup class="type-op" title="object property">op</sup>, <a href="#relatedToComponent" title="https://w3id.org/optimar#relatedToComponent">Related to component</a> <sup class="type-op" title="object property">op</sup>, <a href="#supports" title="https://w3id.org/optimar#supports">Supports</a> <sup class="type-op" title="object property">op</sup>, <a href="#transmitsMovementTo" title="https://w3id.org/optimar#transmitsMovementTo">Transmits movement to</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#adjusts" title="https://w3id.org/optimar#adjusts">Adjusts</a> <sup class="type-op" title="object property">op</sup>, <a href="#affects" title="https://w3id.org/optimar#affects">Affects</a> <sup class="type-op" title="object property">op</sup>, <a href="#connectedTo" title="https://w3id.org/optimar#connectedTo">Connected to</a> <sup class="type-op" title="object property">op</sup>, <a href="#houses" title="https://w3id.org/optimar#houses">Houses</a> <sup class="type-op" title="object property">op</sup>, <a href="#isHousedIn" title="https://w3id.org/optimar#isHousedIn">Is housed in</a> <sup class="type-op" title="object property">op</sup>, <a href="#isSupportedBy" title="https://w3id.org/optimar#isSupportedBy">Is supported by</a> <sup class="type-op" title="object property">op</sup>, <a href="#monitors" title="https://w3id.org/optimar#monitors">Monitors</a> <sup class="type-op" title="object property">op</sup>, <a href="#relatedToComponent" title="https://w3id.org/optimar#relatedToComponent">Related to component</a> <sup class="type-op" title="object property">op</sup>, <a href="#supports" title="https://w3id.org/optimar#supports">Supports</a> <sup class="type-op" title="object property">op</sup>, <a href="#transmitsMovementTo" title="https://w3id.org/optimar#transmitsMovementTo">Transmits movement to</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -782,6 +822,33 @@ This section provides details for each class and property defined by Offshore Wi
    </dt>
    <dd>
     <a href="#Failure" title="https://w3id.org/optimar#Failure">Failure</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Corrosion">
+  <h3>Corrosion<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#Corrosion</p>
+  <div class="comment">
+   <span class="markdown">Failure caused by corrosion of the metallic structure of the platform.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Failure" title="https://w3id.org/optimar#Failure">Failure</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#detectsCorrosion" title="https://w3id.org/optimar#detectsCorrosion">Detects corrosion</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Deformation" title="https://w3id.org/optimar#Deformation">Structural deformation</a> <sup class="type-c" title="class">c</sup>, <a href="#MaterialFatigue" title="https://w3id.org/optimar#MaterialFatigue">Material Fatigue</a> <sup class="type-c" title="class">c</sup>, <a href="#Misalignment" title="https://w3id.org/optimar#Misalignment">Misalignment</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -823,7 +890,7 @@ This section provides details for each class and property defined by Offshore Wi
     is in domain of
    </dt>
    <dd>
-    <a href="#Corrosion" title="https://w3id.org/optimar#Corrosion">Corrosion</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#darkCorrosion" title="https://w3id.org/optimar#darkCorrosion">Dark corrosion</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#lightCorrosion" title="https://w3id.org/optimar#lightCorrosion">Light corrosion</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#corrosionLevel" title="https://w3id.org/optimar#corrosionLevel">Corrosion level</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#darkCorrosionLevel" title="https://w3id.org/optimar#darkCorrosionLevel">Dark corrosion level</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#lightCorrosion" title="https://w3id.org/optimar#lightCorrosion">Light corrosion level</a> <sup class="type-dp" title="data property">dp</sup>
    </dd>
    <dt>
     is disjoint with
@@ -850,7 +917,7 @@ This section provides details for each class and property defined by Offshore Wi
     is in domain of
    </dt>
    <dd>
-    <a href="#Deformation" title="https://w3id.org/optimar#Deformation">Deformation</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#displacement" title="https://w3id.org/optimar#displacement">Displacement</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#materialFatigue" title="https://w3id.org/optimar#materialFatigue">Material fatigue</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#materialWear" title="https://w3id.org/optimar#materialWear">Material wear</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#misalignment" title="https://w3id.org/optimar#misalignment">Misalignment</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#pressure" title="https://w3id.org/optimar#pressure">Pressure</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#stress" title="https://w3id.org/optimar#stress">Stress</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#temperature" title="https://w3id.org/optimar#temperature">Temperature</a> <sup class="type-op" title="object property">op</sup>, <a href="#vibrations" title="https://w3id.org/optimar#vibrations">Vibrations</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#deformationLevel" title="https://w3id.org/optimar#deformationLevel">Deformation level</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#displacement" title="https://w3id.org/optimar#displacement">Displacement</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#materialFatigue" title="https://w3id.org/optimar#materialFatigue">Material fatigue</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#materialWear" title="https://w3id.org/optimar#materialWear">Material wear</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#misalignmentLevel" title="https://w3id.org/optimar#misalignmentLevel">Misalignment level</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#pressureLevel" title="https://w3id.org/optimar#pressureLevel">Pressure level</a> <sup class="type-op" title="object property">op</sup>, <a href="#stressLevel" title="https://w3id.org/optimar#stressLevel">Stress level</a> <sup class="type-op" title="object property">op</sup>, <a href="#temperature" title="https://w3id.org/optimar#temperature">Temperature</a> <sup class="type-op" title="object property">op</sup>, <a href="#vibrationLevel" title="https://w3id.org/optimar#vibrationLevel">Vibration level</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
@@ -936,6 +1003,12 @@ This section provides details for each class and property defined by Offshore Wi
    <dd>
     <a href="#causedBy" title="https://w3id.org/optimar#causedBy">Caused by</a> <sup class="type-op" title="object property">op</sup>, <a href="#detectedBy" title="https://w3id.org/optimar#detectedBy">Detected by</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/ns/prov#generated" title="http://www.w3.org/ns/prov#generated">Generates</a> <sup class="type-op" title="object property">op</sup>, <a href="#relatedToComponent" title="https://w3id.org/optimar#relatedToComponent">Related to component</a> <sup class="type-op" title="object property">op</sup>
    </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#detects" title="https://w3id.org/optimar#detects">Detects</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="Failure">
@@ -949,19 +1022,19 @@ This section provides details for each class and property defined by Offshore Wi
     has sub-classes
    </dt>
    <dd>
-    <a href="#ComponentBreakage" title="https://w3id.org/optimar#ComponentBreakage">Component Breakage</a> <sup class="type-c" title="class">c</sup>, <a href="#MaterialFatigue" title="https://w3id.org/optimar#MaterialFatigue">Material Fatigue</a> <sup class="type-c" title="class">c</sup>, <a href="#Misalignment" title="https://w3id.org/optimar#Misalignment">Misalignment</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralInstability" title="https://w3id.org/optimar#StructuralInstability">Structural Instability</a> <sup class="type-c" title="class">c</sup>
+    <a href="#ComponentBreakage" title="https://w3id.org/optimar#ComponentBreakage">Component Breakage</a> <sup class="type-c" title="class">c</sup>, <a href="#Corrosion" title="https://w3id.org/optimar#Corrosion">Corrosion</a> <sup class="type-c" title="class">c</sup>, <a href="#MaterialFatigue" title="https://w3id.org/optimar#MaterialFatigue">Material Fatigue</a> <sup class="type-c" title="class">c</sup>, <a href="#Misalignment" title="https://w3id.org/optimar#Misalignment">Misalignment</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralInstability" title="https://w3id.org/optimar#StructuralInstability">Structural Instability</a> <sup class="type-c" title="class">c</sup>, <a href="#Deformation" title="https://w3id.org/optimar#Deformation">Structural deformation</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
    </dt>
    <dd>
-    <a href="#hasFailureCause" title="https://w3id.org/optimar#hasFailureCause">Failure cause</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#affects" title="https://w3id.org/optimar#affects">Affects</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasFailureCause" title="https://w3id.org/optimar#hasFailureCause">Failure cause</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#analyzes" title="https://w3id.org/optimar#analyzes">Analyzes</a> <sup class="type-op" title="object property">op</sup>, <a href="#causedBy" title="https://w3id.org/optimar#causedBy">Caused by</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#affectedBy" title="https://w3id.org/optimar#affectedBy">Affected by</a> <sup class="type-op" title="object property">op</sup>, <a href="#analyzes" title="https://w3id.org/optimar#analyzes">Analyzes</a> <sup class="type-op" title="object property">op</sup>, <a href="#causedBy" title="https://w3id.org/optimar#causedBy">Caused by</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -992,26 +1065,11 @@ This section provides details for each class and property defined by Offshore Wi
    </dd>
   </dl>
  </div>
- <div class="entity" id="FloatingPlatform">
-  <h3>Floating Platform<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/optimar#FloatingPlatform</p>
-  <div class="comment">
-   <span class="markdown">A floating platform that serves as a base for the wind turbine.</span>
-  </div>
-  <dl class="description">
-   <dt>
-    has super-classes
-   </dt>
-   <dd>
-    <a href="#Component" title="https://w3id.org/optimar#Component">Component</a> <sup class="type-c" title="class">c</sup>
-   </dd>
-  </dl>
- </div>
  <div class="entity" id="FloatingSubstructure">
   <h3>Floating Substructure<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/optimar#FloatingSubstructure</p>
   <div class="comment">
-   <span class="markdown">The floating substructure that allows the platform to be stable at sea.</span>
+   <span class="markdown">The floating substructure that provides stability (spar, semi-sumergible, TLP, etc.)</span>
   </div>
   <dl class="description">
    <dt>
@@ -1019,6 +1077,21 @@ This section provides details for each class and property defined by Offshore Wi
    </dt>
    <dd>
     <a href="#StructuralComponent" title="https://w3id.org/optimar#StructuralComponent">Structural Components</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="FloatingPlatform">
+  <h3>Floating Wind Power Platform<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#FloatingPlatform</p>
+  <div class="comment">
+   <span class="markdown">An offshore wind power platform that includes a turbine, floating substructure, and mooring system</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#WindPowerPlatform" title="https://w3id.org/optimar#WindPowerPlatform">Offshore Wind Power Platform</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1034,6 +1107,21 @@ This section provides details for each class and property defined by Offshore Wi
    </dt>
    <dd>
     <a href="#Sensor" title="https://w3id.org/optimar#Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Generator">
+  <h3>Generator<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#Generator</p>
+  <div class="comment">
+   <span class="markdown">Electrical generator that converts mechanical energy into electrical energy.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Component" title="https://w3id.org/optimar#Component">Component</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1111,10 +1199,20 @@ This section provides details for each class and property defined by Offshore Wi
   </div>
   <dl class="description">
    <dt>
+    has super-classes
+   </dt>
+   <dd></dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#performedBy" title="https://w3id.org/optimar#performedBy">Performed by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#performedMaintenance" title="https://w3id.org/optimar#performedMaintenance">Performs maintenance</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#performedMaintenance" title="https://w3id.org/optimar#performedMaintenance">Performs maintenance</a> <sup class="type-op" title="object property">op</sup>, <a href="#requiresMaintenance" title="https://w3id.org/optimar#requiresMaintenance">Requires maintenance</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1165,7 +1263,7 @@ This section provides details for each class and property defined by Offshore Wi
     is disjoint with
    </dt>
    <dd>
-    <a href="#CorrosionEvent" title="https://w3id.org/optimar#CorrosionEvent">Corrosion Event</a> <sup class="type-c" title="class">c</sup>, <a href="#Misalignment" title="https://w3id.org/optimar#Misalignment">Misalignment</a> <sup class="type-c" title="class">c</sup>
+    <a href="#Corrosion" title="https://w3id.org/optimar#Corrosion">Corrosion</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionEvent" title="https://w3id.org/optimar#CorrosionEvent">Corrosion Event</a> <sup class="type-c" title="class">c</sup>, <a href="#Deformation" title="https://w3id.org/optimar#Deformation">Structural deformation</a> <sup class="type-c" title="class">c</sup>, <a href="#Misalignment" title="https://w3id.org/optimar#Misalignment">Misalignment</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1213,7 +1311,7 @@ This section provides details for each class and property defined by Offshore Wi
     is disjoint with
    </dt>
    <dd>
-    <a href="#CorrosionEvent" title="https://w3id.org/optimar#CorrosionEvent">Corrosion Event</a> <sup class="type-c" title="class">c</sup>, <a href="#MaterialFatigue" title="https://w3id.org/optimar#MaterialFatigue">Material Fatigue</a> <sup class="type-c" title="class">c</sup>
+    <a href="#Corrosion" title="https://w3id.org/optimar#Corrosion">Corrosion</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionEvent" title="https://w3id.org/optimar#CorrosionEvent">Corrosion Event</a> <sup class="type-c" title="class">c</sup>, <a href="#Deformation" title="https://w3id.org/optimar#Deformation">Structural deformation</a> <sup class="type-c" title="class">c</sup>, <a href="#MaterialFatigue" title="https://w3id.org/optimar#MaterialFatigue">Material Fatigue</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1271,6 +1369,9 @@ This section provides details for each class and property defined by Offshore Wi
  <div class="entity" id="Observation">
   <h3>Observation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/optimar#Observation</p>
+  <div class="comment">
+   <span class="markdown">The result of recording a phenomenon or condition, usually through a sensor or monitoring system.</span>
+  </div>
   <dl class="description">
    <dt>
     has super-classes
@@ -1284,12 +1385,6 @@ This section provides details for each class and property defined by Offshore Wi
    <dd>
     <a href="#failureObservation" title="https://w3id.org/optimar#failureObservation">Failure observation</a> <sup class="type-op" title="object property">op</sup>
    </dd>
-   <dt>
-    is also defined as
-   </dt>
-   <dd>
-    <a href="#Observation">named individual</a>
-   </dd>
   </dl>
  </div>
  <div class="entity" id="WindPowerPlatform">
@@ -1299,6 +1394,12 @@ This section provides details for each class and property defined by Offshore Wi
    <span class="markdown">An offshore wind power platform that generates electricity from wind.</span>
   </div>
   <dl class="description">
+   <dt>
+    has sub-classes
+   </dt>
+   <dd>
+    <a href="#FloatingPlatform" title="https://w3id.org/optimar#FloatingPlatform">Floating Wind Power Platform</a> <sup class="type-c" title="class">c</sup>
+   </dd>
    <dt>
     is in domain of
    </dt>
@@ -1408,13 +1509,13 @@ This section provides details for each class and property defined by Offshore Wi
     is in domain of
    </dt>
    <dd>
-    <a href="#detectsCorrosion" title="https://w3id.org/optimar#detectsCorrosion">Detects corrosion</a> <sup class="type-op" title="object property">op</sup>, <a href="#measuresStress" title="https://w3id.org/optimar#measuresStress">Measures stress</a> <sup class="type-op" title="object property">op</sup>, <a href="#measuresVibration" title="https://w3id.org/optimar#measuresVibration">Measures vibration</a> <sup class="type-op" title="object property">op</sup>, <a href="#measuresWind" title="https://w3id.org/optimar#measuresWind">Measures wind</a> <sup class="type-op" title="object property">op</sup>, <a href="#monitorsDeformation" title="https://w3id.org/optimar#monitorsDeformation">Monitors deformation</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#detects" title="https://w3id.org/optimar#detects">Detects</a> <sup class="type-op" title="object property">op</sup>, <a href="#detectsCorrosion" title="https://w3id.org/optimar#detectsCorrosion">Detects corrosion</a> <sup class="type-op" title="object property">op</sup>, <a href="#measuresStress" title="https://w3id.org/optimar#measuresStress">Measures stress</a> <sup class="type-op" title="object property">op</sup>, <a href="#measuresVibration" title="https://w3id.org/optimar#measuresVibration">Measures vibration</a> <sup class="type-op" title="object property">op</sup>, <a href="#measuresWind" title="https://w3id.org/optimar#measuresWind">Measures wind</a> <sup class="type-op" title="object property">op</sup>, <a href="#monitorsDeformation" title="https://w3id.org/optimar#monitorsDeformation">Monitors deformation</a> <sup class="type-op" title="object property">op</sup>
    </dd>
    <dt>
     is in range of
    </dt>
    <dd>
-    <a href="#detectedBy" title="https://w3id.org/optimar#detectedBy">Detected by</a> <sup class="type-op" title="object property">op</sup>, <a href="#monitors" title="https://w3id.org/optimar#monitors">Monitors</a> <sup class="type-op" title="object property">op</sup>
+    <a href="#detectedBy" title="https://w3id.org/optimar#detectedBy">Detected by</a> <sup class="type-op" title="object property">op</sup>, <a href="#isMonitoredBy" title="https://w3id.org/optimar#isMonitoredBy">Is monitored by</a> <sup class="type-op" title="object property">op</sup>, <a href="#monitors" title="https://w3id.org/optimar#monitors">Monitors</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1471,13 +1572,46 @@ This section provides details for each class and property defined by Offshore Wi
     is equivalent to
    </dt>
    <dd>
-    <a href="#Base" title="https://w3id.org/optimar#Base">Base (floating substructure)</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#FloatingSubstructure" title="https://w3id.org/optimar#FloatingSubstructure">Floating Substructure</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#MooringSystem" title="https://w3id.org/optimar#MooringSystem">Mooring System</a> <sup class="type-c" title="class">c</sup>
+    <a href="https://w3id.org/optimar#Base" target="_blank" title="https://w3id.org/optimar#Base">Base</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#FloatingSubstructure" title="https://w3id.org/optimar#FloatingSubstructure">Floating Substructure</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#MooringSystem" title="https://w3id.org/optimar#MooringSystem">Mooring System</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Component" title="https://w3id.org/optimar#Component">Component</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     has sub-classes
    </dt>
    <dd>
-    <a href="#Base" title="https://w3id.org/optimar#Base">Base (floating substructure)</a> <sup class="type-c" title="class">c</sup>, <a href="#FloatingSubstructure" title="https://w3id.org/optimar#FloatingSubstructure">Floating Substructure</a> <sup class="type-c" title="class">c</sup>, <a href="#MooringSystem" title="https://w3id.org/optimar#MooringSystem">Mooring System</a> <sup class="type-c" title="class">c</sup>
+    <a href="#FloatingSubstructure" title="https://w3id.org/optimar#FloatingSubstructure">Floating Substructure</a> <sup class="type-c" title="class">c</sup>, <a href="#MooringSystem" title="https://w3id.org/optimar#MooringSystem">Mooring System</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="Deformation">
+  <h3>Structural deformation<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#Deformation</p>
+  <div class="comment">
+   <span class="markdown">Failure caused by structural deformation of a component.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Failure" title="https://w3id.org/optimar#Failure">Failure</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#monitorsDeformation" title="https://w3id.org/optimar#monitorsDeformation">Monitors deformation</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="#Corrosion" title="https://w3id.org/optimar#Corrosion">Corrosion</a> <sup class="type-c" title="class">c</sup>, <a href="#MaterialFatigue" title="https://w3id.org/optimar#MaterialFatigue">Material Fatigue</a> <sup class="type-c" title="class">c</sup>, <a href="#Misalignment" title="https://w3id.org/optimar#Misalignment">Misalignment</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1564,7 +1698,13 @@ This section provides details for each class and property defined by Offshore Wi
     is in domain of
    </dt>
    <dd>
-    <a href="#hasCapacity" title="https://w3id.org/optimar#hasCapacity">Capacity</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#operationalStatus" title="https://w3id.org/optimar#operationalStatus">Operational status</a> <sup class="type-dp" title="data property">dp</sup>
+    <a href="#hasTurbineComponent" title="https://w3id.org/optimar#hasTurbineComponent">Has turbine component</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCapacity" title="https://w3id.org/optimar#hasCapacity">Nominal capacity</a> <sup class="type-op" title="object property">op</sup>, <a href="#operationalStatus" title="https://w3id.org/optimar#operationalStatus">Operational status</a> <sup class="type-dp" title="data property">dp</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#isPartOf" title="https://w3id.org/optimar#isPartOf">Is part of</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1582,10 +1722,28 @@ This section provides details for each class and property defined by Offshore Wi
     <a href="#Blade" title="https://w3id.org/optimar#Blade">Blade</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Hub" title="https://w3id.org/optimar#Hub">Hub</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Nacelle" title="https://w3id.org/optimar#Nacelle">Nacelle</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#Tower" title="https://w3id.org/optimar#Tower">Tower</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Component" title="https://w3id.org/optimar#Component">Component</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
     has sub-classes
    </dt>
    <dd>
     <a href="#Blade" title="https://w3id.org/optimar#Blade">Blade</a> <sup class="type-c" title="class">c</sup>, <a href="#Hub" title="https://w3id.org/optimar#Hub">Hub</a> <sup class="type-c" title="class">c</sup>, <a href="#Nacelle" title="https://w3id.org/optimar#Nacelle">Nacelle</a> <sup class="type-c" title="class">c</sup>, <a href="#Tower" title="https://w3id.org/optimar#Tower">Tower</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#isMonitoredBy" title="https://w3id.org/optimar#isMonitoredBy">Is monitored by</a> <sup class="type-op" title="object property">op</sup>, <a href="#isPartOf" title="https://w3id.org/optimar#isPartOf">Is part of</a> <sup class="type-op" title="object property">op</sup>, <a href="#requiresMaintenance" title="https://w3id.org/optimar#requiresMaintenance">Requires maintenance</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#hasTurbineComponent" title="https://w3id.org/optimar#hasTurbineComponent">Has turbine component</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1614,18 +1772,25 @@ This section provides details for each class and property defined by Offshore Wi
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
   <li><a href="#adjusts" title="https://w3id.org/optimar#adjusts">Adjusts</a></li>
+  <li><a href="#affectedBy" title="https://w3id.org/optimar#affectedBy">Affected by</a></li>
+  <li><a href="#affects" title="https://w3id.org/optimar#affects">Affects</a></li>
   <li><a href="#analyzes" title="https://w3id.org/optimar#analyzes">Analyzes</a></li>
   <li><a href="#causedBy" title="https://w3id.org/optimar#causedBy">Caused by</a></li>
-  <li><a href="#connectedTo" title="https://w3id.org/optimar#connectedTo">Connected to</a></li>
+  <li><a href="#connectedTo" title="https://w3id.org/optimar#connectedTo"> <span>Connected to</span> </a></li>
   <li><a href="#detectedBy" title="https://w3id.org/optimar#detectedBy">Detected by</a></li>
+  <li><a href="#detects" title="https://w3id.org/optimar#detects">Detects</a></li>
   <li><a href="#detectsCorrosion" title="https://w3id.org/optimar#detectsCorrosion">Detects corrosion</a></li>
   <li><a href="#diameter" title="https://w3id.org/optimar#diameter">Diameter</a></li>
   <li><a href="#hasFailureCause" title="https://w3id.org/optimar#hasFailureCause">Failure cause</a></li>
   <li><a href="#failureObservation" title="https://w3id.org/optimar#failureObservation">Failure observation</a></li>
   <li><a href="#http://www.w3.org/ns/prov#generated" title="http://www.w3.org/ns/prov#generated">Generates</a></li>
   <li><a href="#hasRole" title="https://w3id.org/optimar#hasRole">Has role</a></li>
+  <li><a href="#hasTurbineComponent" title="https://w3id.org/optimar#hasTurbineComponent">Has turbine component</a></li>
   <li><a href="#height" title="https://w3id.org/optimar#height">Height</a></li>
   <li><a href="#houses" title="https://w3id.org/optimar#houses">Houses</a></li>
+  <li><a href="#isHousedIn" title="https://w3id.org/optimar#isHousedIn">Is housed in</a></li>
+  <li><a href="#isMonitoredBy" title="https://w3id.org/optimar#isMonitoredBy">Is monitored by</a></li>
+  <li><a href="#isPartOf" title="https://w3id.org/optimar#isPartOf">Is part of</a></li>
   <li><a href="#isSupportedBy" title="https://w3id.org/optimar#isSupportedBy">Is supported by</a></li>
   <li><a href="#length" title="https://w3id.org/optimar#length">Length</a></li>
   <li><a href="#locatedIn" title="https://w3id.org/optimar#locatedIn">Located in</a></li>
@@ -1637,14 +1802,20 @@ This section provides details for each class and property defined by Offshore Wi
   <li><a href="#measuresWind" title="https://w3id.org/optimar#measuresWind">Measures wind</a></li>
   <li><a href="#monitors" title="https://w3id.org/optimar#monitors">Monitors</a></li>
   <li><a href="#monitorsDeformation" title="https://w3id.org/optimar#monitorsDeformation">Monitors deformation</a></li>
+  <li><a href="#hasCapacity" title="https://w3id.org/optimar#hasCapacity">Nominal capacity</a></li>
+  <li><a href="#performedBy" title="https://w3id.org/optimar#performedBy">Performed by</a></li>
   <li><a href="#performedMaintenance" title="https://w3id.org/optimar#performedMaintenance">Performs maintenance</a></li>
   <li><a href="#performsTask" title="https://w3id.org/optimar#performsTask">Performs task</a></li>
+  <li><a href="#pressureLevel" title="https://w3id.org/optimar#pressureLevel"> <span>Pressure level</span> </a></li>
   <li><a href="#relatedToComponent" title="https://w3id.org/optimar#relatedToComponent">Related to component</a></li>
+  <li><a href="#requiresMaintenance" title="https://w3id.org/optimar#requiresMaintenance">Requires maintenance</a></li>
   <li><a href="#rotationSpeed" title="https://w3id.org/optimar#rotationSpeed">Rotation speed</a></li>
+  <li><a href="#stressLevel" title="https://w3id.org/optimar#stressLevel"> <span>Stress level</span> </a></li>
   <li><a href="#supports" title="https://w3id.org/optimar#supports">Supports</a></li>
   <li><a href="#temperature" title="https://w3id.org/optimar#temperature">Temperature</a></li>
   <li><a href="#thickness" title="https://w3id.org/optimar#thickness">Thickness</a></li>
   <li><a href="#transmitsMovementTo" title="https://w3id.org/optimar#transmitsMovementTo">Transmits movement to</a></li>
+  <li><a href="#vibrationLevel" title="https://w3id.org/optimar#vibrationLevel"> <span>Vibration level</span> </a></li>
   <li><a href="#width" title="https://w3id.org/optimar#width">Width</a></li>
   <li><a href="#windDirection" title="https://w3id.org/optimar#windDirection">Wind direction</a></li>
   <li><a href="#windSpeed" title="https://w3id.org/optimar#windSpeed">Wind speed</a></li>
@@ -1653,7 +1824,7 @@ This section provides details for each class and property defined by Offshore Wi
   <h3>Adjusts<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/optimar#adjusts</p>
   <div class="comment">
-   <span class="markdown">Indicas that an actor makes adjustments on a component or pitch system.</span>
+   <span class="markdown">Indicates that an actor makes adjustments on a component or pitch system.</span>
   </div>
   <div class="description">
    <dl>
@@ -1668,6 +1839,64 @@ This section provides details for each class and property defined by Offshore Wi
     </dt>
     <dd>
      <a href="#Component" title="https://w3id.org/optimar#Component">Component</a> <sup class="type-c" title="class">c</sup> <span class="logic">or</span> <a href="#PitchSystem" title="https://w3id.org/optimar#PitchSystem">Pitch System</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="affectedBy">
+  <h3>Affected by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#affectedBy</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a turbine component is affected by a specific failure.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="https://w3id.org/optimar#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Failure" title="https://w3id.org/optimar#Failure">Failure</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#affects" title="https://w3id.org/optimar#affects">Affects</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="affects">
+  <h3>Affects<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#affects</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a failure affects a specific component.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Failure" title="https://w3id.org/optimar#Failure">Failure</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Component" title="https://w3id.org/optimar#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#affectedBy" title="https://w3id.org/optimar#affectedBy">Affected by</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -1721,9 +1950,6 @@ This section provides details for each class and property defined by Offshore Wi
  <div class="entity" id="connectedTo">
   <h3>Connected to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/optimar#connectedTo</p>
-  <div class="comment">
-   <span class="markdown">Indicates that a component is connected to another.</span>
-  </div>
   <div class="description">
    <dl>
     <dt>
@@ -1737,6 +1963,12 @@ This section provides details for each class and property defined by Offshore Wi
     </dt>
     <dd>
      <a href="#Component" title="https://w3id.org/optimar#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     <a href="#connectedTo">named individual</a>
     </dd>
    </dl>
   </div>
@@ -1761,6 +1993,41 @@ This section provides details for each class and property defined by Offshore Wi
     <dd>
      <a href="#Sensor" title="https://w3id.org/optimar#Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
     </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#detects" title="https://w3id.org/optimar#detects">Detects</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="detects">
+  <h3>Detects<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#detects</p>
+  <div class="comment">
+   <span class="markdown">Relates a sensor to the event that it detects.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Sensor" title="https://w3id.org/optimar#Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Event" title="https://w3id.org/optimar#Event">Event</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#detectedBy" title="https://w3id.org/optimar#detectedBy">Detected by</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
    </dl>
   </div>
  </div>
@@ -1782,7 +2049,7 @@ This section provides details for each class and property defined by Offshore Wi
      has range
     </dt>
     <dd>
-     <a href="https://w3id.org/optimar#Corrosion" target="_blank" title="https://w3id.org/optimar#Corrosion">Corrosion</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Corrosion" title="https://w3id.org/optimar#Corrosion">Corrosion</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -1883,7 +2150,7 @@ This section provides details for each class and property defined by Offshore Wi
   <h3>Has role<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/optimar#hasRole</p>
   <div class="comment">
-   <span class="markdown">Indicas the role that an actor performs within the system.</span>
+   <span class="markdown">Indicates the role that an actor performs within the system.</span>
   </div>
   <div class="description">
    <dl>
@@ -1898,6 +2165,35 @@ This section provides details for each class and property defined by Offshore Wi
     </dt>
     <dd>
      <a href="#Role" title="https://w3id.org/optimar#Role">Role</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasTurbineComponent">
+  <h3>Has turbine component<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#hasTurbineComponent</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a turbine has a specific turbine component.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Turbine" title="https://w3id.org/optimar#Turbine">Turbine</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#TurbineComponent" title="https://w3id.org/optimar#TurbineComponent">Turbine Components</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isPartOf" title="https://w3id.org/optimar#isPartOf">Is part of</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -1944,6 +2240,93 @@ This section provides details for each class and property defined by Offshore Wi
     </dt>
     <dd>
      <a href="#Component" title="https://w3id.org/optimar#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#isHousedIn" title="https://w3id.org/optimar#isHousedIn">Is housed in</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isHousedIn">
+  <h3>Is housed in<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#isHousedIn</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a component is physically contained within another.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Component" title="https://w3id.org/optimar#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Component" title="https://w3id.org/optimar#Component">Component</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#houses" title="https://w3id.org/optimar#houses">Houses</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isMonitoredBy">
+  <h3>Is monitored by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#isMonitoredBy</p>
+  <div class="comment">
+   <span class="markdown">Relates a turbine component with the sensors it is monitored by.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TurbineComponent" title="https://w3id.org/optimar#TurbineComponent">Turbine Components</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Sensor" title="https://w3id.org/optimar#Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="isPartOf">
+  <h3>Is part of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#isPartOf</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a turbine component is part of a specific turbine.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TurbineComponent" title="https://w3id.org/optimar#TurbineComponent">Turbine Components</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Turbine" title="https://w3id.org/optimar#Turbine">Turbine</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#hasTurbineComponent" title="https://w3id.org/optimar#hasTurbineComponent">Has turbine component</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -2202,7 +2585,53 @@ This section provides details for each class and property defined by Offshore Wi
      has range
     </dt>
     <dd>
-     <a href="https://w3id.org/optimar#Deformation" target="_blank" title="https://w3id.org/optimar#Deformation">Deformation</a> <sup class="type-c" title="class">c</sup>
+     <a href="#Deformation" title="https://w3id.org/optimar#Deformation">Structural deformation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="hasCapacity">
+  <h3>Nominal capacity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#hasCapacity</p>
+  <div class="comment">
+   <span class="markdown">Nominal generation capacity expressed in QUDT units (typically MW).</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Turbine" title="https://w3id.org/optimar#Turbine">Turbine</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="performedBy">
+  <h3>Performed by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#performedBy</p>
+  <div class="comment">
+   <span class="markdown">Indicates that a maintenance has been performed by an actor.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Maintenance" title="https://w3id.org/optimar#Maintenance">Maintenance</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Actor" title="https://w3id.org/optimar#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
     </dd>
    </dl>
   </div>
@@ -2253,6 +2682,32 @@ This section provides details for each class and property defined by Offshore Wi
    </dl>
   </div>
  </div>
+ <div class="entity" id="pressureLevel">
+  <h3>Pressure level<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#pressureLevel</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data" title="https://w3id.org/optimar#Data">Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     data property
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="relatedToComponent">
   <h3>Related to component<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/optimar#relatedToComponent</p>
@@ -2276,6 +2731,29 @@ This section provides details for each class and property defined by Offshore Wi
    </dl>
   </div>
  </div>
+ <div class="entity" id="requiresMaintenance">
+  <h3>Requires maintenance<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#requiresMaintenance</p>
+  <div class="comment">
+   <span class="markdown">Relates a component with the required maintenance tasks.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#TurbineComponent" title="https://w3id.org/optimar#TurbineComponent">Turbine Components</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Maintenance" title="https://w3id.org/optimar#Maintenance">Maintenance</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="rotationSpeed">
   <h3>Rotation speed<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/optimar#rotationSpeed</p>
@@ -2295,6 +2773,32 @@ This section provides details for each class and property defined by Offshore Wi
     </dt>
     <dd>
      <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="stressLevel">
+  <h3>Stress level<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#stressLevel</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data" title="https://w3id.org/optimar#Data">Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     data property
     </dd>
    </dl>
   </div>
@@ -2397,6 +2901,32 @@ This section provides details for each class and property defined by Offshore Wi
    </dl>
   </div>
  </div>
+ <div class="entity" id="vibrationLevel">
+  <h3>Vibration level<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#vibrationLevel</p>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Data" title="https://w3id.org/optimar#Data">Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is also defined as
+    </dt>
+    <dd>
+     data property
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="width">
   <h3>Width<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/optimar#width</p>
@@ -2469,59 +2999,35 @@ This section provides details for each class and property defined by Offshore Wi
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
  <h3 id="dataproperties-headline" class="list">Data Properties</h3>
  <ul class="hlist">
-  <li><a href="#hasCapacity" title="https://w3id.org/optimar#hasCapacity">Capacity</a></li>
-  <li><a href="#Corrosion" title="https://w3id.org/optimar#Corrosion"> <span>Corrosion</span> </a></li>
-  <li><a href="#darkCorrosion" title="https://w3id.org/optimar#darkCorrosion">Dark corrosion</a></li>
+  <li><a href="#corrosionLevel" title="https://w3id.org/optimar#corrosionLevel">Corrosion level</a></li>
+  <li><a href="#darkCorrosionLevel" title="https://w3id.org/optimar#darkCorrosionLevel">Dark corrosion level</a></li>
   <li><a href="#dateTime" title="https://w3id.org/optimar#dateTime">Date and time</a></li>
-  <li><a href="#Deformation" title="https://w3id.org/optimar#Deformation"> <span>Deformation</span> </a></li>
+  <li><a href="#deformationLevel" title="https://w3id.org/optimar#deformationLevel">Deformation level</a></li>
   <li><a href="#displacement" title="https://w3id.org/optimar#displacement">Displacement</a></li>
   <li><a href="#externalShape" title="https://w3id.org/optimar#externalShape">External shape</a></li>
   <li><a href="#imageURL" title="https://w3id.org/optimar#imageURL">Image URL</a></li>
-  <li><a href="#lightCorrosion" title="https://w3id.org/optimar#lightCorrosion">Light corrosion</a></li>
+  <li><a href="#lightCorrosion" title="https://w3id.org/optimar#lightCorrosion">Light corrosion level</a></li>
   <li><a href="#material" title="https://w3id.org/optimar#material">Material</a></li>
   <li><a href="#materialFatigue" title="https://w3id.org/optimar#materialFatigue">Material fatigue</a></li>
   <li><a href="#materialWear" title="https://w3id.org/optimar#materialWear">Material wear</a></li>
-  <li><a href="#misalignment" title="https://w3id.org/optimar#misalignment">Misalignment</a></li>
+  <li><a href="#misalignmentLevel" title="https://w3id.org/optimar#misalignmentLevel">Misalignment level</a></li>
   <li><a href="#operationalStatus" title="https://w3id.org/optimar#operationalStatus">Operational status</a></li>
-  <li><a href="#pressure" title="https://w3id.org/optimar#pressure">Pressure</a></li>
-  <li><a href="#stress" title="https://w3id.org/optimar#stress">Stress</a></li>
   <li><a href="#unit" title="https://w3id.org/optimar#unit">Unit</a></li>
   <li><a href="#value" title="https://w3id.org/optimar#value">Value</a></li>
-  <li><a href="#vibrations" title="https://w3id.org/optimar#vibrations">Vibrations</a></li>
  </ul>
- <div class="entity" id="hasCapacity">
-  <h3>Capacity<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/optimar#hasCapacity</p>
+ <div class="entity" id="corrosionLevel">
+  <h3>Corrosion level<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#corrosionLevel</p>
   <div class="comment">
-   <span class="markdown">Rated generation capacity of the turbine.</span>
+   <span class="markdown">General corrosion index detected in a component.</span>
   </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Turbine" title="https://w3id.org/optimar#Turbine">Turbine</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="Corrosion">
-  <h3>Corrosion<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/optimar#Corrosion</p>
   <div class="description">
    <dl>
     <dt>
      has sub-properties
     </dt>
     <dd>
-     <a href="#darkCorrosion" title="https://w3id.org/optimar#darkCorrosion">Dark corrosion</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#lightCorrosion" title="https://w3id.org/optimar#lightCorrosion">Light corrosion</a> <sup class="type-dp" title="data property">dp</sup>
+     <a href="#darkCorrosionLevel" title="https://w3id.org/optimar#darkCorrosionLevel">Dark corrosion level</a> <sup class="type-dp" title="data property">dp</sup>
     </dd>
     <dt>
      has domain
@@ -2535,18 +3041,12 @@ This section provides details for each class and property defined by Offshore Wi
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
     </dd>
-    <dt>
-     is also defined as
-    </dt>
-    <dd>
-     class
-    </dd>
    </dl>
   </div>
  </div>
- <div class="entity" id="darkCorrosion">
-  <h3>Dark corrosion<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/optimar#darkCorrosion</p>
+ <div class="entity" id="darkCorrosionLevel">
+  <h3>Dark corrosion level<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#darkCorrosionLevel</p>
   <div class="comment">
    <span class="markdown">Level of dark corrosion detected on the mmaterial surface.</span>
   </div>
@@ -2556,7 +3056,7 @@ This section provides details for each class and property defined by Offshore Wi
      has super-properties
     </dt>
     <dd>
-     <a href="#Corrosion" title="https://w3id.org/optimar#Corrosion">Corrosion</a> <sup class="type-dp" title="data property">dp</sup>
+     <a href="#corrosionLevel" title="https://w3id.org/optimar#corrosionLevel">Corrosion level</a> <sup class="type-dp" title="data property">dp</sup>
     </dd>
     <dt>
      has domain
@@ -2596,9 +3096,12 @@ This section provides details for each class and property defined by Offshore Wi
    </dl>
   </div>
  </div>
- <div class="entity" id="Deformation">
-  <h3>Deformation<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/optimar#Deformation</p>
+ <div class="entity" id="deformationLevel">
+  <h3>Deformation level<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#deformationLevel</p>
+  <div class="comment">
+   <span class="markdown">Degree of deformation recorded in the component.</span>
+  </div>
   <div class="description">
    <dl>
     <dt>
@@ -2612,12 +3115,6 @@ This section provides details for each class and property defined by Offshore Wi
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
-    </dd>
-    <dt>
-     is also defined as
-    </dt>
-    <dd>
-     class
     </dd>
    </dl>
   </div>
@@ -2692,7 +3189,7 @@ This section provides details for each class and property defined by Offshore Wi
   </div>
  </div>
  <div class="entity" id="lightCorrosion">
-  <h3>Light corrosion<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <h3>Light corrosion level<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/optimar#lightCorrosion</p>
   <div class="comment">
    <span class="markdown">Level of light corrosion detected on the material surface.</span>
@@ -2703,7 +3200,7 @@ This section provides details for each class and property defined by Offshore Wi
      has super-properties
     </dt>
     <dd>
-     <a href="#Corrosion" title="https://w3id.org/optimar#Corrosion">Corrosion</a> <sup class="type-dp" title="data property">dp</sup>
+     <a href="https://w3id.org/optimar#CorrosionLevel" target="_blank" title="https://w3id.org/optimar#CorrosionLevel">Corrosion Level</a> <sup class="type-dp" title="data property">dp</sup>
     </dd>
     <dt>
      has domain
@@ -2789,11 +3286,11 @@ This section provides details for each class and property defined by Offshore Wi
    </dl>
   </div>
  </div>
- <div class="entity" id="misalignment">
-  <h3>Misalignment<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/optimar#misalignment</p>
+ <div class="entity" id="misalignmentLevel">
+  <h3>Misalignment level<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#misalignmentLevel</p>
   <div class="comment">
-   <span class="markdown">Measure of the misalignment detected in a component.</span>
+   <span class="markdown">Measure of the misalignment level detected in a component.</span>
   </div>
   <div class="description">
    <dl>
@@ -2831,52 +3328,6 @@ This section provides details for each class and property defined by Offshore Wi
     </dt>
     <dd>
      <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="pressure">
-  <h3>Pressure<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/optimar#pressure</p>
-  <div class="comment">
-   <span class="markdown">Pressure exerted on a component.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Data" title="https://w3id.org/optimar#Data">Data</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
-    </dd>
-   </dl>
-  </div>
- </div>
- <div class="entity" id="stress">
-  <h3>Stress<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/optimar#stress</p>
-  <div class="comment">
-   <span class="markdown">Stress level recorded in a component.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Data" title="https://w3id.org/optimar#Data">Data</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
     </dd>
    </dl>
   </div>
@@ -2927,29 +3378,6 @@ This section provides details for each class and property defined by Offshore Wi
    </dl>
   </div>
  </div>
- <div class="entity" id="vibrations">
-  <h3>Vibrations<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/optimar#vibrations</p>
-  <div class="comment">
-   <span class="markdown">Level of vibrations recorded in a component or system.</span>
-  </div>
-  <div class="description">
-   <dl>
-    <dt>
-     has domain
-    </dt>
-    <dd>
-     <a href="#Data" title="https://w3id.org/optimar#Data">Data</a> <sup class="type-c" title="class">c</sup>
-    </dd>
-    <dt>
-     has range
-    </dt>
-    <dd>
-     <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
-    </dd>
-   </dl>
-  </div>
- </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="annotationproperties">
  <h3 id="annotationproperties" class="list">Annotation Properties</h3>
  <ul class="hlist">
@@ -2965,7 +3393,6 @@ This section provides details for each class and property defined by Offshore Wi
   <li><a href="#http://purl.org/dc/terms/license" title="http://purl.org/dc/terms/license"> <span>license</span> </a></li>
   <li><a href="#http://purl.org/dc/terms/modified" title="http://purl.org/dc/terms/modified"> <span>modified</span> </a></li>
   <li><a href="#http://purl.org/dc/elements/1.1/name" title="http://purl.org/dc/elements/1.1/name"> <span>name</span> </a></li>
-  <li><a href="#performedBy" title="https://w3id.org/optimar#performedBy"> <span>performed By</span> </a></li>
   <li><a href="#http://purl.org/vocab/vann/preferredNamespacePrefix" title="http://purl.org/vocab/vann/preferredNamespacePrefix"> <span>preferred Namespace Prefix</span> </a></li>
   <li><a href="#http://purl.org/vocab/vann/preferredNamespaceUri" title="http://purl.org/vocab/vann/preferredNamespaceUri"> <span>preferred Namespace Uri</span> </a></li>
   <li><a href="#http://purl.org/dc/terms/publisher" title="http://purl.org/dc/terms/publisher"> <span>publisher</span> </a></li>
@@ -3021,10 +3448,6 @@ This section provides details for each class and property defined by Offshore Wi
   <h3>name<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/dc/elements/1.1/name</p>
  </div>
- <div class="entity" id="performedBy">
-  <h3>performed By<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/optimar#performedBy</p>
- </div>
  <div class="entity" id="http://purl.org/vocab/vann/preferredNamespacePrefix">
   <h3>preferred Namespace Prefix<sup class="type-ap" title="annotation property">ap</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> http://purl.org/vocab/vann/preferredNamespacePrefix</p>
@@ -3052,23 +3475,23 @@ This section provides details for each class and property defined by Offshore Wi
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
  <h3 id="namedindividuals" class="list">Named Individuals</h3>
  <ul class="hlist">
-  <li><a href="#Observation" title="https://w3id.org/optimar#Observation"> <span>Observation</span> </a></li>
+  <li><a href="#connectedTo" title="https://w3id.org/optimar#connectedTo"> <span>Connected to</span> </a></li>
  </ul>
- <div class="entity" id="Observation">
-  <h3>Observation<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
-  <p><strong>IRI:</strong> https://w3id.org/optimar#Observation</p>
+ <div class="entity" id="connectedTo">
+  <h3>Connected to<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#connectedTo</p>
   <dl class="description">
    <dt>
-    has facts
+    belongs to
    </dt>
    <dd>
-    <a href="#madeBySensor" title="https://w3id.org/optimar#madeBySensor">Made by sensor</a> <sup class="type-op" title="object property">op</sup> <a href="https://www.w3.org/ns/sosa/Sensor" target="_blank" title="https://www.w3.org/ns/sosa/Sensor">Sensor</a> <sup class="type-ni" title="named individual">ni</sup>
+    <a href="http://www.w3.org/2002/07/owl#SymetricProperty" target="_blank" title="http://www.w3.org/2002/07/owl#SymetricProperty">Symetric Property</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is also defined as
    </dt>
    <dd>
-    <a href="#Observation">class</a>
+    <a href="#connectedTo">object property</a>
    </dd>
   </dl>
  </div>
@@ -3090,6 +3513,345 @@ This section provides details for each class and property defined by Offshore Wi
 <span class="markdown">
 Add your references here. It is recommended to have them as a list.</span>
 
+</div>
+   
+
+<!--CHANGELOG SECTION-->
+   <div id="changelog"><div id="changelog">
+<h2 id="changes" class="list">Changes from last version</h2>
+<h3 id="changeClass" class="list">Classes</h3>
+<details><summary><u>Modified classes</u></summary>
+<ul><li><a href="#AnalyticalRole">https://w3id.org/optimar#AnalyticalRole</a>
+<ul>
+<li>Added: rdfs:comment "Rol orientado al análisis de datos y generación de información útil para la toma de decisiones."@es</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Rol orientado al analisis de datos y generación de información útil para la toma de decisiones."@es</li>
+</ul>
+</li>
+<li><a href="#Base">https://w3id.org/optimar#Base</a>
+<ul>
+<li>Deleted: rdfs:comment "The base that supports the floating platform."@en</li>
+<li>Deleted: rdfs:label "Base (subestructura flotante)"@es</li>
+<li>Deleted: SubClass of https://w3id.org/optimar#StructuralComponent</li>
+<li>Deleted: rdfs:label "Base (floating substructure)"@en</li>
+<li>Deleted: rdfs:comment "La base que soporta la plataforma flotante."@es</li>
+</ul>
+</li>
+<li><a href="#Blade">https://w3id.org/optimar#Blade</a>
+<ul>
+<li></ul>
+</li>
+<li><a href="#Corrosion">https://w3id.org/optimar#Corrosion</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Corrosion&gt; &lt;https://w3id.org/optimar#Misalignment&gt;)</li>
+<li>Added: SubClass of https://w3id.org/optimar#Failure</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Corrosion&gt; &lt;https://w3id.org/optimar#Deformation&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Corrosion&gt; &lt;https://w3id.org/optimar#MaterialFatigue&gt;)</li>
+<li>Added: rdfs:comment "Fallo causado por la corrosión de la estructura metálica de la plataforma."@es</li>
+<li>Added: rdfs:comment "Failure caused by corrosion of the metallic structure of the platform."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Índice general de corrosión detectada en un componente."@es</li>
+<li>Deleted: rdfs:comment "General corrosion index detected in a component."@en</li>
+</ul>
+</li>
+<li><a href="#CorrosionEvent">https://w3id.org/optimar#CorrosionEvent</a>
+<ul>
+<li>Added: rdfs:label "Evento de dección de corrosión"@es</li>
+<li></ul>
+<ul>
+<li>Deleted: rdfs:label "Evento de Corrosión"@es</li>
+</ul>
+</li>
+<li><a href="#Deformation">https://w3id.org/optimar#Deformation</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/optimar#Failure</li>
+<li>Added: rdfs:comment "Failure caused by structural deformation of a component."@en</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Deformation&gt; &lt;https://w3id.org/optimar#MaterialFatigue&gt;)</li>
+<li>Added: rdfs:label "Deformación estructural"@es</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Deformation&gt; &lt;https://w3id.org/optimar#Misalignment&gt;)</li>
+<li>Added: rdfs:label "Structural deformation"@en</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Corrosion&gt; &lt;https://w3id.org/optimar#Deformation&gt;)</li>
+<li>Added: rdfs:comment "Fallo causado por la deformación estructural de un componente."@es</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:label "Deformación"@es</li>
+<li>Deleted: rdfs:comment "Grado de deformación registrado en el componente."@es</li>
+<li>Deleted: rdfs:comment "Degree of deformation recorded in the component."@en</li>
+<li>Deleted: rdfs:label "Deformation"@en</li>
+</ul>
+</li>
+<li><a href="#FloatingPlatform">https://w3id.org/optimar#FloatingPlatform</a>
+<ul>
+<li>Added: rdfs:label "Floating Wind Power Platform"@en</li>
+<li>Added: rdfs:label "Plataforma eólica flotante"@es</li>
+<li>Added: rdfs:comment "An offshore wind power platform that includes a turbine, floating substructure, and mooring system"@en</li>
+<li>Added: rdfs:comment "Plataforma eólica offshore completa que incluye turbina, substructura flotante y sistema de amarre"@es</li>
+<li>Added: SubClass of https://w3id.org/optimar#WindPowerPlatform</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:label "Plataforma flotante"@es</li>
+<li>Deleted: rdfs:comment "A floating platform that serves as a base for the wind turbine."@en</li>
+<li>Deleted: rdfs:comment "Una plataforma flotante que sirve de base para la turbina eólica."@es</li>
+<li>Deleted: rdfs:label "Floating Platform"@en</li>
+<li>Deleted: SubClass of https://w3id.org/optimar#Component</li>
+</ul>
+</li>
+<li><a href="#FloatingSubstructure">https://w3id.org/optimar#FloatingSubstructure</a>
+<ul>
+<li>Added: rdfs:comment "La estructura sumergida que proporciona flotabilidad (spar, semi-sumergible, TLP, etc.)"@es</li>
+<li>Added: rdfs:comment "The floating substructure that provides stability (spar, semi-sumergible, TLP, etc.)"@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "The floating substructure that allows the platform to be stable at sea."@en</li>
+<li>Deleted: rdfs:comment "La subestructura flotante que permite que la plataforma sea estable en el mar."@es</li>
+</ul>
+</li>
+<li><a href="#Hub">https://w3id.org/optimar#Hub</a>
+<ul>
+<li><li></ul>
+</li>
+<li><a href="#Maintenance">https://w3id.org/optimar#Maintenance</a>
+<ul>
+<li></ul>
+<ul>
+<li>Deleted: <https://w3id.org/optimar#performedBy> https://w3id.org/optimar#MaintenanceOperator</li>
+</ul>
+</li>
+<li><a href="#MaterialFatigue">https://w3id.org/optimar#MaterialFatigue</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Deformation&gt; &lt;https://w3id.org/optimar#MaterialFatigue&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Corrosion&gt; &lt;https://w3id.org/optimar#MaterialFatigue&gt;)</li>
+</ul>
+</li>
+<li><a href="#Misalignment">https://w3id.org/optimar#Misalignment</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Corrosion&gt; &lt;https://w3id.org/optimar#Misalignment&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Deformation&gt; &lt;https://w3id.org/optimar#Misalignment&gt;)</li>
+</ul>
+</li>
+<li><a href="#Nacelle">https://w3id.org/optimar#Nacelle</a>
+<ul>
+<li><li></ul>
+</li>
+<li><a href="#Observation">https://w3id.org/optimar#Observation</a>
+<ul>
+<li></ul>
+</li>
+<li><a href="#StructuralComponent">https://w3id.org/optimar#StructuralComponent</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/optimar#Component</li>
+</ul>
+</li>
+<li><a href="#Tower">https://w3id.org/optimar#Tower</a>
+<ul>
+<li><li></ul>
+</li>
+<li><a href="#Turbine">https://w3id.org/optimar#Turbine</a>
+<ul>
+<li><li><li><li></ul>
+</li>
+<li><a href="#TurbineComponent">https://w3id.org/optimar#TurbineComponent</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/optimar#Component</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added classes</u></summary>
+<ul><li><a href="#http://www.w3.org/2002/07/owl#SymetricProperty">http://www.w3.org/2002/07/owl#SymetricProperty</a>
+</li>
+<li><a href="#Generator">https://w3id.org/optimar#Generator</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/optimar#Component</li>
+</ul>
+</li>
+</ul></details><h3 id="changeProp" class="list">Object Properties</h3>
+<details><summary><u>Modified object properties</u></summary>
+<ul><li><a href="#adjusts">https://w3id.org/optimar#adjusts</a>
+<ul>
+<li>Added: rdfs:comment "Indicates that an actor makes adjustments on a component or pitch system."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Indicas that an actor makes adjustments on a component or pitch system."@en</li>
+</ul>
+</li>
+<li><a href="#detectedBy">https://w3id.org/optimar#detectedBy</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/optimar#detectedBy&gt; &lt;https://w3id.org/optimar#detects&gt;)</li>
+</ul>
+</li>
+<li><a href="#hasRole">https://w3id.org/optimar#hasRole</a>
+<ul>
+<li>Added: rdfs:comment "Indicates the role that an actor performs within the system."@en</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Indicas the role that an actor performs within the system."@en</li>
+</ul>
+</li>
+<li><a href="#houses">https://w3id.org/optimar#houses</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/optimar#houses&gt; &lt;https://w3id.org/optimar#isHousedIn&gt;)</li>
+</ul>
+</li>
+<li><a href="#manages">https://w3id.org/optimar#manages</a>
+<ul>
+<li>Added: rdfs:comment "Indica que un actor se encarga de la gestión de una plataforma eólica o su sistema de anclaje."@es</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:comment "Infica que un actor se encarga de la gestión de una plataforma eólica o su sistema de anclaje."@es</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added object properties</u></summary>
+<ul><li><a href="#affectedBy">https://w3id.org/optimar#affectedBy</a>
+<ul>
+<li>Added: Range https://w3id.org/optimar#Failure</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/optimar#affects&gt; &lt;https://w3id.org/optimar#affectedBy&gt;)</li>
+<li>Added: domain https://w3id.org/optimar#Component</li>
+</ul>
+</li>
+<li><a href="#affects">https://w3id.org/optimar#affects</a>
+<ul>
+<li>Added: Range https://w3id.org/optimar#Component</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/optimar#affects&gt; &lt;https://w3id.org/optimar#affectedBy&gt;)</li>
+<li>Added: domain https://w3id.org/optimar#Failure</li>
+</ul>
+</li>
+<li><a href="#detects">https://w3id.org/optimar#detects</a>
+<ul>
+<li>Added: domain https://w3id.org/optimar#Sensor</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/optimar#detectedBy&gt; &lt;https://w3id.org/optimar#detects&gt;)</li>
+<li>Added: Range https://w3id.org/optimar#Event</li>
+</ul>
+</li>
+<li><a href="#hasCapacity">https://w3id.org/optimar#hasCapacity</a>
+<ul>
+<li>Added: Range http://qudt.org/schema/qudt/QuantityValue</li>
+<li>Added: domain https://w3id.org/optimar#Turbine</li>
+</ul>
+</li>
+<li><a href="#hasTurbineComponent">https://w3id.org/optimar#hasTurbineComponent</a>
+<ul>
+<li>Added: domain https://w3id.org/optimar#Turbine</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/optimar#isPartOf&gt; &lt;https://w3id.org/optimar#hasTurbineComponent&gt;)</li>
+<li>Added: Range https://w3id.org/optimar#TurbineComponent</li>
+</ul>
+</li>
+<li><a href="#isHousedIn">https://w3id.org/optimar#isHousedIn</a>
+<ul>
+<li>Added: Range https://w3id.org/optimar#Component</li>
+<li>Added: domain https://w3id.org/optimar#Component</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/optimar#houses&gt; &lt;https://w3id.org/optimar#isHousedIn&gt;)</li>
+</ul>
+</li>
+<li><a href="#isMonitoredBy">https://w3id.org/optimar#isMonitoredBy</a>
+<ul>
+<li>Added: Range https://w3id.org/optimar#Sensor</li>
+<li>Added: domain https://w3id.org/optimar#TurbineComponent</li>
+</ul>
+</li>
+<li><a href="#isPartOf">https://w3id.org/optimar#isPartOf</a>
+<ul>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/optimar#isPartOf&gt; &lt;https://w3id.org/optimar#hasTurbineComponent&gt;)</li>
+<li>Added: domain https://w3id.org/optimar#TurbineComponent</li>
+<li>Added: Range https://w3id.org/optimar#Turbine</li>
+</ul>
+</li>
+<li><a href="#performedBy">https://w3id.org/optimar#performedBy</a>
+<ul>
+<li>Added: Range https://w3id.org/optimar#Actor</li>
+<li>Added: domain https://w3id.org/optimar#Maintenance</li>
+</ul>
+</li>
+<li><a href="#pressureLevel">https://w3id.org/optimar#pressureLevel</a>
+<ul>
+<li>Added: domain https://w3id.org/optimar#Data</li>
+<li>Added: Range http://qudt.org/schema/qudt/QuantityValue</li>
+</ul>
+</li>
+<li><a href="#requiresMaintenance">https://w3id.org/optimar#requiresMaintenance</a>
+<ul>
+<li>Added: Range https://w3id.org/optimar#Maintenance</li>
+<li>Added: domain https://w3id.org/optimar#TurbineComponent</li>
+</ul>
+</li>
+<li><a href="#stressLevel">https://w3id.org/optimar#stressLevel</a>
+<ul>
+<li>Added: Range http://qudt.org/schema/qudt/QuantityValue</li>
+<li>Added: domain https://w3id.org/optimar#Data</li>
+</ul>
+</li>
+<li><a href="#vibrationLevel">https://w3id.org/optimar#vibrationLevel</a>
+<ul>
+<li>Added: Range http://qudt.org/schema/qudt/QuantityValue</li>
+<li>Added: domain https://w3id.org/optimar#Data</li>
+</ul>
+</li>
+</ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
+<details><summary><u>Modified data properties</u></summary>
+<ul><li><a href="#lightCorrosion">https://w3id.org/optimar#lightCorrosion</a>
+<ul>
+<li>Added: rdfs:label "Light corrosion level"@en</li>
+<li>Added: rdfs:label "Nivel de corrosión clara"@es</li>
+<li>Added: SubProperty of https://w3id.org/optimar#CorrosionLevel</li>
+</ul>
+<ul>
+<li>Deleted: rdfs:label "Corrosión clara"@es</li>
+<li>Deleted: rdfs:label "Light corrosion"@en</li>
+<li>Deleted: SubProperty of https://w3id.org/optimar#Corrosion</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added data properties</u></summary>
+<ul><li><a href="#CorrosionLevel">https://w3id.org/optimar#CorrosionLevel</a>
+</li>
+<li><a href="#corrosionLevel">https://w3id.org/optimar#corrosionLevel</a>
+<ul>
+<li>Added: Domain https://w3id.org/optimar#CorrosionEvent</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#decimal</li>
+</ul>
+</li>
+<li><a href="#darkCorrosionLevel">https://w3id.org/optimar#darkCorrosionLevel</a>
+<ul>
+<li>Added: SubProperty of https://w3id.org/optimar#corrosionLevel</li>
+<li>Added: Domain https://w3id.org/optimar#CorrosionEvent</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#decimal</li>
+</ul>
+</li>
+<li><a href="#deformationLevel">https://w3id.org/optimar#deformationLevel</a>
+<ul>
+<li>Added: Domain https://w3id.org/optimar#Data</li>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#decimal</li>
+</ul>
+</li>
+<li><a href="#misalignmentLevel">https://w3id.org/optimar#misalignmentLevel</a>
+<ul>
+<li>Added: Range http://www.w3.org/2001/XMLSchema#decimal</li>
+<li>Added: Domain https://w3id.org/optimar#Data</li>
+</ul>
+</li>
+<li><a href="#pressureLevel">https://w3id.org/optimar#pressureLevel</a>
+</li>
+<li><a href="#stressLevel">https://w3id.org/optimar#stressLevel</a>
+</li>
+<li><a href="#vibrationLevel">https://w3id.org/optimar#vibrationLevel</a>
+</li>
+</ul></details><details><summary><u>Deleted data properties</u></summary>
+<ul><li><a href="#Corrosion">https://w3id.org/optimar#Corrosion</a>
+</li>
+<li><a href="#Deformation">https://w3id.org/optimar#Deformation</a>
+</li>
+<li><a href="#darkCorrosion">https://w3id.org/optimar#darkCorrosion</a>
+</li>
+<li><a href="#hasCapacity">https://w3id.org/optimar#hasCapacity</a>
+</li>
+<li><a href="#misalignment">https://w3id.org/optimar#misalignment</a>
+</li>
+<li><a href="#pressure">https://w3id.org/optimar#pressure</a>
+</li>
+<li><a href="#stress">https://w3id.org/optimar#stress</a>
+</li>
+<li><a href="#vibrations">https://w3id.org/optimar#vibrations</a>
+</li>
+</ul></details></div>
 </div>
 <div id="acknowledgments">
 <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>

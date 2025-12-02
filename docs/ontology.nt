@@ -1,7 +1,7 @@
 <https://w3id.org/optimar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/optimar/1.0> .
+<https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/optimar/2.0> .
 <https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/creator> "Alejandro Flores (USAL), Alberto Montero (USAL), Oihana Garcia (Tekniker) and Cristina Aceta (Tekniker)" .
-<https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/date> "2025-10-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/date> "2025-12-01"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/description> "Esta ontología describe los componentes, fallos, sensores y eventos relacionados con las plataformas eólicas offshore."@es .
 <https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/description> "This ontology describes the components, failures, sensors, and events related to offshore wind platforms."@en .
 <https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/language> "en" .
@@ -9,14 +9,14 @@
 <https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/name> "Ontología Offshore OPTiMAR"@es .
 <https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/title> "Offshore Wind Power Platform Ontology for OPTiMAR"@en .
 <https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/title> "Ontología de Plataforma Eólica Offshore para OPTiMAR"@es .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/abstract> "Ontologia que modela los elementos estructurales, sensores, eventos y fallos de plataformas eólicas offshore, incluyendo datos de medición y actores involucrados."@es .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/abstract> "Ontology modeling structural elements, sensors, events, and failures in offshore wind platforms, including measurement data and involved actors."@en .
+<https://w3id.org/optimar> <http://purl.org/dc/terms/abstract> "Ontologia que modela los elementos estructurales, sensores, eventos y fallos de plataformas eólicas offshore, incluyendo datos de medición, actores involucrados y relaciones semánticas entre componentes. Compatible con SOSA para observaciones y QUDT para unidades de medida."@es .
+<https://w3id.org/optimar> <http://purl.org/dc/terms/abstract> "Ontology modeling structural elements, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. Compatible with SOSA for observations and QUDT for units of measure."@en .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/bibliographicCitation> "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Offshore Wind Power Platform Ontology for OPTiMAR. DOI: 10.1234/abcd"@en .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/bibliographicCitation> "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.1234/abcd"@es .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/created> "2025-09-30"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/issued> "2025-09-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/optimar> <http://purl.org/dc/terms/issued> "2025-12-02"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/license> <https://opensource.org/licenses/MIT> .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/modified> "2025-10-06"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/optimar> <http://purl.org/dc/terms/modified> "2025-12-01"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/publisher> "Universidad de Salamanca, Centro Tecnológico y de Investigación - Tekniker"@es .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/publisher> "University of Salamanca, Technology and Research Centre - Tekniker"@en .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/rights> "Este trabajo se distribuye bajo la licencia MIT. Se permite copiar, modificar y distribuir bajo los términos de dicha licencia."@es .
@@ -25,9 +25,13 @@
 <https://w3id.org/optimar> <http://purl.org/dc/terms/status> "stable"@en .
 <https://w3id.org/optimar> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ex" .
 <https://w3id.org/optimar> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/optimar#> .
-<https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <https://w3id.org/optimar/0.2> .
-<https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.0 of the Ontology"@en .
-<https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#versionInfo> "Versión 1.0 de la ontología"@es .
+<https://w3id.org/optimar> <http://www.w3.org/2000/01/rdf-schema#comment> "\r\n        Version 2.0 (2025-12-02) - Major improvements:\r\n        - Added ex:Generator class for turbine generators\r\n        - Added inverse properties: ex:isHousedIn, ex:detects, ex:affects\r\n        - Declared ex:connectedTo as symmetric property\r\n        - Renamed properties to avoid class name collisions: ex:deformationLevel, ex:misalignmentLevel\r\n        - Corrected ex:affectedBy domain to ex:Component (previously ex:TurbineComponent)\r\n        - Added ex:StructuralComponent as subclass of ex:Component\r\n        - Added structural restrictions to TurbineComponent classes\r\n        - Separated failure classes from failure event classes\r\n        - Fixed restriction syntax in ex:Maintenance and ex:Observation\r\n        - Improved consistency in QUDT usage for physical quantities\r\n        - Added cardinality constraints to ex:Turbine class\r\n    "@en .
+<https://w3id.org/optimar> <http://www.w3.org/2000/01/rdf-schema#comment> "\r\n    Versión 2.0 (2025-12-02) - Mejoras principales:\r\n    - Añadida clase ex:Generator para generadores de turbina\r\n    - Añadidas propiedades inversas: ex:isHousedIn, ex:detects, ex:affects\r\n    - Declarada ex:connectedTo como propiedad simétrica\r\n    - Renombradas propiedades para evitar colisiones: ex:deformationLevel, ex:misalignmentLevel\r\n    - Corregido dominio de ex:affectedBy a ex:Component (antes ex:TurbineComponent)\r\n    - Añadido ex:StructuralComponent como subclase de ex:Component\r\n    - Añadidas restricciones estructurales a clases TurbineComponent\r\n    - Separadas clases de fallos de clases de eventos de fallos\r\n    - Corregida sintaxis de restricciones en ex:Maintenance y ex:Observation\r\n    - Mejorada consistencia en uso de QUDT para magnitudes físicas\r\n    - Añadidas restricciones de cardinalidad a clase ex:Turbine\r\n    "@es .
+<https://w3id.org/optimar> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/optimar#changelog> .
+<https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <https://w3id.org/optimar/1.0> .
+<https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/optimar/1.0> .
+<https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#versionInfo> "Version 2.0 of the Ontology"@en .
+<https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#versionInfo> "Versión 2.0 de la ontología"@es .
 <https://w3id.org/optimar> <http://xmlns.com/foaf/0.1/homepage> <https://w3id.org/optimar> .
 # 
 # 
@@ -92,9 +96,6 @@
 # http://xmlns.com/foaf/0.1/homepage
 <http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
-# https://w3id.org/optimar#performedBy
-<https://w3id.org/optimar#performedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
 # 
 # 
 # #################################################################
@@ -138,9 +139,28 @@ _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/op
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/optimar#adjusts> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica que un actor realiza ajustes sobre un componente o sistema de pitch."@es .
-<https://w3id.org/optimar#adjusts> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicas that an actor makes adjustments on a component or pitch system."@en .
+<https://w3id.org/optimar#adjusts> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an actor makes adjustments on a component or pitch system."@en .
 <https://w3id.org/optimar#adjusts> <http://www.w3.org/2000/01/rdf-schema#label> "Adjusts"@en .
 <https://w3id.org/optimar#adjusts> <http://www.w3.org/2000/01/rdf-schema#label> "Ajusta"@es .
+# 
+# https://w3id.org/optimar#affectedBy
+<https://w3id.org/optimar#affectedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/optimar#affectedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Component> .
+<https://w3id.org/optimar#affectedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/optimar#Failure> .
+<https://w3id.org/optimar#affectedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica que un componente de turbina está afectado por un fallo específico."@es .
+<https://w3id.org/optimar#affectedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a turbine component is affected by a specific failure."@en .
+<https://w3id.org/optimar#affectedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Afectado por"@es .
+<https://w3id.org/optimar#affectedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Affected by"@en .
+# 
+# https://w3id.org/optimar#affects
+<https://w3id.org/optimar#affects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/optimar#affects> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/optimar#affectedBy> .
+<https://w3id.org/optimar#affects> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Failure> .
+<https://w3id.org/optimar#affects> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/optimar#Component> .
+<https://w3id.org/optimar#affects> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica que un fallo afecta un componente específico."@es .
+<https://w3id.org/optimar#affects> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a failure affects a specific component."@en .
+<https://w3id.org/optimar#affects> <http://www.w3.org/2000/01/rdf-schema#label> "Afecta"@es .
+<https://w3id.org/optimar#affects> <http://www.w3.org/2000/01/rdf-schema#label> "Affects"@en .
 # 
 # https://w3id.org/optimar#analyzes
 <https://w3id.org/optimar#analyzes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -172,13 +192,10 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/optimar#connectedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/optimar#connectedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Component> .
 <https://w3id.org/optimar#connectedTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/optimar#Component> .
-<https://w3id.org/optimar#connectedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica que un componente está conectado a otro."@es .
-<https://w3id.org/optimar#connectedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a component is connected to another."@en .
-<https://w3id.org/optimar#connectedTo> <http://www.w3.org/2000/01/rdf-schema#label> "Conectado a"@es .
-<https://w3id.org/optimar#connectedTo> <http://www.w3.org/2000/01/rdf-schema#label> "Connected to"@en .
 # 
 # https://w3id.org/optimar#detectedBy
 <https://w3id.org/optimar#detectedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/optimar#detectedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/optimar#detects> .
 <https://w3id.org/optimar#detectedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Event> .
 <https://w3id.org/optimar#detectedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/optimar#Sensor> .
 <https://w3id.org/optimar#detectedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relaciona un evento con el sensor que lo detectó."@es .
@@ -186,11 +203,19 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/optimar#detectedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Detectado por"@es .
 <https://w3id.org/optimar#detectedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Detected by"@en .
 # 
+# https://w3id.org/optimar#detects
+<https://w3id.org/optimar#detects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/optimar#detects> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Sensor> .
+<https://w3id.org/optimar#detects> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/optimar#Event> .
+<https://w3id.org/optimar#detects> <http://www.w3.org/2000/01/rdf-schema#comment> "Relaciona un sensor con el evento que detecta."@es .
+<https://w3id.org/optimar#detects> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a sensor to the event that it detects."@en .
+<https://w3id.org/optimar#detects> <http://www.w3.org/2000/01/rdf-schema#label> "Detecta"@es .
+<https://w3id.org/optimar#detects> <http://www.w3.org/2000/01/rdf-schema#label> "Detects"@en .
+# 
 # https://w3id.org/optimar#detectsCorrosion
 <https://w3id.org/optimar#detectsCorrosion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/optimar#detectsCorrosion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Sensor> .
 <https://w3id.org/optimar#detectsCorrosion> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/optimar#Corrosion> .
-<https://w3id.org/optimar#Corrosion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/optimar#detectsCorrosion> <http://www.w3.org/2000/01/rdf-schema#comment> "Relaciona un sensor con la medición de corrosión detectada."@es .
 <https://w3id.org/optimar#detectsCorrosion> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a sensor with the detected corrosion measurement."@en .
 <https://w3id.org/optimar#detectsCorrosion> <http://www.w3.org/2000/01/rdf-schema#label> "Detecta corrosión"@es .
@@ -215,6 +240,15 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/optimar#failureObservation> <http://www.w3.org/2000/01/rdf-schema#label> "Failure observation"@en .
 <https://w3id.org/optimar#failureObservation> <http://www.w3.org/2000/01/rdf-schema#label> "Observación de fallo"@es .
 # 
+# https://w3id.org/optimar#hasCapacity
+<https://w3id.org/optimar#hasCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/optimar#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Turbine> .
+<https://w3id.org/optimar#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityValue> .
+<https://w3id.org/optimar#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "Capacidad nominal de generación expresada en unidades QUDT (tipicamente MW)."@es .
+<https://w3id.org/optimar#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "Nominal generation capacity expressed in QUDT units (typically MW)."@en .
+<https://w3id.org/optimar#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "Capacidad nominal"@es .
+<https://w3id.org/optimar#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "Nominal capacity"@en .
+# 
 # https://w3id.org/optimar#hasFailureCause
 <https://w3id.org/optimar#hasFailureCause> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/optimar#hasFailureCause> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Failure> .
@@ -229,9 +263,18 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 <https://w3id.org/optimar#hasRole> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Actor> .
 <https://w3id.org/optimar#hasRole> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/optimar#Role> .
 <https://w3id.org/optimar#hasRole> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica el rol que desempeña un actor dentro del sistema."@es .
-<https://w3id.org/optimar#hasRole> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicas the role that an actor performs within the system."@en .
+<https://w3id.org/optimar#hasRole> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the role that an actor performs within the system."@en .
 <https://w3id.org/optimar#hasRole> <http://www.w3.org/2000/01/rdf-schema#label> "Has role"@en .
 <https://w3id.org/optimar#hasRole> <http://www.w3.org/2000/01/rdf-schema#label> "Tiene rol"@es .
+# 
+# https://w3id.org/optimar#hasTurbineComponent
+<https://w3id.org/optimar#hasTurbineComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/optimar#hasTurbineComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Turbine> .
+<https://w3id.org/optimar#hasTurbineComponent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/optimar#TurbineComponent> .
+<https://w3id.org/optimar#hasTurbineComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica que una turbina tiene un componente de turbina específico."@es .
+<https://w3id.org/optimar#hasTurbineComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a turbine has a specific turbine component."@en .
+<https://w3id.org/optimar#hasTurbineComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Has turbine component"@en .
+<https://w3id.org/optimar#hasTurbineComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Tiene componente de turbina"@es .
 # 
 # https://w3id.org/optimar#height
 <https://w3id.org/optimar#height> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -244,12 +287,41 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://w3id.org/optimar#houses
 <https://w3id.org/optimar#houses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/optimar#houses> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/optimar#isHousedIn> .
 <https://w3id.org/optimar#houses> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Component> .
 <https://w3id.org/optimar#houses> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/optimar#Component> .
 <https://w3id.org/optimar#houses> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica que un componente contiene o aloja fisicamente a otro en su estructura."@es .
 <https://w3id.org/optimar#houses> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a component contains or houses physically another in its structure."@en .
 <https://w3id.org/optimar#houses> <http://www.w3.org/2000/01/rdf-schema#label> "Aloja"@es .
 <https://w3id.org/optimar#houses> <http://www.w3.org/2000/01/rdf-schema#label> "Houses"@en .
+# 
+# https://w3id.org/optimar#isHousedIn
+<https://w3id.org/optimar#isHousedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/optimar#isHousedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Component> .
+<https://w3id.org/optimar#isHousedIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/optimar#Component> .
+<https://w3id.org/optimar#isHousedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica que un componente está fisicamente contenido dentro de otro."@es .
+<https://w3id.org/optimar#isHousedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a component is physically contained within another."@en .
+<https://w3id.org/optimar#isHousedIn> <http://www.w3.org/2000/01/rdf-schema#label> "Está alojado en"@es .
+<https://w3id.org/optimar#isHousedIn> <http://www.w3.org/2000/01/rdf-schema#label> "Is housed in"@en .
+# 
+# https://w3id.org/optimar#isMonitoredBy
+<https://w3id.org/optimar#isMonitoredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/optimar#isMonitoredBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#TurbineComponent> .
+<https://w3id.org/optimar#isMonitoredBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/optimar#Sensor> .
+<https://w3id.org/optimar#isMonitoredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relaciona un componente de turbina con los sensores que lo supervisan."@es .
+<https://w3id.org/optimar#isMonitoredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a turbine component with the sensors it is monitored by."@en .
+<https://w3id.org/optimar#isMonitoredBy> <http://www.w3.org/2000/01/rdf-schema#label> "Es monitoreado por"@es .
+<https://w3id.org/optimar#isMonitoredBy> <http://www.w3.org/2000/01/rdf-schema#label> "Is monitored by"@en .
+# 
+# https://w3id.org/optimar#isPartOf
+<https://w3id.org/optimar#isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/optimar#isPartOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/optimar#hasTurbineComponent> .
+<https://w3id.org/optimar#isPartOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#TurbineComponent> .
+<https://w3id.org/optimar#isPartOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/optimar#Turbine> .
+<https://w3id.org/optimar#isPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica que un componente de turbina forma parte de una turbina específica."@es .
+<https://w3id.org/optimar#isPartOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a turbine component is part of a specific turbine."@en .
+<https://w3id.org/optimar#isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "Es parte de"@es .
+<https://w3id.org/optimar#isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "Is part of"@en .
 # 
 # https://w3id.org/optimar#isSupportedBy
 <https://w3id.org/optimar#isSupportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -301,8 +373,8 @@ _:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#MooringSystem> .
 _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/optimar#manages> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica que un actor se encarga de la gestión de una plataforma eólica o su sistema de anclaje."@es .
 <https://w3id.org/optimar#manages> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an actor is responsible for managing a wind power platform or its mooring system."@en .
-<https://w3id.org/optimar#manages> <http://www.w3.org/2000/01/rdf-schema#comment> "Infica que un actor se encarga de la gestión de una plataforma eólica o su sistema de anclaje."@es .
 <https://w3id.org/optimar#manages> <http://www.w3.org/2000/01/rdf-schema#label> "Administra"@es .
 <https://w3id.org/optimar#manages> <http://www.w3.org/2000/01/rdf-schema#label> "Manages"@en .
 # 
@@ -363,11 +435,19 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/optimar#monitorsDeformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/optimar#monitorsDeformation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Sensor> .
 <https://w3id.org/optimar#monitorsDeformation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/optimar#Deformation> .
-<https://w3id.org/optimar#Deformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/optimar#monitorsDeformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relaciona un sensor con la deformación estructural que mide o supervisa."@es .
 <https://w3id.org/optimar#monitorsDeformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a sensor to the structural deformation it measures or monitors."@en .
 <https://w3id.org/optimar#monitorsDeformation> <http://www.w3.org/2000/01/rdf-schema#label> "Monitorea deformación"@es .
 <https://w3id.org/optimar#monitorsDeformation> <http://www.w3.org/2000/01/rdf-schema#label> "Monitors deformation"@en .
+# 
+# https://w3id.org/optimar#performedBy
+<https://w3id.org/optimar#performedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/optimar#performedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Maintenance> .
+<https://w3id.org/optimar#performedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/optimar#Actor> .
+<https://w3id.org/optimar#performedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica que un mantenimiento se ha realizado por un actor."@es .
+<https://w3id.org/optimar#performedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a maintenance has been performed by an actor."@en .
+<https://w3id.org/optimar#performedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Performed by"@en .
+<https://w3id.org/optimar#performedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Realizado por"@es .
 # 
 # https://w3id.org/optimar#performedMaintenance
 <https://w3id.org/optimar#performedMaintenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -387,6 +467,11 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/optimar#performsTask> <http://www.w3.org/2000/01/rdf-schema#label> "Performs task"@en .
 <https://w3id.org/optimar#performsTask> <http://www.w3.org/2000/01/rdf-schema#label> "Realiza tarea"@es .
 # 
+# https://w3id.org/optimar#pressureLevel
+<https://w3id.org/optimar#pressureLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/optimar#pressureLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Data> .
+<https://w3id.org/optimar#pressureLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityValue> .
+# 
 # https://w3id.org/optimar#relatedToComponent
 <https://w3id.org/optimar#relatedToComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/optimar#relatedToComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Event> .
@@ -396,6 +481,15 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/optimar#relatedToComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Relacionado con componente"@es .
 <https://w3id.org/optimar#relatedToComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Related to component"@en .
 # 
+# https://w3id.org/optimar#requiresMaintenance
+<https://w3id.org/optimar#requiresMaintenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/optimar#requiresMaintenance> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#TurbineComponent> .
+<https://w3id.org/optimar#requiresMaintenance> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/optimar#Maintenance> .
+<https://w3id.org/optimar#requiresMaintenance> <http://www.w3.org/2000/01/rdf-schema#comment> "Relaciona un componente con las tareas de mantenimiento necesarias."@es .
+<https://w3id.org/optimar#requiresMaintenance> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a component with the required maintenance tasks."@en .
+<https://w3id.org/optimar#requiresMaintenance> <http://www.w3.org/2000/01/rdf-schema#label> "Requiere mantenimiento"@es .
+<https://w3id.org/optimar#requiresMaintenance> <http://www.w3.org/2000/01/rdf-schema#label> "Requires maintenance"@en .
+# 
 # https://w3id.org/optimar#rotationSpeed
 <https://w3id.org/optimar#rotationSpeed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/optimar#rotationSpeed> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Component> .
@@ -404,6 +498,11 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/optimar#rotationSpeed> <http://www.w3.org/2000/01/rdf-schema#comment> "Velocidad angular de un componente expresada como un valor con unidad QUDT."@es .
 <https://w3id.org/optimar#rotationSpeed> <http://www.w3.org/2000/01/rdf-schema#label> "Rotation speed"@en .
 <https://w3id.org/optimar#rotationSpeed> <http://www.w3.org/2000/01/rdf-schema#label> "Velocidad de rotación"@es .
+# 
+# https://w3id.org/optimar#stressLevel
+<https://w3id.org/optimar#stressLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/optimar#stressLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Data> .
+<https://w3id.org/optimar#stressLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityValue> .
 # 
 # https://w3id.org/optimar#supports
 <https://w3id.org/optimar#supports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -442,6 +541,11 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/optimar#transmitsMovementTo> <http://www.w3.org/2000/01/rdf-schema#label> "Transmite movimiento a"@es .
 <https://w3id.org/optimar#transmitsMovementTo> <http://www.w3.org/2000/01/rdf-schema#label> "Transmits movement to"@en .
 # 
+# https://w3id.org/optimar#vibrationLevel
+<https://w3id.org/optimar#vibrationLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/optimar#vibrationLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Data> .
+<https://w3id.org/optimar#vibrationLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://qudt.org/schema/qudt/QuantityValue> .
+# 
 # https://w3id.org/optimar#width
 <https://w3id.org/optimar#width> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/optimar#width> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Component> .
@@ -478,25 +582,27 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #################################################################
 # 
 # 
-# https://w3id.org/optimar#Corrosion
-<https://w3id.org/optimar#Corrosion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/optimar#Corrosion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#CorrosionEvent> .
-<https://w3id.org/optimar#Corrosion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# https://w3id.org/optimar#CorrosionLevel
+<https://w3id.org/optimar#CorrosionLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 # 
-# https://w3id.org/optimar#Deformation
-<https://w3id.org/optimar#Deformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/optimar#Deformation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Data> .
-<https://w3id.org/optimar#Deformation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+# https://w3id.org/optimar#corrosionLevel
+<https://w3id.org/optimar#corrosionLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/optimar#corrosionLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#CorrosionEvent> .
+<https://w3id.org/optimar#corrosionLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/optimar#corrosionLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "General corrosion index detected in a component."@en .
+<https://w3id.org/optimar#corrosionLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Índice general de corrosión detectada en un componente."@es .
+<https://w3id.org/optimar#corrosionLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Corrosion level"@en .
+<https://w3id.org/optimar#corrosionLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de corrosión"@es .
 # 
-# https://w3id.org/optimar#darkCorrosion
-<https://w3id.org/optimar#darkCorrosion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/optimar#darkCorrosion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/optimar#Corrosion> .
-<https://w3id.org/optimar#darkCorrosion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#CorrosionEvent> .
-<https://w3id.org/optimar#darkCorrosion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-<https://w3id.org/optimar#darkCorrosion> <http://www.w3.org/2000/01/rdf-schema#comment> "Level of dark corrosion detected on the mmaterial surface."@en .
-<https://w3id.org/optimar#darkCorrosion> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de corrosión oscura detectada en la superficie del material."@es .
-<https://w3id.org/optimar#darkCorrosion> <http://www.w3.org/2000/01/rdf-schema#label> "Corrosión oscura"@es .
-<https://w3id.org/optimar#darkCorrosion> <http://www.w3.org/2000/01/rdf-schema#label> "Dark corrosion"@en .
+# https://w3id.org/optimar#darkCorrosionLevel
+<https://w3id.org/optimar#darkCorrosionLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/optimar#darkCorrosionLevel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/optimar#corrosionLevel> .
+<https://w3id.org/optimar#darkCorrosionLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#CorrosionEvent> .
+<https://w3id.org/optimar#darkCorrosionLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/optimar#darkCorrosionLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Level of dark corrosion detected on the mmaterial surface."@en .
+<https://w3id.org/optimar#darkCorrosionLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de corrosión oscura detectada en la superficie del material."@es .
+<https://w3id.org/optimar#darkCorrosionLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Dark corrosion level"@en .
+<https://w3id.org/optimar#darkCorrosionLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de corrosión oscura"@es .
 # 
 # https://w3id.org/optimar#dateTime
 <https://w3id.org/optimar#dateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -506,6 +612,15 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/optimar#dateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Marca temporal asociada a la medición."@es .
 <https://w3id.org/optimar#dateTime> <http://www.w3.org/2000/01/rdf-schema#label> "Date and time"@en .
 <https://w3id.org/optimar#dateTime> <http://www.w3.org/2000/01/rdf-schema#label> "Fecha y hora"@es .
+# 
+# https://w3id.org/optimar#deformationLevel
+<https://w3id.org/optimar#deformationLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/optimar#deformationLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Data> .
+<https://w3id.org/optimar#deformationLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/optimar#deformationLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Degree of deformation recorded in the component."@en .
+<https://w3id.org/optimar#deformationLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Grado de deformación registrado en el componente."@es .
+<https://w3id.org/optimar#deformationLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Deformation level"@en .
+<https://w3id.org/optimar#deformationLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de Deformación"@es .
 # 
 # https://w3id.org/optimar#displacement
 <https://w3id.org/optimar#displacement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -525,15 +640,6 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/optimar#externalShape> <http://www.w3.org/2000/01/rdf-schema#label> "External shape"@en .
 <https://w3id.org/optimar#externalShape> <http://www.w3.org/2000/01/rdf-schema#label> "Forma externa"@es .
 # 
-# https://w3id.org/optimar#hasCapacity
-<https://w3id.org/optimar#hasCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/optimar#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Turbine> .
-<https://w3id.org/optimar#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/optimar#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "Capacidad nominal de generación de la turbina."@es .
-<https://w3id.org/optimar#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "Rated generation capacity of the turbine."@en .
-<https://w3id.org/optimar#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "Capacidad"@es .
-<https://w3id.org/optimar#hasCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "Capacity"@en .
-# 
 # https://w3id.org/optimar#imageURL
 <https://w3id.org/optimar#imageURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/optimar#imageURL> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Image> .
@@ -545,13 +651,13 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/optimar#lightCorrosion
 <https://w3id.org/optimar#lightCorrosion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/optimar#lightCorrosion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/optimar#Corrosion> .
+<https://w3id.org/optimar#lightCorrosion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/optimar#CorrosionLevel> .
 <https://w3id.org/optimar#lightCorrosion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#CorrosionEvent> .
 <https://w3id.org/optimar#lightCorrosion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <https://w3id.org/optimar#lightCorrosion> <http://www.w3.org/2000/01/rdf-schema#comment> "Level of light corrosion detected on the material surface."@en .
 <https://w3id.org/optimar#lightCorrosion> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de corrosión clara detectada en la superficie del material."@es .
-<https://w3id.org/optimar#lightCorrosion> <http://www.w3.org/2000/01/rdf-schema#label> "Corrosión clara"@es .
-<https://w3id.org/optimar#lightCorrosion> <http://www.w3.org/2000/01/rdf-schema#label> "Light corrosion"@en .
+<https://w3id.org/optimar#lightCorrosion> <http://www.w3.org/2000/01/rdf-schema#label> "Light corrosion level"@en .
+<https://w3id.org/optimar#lightCorrosion> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de corrosión clara"@es .
 # 
 # https://w3id.org/optimar#material
 <https://w3id.org/optimar#material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -580,14 +686,14 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/optimar#materialWear> <http://www.w3.org/2000/01/rdf-schema#label> "Desgaste material"@es .
 <https://w3id.org/optimar#materialWear> <http://www.w3.org/2000/01/rdf-schema#label> "Material wear"@en .
 # 
-# https://w3id.org/optimar#misalignment
-<https://w3id.org/optimar#misalignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/optimar#misalignment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Data> .
-<https://w3id.org/optimar#misalignment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-<https://w3id.org/optimar#misalignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Measure of the misalignment detected in a component."@en .
-<https://w3id.org/optimar#misalignment> <http://www.w3.org/2000/01/rdf-schema#comment> "Medida de la falta de alineación detectada en un componente."@es .
-<https://w3id.org/optimar#misalignment> <http://www.w3.org/2000/01/rdf-schema#label> "Desalineación"@es .
-<https://w3id.org/optimar#misalignment> <http://www.w3.org/2000/01/rdf-schema#label> "Misalignment"@en .
+# https://w3id.org/optimar#misalignmentLevel
+<https://w3id.org/optimar#misalignmentLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/optimar#misalignmentLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Data> .
+<https://w3id.org/optimar#misalignmentLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/optimar#misalignmentLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Measure of the misalignment level detected in a component."@en .
+<https://w3id.org/optimar#misalignmentLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Medida del grado de desalineación detectada en un componente."@es .
+<https://w3id.org/optimar#misalignmentLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Misalignment level"@en .
+<https://w3id.org/optimar#misalignmentLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de desalineación"@es .
 # 
 # https://w3id.org/optimar#operationalStatus
 <https://w3id.org/optimar#operationalStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -598,23 +704,11 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/optimar#operationalStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Estado operativo"@es .
 <https://w3id.org/optimar#operationalStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Operational status"@en .
 # 
-# https://w3id.org/optimar#pressure
-<https://w3id.org/optimar#pressure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/optimar#pressure> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Data> .
-<https://w3id.org/optimar#pressure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-<https://w3id.org/optimar#pressure> <http://www.w3.org/2000/01/rdf-schema#comment> "Presión ejercida sobre un componente."@es .
-<https://w3id.org/optimar#pressure> <http://www.w3.org/2000/01/rdf-schema#comment> "Pressure exerted on a component."@en .
-<https://w3id.org/optimar#pressure> <http://www.w3.org/2000/01/rdf-schema#label> "Presión"@es .
-<https://w3id.org/optimar#pressure> <http://www.w3.org/2000/01/rdf-schema#label> "Pressure"@en .
+# https://w3id.org/optimar#pressureLevel
+<https://w3id.org/optimar#pressureLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 # 
-# https://w3id.org/optimar#stress
-<https://w3id.org/optimar#stress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/optimar#stress> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Data> .
-<https://w3id.org/optimar#stress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-<https://w3id.org/optimar#stress> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de tensión registrado en un componente."@es .
-<https://w3id.org/optimar#stress> <http://www.w3.org/2000/01/rdf-schema#comment> "Stress level recorded in a component."@en .
-<https://w3id.org/optimar#stress> <http://www.w3.org/2000/01/rdf-schema#label> "Stress"@en .
-<https://w3id.org/optimar#stress> <http://www.w3.org/2000/01/rdf-schema#label> "Tensión"@es .
+# https://w3id.org/optimar#stressLevel
+<https://w3id.org/optimar#stressLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 # 
 # https://w3id.org/optimar#unit
 <https://w3id.org/optimar#unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -634,14 +728,8 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/optimar#value> <http://www.w3.org/2000/01/rdf-schema#label> "Valor"@es .
 <https://w3id.org/optimar#value> <http://www.w3.org/2000/01/rdf-schema#label> "Value"@en .
 # 
-# https://w3id.org/optimar#vibrations
-<https://w3id.org/optimar#vibrations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/optimar#vibrations> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/optimar#Data> .
-<https://w3id.org/optimar#vibrations> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
-<https://w3id.org/optimar#vibrations> <http://www.w3.org/2000/01/rdf-schema#comment> "Level of vibrations recorded in a component or system."@en .
-<https://w3id.org/optimar#vibrations> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de vibraciones registradas en un componente o sistema."@es .
-<https://w3id.org/optimar#vibrations> <http://www.w3.org/2000/01/rdf-schema#label> "Vibraciones"@es .
-<https://w3id.org/optimar#vibrations> <http://www.w3.org/2000/01/rdf-schema#label> "Vibrations"@en .
+# https://w3id.org/optimar#vibrationLevel
+<https://w3id.org/optimar#vibrationLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 # 
 # 
 # 
@@ -654,6 +742,9 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # http://qudt.org/schema/qudt/QuantityValue
 # 
+# http://www.w3.org/2002/07/owl#SymetricProperty
+<http://www.w3.org/2002/07/owl#SymetricProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
 # https://w3id.org/optimar#Actor
 <https://w3id.org/optimar#Actor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/optimar#Actor> <http://www.w3.org/2000/01/rdf-schema#comment> "An actor that interacts or manages the offshore wind power platform."@en .
@@ -664,7 +755,7 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/optimar#AnalyticalRole
 <https://w3id.org/optimar#AnalyticalRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/optimar#AnalyticalRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#Role> .
-<https://w3id.org/optimar#AnalyticalRole> <http://www.w3.org/2000/01/rdf-schema#comment> "Rol orientado al analisis de datos y generación de información útil para la toma de decisiones."@es .
+<https://w3id.org/optimar#AnalyticalRole> <http://www.w3.org/2000/01/rdf-schema#comment> "Rol orientado al análisis de datos y generación de información útil para la toma de decisiones."@es .
 <https://w3id.org/optimar#AnalyticalRole> <http://www.w3.org/2000/01/rdf-schema#comment> "Role focused on data analysis and generation of useful information for decision-making."@en .
 <https://w3id.org/optimar#AnalyticalRole> <http://www.w3.org/2000/01/rdf-schema#label> "Analytical Role"@en .
 <https://w3id.org/optimar#AnalyticalRole> <http://www.w3.org/2000/01/rdf-schema#label> "Rol analítico"@es .
@@ -681,15 +772,14 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/optimar#Base
 <https://w3id.org/optimar#Base> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/optimar#Base> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#StructuralComponent> .
-<https://w3id.org/optimar#Base> <http://www.w3.org/2000/01/rdf-schema#comment> "La base que soporta la plataforma flotante."@es .
-<https://w3id.org/optimar#Base> <http://www.w3.org/2000/01/rdf-schema#comment> "The base that supports the floating platform."@en .
-<https://w3id.org/optimar#Base> <http://www.w3.org/2000/01/rdf-schema#label> "Base (floating substructure)"@en .
-<https://w3id.org/optimar#Base> <http://www.w3.org/2000/01/rdf-schema#label> "Base (subestructura flotante)"@es .
 # 
 # https://w3id.org/optimar#Blade
 <https://w3id.org/optimar#Blade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/optimar#Blade> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#TurbineComponent> .
+<https://w3id.org/optimar#Blade> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/optimar#Hub> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/optimar#connectedTo> .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/optimar#Blade> <http://www.w3.org/2000/01/rdf-schema#comment> "Las palas de la turbina que capturan la energía eólica."@es .
 <https://w3id.org/optimar#Blade> <http://www.w3.org/2000/01/rdf-schema#comment> "The blades of the turbine that capture the wind energy."@en .
 <https://w3id.org/optimar#Blade> <http://www.w3.org/2000/01/rdf-schema#label> "Blade"@en .
@@ -719,6 +809,15 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/optimar#ComponentBreakage> <http://www.w3.org/2000/01/rdf-schema#label> "Rotura de componente"@es .
 # 
 # https://w3id.org/optimar#Corrosion
+<https://w3id.org/optimar#Corrosion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/optimar#Corrosion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#Failure> .
+<https://w3id.org/optimar#Corrosion> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/optimar#Deformation> .
+<https://w3id.org/optimar#Corrosion> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/optimar#MaterialFatigue> .
+<https://w3id.org/optimar#Corrosion> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/optimar#Misalignment> .
+<https://w3id.org/optimar#Corrosion> <http://www.w3.org/2000/01/rdf-schema#comment> "Failure caused by corrosion of the metallic structure of the platform."@en .
+<https://w3id.org/optimar#Corrosion> <http://www.w3.org/2000/01/rdf-schema#comment> "Fallo causado por la corrosión de la estructura metálica de la plataforma."@es .
+<https://w3id.org/optimar#Corrosion> <http://www.w3.org/2000/01/rdf-schema#label> "Corrosion"@en .
+<https://w3id.org/optimar#Corrosion> <http://www.w3.org/2000/01/rdf-schema#label> "Corrosión"@es .
 # 
 # https://w3id.org/optimar#CorrosionCamera
 <https://w3id.org/optimar#CorrosionCamera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -733,12 +832,16 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/optimar#CorrosionEvent
 <https://w3id.org/optimar#CorrosionEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/optimar#CorrosionEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#FailureEvent> .
+<https://w3id.org/optimar#CorrosionEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/optimar#Corrosion> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/optimar#causedBy> .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/optimar#CorrosionEvent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/optimar#MaterialFatigue> .
 <https://w3id.org/optimar#CorrosionEvent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/optimar#Misalignment> .
 <https://w3id.org/optimar#CorrosionEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Degradación de la estructura metálica de la plataforma por efectos de corrosión."@es .
 <https://w3id.org/optimar#CorrosionEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Degradation of the platform's metallic structure due to corrosion effects."@en .
 <https://w3id.org/optimar#CorrosionEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Corrosion Event"@en .
-<https://w3id.org/optimar#CorrosionEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Evento de Corrosión"@es .
+<https://w3id.org/optimar#CorrosionEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Evento de dección de corrosión"@es .
 # 
 # https://w3id.org/optimar#Data
 <https://w3id.org/optimar#Data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -756,6 +859,14 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/optimar#DataAnalyst> <http://www.w3.org/2000/01/rdf-schema#label> "Data Analyst"@en .
 # 
 # https://w3id.org/optimar#Deformation
+<https://w3id.org/optimar#Deformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/optimar#Deformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#Failure> .
+<https://w3id.org/optimar#Deformation> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/optimar#MaterialFatigue> .
+<https://w3id.org/optimar#Deformation> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/optimar#Misalignment> .
+<https://w3id.org/optimar#Deformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Failure caused by structural deformation of a component."@en .
+<https://w3id.org/optimar#Deformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Fallo causado por la deformación estructural de un componente."@es .
+<https://w3id.org/optimar#Deformation> <http://www.w3.org/2000/01/rdf-schema#label> "Deformación estructural"@es .
+<https://w3id.org/optimar#Deformation> <http://www.w3.org/2000/01/rdf-schema#label> "Structural deformation"@en .
 # 
 # https://w3id.org/optimar#DynamicMonitor
 <https://w3id.org/optimar#DynamicMonitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -790,10 +901,10 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/optimar#FailureEvent
 <https://w3id.org/optimar#FailureEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/optimar#FailureEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#Event> .
-<https://w3id.org/optimar#FailureEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
-_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/optimar#Failure> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/optimar#causedBy> .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/optimar#FailureEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/optimar#Failure> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/optimar#causedBy> .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/optimar#FailureEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Event that represents a detected failure in the system, must be caused by at least one failure."@en .
 <https://w3id.org/optimar#FailureEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "Evento que representa un fallo detectado en el sistema, debe estar causado por al menos un fallo. "@es .
 <https://w3id.org/optimar#FailureEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Evento de fallo"@es .
@@ -801,17 +912,17 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/optimar#FloatingPlatform
 <https://w3id.org/optimar#FloatingPlatform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/optimar#FloatingPlatform> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#Component> .
-<https://w3id.org/optimar#FloatingPlatform> <http://www.w3.org/2000/01/rdf-schema#comment> "A floating platform that serves as a base for the wind turbine."@en .
-<https://w3id.org/optimar#FloatingPlatform> <http://www.w3.org/2000/01/rdf-schema#comment> "Una plataforma flotante que sirve de base para la turbina eólica."@es .
-<https://w3id.org/optimar#FloatingPlatform> <http://www.w3.org/2000/01/rdf-schema#label> "Floating Platform"@en .
-<https://w3id.org/optimar#FloatingPlatform> <http://www.w3.org/2000/01/rdf-schema#label> "Plataforma flotante"@es .
+<https://w3id.org/optimar#FloatingPlatform> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#WindPowerPlatform> .
+<https://w3id.org/optimar#FloatingPlatform> <http://www.w3.org/2000/01/rdf-schema#comment> "An offshore wind power platform that includes a turbine, floating substructure, and mooring system"@en .
+<https://w3id.org/optimar#FloatingPlatform> <http://www.w3.org/2000/01/rdf-schema#comment> "Plataforma eólica offshore completa que incluye turbina, substructura flotante y sistema de amarre"@es .
+<https://w3id.org/optimar#FloatingPlatform> <http://www.w3.org/2000/01/rdf-schema#label> "Floating Wind Power Platform"@en .
+<https://w3id.org/optimar#FloatingPlatform> <http://www.w3.org/2000/01/rdf-schema#label> "Plataforma eólica flotante"@es .
 # 
 # https://w3id.org/optimar#FloatingSubstructure
 <https://w3id.org/optimar#FloatingSubstructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/optimar#FloatingSubstructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#StructuralComponent> .
-<https://w3id.org/optimar#FloatingSubstructure> <http://www.w3.org/2000/01/rdf-schema#comment> "La subestructura flotante que permite que la plataforma sea estable en el mar."@es .
-<https://w3id.org/optimar#FloatingSubstructure> <http://www.w3.org/2000/01/rdf-schema#comment> "The floating substructure that allows the platform to be stable at sea."@en .
+<https://w3id.org/optimar#FloatingSubstructure> <http://www.w3.org/2000/01/rdf-schema#comment> "La estructura sumergida que proporciona flotabilidad (spar, semi-sumergible, TLP, etc.)"@es .
+<https://w3id.org/optimar#FloatingSubstructure> <http://www.w3.org/2000/01/rdf-schema#comment> "The floating substructure that provides stability (spar, semi-sumergible, TLP, etc.)"@en .
 <https://w3id.org/optimar#FloatingSubstructure> <http://www.w3.org/2000/01/rdf-schema#label> "Floating Substructure"@en .
 <https://w3id.org/optimar#FloatingSubstructure> <http://www.w3.org/2000/01/rdf-schema#label> "Subestructura flotante"@es .
 # 
@@ -823,9 +934,25 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/optimar#GaugeSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Gauge System"@en .
 <https://w3id.org/optimar#GaugeSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Sistema de galgas"@es .
 # 
+# https://w3id.org/optimar#Generator
+<https://w3id.org/optimar#Generator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/optimar#Generator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#Component> .
+<https://w3id.org/optimar#Generator> <http://www.w3.org/2000/01/rdf-schema#comment> "Electrical generator that converts mechanical energy into electrical energy."@en .
+<https://w3id.org/optimar#Generator> <http://www.w3.org/2000/01/rdf-schema#comment> "Generador eléctrico que convierte energía mecánica en eléctrica."@es .
+<https://w3id.org/optimar#Generator> <http://www.w3.org/2000/01/rdf-schema#label> "Generador"@es .
+<https://w3id.org/optimar#Generator> <http://www.w3.org/2000/01/rdf-schema#label> "Generator"@en .
+# 
 # https://w3id.org/optimar#Hub
 <https://w3id.org/optimar#Hub> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/optimar#Hub> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#TurbineComponent> .
+<https://w3id.org/optimar#Hub> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/optimar#Blade> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/optimar#connectedTo> .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/optimar#Hub> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/optimar#Generator> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/optimar#transmitsMovementTo> .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/optimar#Hub> <http://www.w3.org/2000/01/rdf-schema#comment> "La parte central de la turbina donde se conectan las palas."@es .
 <https://w3id.org/optimar#Hub> <http://www.w3.org/2000/01/rdf-schema#comment> "The central part of the turbine where the blades are connected."@en .
 <https://w3id.org/optimar#Hub> <http://www.w3.org/2000/01/rdf-schema#label> "Hub"@en .
@@ -856,11 +983,14 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/optimar#Maintenance
 <https://w3id.org/optimar#Maintenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/optimar#Maintenance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/optimar#MaintenanceOperator> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/optimar#performedBy> .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/optimar#Maintenance> <http://www.w3.org/2000/01/rdf-schema#comment> "A class that represents the maintenance of the wind platform."@en .
 <https://w3id.org/optimar#Maintenance> <http://www.w3.org/2000/01/rdf-schema#comment> "Una clase que representa el mantenimiento de la plataforma eólica."@es .
 <https://w3id.org/optimar#Maintenance> <http://www.w3.org/2000/01/rdf-schema#label> "Maintenance"@en .
 <https://w3id.org/optimar#Maintenance> <http://www.w3.org/2000/01/rdf-schema#label> "Mantenimiento"@es .
-<https://w3id.org/optimar#Maintenance> <https://w3id.org/optimar#performedBy> <https://w3id.org/optimar#MaintenanceOperator> .
 # 
 # https://w3id.org/optimar#MaintenanceOperator
 <https://w3id.org/optimar#MaintenanceOperator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -922,6 +1052,14 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/optimar#Nacelle
 <https://w3id.org/optimar#Nacelle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/optimar#Nacelle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#TurbineComponent> .
+<https://w3id.org/optimar#Nacelle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/optimar#Generator> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/optimar#houses> .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/optimar#Nacelle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/optimar#Tower> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/optimar#isSupportedBy> .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/optimar#Nacelle> <http://www.w3.org/2000/01/rdf-schema#comment> "El compartimento de la turbina que aloja el generador y otros componentes mecánicos."@es .
 <https://w3id.org/optimar#Nacelle> <http://www.w3.org/2000/01/rdf-schema#comment> "The turbine component that houses the generator and other mechanical components."@en .
 <https://w3id.org/optimar#Nacelle> <http://www.w3.org/2000/01/rdf-schema#label> "Nacelle"@en .
@@ -930,6 +1068,14 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/optimar#Observation
 <https://w3id.org/optimar#Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/optimar#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/sosa/Observation> .
+<https://w3id.org/optimar#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/optimar#Sensor> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/optimar#madeBySensor> .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/optimar#Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "El resultado de registrar un fenómeno o condición, normalmente a través de un sensor o sistema de monitorización."@es .
+<https://w3id.org/optimar#Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "The result of recording a phenomenon or condition, usually through a sensor or monitoring system."@en .
+<https://w3id.org/optimar#Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observación"@es .
+<https://w3id.org/optimar#Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation"@en .
 # 
 # https://w3id.org/optimar#ParkOwner
 <https://w3id.org/optimar#ParkOwner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -988,18 +1134,19 @@ _:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/optimar#StructuralComponent
 <https://w3id.org/optimar#StructuralComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/optimar#StructuralComponent> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid14 .
-_:genid14 <http://www.w3.org/2002/07/owl#unionOf> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid15 .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#MooringSystem> .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#FloatingSubstructure> .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#Base> .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/optimar#StructuralComponent> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid22 .
+_:genid22 <http://www.w3.org/2002/07/owl#unionOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#MooringSystem> .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#FloatingSubstructure> .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#Base> .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/optimar#StructuralComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#Component> .
 <https://w3id.org/optimar#StructuralComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Los componentes estructurales que componen la infraestructura básica de la plataforma eólica."@es .
 <https://w3id.org/optimar#StructuralComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "The structural components that make up the basic infrastructure of the wind platform."@en .
 <https://w3id.org/optimar#StructuralComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componentes estructurales"@es .
@@ -1031,6 +1178,14 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/optimar#Tower
 <https://w3id.org/optimar#Tower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/optimar#Tower> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#TurbineComponent> .
+<https://w3id.org/optimar#Tower> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/optimar#FloatingSubstructure> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/optimar#isSupportedBy> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/optimar#Tower> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/optimar#Nacelle> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/optimar#supports> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/optimar#Tower> <http://www.w3.org/2000/01/rdf-schema#comment> "La estructura que sostiene la turbina eólica."@es .
 <https://w3id.org/optimar#Tower> <http://www.w3.org/2000/01/rdf-schema#comment> "The structure that supports the wind turbine."@en .
 <https://w3id.org/optimar#Tower> <http://www.w3.org/2000/01/rdf-schema#label> "Torre"@es .
@@ -1039,6 +1194,26 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/optimar#Turbine
 <https://w3id.org/optimar#Turbine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/optimar#Turbine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#Component> .
+<https://w3id.org/optimar#Turbine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid28 .
+_:genid28 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/optimar#Blade> .
+_:genid28 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "2"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid28 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/optimar#hasTurbineComponent> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/optimar#Turbine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid29 .
+_:genid29 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/optimar#Hub> .
+_:genid29 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid29 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/optimar#hasTurbineComponent> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/optimar#Turbine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid30 .
+_:genid30 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/optimar#Nacelle> .
+_:genid30 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid30 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/optimar#hasTurbineComponent> .
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://w3id.org/optimar#Turbine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid31 .
+_:genid31 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/optimar#Tower> .
+_:genid31 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid31 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/optimar#hasTurbineComponent> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://w3id.org/optimar#Turbine> <http://www.w3.org/2000/01/rdf-schema#comment> "A wind turbine that is part of the wind platform."@en .
 <https://w3id.org/optimar#Turbine> <http://www.w3.org/2000/01/rdf-schema#comment> "Una turbina de viento que forma parte de la plataforma eólica."@es .
 <https://w3id.org/optimar#Turbine> <http://www.w3.org/2000/01/rdf-schema#label> "Turbina"@es .
@@ -1046,21 +1221,22 @@ _:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://w3id.org/optimar#TurbineComponent
 <https://w3id.org/optimar#TurbineComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/optimar#TurbineComponent> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid18 .
-_:genid18 <http://www.w3.org/2002/07/owl#unionOf> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid19 .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#Tower> .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#Nacelle> .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#Hub> .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#Blade> .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/optimar#TurbineComponent> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid32 .
+_:genid32 <http://www.w3.org/2002/07/owl#unionOf> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#Tower> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#Nacelle> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#Hub> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#Blade> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/optimar#TurbineComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#Component> .
 <https://w3id.org/optimar#TurbineComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Los componentes de la turbina eólica que generan energía a partir del viento."@es .
 <https://w3id.org/optimar#TurbineComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "The turbine components that generate energy from the wind."@en .
 <https://w3id.org/optimar#TurbineComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Componentes de turbina"@es .
@@ -1094,12 +1270,9 @@ _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #################################################################
 # 
 # 
-# https://w3id.org/optimar#Observation
-<https://w3id.org/optimar#Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-<https://w3id.org/optimar#Observation> <https://w3id.org/optimar#madeBySensor> <https://www.w3.org/ns/sosa/Sensor> .
-<https://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
-# 
-# https://www.w3.org/ns/sosa/Sensor
+# https://w3id.org/optimar#connectedTo
+<https://w3id.org/optimar#connectedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/optimar#connectedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymetricProperty> .
 # 
 # 
 # 
@@ -1110,19 +1283,24 @@ _:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # #################################################################
 # 
 # 
-<https://w3id.org/optimar#Corrosion> <http://www.w3.org/2000/01/rdf-schema#comment> "General corrosion index detected in a component."@en .
-<https://w3id.org/optimar#Corrosion> <http://www.w3.org/2000/01/rdf-schema#comment> "Índice general de corrosión detectada en un componente."@es .
-<https://w3id.org/optimar#Corrosion> <http://www.w3.org/2000/01/rdf-schema#label> "Corrosion"@en .
-<https://w3id.org/optimar#Corrosion> <http://www.w3.org/2000/01/rdf-schema#label> "Corrosión"@es .
+<https://w3id.org/optimar#connectedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Indica que un componente está conectado a otro."@es .
+<https://w3id.org/optimar#connectedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a component is connected to another."@en .
+<https://w3id.org/optimar#connectedTo> <http://www.w3.org/2000/01/rdf-schema#label> "Conectado a"@es .
+<https://w3id.org/optimar#connectedTo> <http://www.w3.org/2000/01/rdf-schema#label> "Connected to"@en .
 # 
-<https://w3id.org/optimar#Deformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Degree of deformation recorded in the component."@en .
-<https://w3id.org/optimar#Deformation> <http://www.w3.org/2000/01/rdf-schema#comment> "Grado de deformación registrado en el componente."@es .
-<https://w3id.org/optimar#Deformation> <http://www.w3.org/2000/01/rdf-schema#label> "Deformación"@es .
-<https://w3id.org/optimar#Deformation> <http://www.w3.org/2000/01/rdf-schema#label> "Deformation"@en .
+<https://w3id.org/optimar#pressureLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Presión ejercida sobre un componente."@es .
+<https://w3id.org/optimar#pressureLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Pressure exerted on a component."@en .
+<https://w3id.org/optimar#pressureLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de presión"@es .
+<https://w3id.org/optimar#pressureLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Pressure level"@en .
 # 
-<https://w3id.org/optimar#Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "El resultado de registrar un fenómeno o condición, normalmente a través de un sensor o sistema de monitorización."@es .
-<https://w3id.org/optimar#Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "The result of recording a phenomenon or condition, usually through a sensor or monitoring system."@en .
-<https://w3id.org/optimar#Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observación"@es .
-<https://w3id.org/optimar#Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation"@en .
+<https://w3id.org/optimar#stressLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de tensión registrado en un componente."@es .
+<https://w3id.org/optimar#stressLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Stress level recorded in a component."@en .
+<https://w3id.org/optimar#stressLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de tensión"@es .
+<https://w3id.org/optimar#stressLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Stress level"@en .
+# 
+<https://w3id.org/optimar#vibrationLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Level of vibrations recorded in a component or system."@en .
+<https://w3id.org/optimar#vibrationLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de vibraciones registradas en un componente o sistema."@es .
+<https://w3id.org/optimar#vibrationLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de Vibracion"@es .
+<https://w3id.org/optimar#vibrationLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Vibration level"@en .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

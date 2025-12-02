@@ -24,6 +24,7 @@ The ontology models platform components, turbines, sensors, failures, maintenanc
 | v0.1 | Initial version, basic ontology with main classes, properties, and example instances for offshore wind platforms. | 2025-06-05 | [v0.1](https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v0.1.ttl) |
 | v0.2 | Added detailed sensors, measured data, failures, actors and roles. | 2025-09-24 | [v0.2](https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v0.2.ttl) |
 | v1.0 | Stable version of the ontology.<br>Consolidation and extension of structural and turbine components.<br>Inclusion of actors and roles with their functional relationships.<br>Detailed definition of specific sensor classes and associated measurement types.<br>More comprehensive modeling of failure events.<br>Inclusion of properties for measured data and environmental conditions. | 2025-10-06 | [v1.0](https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl) |
+| v2.0 | Major hierarchy improvements and refactoring.<br>Separation of conceptual `Failure` classes from specific `FailureEvent` classes.<br>Introduction of `ex:Generator` and `ex:StructuralComponent`.<br>Enhanced logical constraints (cardinality, symmetric properties, and inverse relationships).<br>Standardized QUDT usage for physical quantities and property renaming for consistency.| 2025-12-01 | [v2.0](https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v2.0.ttl) |
 
 Each version of the ontology is stored in a separate file with its own namespace IRI.  
 Full instances for each version are stored under the `instances/` directory.
@@ -51,10 +52,10 @@ The `docs/` folder contains:
 
 ## Ontology IRI and usage
 
-For version 1.0:
+For version 2.0:
 
-- Ontology TTL: `https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl`
-- Instances TTL: `https://bisite.github.io/OPTIMAR-Ontology/instances/v1.0/instances.ttl`
+- Ontology TTL: `https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v2.0.ttl`
+- Instances TTL: `https://bisite.github.io/OPTIMAR-Ontology/instances/v2.0/instances.ttl`
 
 The ontology uses the following common prefixes:
 
