@@ -1,4 +1,4 @@
-@prefix ex: <https://w3id.org/optimar#> .
+@prefix optimar: <https://w3id.org/optimar#> .
 @prefix sosa: <https://www.w3.org/ns/sosa/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -11,194 +11,194 @@
 # Platform and Location
 ##########################################################
 
-ex:NorthSeaLocation a ex:Location ;
+optimar:NorthSeaLocation a optimar:Location ;
     rdfs:label "Mar del Norte"@es ;
     rdfs:label "North Sea"@en .
 
-ex:OptimarPlatform01 a ex:FloatingPlatform ;
+optimar:OptimarPlatform01 a optimar:FloatingPlatform ;
     rdfs:label "Plataforma Flotante OPTiMAR 01"@es ;
     rdfs:label "OPTiMAR Floating Platform 01"@en ;
-    ex:locatedIn ex:NorthSeaLocation .
+    optimar:locatedIn optimar:NorthSeaLocation .
     # Nota: La relación estructural se define a través de la torre que se apoya en la subestructura
 
 ##########################################################
 # Structural Components (Floating & Mooring)
 ##########################################################
 
-ex:FloatingSubstructure01 a ex:FloatingSubstructure ;
+optimar:FloatingSubstructure01 a optimar:FloatingSubstructure ;
     rdfs:label "Subestructura flotante 01"@es ;
-    ex:material "Acero Naval"@es ;
-    ex:supports ex:Tower01 .
+    optimar:material "Acero Naval"@es ;
+    optimar:supports optimar:Tower01 .
 
-ex:MooringSystem01 a ex:MooringSystem ;
+optimar:MooringSystem01 a optimar:MooringSystem ;
     rdfs:label "Sistema de amarre 01"@es ;
-    ex:connectedTo ex:FloatingSubstructure01 .
+    optimar:connectedTo optimar:FloatingSubstructure01 .
 
 ##########################################################
 # Turbine and its components
 ##########################################################
 
-ex:Turbine01 a ex:Turbine ;
+optimar:Turbine01 a optimar:Turbine ;
     rdfs:label "Turbina Eólica 01"@es ;
-    ex:operationalStatus "Operativa"@es ;
+    optimar:operationalStatus "Operativa"@es ;
     
     # Propiedades QUDT (QuantityValue)
-    ex:hasCapacity [ 
+    optimar:hasCapacity [ 
         a qudt:QuantityValue ; 
         qudt:numericValue "15"^^xsd:decimal ; 
         qudt:unit unit:MegaW 
     ] ;
     
     # Relación con sus componentes principales
-    ex:hasTurbineComponent ex:Tower01, ex:Nacelle01, ex:Hub01, ex:Blade01, ex:Blade02, ex:Blade03 .
+    optimar:hasTurbineComponent optimar:Tower01, optimar:Nacelle01, optimar:Hub01, optimar:Blade01, optimar:Blade02, optimar:Blade03 .
 
-ex:Tower01 a ex:Tower ;
+optimar:Tower01 a optimar:Tower ;
     rdfs:label "Torre T1"@es ;
-    ex:height [ 
+    optimar:height [ 
         a qudt:QuantityValue ; 
         qudt:numericValue "120"^^xsd:decimal ; 
         qudt:unit unit:M 
     ] ;
-    ex:isSupportedBy ex:FloatingSubstructure01 ;
-    ex:supports ex:Nacelle01 .
+    optimar:isSupportedBy optimar:FloatingSubstructure01 ;
+    optimar:supports optimar:Nacelle01 .
 
-ex:Nacelle01 a ex:Nacelle ;
+optimar:Nacelle01 a optimar:Nacelle ;
     rdfs:label "Nacelle T1"@es ;
-    ex:houses ex:Generator01 ;
-    ex:isSupportedBy ex:Tower01 .
+    optimar:houses optimar:Generator01 ;
+    optimar:isSupportedBy optimar:Tower01 .
 
-ex:Generator01 a ex:Generator ;
+optimar:Generator01 a optimar:Generator ;
     rdfs:label "Generador T1"@es ;
-    ex:mass [ 
+    optimar:mass [ 
         a qudt:QuantityValue ; 
         qudt:numericValue "35000"^^xsd:decimal ; 
         qudt:unit unit:KiloGM 
     ] ;
-    ex:isHousedIn ex:Nacelle01 .
+    optimar:isHousedIn optimar:Nacelle01 .
 
-ex:Hub01 a ex:Hub ;
+optimar:Hub01 a optimar:Hub ;
     rdfs:label "Hub T1"@es ;
-    ex:connectedTo ex:Nacelle01 ;
-    ex:transmitsMovementTo ex:Generator01 .
+    optimar:connectedTo optimar:Nacelle01 ;
+    optimar:transmitsMovementTo optimar:Generator01 .
 
-ex:Blade01 a ex:Blade ;
+optimar:Blade01 a optimar:Blade ;
     rdfs:label "Pala 01"@es ;
-    ex:externalShape "Aerodinámica"@es ;
-    ex:length [ 
+    optimar:externalShape "Aerodinámica"@es ;
+    optimar:length [ 
         a qudt:QuantityValue ; 
         qudt:numericValue "90"^^xsd:decimal ; 
         qudt:unit unit:M 
     ] ;
-    ex:material "Fibra de Carbono"@es ;
-    ex:connectedTo ex:Hub01 .
+    optimar:material "Fibra de Carbono"@es ;
+    optimar:connectedTo optimar:Hub01 .
 
-ex:PitchSystem01 a ex:PitchSystem ;
+optimar:PitchSystem01 a optimar:PitchSystem ;
     rdfs:label "Sistema de Pitch Pala 01"@es ;
-    ex:connectedTo ex:Blade01 .
+    optimar:connectedTo optimar:Blade01 .
 
 ##########################################################
 # Sensors
 ##########################################################
 
-ex:Anemometer01 a ex:Anemometer ;
+optimar:Anemometer01 a optimar:Anemometer ;
     rdfs:label "Anemómetro Principal"@es ;
-    ex:measuresWind ex:CurrentWindCondition ;
-    ex:isMonitoredBy ex:Operator01 .
+    optimar:measuresWind optimar:CurrentWindCondition ;
+    optimar:isMonitoredBy optimar:Operator01 .
 
-ex:CorrosionCam01 a ex:CorrosionCamera ;
+optimar:CorrosionCam01 a optimar:CorrosionCamera ;
     rdfs:label "Cámara de corrosión - Pala 01"@es ;
-    sosa:observes ex:Blade01 ; # Propiedad heredada de SOSA
-    ex:detectsCorrosion ex:BladeCorrosionFailure .
+    sosa:observes optimar:Blade01 ; # Propiedad heredada de SOSA
+    optimar:detectsCorrosion optimar:BladeCorrosionFailure .
 
-ex:VibrationSensor01 a ex:DynamicMonitor ;
+optimar:VibrationSensor01 a optimar:DynamicMonitor ;
     rdfs:label "Sensor de vibración de Torre"@es ;
-    ex:measuresVibration ex:TowerVibrationData01 .
+    optimar:measuresVibration optimar:TowerVibrationData01 .
 
 ##########################################################
 # Actors and Roles
 ##########################################################
 
-ex:Operator01 a ex:MaintenanceOperator ;
+optimar:Operator01 a optimar:MaintenanceOperator ;
     rdfs:label "Juan Pérez"@es ;
-    ex:hasRole ex:TechnicalRole ;
-    ex:monitors ex:Anemometer01 ;
-    ex:performsTask ex:RoutineInspection01 .
+    optimar:hasRole optimar:TechnicalRole ;
+    optimar:monitors optimar:Anemometer01 ;
+    optimar:performsTask optimar:RoutineInspection01 .
 
-ex:Analyst01 a ex:DataAnalyst ;
+optimar:Analyst01 a optimar:DataAnalyst ;
     rdfs:label "Ana García"@es ;
-    ex:hasRole ex:AnalyticalRole ;
-    ex:analyzes ex:CorrosionEvent01 .
+    optimar:hasRole optimar:AnalyticalRole ;
+    optimar:analyzes optimar:CorrosionEvent01 .
 
-ex:CloudAdmin01 a ex:CloudAdministrator ;
+optimar:CloudAdmin01 a optimar:CloudAdministrator ;
     rdfs:label "Admin Cloud"@es ;
-    ex:manages ex:OptimarPlatform01 .
+    optimar:manages optimar:OptimarPlatform01 .
 
 ##########################################################
 # Tasks and Maintenance
 ##########################################################
 
-ex:RoutineInspection01 a ex:MonitoringTask ;
+optimar:RoutineInspection01 a optimar:MonitoringTask ;
     rdfs:label "Inspección Rutinaria de Sensores"@es ;
-    ex:performedBy ex:Operator01 .
+    optimar:performedBy optimar:Operator01 .
 
-ex:BladeRepair01 a ex:Maintenance ;
+optimar:BladeRepair01 a optimar:Maintenance ;
     rdfs:label "Reparación de superficie de Pala 01"@es ;
-    ex:performedBy ex:Operator01 ;
-    ex:requiresMaintenance ex:Blade01 .
+    optimar:performedBy optimar:Operator01 ;
+    optimar:requiresMaintenance optimar:Blade01 .
 
 ##########################################################
 # Failures and Events
 ##########################################################
 
 # 1. El concepto abstracto del fallo (La causa)
-ex:BladeCorrosionFailure a ex:Corrosion ;
+optimar:BladeCorrosionFailure a optimar:Corrosion ;
     rdfs:label "Corrosión por salinidad"@es ;
-    ex:affects ex:Blade01 ;
-    ex:hasFailureCause ex:CurrentWindCondition . # Asumiendo que el viento/ambiente salino es la causa
+    optimar:affects optimar:Blade01 ;
+    optimar:hasFailureCause optimar:CurrentWindCondition . # Asumiendo que el viento/ambiente salino es la causa
 
 # 2. El evento específico de detección (El suceso en el tiempo)
-ex:CorrosionEvent01 a ex:CorrosionEvent ;
+optimar:CorrosionEvent01 a optimar:CorrosionEvent ;
     rdfs:label "Evento de detección de corrosión #234"@es ;
-    ex:causedBy ex:BladeCorrosionFailure ;
-    ex:detectedBy ex:CorrosionCam01 ;
-    ex:relatedToComponent ex:Blade01 ;
-    ex:corrosionLevel "0.45"^^xsd:decimal ;
-    prov:generated ex:CorrosionImage01 .
+    optimar:causedBy optimar:BladeCorrosionFailure ;
+    optimar:detectedBy optimar:CorrosionCam01 ;
+    optimar:relatedToComponent optimar:Blade01 ;
+    optimar:corrosionLevel "0.45"^^xsd:decimal ;
+    prov:generated optimar:CorrosionImage01 .
 
 ##########################################################
 # Data and Measurements
 ##########################################################
 
 # Imagen generada por el evento
-ex:CorrosionImage01 a ex:Image ;
+optimar:CorrosionImage01 a optimar:Image ;
     rdfs:label "Imagen térmica de corrosión"@es ;
-    ex:imageURL "http://storage.optimar.w3id.org/img/corr_01.jpg"^^xsd:string .
+    optimar:imageURL "http://storage.optimar.w3id.org/img/corr_01.jpg"^^xsd:string .
 
 # Datos de vibración (Instancia de VibrationData)
-ex:TowerVibrationData01 a ex:VibrationData ;
+optimar:TowerVibrationData01 a optimar:VibrationData ;
     rdfs:label "Lectura de vibración Torre T1"@es ;
-    ex:value "0.05"^^xsd:decimal ;
-    ex:unit "mm/s" ;
-    ex:dateTime "2025-10-06T10:30:00"^^xsd:dateTime .
+    optimar:value "0.05"^^xsd:decimal ;
+    optimar:unit "mm/s" ;
+    optimar:dateTime "2025-10-06T10:30:00"^^xsd:dateTime .
 
 # Observación SOSA (Vinculando sensor y dato)
-ex:Observation01 a ex:Observation ;
+optimar:Observation01 a optimar:Observation ;
     rdfs:label "Observación de Vibración 10:30"@es ;
-    ex:madeBySensor ex:VibrationSensor01 ;
-    sosa:hasResult ex:TowerVibrationData01 .
+    optimar:madeBySensor optimar:VibrationSensor01 ;
+    sosa:hasResult optimar:TowerVibrationData01 .
 
 ##########################################################
 # Environmental Conditions
 ##########################################################
 
-ex:CurrentWindCondition a ex:EnvironmentalCondition ;
+optimar:CurrentWindCondition a optimar:EnvironmentalCondition ;
     rdfs:label "Condiciones actuales Viento"@es ;
-    ex:windSpeed [ 
+    optimar:windSpeed [ 
         a qudt:QuantityValue ; 
         qudt:numericValue "12.5"^^xsd:decimal ; 
         qudt:unit unit:M-PER-SEC 
     ] ;
-    ex:windDirection [ 
+    optimar:windDirection [ 
         a qudt:QuantityValue ; 
         qudt:numericValue "280"^^xsd:decimal ; 
         qudt:unit unit:DEG 

@@ -12,8 +12,10 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/optimar">
         <owl:versionIRI rdf:resource="https://w3id.org/optimar/2.0"/>
-        <dc:creator>Alejandro Flores (USAL), Alberto Montero (USAL), Oihana Garcia (Tekniker) and Cristina Aceta (Tekniker)</dc:creator>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-01</dc:date>
+        <dc:creator>Alberto Montero (USAL)</dc:creator>
+        <dc:creator>Alejandro Flores (USAL)</dc:creator>
+        <dc:creator>Cristina Aceta (Tekniker)</dc:creator>
+        <dc:creator>Oihana Garcia (Tekniker)</dc:creator>
         <dc:description xml:lang="es">Esta ontología describe los componentes, fallos, sensores y eventos relacionados con las plataformas eólicas offshore.</dc:description>
         <dc:description xml:lang="en">This ontology describes the components, failures, sensors, and events related to offshore wind platforms.</dc:description>
         <dc:language>en</dc:language>
@@ -23,47 +25,48 @@
         <dc:title xml:lang="es">Ontología de Plataforma Eólica Offshore para OPTiMAR</dc:title>
         <terms:abstract xml:lang="es">Ontologia que modela los elementos estructurales, sensores, eventos y fallos de plataformas eólicas offshore, incluyendo datos de medición, actores involucrados y relaciones semánticas entre componentes. Compatible con SOSA para observaciones y QUDT para unidades de medida.</terms:abstract>
         <terms:abstract xml:lang="en">Ontology modeling structural elements, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. Compatible with SOSA for observations and QUDT for units of measure.</terms:abstract>
-        <terms:bibliographicCitation xml:lang="en">Flores, A., Montero, A., Garcia, O., &amp; Aceta, C. (2025). Offshore Wind Power Platform Ontology for OPTiMAR. DOI: 10.1234/abcd</terms:bibliographicCitation>
-        <terms:bibliographicCitation xml:lang="es">Flores, A., Montero, A., Garcia, O., &amp; Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.1234/abcd</terms:bibliographicCitation>
+        <terms:bibliographicCitation xml:lang="en">Flores, A., Montero, A., Garcia, O., &amp; Aceta, C. (2025). Offshore Wind Power Platform Ontology for OPTiMAR. DOI: 10.5281/zenodo.17962874</terms:bibliographicCitation>
+        <terms:bibliographicCitation xml:lang="es">Flores, A., Montero, A., Garcia, O., &amp; Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.5281/zenodo.17962874</terms:bibliographicCitation>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-09-30</terms:created>
+        <terms:identifier rdf:resource="https://doi.org/10.5281/zenodo.17962874"/>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-02</terms:issued>
         <terms:license rdf:resource="https://opensource.org/licenses/MIT"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-01</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-17</terms:modified>
         <terms:publisher xml:lang="es">Universidad de Salamanca, Centro Tecnológico y de Investigación - Tekniker</terms:publisher>
         <terms:publisher xml:lang="en">University of Salamanca, Technology and Research Centre - Tekniker</terms:publisher>
         <terms:rights xml:lang="es">Este trabajo se distribuye bajo la licencia MIT. Se permite copiar, modificar y distribuir bajo los términos de dicha licencia.</terms:rights>
         <terms:rights xml:lang="en">This work is distributed under the MIT License. It may be copied, modified, and distributed under the terms of this license.</terms:rights>
         <terms:status xml:lang="es">estable</terms:status>
         <terms:status xml:lang="en">stable</terms:status>
-        <vann:preferredNamespacePrefix>ex</vann:preferredNamespacePrefix>
+        <vann:preferredNamespacePrefix>optimar</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/optimar#"/>
         <rdfs:comment xml:lang="en">
         Version 2.0 (2025-12-02) - Major improvements:
-        - Added ex:Generator class for turbine generators
-        - Added inverse properties: ex:isHousedIn, ex:detects, ex:affects
-        - Declared ex:connectedTo as symmetric property
-        - Renamed properties to avoid class name collisions: ex:deformationLevel, ex:misalignmentLevel
-        - Corrected ex:affectedBy domain to ex:Component (previously ex:TurbineComponent)
-        - Added ex:StructuralComponent as subclass of ex:Component
+        - Added optimar:Generator class for turbine generators
+        - Added inverse properties: optimar:isHousedIn, optimar:detects, optimar:affects
+        - Declared optimar:connectedTo as symmetric property
+        - Renamed properties to avoid class name collisions: optimar:deformationLevel, optimar:misalignmentLevel
+        - Corrected optimar:affectedBy domain to optimar:Component (previously optimar:TurbineComponent)
+        - Added optimar:StructuralComponent as subclass of optimar:Component
         - Added structural restrictions to TurbineComponent classes
         - Separated failure classes from failure event classes
-        - Fixed restriction syntax in ex:Maintenance and ex:Observation
+        - Fixed restriction syntax in optimar:Maintenance and optimar:Observation
         - Improved consistency in QUDT usage for physical quantities
-        - Added cardinality constraints to ex:Turbine class
+        - Added cardinality constraints to optimar:Turbine class
     </rdfs:comment>
         <rdfs:comment xml:lang="es">
     Versión 2.0 (2025-12-02) - Mejoras principales:
-    - Añadida clase ex:Generator para generadores de turbina
-    - Añadidas propiedades inversas: ex:isHousedIn, ex:detects, ex:affects
-    - Declarada ex:connectedTo como propiedad simétrica
-    - Renombradas propiedades para evitar colisiones: ex:deformationLevel, ex:misalignmentLevel
-    - Corregido dominio de ex:affectedBy a ex:Component (antes ex:TurbineComponent)
-    - Añadido ex:StructuralComponent como subclase de ex:Component
+    - Añadida clase optimar:Generator para generadores de turbina
+    - Añadidas propiedades inversas: optimar:isHousedIn, optimar:detects, optimar:affects
+    - Declarada optimar:connectedTo como propiedad simétrica
+    - Renombradas propiedades para evitar colisiones: optimar:deformationLevel, optimar:misalignmentLevel
+    - Corregido dominio de optimar:affectedBy a optimar:Component (antes optimar:TurbineComponent)
+    - Añadido optimar:StructuralComponent como subclase de optimar:Component
     - Añadidas restricciones estructurales a clases TurbineComponent
     - Separadas clases de fallos de clases de eventos de fallos
-    - Corregida sintaxis de restricciones en ex:Maintenance y ex:Observation
+    - Corregida sintaxis de restricciones en optimar:Maintenance y optimar:Observation
     - Mejorada consistencia en uso de QUDT para magnitudes físicas
-    - Añadidas restricciones de cardinalidad a clase ex:Turbine
+    - Añadidas restricciones de cardinalidad a clase optimar:Turbine
     </rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://w3id.org/optimar#changelog"/>
         <owl:backwardCompatibleWith rdf:resource="https://w3id.org/optimar/1.0"/>
@@ -91,13 +94,6 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
-    
-
-
-    <!-- http://purl.org/dc/elements/1.1/date -->
-
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/date"/>
     
 
 
@@ -147,6 +143,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/created"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/identifier"/>
     
 
 

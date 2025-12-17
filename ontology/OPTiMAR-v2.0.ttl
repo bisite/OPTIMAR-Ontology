@@ -1,5 +1,5 @@
 
-@prefix ex: <https://w3id.org/optimar#> .
+@prefix optimar: <https://w3id.org/optimar#> .
 @prefix sosa: <https://www.w3.org/ns/sosa/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -32,13 +32,11 @@
     dcterms:abstract "Ontologia que modela los elementos estructurales, sensores, eventos y fallos de plataformas eólicas offshore, incluyendo datos de medición, actores involucrados y relaciones semánticas entre componentes. Compatible con SOSA para observaciones y QUDT para unidades de medida."@es ;
     dcterms:abstract "Ontology modeling structural elements, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. Compatible with SOSA for observations and QUDT for units of measure."@en ;
 
-    dc:creator "Alejandro Flores (USAL), Alberto Montero (USAL), Oihana Garcia (Tekniker) and Cristina Aceta (Tekniker)" ;
+    dc:creator "Alejandro Flores (USAL)", "Alberto Montero (USAL)", "Oihana Garcia (Tekniker)", "Cristina Aceta (Tekniker)" ;
 
     dcterms:created "2025-09-30"^^xsd:date ;
     dcterms:issued "2025-12-02"^^xsd:date ;
-    dcterms:modified "2025-12-01"^^xsd:date ;
-    dc:date "2025-12-01"^^xsd:date ;
-
+    dcterms:modified "2025-12-17"^^xsd:date ;
     dc:language "en" ;
     
     dcterms:license <https://opensource.org/licenses/MIT> ;
@@ -48,11 +46,13 @@
     dcterms:publisher "Universidad de Salamanca, Centro Tecnológico y de Investigación - Tekniker"@es ;
     dcterms:publisher "University of Salamanca, Technology and Research Centre - Tekniker"@en ;
 
+    dcterms:identifier <https://doi.org/10.5281/zenodo.17962874> ;
+
     owl:versionIRI <https://w3id.org/optimar/2.0> ;
     owl:versionInfo "Versión 2.0 de la ontología"@es ;
     owl:versionInfo "Version 2.0 of the Ontology"@en ;
 
-    vann:preferredNamespacePrefix "ex" ;
+    vann:preferredNamespacePrefix "optimar" ;
     vann:preferredNamespaceUri <https://w3id.org/optimar#> ;
     
     foaf:homepage <https://w3id.org/optimar> ;
@@ -62,38 +62,38 @@
     owl:backwardCompatibleWith <https://w3id.org/optimar/1.0> ;
     owl:priorVersion  <https://w3id.org/optimar/1.0> ;
     
-    dcterms:bibliographicCitation "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.1234/abcd"@es ;
-    dcterms:bibliographicCitation "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Offshore Wind Power Platform Ontology for OPTiMAR. DOI: 10.1234/abcd"@en ;
+    dcterms:bibliographicCitation "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.5281/zenodo.17962874"@es ;
+    dcterms:bibliographicCitation "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Offshore Wind Power Platform Ontology for OPTiMAR. DOI: 10.5281/zenodo.17962874"@en ;
 
     # Changelog
     rdfs:seeAlso <https://w3id.org/optimar#changelog> ;
     rdfs:comment """
     Versión 2.0 (2025-12-02) - Mejoras principales:
-    - Añadida clase ex:Generator para generadores de turbina
-    - Añadidas propiedades inversas: ex:isHousedIn, ex:detects, ex:affects
-    - Declarada ex:connectedTo como propiedad simétrica
-    - Renombradas propiedades para evitar colisiones: ex:deformationLevel, ex:misalignmentLevel
-    - Corregido dominio de ex:affectedBy a ex:Component (antes ex:TurbineComponent)
-    - Añadido ex:StructuralComponent como subclase de ex:Component
+    - Añadida clase optimar:Generator para generadores de turbina
+    - Añadidas propiedades inversas: optimar:isHousedIn, optimar:detects, optimar:affects
+    - Declarada optimar:connectedTo como propiedad simétrica
+    - Renombradas propiedades para evitar colisiones: optimar:deformationLevel, optimar:misalignmentLevel
+    - Corregido dominio de optimar:affectedBy a optimar:Component (antes optimar:TurbineComponent)
+    - Añadido optimar:StructuralComponent como subclase de optimar:Component
     - Añadidas restricciones estructurales a clases TurbineComponent
     - Separadas clases de fallos de clases de eventos de fallos
-    - Corregida sintaxis de restricciones en ex:Maintenance y ex:Observation
+    - Corregida sintaxis de restricciones en optimar:Maintenance y optimar:Observation
     - Mejorada consistencia en uso de QUDT para magnitudes físicas
-    - Añadidas restricciones de cardinalidad a clase ex:Turbine
+    - Añadidas restricciones de cardinalidad a clase optimar:Turbine
     """@es ;
     rdfs:comment """
         Version 2.0 (2025-12-02) - Major improvements:
-        - Added ex:Generator class for turbine generators
-        - Added inverse properties: ex:isHousedIn, ex:detects, ex:affects
-        - Declared ex:connectedTo as symmetric property
-        - Renamed properties to avoid class name collisions: ex:deformationLevel, ex:misalignmentLevel
-        - Corrected ex:affectedBy domain to ex:Component (previously ex:TurbineComponent)
-        - Added ex:StructuralComponent as subclass of ex:Component
+        - Added optimar:Generator class for turbine generators
+        - Added inverse properties: optimar:isHousedIn, optimar:detects, optimar:affects
+        - Declared optimar:connectedTo as symmetric property
+        - Renamed properties to avoid class name collisions: optimar:deformationLevel, optimar:misalignmentLevel
+        - Corrected optimar:affectedBy domain to optimar:Component (previously optimar:TurbineComponent)
+        - Added optimar:StructuralComponent as subclass of optimar:Component
         - Added structural restrictions to TurbineComponent classes
         - Separated failure classes from failure event classes
-        - Fixed restriction syntax in ex:Maintenance and ex:Observation
+        - Fixed restriction syntax in optimar:Maintenance and optimar:Observation
         - Improved consistency in QUDT usage for physical quantities
-        - Added cardinality constraints to ex:Turbine class
+        - Added cardinality constraints to optimar:Turbine class
     """@en .
     
 
@@ -101,73 +101,73 @@
 # Main classes and subclasses
 ##########################################################
 
-ex:WindPowerPlatform a owl:Class ;
+optimar:WindPowerPlatform a owl:Class ;
     rdfs:label "Plataforma eólica offshore"@es ;
     rdfs:label "Offshore Wind Power Platform"@en ;
     rdfs:comment "Una plataforma eólica offshore que genera energía electrica a partir del viento."@es ;
     rdfs:comment "An offshore wind power platform that generates electricity from wind."@en .
 
-ex:Component a owl:Class ;
+optimar:Component a owl:Class ;
     rdfs:label "Componente"@es ;
     rdfs:label "Component"@en ;
     rdfs:comment "Un componente de una plataforma eólica offshore, como las palas, torres, sistema de pitch, etc."@es ;
     rdfs:comment "An component of an offshore wind power platform, such as blades, towers, pitch system, etc."@en .
 
-ex:Sensor a owl:Class ;
+optimar:Sensor a owl:Class ;
     rdfs:subClassOf sosa:Sensor ;
     rdfs:label "Sensor"@es ;
     rdfs:label "Sensor"@en ;
     rdfs:comment "Un dispositivo que mide o monitorea parámetros de la plataforma eólica, como viento, corrosión, vibraciones, etc."@es ;
     rdfs:comment "A device that measures or monitors parameters of the wind platform, such as wind, corrosion, vibrations, etc."@en .
 
-ex:Data a owl:Class ;
+optimar:Data a owl:Class ;
     rdfs:label "Dato"@es ;
     rdfs:label "Data"@en ;
     rdfs:comment "Una clase general para representar los datos de medición recolectados por sensores u otros sistemas."@es ;
     rdfs:comment "A class for representing the measurement data collected by sensors or other systems."@en .
 
-ex:Failure a owl:Class ;
+optimar:Failure a owl:Class ;
     rdfs:label "Fallo"@es ;
     rdfs:label "Failure"@en ;
     rdfs:comment "Una clase que representa fallos identificados en la plataforma eólica."@es ;
     rdfs:comment "A class that represents identified failures in the wind platform."@en .
 
-ex:Maintenance a owl:Class ;
+optimar:Maintenance a owl:Class ;
     rdfs:subClassOf [
         a owl:Restriction ;
-        owl:onProperty ex:performedBy ;
-        owl:someValuesFrom ex:MaintenanceOperator
+        owl:onProperty optimar:performedBy ;
+        owl:someValuesFrom optimar:MaintenanceOperator
     ];
     rdfs:label "Mantenimiento"@es ;
     rdfs:label "Maintenance"@en ;
     rdfs:comment "Una clase que representa el mantenimiento de la plataforma eólica."@es ;
     rdfs:comment "A class that represents the maintenance of the wind platform."@en .
 
-ex:Event a owl:Class ;
+optimar:Event a owl:Class ;
     rdfs:label "Evento"@es ;
     rdfs:label "Event"@en ;
     rdfs:comment "Un evento que ocurre en la plataforma eólica, como la detección de un fallo."@es ;
     rdfs:comment "An event that occurs in the offshore wind power platform, such as a failure detection."@en .
 
-ex:Actor a owl:Class ;
+optimar:Actor a owl:Class ;
     rdfs:label "Actor"@es ;
     rdfs:label "Actor"@en ;
     rdfs:comment "Un actor que interactúa o gestiona la plataforma eólica."@es ;
     rdfs:comment "An actor that interacts or manages the offshore wind power platform."@en .
 
-ex:Role a owl:Class ;
+optimar:Role a owl:Class ;
     rdfs:label "Rol"@es ;
     rdfs:label "Role"@en ;
     rdfs:comment "Los roles de los actores que gestionan, operan o mantienen la plataforma eólica."@es ;
     rdfs:comment "The roles of the actors that manage, operate or maintain the offshore wind power platform."@en .
 
-ex:Location a owl:Class ;
+optimar:Location a owl:Class ;
     rdfs:label "Ubicación"@es ;
     rdfs:label "Location"@en ;
     rdfs:comment "La ubicación geográfica de la plataforma eólica."@es ;
     rdfs:comment "The geographic location of the wind platform."@en .
 
-ex:EnvironmentalCondition a owl:Class ;
+optimar:EnvironmentalCondition a owl:Class ;
     rdfs:label "Condición ambiental"@es ;
     rdfs:label "Environmental Condition"@en ;
     rdfs:comment "Las condiciones ambientales que afectan a la plataforma eólica, como la velocidad del viento, la temperatura, etc."@es ;
@@ -176,123 +176,123 @@ ex:EnvironmentalCondition a owl:Class ;
 ##########################################################
 # Structural components
 ##########################################################
-ex:StructuralComponent a owl:Class ;
-    rdfs:subClassOf ex:Component ;
+optimar:StructuralComponent a owl:Class ;
+    rdfs:subClassOf optimar:Component ;
     owl:equivalentClass [
         a owl:Class ;
-        owl:unionOf ( ex:Base ex:MooringSystem ex:FloatingSubstructure )
+        owl:unionOf ( optimar:Base optimar:MooringSystem optimar:FloatingSubstructure )
     ] ;
     rdfs:label "Componentes estructurales"@es ;
     rdfs:label "Structural Components"@en ;
     rdfs:comment "Los componentes estructurales que componen la infraestructura básica de la plataforma eólica."@es ;
     rdfs:comment "The structural components that make up the basic infrastructure of the wind platform."@en .
 
-ex:TurbineComponent a owl:Class ;
-    rdfs:subClassOf ex:Component ;
+optimar:TurbineComponent a owl:Class ;
+    rdfs:subClassOf optimar:Component ;
     owl:equivalentClass [
         a owl:Class ;
-        owl:unionOf ( ex:Hub ex:Nacelle ex:Blade ex:Tower )
+        owl:unionOf ( optimar:Hub optimar:Nacelle optimar:Blade optimar:Tower )
     ] ;
     rdfs:label "Componentes de turbina"@es ;
     rdfs:label "Turbine Components"@en ;
     rdfs:comment "Los componentes de la turbina eólica que generan energía a partir del viento."@es ;
     rdfs:comment "The turbine components that generate energy from the wind."@en .
 
-ex:Turbine a owl:Class ;
-    rdfs:subClassOf ex:Component ,
+optimar:Turbine a owl:Class ;
+    rdfs:subClassOf optimar:Component ,
     [ a owl:Restriction ;
-        owl:onProperty ex:hasTurbineComponent ;
+        owl:onProperty optimar:hasTurbineComponent ;
         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-        owl:onClass ex:Hub],
+        owl:onClass optimar:Hub],
     [ a owl:Restriction ;
-      owl:onProperty ex:hasTurbineComponent ;
+      owl:onProperty optimar:hasTurbineComponent ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ex:Nacelle ] ,
+      owl:onClass optimar:Nacelle ] ,
     [ a owl:Restriction ;
-      owl:onProperty ex:hasTurbineComponent ;
+      owl:onProperty optimar:hasTurbineComponent ;
       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-      owl:onClass ex:Tower ] ,
+      owl:onClass optimar:Tower ] ,
     [ a owl:Restriction ;
-      owl:onProperty ex:hasTurbineComponent ;
+      owl:onProperty optimar:hasTurbineComponent ;
       owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-      owl:onClass ex:Blade ] ;
+      owl:onClass optimar:Blade ] ;
     rdfs:label "Turbina"@es ;
     rdfs:label "Turbine"@en ;
     rdfs:comment "Una turbina de viento que forma parte de la plataforma eólica."@es ;
     rdfs:comment "A wind turbine that is part of the wind platform."@en .
 
-ex:Generator a owl:Class ;
-    rdfs:subClassOf ex:Component ;
+optimar:Generator a owl:Class ;
+    rdfs:subClassOf optimar:Component ;
     rdfs:label "Generador"@es ;
     rdfs:label "Generator"@en ;
     rdfs:comment "Generador eléctrico que convierte energía mecánica en eléctrica."@es ;
     rdfs:comment "Electrical generator that converts mechanical energy into electrical energy."@en .
 
-ex:Hub a owl:Class ;
-    rdfs:subClassOf ex:TurbineComponent ,
-    [ owl:onProperty ex:connectedTo ;
-      owl:someValuesFrom ex:Blade ] ,
-    [ owl:onProperty ex:transmitsMovementTo ;
-      owl:someValuesFrom ex:Generator ] ;
+optimar:Hub a owl:Class ;
+    rdfs:subClassOf optimar:TurbineComponent ,
+    [ owl:onProperty optimar:connectedTo ;
+      owl:someValuesFrom optimar:Blade ] ,
+    [ owl:onProperty optimar:transmitsMovementTo ;
+      owl:someValuesFrom optimar:Generator ] ;
     rdfs:label "Hub"@es ;
     rdfs:label "Hub"@en ;
     rdfs:comment "La parte central de la turbina donde se conectan las palas."@es ;
     rdfs:comment "The central part of the turbine where the blades are connected."@en .
 
-ex:Nacelle a owl:Class ;
-    rdfs:subClassOf ex:TurbineComponent ,
-    [ owl:onProperty ex:houses ;
-      owl:someValuesFrom ex:Generator ] ,
-    [ owl:onProperty ex:isSupportedBy ;
-      owl:someValuesFrom ex:Tower ] ;
+optimar:Nacelle a owl:Class ;
+    rdfs:subClassOf optimar:TurbineComponent ,
+    [ owl:onProperty optimar:houses ;
+      owl:someValuesFrom optimar:Generator ] ,
+    [ owl:onProperty optimar:isSupportedBy ;
+      owl:someValuesFrom optimar:Tower ] ;
     rdfs:label "Nacelle"@es ;
     rdfs:label "Nacelle"@en ;
     rdfs:comment "El compartimento de la turbina que aloja el generador y otros componentes mecánicos."@es ;
     rdfs:comment "The turbine component that houses the generator and other mechanical components."@en .
 
-ex:Blade a owl:Class ;
-    rdfs:subClassOf ex:TurbineComponent ,
-    [ owl:onProperty ex:connectedTo ;
-      owl:someValuesFrom ex:Hub ] ;
+optimar:Blade a owl:Class ;
+    rdfs:subClassOf optimar:TurbineComponent ,
+    [ owl:onProperty optimar:connectedTo ;
+      owl:someValuesFrom optimar:Hub ] ;
     rdfs:label "Pala"@es ;
     rdfs:label "Blade"@en ;
     rdfs:comment "Las palas de la turbina que capturan la energía eólica."@es ;
     rdfs:comment "The blades of the turbine that capture the wind energy."@en .
 
-ex:Tower a owl:Class ;
-    rdfs:subClassOf ex:TurbineComponent ,
-    [ owl:onProperty ex:supports ;
-      owl:someValuesFrom ex:Nacelle ] ,
-    [ owl:onProperty ex:isSupportedBy ;
-      owl:someValuesFrom ex:FloatingSubstructure ] ;
+optimar:Tower a owl:Class ;
+    rdfs:subClassOf optimar:TurbineComponent ,
+    [ owl:onProperty optimar:supports ;
+      owl:someValuesFrom optimar:Nacelle ] ,
+    [ owl:onProperty optimar:isSupportedBy ;
+      owl:someValuesFrom optimar:FloatingSubstructure ] ;
     rdfs:label "Torre"@es ;
     rdfs:label "Tower"@en ;
     rdfs:comment "La estructura que sostiene la turbina eólica."@es ;
     rdfs:comment "The structure that supports the wind turbine."@en .
 
-ex:MooringSystem a owl:Class ;
-    rdfs:subClassOf ex:StructuralComponent ;
+optimar:MooringSystem a owl:Class ;
+    rdfs:subClassOf optimar:StructuralComponent ;
     rdfs:label "Sistema de amarre"@es ;
     rdfs:label "Mooring System"@en ;
     rdfs:comment "El sistema de amarre que mantiene la plataforma flotante en su ubicación."@es ;
     rdfs:comment "The mooring system that keeps the floating platform in place."@en .
 
-ex:FloatingSubstructure a owl:Class ;
-    rdfs:subClassOf ex:StructuralComponent ;
+optimar:FloatingSubstructure a owl:Class ;
+    rdfs:subClassOf optimar:StructuralComponent ;
     rdfs:label "Subestructura flotante"@es ;
     rdfs:label "Floating Substructure"@en ;
     rdfs:comment "La estructura sumergida que proporciona flotabilidad (spar, semi-sumergible, TLP, etc.)"@es ;
     rdfs:comment "The floating substructure that provides stability (spar, semi-sumergible, TLP, etc.)"@en .
 
-ex:FloatingPlatform a owl:Class ;
-    rdfs:subClassOf ex:WindPowerPlatform ;
+optimar:FloatingPlatform a owl:Class ;
+    rdfs:subClassOf optimar:WindPowerPlatform ;
     rdfs:label "Plataforma eólica flotante"@es ;
     rdfs:label "Floating Wind Power Platform"@en ;
     rdfs:comment "Plataforma eólica offshore completa que incluye turbina, substructura flotante y sistema de amarre"@es ;
     rdfs:comment "An offshore wind power platform that includes a turbine, floating substructure, and mooring system"@en .
 
-ex:PitchSystem a owl:Class ;
-    rdfs:subClassOf ex:Component ;
+optimar:PitchSystem a owl:Class ;
+    rdfs:subClassOf optimar:Component ;
     rdfs:label "Sistema de pitch"@es ;
     rdfs:label "Pitch System"@en ;
     rdfs:comment "El sistema que ajusta el ángulo de las palas de la turbina."@es ;
@@ -302,14 +302,14 @@ ex:PitchSystem a owl:Class ;
 ##########################################################
 # Tasks
 ##########################################################
-ex:Task a owl:Class ;
+optimar:Task a owl:Class ;
     rdfs:label "Tarea"@es ;
     rdfs:label "Task"@en ;
     rdfs:comment "Una tarea general relacionada con la operación, supervisión o mantenimiento de la plataforma eólica."@es ;
     rdfs:comment "A general task related to the operation, monitoring, or maintenance of the wind platform."@en .
 
-ex:MonitoringTask a owl:Class ;
-    rdfs:subClassOf ex:Task ;
+optimar:MonitoringTask a owl:Class ;
+    rdfs:subClassOf optimar:Task ;
     rdfs:label "Tarea de monitoreo"@es ;
     rdfs:label "Monitoring Task"@en ;
     rdfs:comment "Una tarea destinada a supervisar el estado de la plataforma mediante sensores y sistemas de monitorización."@es ;
@@ -318,11 +318,11 @@ ex:MonitoringTask a owl:Class ;
 ##########################################################
 # Observations
 ##########################################################
-ex:Observation a owl:Class ;
+optimar:Observation a owl:Class ;
     rdfs:subClassOf sosa:Observation, 
     [ a owl:Restriction ;
-        owl:onProperty ex:madeBySensor ;
-        owl:someValuesFrom ex:Sensor
+        owl:onProperty optimar:madeBySensor ;
+        owl:someValuesFrom optimar:Sensor
     ];
     rdfs:label "Observación"@es ;
     rdfs:label "Observation"@en ;
@@ -332,36 +332,36 @@ ex:Observation a owl:Class ;
 ##########################################################
 # Actors
 ##########################################################
-ex:MaintenanceOperator a owl:Class ;
-    rdfs:subClassOf ex:Actor ;
+optimar:MaintenanceOperator a owl:Class ;
+    rdfs:subClassOf optimar:Actor ;
     rdfs:label "Operador de mantenimiento"@es ;
     rdfs:label "Maintenance Operator"@en ;
     rdfs:comment "Persona encargada de realizar el mantenimiento preventivo y correctivo en la plataforma."@es ;
     rdfs:comment "Person responsible for carrying out preventive and corrective maintenance on the platform."@en .
 
-ex:PlatformActuator a owl:Class ;
-    rdfs:subClassOf ex:Actor ;
+optimar:PlatformActuator a owl:Class ;
+    rdfs:subClassOf optimar:Actor ;
     rdfs:label "Actuador de plataforma"@es ;
     rdfs:label "Platform Actuator"@en ;
     rdfs:comment "Encargado de realizar ajustes sobre la plataforma, como ajustes mecánicos o hidráulicos."@es ;
     rdfs:comment "Responsible for making adjustments on the platform, such as mechanical or hydraulic adjustments."@en .
 
-ex:CloudAdministrator a owl:Class ;
-    rdfs:subClassOf ex:Actor ;
+optimar:CloudAdministrator a owl:Class ;
+    rdfs:subClassOf optimar:Actor ;
     rdfs:label "Administrador de nube"@es ;
     rdfs:label "Cloud Administrator"@en ;
     rdfs:comment "Responsable de la administración y seguridad de los servicios en la nube que procesan los datos de la plataforma."@es ;
     rdfs:comment "Responsible for managing and securing cloud services that process data from the platform."@en .
 
-ex:DataAnalyst a owl:Class ;
-    rdfs:subClassOf ex:Actor ;
+optimar:DataAnalyst a owl:Class ;
+    rdfs:subClassOf optimar:Actor ;
     rdfs:label "Analista de datos"@es ;
     rdfs:label "Data Analyst"@en ;
     rdfs:comment "Especialista que analiza los datos recolectados para detectar patrones, fallos y oportunidades de optimización."@es ;
     rdfs:comment "Specialist who analyzes collected data to detect patterns, failures, and optimization opportunities."@en .
 
-ex:ParkOwner a owl:Class ;
-    rdfs:subClassOf ex:Actor ;
+optimar:ParkOwner a owl:Class ;
+    rdfs:subClassOf optimar:Actor ;
     rdfs:label "Propietario de parque"@es ;
     rdfs:label "Park Owner"@en ;
     rdfs:comment "Entidad o persona propietaria del parque eólico offshore y responsable de su operación general."@es ;
@@ -370,22 +370,22 @@ ex:ParkOwner a owl:Class ;
 ##########################################################
 # Roles
 ##########################################################
-ex:TechnicalRole a owl:Class ;
-    rdfs:subClassOf ex:Role ;
+optimar:TechnicalRole a owl:Class ;
+    rdfs:subClassOf optimar:Role ;
     rdfs:label "Rol técnico"@es ;
     rdfs:label "Technical Role"@en ;
     rdfs:comment "Rol asociado a actividades técnicas como operación, reparación y supervisión de sistemas."@es ;
     rdfs:comment "Role associated with technical activities such as operation, repair, and system supervision."@en .
 
-ex:ManagementRole a owl:Class ;
-    rdfs:subClassOf ex:Role ;
+optimar:ManagementRole a owl:Class ;
+    rdfs:subClassOf optimar:Role ;
     rdfs:label "Rol de gestión"@es ;
     rdfs:label "Management Role"@en ;
     rdfs:comment "Rol encargado de la coordinación, planificación y gestión de recursos en la plataforma eólica."@es ;
     rdfs:comment "Role responsible for coordination, planning, and resource management in the wind platform."@en .
 
-ex:AnalyticalRole a owl:Class ;
-    rdfs:subClassOf ex:Role ;
+optimar:AnalyticalRole a owl:Class ;
+    rdfs:subClassOf optimar:Role ;
     rdfs:label "Rol analítico"@es ;
     rdfs:label "Analytical Role"@en ;
     rdfs:comment "Rol orientado al análisis de datos y generación de información útil para la toma de decisiones."@es ;
@@ -394,49 +394,49 @@ ex:AnalyticalRole a owl:Class ;
 ##########################################################
 # Sensors and monitoring systems
 ##########################################################
-ex:CorrosionCamera a owl:Class ;
-    rdfs:subClassOf ex:Sensor ;
+optimar:CorrosionCamera a owl:Class ;
+    rdfs:subClassOf optimar:Sensor ;
     rdfs:label "Cámara corrosión"@es ;
     rdfs:label "Corrosion Camera"@en ;
     rdfs:comment "Cámara utilizada para detectar y monitorear corrosión en la estructura de la plataforma."@es ;
     rdfs:comment "Camera used to detect and monitor corrosion in the platform structure."@en ;
-    owl:disjointWith ex:StructuralCamera ;
-    owl:disjointWith ex:Anemometer ;
-    owl:disjointWith ex:DynamicMonitor .
+    owl:disjointWith optimar:StructuralCamera ;
+    owl:disjointWith optimar:Anemometer ;
+    owl:disjointWith optimar:DynamicMonitor .
 
-ex:StructuralCamera a owl:Class ;
-    rdfs:subClassOf ex:Sensor ;
+optimar:StructuralCamera a owl:Class ;
+    rdfs:subClassOf optimar:Sensor ;
     rdfs:label "Cámara estructural"@es ;
     rdfs:label "Structural Camera"@en ;
     rdfs:comment "Cámara dedicada a la inspección visual del estado estructural de la plataforma."@es ;
     rdfs:comment "Camera dedicated to visual inspection of the structural condition of the platform."@en ;
-    owl:disjointWith ex:CorrosionCamera ;
-    owl:disjointWith ex:Anemometer ;
-    owl:disjointWith ex:DynamicMonitor .
+    owl:disjointWith optimar:CorrosionCamera ;
+    owl:disjointWith optimar:Anemometer ;
+    owl:disjointWith optimar:DynamicMonitor .
 
-ex:Anemometer a owl:Class ;
-    rdfs:subClassOf ex:Sensor ;
+optimar:Anemometer a owl:Class ;
+    rdfs:subClassOf optimar:Sensor ;
     rdfs:label "Anemómetro"@es ;
     rdfs:label "Anemometer"@en ;
     rdfs:comment "Sensor que mide la velocidad y dirección del viento en el parque eólico."@es ;
     rdfs:comment "Sensor that measures wind speed and direction in the wind farm."@en .
 
-ex:DynamicMonitor a owl:Class ;
-    rdfs:subClassOf ex:Sensor ;
+optimar:DynamicMonitor a owl:Class ;
+    rdfs:subClassOf optimar:Sensor ;
     rdfs:label "Monitor dinámico"@es ;
     rdfs:label "Dynamic Monitor"@en ;
     rdfs:comment "Dispositivo que mide parámetros dinámicos de la plataforma como vibraciones y movimientos."@es ;
     rdfs:comment "Device that measures dynamic parameters of the platform, such as vibrations and movements."@en .
 
-ex:ISUMSystem a owl:Class ;
-    rdfs:subClassOf ex:Sensor ;
+optimar:ISUMSystem a owl:Class ;
+    rdfs:subClassOf optimar:Sensor ;
     rdfs:label "Sistema ISUM"@es ;
     rdfs:label "ISUM System"@en ;
     rdfs:comment "Sistema especializado para la monitorización integrada de la plataforma offshore."@es ;
     rdfs:comment "Specialized system for integrated monitoring of the offshore platform."@en .
 
-ex:GaugeSystem a owl:Class ;
-    rdfs:subClassOf ex:Sensor ;
+optimar:GaugeSystem a owl:Class ;
+    rdfs:subClassOf optimar:Sensor ;
     rdfs:label "Sistema de galgas"@es ;
     rdfs:label "Gauge System"@en ;
     rdfs:comment "Sistema de galgas extensiométricas utilizado para medir tensiones y deformaciones en la estructura."@es ;
@@ -445,72 +445,72 @@ ex:GaugeSystem a owl:Class ;
 ##########################################################
 # Events and Failures
 ##########################################################
-ex:FailureEvent a owl:Class ;
-    rdfs:subClassOf ex:Event ,
+optimar:FailureEvent a owl:Class ;
+    rdfs:subClassOf optimar:Event ,
         [ a owl:Restriction ;
-            owl:onProperty ex:causedBy ;
-            owl:someValuesFrom ex:Failure
+            owl:onProperty optimar:causedBy ;
+            owl:someValuesFrom optimar:Failure
         ] ;
     rdfs:label "Evento de fallo"@es ;
     rdfs:label "Failure Event"@en ;
     rdfs:comment "Evento que representa un fallo detectado en el sistema, debe estar causado por al menos un fallo. "@es ;
     rdfs:comment "Event that represents a detected failure in the system, must be caused by at least one failure."@en .
 
-ex:Corrosion a owl:Class ;
-    rdfs:subClassOf ex:Failure ;
+optimar:Corrosion a owl:Class ;
+    rdfs:subClassOf optimar:Failure ;
     rdfs:label "Corrosión"@es ;
     rdfs:label "Corrosion"@en ;
     rdfs:comment "Fallo causado por la corrosión de la estructura metálica de la plataforma."@es ;
     rdfs:comment "Failure caused by corrosion of the metallic structure of the platform."@en ;
-    owl:disjointWith ex:MaterialFatigue, ex:Misalignment .
+    owl:disjointWith optimar:MaterialFatigue, optimar:Misalignment .
 
-ex:CorrosionEvent a owl:Class ;
-    rdfs:subClassOf ex:FailureEvent ,
+optimar:CorrosionEvent a owl:Class ;
+    rdfs:subClassOf optimar:FailureEvent ,
     [ a owl:Restriction ;
-        owl:onProperty ex:causedBy ;
-        owl:someValuesFrom ex:Corrosion
+        owl:onProperty optimar:causedBy ;
+        owl:someValuesFrom optimar:Corrosion
     ];
     rdfs:label "Evento de dección de corrosión"@es ;
     rdfs:label "Corrosion Event"@en ;
     rdfs:comment "Degradación de la estructura metálica de la plataforma por efectos de corrosión."@es ;
     rdfs:comment "Degradation of the platform's metallic structure due to corrosion effects."@en ;
-    owl:disjointWith ex:MaterialFatigue ;
-    owl:disjointWith ex:Misalignment .
+    owl:disjointWith optimar:MaterialFatigue ;
+    owl:disjointWith optimar:Misalignment .
 
-ex:MaterialFatigue a owl:Class ;
-    rdfs:subClassOf ex:Failure ;
+optimar:MaterialFatigue a owl:Class ;
+    rdfs:subClassOf optimar:Failure ;
     rdfs:label "Fatiga del material"@es ;
     rdfs:label "Material Fatigue"@en ;
     rdfs:comment "Fallo en el material estructural causado por ciclos repetidos de carga."@es ;
     rdfs:comment "Structural material failure caused by repeated load cycles."@en ;
-    owl:disjointWith ex:CorrosionEvent ;
-    owl:disjointWith ex:Misalignment .
+    owl:disjointWith optimar:CorrosionEvent ;
+    owl:disjointWith optimar:Misalignment .
 
-ex:Misalignment a owl:Class ;
-    rdfs:subClassOf ex:Failure ;
+optimar:Misalignment a owl:Class ;
+    rdfs:subClassOf optimar:Failure ;
     rdfs:label "Desalineación"@es ;
     rdfs:label "Misalignment"@en ;
     rdfs:comment "Fallo causado por el desajuste o falta de alineación entre los componentes de la plataforma."@es ;
     rdfs:comment "Failure caused by misalignment or lack of proper adjustment between platform components."@en ;
-    owl:disjointWith ex:CorrosionEvent , ex:MaterialFatigue .
+    owl:disjointWith optimar:CorrosionEvent , optimar:MaterialFatigue .
 
-ex:Deformation a owl:Class ;
-    rdfs:subClassOf ex:Failure ;
+optimar:Deformation a owl:Class ;
+    rdfs:subClassOf optimar:Failure ;
     rdfs:label "Deformación estructural"@es ;
     rdfs:label "Structural deformation"@en ;
     rdfs:comment "Fallo causado por la deformación estructural de un componente."@es ;
     rdfs:comment "Failure caused by structural deformation of a component."@en ;
-    owl:disjointWith ex:Corrosion , ex:MaterialFatigue , ex:Misalignment .
+    owl:disjointWith optimar:Corrosion , optimar:MaterialFatigue , optimar:Misalignment .
 
-ex:ComponentBreakage a owl:Class ;
-    rdfs:subClassOf ex:Failure ;
+optimar:ComponentBreakage a owl:Class ;
+    rdfs:subClassOf optimar:Failure ;
     rdfs:label "Rotura de componente"@es ;
     rdfs:label "Component Breakage"@en ;
     rdfs:comment "Fallo originado por la fractura o rotura de un componente de la plataforma eólica."@es ;
     rdfs:comment "Failure caused by the fracture or breakage of an offshore wind turbine component."@en .
 
-ex:StructuralInstability a owl:Class ;
-    rdfs:subClassOf ex:Failure ;
+optimar:StructuralInstability a owl:Class ;
+    rdfs:subClassOf optimar:Failure ;
     rdfs:label "Inestabilidad estructural"@es ;
     rdfs:label "Structural Instability"@en ;
     rdfs:comment "Fallo que compromete la estabilidad estructural de la plataforma flotante."@es ;
@@ -519,29 +519,29 @@ ex:StructuralInstability a owl:Class ;
 ##########################################################
 # Measured data
 ##########################################################
-ex:Measurement a owl:Class ;
-    rdfs:subClassOf ex:Data ;
+optimar:Measurement a owl:Class ;
+    rdfs:subClassOf optimar:Data ;
     rdfs:label "Medición"@es ;
     rdfs:label "Measurement"@en ;
     rdfs:comment "Representa una medición tomada por un sensor."@es ;
     rdfs:comment "Represents a measurement taken by a sensor."@en .
 
-ex:Image a owl:Class ;
-    rdfs:subClassOf ex:Data ;
+optimar:Image a owl:Class ;
+    rdfs:subClassOf optimar:Data ;
     rdfs:label "Imagen"@es ;
     rdfs:label "Image"@en ;
     rdfs:comment "Una clase que representa una imagen que soporta la medición."@es ;
     rdfs:comment "A class that represents an image that supports the measurement."@en .
 
-ex:VibrationData a owl:Class ;
-    rdfs:subClassOf ex:Measurement ;
+optimar:VibrationData a owl:Class ;
+    rdfs:subClassOf optimar:Measurement ;
     rdfs:label "Datos de vibración"@es ;
     rdfs:label "Vibration Data"@en ;
     rdfs:comment "Datos de vibracion medidos por un sensor."@es ;
     rdfs:comment "Vibration data measured by a sensor."@en .
 
-ex:StressData a owl:Class ;
-    rdfs:subClassOf ex:Measurement ;
+optimar:StressData a owl:Class ;
+    rdfs:subClassOf optimar:Measurement ;
     rdfs:label "Datos de tensión"@es ;
     rdfs:label "Stress Data"@en ;
     rdfs:comment "Datos de tensión medidos por un sensor."@es ;
@@ -551,72 +551,72 @@ ex:StressData a owl:Class ;
 ##########################################################
 # Data properties
 ##########################################################
-ex:externalShape a owl:DatatypeProperty ;
-    rdfs:domain ex:Component ;
+optimar:externalShape a owl:DatatypeProperty ;
+    rdfs:domain optimar:Component ;
     rdfs:range xsd:string ;
     rdfs:label "Forma externa"@es ;
     rdfs:label "External shape"@en ;
     rdfs:comment "Describe la forma externa o geometría del componente."@es ;
     rdfs:comment "Describe the external shape or geometric of the component."@en .
 
-ex:length a owl:ObjectProperty ;
-    rdfs:domain ex:Component ;
+optimar:length a owl:ObjectProperty ;
+    rdfs:domain optimar:Component ;
     rdfs:range qudt:QuantityValue ;
     rdfs:label "Longitud"@es ;
     rdfs:label "Length"@en ;
     rdfs:comment "Longitud de un componente, expresada como un valor con unidad QUDT"@es ;
     rdfs:comment "Length of a component, expressed as a QUDT quantity value"@en .
 
-ex:mass a owl:ObjectProperty ;
-    rdfs:domain ex:Component ;
+optimar:mass a owl:ObjectProperty ;
+    rdfs:domain optimar:Component ;
     rdfs:range qudt:QuantityValue ;
     rdfs:label "Masa"@es ;
     rdfs:label "Mass"@en ;
     rdfs:comment "Masa del componente expresada expresada como un valor con unidad QUDT"@es ;
     rdfs:comment "Mass of the component expressed as a QUDT quantity value"@en .
 
-ex:rotationSpeed a owl:ObjectProperty ;
-    rdfs:domain ex:Component ;
+optimar:rotationSpeed a owl:ObjectProperty ;
+    rdfs:domain optimar:Component ;
     rdfs:range qudt:QuantityValue ;
     rdfs:label "Velocidad de rotación"@es ;
     rdfs:label "Rotation speed"@en ;
     rdfs:comment "Velocidad angular de un componente expresada como un valor con unidad QUDT."@es ;
     rdfs:comment "Angular speed of a component expressed as a QUDT quantity value."@en .
 
-ex:diameter a owl:ObjectProperty ;
-    rdfs:domain ex:Component ;
+optimar:diameter a owl:ObjectProperty ;
+    rdfs:domain optimar:Component ;
     rdfs:range qudt:QuantityValue ;
     rdfs:label "Diámetro"@es ;
     rdfs:label "Diameter"@en ;
     rdfs:comment "Diámetro del componente medido en unidades QUDT."@es ;
     rdfs:comment "Diameter of the component measured in QUDT units."@en .
 
-ex:thickness a owl:ObjectProperty ;
-    rdfs:domain ex:Component ;
+optimar:thickness a owl:ObjectProperty ;
+    rdfs:domain optimar:Component ;
     rdfs:range qudt:QuantityValue ;
     rdfs:label "Espesor"@es ;
     rdfs:label "Thickness"@en ;
     rdfs:comment "Espesor de la sección o pared de un componente medido en unidades QUDT."@es ;
     rdfs:comment "Thickness of the section or wall of a component measured in QUDT units."@en .
 
-ex:material a owl:DatatypeProperty ;
-    rdfs:domain ex:Component ;
+optimar:material a owl:DatatypeProperty ;
+    rdfs:domain optimar:Component ;
     rdfs:range xsd:string ;
     rdfs:label "Material"@es ;
     rdfs:label "Material"@en ;
     rdfs:comment "Material de fabricación del componente (ej. acero, compuesto, fibra de vidrio, etc.)."@es ;
     rdfs:comment "Material of manufacturing of the component (e.g. steel, composite, fiberglass, etc.)."@en .
 
-ex:height a owl:ObjectProperty ;
-    rdfs:domain ex:Component ;
+optimar:height a owl:ObjectProperty ;
+    rdfs:domain optimar:Component ;
     rdfs:range qudt:QuantityValue ;
     rdfs:label "Altura"@es ;
     rdfs:label "Height"@en ;
     rdfs:comment "Altura del componente expresada como un valor con unidad QUDT."@es ;
     rdfs:comment "Height of the component expressed as a QUDT quantity value."@en .
 
-ex:width a owl:ObjectProperty ;
-    rdfs:domain ex:Component ;
+optimar:width a owl:ObjectProperty ;
+    rdfs:domain optimar:Component ;
     rdfs:range qudt:QuantityValue ;
     rdfs:label "Anchura"@es ;
     rdfs:label "Width"@en ;
@@ -626,16 +626,16 @@ ex:width a owl:ObjectProperty ;
 ##########################################################
 # Properties for turbines
 ##########################################################
-ex:hasCapacity a owl:ObjectProperty ;
-    rdfs:domain ex:Turbine ;
+optimar:hasCapacity a owl:ObjectProperty ;
+    rdfs:domain optimar:Turbine ;
     rdfs:range qudt:QuantityValue ;
     rdfs:label "Capacidad nominal"@es ;
     rdfs:label "Nominal capacity"@en ;
     rdfs:comment "Capacidad nominal de generación expresada en unidades QUDT (tipicamente MW)."@es ;
     rdfs:comment "Nominal generation capacity expressed in QUDT units (typically MW)."@en .
 
-ex:operationalStatus a owl:DatatypeProperty ;
-    rdfs:domain ex:Turbine ;
+optimar:operationalStatus a owl:DatatypeProperty ;
+    rdfs:domain optimar:Turbine ;
     rdfs:range xsd:string ;
     rdfs:label "Estado operativo"@es ;
     rdfs:label "Operational status"@en ;
@@ -645,32 +645,32 @@ ex:operationalStatus a owl:DatatypeProperty ;
 ##########################################################
 # Properties for measured data
 ##########################################################
-ex:value a owl:DatatypeProperty ;
-    rdfs:domain ex:Measurement ;
+optimar:value a owl:DatatypeProperty ;
+    rdfs:domain optimar:Measurement ;
     rdfs:range xsd:decimal ;
     rdfs:label "Valor"@es ;
     rdfs:label "Value"@en ;
     rdfs:comment "Valor numérico de la medición tomada por un sensor."@es ;
     rdfs:comment "Numeric value of the measurement taken by a sensor."@en .
 
-ex:imageURL a owl:DatatypeProperty ;
-    rdfs:domain ex:Image ;
+optimar:imageURL a owl:DatatypeProperty ;
+    rdfs:domain optimar:Image ;
     rdfs:range xsd:string ;
     rdfs:label "URL de la imagen"@es ;
     rdfs:label "Image URL"@en ;
     rdfs:comment "Dirección de acceso a la imagen generada o almacenada."@es ;
     rdfs:comment "Access URL of the generated or stored image."@en .
 
-ex:unit a owl:DatatypeProperty ;
-    rdfs:domain ex:Measurement ;
+optimar:unit a owl:DatatypeProperty ;
+    rdfs:domain optimar:Measurement ;
     rdfs:range xsd:string ;
     rdfs:label "Unidad"@es ;
     rdfs:label "Unit"@en ;
     rdfs:comment "Unidad de medida del valor registrado (ej. m/s, rpm, °C, etc.)."@es ;
     rdfs:comment "Measurement unit of the recorded value (e.g. m/s, rpm, °C, etc.)."@en .
 
-ex:dateTime a owl:DatatypeProperty ;
-    rdfs:domain ex:Measurement ;
+optimar:dateTime a owl:DatatypeProperty ;
+    rdfs:domain optimar:Measurement ;
     rdfs:range xsd:dateTime ;
     rdfs:label "Fecha y hora"@es ;
     rdfs:label "Date and time"@en ;
@@ -681,8 +681,8 @@ ex:dateTime a owl:DatatypeProperty ;
 ##########################################################
 # Properties of conexion
 ##########################################################
-prov:generated rdfs:domain ex:Event ;
-    rdfs:range ex:Data ;
+prov:generated rdfs:domain optimar:Event ;
+    rdfs:range optimar:Data ;
     rdfs:label "Genera"@es ;
     rdfs:label "Generates"@en ;
     rdfs:comment "Relaciona un evento con los datos generados por el mismo."@es ;
@@ -691,114 +691,114 @@ prov:generated rdfs:domain ex:Event ;
 ##########################################################
 # Properties for relevant variables in failures
 ##########################################################
-ex:vibrationLevel a owl:DatatypeProperty ;
-    rdfs:domain ex:Data ;
+optimar:vibrationLevel a owl:DatatypeProperty ;
+    rdfs:domain optimar:Data ;
     rdfs:range qudt:QuantityValue ;
     rdfs:label "Nivel de Vibracion"@es ;
     rdfs:label "Vibration level"@en ;
     rdfs:comment "Nivel de vibraciones registradas en un componente o sistema."@es ;
     rdfs:comment "Level of vibrations recorded in a component or system."@en .
 
-ex:materialWear a owl:DatatypeProperty ;
-    rdfs:domain ex:Data ;
+optimar:materialWear a owl:DatatypeProperty ;
+    rdfs:domain optimar:Data ;
     rdfs:range xsd:decimal ;
     rdfs:label "Desgaste material"@es ;
     rdfs:label "Material wear"@en ;
     rdfs:comment "Grado de desgaste de un material en un componente."@es ;
     rdfs:comment "Degree of material wear in a component."@en .
 
-ex:temperature a owl:ObjectProperty ;
-    rdfs:domain ex:Data ;
+optimar:temperature a owl:ObjectProperty ;
+    rdfs:domain optimar:Data ;
     rdfs:range qudt:QuantityValue ;
     rdfs:label "Temperatura"@es ;
     rdfs:label "Temperature"@en ;
     rdfs:comment "Temperatura registrada expresada como un valor con unidad QUDT."@es ;
     rdfs:comment "Temperature recorded expressed as a QUDT quantity value."@en .
 
-ex:misalignmentLevel a owl:DatatypeProperty ;
-    rdfs:domain ex:Data ;
+optimar:misalignmentLevel a owl:DatatypeProperty ;
+    rdfs:domain optimar:Data ;
     rdfs:range xsd:decimal ;
     rdfs:label "Nivel de desalineación"@es ;
     rdfs:label "Misalignment level"@en ;
     rdfs:comment "Medida del grado de desalineación detectada en un componente."@es ;
     rdfs:comment "Measure of the misalignment level detected in a component."@en .
 
-ex:corrosionLevel a owl:DatatypeProperty ;
-    rdfs:domain ex:CorrosionEvent ;
+optimar:corrosionLevel a owl:DatatypeProperty ;
+    rdfs:domain optimar:CorrosionEvent ;
     rdfs:range xsd:decimal ;
     rdfs:label "Nivel de corrosión"@es ;
     rdfs:label "Corrosion level"@en ;
     rdfs:comment "Índice general de corrosión detectada en un componente."@es ;
     rdfs:comment "General corrosion index detected in a component."@en .
 
-ex:darkCorrosionLevel a owl:DatatypeProperty ;
-    rdfs:domain ex:CorrosionEvent ;
-    rdfs:subPropertyOf ex:corrosionLevel ;
+optimar:darkCorrosionLevel a owl:DatatypeProperty ;
+    rdfs:domain optimar:CorrosionEvent ;
+    rdfs:subPropertyOf optimar:corrosionLevel ;
     rdfs:range xsd:decimal ;
     rdfs:label "Nivel de corrosión oscura"@es ;
     rdfs:label "Dark corrosion level"@en ;
     rdfs:comment "Nivel de corrosión oscura detectada en la superficie del material."@es ;
     rdfs:comment "Level of dark corrosion detected on the mmaterial surface."@en .
 
-ex:lightCorrosion a owl:DatatypeProperty ;
-    rdfs:domain ex:CorrosionEvent ;
-    rdfs:subPropertyOf ex:CorrosionLevel ;
+optimar:lightCorrosion a owl:DatatypeProperty ;
+    rdfs:domain optimar:CorrosionEvent ;
+    rdfs:subPropertyOf optimar:CorrosionLevel ;
     rdfs:range xsd:decimal ;
     rdfs:label "Nivel de corrosión clara"@es ;
     rdfs:label "Light corrosion level"@en ;
     rdfs:comment "Nivel de corrosión clara detectada en la superficie del material."@es ;
     rdfs:comment "Level of light corrosion detected on the material surface."@en .
 
-ex:deformationLevel a owl:DatatypeProperty ;
-    rdfs:domain ex:Data ;
+optimar:deformationLevel a owl:DatatypeProperty ;
+    rdfs:domain optimar:Data ;
     rdfs:range xsd:decimal ;
     rdfs:label "Nivel de Deformación"@es ;
     rdfs:label "Deformation level"@en ;
     rdfs:comment "Grado de deformación registrado en el componente."@es ;
     rdfs:comment "Degree of deformation recorded in the component."@en .
 
-ex:stressLevel a owl:DatatypeProperty ;
-    rdfs:domain ex:Data ;
+optimar:stressLevel a owl:DatatypeProperty ;
+    rdfs:domain optimar:Data ;
     rdfs:range qudt:QuantityValue ;
     rdfs:label "Nivel de tensión"@es ;
     rdfs:label "Stress level"@en ;
     rdfs:comment "Nivel de tensión registrado en un componente."@es ;
     rdfs:comment "Stress level recorded in a component."@en .
 
-ex:materialFatigue a owl:DatatypeProperty ;
-    rdfs:domain ex:Data ;
+optimar:materialFatigue a owl:DatatypeProperty ;
+    rdfs:domain optimar:Data ;
     rdfs:range xsd:decimal ;
     rdfs:label "Fatiga material"@es ;
     rdfs:label "Material fatigue"@en ;
     rdfs:comment "Grado de fatiga acumulada en el material."@es ;
     rdfs:comment "Accumulated material fatigue degree."@en .
 
-ex:displacement a owl:DatatypeProperty ;
-    rdfs:domain ex:Data ;
+optimar:displacement a owl:DatatypeProperty ;
+    rdfs:domain optimar:Data ;
     rdfs:range xsd:decimal ;
     rdfs:label "Desplazamiento"@es ;
     rdfs:label "Displacement"@en ;
     rdfs:comment "Desplazamiento o cambio de posición registrado en el componente."@es ;
     rdfs:comment "Displacement or position change recorded in the component."@en .
 
-ex:pressureLevel a owl:DatatypeProperty ;
-    rdfs:domain ex:Data ;
+optimar:pressureLevel a owl:DatatypeProperty ;
+    rdfs:domain optimar:Data ;
     rdfs:range qudt:QuantityValue ;
     rdfs:label "Nivel de presión"@es ;
     rdfs:label "Pressure level"@en ;
     rdfs:comment "Presión ejercida sobre un componente."@es ;
     rdfs:comment "Pressure exerted on a component."@en .
 
-ex:windSpeed a owl:ObjectProperty ;
-    rdfs:domain ex:EnvironmentalCondition ;
+optimar:windSpeed a owl:ObjectProperty ;
+    rdfs:domain optimar:EnvironmentalCondition ;
     rdfs:range qudt:QuantityValue ;
     rdfs:label "Velocidad del viento"@es ;
     rdfs:label "Wind speed"@en ;
     rdfs:comment "Velocidad del viento expresada como valor QUDT."@es ;
     rdfs:comment "Wind speed expressed as a QUDT quantity value."@en .
 
-ex:windDirection a owl:ObjectProperty ;
-    rdfs:domain ex:EnvironmentalCondition ;
+optimar:windDirection a owl:ObjectProperty ;
+    rdfs:domain optimar:EnvironmentalCondition ;
     rdfs:range qudt:QuantityValue ;
     rdfs:label "Dirección del viento"@es ;
     rdfs:label "Wind direction"@en ;
@@ -810,144 +810,144 @@ ex:windDirection a owl:ObjectProperty ;
 # Object properties
 ##########################################################
 # Relationships between components
-ex:isPartOf a owl:ObjectProperty ;
-    rdfs:domain ex:TurbineComponent ;
-    rdfs:range ex:Turbine ;
+optimar:isPartOf a owl:ObjectProperty ;
+    rdfs:domain optimar:TurbineComponent ;
+    rdfs:range optimar:Turbine ;
     rdfs:label "Es parte de"@es ;
     rdfs:label "Is part of"@en ;
     rdfs:comment "Indica que un componente de turbina forma parte de una turbina específica."@es ;
     rdfs:comment "Indicates that a turbine component is part of a specific turbine."@en ;
-    owl:inverseOf ex:hasTurbineComponent .
+    owl:inverseOf optimar:hasTurbineComponent .
 
-ex:hasTurbineComponent a owl:ObjectProperty ;
-    rdfs:domain ex:Turbine ;
-    rdfs:range ex:TurbineComponent ;
+optimar:hasTurbineComponent a owl:ObjectProperty ;
+    rdfs:domain optimar:Turbine ;
+    rdfs:range optimar:TurbineComponent ;
     rdfs:label "Tiene componente de turbina"@es ;
     rdfs:label "Has turbine component"@en ;
     rdfs:comment "Indica que una turbina tiene un componente de turbina específico."@es ;
     rdfs:comment "Indicates that a turbine has a specific turbine component."@en .
 
-ex:locatedIn a owl:ObjectProperty ;
-    rdfs:domain ex:WindPowerPlatform ;
-    rdfs:range ex:Location ;
+optimar:locatedIn a owl:ObjectProperty ;
+    rdfs:domain optimar:WindPowerPlatform ;
+    rdfs:range optimar:Location ;
     rdfs:label "Ubicado en"@es ;
     rdfs:label "Located in"@en ;
     rdfs:comment "Indica el lugar en el que se encuentra la plataforma eólica."@es ;
     rdfs:comment "Indicates the location where the wind power platform is located."@en .
 
-ex:connectedTo a owl:ObjectProperty , owl:SymetricProperty ;
-    rdfs:domain ex:Component ;
-    rdfs:range ex:Component ;
+optimar:connectedTo a owl:ObjectProperty , owl:SymetricProperty ;
+    rdfs:domain optimar:Component ;
+    rdfs:range optimar:Component ;
     rdfs:label "Conectado a"@es ;
     rdfs:label "Connected to"@en ;
     rdfs:comment "Indica que un componente está conectado a otro."@es ;
     rdfs:comment "Indicates that a component is connected to another."@en .
 
-ex:supports a owl:ObjectProperty ;
-    rdfs:domain ex:Component ;
-    rdfs:range ex:Component ;
+optimar:supports a owl:ObjectProperty ;
+    rdfs:domain optimar:Component ;
+    rdfs:range optimar:Component ;
     rdfs:label "Soporta a"@es ;
     rdfs:label "Supports"@en ;
     rdfs:comment "Indica que un componente proporciona soporte estructural o funcional a otro."@es ;
     rdfs:comment "Indicates that a component provides structural or functional support to another."@en ;
-    owl:inverseOf ex:isSupportedBy .
+    owl:inverseOf optimar:isSupportedBy .
 
-ex:performedBy a owl:ObjectProperty ;
-    rdfs:domain ex:Maintenance ;
-    rdfs:range ex:Actor ;
+optimar:performedBy a owl:ObjectProperty ;
+    rdfs:domain optimar:Maintenance ;
+    rdfs:range optimar:Actor ;
     rdfs:label "Realizado por"@es ;
     rdfs:label "Performed by"@en ;
     rdfs:comment "Indica que un mantenimiento se ha realizado por un actor."@es ;
     rdfs:comment "Indicates that a maintenance has been performed by an actor."@en .
 
-ex:isSupportedBy a owl:ObjectProperty ;
-    rdfs:domain ex:Component ;
-    rdfs:range ex:Component ;
+optimar:isSupportedBy a owl:ObjectProperty ;
+    rdfs:domain optimar:Component ;
+    rdfs:range optimar:Component ;
     rdfs:label "Es soportado por"@es ;
     rdfs:label "Is supported by"@en ;
     rdfs:comment "Indica que un componente depende estructural o funcionalmente de otro para su soporte."@es ;
     rdfs:comment "Indicates that a component is structurally or functionally supported by another."@en .
 
-ex:isMonitoredBy a owl:ObjectProperty ;
-    rdfs:domain ex:TurbineComponent ;
-    rdfs:range ex:Sensor ;
+optimar:isMonitoredBy a owl:ObjectProperty ;
+    rdfs:domain optimar:TurbineComponent ;
+    rdfs:range optimar:Sensor ;
     rdfs:label "Es monitoreado por"@es ;
     rdfs:label "Is monitored by"@en ;
     rdfs:comment "Relaciona un componente de turbina con los sensores que lo supervisan."@es ;
     rdfs:comment "Relates a turbine component with the sensors it is monitored by."@en .
 
-ex:transmitsMovementTo a owl:ObjectProperty ;
-    rdfs:domain ex:Component ;
-    rdfs:range ex:Component ;
+optimar:transmitsMovementTo a owl:ObjectProperty ;
+    rdfs:domain optimar:Component ;
+    rdfs:range optimar:Component ;
     rdfs:label "Transmite movimiento a"@es ;
     rdfs:label "Transmits movement to"@en ;
     rdfs:comment "Indica que un componente transmite movimiento mecánico a otro."@es ;
     rdfs:comment "Indicates that a component transmits mechanical movement to another."@en .
 
-ex:houses a owl:ObjectProperty ;
-    rdfs:domain ex:Component ;
-    rdfs:range ex:Component ;
+optimar:houses a owl:ObjectProperty ;
+    rdfs:domain optimar:Component ;
+    rdfs:range optimar:Component ;
     rdfs:label "Aloja"@es ;
     rdfs:label "Houses"@en ;
     rdfs:comment "Indica que un componente contiene o aloja fisicamente a otro en su estructura."@es ;
     rdfs:comment "Indicates that a component contains or houses physically another in its structure."@en ;
-    owl:inverseOf ex:isHousedIn .
+    owl:inverseOf optimar:isHousedIn .
 
-ex:isHousedIn a owl:ObjectProperty ;
-    rdfs:domain ex:Component ;
-    rdfs:range ex:Component ;
+optimar:isHousedIn a owl:ObjectProperty ;
+    rdfs:domain optimar:Component ;
+    rdfs:range optimar:Component ;
     rdfs:label "Está alojado en"@es ;
     rdfs:label "Is housed in"@en ;
     rdfs:comment "Indica que un componente está fisicamente contenido dentro de otro."@es ;
     rdfs:comment "Indicates that a component is physically contained within another."@en ;
-    owl:inverseOf ex:houses .
+    owl:inverseOf optimar:houses .
 
 ##########################################################
 # Sensor-failure relationship
 ##########################################################
-ex:failureObservation a owl:ObjectProperty ;
-    rdfs:domain ex:FailureEvent ;
-    rdfs:range ex:Observation ;
+optimar:failureObservation a owl:ObjectProperty ;
+    rdfs:domain optimar:FailureEvent ;
+    rdfs:range optimar:Observation ;
     rdfs:label "Observación de fallo"@es ;
     rdfs:label "Failure observation"@en ;
     rdfs:comment "Relación entre un evento de fallo y la observación realizada por un sensor."@es ;
     rdfs:comment "Relationship between a failure event and the observation made by a sensor."@en .
 
-ex:detectsCorrosion a owl:ObjectProperty ;
-    rdfs:domain ex:Sensor ;
-    rdfs:range ex:Corrosion ;
+optimar:detectsCorrosion a owl:ObjectProperty ;
+    rdfs:domain optimar:Sensor ;
+    rdfs:range optimar:Corrosion ;
     rdfs:label "Detecta corrosión"@es ;
     rdfs:label "Detects corrosion"@en ;
     rdfs:comment "Relaciona un sensor con la medición de corrosión detectada."@es ;
     rdfs:comment "Relates a sensor with the detected corrosion measurement."@en .
 
-ex:monitorsDeformation a owl:ObjectProperty ;
-    rdfs:domain ex:Sensor ;
-    rdfs:range ex:Deformation ;
+optimar:monitorsDeformation a owl:ObjectProperty ;
+    rdfs:domain optimar:Sensor ;
+    rdfs:range optimar:Deformation ;
     rdfs:label "Monitorea deformación"@es ;
     rdfs:label "Monitors deformation"@en ;
     rdfs:comment "Relaciona un sensor con la deformación estructural que mide o supervisa."@es ;
     rdfs:comment "Relates a sensor to the structural deformation it measures or monitors."@en .
 
-ex:measuresVibration a owl:ObjectProperty ;
-    rdfs:domain ex:Sensor ;
-    rdfs:range ex:VibrationData ;
+optimar:measuresVibration a owl:ObjectProperty ;
+    rdfs:domain optimar:Sensor ;
+    rdfs:range optimar:VibrationData ;
     rdfs:label "Mide vibración"@es ;
     rdfs:label "Measures vibration"@en ;
     rdfs:comment "Indica que un sensor obtiene datos de vibración de un componente."@es ;
     rdfs:comment "Indicates that a sensor collects vibration data from a component."@en .
 
-ex:measuresWind a owl:ObjectProperty ;
-    rdfs:domain ex:Sensor ;
-    rdfs:range ex:EnvironmentalCondition ;
+optimar:measuresWind a owl:ObjectProperty ;
+    rdfs:domain optimar:Sensor ;
+    rdfs:range optimar:EnvironmentalCondition ;
     rdfs:label "Mide viento"@es ;
     rdfs:label "Measures wind"@en ;
     rdfs:comment "Relaciona un sensor con la medición de velocidad o dirección del viento."@es ;
     rdfs:comment "Relates a sensor with the measurement of wind speed or direction."@en .
 
-ex:measuresStress a owl:ObjectProperty ;
-    rdfs:domain ex:Sensor ;
-    rdfs:range ex:StressData ;
+optimar:measuresStress a owl:ObjectProperty ;
+    rdfs:domain optimar:Sensor ;
+    rdfs:range optimar:StressData ;
     rdfs:label "Mide tensión"@es ;
     rdfs:label "Measures stress"@en ;
     rdfs:comment "Indica que un sensor mide la tensión ejercida sobre un componente."@es ;
@@ -956,51 +956,51 @@ ex:measuresStress a owl:ObjectProperty ;
 ##########################################################
 # Event-failure relationships
 ##########################################################
-ex:causedBy a owl:ObjectProperty ;
-    rdfs:domain ex:Event ;
-    rdfs:range ex:Failure ;
+optimar:causedBy a owl:ObjectProperty ;
+    rdfs:domain optimar:Event ;
+    rdfs:range optimar:Failure ;
     rdfs:label "Causado por"@es ;
     rdfs:label "Caused by"@en ;
     rdfs:comment "Relaciona un evento con el fallo que lo provocó."@es ;
     rdfs:comment "Relates an event with the failure that caused it."@en .
 
-ex:affectedBy a owl:ObjectProperty ;
-    rdfs:domain ex:Component ;
-    rdfs:range ex:Failure ;
+optimar:affectedBy a owl:ObjectProperty ;
+    rdfs:domain optimar:Component ;
+    rdfs:range optimar:Failure ;
     rdfs:label "Afectado por"@es ;
     rdfs:label "Affected by"@en ;
     rdfs:comment "Indica que un componente de turbina está afectado por un fallo específico."@es ;
     rdfs:comment "Indicates that a turbine component is affected by a specific failure."@en ;
-    owl:inverseOf ex:affects .
+    owl:inverseOf optimar:affects .
 
-ex:affects a owl:ObjectProperty ;
-    rdfs:domain ex:Failure ;
-    rdfs:range ex:Component ;
+optimar:affects a owl:ObjectProperty ;
+    rdfs:domain optimar:Failure ;
+    rdfs:range optimar:Component ;
     rdfs:label "Afecta"@es ;
     rdfs:label "Affects"@en ;
     rdfs:comment "Indica que un fallo afecta un componente específico."@es ;
     rdfs:comment "Indicates that a failure affects a specific component."@en ;
-    owl:inverseOf ex:affectedBy .
+    owl:inverseOf optimar:affectedBy .
 
-ex:detectedBy a owl:ObjectProperty ;
-    rdfs:domain ex:Event ;
-    rdfs:range ex:Sensor ;
+optimar:detectedBy a owl:ObjectProperty ;
+    rdfs:domain optimar:Event ;
+    rdfs:range optimar:Sensor ;
     rdfs:label "Detectado por"@es ;
     rdfs:label "Detected by"@en ;
     rdfs:comment "Relaciona un evento con el sensor que lo detectó."@es ;
     rdfs:comment "Relates an event to the sensor that detected it."@en ;
-    owl:inverseOf ex:detects .
+    owl:inverseOf optimar:detects .
 
-ex:detects a owl:ObjectProperty ;
-    rdfs:domain ex:Sensor ;
-    rdfs:range ex:Event ;
+optimar:detects a owl:ObjectProperty ;
+    rdfs:domain optimar:Sensor ;
+    rdfs:range optimar:Event ;
     rdfs:label "Detecta"@es ;
     rdfs:label "Detects"@en ;
     rdfs:comment "Relaciona un sensor con el evento que detecta."@es ;
     rdfs:comment "Relates a sensor to the event that it detects."@en ;
-    owl:inverseOf ex:detectedBy .
+    owl:inverseOf optimar:detectedBy .
 
-ex:madeBySensor a owl:ObjectProperty ;
+optimar:madeBySensor a owl:ObjectProperty ;
     rdfs:domain sosa:Observation ;
     rdfs:range sosa:Sensor ;
     rdfs:label "Realizada por sensor"@es ;
@@ -1008,17 +1008,17 @@ ex:madeBySensor a owl:ObjectProperty ;
     rdfs:comment "Relaciona una observación con el sensor que la realizó."@es ;
     rdfs:comment "Relates an observation to the sensor that made it."@en .
 
-ex:relatedToComponent a owl:ObjectProperty ;
-    rdfs:domain ex:Event ;
-    rdfs:range ex:Component ;
+optimar:relatedToComponent a owl:ObjectProperty ;
+    rdfs:domain optimar:Event ;
+    rdfs:range optimar:Component ;
     rdfs:label "Relacionado con componente"@es ;
     rdfs:label "Related to component"@en ;
     rdfs:comment "Relaciona un evento con el componente de la plataforma que se ve afectado."@es ;
     rdfs:comment "Relates an event to the platform component that is affected."@en .
 
-ex:hasFailureCause a owl:ObjectProperty ;
-    rdfs:domain ex:Failure ;
-    rdfs:range ex:EnvironmentalCondition ;
+optimar:hasFailureCause a owl:ObjectProperty ;
+    rdfs:domain optimar:Failure ;
+    rdfs:range optimar:EnvironmentalCondition ;
     rdfs:label "Causa de fallo"@es ;
     rdfs:label "Failure cause"@en ;
     rdfs:comment "Indica que un fallo tiene su origen en una condición ambiental específica."@es ;
@@ -1027,65 +1027,65 @@ ex:hasFailureCause a owl:ObjectProperty ;
 ##########################################################
 # Actor and role relationships
 ##########################################################
-ex:performsTask a owl:ObjectProperty ;
-    rdfs:domain ex:Actor ;
-    rdfs:range ex:Task ;
+optimar:performsTask a owl:ObjectProperty ;
+    rdfs:domain optimar:Actor ;
+    rdfs:range optimar:Task ;
     rdfs:label "Realiza tarea"@es ;
     rdfs:label "Performs task"@en ;
     rdfs:comment "Relaciona un actor con una tarea que ejecuta como parte de su rol."@es ;
     rdfs:comment "Relates an actor with a task that it performs as part of its role."@en .
 
-ex:performedMaintenance a owl:ObjectProperty ;
-    rdfs:domain ex:Actor ;
-    rdfs:range ex:Maintenance ;
+optimar:performedMaintenance a owl:ObjectProperty ;
+    rdfs:domain optimar:Actor ;
+    rdfs:range optimar:Maintenance ;
     rdfs:label "Realiza mantenimiento"@es ;
     rdfs:label "Performs maintenance"@en ;
     rdfs:comment "Relaciona un actor con el mantenimiento que realiza."@es ;
     rdfs:comment "Relates an actor with the maintenance that it performs."@en .
 
-ex:requiresMaintenance a owl:ObjectProperty ;
-    rdfs:domain ex:TurbineComponent ;
-    rdfs:range ex:Maintenance ;
+optimar:requiresMaintenance a owl:ObjectProperty ;
+    rdfs:domain optimar:TurbineComponent ;
+    rdfs:range optimar:Maintenance ;
     rdfs:label "Requiere mantenimiento"@es ;
     rdfs:label "Requires maintenance"@en ;
     rdfs:comment "Relaciona un componente con las tareas de mantenimiento necesarias."@es ;
     rdfs:comment "Relates a component with the required maintenance tasks."@en .
 
-ex:hasRole a owl:ObjectProperty ;
-    rdfs:domain ex:Actor ;
-    rdfs:range ex:Role ;
+optimar:hasRole a owl:ObjectProperty ;
+    rdfs:domain optimar:Actor ;
+    rdfs:range optimar:Role ;
     rdfs:label "Tiene rol"@es ;
     rdfs:label "Has role"@en ;
     rdfs:comment "Indica el rol que desempeña un actor dentro del sistema."@es ;
     rdfs:comment "Indicates the role that an actor performs within the system."@en .
 
-ex:monitors a owl:ObjectProperty ;
-    rdfs:domain ex:Actor ;
-    rdfs:range [ owl:unionOf (ex:Component ex:Sensor) ] ;
+optimar:monitors a owl:ObjectProperty ;
+    rdfs:domain optimar:Actor ;
+    rdfs:range [ owl:unionOf (optimar:Component optimar:Sensor) ] ;
     rdfs:label "Monitorea"@es ;
     rdfs:label "Monitors"@en ;
     rdfs:comment "Relaciona a un actor con los componentes o sensores que supervisa."@es ;
     rdfs:comment "Relates an actor to the components or sensors they monitor."@en .
 
-ex:adjusts a owl:ObjectProperty ;
-    rdfs:domain ex:Actor ;
-    rdfs:range [ owl:unionOf (ex:Component ex:PitchSystem) ] ;
+optimar:adjusts a owl:ObjectProperty ;
+    rdfs:domain optimar:Actor ;
+    rdfs:range [ owl:unionOf (optimar:Component optimar:PitchSystem) ] ;
     rdfs:label "Ajusta"@es ;
     rdfs:label "Adjusts"@en ;
     rdfs:comment "Indica que un actor realiza ajustes sobre un componente o sistema de pitch."@es ;
     rdfs:comment "Indicates that an actor makes adjustments on a component or pitch system."@en .
 
-ex:analyzes a owl:ObjectProperty ;
-    rdfs:domain ex:Actor ;
-    rdfs:range [ owl:unionOf (ex:Data ex:Failure) ] ;
+optimar:analyzes a owl:ObjectProperty ;
+    rdfs:domain optimar:Actor ;
+    rdfs:range [ owl:unionOf (optimar:Data optimar:Failure) ] ;
     rdfs:label "Analiza"@es ;
     rdfs:label "Analyzes"@en ;
     rdfs:comment "Relaciona a un actor con los datos o fallos que estudia o interpreta."@es ;
     rdfs:comment "Relates an actor to the data or failures that it studies or interprets."@en .
 
-ex:manages a owl:ObjectProperty ;
-    rdfs:domain ex:Actor ;
-    rdfs:range [ owl:unionOf (ex:WindPowerPlatform ex:MooringSystem) ] ;
+optimar:manages a owl:ObjectProperty ;
+    rdfs:domain optimar:Actor ;
+    rdfs:range [ owl:unionOf (optimar:WindPowerPlatform optimar:MooringSystem) ] ;
     rdfs:label "Administra"@es ;
     rdfs:label "Manages"@en ;
     rdfs:comment "Indica que un actor se encarga de la gestión de una plataforma eólica o su sistema de anclaje."@es ;

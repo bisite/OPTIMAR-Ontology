@@ -1,7 +1,9 @@
 <https://w3id.org/optimar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/optimar/2.0> .
-<https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/creator> "Alejandro Flores (USAL), Alberto Montero (USAL), Oihana Garcia (Tekniker) and Cristina Aceta (Tekniker)" .
-<https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/date> "2025-12-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/creator> "Alberto Montero (USAL)" .
+<https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/creator> "Alejandro Flores (USAL)" .
+<https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/creator> "Cristina Aceta (Tekniker)" .
+<https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/creator> "Oihana Garcia (Tekniker)" .
 <https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/description> "Esta ontología describe los componentes, fallos, sensores y eventos relacionados con las plataformas eólicas offshore."@es .
 <https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/description> "This ontology describes the components, failures, sensors, and events related to offshore wind platforms."@en .
 <https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/language> "en" .
@@ -11,22 +13,23 @@
 <https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/title> "Ontología de Plataforma Eólica Offshore para OPTiMAR"@es .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/abstract> "Ontologia que modela los elementos estructurales, sensores, eventos y fallos de plataformas eólicas offshore, incluyendo datos de medición, actores involucrados y relaciones semánticas entre componentes. Compatible con SOSA para observaciones y QUDT para unidades de medida."@es .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/abstract> "Ontology modeling structural elements, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. Compatible with SOSA for observations and QUDT for units of measure."@en .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/bibliographicCitation> "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Offshore Wind Power Platform Ontology for OPTiMAR. DOI: 10.1234/abcd"@en .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/bibliographicCitation> "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.1234/abcd"@es .
+<https://w3id.org/optimar> <http://purl.org/dc/terms/bibliographicCitation> "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Offshore Wind Power Platform Ontology for OPTiMAR. DOI: 10.5281/zenodo.17962874"@en .
+<https://w3id.org/optimar> <http://purl.org/dc/terms/bibliographicCitation> "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.5281/zenodo.17962874"@es .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/created> "2025-09-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/optimar> <http://purl.org/dc/terms/identifier> <https://doi.org/10.5281/zenodo.17962874> .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/issued> "2025-12-02"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/license> <https://opensource.org/licenses/MIT> .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/modified> "2025-12-01"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/optimar> <http://purl.org/dc/terms/modified> "2025-12-17"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/publisher> "Universidad de Salamanca, Centro Tecnológico y de Investigación - Tekniker"@es .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/publisher> "University of Salamanca, Technology and Research Centre - Tekniker"@en .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/rights> "Este trabajo se distribuye bajo la licencia MIT. Se permite copiar, modificar y distribuir bajo los términos de dicha licencia."@es .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/rights> "This work is distributed under the MIT License. It may be copied, modified, and distributed under the terms of this license."@en .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/status> "estable"@es .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/status> "stable"@en .
-<https://w3id.org/optimar> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ex" .
+<https://w3id.org/optimar> <http://purl.org/vocab/vann/preferredNamespacePrefix> "optimar" .
 <https://w3id.org/optimar> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/optimar#> .
-<https://w3id.org/optimar> <http://www.w3.org/2000/01/rdf-schema#comment> "\r\n        Version 2.0 (2025-12-02) - Major improvements:\r\n        - Added ex:Generator class for turbine generators\r\n        - Added inverse properties: ex:isHousedIn, ex:detects, ex:affects\r\n        - Declared ex:connectedTo as symmetric property\r\n        - Renamed properties to avoid class name collisions: ex:deformationLevel, ex:misalignmentLevel\r\n        - Corrected ex:affectedBy domain to ex:Component (previously ex:TurbineComponent)\r\n        - Added ex:StructuralComponent as subclass of ex:Component\r\n        - Added structural restrictions to TurbineComponent classes\r\n        - Separated failure classes from failure event classes\r\n        - Fixed restriction syntax in ex:Maintenance and ex:Observation\r\n        - Improved consistency in QUDT usage for physical quantities\r\n        - Added cardinality constraints to ex:Turbine class\r\n    "@en .
-<https://w3id.org/optimar> <http://www.w3.org/2000/01/rdf-schema#comment> "\r\n    Versión 2.0 (2025-12-02) - Mejoras principales:\r\n    - Añadida clase ex:Generator para generadores de turbina\r\n    - Añadidas propiedades inversas: ex:isHousedIn, ex:detects, ex:affects\r\n    - Declarada ex:connectedTo como propiedad simétrica\r\n    - Renombradas propiedades para evitar colisiones: ex:deformationLevel, ex:misalignmentLevel\r\n    - Corregido dominio de ex:affectedBy a ex:Component (antes ex:TurbineComponent)\r\n    - Añadido ex:StructuralComponent como subclase de ex:Component\r\n    - Añadidas restricciones estructurales a clases TurbineComponent\r\n    - Separadas clases de fallos de clases de eventos de fallos\r\n    - Corregida sintaxis de restricciones en ex:Maintenance y ex:Observation\r\n    - Mejorada consistencia en uso de QUDT para magnitudes físicas\r\n    - Añadidas restricciones de cardinalidad a clase ex:Turbine\r\n    "@es .
+<https://w3id.org/optimar> <http://www.w3.org/2000/01/rdf-schema#comment> "\r\n        Version 2.0 (2025-12-02) - Major improvements:\r\n        - Added optimar:Generator class for turbine generators\r\n        - Added inverse properties: optimar:isHousedIn, optimar:detects, optimar:affects\r\n        - Declared optimar:connectedTo as symmetric property\r\n        - Renamed properties to avoid class name collisions: optimar:deformationLevel, optimar:misalignmentLevel\r\n        - Corrected optimar:affectedBy domain to optimar:Component (previously optimar:TurbineComponent)\r\n        - Added optimar:StructuralComponent as subclass of optimar:Component\r\n        - Added structural restrictions to TurbineComponent classes\r\n        - Separated failure classes from failure event classes\r\n        - Fixed restriction syntax in optimar:Maintenance and optimar:Observation\r\n        - Improved consistency in QUDT usage for physical quantities\r\n        - Added cardinality constraints to optimar:Turbine class\r\n    "@en .
+<https://w3id.org/optimar> <http://www.w3.org/2000/01/rdf-schema#comment> "\r\n    Versión 2.0 (2025-12-02) - Mejoras principales:\r\n    - Añadida clase optimar:Generator para generadores de turbina\r\n    - Añadidas propiedades inversas: optimar:isHousedIn, optimar:detects, optimar:affects\r\n    - Declarada optimar:connectedTo como propiedad simétrica\r\n    - Renombradas propiedades para evitar colisiones: optimar:deformationLevel, optimar:misalignmentLevel\r\n    - Corregido dominio de optimar:affectedBy a optimar:Component (antes optimar:TurbineComponent)\r\n    - Añadido optimar:StructuralComponent como subclase de optimar:Component\r\n    - Añadidas restricciones estructurales a clases TurbineComponent\r\n    - Separadas clases de fallos de clases de eventos de fallos\r\n    - Corregida sintaxis de restricciones en optimar:Maintenance y optimar:Observation\r\n    - Mejorada consistencia en uso de QUDT para magnitudes físicas\r\n    - Añadidas restricciones de cardinalidad a clase optimar:Turbine\r\n    "@es .
 <https://w3id.org/optimar> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/optimar#changelog> .
 <https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <https://w3id.org/optimar/1.0> .
 <https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/optimar/1.0> .
@@ -44,9 +47,6 @@
 # 
 # http://purl.org/dc/elements/1.1/creator
 <http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-# 
-# http://purl.org/dc/elements/1.1/date
-<http://purl.org/dc/elements/1.1/date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/elements/1.1/description
 <http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -68,6 +68,9 @@
 # 
 # http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/issued
 <http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

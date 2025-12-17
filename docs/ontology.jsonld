@@ -219,9 +219,6 @@
   "@id" : "http://purl.org/dc/elements/1.1/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://purl.org/dc/elements/1.1/date",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
   "@id" : "http://purl.org/dc/elements/1.1/description",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -241,6 +238,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/identifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/issued",
@@ -305,11 +305,13 @@
   "@id" : "https://w3id.org/optimar",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Alejandro Flores (USAL), Alberto Montero (USAL), Oihana Garcia (Tekniker) and Cristina Aceta (Tekniker)"
-  } ],
-  "http://purl.org/dc/elements/1.1/date" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-12-01"
+    "@value" : "Alberto Montero (USAL)"
+  }, {
+    "@value" : "Alejandro Flores (USAL)"
+  }, {
+    "@value" : "Cristina Aceta (Tekniker)"
+  }, {
+    "@value" : "Oihana Garcia (Tekniker)"
   } ],
   "http://purl.org/dc/elements/1.1/description" : [ {
     "@language" : "es",
@@ -344,14 +346,17 @@
   } ],
   "http://purl.org/dc/terms/bibliographicCitation" : [ {
     "@language" : "en",
-    "@value" : "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Offshore Wind Power Platform Ontology for OPTiMAR. DOI: 10.1234/abcd"
+    "@value" : "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Offshore Wind Power Platform Ontology for OPTiMAR. DOI: 10.5281/zenodo.17962874"
   }, {
     "@language" : "es",
-    "@value" : "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.1234/abcd"
+    "@value" : "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.5281/zenodo.17962874"
   } ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
     "@value" : "2025-09-30"
+  } ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@id" : "https://doi.org/10.5281/zenodo.17962874"
   } ],
   "http://purl.org/dc/terms/issued" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -362,7 +367,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2025-12-01"
+    "@value" : "2025-12-17"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@language" : "es",
@@ -386,17 +391,17 @@
     "@value" : "stable"
   } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
-    "@value" : "ex"
+    "@value" : "optimar"
   } ],
   "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
     "@id" : "https://w3id.org/optimar#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "\r\n        Version 2.0 (2025-12-02) - Major improvements:\r\n        - Added ex:Generator class for turbine generators\r\n        - Added inverse properties: ex:isHousedIn, ex:detects, ex:affects\r\n        - Declared ex:connectedTo as symmetric property\r\n        - Renamed properties to avoid class name collisions: ex:deformationLevel, ex:misalignmentLevel\r\n        - Corrected ex:affectedBy domain to ex:Component (previously ex:TurbineComponent)\r\n        - Added ex:StructuralComponent as subclass of ex:Component\r\n        - Added structural restrictions to TurbineComponent classes\r\n        - Separated failure classes from failure event classes\r\n        - Fixed restriction syntax in ex:Maintenance and ex:Observation\r\n        - Improved consistency in QUDT usage for physical quantities\r\n        - Added cardinality constraints to ex:Turbine class\r\n    "
+    "@value" : "\r\n        Version 2.0 (2025-12-02) - Major improvements:\r\n        - Added optimar:Generator class for turbine generators\r\n        - Added inverse properties: optimar:isHousedIn, optimar:detects, optimar:affects\r\n        - Declared optimar:connectedTo as symmetric property\r\n        - Renamed properties to avoid class name collisions: optimar:deformationLevel, optimar:misalignmentLevel\r\n        - Corrected optimar:affectedBy domain to optimar:Component (previously optimar:TurbineComponent)\r\n        - Added optimar:StructuralComponent as subclass of optimar:Component\r\n        - Added structural restrictions to TurbineComponent classes\r\n        - Separated failure classes from failure event classes\r\n        - Fixed restriction syntax in optimar:Maintenance and optimar:Observation\r\n        - Improved consistency in QUDT usage for physical quantities\r\n        - Added cardinality constraints to optimar:Turbine class\r\n    "
   }, {
     "@language" : "es",
-    "@value" : "\r\n    Versión 2.0 (2025-12-02) - Mejoras principales:\r\n    - Añadida clase ex:Generator para generadores de turbina\r\n    - Añadidas propiedades inversas: ex:isHousedIn, ex:detects, ex:affects\r\n    - Declarada ex:connectedTo como propiedad simétrica\r\n    - Renombradas propiedades para evitar colisiones: ex:deformationLevel, ex:misalignmentLevel\r\n    - Corregido dominio de ex:affectedBy a ex:Component (antes ex:TurbineComponent)\r\n    - Añadido ex:StructuralComponent como subclase de ex:Component\r\n    - Añadidas restricciones estructurales a clases TurbineComponent\r\n    - Separadas clases de fallos de clases de eventos de fallos\r\n    - Corregida sintaxis de restricciones en ex:Maintenance y ex:Observation\r\n    - Mejorada consistencia en uso de QUDT para magnitudes físicas\r\n    - Añadidas restricciones de cardinalidad a clase ex:Turbine\r\n    "
+    "@value" : "\r\n    Versión 2.0 (2025-12-02) - Mejoras principales:\r\n    - Añadida clase optimar:Generator para generadores de turbina\r\n    - Añadidas propiedades inversas: optimar:isHousedIn, optimar:detects, optimar:affects\r\n    - Declarada optimar:connectedTo como propiedad simétrica\r\n    - Renombradas propiedades para evitar colisiones: optimar:deformationLevel, optimar:misalignmentLevel\r\n    - Corregido dominio de optimar:affectedBy a optimar:Component (antes optimar:TurbineComponent)\r\n    - Añadido optimar:StructuralComponent como subclase de optimar:Component\r\n    - Añadidas restricciones estructurales a clases TurbineComponent\r\n    - Separadas clases de fallos de clases de eventos de fallos\r\n    - Corregida sintaxis de restricciones en optimar:Maintenance y optimar:Observation\r\n    - Mejorada consistencia en uso de QUDT para magnitudes físicas\r\n    - Añadidas restricciones de cardinalidad a clase optimar:Turbine\r\n    "
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://w3id.org/optimar#changelog"

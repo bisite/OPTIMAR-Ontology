@@ -8,8 +8,10 @@
 
 <https://w3id.org/optimar> rdf:type owl:Ontology ;
                             owl:versionIRI <https://w3id.org/optimar/2.0> ;
-                            <http://purl.org/dc/elements/1.1/creator> "Alejandro Flores (USAL), Alberto Montero (USAL), Oihana Garcia (Tekniker) and Cristina Aceta (Tekniker)" ;
-                            <http://purl.org/dc/elements/1.1/date> "2025-12-01"^^xsd:date ;
+                            <http://purl.org/dc/elements/1.1/creator> "Alberto Montero (USAL)" ,
+                                                                      "Alejandro Flores (USAL)" ,
+                                                                      "Cristina Aceta (Tekniker)" ,
+                                                                      "Oihana Garcia (Tekniker)" ;
                             <http://purl.org/dc/elements/1.1/description> "Esta ontología describe los componentes, fallos, sensores y eventos relacionados con las plataformas eólicas offshore."@es ,
                                                                           "This ontology describes the components, failures, sensors, and events related to offshore wind platforms."@en ;
                             <http://purl.org/dc/elements/1.1/language> "en" ;
@@ -19,47 +21,48 @@
                                                                     "Ontología de Plataforma Eólica Offshore para OPTiMAR"@es ;
                             <http://purl.org/dc/terms/abstract> "Ontologia que modela los elementos estructurales, sensores, eventos y fallos de plataformas eólicas offshore, incluyendo datos de medición, actores involucrados y relaciones semánticas entre componentes. Compatible con SOSA para observaciones y QUDT para unidades de medida."@es ,
                                                                 "Ontology modeling structural elements, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. Compatible with SOSA for observations and QUDT for units of measure."@en ;
-                            <http://purl.org/dc/terms/bibliographicCitation> "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Offshore Wind Power Platform Ontology for OPTiMAR. DOI: 10.1234/abcd"@en ,
-                                                                             "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.1234/abcd"@es ;
+                            <http://purl.org/dc/terms/bibliographicCitation> "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Offshore Wind Power Platform Ontology for OPTiMAR. DOI: 10.5281/zenodo.17962874"@en ,
+                                                                             "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.5281/zenodo.17962874"@es ;
                             <http://purl.org/dc/terms/created> "2025-09-30"^^xsd:date ;
+                            <http://purl.org/dc/terms/identifier> <https://doi.org/10.5281/zenodo.17962874> ;
                             <http://purl.org/dc/terms/issued> "2025-12-02"^^xsd:date ;
                             <http://purl.org/dc/terms/license> <https://opensource.org/licenses/MIT> ;
-                            <http://purl.org/dc/terms/modified> "2025-12-01"^^xsd:date ;
+                            <http://purl.org/dc/terms/modified> "2025-12-17"^^xsd:date ;
                             <http://purl.org/dc/terms/publisher> "Universidad de Salamanca, Centro Tecnológico y de Investigación - Tekniker"@es ,
                                                                  "University of Salamanca, Technology and Research Centre - Tekniker"@en ;
                             <http://purl.org/dc/terms/rights> "Este trabajo se distribuye bajo la licencia MIT. Se permite copiar, modificar y distribuir bajo los términos de dicha licencia."@es ,
                                                               "This work is distributed under the MIT License. It may be copied, modified, and distributed under the terms of this license."@en ;
                             <http://purl.org/dc/terms/status> "estable"@es ,
                                                               "stable"@en ;
-                            <http://purl.org/vocab/vann/preferredNamespacePrefix> "ex" ;
+                            <http://purl.org/vocab/vann/preferredNamespacePrefix> "optimar" ;
                             <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
                             rdfs:comment """
         Version 2.0 (2025-12-02) - Major improvements:
-        - Added ex:Generator class for turbine generators
-        - Added inverse properties: ex:isHousedIn, ex:detects, ex:affects
-        - Declared ex:connectedTo as symmetric property
-        - Renamed properties to avoid class name collisions: ex:deformationLevel, ex:misalignmentLevel
-        - Corrected ex:affectedBy domain to ex:Component (previously ex:TurbineComponent)
-        - Added ex:StructuralComponent as subclass of ex:Component
+        - Added optimar:Generator class for turbine generators
+        - Added inverse properties: optimar:isHousedIn, optimar:detects, optimar:affects
+        - Declared optimar:connectedTo as symmetric property
+        - Renamed properties to avoid class name collisions: optimar:deformationLevel, optimar:misalignmentLevel
+        - Corrected optimar:affectedBy domain to optimar:Component (previously optimar:TurbineComponent)
+        - Added optimar:StructuralComponent as subclass of optimar:Component
         - Added structural restrictions to TurbineComponent classes
         - Separated failure classes from failure event classes
-        - Fixed restriction syntax in ex:Maintenance and ex:Observation
+        - Fixed restriction syntax in optimar:Maintenance and optimar:Observation
         - Improved consistency in QUDT usage for physical quantities
-        - Added cardinality constraints to ex:Turbine class
+        - Added cardinality constraints to optimar:Turbine class
     """@en ,
                                          """
     Versión 2.0 (2025-12-02) - Mejoras principales:
-    - Añadida clase ex:Generator para generadores de turbina
-    - Añadidas propiedades inversas: ex:isHousedIn, ex:detects, ex:affects
-    - Declarada ex:connectedTo como propiedad simétrica
-    - Renombradas propiedades para evitar colisiones: ex:deformationLevel, ex:misalignmentLevel
-    - Corregido dominio de ex:affectedBy a ex:Component (antes ex:TurbineComponent)
-    - Añadido ex:StructuralComponent como subclase de ex:Component
+    - Añadida clase optimar:Generator para generadores de turbina
+    - Añadidas propiedades inversas: optimar:isHousedIn, optimar:detects, optimar:affects
+    - Declarada optimar:connectedTo como propiedad simétrica
+    - Renombradas propiedades para evitar colisiones: optimar:deformationLevel, optimar:misalignmentLevel
+    - Corregido dominio de optimar:affectedBy a optimar:Component (antes optimar:TurbineComponent)
+    - Añadido optimar:StructuralComponent como subclase de optimar:Component
     - Añadidas restricciones estructurales a clases TurbineComponent
     - Separadas clases de fallos de clases de eventos de fallos
-    - Corregida sintaxis de restricciones en ex:Maintenance y ex:Observation
+    - Corregida sintaxis de restricciones en optimar:Maintenance y optimar:Observation
     - Mejorada consistencia en uso de QUDT para magnitudes físicas
-    - Añadidas restricciones de cardinalidad a clase ex:Turbine
+    - Añadidas restricciones de cardinalidad a clase optimar:Turbine
     """@es ;
                             rdfs:seeAlso :changelog ;
                             owl:backwardCompatibleWith <https://w3id.org/optimar/1.0> ;
@@ -74,10 +77,6 @@
 
 ###  http://purl.org/dc/elements/1.1/creator
 <http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/date
-<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/description
@@ -106,6 +105,10 @@
 
 ###  http://purl.org/dc/terms/created
 <http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/issued
