@@ -7,7 +7,7 @@
 @base <https://w3id.org/optimar#> .
 
 <https://w3id.org/optimar> rdf:type owl:Ontology ;
-                            owl:versionIRI <https://w3id.org/optimar/2.0> ;
+                            owl:versionIRI <https://w3id.org/optimar/2.1> ;
                             <http://purl.org/dc/elements/1.1/creator> "Alberto Montero (USAL)" ,
                                                                       "Alejandro Flores (USAL)" ,
                                                                       "Cristina Aceta (Tekniker)" ,
@@ -19,15 +19,15 @@
                                                                    "Ontología Offshore OPTiMAR"@es ;
                             <http://purl.org/dc/elements/1.1/title> "Offshore Wind Power Platform Ontology for OPTiMAR"@en ,
                                                                     "Ontología de Plataforma Eólica Offshore para OPTiMAR"@es ;
-                            <http://purl.org/dc/terms/abstract> "Ontologia que modela los elementos estructurales, sensores, eventos y fallos de plataformas eólicas offshore, incluyendo datos de medición, actores involucrados y relaciones semánticas entre componentes. Compatible con SOSA para observaciones y QUDT para unidades de medida."@es ,
-                                                                "Ontology modeling structural elements, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. Compatible with SOSA for observations and QUDT for units of measure."@en ;
+                            <http://purl.org/dc/terms/abstract> "Ontology modeling structural elements, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. Compatible with SOSA for observations and QUDT for units of measure."@en ,
+                                                                "Ontología que modela los elementos estructurales, sensores, eventos y fallos de plataformas eólicas offshore, incluyendo datos de medición, actores involucrados y relaciones semánticas entre componentes. Compatible con SOSA para observaciones y QUDT para unidades de medida."@es ;
                             <http://purl.org/dc/terms/bibliographicCitation> "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Offshore Wind Power Platform Ontology for OPTiMAR. DOI: 10.5281/zenodo.17962874"@en ,
                                                                              "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.5281/zenodo.17962874"@es ;
                             <http://purl.org/dc/terms/created> "2025-09-30"^^xsd:date ;
                             <http://purl.org/dc/terms/identifier> <https://doi.org/10.5281/zenodo.17962874> ;
                             <http://purl.org/dc/terms/issued> "2025-12-02"^^xsd:date ;
                             <http://purl.org/dc/terms/license> <https://opensource.org/licenses/MIT> ;
-                            <http://purl.org/dc/terms/modified> "2025-12-17"^^xsd:date ;
+                            <http://purl.org/dc/terms/modified> "2026-01-19"^^xsd:date ;
                             <http://purl.org/dc/terms/publisher> "Universidad de Salamanca, Centro Tecnológico y de Investigación - Tekniker"@es ,
                                                                  "University of Salamanca, Technology and Research Centre - Tekniker"@en ;
                             <http://purl.org/dc/terms/rights> "Este trabajo se distribuye bajo la licencia MIT. Se permite copiar, modificar y distribuir bajo los términos de dicha licencia."@es ,
@@ -37,38 +37,42 @@
                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "optimar" ;
                             <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
                             rdfs:comment """
-        Version 2.0 (2025-12-02) - Major improvements:
-        - Added optimar:Generator class for turbine generators
-        - Added inverse properties: optimar:isHousedIn, optimar:detects, optimar:affects
-        - Declared optimar:connectedTo as symmetric property
-        - Renamed properties to avoid class name collisions: optimar:deformationLevel, optimar:misalignmentLevel
-        - Corrected optimar:affectedBy domain to optimar:Component (previously optimar:TurbineComponent)
-        - Added optimar:StructuralComponent as subclass of optimar:Component
-        - Added structural restrictions to TurbineComponent classes
-        - Separated failure classes from failure event classes
-        - Fixed restriction syntax in optimar:Maintenance and optimar:Observation
-        - Improved consistency in QUDT usage for physical quantities
-        - Added cardinality constraints to optimar:Turbine class
-    """@en ,
+    Version 2.1 (2026-01-19) - Ampliación de sensores, mejoras de completud y robustez:
+    - Añadidas clases de componentes: Gearbox, Transformer
+    - Añadidas clases de sensores eléctricos: ActivePowerSensor, ReactivePowerSensor, CurrentSensor, VoltageSensor, GridFrequencySensor, TorqueSensor
+    - Añadidas clases de datos específicas: ElectricalData, TemperatureData, RotorData y sus subclases
+    - Añadida clase TemperatureSensor general para medir temperatura de componentes y ambiente
+    - Añadida propiedad optimar:measuresTemperatureOf para relacionar sensores de temperatura con componentes o condiciones ambientales
+    - Añadidas propiedades inversas para sensores: temperatureMonitoredBy, electricalParameterMonitoredBy, rotorParameterMonitoredBy
+    - Añadidas clases de sensores de rotor: RotorSensor, RotorSpeedSensor, RotorAngleSensor
+    - Añadida clase base ElectricalSensor para agrupar sensores eléctricos
+    - Añadida propiedad severity para modelar criticidad de fallos
+    - Añadida clase OperationalState para estados operativos detallados
+    - Añadidas propiedades temporales: startDateTime, endDateTime, detectionDateTime, duration
+    - Añadidas relaciones entre fallos: causesFailure, precededBy
+    - Corregidos errores sintácticos
+    """@es ,
                                          """
-    Versión 2.0 (2025-12-02) - Mejoras principales:
-    - Añadida clase optimar:Generator para generadores de turbina
-    - Añadidas propiedades inversas: optimar:isHousedIn, optimar:detects, optimar:affects
-    - Declarada optimar:connectedTo como propiedad simétrica
-    - Renombradas propiedades para evitar colisiones: optimar:deformationLevel, optimar:misalignmentLevel
-    - Corregido dominio de optimar:affectedBy a optimar:Component (antes optimar:TurbineComponent)
-    - Añadido optimar:StructuralComponent como subclase de optimar:Component
-    - Añadidas restricciones estructurales a clases TurbineComponent
-    - Separadas clases de fallos de clases de eventos de fallos
-    - Corregida sintaxis de restricciones en optimar:Maintenance y optimar:Observation
-    - Mejorada consistencia en uso de QUDT para magnitudes físicas
-    - Añadidas restricciones de cardinalidad a clase optimar:Turbine
-    """@es ;
+    Version 2.1 (2026-01-19) - Sensor expansion, completeness and robustness improvements:
+    - Added component classes: Gearbox, Transformer
+    - Added electrical sensor classes: ActivePowerSensor, ReactivePowerSensor, CurrentSensor, VoltageSensor, GridFrequencySensor, TorqueSensor
+    - Added specific data classes: ElectricalData, TemperatureData, RotorData and their subclasses
+    - Added general TemperatureSensor class to measure temperature of components and environment
+    - Added optimar:measuresTemperatureOf property to relate temperature sensors with components or environmental conditions
+    - Added inverse properties for sensors: temperatureMonitoredBy, electricalParameterMonitoredBy, rotorParameterMonitoredBy
+    - Added rotor sensor classes: RotorSensor, RotorSpeedSensor, RotorAngleSensor
+    - Added ElectricalSensor base class to group electrical sensors
+    - Added severity property to model failure criticality
+    - Added OperationalState class for detailed operational states
+    - Added temporal properties: startDateTime, endDateTime, detectionDateTime, duration
+    - Added failure relationships: causesFailure, precededBy
+    - Fixed syntax errors
+    """@en ;
                             rdfs:seeAlso :changelog ;
-                            owl:backwardCompatibleWith <https://w3id.org/optimar/1.0> ;
-                            owl:priorVersion <https://w3id.org/optimar/1.0> ;
-                            owl:versionInfo "Version 2.0 of the Ontology"@en ,
-                                            "Versión 2.0 de la ontología"@es ;
+                            owl:backwardCompatibleWith <https://w3id.org/optimar/2.0> ;
+                            owl:priorVersion <https://w3id.org/optimar/2.0> ;
+                            owl:versionInfo "Version 2.1 of the Ontology"@en ,
+                                            "Versión 2.1 de la ontología"@es ;
                             <http://xmlns.com/foaf/0.1/homepage> <https://w3id.org/optimar> .
 
 #################################################################
@@ -143,8 +147,17 @@
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/ns/prov#generated
+<http://www.w3.org/ns/prov#generated> rdf:type owl:AnnotationProperty .
+
+
 ###  http://xmlns.com/foaf/0.1/homepage
 <http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/optimar#hasGeneratedData
+:hasGeneratedData rdf:type owl:AnnotationProperty ;
+                  rdfs:subPropertyOf <http://www.w3.org/ns/prov#generated> .
 
 
 #################################################################
@@ -158,16 +171,6 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 #    Object Properties
 #################################################################
-
-###  http://www.w3.org/ns/prov#generated
-<http://www.w3.org/ns/prov#generated> rdf:type owl:ObjectProperty ;
-                                      rdfs:domain :Event ;
-                                      rdfs:range :Data ;
-                                      rdfs:comment "Relaciona un evento con los datos generados por el mismo."@es ,
-                                                   "Relates an event to the generated data by the same."@en ;
-                                      rdfs:label "Genera"@es ,
-                                                 "Generates"@en .
-
 
 ###  https://w3id.org/optimar#adjusts
 :adjusts rdf:type owl:ObjectProperty ;
@@ -228,15 +231,29 @@ xsd:date rdf:type rdfs:Datatype .
                      "Caused by"@en .
 
 
+###  https://w3id.org/optimar#causesFailure
+:causesFailure rdf:type owl:ObjectProperty ;
+               rdfs:domain :Failure ;
+               rdfs:range :Failure ;
+               rdfs:comment "Indica que un fallo causa otro fallo (realación de cascada)"@es ,
+                            "Indicates that a failure causes another failure (cascade relationship)"@en ;
+               rdfs:label "Causa fallo"@es ,
+                          "Causes failure"@en .
+
+
 ###  https://w3id.org/optimar#connectedTo
-:connectedTo rdf:type owl:ObjectProperty ;
+:connectedTo rdf:type owl:ObjectProperty ,
+                      owl:SymmetricProperty ;
              rdfs:domain :Component ;
-             rdfs:range :Component .
+             rdfs:range :Component ;
+             rdfs:comment "Indica que un componente está conectado a otro."@es ,
+                          "Indicates that a component is connected to another."@en ;
+             rdfs:label "Conectado a"@es ,
+                        "Connected to"@en .
 
 
 ###  https://w3id.org/optimar#detectedBy
 :detectedBy rdf:type owl:ObjectProperty ;
-            owl:inverseOf :detects ;
             rdfs:domain :Event ;
             rdfs:range :Sensor ;
             rdfs:comment "Relaciona un evento con el sensor que lo detectó."@es ,
@@ -247,6 +264,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/optimar#detects
 :detects rdf:type owl:ObjectProperty ;
+         owl:inverseOf :detectedBy ;
          rdfs:domain :Sensor ;
          rdfs:range :Event ;
          rdfs:comment "Relaciona un sensor con el evento que detecta."@es ,
@@ -273,6 +291,26 @@ xsd:date rdf:type rdfs:Datatype .
                        "Diámetro del componente medido en unidades QUDT."@es ;
           rdfs:label "Diameter"@en ,
                      "Diámetro"@es .
+
+
+###  https://w3id.org/optimar#duration
+:duration rdf:type owl:ObjectProperty ;
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Event
+                                      :Maintenance
+                                    )
+                      ] ;
+          rdfs:range <http://qudt.org/schema/qudt/QuantityValue> .
+
+
+###  https://w3id.org/optimar#electricalParameterMonitoredBy
+:electricalParameterMonitoredBy rdf:type owl:ObjectProperty ;
+                                rdfs:domain :Component ;
+                                rdfs:range :ElectricalSensor ;
+                                rdfs:comment "Relaciona un componente con el sensor eléctrico que monitorea sus parámetros."@es ,
+                                             "Relates a component with the electrical sensor that monitors its parameters."@en ;
+                                rdfs:label "Electrical parameter monitored by"@en ,
+                                           "Parámetro eléctrico monitoreado por"@es .
 
 
 ###  https://w3id.org/optimar#failureObservation
@@ -303,6 +341,21 @@ xsd:date rdf:type rdfs:Datatype .
                               "Indicates that a failure is caused by a specific environmental condition."@en ;
                  rdfs:label "Causa de fallo"@es ,
                             "Failure cause"@en .
+
+
+###  https://w3id.org/optimar#hasGeneratedData
+:hasGeneratedData rdf:type owl:ObjectProperty ;
+                  rdfs:range :Data .
+
+
+###  https://w3id.org/optimar#hasOperationalState
+:hasOperationalState rdf:type owl:ObjectProperty ;
+                     rdfs:domain :Component ;
+                     rdfs:range :OperationalState ;
+                     rdfs:comment "Relaciona un componente con su estado operativo actual."@es ,
+                                  "Relates a component with its current operational state."@en ;
+                     rdfs:label "Has operational state"@en ,
+                                "Tiene estado operativo"@es .
 
 
 ###  https://w3id.org/optimar#hasRole
@@ -337,7 +390,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/optimar#houses
 :houses rdf:type owl:ObjectProperty ;
-        owl:inverseOf :isHousedIn ;
         rdfs:domain :Component ;
         rdfs:range :Component ;
         rdfs:comment "Indica que un componente contiene o aloja fisicamente a otro en su estructura."@es ,
@@ -348,6 +400,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/optimar#isHousedIn
 :isHousedIn rdf:type owl:ObjectProperty ;
+            owl:inverseOf :houses ;
             rdfs:domain :Component ;
             rdfs:range :Component ;
             rdfs:comment "Indica que un componente está fisicamente contenido dentro de otro."@es ,
@@ -451,6 +504,20 @@ xsd:date rdf:type rdfs:Datatype .
                            "Mide tensión"@es .
 
 
+###  https://w3id.org/optimar#measuresTemperatureOf
+:measuresTemperatureOf rdf:type owl:ObjectProperty ;
+                       rdfs:domain :TemperatureSensor ;
+                       rdfs:range [ rdf:type owl:Class ;
+                                    owl:unionOf ( :Component
+                                                  :EnvironmentalCondition
+                                                )
+                                  ] ;
+                       rdfs:comment "Relaciona un sensor de temperatura con el componente o condición ambiental cuya temperatura mide."@es ,
+                                    "Relates a temperature sensor with the component or environmental condition whose temperature it measures."@en ;
+                       rdfs:label "Measures temperature of"@en ,
+                                  "Mide temperatura de"@es .
+
+
 ###  https://w3id.org/optimar#measuresVibration
 :measuresVibration rdf:type owl:ObjectProperty ;
                    rdfs:domain :Sensor ;
@@ -525,6 +592,16 @@ xsd:date rdf:type rdfs:Datatype .
                          "Realiza tarea"@es .
 
 
+###  https://w3id.org/optimar#precededBy
+:precededBy rdf:type owl:ObjectProperty ;
+            rdfs:domain :Failure ;
+            rdfs:range :Failure ;
+            rdfs:comment "Indica que un fallo fue precedido tempralmente por otro fallo."@es ,
+                         "Indicates that a failure was preceded temporally by another failure."@en ;
+            rdfs:label "Preceded by"@en ,
+                       "Precedido por"@es .
+
+
 ###  https://w3id.org/optimar#pressureLevel
 :pressureLevel rdf:type owl:ObjectProperty ;
                rdfs:domain :Data ;
@@ -561,6 +638,16 @@ xsd:date rdf:type rdfs:Datatype .
                           "Velocidad de rotación"@es .
 
 
+###  https://w3id.org/optimar#rotorParameterMonitoredBy
+:rotorParameterMonitoredBy rdf:type owl:ObjectProperty ;
+                           rdfs:domain :Component ;
+                           rdfs:range :RotorSensor ;
+                           rdfs:comment "Relaciona un componente con el sensor que monitorea los parámetros del rotor."@es ,
+                                        "Relates a component with the sensor that monitors its rotor parameters."@en ;
+                           rdfs:label "Parámetro de rotor monitoreado por"@es ,
+                                      "Rotor parameter monitored by"@en .
+
+
 ###  https://w3id.org/optimar#stressLevel
 :stressLevel rdf:type owl:ObjectProperty ;
              rdfs:domain :Data ;
@@ -586,6 +673,21 @@ xsd:date rdf:type rdfs:Datatype .
                           "Temperature recorded expressed as a QUDT quantity value."@en ;
              rdfs:label "Temperatura"@es ,
                         "Temperature"@en .
+
+
+###  https://w3id.org/optimar#temperatureMonitoredBy
+:temperatureMonitoredBy rdf:type owl:ObjectProperty ;
+                        owl:inverseOf :measuresTemperatureOf ;
+                        rdfs:domain [ rdf:type owl:Class ;
+                                      owl:unionOf ( :Component
+                                                    :EnvironmentalCondition
+                                                  )
+                                    ] ;
+                        rdfs:range :TemperatureSensor ;
+                        rdfs:comment "Relaciona un componente o condición ambiental con el sensor de temperatura que lo monitorea."@es ,
+                                     "Relates a component or environmental condition with the temperature sensor that monitors it."@en ;
+                        rdfs:label "Temperatura monitoreada por"@es ,
+                                   "Temperature monitored by"@en .
 
 
 ###  https://w3id.org/optimar#thickness
@@ -648,10 +750,6 @@ xsd:date rdf:type rdfs:Datatype .
 #    Data properties
 #################################################################
 
-###  https://w3id.org/optimar#CorrosionLevel
-:CorrosionLevel rdf:type owl:DatatypeProperty .
-
-
 ###  https://w3id.org/optimar#corrosionLevel
 :corrosionLevel rdf:type owl:DatatypeProperty ;
                 rdfs:domain :CorrosionEvent ;
@@ -693,6 +791,16 @@ xsd:date rdf:type rdfs:Datatype .
                              "Nivel de Deformación"@es .
 
 
+###  https://w3id.org/optimar#detectionDateTime
+:detectionDateTime rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Failure ;
+                   rdfs:range xsd:dateTime ;
+                   rdfs:comment "Detection timestamp when the failure was detected."@en ,
+                                "Marca temporal de detección del fallo."@es ;
+                   rdfs:label "Detection date and time"@en ,
+                              "Fecha y hora de detección"@es .
+
+
 ###  https://w3id.org/optimar#displacement
 :displacement rdf:type owl:DatatypeProperty ;
               rdfs:domain :Data ;
@@ -701,6 +809,24 @@ xsd:date rdf:type rdfs:Datatype .
                            "Displacement or position change recorded in the component."@en ;
               rdfs:label "Desplazamiento"@es ,
                          "Displacement"@en .
+
+
+###  https://w3id.org/optimar#duration
+:duration rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/optimar#endDateTime
+:endDateTime rdf:type owl:DatatypeProperty ;
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :Event
+                                         :Maintenance
+                                       )
+                         ] ;
+             rdfs:range xsd:dateTime ;
+             rdfs:comment "End timestamp of the event or maintenance."@en ,
+                          "Marca temporal de finalización del evento o mantenimiento."@es ;
+             rdfs:label "End date and time"@en ,
+                        "Fecha y hora de finalización"@es .
 
 
 ###  https://w3id.org/optimar#externalShape
@@ -725,7 +851,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/optimar#lightCorrosion
 :lightCorrosion rdf:type owl:DatatypeProperty ;
-                rdfs:subPropertyOf :CorrosionLevel ;
+                rdfs:subPropertyOf :corrosionLevel ;
                 rdfs:domain :CorrosionEvent ;
                 rdfs:range xsd:decimal ;
                 rdfs:comment "Level of light corrosion detected on the material surface."@en ,
@@ -788,6 +914,30 @@ xsd:date rdf:type rdfs:Datatype .
 :pressureLevel rdf:type owl:DatatypeProperty .
 
 
+###  https://w3id.org/optimar#severity
+:severity rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Failure ;
+          rdfs:range xsd:string ;
+          rdfs:comment "Nivel de severidad del fallo: 'low', 'medium', 'high', 'critical'."@es ,
+                       "Severity level of the failure: 'low', 'medium', 'high', 'critical'."@en ;
+          rdfs:label "Severidad"@es ,
+                     "Severity"@en .
+
+
+###  https://w3id.org/optimar#startDateTime
+:startDateTime rdf:type owl:DatatypeProperty ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( :Event
+                                           :Maintenance
+                                         )
+                           ] ;
+               rdfs:range xsd:dateTime ;
+               rdfs:comment "Marca temporal de inicio del evento o mantenimiento."@es ,
+                            "Start timestamp of the event or maintenance."@en ;
+               rdfs:label "Fecha y hora de inicio"@es ,
+                          "Start date and time"@en .
+
+
 ###  https://w3id.org/optimar#stressLevel
 :stressLevel rdf:type owl:DatatypeProperty .
 
@@ -824,8 +974,13 @@ xsd:date rdf:type rdfs:Datatype .
 <http://qudt.org/schema/qudt/QuantityValue> rdf:type owl:Class .
 
 
-###  http://www.w3.org/2002/07/owl#SymetricProperty
-owl:SymetricProperty rdf:type owl:Class .
+###  https://w3id.org/optimar#ActivePowerSensor
+:ActivePowerSensor rdf:type owl:Class ;
+                   rdfs:subClassOf :ElectricalSensor ;
+                   rdfs:comment "Sensor que mide la potencia activa generada o consumida."@es ,
+                                "Sensor that measures the active power generated or consumed."@en ;
+                   rdfs:label "Active power sensor"@en ,
+                              "Sensor de potencia activa"@es .
 
 
 ###  https://w3id.org/optimar#Actor
@@ -934,7 +1089,25 @@ owl:SymetricProperty rdf:type owl:Class .
                 rdfs:comment "Degradación de la estructura metálica de la plataforma por efectos de corrosión."@es ,
                              "Degradation of the platform's metallic structure due to corrosion effects."@en ;
                 rdfs:label "Corrosion Event"@en ,
-                           "Evento de dección de corrosión"@es .
+                           "Evento de detección de corrosión"@es .
+
+
+###  https://w3id.org/optimar#CurrentData
+:CurrentData rdf:type owl:Class ;
+             rdfs:subClassOf :ElectricalData ;
+             rdfs:comment "Datos de corriente eléctrica."@es ,
+                          "Electrical current data."@en ;
+             rdfs:label "Current Data"@en ,
+                        "Datos de corriente"@es .
+
+
+###  https://w3id.org/optimar#CurrentSensor
+:CurrentSensor rdf:type owl:Class ;
+               rdfs:subClassOf :ElectricalSensor ;
+               rdfs:comment "Sensor que mide la corriente eléctrica del motor o generador."@es ,
+                            "Sensor that measures electrical current of the motor or generator."@en ;
+               rdfs:label "Current sensor"@en ,
+                          "Sensor de corriente"@es .
 
 
 ###  https://w3id.org/optimar#Data
@@ -973,6 +1146,24 @@ owl:SymetricProperty rdf:type owl:Class .
                              "Dispositivo que mide parámetros dinámicos de la plataforma como vibraciones y movimientos."@es ;
                 rdfs:label "Dynamic Monitor"@en ,
                            "Monitor dinámico"@es .
+
+
+###  https://w3id.org/optimar#ElectricalData
+:ElectricalData rdf:type owl:Class ;
+                rdfs:subClassOf :Measurement ;
+                rdfs:comment "Datos de parámetros eléctricos medidos por un sensor."@es ,
+                             "Electrical parameter data measured by a sensor."@en ;
+                rdfs:label "Datos eléctricos"@es ,
+                           "Electrical Data"@en .
+
+
+###  https://w3id.org/optimar#ElectricalSensor
+:ElectricalSensor rdf:type owl:Class ;
+                  rdfs:subClassOf :Sensor ;
+                  rdfs:comment "Sensor que mide parámetros eléctricos de la turbina."@es ,
+                               "Sensor that measures electrical parameters of the turbine."@en ;
+                  rdfs:label "Electrical sensor"@en ,
+                             "Sensor eléctrico"@es .
 
 
 ###  https://w3id.org/optimar#EnvironmentalCondition
@@ -1030,6 +1221,15 @@ owl:SymetricProperty rdf:type owl:Class .
                                  "Subestructura flotante"@es .
 
 
+###  https://w3id.org/optimar#FrequencyData
+:FrequencyData rdf:type owl:Class ;
+               rdfs:subClassOf :ElectricalData ;
+               rdfs:comment "Datos de frecuencia de red eléctrica."@es ,
+                            "Electrical grid frequency data."@en ;
+               rdfs:label "Datos de frecuencia"@es ,
+                          "Frequency Data"@en .
+
+
 ###  https://w3id.org/optimar#GaugeSystem
 :GaugeSystem rdf:type owl:Class ;
              rdfs:subClassOf :Sensor ;
@@ -1039,6 +1239,15 @@ owl:SymetricProperty rdf:type owl:Class .
                         "Sistema de galgas"@es .
 
 
+###  https://w3id.org/optimar#Gearbox
+:Gearbox rdf:type owl:Class ;
+         rdfs:subClassOf :Component ;
+         rdfs:comment "Sistema de transmisión que ajusta la velocidad de rotación entre el rotor y el generador."@es ,
+                      "Transmission system that adjusts the rotation speed between the rotor and the generator."@en ;
+         rdfs:label "Caja de cambios"@es ,
+                    "Gearbox"@en .
+
+
 ###  https://w3id.org/optimar#Generator
 :Generator rdf:type owl:Class ;
            rdfs:subClassOf :Component ;
@@ -1046,6 +1255,15 @@ owl:SymetricProperty rdf:type owl:Class .
                         "Generador eléctrico que convierte energía mecánica en eléctrica."@es ;
            rdfs:label "Generador"@es ,
                       "Generator"@en .
+
+
+###  https://w3id.org/optimar#GridFrequencySensor
+:GridFrequencySensor rdf:type owl:Class ;
+                     rdfs:subClassOf :ElectricalSensor ;
+                     rdfs:comment "Sensor que mide la frecuencia de la red eléctrica."@es ,
+                                  "Sensor that measures grid electrical frequency."@en ;
+                     rdfs:label "Grid frequency sensor"@en ,
+                                "Sensor de frecuencia de la red"@es .
 
 
 ###  https://w3id.org/optimar#Hub
@@ -1197,6 +1415,14 @@ owl:SymetricProperty rdf:type owl:Class .
                         "Observation"@en .
 
 
+###  https://w3id.org/optimar#OperationalState
+:OperationalState rdf:type owl:Class ;
+                  rdfs:comment "El estado operativo de un componente o sistema de la plataforma eólica."@es ,
+                               "The operational state of a component or system of the offshore wind power platform."@en ;
+                  rdfs:label "Estado operativo"@es ,
+                             "Operational state"@en .
+
+
 ###  https://w3id.org/optimar#ParkOwner
 :ParkOwner rdf:type owl:Class ;
            rdfs:subClassOf :Actor ;
@@ -1224,12 +1450,84 @@ owl:SymetricProperty rdf:type owl:Class .
                              "Platform Actuator"@en .
 
 
+###  https://w3id.org/optimar#PowerData
+:PowerData rdf:type owl:Class ;
+           rdfs:subClassOf :ElectricalData ;
+           rdfs:comment "Active or reactive power data."@en ,
+                        "Datos de potencia activa o reactiva."@es ;
+           rdfs:label "Datos de potencia"@es ,
+                      "Power Data"@en .
+
+
+###  https://w3id.org/optimar#ReactivePowerSensor
+:ReactivePowerSensor rdf:type owl:Class ;
+                     rdfs:subClassOf :ElectricalSensor ;
+                     rdfs:comment "Sensor que mide la potencia reactiva del sistema eléctrico."@es ,
+                                  "Sensor that measures the reactive power of the electrical system."@en ;
+                     rdfs:label "Reactive power sensor"@en ,
+                                "Sensor de potencia reactiva"@es .
+
+
 ###  https://w3id.org/optimar#Role
 :Role rdf:type owl:Class ;
       rdfs:comment "Los roles de los actores que gestionan, operan o mantienen la plataforma eólica."@es ,
                    "The roles of the actors that manage, operate or maintain the offshore wind power platform."@en ;
       rdfs:label "Rol"@es ,
                  "Role"@en .
+
+
+###  https://w3id.org/optimar#RotorAngleData
+:RotorAngleData rdf:type owl:Class ;
+                rdfs:subClassOf :RotorData ;
+                rdfs:comment "Datos de ángulo de posición del rotor."@es ,
+                             "Rotor position angle data."@en ;
+                rdfs:label "Datos de ángulo de rotor"@es ,
+                           "Rotor angle data"@en .
+
+
+###  https://w3id.org/optimar#RotorAngleSensor
+:RotorAngleSensor rdf:type owl:Class ;
+                  rdfs:subClassOf :RotorSensor ;
+                  rdfs:comment "Sensor que mide el ángulo de posición del rotor."@es ,
+                               "Sensor that measures the rotor position angle."@en ;
+                  rdfs:label "Rotor angle sensor"@en ,
+                             "Sensor de ángulo de rotor"@es .
+
+
+###  https://w3id.org/optimar#RotorData
+:RotorData rdf:type owl:Class ;
+           rdfs:subClassOf :Measurement ;
+           rdfs:comment "Datos de parámetros del rotor."@es ,
+                        "Rotor parameter data."@en ;
+           rdfs:label "Datos de rotor"@es ,
+                      "Rotor Data"@en .
+
+
+###  https://w3id.org/optimar#RotorSensor
+:RotorSensor rdf:type owl:Class ;
+             rdfs:subClassOf :Sensor ;
+             rdfs:comment "Sensor que mide parámetros relacionados con el rotor de la turbina."@es ,
+                          "Sensor that measures parameters related to the turbine rotor."@en ;
+             rdfs:label "Rotor sensor"@en ,
+                        "Sensor de rotor"@es .
+
+
+###  https://w3id.org/optimar#RotorSpeedData
+:RotorSpeedData rdf:type owl:Class ;
+                rdfs:subClassOf :RotorData ;
+                rdfs:comment "Datos de velocidad de rotación del rotor (RPM)."@es ,
+                             "Rotor rotation speed data (RPM)."@en ;
+                rdfs:label "Datos de velocidad de rotor"@es ,
+                           "Rotor speed data"@en .
+
+
+###  https://w3id.org/optimar#RotorSpeedSensor
+:RotorSpeedSensor rdf:type owl:Class ;
+                  rdfs:subClassOf :RotorSensor ;
+                  rdfs:comment "Sensor que mide las revoluciones por minuto (RPM) del rotor."@es ,
+                               "Sensor that measures the rotor revolutions per minute (RPM)."@en ;
+                  rdfs:label "Rotor speed sensor"@en ,
+                             "Sensor de velocidad de rotor"@es .
 
 
 ###  https://w3id.org/optimar#Sensor
@@ -1300,6 +1598,42 @@ owl:SymetricProperty rdf:type owl:Class .
                           "Technical Role"@en .
 
 
+###  https://w3id.org/optimar#TemperatureData
+:TemperatureData rdf:type owl:Class ;
+                 rdfs:subClassOf :Measurement ;
+                 rdfs:comment "Datos de temperatura medidos por sensores."@es ,
+                              "Temperature data measured by sensors."@en ;
+                 rdfs:label "Datos de temperatura"@es ,
+                            "Temperature Data"@en .
+
+
+###  https://w3id.org/optimar#TemperatureSensor
+:TemperatureSensor rdf:type owl:Class ;
+                   rdfs:subClassOf :Sensor ;
+                   rdfs:comment "Sensor que mide la temperatura de componentes o del ambiente."@es ,
+                                "Sensor that measures the temperature of components or the environment."@en ;
+                   rdfs:label "Sensor de temperatura"@es ,
+                              "Temperature sensor"@en .
+
+
+###  https://w3id.org/optimar#TorqueData
+:TorqueData rdf:type owl:Class ;
+            rdfs:subClassOf :ElectricalData ;
+            rdfs:comment "Datos de par mecánico."@es ,
+                         "Mechanical torque data."@en ;
+            rdfs:label "Datos de torque"@es ,
+                       "Torque Data"@en .
+
+
+###  https://w3id.org/optimar#TorqueSensor
+:TorqueSensor rdf:type owl:Class ;
+              rdfs:subClassOf :ElectricalSensor ;
+              rdfs:comment "Sensor que mide el par mecánico del eje de la turbina o generador."@es ,
+                           "Sensor that measures mechanical torque of the turbine or generator shaft."@en ;
+              rdfs:label "Sensor de torque"@es ,
+                         "Torque sensor"@en .
+
+
 ###  https://w3id.org/optimar#Tower
 :Tower rdf:type owl:Class ;
        rdfs:subClassOf :TurbineComponent ,
@@ -1315,6 +1649,15 @@ owl:SymetricProperty rdf:type owl:Class .
                     "The structure that supports the wind turbine."@en ;
        rdfs:label "Torre"@es ,
                   "Tower"@en .
+
+
+###  https://w3id.org/optimar#Transformer
+:Transformer rdf:type owl:Class ;
+             rdfs:subClassOf :Component ;
+             rdfs:comment "Dispositivo eléctrico que modifica los niveles de voltaje de la energía generada."@es ,
+                          "Electrical device that modifies the voltage levels of the generated energy."@en ;
+             rdfs:label "Transformador"@es ,
+                        "Transformer"@en .
 
 
 ###  https://w3id.org/optimar#Turbine
@@ -1371,6 +1714,24 @@ owl:SymetricProperty rdf:type owl:Class .
                           "Vibration Data"@en .
 
 
+###  https://w3id.org/optimar#VoltageData
+:VoltageData rdf:type owl:Class ;
+             rdfs:subClassOf :ElectricalData ;
+             rdfs:comment "Datos de voltaje eléctrico."@es ,
+                          "Electrical voltage data."@en ;
+             rdfs:label "Datos de voltaje"@es ,
+                        "Voltage Data"@en .
+
+
+###  https://w3id.org/optimar#VoltageSensor
+:VoltageSensor rdf:type owl:Class ;
+               rdfs:subClassOf :ElectricalSensor ;
+               rdfs:comment "Sensor que mide el voltaje del motor o generador."@es ,
+                            "Sensor that measures voltage of the motor or generator."@en ;
+               rdfs:label "Sensor de voltaje"@es ,
+                          "Voltage sensor"@en .
+
+
 ###  https://w3id.org/optimar#WindPowerPlatform
 :WindPowerPlatform rdf:type owl:Class ;
                    rdfs:comment "An offshore wind power platform that generates electricity from wind."@en ,
@@ -1388,22 +1749,19 @@ owl:SymetricProperty rdf:type owl:Class .
 
 
 #################################################################
-#    Individuals
-#################################################################
-
-###  https://w3id.org/optimar#connectedTo
-:connectedTo rdf:type owl:NamedIndividual ,
-                      owl:SymetricProperty .
-
-
-#################################################################
 #    Annotations
 #################################################################
 
-:connectedTo rdfs:comment "Indica que un componente está conectado a otro."@es ,
-                          "Indicates that a component is connected to another."@en ;
-             rdfs:label "Conectado a"@es ,
-                        "Connected to"@en .
+:duration rdfs:comment "Duración del evento o mantenimiento expresada como valor QUDT."@es ,
+                       "Duration of the event or maintenance expressed as a QUDT quantity value."@en ;
+          rdfs:label "Duración"@es ,
+                     "Duration"@en .
+
+
+:hasGeneratedData rdfs:comment "Relaciona un evento con los datos generados por el mismo."@es ,
+                               "Relates an event to the generated data by the same."@en ;
+                  rdfs:label "Genera"@es ,
+                             "Generates"@en .
 
 
 :pressureLevel rdfs:comment "Presión ejercida sobre un componente."@es ,
