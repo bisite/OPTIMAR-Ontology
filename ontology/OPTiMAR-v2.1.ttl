@@ -423,20 +423,14 @@ optimar:CorrosionCamera a owl:Class ;
     rdfs:label "Cámara corrosión"@es ;
     rdfs:label "Corrosion Camera"@en ;
     rdfs:comment "Cámara utilizada para detectar y monitorear corrosión en la estructura de la plataforma."@es ;
-    rdfs:comment "Camera used to detect and monitor corrosion in the platform structure."@en ;
-    owl:disjointWith optimar:StructuralCamera ;
-    owl:disjointWith optimar:Anemometer ;
-    owl:disjointWith optimar:DynamicMonitor .
+    rdfs:comment "Camera used to detect and monitor corrosion in the platform structure."@en .
 
 optimar:StructuralCamera a owl:Class ;
     rdfs:subClassOf optimar:Sensor ;
     rdfs:label "Cámara estructural"@es ;
     rdfs:label "Structural Camera"@en ;
     rdfs:comment "Cámara dedicada a la inspección visual del estado estructural de la plataforma."@es ;
-    rdfs:comment "Camera dedicated to visual inspection of the structural condition of the platform."@en ;
-    owl:disjointWith optimar:CorrosionCamera ;
-    owl:disjointWith optimar:Anemometer ;
-    owl:disjointWith optimar:DynamicMonitor .
+    rdfs:comment "Camera dedicated to visual inspection of the structural condition of the platform."@en .
 
 optimar:Anemometer a owl:Class ;
     rdfs:subClassOf optimar:Sensor ;
@@ -465,6 +459,24 @@ optimar:GaugeSystem a owl:Class ;
     rdfs:label "Gauge System"@en ;
     rdfs:comment "Sistema de galgas extensiométricas utilizado para medir tensiones y deformaciones en la estructura."@es ;
     rdfs:comment "Strain gauge system used to measure stresses and deformations in the structure."@en .
+
+##########################################################
+# Global Disjointness for Top-Level Sensors
+##########################################################
+[ 
+  a owl:AllDisjointClasses ;
+  owl:members ( 
+      optimar:CorrosionCamera 
+      optimar:StructuralCamera 
+      optimar:Anemometer 
+      optimar:DynamicMonitor 
+      optimar:ISUMSystem 
+      optimar:GaugeSystem 
+      optimar:ElectricalSensor
+      optimar:TemperatureSensor 
+      optimar:RotorSensor
+  )
+] .
 
 ##########################################################
 # Electrical sensors
