@@ -923,8 +923,6 @@ _:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/optimar#Anemometer
 <https://w3id.org/optimar#Anemometer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/optimar#Anemometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#Sensor> .
-<https://w3id.org/optimar#Anemometer> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/optimar#CorrosionCamera> .
-<https://w3id.org/optimar#Anemometer> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/optimar#StructuralCamera> .
 <https://w3id.org/optimar#Anemometer> <http://www.w3.org/2000/01/rdf-schema#comment> "Sensor que mide la velocidad y dirección del viento en el parque eólico."@es .
 <https://w3id.org/optimar#Anemometer> <http://www.w3.org/2000/01/rdf-schema#comment> "Sensor that measures wind speed and direction in the wind farm."@en .
 <https://w3id.org/optimar#Anemometer> <http://www.w3.org/2000/01/rdf-schema#label> "Anemometer"@en .
@@ -982,8 +980,6 @@ _:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/optimar#CorrosionCamera
 <https://w3id.org/optimar#CorrosionCamera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/optimar#CorrosionCamera> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#Sensor> .
-<https://w3id.org/optimar#CorrosionCamera> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/optimar#DynamicMonitor> .
-<https://w3id.org/optimar#CorrosionCamera> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/optimar#StructuralCamera> .
 <https://w3id.org/optimar#CorrosionCamera> <http://www.w3.org/2000/01/rdf-schema#comment> "Camera used to detect and monitor corrosion in the platform structure."@en .
 <https://w3id.org/optimar#CorrosionCamera> <http://www.w3.org/2000/01/rdf-schema#comment> "Cámara utilizada para detectar y monitorear corrosión en la estructura de la plataforma."@es .
 <https://w3id.org/optimar#CorrosionCamera> <http://www.w3.org/2000/01/rdf-schema#label> "Corrosion Camera"@en .
@@ -1047,7 +1043,6 @@ _:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # https://w3id.org/optimar#DynamicMonitor
 <https://w3id.org/optimar#DynamicMonitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/optimar#DynamicMonitor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/optimar#Sensor> .
-<https://w3id.org/optimar#DynamicMonitor> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/optimar#StructuralCamera> .
 <https://w3id.org/optimar#DynamicMonitor> <http://www.w3.org/2000/01/rdf-schema#comment> "Device that measures dynamic parameters of the platform, such as vibrations and movements."@en .
 <https://w3id.org/optimar#DynamicMonitor> <http://www.w3.org/2000/01/rdf-schema#comment> "Dispositivo que mide parámetros dinámicos de la plataforma como vibraciones y movimientos."@es .
 <https://w3id.org/optimar#DynamicMonitor> <http://www.w3.org/2000/01/rdf-schema#label> "Dynamic Monitor"@en .
@@ -1637,5 +1632,44 @@ _:genid47 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://w3id.org/optimar#vibrationLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Nivel de vibraciones registradas en un componente o sistema."@es .
 <https://w3id.org/optimar#vibrationLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Nivel de Vibracion"@es .
 <https://w3id.org/optimar#vibrationLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Vibration level"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid52 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid52 <http://www.w3.org/2002/07/owl#members> _:genid61 .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid60 .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid59 .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid58 .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid57 .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid56 .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid55 .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid54 .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid53 .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#TemperatureSensor> .
+_:genid53 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#StructuralCamera> .
+_:genid54 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#RotorSensor> .
+_:genid55 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#ISUMSystem> .
+_:genid56 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#GaugeSystem> .
+_:genid57 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#ElectricalSensor> .
+_:genid58 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#DynamicMonitor> .
+_:genid59 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#CorrosionCamera> .
+_:genid60 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/optimar#Anemometer> .
+_:genid61 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

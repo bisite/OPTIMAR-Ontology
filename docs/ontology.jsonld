@@ -256,6 +256,30 @@
     } ]
   } ]
 }, {
+  "@id" : "_:genid52",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/optimar#Anemometer"
+    }, {
+      "@id" : "https://w3id.org/optimar#CorrosionCamera"
+    }, {
+      "@id" : "https://w3id.org/optimar#DynamicMonitor"
+    }, {
+      "@id" : "https://w3id.org/optimar#ElectricalSensor"
+    }, {
+      "@id" : "https://w3id.org/optimar#GaugeSystem"
+    }, {
+      "@id" : "https://w3id.org/optimar#ISUMSystem"
+    }, {
+      "@id" : "https://w3id.org/optimar#RotorSensor"
+    }, {
+      "@id" : "https://w3id.org/optimar#StructuralCamera"
+    }, {
+      "@id" : "https://w3id.org/optimar#TemperatureSensor"
+    } ]
+  } ]
+}, {
   "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
@@ -528,11 +552,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/optimar#Sensor"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://w3id.org/optimar#CorrosionCamera"
-  }, {
-    "@id" : "https://w3id.org/optimar#StructuralCamera"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#Base",
@@ -662,11 +681,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/optimar#Sensor"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://w3id.org/optimar#DynamicMonitor"
-  }, {
-    "@id" : "https://w3id.org/optimar#StructuralCamera"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#CorrosionEvent",
@@ -816,9 +830,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/optimar#Sensor"
-  } ],
-  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://w3id.org/optimar#StructuralCamera"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#ElectricalData",

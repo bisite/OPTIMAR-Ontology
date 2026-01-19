@@ -1472,8 +1472,6 @@
 
     <owl:Class rdf:about="https://w3id.org/optimar#Anemometer">
         <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Sensor"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/optimar#CorrosionCamera"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/optimar#StructuralCamera"/>
         <rdfs:comment xml:lang="es">Sensor que mide la velocidad y dirección del viento en el parque eólico.</rdfs:comment>
         <rdfs:comment xml:lang="en">Sensor that measures wind speed and direction in the wind farm.</rdfs:comment>
         <rdfs:label xml:lang="en">Anemometer</rdfs:label>
@@ -1567,8 +1565,6 @@
 
     <owl:Class rdf:about="https://w3id.org/optimar#CorrosionCamera">
         <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Sensor"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/optimar#DynamicMonitor"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/optimar#StructuralCamera"/>
         <rdfs:comment xml:lang="en">Camera used to detect and monitor corrosion in the platform structure.</rdfs:comment>
         <rdfs:comment xml:lang="es">Cámara utilizada para detectar y monitorear corrosión en la estructura de la plataforma.</rdfs:comment>
         <rdfs:label xml:lang="en">Corrosion Camera</rdfs:label>
@@ -1669,7 +1665,6 @@
 
     <owl:Class rdf:about="https://w3id.org/optimar#DynamicMonitor">
         <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Sensor"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/optimar#StructuralCamera"/>
         <rdfs:comment xml:lang="en">Device that measures dynamic parameters of the platform, such as vibrations and movements.</rdfs:comment>
         <rdfs:comment xml:lang="es">Dispositivo que mide parámetros dinámicos de la plataforma como vibraciones y movimientos.</rdfs:comment>
         <rdfs:label xml:lang="en">Dynamic Monitor</rdfs:label>
@@ -2590,6 +2585,32 @@
         <rdfs:comment xml:lang="es">Nivel de vibraciones registradas en un componente o sistema.</rdfs:comment>
         <rdfs:label xml:lang="es">Nivel de Vibracion</rdfs:label>
         <rdfs:label xml:lang="en">Vibration level</rdfs:label>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/optimar#Anemometer"/>
+            <rdf:Description rdf:about="https://w3id.org/optimar#CorrosionCamera"/>
+            <rdf:Description rdf:about="https://w3id.org/optimar#DynamicMonitor"/>
+            <rdf:Description rdf:about="https://w3id.org/optimar#ElectricalSensor"/>
+            <rdf:Description rdf:about="https://w3id.org/optimar#GaugeSystem"/>
+            <rdf:Description rdf:about="https://w3id.org/optimar#ISUMSystem"/>
+            <rdf:Description rdf:about="https://w3id.org/optimar#RotorSensor"/>
+            <rdf:Description rdf:about="https://w3id.org/optimar#StructuralCamera"/>
+            <rdf:Description rdf:about="https://w3id.org/optimar#TemperatureSensor"/>
+        </owl:members>
     </rdf:Description>
 </rdf:RDF>
 
