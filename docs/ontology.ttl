@@ -1018,10 +1018,6 @@ xsd:date rdf:type rdfs:Datatype .
 <http://qudt.org/schema/qudt/QuantityValue> rdf:type owl:Class .
 
 
-###  https://w3id.org/optimar#
-: rdf:type owl:Class .
-
-
 ###  https://w3id.org/optimar#ActivePowerSensor
 :ActivePowerSensor rdf:type owl:Class ;
                    rdfs:subClassOf :ElectricalSensor ;
@@ -1866,13 +1862,13 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 
 [ rdf:type owl:AllDisjointClasses ;
-  owl:members ( :
-                :Anemometer
+  owl:members ( :Anemometer
                 :CorrosionCamera
                 :DynamicMonitor
                 :ElectricalSensor
                 :GaugeSystem
                 :ISUMSystem
+                :PitchAngleSensor
                 :RotorSensor
                 :StructuralCamera
                 :TemperatureSensor

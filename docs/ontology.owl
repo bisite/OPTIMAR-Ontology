@@ -1497,13 +1497,6 @@
     
 
 
-    <!-- https://w3id.org/optimar# -->
-
-
-    <owl:Class rdf:about="https://w3id.org/optimar#"/>
-    
-
-
     <!-- https://w3id.org/optimar#ActivePowerSensor -->
 
 
@@ -2728,13 +2721,13 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
-            <rdf:Description rdf:about="https://w3id.org/optimar#"/>
             <rdf:Description rdf:about="https://w3id.org/optimar#Anemometer"/>
             <rdf:Description rdf:about="https://w3id.org/optimar#CorrosionCamera"/>
             <rdf:Description rdf:about="https://w3id.org/optimar#DynamicMonitor"/>
             <rdf:Description rdf:about="https://w3id.org/optimar#ElectricalSensor"/>
             <rdf:Description rdf:about="https://w3id.org/optimar#GaugeSystem"/>
             <rdf:Description rdf:about="https://w3id.org/optimar#ISUMSystem"/>
+            <rdf:Description rdf:about="https://w3id.org/optimar#PitchAngleSensor"/>
             <rdf:Description rdf:about="https://w3id.org/optimar#RotorSensor"/>
             <rdf:Description rdf:about="https://w3id.org/optimar#StructuralCamera"/>
             <rdf:Description rdf:about="https://w3id.org/optimar#TemperatureSensor"/>

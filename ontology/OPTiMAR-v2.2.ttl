@@ -458,7 +458,7 @@ optimar:GaugeSystem a owl:Class ;
       optimar:TemperatureSensor 
       optimar:RotorSensor
       optimar:YawSensor
-      optimar:
+      optimar:PitchAngleSensor
   )
 ] .
 

@@ -260,8 +260,6 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/optimar#"
-    }, {
       "@id" : "https://w3id.org/optimar#Anemometer"
     }, {
       "@id" : "https://w3id.org/optimar#CorrosionCamera"
@@ -273,6 +271,8 @@
       "@id" : "https://w3id.org/optimar#GaugeSystem"
     }, {
       "@id" : "https://w3id.org/optimar#ISUMSystem"
+    }, {
+      "@id" : "https://w3id.org/optimar#PitchAngleSensor"
     }, {
       "@id" : "https://w3id.org/optimar#RotorSensor"
     }, {
@@ -480,9 +480,6 @@
   "http://xmlns.com/foaf/0.1/homepage" : [ {
     "@id" : "https://w3id.org/optimar"
   } ]
-}, {
-  "@id" : "https://w3id.org/optimar#",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/optimar#ActivePowerSensor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
