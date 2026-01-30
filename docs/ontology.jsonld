@@ -260,6 +260,8 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
+      "@id" : "https://w3id.org/optimar#"
+    }, {
       "@id" : "https://w3id.org/optimar#Anemometer"
     }, {
       "@id" : "https://w3id.org/optimar#CorrosionCamera"
@@ -277,6 +279,8 @@
       "@id" : "https://w3id.org/optimar#StructuralCamera"
     }, {
       "@id" : "https://w3id.org/optimar#TemperatureSensor"
+    }, {
+      "@id" : "https://w3id.org/optimar#YawSensor"
     } ]
   } ]
 }, {
@@ -418,7 +422,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-01-19"
+    "@value" : "2026-01-30"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@language" : "es",
@@ -449,33 +453,36 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "\r\n    Version 2.1 (2026-01-19) - Ampliación de sensores, mejoras de completud y robustez:\r\n    - Añadidas clases de componentes: Gearbox, Transformer\r\n    - Añadidas clases de sensores eléctricos: ActivePowerSensor, ReactivePowerSensor, CurrentSensor, VoltageSensor, GridFrequencySensor, TorqueSensor\r\n    - Añadidas clases de datos específicas: ElectricalData, TemperatureData, RotorData y sus subclases\r\n    - Añadida clase TemperatureSensor general para medir temperatura de componentes y ambiente\r\n    - Añadida propiedad optimar:measuresTemperatureOf para relacionar sensores de temperatura con componentes o condiciones ambientales\r\n    - Añadidas propiedades inversas para sensores: temperatureMonitoredBy, electricalParameterMonitoredBy, rotorParameterMonitoredBy\r\n    - Añadidas clases de sensores de rotor: RotorSensor, RotorSpeedSensor, RotorAngleSensor\r\n    - Añadida clase base ElectricalSensor para agrupar sensores eléctricos\r\n    - Añadida propiedad severity para modelar criticidad de fallos\r\n    - Añadida clase OperationalState para estados operativos detallados\r\n    - Añadidas propiedades temporales: startDateTime, endDateTime, detectionDateTime, duration\r\n    - Añadidas relaciones entre fallos: causesFailure, precededBy\r\n    - Corregidos errores sintácticos\r\n    "
+    "@value" : "\r\n    Version 2.2 (2026-01-30) - Ampliación de sensores de control:\r\n    - Añadidos sensores de control: YawSensor (angulo de orientación de góndola), PitchAngleSensor (ángulo de palas)\r\n    - Añadidas clases de datos: YawAngleData, PitchAngleData\r\n    - Añadidas propiedades de medición y monitorización para yaw y pitch\r\n    - Añadidas propiedades inversas: yawAngleMonitoredBy/monitorsYawOf, pitchAngleMonitoredBy/monitorsPitchOf\r\n    "
   }, {
     "@language" : "en",
-    "@value" : "\r\n    Version 2.1 (2026-01-19) - Sensor expansion, completeness and robustness improvements:\r\n    - Added component classes: Gearbox, Transformer\r\n    - Added electrical sensor classes: ActivePowerSensor, ReactivePowerSensor, CurrentSensor, VoltageSensor, GridFrequencySensor, TorqueSensor\r\n    - Added specific data classes: ElectricalData, TemperatureData, RotorData and their subclasses\r\n    - Added general TemperatureSensor class to measure temperature of components and environment\r\n    - Added optimar:measuresTemperatureOf property to relate temperature sensors with components or environmental conditions\r\n    - Added inverse properties for sensors: temperatureMonitoredBy, electricalParameterMonitoredBy, rotorParameterMonitoredBy\r\n    - Added rotor sensor classes: RotorSensor, RotorSpeedSensor, RotorAngleSensor\r\n    - Added ElectricalSensor base class to group electrical sensors\r\n    - Added severity property to model failure criticality\r\n    - Added OperationalState class for detailed operational states\r\n    - Added temporal properties: startDateTime, endDateTime, detectionDateTime, duration\r\n    - Added failure relationships: causesFailure, precededBy\r\n    - Fixed syntax errors\r\n    "
+    "@value" : "\r\n    Version 2.2 (2026-01-30) - Control sensors expansion:\r\n    - Added control sensors: YawSensor (nacelle orientation angle), PitchAngleSensor (blade angle)\r\n    - Added data classes: YawAngleData, PitchAngleData\r\n    - Added measurement and monitoring properties for yaw and pitch\r\n    - Added inverse properties: yawAngleMonitoredBy/monitorsYawOf, pitchAngleMonitoredBy/monitorsPitchOf\r\n    "
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://w3id.org/optimar#changelog"
   } ],
   "http://www.w3.org/2002/07/owl#backwardCompatibleWith" : [ {
-    "@id" : "https://w3id.org/optimar/2.0"
+    "@id" : "https://w3id.org/optimar/2.1"
   } ],
   "http://www.w3.org/2002/07/owl#priorVersion" : [ {
-    "@id" : "https://w3id.org/optimar/2.0"
+    "@id" : "https://w3id.org/optimar/2.1"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/optimar/2.1"
+    "@id" : "https://w3id.org/optimar/2.2"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "Version 2.1 of the Ontology"
+    "@value" : "Version 2.2 of the Ontology"
   }, {
     "@language" : "es",
-    "@value" : "Versión 2.1 de la ontología"
+    "@value" : "Versión 2.2 de la ontología"
   } ],
   "http://xmlns.com/foaf/0.1/homepage" : [ {
     "@id" : "https://w3id.org/optimar"
   } ]
+}, {
+  "@id" : "https://w3id.org/optimar#",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
 }, {
   "@id" : "https://w3id.org/optimar#ActivePowerSensor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
@@ -1412,6 +1419,46 @@
     "@id" : "https://w3id.org/optimar#Actor"
   } ]
 }, {
+  "@id" : "https://w3id.org/optimar#PitchAngleData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Datos del ángulo de pitch de las palas."
+  }, {
+    "@language" : "en",
+    "@value" : "Pitch angle data of the blades."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Datos de ángulo de pitch"
+  }, {
+    "@language" : "en",
+    "@value" : "Pitch Angle Data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/optimar#Measurement"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#PitchAngleSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sensor que mide el ángulo de pitch (inclinación) de las palas de la turbina."
+  }, {
+    "@language" : "en",
+    "@value" : "Sensor that measures the pitch angle (inclination) of the turbine blades."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pitch angle sensor"
+  }, {
+    "@language" : "es",
+    "@value" : "Sensor de ángulo de pitch"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/optimar#Sensor"
+  } ]
+}, {
   "@id" : "https://w3id.org/optimar#PitchSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2019,6 +2066,46 @@
   }, {
     "@language" : "es",
     "@value" : "Plataforma eólica offshore"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#YawAngleData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Datos del ángulo de orientación (yaw) de la góndola."
+  }, {
+    "@language" : "en",
+    "@value" : "Yaw angle data of the nacelle."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Datos de ángulo de orientación"
+  }, {
+    "@language" : "en",
+    "@value" : "Yaw Angle Data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/optimar#Measurement"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#YawSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sensor que mide el ángulo de orientación (yaw) de la góndola respecto a la dirección del viento."
+  }, {
+    "@language" : "en",
+    "@value" : "Sensor that measures the yaw angle of the nacelle relative to the wind direction."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Sensor de ángulo de orientación"
+  }, {
+    "@language" : "en",
+    "@value" : "Yaw angle sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/optimar#Sensor"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#adjusts",
@@ -3051,6 +3138,29 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
+  "@id" : "https://w3id.org/optimar#measuresPitchAngle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relaciona un sensor de pitch con los datos de ángulo de pitch que mide."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates a pitch sensor with the pitch angle data it measures."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#PitchAngleSensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Measures pitch angle"
+  }, {
+    "@language" : "es",
+    "@value" : "Mide ángulo de pitch"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#PitchAngleData"
+  } ]
+}, {
   "@id" : "https://w3id.org/optimar#measuresStress",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3143,6 +3253,29 @@
     "@id" : "https://w3id.org/optimar#EnvironmentalCondition"
   } ]
 }, {
+  "@id" : "https://w3id.org/optimar#measuresYawAngle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relaciona un sensor de yaw con los datos de ángulo de orientación que mide."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates a yaw sensor with the yaw angle data it measures."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#YawSensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Measures yaw angle"
+  }, {
+    "@language" : "es",
+    "@value" : "Mide ángulo de yaw"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#YawAngleData"
+  } ]
+}, {
   "@id" : "https://w3id.org/optimar#misalignmentLevel",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3210,6 +3343,55 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/optimar#Deformation"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#monitorsPitchOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relaciona un sensor de pitch con la pala cuyo ángulo monitorea."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates a pitch sensor with the blade whose angle it monitors."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#PitchAngleSensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Monitorea pitch de"
+  }, {
+    "@language" : "en",
+    "@value" : "Monitors pitch of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#Blade"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/optimar#pitchAngleMonitoredBy"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#monitorsYawOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relaciona un sensor de yaw con la góndola cuya orientación monitorea."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates a yaw sensor with the nacelle whose orientation it monitors."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#YawSensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Monitorea yaw de"
+  }, {
+    "@language" : "en",
+    "@value" : "Monitors yaw of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#Nacelle"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#operationalStatus",
@@ -3302,6 +3484,29 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/optimar#Task"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#pitchAngleMonitoredBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relaciona una pala con el sensor que monitorea su ángulo de pitch."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates a blade with the sensor that monitors its pitch angle."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#Blade"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Pitch angle monitored by"
+  }, {
+    "@language" : "es",
+    "@value" : "Ángulo de pitch monitoreado por"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#PitchAngleSensor"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#precededBy",
@@ -3768,6 +3973,32 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://qudt.org/schema/qudt/QuantityValue"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#yawAngleMonitoredBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relaciona la góndola con el sensor que monitorea su ángulo de orientación."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates the nacelle with the sensor that monitors its yaw angle."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#Nacelle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Yaw angle monitored by"
+  }, {
+    "@language" : "es",
+    "@value" : "Ángulo de yaw monitoreado por"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#YawSensor"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/optimar#monitorsYawOf"
   } ]
 }, {
   "@id" : "https://www.w3.org/ns/sosa/Observation",

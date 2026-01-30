@@ -8,27 +8,27 @@
       "es" : "Ontología de Plataforma Eólica Offshore para OPTiMAR"
     },
     "iri" : "https://w3id.org/optimar",
-    "version" : "Version 2.1 of the Ontology",
+    "version" : "Versión 2.2 de la ontología",
     "author" : [ "Alejandro Flores (USAL)", "Alberto Montero (USAL)", "Cristina Aceta (Tekniker)", "Oihana Garcia (Tekniker)" ],
     "description" : {
       "en" : "This ontology describes the components, failures, sensors, and events related to offshore wind platforms.",
       "es" : "Esta ontología describe los componentes, fallos, sensores y eventos relacionados con las plataformas eólicas offshore."
     },
     "comments" : {
-      "en" : "\r\n    Version 2.1 (2026-01-19) - Sensor expansion, completeness and robustness improvements:\r\n    - Added component classes: Gearbox, Transformer\r\n    - Added electrical sensor classes: ActivePowerSensor, ReactivePowerSensor, CurrentSensor, VoltageSensor, GridFrequencySensor, TorqueSensor\r\n    - Added specific data classes: ElectricalData, TemperatureData, RotorData and their subclasses\r\n    - Added general TemperatureSensor class to measure temperature of components and environment\r\n    - Added optimar:measuresTemperatureOf property to relate temperature sensors with components or environmental conditions\r\n    - Added inverse properties for sensors: temperatureMonitoredBy, electricalParameterMonitoredBy, rotorParameterMonitoredBy\r\n    - Added rotor sensor classes: RotorSensor, RotorSpeedSensor, RotorAngleSensor\r\n    - Added ElectricalSensor base class to group electrical sensors\r\n    - Added severity property to model failure criticality\r\n    - Added OperationalState class for detailed operational states\r\n    - Added temporal properties: startDateTime, endDateTime, detectionDateTime, duration\r\n    - Added failure relationships: causesFailure, precededBy\r\n    - Fixed syntax errors\r\n    ",
-      "es" : "\r\n    Version 2.1 (2026-01-19) - Ampliación de sensores, mejoras de completud y robustez:\r\n    - Añadidas clases de componentes: Gearbox, Transformer\r\n    - Añadidas clases de sensores eléctricos: ActivePowerSensor, ReactivePowerSensor, CurrentSensor, VoltageSensor, GridFrequencySensor, TorqueSensor\r\n    - Añadidas clases de datos específicas: ElectricalData, TemperatureData, RotorData y sus subclases\r\n    - Añadida clase TemperatureSensor general para medir temperatura de componentes y ambiente\r\n    - Añadida propiedad optimar:measuresTemperatureOf para relacionar sensores de temperatura con componentes o condiciones ambientales\r\n    - Añadidas propiedades inversas para sensores: temperatureMonitoredBy, electricalParameterMonitoredBy, rotorParameterMonitoredBy\r\n    - Añadidas clases de sensores de rotor: RotorSensor, RotorSpeedSensor, RotorAngleSensor\r\n    - Añadida clase base ElectricalSensor para agrupar sensores eléctricos\r\n    - Añadida propiedad severity para modelar criticidad de fallos\r\n    - Añadida clase OperationalState para estados operativos detallados\r\n    - Añadidas propiedades temporales: startDateTime, endDateTime, detectionDateTime, duration\r\n    - Añadidas relaciones entre fallos: causesFailure, precededBy\r\n    - Corregidos errores sintácticos\r\n    "
+      "en" : "\r\n    Version 2.2 (2026-01-30) - Control sensors expansion:\r\n    - Added control sensors: YawSensor (nacelle orientation angle), PitchAngleSensor (blade angle)\r\n    - Added data classes: YawAngleData, PitchAngleData\r\n    - Added measurement and monitoring properties for yaw and pitch\r\n    - Added inverse properties: yawAngleMonitoredBy/monitorsYawOf, pitchAngleMonitoredBy/monitorsPitchOf\r\n    ",
+      "es" : "\r\n    Version 2.2 (2026-01-30) - Ampliación de sensores de control:\r\n    - Añadidos sensores de control: YawSensor (angulo de orientación de góndola), PitchAngleSensor (ángulo de palas)\r\n    - Añadidas clases de datos: YawAngleData, PitchAngleData\r\n    - Añadidas propiedades de medición y monitorización para yaw y pitch\r\n    - Añadidas propiedades inversas: yawAngleMonitoredBy/monitorsYawOf, pitchAngleMonitoredBy/monitorsPitchOf\r\n    "
     },
     "other" : {
+      "priorVersion" : [ {
+        "identifier" : "priorVersion",
+        "language" : "undefined",
+        "value" : "https://w3id.org/optimar/2.1",
+        "type" : "iri"
+      } ],
       "identifier" : [ {
         "identifier" : "identifier",
         "language" : "undefined",
         "value" : "https://doi.org/10.5281/zenodo.17962874",
-        "type" : "iri"
-      } ],
-      "priorVersion" : [ {
-        "identifier" : "priorVersion",
-        "language" : "undefined",
-        "value" : "https://w3id.org/optimar/2.0",
         "type" : "iri"
       } ],
       "creator" : [ {
@@ -44,12 +44,12 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Alejandro Flores (USAL)",
+        "value" : "Cristina Aceta (Tekniker)",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Cristina Aceta (Tekniker)",
+        "value" : "Alejandro Flores (USAL)",
         "type" : "label"
       } ],
       "created" : [ {
@@ -64,43 +64,43 @@
         "value" : "en",
         "type" : "label"
       } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "en",
-        "value" : "Version 2.1 of the Ontology",
-        "type" : "label"
-      }, {
-        "identifier" : "versionInfo",
-        "language" : "es",
-        "value" : "Versión 2.1 de la ontología",
-        "type" : "label"
-      } ],
       "abstract" : [ {
-        "identifier" : "abstract",
-        "language" : "es",
-        "value" : "Ontología que modela los elementos estructurales, sensores, eventos y fallos de plataformas eólicas offshore, incluyendo datos de medición, actores involucrados y relaciones semánticas entre componentes. Compatible con SOSA para observaciones y QUDT para unidades de medida.",
-        "type" : "label"
-      }, {
         "identifier" : "abstract",
         "language" : "en",
         "value" : "Ontology modeling structural elements, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. Compatible with SOSA for observations and QUDT for units of measure.",
         "type" : "label"
+      }, {
+        "identifier" : "abstract",
+        "language" : "es",
+        "value" : "Ontología que modela los elementos estructurales, sensores, eventos y fallos de plataformas eólicas offshore, incluyendo datos de medición, actores involucrados y relaciones semánticas entre componentes. Compatible con SOSA para observaciones y QUDT para unidades de medida.",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "es",
+        "value" : "Versión 2.2 de la ontología",
+        "type" : "label"
+      }, {
+        "identifier" : "versionInfo",
+        "language" : "en",
+        "value" : "Version 2.2 of the Ontology",
+        "type" : "label"
       } ],
       "title" : [ {
         "identifier" : "title",
-        "language" : "en",
-        "value" : "Offshore Wind Power Platform Ontology for OPTiMAR",
+        "language" : "es",
+        "value" : "Ontología de Plataforma Eólica Offshore para OPTiMAR",
         "type" : "label"
       }, {
         "identifier" : "title",
-        "language" : "es",
-        "value" : "Ontología de Plataforma Eólica Offshore para OPTiMAR",
+        "language" : "en",
+        "value" : "Offshore Wind Power Platform Ontology for OPTiMAR",
         "type" : "label"
       } ],
       "backwardCompatibleWith" : [ {
         "identifier" : "backwardCompatibleWith",
         "language" : "undefined",
-        "value" : "https://w3id.org/optimar/2.0",
+        "value" : "https://w3id.org/optimar/2.1",
         "type" : "iri"
       } ],
       "seeAlso" : [ {
@@ -115,21 +115,21 @@
         "value" : "https://opensource.org/licenses/MIT",
         "type" : "iri"
       } ],
-      "rights" : [ {
-        "identifier" : "rights",
-        "language" : "es",
-        "value" : "Este trabajo se distribuye bajo la licencia MIT. Se permite copiar, modificar y distribuir bajo los términos de dicha licencia.",
-        "type" : "label"
-      }, {
-        "identifier" : "rights",
-        "language" : "en",
-        "value" : "This work is distributed under the MIT License. It may be copied, modified, and distributed under the terms of this license.",
-        "type" : "label"
-      } ],
       "preferredNamespacePrefix" : [ {
         "identifier" : "preferredNamespacePrefix",
         "language" : "undefined",
         "value" : "optimar",
+        "type" : "label"
+      } ],
+      "rights" : [ {
+        "identifier" : "rights",
+        "language" : "en",
+        "value" : "This work is distributed under the MIT License. It may be copied, modified, and distributed under the terms of this license.",
+        "type" : "label"
+      }, {
+        "identifier" : "rights",
+        "language" : "es",
+        "value" : "Este trabajo se distribuye bajo la licencia MIT. Se permite copiar, modificar y distribuir bajo los términos de dicha licencia.",
         "type" : "label"
       } ],
       "name" : [ {
@@ -143,6 +143,12 @@
         "value" : "OPTiMAR Offshore Wind Ontology",
         "type" : "label"
       } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-01-30",
+        "type" : "label"
+      } ],
       "publisher" : [ {
         "identifier" : "publisher",
         "language" : "en",
@@ -154,21 +160,15 @@
         "value" : "Universidad de Salamanca, Centro Tecnológico y de Investigación - Tekniker",
         "type" : "label"
       } ],
-      "modified" : [ {
-        "identifier" : "modified",
-        "language" : "undefined",
-        "value" : "2026-01-19",
-        "type" : "label"
-      } ],
       "bibliographicCitation" : [ {
-        "identifier" : "bibliographicCitation",
-        "language" : "es",
-        "value" : "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.5281/zenodo.17962874",
-        "type" : "label"
-      }, {
         "identifier" : "bibliographicCitation",
         "language" : "en",
         "value" : "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Offshore Wind Power Platform Ontology for OPTiMAR. DOI: 10.5281/zenodo.17962874",
+        "type" : "label"
+      }, {
+        "identifier" : "bibliographicCitation",
+        "language" : "es",
+        "value" : "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.5281/zenodo.17962874",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
@@ -185,13 +185,13 @@
       } ],
       "status" : [ {
         "identifier" : "status",
-        "language" : "en",
-        "value" : "stable",
+        "language" : "es",
+        "value" : "estable",
         "type" : "label"
       }, {
         "identifier" : "status",
-        "language" : "es",
-        "value" : "estable",
+        "language" : "en",
+        "value" : "stable",
         "type" : "label"
       } ],
       "homepage" : [ {
@@ -207,308 +207,287 @@
     "id" : "0",
     "type" : "owl:Class"
   }, {
-    "id" : "8",
+    "id" : "7",
     "type" : "owl:Class"
   }, {
-    "id" : "20",
+    "id" : "23",
     "type" : "owl:Class"
   }, {
     "id" : "1",
     "type" : "owl:unionOf"
   }, {
-    "id" : "38",
-    "type" : "owl:Class"
-  }, {
-    "id" : "44",
-    "type" : "owl:Class"
-  }, {
-    "id" : "49",
-    "type" : "owl:Class"
-  }, {
     "id" : "6",
     "type" : "owl:Class"
   }, {
-    "id" : "36",
+    "id" : "43",
     "type" : "owl:Class"
   }, {
-    "id" : "72",
+    "id" : "45",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "47",
     "type" : "owl:Class"
   }, {
-    "id" : "79",
-    "type" : "owl:Class"
+    "id" : "48",
+    "type" : "rdfs:Datatype"
   }, {
-    "id" : "93",
-    "type" : "owl:Class"
+    "id" : "49",
+    "type" : "owl:Thing"
   }, {
-    "id" : "81",
-    "type" : "owl:Class"
+    "id" : "50",
+    "type" : "rdfs:Literal"
   }, {
-    "id" : "96",
-    "type" : "owl:Class"
+    "id" : "51",
+    "type" : "owl:Thing"
   }, {
     "id" : "52",
-    "type" : "owl:Class"
+    "type" : "rdfs:Literal"
   }, {
-    "id" : "19",
-    "type" : "owl:Class"
-  }, {
-    "id" : "59",
-    "type" : "owl:Class"
+    "id" : "53",
+    "type" : "owl:Thing"
   }, {
     "id" : "54",
     "type" : "owl:Class"
   }, {
-    "id" : "102",
+    "id" : "58",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "59",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "60",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "3",
     "type" : "owl:Class"
   }, {
-    "id" : "85",
+    "id" : "62",
     "type" : "owl:Class"
   }, {
-    "id" : "39",
+    "id" : "68",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "70",
     "type" : "owl:Class"
   }, {
-    "id" : "105",
-    "type" : "owl:Class"
+    "id" : "71",
+    "type" : "rdfs:Datatype"
   }, {
-    "id" : "106",
-    "type" : "owl:Class"
+    "id" : "72",
+    "type" : "rdfs:Datatype"
   }, {
-    "id" : "108",
-    "type" : "owl:Class"
+    "id" : "73",
+    "type" : "rdfs:Datatype"
   }, {
-    "id" : "110",
-    "type" : "owl:Class"
-  }, {
-    "id" : "24",
-    "type" : "owl:Class"
-  }, {
-    "id" : "12",
-    "type" : "owl:Class"
-  }, {
-    "id" : "4",
-    "type" : "owl:Class"
-  }, {
-    "id" : "34",
-    "type" : "owl:Class"
-  }, {
-    "id" : "7",
-    "type" : "owl:Class"
-  }, {
-    "id" : "14",
-    "type" : "owl:Class"
-  }, {
-    "id" : "147",
-    "type" : "owl:Class"
-  }, {
-    "id" : "132",
-    "type" : "owl:Class"
-  }, {
-    "id" : "83",
+    "id" : "82",
     "type" : "owl:Class"
   }, {
     "id" : "22",
     "type" : "owl:Class"
   }, {
-    "id" : "3",
+    "id" : "85",
     "type" : "owl:Class"
   }, {
-    "id" : "58",
-    "type" : "owl:Class"
-  }, {
-    "id" : "145",
-    "type" : "owl:Class"
-  }, {
-    "id" : "185",
-    "type" : "owl:Class"
-  }, {
-    "id" : "25",
-    "type" : "owl:Class"
-  }, {
-    "id" : "162",
-    "type" : "owl:Class"
-  }, {
-    "id" : "149",
-    "type" : "owl:Class"
-  }, {
-    "id" : "51",
-    "type" : "owl:Class"
-  }, {
-    "id" : "35",
-    "type" : "owl:Class"
-  }, {
-    "id" : "78",
-    "type" : "owl:Class"
-  }, {
-    "id" : "189",
-    "type" : "owl:Class"
-  }, {
-    "id" : "187",
-    "type" : "owl:Class"
-  }, {
-    "id" : "174",
-    "type" : "owl:Class"
-  }, {
-    "id" : "70",
-    "type" : "owl:Class"
-  }, {
-    "id" : "45",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "142",
-    "type" : "owl:Class"
-  }, {
-    "id" : "124",
-    "type" : "owl:Class"
-  }, {
-    "id" : "56",
-    "type" : "owl:Class"
-  }, {
-    "id" : "172",
-    "type" : "owl:Class"
-  }, {
-    "id" : "61",
-    "type" : "owl:Class"
-  }, {
-    "id" : "29",
-    "type" : "owl:Class"
-  }, {
-    "id" : "37",
-    "type" : "owl:Class"
-  }, {
-    "id" : "152",
-    "type" : "owl:Class"
-  }, {
-    "id" : "234",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "116",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "263",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "261",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "27",
-    "type" : "owl:Class"
-  }, {
-    "id" : "11",
-    "type" : "owl:Class"
-  }, {
-    "id" : "264",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "65",
+    "id" : "28",
     "type" : "owl:Class"
   }, {
     "id" : "90",
     "type" : "owl:Class"
   }, {
-    "id" : "139",
+    "id" : "84",
     "type" : "owl:Class"
   }, {
-    "id" : "114",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "113",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "141",
+    "id" : "88",
     "type" : "owl:Class"
-  }, {
-    "id" : "180",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "41",
-    "type" : "owl:Class"
-  }, {
-    "id" : "183",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "135",
-    "type" : "owl:Class"
-  }, {
-    "id" : "211",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "104",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "31",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "76",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "267",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "268",
-    "type" : "rdfs:Datatype"
   }, {
     "id" : "97",
     "type" : "owl:Class"
   }, {
-    "id" : "127",
+    "id" : "32",
     "type" : "owl:Class"
   }, {
-    "id" : "9",
+    "id" : "98",
     "type" : "owl:Class"
   }, {
-    "id" : "17",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "118",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "212",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "279",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "219",
-    "type" : "owl:unionOf"
-  }, {
-    "id" : "170",
+    "id" : "25",
     "type" : "owl:Class"
   }, {
-    "id" : "287",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "290",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "67",
+    "id" : "106",
     "type" : "owl:Class"
   }, {
-    "id" : "74",
+    "id" : "107",
+    "type" : "owl:Class"
+  }, {
+    "id" : "113",
+    "type" : "owl:Class"
+  }, {
+    "id" : "117",
+    "type" : "owl:Class"
+  }, {
+    "id" : "122",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "38",
+    "type" : "owl:Class"
+  }, {
+    "id" : "55",
+    "type" : "owl:Class"
+  }, {
+    "id" : "147",
+    "type" : "owl:Class"
+  }, {
+    "id" : "167",
+    "type" : "owl:Class"
+  }, {
+    "id" : "168",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  }, {
+    "id" : "104",
+    "type" : "owl:Class"
+  }, {
+    "id" : "69",
+    "type" : "owl:Class"
+  }, {
+    "id" : "139",
+    "type" : "owl:Class"
+  }, {
+    "id" : "92",
+    "type" : "owl:Class"
+  }, {
+    "id" : "194",
+    "type" : "owl:Class"
+  }, {
+    "id" : "153",
+    "type" : "owl:Class"
+  }, {
+    "id" : "100",
+    "type" : "owl:Class"
+  }, {
+    "id" : "129",
+    "type" : "owl:Class"
+  }, {
+    "id" : "197",
+    "type" : "owl:Class"
+  }, {
+    "id" : "87",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "157",
+    "type" : "owl:Class"
+  }, {
+    "id" : "155",
+    "type" : "owl:Class"
+  }, {
+    "id" : "141",
+    "type" : "owl:Class"
+  }, {
+    "id" : "103",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "151",
+    "type" : "owl:Class"
+  }, {
+    "id" : "240",
+    "type" : "owl:Class"
+  }, {
+    "id" : "89",
+    "type" : "owl:Class"
+  }, {
+    "id" : "138",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "93",
+    "type" : "owl:Class"
+  }, {
+    "id" : "149",
     "type" : "owl:Class"
   }, {
     "id" : "40",
     "type" : "owl:Class"
   }, {
+    "id" : "109",
+    "type" : "owl:Class"
+  }, {
+    "id" : "224",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "79",
+    "type" : "owl:Class"
+  }, {
+    "id" : "57",
+    "type" : "owl:Class"
+  }, {
+    "id" : "202",
+    "type" : "owl:Class"
+  }, {
+    "id" : "110",
+    "type" : "owl:Class"
+  }, {
     "id" : "16",
     "type" : "owl:Class"
   }, {
-    "id" : "302",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "303",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "272",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "47",
+    "id" : "251",
     "type" : "owl:Class"
   }, {
-    "id" : "304",
-    "type" : "rdfs:Literal"
+    "id" : "86",
+    "type" : "owl:Class"
   }, {
-    "id" : "305",
-    "type" : "owl:Thing"
+    "id" : "235",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "297",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "326",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "135",
+    "type" : "owl:Class"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "211",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "124",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "288",
+    "type" : "rdfs:Datatype"
   }, {
     "id" : "242",
     "type" : "rdfs:Datatype"
@@ -516,44 +495,80 @@
     "id" : "63",
     "type" : "owl:Class"
   }, {
-    "id" : "307",
-    "type" : "owl:Thing"
-  }, {
-    "id" : "308",
-    "type" : "rdfs:Literal"
-  }, {
-    "id" : "281",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "94",
+    "id" : "65",
     "type" : "owl:Class"
   }, {
-    "id" : "159",
-    "type" : "rdfs:Datatype"
-  }, {
-    "id" : "121",
+    "id" : "5",
     "type" : "owl:Class"
   }, {
-    "id" : "43",
+    "id" : "18",
     "type" : "owl:Class"
   }, {
-    "id" : "158",
+    "id" : "120",
     "type" : "owl:unionOf"
   }, {
-    "id" : "177",
+    "id" : "213",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "309",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "105",
     "type" : "owl:Class"
   }, {
-    "id" : "209",
+    "id" : "121",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "266",
+    "id" : "186",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "198",
+    "id" : "314",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "100",
+    "id" : "102",
+    "type" : "owl:Class"
+  }, {
+    "id" : "101",
     "type" : "rdfs:Datatype"
+  }, {
+    "id" : "183",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "311",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "257",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:Class"
+  }, {
+    "id" : "218",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "144",
+    "type" : "owl:Class"
+  }, {
+    "id" : "126",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "339",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "214",
+    "type" : "owl:unionOf"
+  }, {
+    "id" : "19",
+    "type" : "owl:unionOf"
   } ],
   "classAttribute" : [ {
     "iri" : "https://w3id.org/optimar#MooringSystem",
@@ -583,8 +598,8 @@
       "en" : "Camera used to detect and monitor corrosion in the platform structure.",
       "es" : "Cámara utilizada para detectar y monitorear corrosión en la estructura de la plataforma."
     },
-    "id" : "8",
-    "superClasses" : [ "9" ]
+    "id" : "7",
+    "superClasses" : [ "8" ]
   }, {
     "iri" : "https://w3id.org/optimar#TemperatureSensor",
     "baseIri" : "https://w3id.org/optimar",
@@ -598,8 +613,8 @@
       "en" : "Sensor that measures the temperature of components or the environment.",
       "es" : "Sensor que mide la temperatura de componentes o del ambiente."
     },
-    "id" : "20",
-    "superClasses" : [ "9" ]
+    "id" : "23",
+    "superClasses" : [ "8" ]
   }, {
     "iri" : "https://w3id.org/optimar#StructuralComponent",
     "baseIri" : "https://w3id.org/optimar",
@@ -609,15 +624,15 @@
       "en" : "Structural Components",
       "es" : "Componentes estructurales"
     },
-    "union" : [ "0", "37", "36" ],
-    "subClasses" : [ "0", "36" ],
+    "union" : [ "0", "40", "3" ],
+    "subClasses" : [ "0", "3" ],
     "comment" : {
       "en" : "The structural components that make up the basic infrastructure of the wind platform.",
       "es" : "Los componentes estructurales que componen la infraestructura básica de la plataforma eólica."
     },
     "attributes" : [ "union" ],
     "id" : "1",
-    "superClasses" : [ "35" ]
+    "superClasses" : [ "39" ]
   }, {
     "iri" : "https://w3id.org/optimar#RotorData",
     "baseIri" : "https://w3id.org/optimar",
@@ -627,13 +642,13 @@
       "en" : "Rotor Data",
       "es" : "Datos de rotor"
     },
-    "subClasses" : [ "40", "41" ],
+    "subClasses" : [ "5", "16" ],
     "comment" : {
       "en" : "Rotor parameter data.",
       "es" : "Datos de parámetros del rotor."
     },
-    "id" : "38",
-    "superClasses" : [ "39" ]
+    "id" : "6",
+    "superClasses" : [ "25" ]
   }, {
     "iri" : "https://w3id.org/optimar#Nacelle",
     "baseIri" : "https://w3id.org/optimar",
@@ -647,8 +662,15 @@
       "en" : "The turbine component that houses the generator and other mechanical components.",
       "es" : "El compartimento de la turbina que aloja el generador y otros componentes mecánicos."
     },
-    "id" : "44",
-    "superClasses" : [ "45" ]
+    "id" : "43",
+    "superClasses" : [ "44" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
   }, {
     "iri" : "https://w3id.org/optimar#Turbine",
     "baseIri" : "https://w3id.org/optimar",
@@ -662,8 +684,50 @@
       "en" : "A wind turbine that is part of the wind platform.",
       "es" : "Una turbina de viento que forma parte de la plataforma eólica."
     },
+    "id" : "47",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "48",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
     "id" : "49",
-    "superClasses" : [ "35" ]
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "51",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "52",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "53",
+    "label" : {
+      "undefined" : "Thing"
+    }
   }, {
     "iri" : "https://w3id.org/optimar#AnalyticalRole",
     "baseIri" : "https://w3id.org/optimar",
@@ -677,8 +741,29 @@
       "en" : "Role focused on data analysis and generation of useful information for decision-making.",
       "es" : "Rol orientado al análisis de datos y generación de información útil para la toma de decisiones."
     },
-    "id" : "6",
-    "superClasses" : [ "7" ]
+    "id" : "54",
+    "superClasses" : [ "55" ]
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "58",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "59",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "60",
+    "label" : {
+      "undefined" : "Thing"
+    }
   }, {
     "iri" : "https://w3id.org/optimar#FloatingSubstructure",
     "baseIri" : "https://w3id.org/optimar",
@@ -692,7 +777,7 @@
       "en" : "The floating substructure that provides stability (spar, semi-sumergible, TLP, etc.)",
       "es" : "La estructura sumergida que proporciona flotabilidad (spar, semi-sumergible, TLP, etc.)"
     },
-    "id" : "36",
+    "id" : "3",
     "superClasses" : [ "1" ]
   }, {
     "iri" : "https://w3id.org/optimar#VoltageData",
@@ -707,8 +792,13 @@
       "en" : "Electrical voltage data.",
       "es" : "Datos de voltaje eléctrico."
     },
-    "id" : "72",
-    "superClasses" : [ "67" ]
+    "id" : "62",
+    "superClasses" : [ "63" ]
+  }, {
+    "instances" : 0,
+    "union" : [ "69", "65" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "68"
   }, {
     "iri" : "https://w3id.org/optimar#Tower",
     "baseIri" : "https://w3id.org/optimar",
@@ -722,8 +812,29 @@
       "en" : "The structure that supports the wind turbine.",
       "es" : "La estructura que sostiene la turbina eólica."
     },
-    "id" : "79",
-    "superClasses" : [ "45" ]
+    "id" : "70",
+    "superClasses" : [ "44" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "71",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "72",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "string"
+    }
   }, {
     "iri" : "https://w3id.org/optimar#Blade",
     "baseIri" : "https://w3id.org/optimar",
@@ -737,8 +848,8 @@
       "en" : "The blades of the turbine that capture the wind energy.",
       "es" : "Las palas de la turbina que capturan la energía eólica."
     },
-    "id" : "93",
-    "superClasses" : [ "45" ]
+    "id" : "82",
+    "superClasses" : [ "44" ]
   }, {
     "iri" : "https://w3id.org/optimar#Data",
     "baseIri" : "https://w3id.org/optimar",
@@ -748,12 +859,12 @@
       "en" : "Data",
       "es" : "Dato"
     },
-    "subClasses" : [ "94", "39" ],
+    "subClasses" : [ "21", "25" ],
     "comment" : {
       "en" : "A class for representing the measurement data collected by sensors or other systems.",
       "es" : "Una clase general para representar los datos de medición recolectados por sensores u otros sistemas."
     },
-    "id" : "81"
+    "id" : "22"
   }, {
     "iri" : "https://w3id.org/optimar#MonitoringTask",
     "baseIri" : "https://w3id.org/optimar",
@@ -767,8 +878,8 @@
       "en" : "A task aimed at supervising the condition of the platform through sensors and monitoring systems.",
       "es" : "Una tarea destinada a supervisar el estado de la plataforma mediante sensores y sistemas de monitorización."
     },
-    "id" : "96",
-    "superClasses" : [ "97" ]
+    "id" : "85",
+    "superClasses" : [ "86" ]
   }, {
     "iri" : "https://w3id.org/optimar#ElectricalSensor",
     "baseIri" : "https://w3id.org/optimar",
@@ -778,13 +889,13 @@
       "en" : "Electrical sensor",
       "es" : "Sensor eléctrico"
     },
-    "subClasses" : [ "78", "83", "85", "51", "54", "56" ],
+    "subClasses" : [ "27", "30", "32", "87", "88", "89" ],
     "comment" : {
       "en" : "Sensor that measures electrical parameters of the turbine.",
       "es" : "Sensor que mide parámetros eléctricos de la turbina."
     },
-    "id" : "52",
-    "superClasses" : [ "9" ]
+    "id" : "28",
+    "superClasses" : [ "8" ]
   }, {
     "iri" : "https://w3id.org/optimar#TechnicalRole",
     "baseIri" : "https://w3id.org/optimar",
@@ -798,8 +909,8 @@
       "en" : "Role associated with technical activities such as operation, repair, and system supervision.",
       "es" : "Rol asociado a actividades técnicas como operación, reparación y supervisión de sistemas."
     },
-    "id" : "19",
-    "superClasses" : [ "7" ]
+    "id" : "90",
+    "superClasses" : [ "55" ]
   }, {
     "iri" : "https://w3id.org/optimar#RotorSensor",
     "baseIri" : "https://w3id.org/optimar",
@@ -809,13 +920,13 @@
       "en" : "Rotor sensor",
       "es" : "Sensor de rotor"
     },
-    "subClasses" : [ "58", "61" ],
+    "subClasses" : [ "92", "93" ],
     "comment" : {
       "en" : "Sensor that measures parameters related to the turbine rotor.",
       "es" : "Sensor que mide parámetros relacionados con el rotor de la turbina."
     },
-    "id" : "59",
-    "superClasses" : [ "9" ]
+    "id" : "84",
+    "superClasses" : [ "8" ]
   }, {
     "iri" : "https://w3id.org/optimar#TorqueSensor",
     "baseIri" : "https://w3id.org/optimar",
@@ -829,8 +940,8 @@
       "en" : "Sensor that measures mechanical torque of the turbine or generator shaft.",
       "es" : "Sensor que mide el par mecánico del eje de la turbina o generador."
     },
-    "id" : "54",
-    "superClasses" : [ "52" ]
+    "id" : "88",
+    "superClasses" : [ "28" ]
   }, {
     "iri" : "https://w3id.org/optimar#DataAnalyst",
     "baseIri" : "https://w3id.org/optimar",
@@ -844,8 +955,8 @@
       "en" : "Specialist who analyzes collected data to detect patterns, failures, and optimization opportunities.",
       "es" : "Especialista que analiza los datos recolectados para detectar patrones, fallos y oportunidades de optimización."
     },
-    "id" : "102",
-    "superClasses" : [ "16" ]
+    "id" : "97",
+    "superClasses" : [ "18" ]
   }, {
     "iri" : "https://w3id.org/optimar#CurrentSensor",
     "baseIri" : "https://w3id.org/optimar",
@@ -859,8 +970,14 @@
       "en" : "Sensor that measures electrical current of the motor or generator.",
       "es" : "Sensor que mide la corriente eléctrica del motor o generador."
     },
-    "id" : "85",
-    "superClasses" : [ "52" ]
+    "id" : "32",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "https://w3id.org/optimar#",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : { },
+    "id" : "98"
   }, {
     "iri" : "https://w3id.org/optimar#Measurement",
     "baseIri" : "https://w3id.org/optimar",
@@ -870,13 +987,13 @@
       "en" : "Measurement",
       "es" : "Medición"
     },
-    "subClasses" : [ "63", "67", "38", "70", "47" ],
+    "subClasses" : [ "102", "63", "6", "103", "104", "14", "105" ],
     "comment" : {
       "en" : "Represents a measurement taken by a sensor.",
       "es" : "Representa una medición tomada por un sensor."
     },
-    "id" : "39",
-    "superClasses" : [ "81" ]
+    "id" : "25",
+    "superClasses" : [ "22" ]
   }, {
     "iri" : "https://w3id.org/optimar#TorqueData",
     "baseIri" : "https://w3id.org/optimar",
@@ -890,8 +1007,8 @@
       "en" : "Mechanical torque data.",
       "es" : "Datos de par mecánico."
     },
-    "id" : "105",
-    "superClasses" : [ "67" ]
+    "id" : "106",
+    "superClasses" : [ "63" ]
   }, {
     "iri" : "https://w3id.org/optimar#PowerData",
     "baseIri" : "https://w3id.org/optimar",
@@ -905,8 +1022,8 @@
       "en" : "Active or reactive power data.",
       "es" : "Datos de potencia activa o reactiva."
     },
-    "id" : "106",
-    "superClasses" : [ "67" ]
+    "id" : "107",
+    "superClasses" : [ "63" ]
   }, {
     "iri" : "https://w3id.org/optimar#ISUMSystem",
     "baseIri" : "https://w3id.org/optimar",
@@ -920,8 +1037,8 @@
       "en" : "Specialized system for integrated monitoring of the offshore platform.",
       "es" : "Sistema especializado para la monitorización integrada de la plataforma offshore."
     },
-    "id" : "108",
-    "superClasses" : [ "9" ]
+    "id" : "113",
+    "superClasses" : [ "8" ]
   }, {
     "iri" : "https://w3id.org/optimar#ParkOwner",
     "baseIri" : "https://w3id.org/optimar",
@@ -935,8 +1052,8 @@
       "en" : "Entity or individual owning the offshore wind farm and responsible for its overall operation.",
       "es" : "Entidad o persona propietaria del parque eólico offshore y responsable de su operación general."
     },
-    "id" : "110",
-    "superClasses" : [ "16" ]
+    "id" : "117",
+    "superClasses" : [ "18" ]
   }, {
     "iri" : "https://w3id.org/optimar#Deformation",
     "baseIri" : "https://w3id.org/optimar",
@@ -950,8 +1067,8 @@
       "en" : "Failure caused by structural deformation of a component.",
       "es" : "Fallo causado por la deformación estructural de un componente."
     },
-    "id" : "24",
-    "superClasses" : [ "25" ]
+    "id" : "122",
+    "superClasses" : [ "100" ]
   }, {
     "iri" : "https://www.w3.org/ns/sosa/Sensor",
     "baseIri" : "https://www.w3.org/ns/sosa",
@@ -959,9 +1076,9 @@
     "label" : {
       "IRI-based" : "Sensor"
     },
-    "subClasses" : [ "9" ],
+    "subClasses" : [ "8" ],
     "attributes" : [ "external" ],
-    "id" : "12"
+    "id" : "11"
   }, {
     "iri" : "https://w3id.org/optimar#FailureEvent",
     "baseIri" : "https://w3id.org/optimar",
@@ -971,13 +1088,13 @@
       "en" : "Failure Event",
       "es" : "Evento de fallo"
     },
-    "subClasses" : [ "3" ],
+    "subClasses" : [ "139" ],
     "comment" : {
       "en" : "Event that represents a detected failure in the system, must be caused by at least one failure.",
       "es" : "Evento que representa un fallo detectado en el sistema, debe estar causado por al menos un fallo. "
     },
-    "id" : "4",
-    "superClasses" : [ "22" ]
+    "id" : "37",
+    "superClasses" : [ "69" ]
   }, {
     "iri" : "https://w3id.org/optimar#Observation",
     "baseIri" : "https://w3id.org/optimar",
@@ -991,8 +1108,8 @@
       "en" : "The result of recording a phenomenon or condition, usually through a sensor or monitoring system.",
       "es" : "El resultado de registrar un fenómeno o condición, normalmente a través de un sensor o sistema de monitorización."
     },
-    "id" : "34",
-    "superClasses" : [ "11" ]
+    "id" : "38",
+    "superClasses" : [ "10" ]
   }, {
     "iri" : "https://w3id.org/optimar#Role",
     "baseIri" : "https://w3id.org/optimar",
@@ -1002,12 +1119,12 @@
       "en" : "Role",
       "es" : "Rol"
     },
-    "subClasses" : [ "6", "14", "19" ],
+    "subClasses" : [ "54", "147", "90" ],
     "comment" : {
       "en" : "The roles of the actors that manage, operate or maintain the offshore wind power platform.",
       "es" : "Los roles de los actores que gestionan, operan o mantienen la plataforma eólica."
     },
-    "id" : "7"
+    "id" : "55"
   }, {
     "iri" : "https://w3id.org/optimar#ManagementRole",
     "baseIri" : "https://w3id.org/optimar",
@@ -1021,8 +1138,8 @@
       "en" : "Role responsible for coordination, planning, and resource management in the wind platform.",
       "es" : "Rol encargado de la coordinación, planificación y gestión de recursos en la plataforma eólica."
     },
-    "id" : "14",
-    "superClasses" : [ "7" ]
+    "id" : "147",
+    "superClasses" : [ "55" ]
   }, {
     "iri" : "https://w3id.org/optimar#DynamicMonitor",
     "baseIri" : "https://w3id.org/optimar",
@@ -1036,8 +1153,8 @@
       "en" : "Device that measures dynamic parameters of the platform, such as vibrations and movements.",
       "es" : "Dispositivo que mide parámetros dinámicos de la plataforma como vibraciones y movimientos."
     },
-    "id" : "147",
-    "superClasses" : [ "9" ]
+    "id" : "167",
+    "superClasses" : [ "8" ]
   }, {
     "iri" : "https://w3id.org/optimar#FrequencyData",
     "baseIri" : "https://w3id.org/optimar",
@@ -1051,8 +1168,8 @@
       "en" : "Electrical grid frequency data.",
       "es" : "Datos de frecuencia de red eléctrica."
     },
-    "id" : "132",
-    "superClasses" : [ "67" ]
+    "id" : "168",
+    "superClasses" : [ "63" ]
   }, {
     "iri" : "https://w3id.org/optimar#ActivePowerSensor",
     "baseIri" : "https://w3id.org/optimar",
@@ -1066,8 +1183,23 @@
       "en" : "Sensor that measures the active power generated or consumed.",
       "es" : "Sensor que mide la potencia activa generada o consumida."
     },
-    "id" : "83",
-    "superClasses" : [ "52" ]
+    "id" : "30",
+    "superClasses" : [ "28" ]
+  }, {
+    "iri" : "https://w3id.org/optimar#PitchAngleData",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PitchAngleData",
+      "en" : "Pitch Angle Data",
+      "es" : "Datos de ángulo de pitch"
+    },
+    "comment" : {
+      "en" : "Pitch angle data of the blades.",
+      "es" : "Datos del ángulo de pitch de las palas."
+    },
+    "id" : "104",
+    "superClasses" : [ "25" ]
   }, {
     "iri" : "https://w3id.org/optimar#Event",
     "baseIri" : "https://w3id.org/optimar",
@@ -1077,12 +1209,12 @@
       "en" : "Event",
       "es" : "Evento"
     },
-    "subClasses" : [ "4" ],
+    "subClasses" : [ "37" ],
     "comment" : {
       "en" : "An event that occurs in the offshore wind power platform, such as a failure detection.",
       "es" : "Un evento que ocurre en la plataforma eólica, como la detección de un fallo."
     },
-    "id" : "22"
+    "id" : "69"
   }, {
     "iri" : "https://w3id.org/optimar#CorrosionEvent",
     "baseIri" : "https://w3id.org/optimar",
@@ -1096,8 +1228,8 @@
       "en" : "Degradation of the platform's metallic structure due to corrosion effects.",
       "es" : "Degradación de la estructura metálica de la plataforma por efectos de corrosión."
     },
-    "id" : "3",
-    "superClasses" : [ "4" ]
+    "id" : "139",
+    "superClasses" : [ "37" ]
   }, {
     "iri" : "https://w3id.org/optimar#RotorSpeedSensor",
     "baseIri" : "https://w3id.org/optimar",
@@ -1111,8 +1243,8 @@
       "en" : "Sensor that measures the rotor revolutions per minute (RPM).",
       "es" : "Sensor que mide las revoluciones por minuto (RPM) del rotor."
     },
-    "id" : "58",
-    "superClasses" : [ "59" ]
+    "id" : "92",
+    "superClasses" : [ "84" ]
   }, {
     "iri" : "https://w3id.org/optimar#Anemometer",
     "baseIri" : "https://w3id.org/optimar",
@@ -1126,8 +1258,8 @@
       "en" : "Sensor that measures wind speed and direction in the wind farm.",
       "es" : "Sensor que mide la velocidad y dirección del viento en el parque eólico."
     },
-    "id" : "145",
-    "superClasses" : [ "9" ]
+    "id" : "194",
+    "superClasses" : [ "8" ]
   }, {
     "iri" : "https://w3id.org/optimar#Misalignment",
     "baseIri" : "https://w3id.org/optimar",
@@ -1141,8 +1273,8 @@
       "en" : "Failure caused by misalignment or lack of proper adjustment between platform components.",
       "es" : "Fallo causado por el desajuste o falta de alineación entre los componentes de la plataforma."
     },
-    "id" : "185",
-    "superClasses" : [ "25" ]
+    "id" : "153",
+    "superClasses" : [ "100" ]
   }, {
     "iri" : "https://w3id.org/optimar#Failure",
     "baseIri" : "https://w3id.org/optimar",
@@ -1152,12 +1284,12 @@
       "en" : "Failure",
       "es" : "Fallo"
     },
-    "subClasses" : [ "24", "27", "29", "185", "187", "189" ],
+    "subClasses" : [ "122", "77", "149", "153", "155", "157" ],
     "comment" : {
       "en" : "A class that represents identified failures in the wind platform.",
       "es" : "Una clase que representa fallos identificados en la plataforma eólica."
     },
-    "id" : "25"
+    "id" : "100"
   }, {
     "iri" : "https://w3id.org/optimar#Hub",
     "baseIri" : "https://w3id.org/optimar",
@@ -1171,8 +1303,8 @@
       "en" : "The central part of the turbine where the blades are connected.",
       "es" : "La parte central de la turbina donde se conectan las palas."
     },
-    "id" : "162",
-    "superClasses" : [ "45" ]
+    "id" : "129",
+    "superClasses" : [ "44" ]
   }, {
     "iri" : "https://w3id.org/optimar#GaugeSystem",
     "baseIri" : "https://w3id.org/optimar",
@@ -1186,8 +1318,8 @@
       "en" : "Strain gauge system used to measure stresses and deformations in the structure.",
       "es" : "Sistema de galgas extensiométricas utilizado para medir tensiones y deformaciones en la estructura."
     },
-    "id" : "149",
-    "superClasses" : [ "9" ]
+    "id" : "197",
+    "superClasses" : [ "8" ]
   }, {
     "iri" : "https://w3id.org/optimar#GridFrequencySensor",
     "baseIri" : "https://w3id.org/optimar",
@@ -1201,8 +1333,8 @@
       "en" : "Sensor that measures grid electrical frequency.",
       "es" : "Sensor que mide la frecuencia de la red eléctrica."
     },
-    "id" : "51",
-    "superClasses" : [ "52" ]
+    "id" : "87",
+    "superClasses" : [ "28" ]
   }, {
     "iri" : "https://w3id.org/optimar#Component",
     "baseIri" : "https://w3id.org/optimar",
@@ -1212,12 +1344,12 @@
       "en" : "Component",
       "es" : "Componente"
     },
-    "subClasses" : [ "49", "170", "172", "174", "1", "177", "45" ],
+    "subClasses" : [ "47", "135", "138", "141", "1", "144", "44" ],
     "comment" : {
       "en" : "An component of an offshore wind power platform, such as blades, towers, pitch system, etc.",
       "es" : "Un componente de una plataforma eólica offshore, como las palas, torres, sistema de pitch, etc."
     },
-    "id" : "35"
+    "id" : "39"
   }, {
     "iri" : "https://w3id.org/optimar#VoltageSensor",
     "baseIri" : "https://w3id.org/optimar",
@@ -1231,8 +1363,8 @@
       "en" : "Sensor that measures voltage of the motor or generator.",
       "es" : "Sensor que mide el voltaje del motor o generador."
     },
-    "id" : "78",
-    "superClasses" : [ "52" ]
+    "id" : "27",
+    "superClasses" : [ "28" ]
   }, {
     "iri" : "https://w3id.org/optimar#StructuralInstability",
     "baseIri" : "https://w3id.org/optimar",
@@ -1246,8 +1378,8 @@
       "en" : "Failure that compromises the structural stability of the floating platform.",
       "es" : "Fallo que compromete la estabilidad estructural de la plataforma flotante."
     },
-    "id" : "189",
-    "superClasses" : [ "25" ]
+    "id" : "157",
+    "superClasses" : [ "100" ]
   }, {
     "iri" : "https://w3id.org/optimar#ComponentBreakage",
     "baseIri" : "https://w3id.org/optimar",
@@ -1261,8 +1393,8 @@
       "en" : "Failure caused by the fracture or breakage of an offshore wind turbine component.",
       "es" : "Fallo originado por la fractura o rotura de un componente de la plataforma eólica."
     },
-    "id" : "187",
-    "superClasses" : [ "25" ]
+    "id" : "155",
+    "superClasses" : [ "100" ]
   }, {
     "iri" : "https://w3id.org/optimar#Transformer",
     "baseIri" : "https://w3id.org/optimar",
@@ -1276,8 +1408,8 @@
       "en" : "Electrical device that modifies the voltage levels of the generated energy.",
       "es" : "Dispositivo eléctrico que modifica los niveles de voltaje de la energía generada."
     },
-    "id" : "174",
-    "superClasses" : [ "35" ]
+    "id" : "141",
+    "superClasses" : [ "39" ]
   }, {
     "iri" : "https://w3id.org/optimar#StressData",
     "baseIri" : "https://w3id.org/optimar",
@@ -1291,8 +1423,8 @@
       "en" : "Stress data measured by a sensor.",
       "es" : "Datos de tensión medidos por un sensor."
     },
-    "id" : "70",
-    "superClasses" : [ "39" ]
+    "id" : "103",
+    "superClasses" : [ "25" ]
   }, {
     "iri" : "https://w3id.org/optimar#TurbineComponent",
     "baseIri" : "https://w3id.org/optimar",
@@ -1302,15 +1434,15 @@
       "en" : "Turbine Components",
       "es" : "Componentes de turbina"
     },
-    "union" : [ "162", "44", "93", "79" ],
-    "subClasses" : [ "162", "44", "93", "79" ],
+    "union" : [ "129", "43", "82", "70" ],
+    "subClasses" : [ "129", "43", "82", "70" ],
     "comment" : {
       "en" : "The turbine components that generate energy from the wind.",
       "es" : "Los componentes de la turbina eólica que generan energía a partir del viento."
     },
     "attributes" : [ "union" ],
-    "id" : "45",
-    "superClasses" : [ "35" ]
+    "id" : "44",
+    "superClasses" : [ "39" ]
   }, {
     "iri" : "https://w3id.org/optimar#Location",
     "baseIri" : "https://w3id.org/optimar",
@@ -1324,7 +1456,7 @@
       "en" : "The geographic location of the wind platform.",
       "es" : "La ubicación geográfica de la plataforma eólica."
     },
-    "id" : "142"
+    "id" : "151"
   }, {
     "iri" : "https://w3id.org/optimar#MaintenanceOperator",
     "baseIri" : "https://w3id.org/optimar",
@@ -1338,8 +1470,8 @@
       "en" : "Person responsible for carrying out preventive and corrective maintenance on the platform.",
       "es" : "Persona encargada de realizar el mantenimiento preventivo y correctivo en la plataforma."
     },
-    "id" : "124",
-    "superClasses" : [ "16" ]
+    "id" : "240",
+    "superClasses" : [ "18" ]
   }, {
     "iri" : "https://w3id.org/optimar#ReactivePowerSensor",
     "baseIri" : "https://w3id.org/optimar",
@@ -1353,8 +1485,8 @@
       "en" : "Sensor that measures the reactive power of the electrical system.",
       "es" : "Sensor que mide la potencia reactiva del sistema eléctrico."
     },
-    "id" : "56",
-    "superClasses" : [ "52" ]
+    "id" : "89",
+    "superClasses" : [ "28" ]
   }, {
     "iri" : "https://w3id.org/optimar#PitchSystem",
     "baseIri" : "https://w3id.org/optimar",
@@ -1368,8 +1500,23 @@
       "en" : "The system that adjusts the angle of the blades of the turbine.",
       "es" : "El sistema que ajusta el ángulo de las palas de la turbina."
     },
-    "id" : "172",
-    "superClasses" : [ "35" ]
+    "id" : "138",
+    "superClasses" : [ "39" ]
+  }, {
+    "iri" : "https://w3id.org/optimar#YawAngleData",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "YawAngleData",
+      "en" : "Yaw Angle Data",
+      "es" : "Datos de ángulo de orientación"
+    },
+    "comment" : {
+      "en" : "Yaw angle data of the nacelle.",
+      "es" : "Datos del ángulo de orientación (yaw) de la góndola."
+    },
+    "id" : "14",
+    "superClasses" : [ "25" ]
   }, {
     "iri" : "https://w3id.org/optimar#RotorAngleSensor",
     "baseIri" : "https://w3id.org/optimar",
@@ -1383,8 +1530,8 @@
       "en" : "Sensor that measures the rotor position angle.",
       "es" : "Sensor que mide el ángulo de posición del rotor."
     },
-    "id" : "61",
-    "superClasses" : [ "59" ]
+    "id" : "93",
+    "superClasses" : [ "84" ]
   }, {
     "iri" : "https://w3id.org/optimar#MaterialFatigue",
     "baseIri" : "https://w3id.org/optimar",
@@ -1398,8 +1545,8 @@
       "en" : "Structural material failure caused by repeated load cycles.",
       "es" : "Fallo en el material estructural causado por ciclos repetidos de carga."
     },
-    "id" : "29",
-    "superClasses" : [ "25" ]
+    "id" : "149",
+    "superClasses" : [ "100" ]
   }, {
     "iri" : "https://w3id.org/optimar#Base",
     "baseIri" : "https://w3id.org/optimar",
@@ -1407,7 +1554,7 @@
     "label" : {
       "IRI-based" : "Base"
     },
-    "id" : "37"
+    "id" : "40"
   }, {
     "iri" : "https://w3id.org/optimar#FloatingPlatform",
     "baseIri" : "https://w3id.org/optimar",
@@ -1421,36 +1568,13 @@
       "en" : "An offshore wind power platform that includes a turbine, floating substructure, and mooring system",
       "es" : "Plataforma eólica offshore completa que incluye turbina, substructura flotante y sistema de amarre"
     },
-    "id" : "152",
-    "superClasses" : [ "141" ]
+    "id" : "109",
+    "superClasses" : [ "110" ]
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "234",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "116",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "263",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "261",
-    "label" : {
-      "IRI-based" : "string"
-    }
+    "instances" : 0,
+    "union" : [ "138", "39" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "224"
   }, {
     "iri" : "https://w3id.org/optimar#Corrosion",
     "baseIri" : "https://w3id.org/optimar",
@@ -1464,8 +1588,8 @@
       "en" : "Failure caused by corrosion of the metallic structure of the platform.",
       "es" : "Fallo causado por la corrosión de la estructura metálica de la plataforma."
     },
-    "id" : "27",
-    "superClasses" : [ "25" ]
+    "id" : "77",
+    "superClasses" : [ "100" ]
   }, {
     "iri" : "https://www.w3.org/ns/sosa/Observation",
     "baseIri" : "https://www.w3.org/ns/sosa",
@@ -1473,30 +1597,24 @@
     "label" : {
       "IRI-based" : "Observation"
     },
-    "subClasses" : [ "34" ],
+    "subClasses" : [ "38" ],
     "attributes" : [ "external" ],
-    "id" : "11"
+    "id" : "10"
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "264",
-    "label" : {
-      "IRI-based" : "string"
-    }
-  }, {
-    "iri" : "https://w3id.org/optimar#EnvironmentalCondition",
+    "iri" : "https://w3id.org/optimar#YawSensor",
     "baseIri" : "https://w3id.org/optimar",
     "instances" : 0,
     "label" : {
-      "IRI-based" : "EnvironmentalCondition",
-      "en" : "Environmental Condition",
-      "es" : "Condición ambiental"
+      "IRI-based" : "YawSensor",
+      "en" : "Yaw angle sensor",
+      "es" : "Sensor de ángulo de orientación"
     },
     "comment" : {
-      "en" : "The environmental conditions that affect the offshore wind power platform, such as wind speed, temperature, etc.",
-      "es" : "Las condiciones ambientales que afectan a la plataforma eólica, como la velocidad del viento, la temperatura, etc."
+      "en" : "Sensor that measures the yaw angle of the nacelle relative to the wind direction.",
+      "es" : "Sensor que mide el ángulo de orientación (yaw) de la góndola respecto a la dirección del viento."
     },
-    "id" : "65"
+    "id" : "13",
+    "superClasses" : [ "8" ]
   }, {
     "iri" : "https://w3id.org/optimar#OperationalState",
     "baseIri" : "https://w3id.org/optimar",
@@ -1510,7 +1628,21 @@
       "en" : "The operational state of a component or system of the offshore wind power platform.",
       "es" : "El estado operativo de un componente o sistema de la plataforma eólica."
     },
-    "id" : "90"
+    "id" : "79"
+  }, {
+    "iri" : "https://w3id.org/optimar#EnvironmentalCondition",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "EnvironmentalCondition",
+      "en" : "Environmental Condition",
+      "es" : "Condición ambiental"
+    },
+    "comment" : {
+      "en" : "The environmental conditions that affect the offshore wind power platform, such as wind speed, temperature, etc.",
+      "es" : "Las condiciones ambientales que afectan a la plataforma eólica, como la velocidad del viento, la temperatura, etc."
+    },
+    "id" : "57"
   }, {
     "iri" : "https://w3id.org/optimar#StructuralCamera",
     "baseIri" : "https://w3id.org/optimar",
@@ -1524,20 +1656,8 @@
       "en" : "Camera dedicated to visual inspection of the structural condition of the platform.",
       "es" : "Cámara dedicada a la inspección visual del estado estructural de la plataforma."
     },
-    "id" : "139",
-    "superClasses" : [ "9" ]
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "114",
-    "label" : {
-      "IRI-based" : "dateTime"
-    }
-  }, {
-    "instances" : 0,
-    "union" : [ "22", "74" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "113"
+    "id" : "202",
+    "superClasses" : [ "8" ]
   }, {
     "iri" : "https://w3id.org/optimar#WindPowerPlatform",
     "baseIri" : "https://w3id.org/optimar",
@@ -1547,19 +1667,12 @@
       "en" : "Offshore Wind Power Platform",
       "es" : "Plataforma eólica offshore"
     },
-    "subClasses" : [ "152" ],
+    "subClasses" : [ "109" ],
     "comment" : {
       "en" : "An offshore wind power platform that generates electricity from wind.",
       "es" : "Una plataforma eólica offshore que genera energía electrica a partir del viento."
     },
-    "id" : "141"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "180",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
+    "id" : "110"
   }, {
     "iri" : "https://w3id.org/optimar#RotorAngleData",
     "baseIri" : "https://w3id.org/optimar",
@@ -1573,15 +1686,8 @@
       "en" : "Rotor position angle data.",
       "es" : "Datos de ángulo de posición del rotor."
     },
-    "id" : "41",
-    "superClasses" : [ "38" ]
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "183",
-    "label" : {
-      "IRI-based" : "dateTime"
-    }
+    "id" : "16",
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "https://w3id.org/optimar#CurrentData",
     "baseIri" : "https://w3id.org/optimar",
@@ -1595,46 +1701,8 @@
       "en" : "Electrical current data.",
       "es" : "Datos de corriente eléctrica."
     },
-    "id" : "135",
-    "superClasses" : [ "67" ]
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "211",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "104",
-    "label" : {
-      "IRI-based" : "dateTime"
-    }
-  }, {
-    "instances" : 0,
-    "union" : [ "65", "35" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "31"
-  }, {
-    "instances" : 0,
-    "union" : [ "9", "35" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "76"
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "267",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "268",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
+    "id" : "251",
+    "superClasses" : [ "63" ]
   }, {
     "iri" : "https://w3id.org/optimar#Task",
     "baseIri" : "https://w3id.org/optimar",
@@ -1644,12 +1712,12 @@
       "en" : "Task",
       "es" : "Tarea"
     },
-    "subClasses" : [ "96" ],
+    "subClasses" : [ "85" ],
     "comment" : {
       "en" : "A general task related to the operation, monitoring, or maintenance of the wind platform.",
       "es" : "Una tarea general relacionada con la operación, supervisión o mantenimiento de la plataforma eólica."
     },
-    "id" : "97"
+    "id" : "86"
   }, {
     "iri" : "https://w3id.org/optimar#PlatformActuator",
     "baseIri" : "https://w3id.org/optimar",
@@ -1663,8 +1731,8 @@
       "en" : "Responsible for making adjustments on the platform, such as mechanical or hydraulic adjustments.",
       "es" : "Encargado de realizar ajustes sobre la plataforma, como ajustes mecánicos o hidráulicos."
     },
-    "id" : "127",
-    "superClasses" : [ "16" ]
+    "id" : "235",
+    "superClasses" : [ "18" ]
   }, {
     "iri" : "https://w3id.org/optimar#Sensor",
     "baseIri" : "https://w3id.org/optimar",
@@ -1674,38 +1742,27 @@
       "en" : "Sensor",
       "es" : "Sensor"
     },
-    "subClasses" : [ "8", "108", "59", "139", "20", "145", "147", "149", "52" ],
+    "subClasses" : [ "7", "113", "84", "202", "23", "194", "167", "197", "28", "218", "13" ],
     "comment" : {
       "en" : "A device that measures or monitors parameters of the wind platform, such as wind, corrosion, vibrations, etc.",
       "es" : "Un dispositivo que mide o monitorea parámetros de la plataforma eólica, como viento, corrosión, vibraciones, etc."
     },
-    "id" : "9",
-    "superClasses" : [ "12" ]
+    "id" : "8",
+    "superClasses" : [ "11" ]
   }, {
-    "instances" : 0,
-    "union" : [ "0", "141" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "17"
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "297",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
   }, {
-    "instances" : 0,
-    "union" : [ "22", "74" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "118"
-  }, {
-    "instances" : 0,
-    "union" : [ "65", "35" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "212"
-  }, {
-    "instances" : 0,
-    "union" : [ "25", "81" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "279"
-  }, {
-    "instances" : 0,
-    "union" : [ "172", "35" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "219"
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "326",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
   }, {
     "iri" : "https://w3id.org/optimar#Generator",
     "baseIri" : "https://w3id.org/optimar",
@@ -1719,21 +1776,42 @@
       "en" : "Electrical generator that converts mechanical energy into electrical energy.",
       "es" : "Generador eléctrico que convierte energía mecánica en eléctrica."
     },
-    "id" : "170",
-    "superClasses" : [ "35" ]
+    "id" : "135",
+    "superClasses" : [ "39" ]
   }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "287",
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "95",
     "label" : {
-      "undefined" : "Thing"
+      "IRI-based" : "string"
     }
   }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "290",
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "211",
     "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "124",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "288",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "242",
+    "label" : {
+      "IRI-based" : "decimal"
     }
   }, {
     "iri" : "https://w3id.org/optimar#ElectricalData",
@@ -1744,13 +1822,13 @@
       "en" : "Electrical Data",
       "es" : "Datos eléctricos"
     },
-    "subClasses" : [ "105", "132", "106", "135", "72" ],
+    "subClasses" : [ "106", "168", "107", "251", "62" ],
     "comment" : {
       "en" : "Electrical parameter data measured by a sensor.",
       "es" : "Datos de parámetros eléctricos medidos por un sensor."
     },
-    "id" : "67",
-    "superClasses" : [ "39" ]
+    "id" : "63",
+    "superClasses" : [ "25" ]
   }, {
     "iri" : "https://w3id.org/optimar#Maintenance",
     "baseIri" : "https://w3id.org/optimar",
@@ -1764,7 +1842,7 @@
       "en" : "A class that represents the maintenance of the wind platform.",
       "es" : "Una clase que representa el mantenimiento de la plataforma eólica."
     },
-    "id" : "74"
+    "id" : "65"
   }, {
     "iri" : "https://w3id.org/optimar#RotorSpeedData",
     "baseIri" : "https://w3id.org/optimar",
@@ -1778,8 +1856,8 @@
       "en" : "Rotor rotation speed data (RPM).",
       "es" : "Datos de velocidad de rotación del rotor (RPM)."
     },
-    "id" : "40",
-    "superClasses" : [ "38" ]
+    "id" : "5",
+    "superClasses" : [ "6" ]
   }, {
     "iri" : "https://w3id.org/optimar#Actor",
     "baseIri" : "https://w3id.org/optimar",
@@ -1789,32 +1867,30 @@
       "en" : "Actor",
       "es" : "Actor"
     },
-    "subClasses" : [ "121", "102", "124", "110", "127" ],
+    "subClasses" : [ "257", "97", "240", "117", "235" ],
     "comment" : {
       "en" : "An actor that interacts or manages the offshore wind power platform.",
       "es" : "Un actor que interactúa o gestiona la plataforma eólica."
     },
-    "id" : "16"
+    "id" : "18"
   }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "302",
+    "instances" : 0,
+    "union" : [ "69", "65" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "120"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "213",
     "label" : {
-      "undefined" : "Thing"
+      "IRI-based" : "decimal"
     }
   }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "303",
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "309",
     "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "272",
-    "label" : {
-      "undefined" : "Thing"
+      "IRI-based" : "string"
     }
   }, {
     "iri" : "https://w3id.org/optimar#VibrationData",
@@ -1829,26 +1905,26 @@
       "en" : "Vibration data measured by a sensor.",
       "es" : "Datos de vibracion medidos por un sensor."
     },
-    "id" : "47",
-    "superClasses" : [ "39" ]
+    "id" : "105",
+    "superClasses" : [ "25" ]
   }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "304",
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "121",
     "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
+      "IRI-based" : "dateTime"
     }
   }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "305",
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "186",
     "label" : {
-      "undefined" : "Thing"
+      "IRI-based" : "dateTime"
     }
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "242",
+    "id" : "314",
     "label" : {
       "IRI-based" : "decimal"
     }
@@ -1865,28 +1941,28 @@
       "en" : "Temperature data measured by sensors.",
       "es" : "Datos de temperatura medidos por sensores."
     },
-    "id" : "63",
-    "superClasses" : [ "39" ]
+    "id" : "102",
+    "superClasses" : [ "25" ]
   }, {
-    "iri" : "http://www.w3.org/2002/07/owl#Thing",
-    "baseIri" : "http://owl2vowl.de",
-    "id" : "307",
-    "label" : {
-      "undefined" : "Thing"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
-    "id" : "308",
-    "label" : {
-      "IRI-based" : "Literal",
-      "undefined" : "Literal"
-    }
-  }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "281",
+    "id" : "101",
     "label" : {
-      "IRI-based" : "string"
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "183",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "311",
+    "label" : {
+      "IRI-based" : "decimal"
     }
   }, {
     "iri" : "https://w3id.org/optimar#Image",
@@ -1901,15 +1977,13 @@
       "en" : "A class that represents an image that supports the measurement.",
       "es" : "Una clase que representa una imagen que soporta la medición."
     },
-    "id" : "94",
-    "superClasses" : [ "81" ]
+    "id" : "21",
+    "superClasses" : [ "22" ]
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "159",
-    "label" : {
-      "IRI-based" : "dateTime"
-    }
+    "instances" : 0,
+    "union" : [ "57", "39" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "34"
   }, {
     "iri" : "https://w3id.org/optimar#CloudAdministrator",
     "baseIri" : "https://w3id.org/optimar",
@@ -1923,8 +1997,8 @@
       "en" : "Responsible for managing and securing cloud services that process data from the platform.",
       "es" : "Responsable de la administración y seguridad de los servicios en la nube que procesan los datos de la plataforma."
     },
-    "id" : "121",
-    "superClasses" : [ "16" ]
+    "id" : "257",
+    "superClasses" : [ "18" ]
   }, {
     "iri" : "http://qudt.org/schema/qudt/QuantityValue",
     "baseIri" : "http://qudt.org/schema/qudt",
@@ -1933,12 +2007,27 @@
       "IRI-based" : "QuantityValue"
     },
     "attributes" : [ "external" ],
-    "id" : "43"
+    "id" : "42"
+  }, {
+    "iri" : "https://w3id.org/optimar#PitchAngleSensor",
+    "baseIri" : "https://w3id.org/optimar",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "PitchAngleSensor",
+      "en" : "Pitch angle sensor",
+      "es" : "Sensor de ángulo de pitch"
+    },
+    "comment" : {
+      "en" : "Sensor that measures the pitch angle (inclination) of the turbine blades.",
+      "es" : "Sensor que mide el ángulo de pitch (inclinación) de las palas de la turbina."
+    },
+    "id" : "218",
+    "superClasses" : [ "8" ]
   }, {
     "instances" : 0,
-    "union" : [ "22", "74" ],
-    "attributes" : [ "anonymous", "union" ],
-    "id" : "158"
+    "union" : [ "8", "39" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "67"
   }, {
     "iri" : "https://w3id.org/optimar#Gearbox",
     "baseIri" : "https://w3id.org/optimar",
@@ -1952,210 +2041,160 @@
       "en" : "Transmission system that adjusts the rotation speed between the rotor and the generator.",
       "es" : "Sistema de transmisión que ajusta la velocidad de rotación entre el rotor y el generador."
     },
-    "id" : "177",
-    "superClasses" : [ "35" ]
+    "id" : "144",
+    "superClasses" : [ "39" ]
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "209",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
+    "instances" : 0,
+    "union" : [ "69", "65" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "126"
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "266",
-    "label" : {
-      "IRI-based" : "decimal"
-    }
+    "instances" : 0,
+    "union" : [ "100", "22" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "339"
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "198",
-    "label" : {
-      "IRI-based" : "string"
-    }
+    "instances" : 0,
+    "union" : [ "57", "39" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "214"
   }, {
-    "iri" : "http://www.w3.org/2001/XMLSchema#string",
-    "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "100",
-    "label" : {
-      "IRI-based" : "string"
-    }
+    "instances" : 0,
+    "union" : [ "0", "110" ],
+    "attributes" : [ "union", "anonymous" ],
+    "id" : "19"
   } ],
   "property" : [ {
     "id" : "2",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "5",
+    "id" : "4",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "10",
+    "id" : "9",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "13",
-    "type" : "rdfs:SubClassOf"
+    "id" : "12",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "17",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "18",
+    "id" : "20",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "21",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "23",
+    "id" : "24",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "26",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "28",
+    "id" : "29",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "30",
-    "type" : "owl:objectProperty"
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "33",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "42",
+    "id" : "36",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "41",
     "type" : "owl:objectProperty"
   }, {
     "id" : "46",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "48",
-    "type" : "rdfs:SubClassOf"
+    "id" : "56",
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "50",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "53",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "55",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "57",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "60",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "62",
-    "type" : "rdfs:SubClassOf"
+    "id" : "61",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "64",
     "type" : "owl:objectProperty"
   }, {
     "id" : "66",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "68",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "69",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "71",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "73",
+    "id" : "74",
     "type" : "owl:objectProperty"
   }, {
     "id" : "75",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "77",
-    "type" : "rdfs:SubClassOf"
+    "id" : "76",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "80",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "82",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "84",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "86",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "87",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "88",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "89",
+    "id" : "83",
     "type" : "owl:objectProperty"
   }, {
     "id" : "91",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "95",
-    "type" : "owl:objectProperty"
+    "id" : "94",
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "98",
+    "id" : "96",
     "type" : "owl:objectProperty"
   }, {
     "id" : "99",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "101",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "103",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "107",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "109",
-    "type" : "owl:objectProperty"
+    "id" : "108",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "111",
     "type" : "owl:objectProperty"
   }, {
     "id" : "112",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "114",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "115",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "117",
+    "id" : "116",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "118",
     "type" : "owl:objectProperty"
   }, {
     "id" : "119",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "120",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "122",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "123",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "125",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "126",
+    "id" : "127",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "128",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "129",
-    "type" : "owl:objectProperty"
-  }, {
     "id" : "130",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "131",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "132",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "133",
@@ -2168,82 +2207,85 @@
     "type" : "owl:objectProperty"
   }, {
     "id" : "137",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "138",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "140",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "142",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "143",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "144",
-    "type" : "rdfs:SubClassOf"
+    "id" : "145",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "146",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "148",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "150",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "151",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "153",
+    "id" : "152",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "154",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "155",
-    "type" : "rdfs:SubClassOf"
-  }, {
     "id" : "156",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "92",
-    "type" : "owl:objectProperty"
+    "id" : "158",
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "157",
-    "type" : "owl:datatypeProperty"
+    "id" : "159",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "160",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "161",
     "type" : "rdfs:SubClassOf"
   }, {
+    "id" : "162",
+    "type" : "rdfs:SubClassOf"
+  }, {
     "id" : "163",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "164",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "165",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "166",
-    "type" : "rdfs:SubClassOf"
-  }, {
-    "id" : "167",
+    "id" : "81",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "168",
-    "type" : "rdfs:SubClassOf"
+    "id" : "165",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "166",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "169",
     "type" : "rdfs:SubClassOf"
   }, {
+    "id" : "170",
+    "type" : "owl:objectProperty"
+  }, {
     "id" : "171",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "172",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "173",
     "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "174",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "175",
     "type" : "rdfs:SubClassOf"
@@ -2251,25 +2293,37 @@
     "id" : "176",
     "type" : "rdfs:SubClassOf"
   }, {
+    "id" : "177",
+    "type" : "rdfs:SubClassOf"
+  }, {
     "id" : "178",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "179",
-    "type" : "owl:datatypeProperty"
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "180",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "181",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "182",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "184",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "186",
+    "id" : "185",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "187",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "188",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "189",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "190",
@@ -2281,28 +2335,22 @@
     "id" : "193",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "194",
-    "type" : "owl:disjointWith"
-  }, {
     "id" : "195",
     "type" : "owl:disjointWith"
   }, {
     "id" : "196",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
-    "id" : "197",
+    "id" : "198",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "199",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "200",
     "type" : "owl:disjointWith"
   }, {
     "id" : "201",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "202",
     "type" : "owl:disjointWith"
   }, {
     "id" : "203",
@@ -2315,52 +2363,49 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "206",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "207",
     "type" : "owl:disjointWith"
   }, {
     "id" : "208",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "209",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "210",
     "type" : "owl:datatypeProperty"
   }, {
-    "id" : "32",
-    "type" : "owl:objectProperty"
+    "id" : "212",
+    "type" : "owl:datatypeProperty"
   }, {
-    "id" : "213",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "214",
+    "id" : "35",
     "type" : "owl:objectProperty"
   }, {
     "id" : "215",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "216",
     "type" : "owl:objectProperty"
   }, {
     "id" : "217",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
-    "id" : "218",
+    "id" : "219",
     "type" : "owl:objectProperty"
   }, {
     "id" : "220",
     "type" : "owl:disjointWith"
   }, {
     "id" : "221",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "222",
     "type" : "owl:disjointWith"
   }, {
     "id" : "223",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "224",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "225",
     "type" : "owl:disjointWith"
@@ -2372,1099 +2417,1188 @@
     "type" : "owl:disjointWith"
   }, {
     "id" : "228",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "229",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "230",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "231",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "233",
-    "type" : "owl:datatypeProperty"
-  }, {
-    "id" : "235",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "236",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "237",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "238",
-    "type" : "owl:someValuesFrom"
-  }, {
-    "id" : "239",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "240",
-    "type" : "owl:someValuesFrom"
+    "id" : "229",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "230",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "231",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "232",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "233",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "234",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "236",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "237",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "238",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "241",
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "243",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "244",
-    "type" : "owl:disjointWith"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "245",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "246",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "247",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "248",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "192",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "249",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "250",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "251",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "252",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "253",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "254",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "255",
     "type" : "owl:disjointWith"
   }, {
     "id" : "256",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "257",
-    "type" : "owl:disjointWith"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "258",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "259",
     "type" : "owl:disjointWith"
   }, {
+    "id" : "259",
+    "type" : "rdfs:SubClassOf"
+  }, {
     "id" : "260",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "261",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "262",
     "type" : "owl:disjointWith"
   }, {
-    "id" : "265",
-    "type" : "owl:datatypeProperty"
+    "id" : "263",
+    "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "232",
+    "id" : "264",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "265",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "266",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "267",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "268",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "192",
     "type" : "owl:objectProperty"
   }, {
     "id" : "269",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "270",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "271",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "272",
+    "type" : "owl:disjointWith"
   }, {
     "id" : "273",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "274",
-    "type" : "owl:objectProperty"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "275",
-    "type" : "owl:someValuesFrom"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "276",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "277",
-    "type" : "owl:someValuesFrom"
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "278",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "279",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "280",
-    "type" : "owl:datatypeProperty"
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "281",
+    "type" : "rdfs:SubClassOf"
   }, {
     "id" : "282",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "283",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "284",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:objectProperty"
   }, {
     "id" : "285",
-    "type" : "rdfs:SubClassOf"
+    "type" : "owl:disjointWith"
   }, {
     "id" : "286",
     "type" : "rdfs:SubClassOf"
   }, {
-    "id" : "288",
-    "type" : "owl:objectProperty"
+    "id" : "287",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "289",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "290",
     "type" : "rdfs:SubClassOf"
   }, {
     "id" : "291",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "292",
-    "type" : "owl:disjointWith"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "293",
-    "type" : "owl:disjointWith"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "294",
-    "type" : "owl:disjointWith"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "295",
-    "type" : "owl:disjointWith"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "296",
-    "type" : "owl:disjointWith"
-  }, {
-    "id" : "297",
-    "type" : "owl:disjointWith"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "298",
-    "type" : "owl:disjointWith"
+    "type" : "owl:someValuesFrom"
   }, {
     "id" : "299",
-    "type" : "owl:objectProperty"
-  }, {
-    "id" : "300",
     "type" : "owl:disjointWith"
   }, {
+    "id" : "300",
+    "type" : "owl:someValuesFrom"
+  }, {
     "id" : "301",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "302",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "303",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "239",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "304",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "305",
     "type" : "owl:disjointWith"
   }, {
     "id" : "306",
-    "type" : "owl:objectProperty"
+    "type" : "owl:disjointWith"
   }, {
-    "id" : "309",
-    "type" : "owl:objectProperty"
+    "id" : "307",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "308",
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "310",
     "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "312",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "313",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "292",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "315",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "316",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "317",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "318",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "319",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "320",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "321",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "322",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "323",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "324",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "325",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "327",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "328",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "330",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "331",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "332",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "333",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "334",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "335",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "336",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "337",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "338",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "340",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "341",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "342",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "343",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "329",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "344",
+    "type" : "owl:datatypeProperty"
   } ],
   "propertyAttribute" : [ {
-    "range" : "4",
+    "range" : "1",
     "domain" : "3",
     "attributes" : [ "object", "anonymous" ],
     "id" : "2"
   }, {
-    "range" : "7",
-    "domain" : "6",
+    "range" : "6",
+    "domain" : "5",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "5"
+    "id" : "4"
   }, {
     "iri" : "https://w3id.org/optimar#madeBySensor",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "12",
+    "range" : "11",
     "label" : {
       "IRI-based" : "madeBySensor",
       "en" : "Made by sensor",
       "es" : "Realizada por sensor"
     },
-    "domain" : "11",
+    "domain" : "10",
     "comment" : {
       "en" : "Relates an observation to the sensor that made it.",
       "es" : "Relaciona una observación con el sensor que la realizó."
     },
     "attributes" : [ "object" ],
-    "id" : "10"
+    "id" : "9"
   }, {
-    "range" : "7",
-    "domain" : "14",
+    "iri" : "https://w3id.org/optimar#measuresYawAngle",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "measuresYawAngle",
+      "en" : "Measures yaw angle",
+      "es" : "Mide ángulo de yaw"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Relates a yaw sensor with the yaw angle data it measures.",
+      "es" : "Relaciona un sensor de yaw con los datos de ángulo de orientación que mide."
+    },
+    "attributes" : [ "object" ],
+    "id" : "12"
+  }, {
+    "range" : "6",
+    "domain" : "16",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "13"
+    "id" : "15"
   }, {
     "iri" : "https://w3id.org/optimar#manages",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "17",
+    "range" : "19",
     "label" : {
       "IRI-based" : "manages",
       "en" : "Manages",
       "es" : "Administra"
     },
-    "domain" : "16",
+    "domain" : "18",
     "comment" : {
       "en" : "Indicates that an actor is responsible for managing a wind power platform or its mooring system.",
       "es" : "Indica que un actor se encarga de la gestión de una plataforma eólica o su sistema de anclaje."
     },
     "attributes" : [ "object" ],
-    "id" : "15"
-  }, {
-    "range" : "7",
-    "domain" : "19",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "18"
+    "id" : "17"
   }, {
     "range" : "22",
-    "domain" : "4",
+    "domain" : "21",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "21"
+    "id" : "20"
   }, {
-    "range" : "25",
-    "domain" : "24",
+    "range" : "22",
+    "domain" : "25",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "23"
+    "id" : "24"
   }, {
-    "range" : "25",
+    "range" : "28",
     "domain" : "27",
     "attributes" : [ "object", "anonymous" ],
     "id" : "26"
   }, {
-    "range" : "25",
-    "domain" : "29",
+    "range" : "28",
+    "domain" : "30",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "28"
+    "id" : "29"
+  }, {
+    "range" : "28",
+    "domain" : "32",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "31"
   }, {
     "iri" : "https://w3id.org/optimar#temperatureMonitoredBy",
-    "inverse" : "32",
+    "inverse" : "35",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "20",
+    "range" : "23",
     "label" : {
       "IRI-based" : "temperatureMonitoredBy",
       "en" : "Temperature monitored by",
       "es" : "Temperatura monitoreada por"
     },
-    "domain" : "31",
+    "domain" : "34",
     "comment" : {
       "en" : "Relates a component or environmental condition with the temperature sensor that monitors it.",
       "es" : "Relaciona un componente o condición ambiental con el sensor de temperatura que lo monitorea."
     },
     "attributes" : [ "object" ],
-    "id" : "30"
+    "id" : "33"
   }, {
     "iri" : "https://w3id.org/optimar#failureObservation",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "34",
+    "range" : "38",
     "label" : {
       "IRI-based" : "failureObservation",
       "en" : "Failure observation",
       "es" : "Observación de fallo"
     },
-    "domain" : "4",
+    "domain" : "37",
     "comment" : {
       "en" : "Relationship between a failure event and the observation made by a sensor.",
       "es" : "Relación entre un evento de fallo y la observación realizada por un sensor."
     },
     "attributes" : [ "object" ],
-    "id" : "33"
+    "id" : "36"
   }, {
     "iri" : "https://w3id.org/optimar#height",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "43",
+    "range" : "42",
     "label" : {
       "IRI-based" : "height",
       "en" : "Height",
       "es" : "Altura"
     },
-    "domain" : "35",
+    "domain" : "39",
     "comment" : {
       "en" : "Height of the component expressed as a QUDT quantity value.",
       "es" : "Altura del componente expresada como un valor con unidad QUDT."
     },
     "attributes" : [ "object" ],
-    "id" : "42"
+    "id" : "41"
   }, {
-    "range" : "39",
-    "domain" : "47",
+    "range" : "1",
+    "domain" : "0",
     "attributes" : [ "object", "anonymous" ],
     "id" : "46"
   }, {
-    "range" : "12",
-    "domain" : "9",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "48"
-  }, {
-    "range" : "52",
-    "domain" : "51",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "50"
-  }, {
-    "range" : "52",
-    "domain" : "54",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "53"
-  }, {
-    "range" : "52",
-    "domain" : "56",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "55"
-  }, {
-    "range" : "59",
-    "domain" : "58",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "57"
-  }, {
-    "range" : "59",
-    "domain" : "61",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "60"
-  }, {
-    "range" : "39",
-    "domain" : "63",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "62"
-  }, {
     "iri" : "https://w3id.org/optimar#measuresWind",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "65",
+    "range" : "57",
     "label" : {
       "IRI-based" : "measuresWind",
       "en" : "Measures wind",
       "es" : "Mide viento"
     },
-    "domain" : "9",
+    "domain" : "8",
     "comment" : {
       "en" : "Relates a sensor with the measurement of wind speed or direction.",
       "es" : "Relaciona un sensor con la medición de velocidad o dirección del viento."
     },
     "attributes" : [ "object" ],
-    "id" : "64"
-  }, {
-    "range" : "39",
-    "domain" : "67",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "66"
-  }, {
-    "range" : "39",
-    "domain" : "38",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "68"
-  }, {
-    "range" : "39",
-    "domain" : "70",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "69"
+    "id" : "56"
   }, {
     "iri" : "https://w3id.org/optimar#isMonitoredBy",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "9",
+    "range" : "8",
     "label" : {
       "IRI-based" : "isMonitoredBy",
       "en" : "Is monitored by",
       "es" : "Es monitoreado por"
     },
-    "domain" : "45",
+    "domain" : "44",
     "comment" : {
       "en" : "Relates a turbine component with the sensors it is monitored by.",
       "es" : "Relaciona un componente de turbina con los sensores que lo supervisan."
     },
     "attributes" : [ "object" ],
-    "id" : "71"
+    "id" : "61"
   }, {
     "iri" : "https://w3id.org/optimar#requiresMaintenance",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "74",
+    "range" : "65",
     "label" : {
       "IRI-based" : "requiresMaintenance",
       "en" : "Requires maintenance",
       "es" : "Requiere mantenimiento"
     },
-    "domain" : "45",
+    "domain" : "44",
     "comment" : {
       "en" : "Relates a component with the required maintenance tasks.",
       "es" : "Relaciona un componente con las tareas de mantenimiento necesarias."
     },
     "attributes" : [ "object" ],
-    "id" : "73"
+    "id" : "64"
   }, {
     "iri" : "https://w3id.org/optimar#monitors",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "76",
+    "range" : "67",
     "label" : {
       "IRI-based" : "monitors",
       "en" : "Monitors",
       "es" : "Monitorea"
     },
-    "domain" : "16",
+    "domain" : "18",
     "comment" : {
       "en" : "Relates an actor to the components or sensors they monitor.",
       "es" : "Relaciona a un actor con los componentes o sensores que supervisa."
     },
     "attributes" : [ "object" ],
-    "id" : "75"
-  }, {
-    "range" : "52",
-    "domain" : "78",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "77"
-  }, {
-    "range" : "81",
-    "domain" : "39",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "80"
-  }, {
-    "range" : "52",
-    "domain" : "83",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "82"
-  }, {
-    "range" : "52",
-    "domain" : "85",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "84"
+    "id" : "66"
   }, {
     "iri" : "https://w3id.org/optimar#vibrationLevel",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "43",
+    "range" : "42",
     "label" : {
       "IRI-based" : "vibrationLevel",
       "en" : "Vibration level",
       "es" : "Nivel de Vibracion"
     },
-    "domain" : "81",
+    "domain" : "22",
     "comment" : {
       "en" : "Level of vibrations recorded in a component or system.",
       "es" : "Nivel de vibraciones registradas en un componente o sistema."
     },
     "attributes" : [ "object" ],
-    "id" : "86"
+    "id" : "74"
   }, {
     "iri" : "https://w3id.org/optimar#hasCapacity",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "43",
+    "range" : "42",
     "label" : {
       "IRI-based" : "hasCapacity",
       "en" : "Nominal capacity",
       "es" : "Capacidad nominal"
     },
-    "domain" : "49",
+    "domain" : "47",
     "comment" : {
       "en" : "Nominal generation capacity expressed in QUDT units (typically MW).",
       "es" : "Capacidad nominal de generación expresada en unidades QUDT (tipicamente MW)."
     },
     "attributes" : [ "object" ],
-    "id" : "87"
+    "id" : "75"
   }, {
     "iri" : "https://w3id.org/optimar#detectsCorrosion",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "27",
+    "range" : "77",
     "label" : {
       "IRI-based" : "detectsCorrosion",
       "en" : "Detects corrosion",
       "es" : "Detecta corrosión"
     },
-    "domain" : "9",
+    "domain" : "8",
     "comment" : {
       "en" : "Relates a sensor with the detected corrosion measurement.",
       "es" : "Relaciona un sensor con la medición de corrosión detectada."
     },
     "attributes" : [ "object" ],
-    "id" : "88"
+    "id" : "76"
   }, {
     "iri" : "https://w3id.org/optimar#hasOperationalState",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "90",
+    "range" : "79",
     "label" : {
       "IRI-based" : "hasOperationalState",
       "en" : "Has operational state",
       "es" : "Tiene estado operativo"
     },
-    "domain" : "35",
+    "domain" : "39",
     "comment" : {
       "en" : "Relates a component with its current operational state.",
       "es" : "Relaciona un componente con su estado operativo actual."
     },
     "attributes" : [ "object" ],
-    "id" : "89"
+    "id" : "78"
   }, {
     "iri" : "https://w3id.org/optimar#isPartOf",
-    "inverse" : "92",
+    "inverse" : "81",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "49",
+    "range" : "47",
     "label" : {
       "IRI-based" : "isPartOf",
       "en" : "Is part of",
       "es" : "Es parte de"
     },
-    "domain" : "45",
+    "domain" : "44",
     "comment" : {
       "en" : "Indicates that a turbine component is part of a specific turbine.",
       "es" : "Indica que un componente de turbina forma parte de una turbina específica."
     },
     "attributes" : [ "object" ],
-    "id" : "91"
+    "id" : "80"
   }, {
     "iri" : "https://w3id.org/optimar#rotorParameterMonitoredBy",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "59",
+    "range" : "84",
     "label" : {
       "IRI-based" : "rotorParameterMonitoredBy",
       "en" : "Rotor parameter monitored by",
       "es" : "Parámetro de rotor monitoreado por"
     },
-    "domain" : "35",
+    "domain" : "39",
     "comment" : {
       "en" : "Relates a component with the sensor that monitors its rotor parameters.",
       "es" : "Relaciona un componente con el sensor que monitorea los parámetros del rotor."
     },
     "attributes" : [ "object" ],
-    "id" : "95"
+    "id" : "83"
   }, {
     "iri" : "https://w3id.org/optimar#electricalParameterMonitoredBy",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "52",
+    "range" : "28",
     "label" : {
       "IRI-based" : "electricalParameterMonitoredBy",
       "en" : "Electrical parameter monitored by",
       "es" : "Parámetro eléctrico monitoreado por"
     },
-    "domain" : "35",
+    "domain" : "39",
     "comment" : {
       "en" : "Relates a component with the electrical sensor that monitors its parameters.",
       "es" : "Relaciona un componente con el sensor eléctrico que monitorea sus parámetros."
     },
     "attributes" : [ "object" ],
-    "id" : "98"
+    "id" : "91"
   }, {
     "iri" : "https://w3id.org/optimar#operationalStatus",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "100",
+    "range" : "95",
     "label" : {
       "IRI-based" : "operationalStatus",
       "en" : "Operational status",
       "es" : "Estado operativo"
     },
-    "domain" : "49",
+    "domain" : "47",
     "comment" : {
       "en" : "Current operational status of the turbine (e.g. operative, stopped, under maintenance, etc.).",
       "es" : "Estado de funcionamiento actual de la turbina (ej. operativa, parada, en mantenimiento, etc.)."
     },
     "attributes" : [ "datatype" ],
-    "id" : "99"
+    "id" : "94"
   }, {
     "iri" : "https://w3id.org/optimar#transmitsMovementTo",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "35",
+    "range" : "39",
     "label" : {
       "IRI-based" : "transmitsMovementTo",
       "en" : "Transmits movement to",
       "es" : "Transmite movimiento a"
     },
-    "domain" : "35",
+    "domain" : "39",
     "comment" : {
       "en" : "Indicates that a component transmits mechanical movement to another.",
       "es" : "Indica que un componente transmite movimiento mecánico a otro."
     },
     "attributes" : [ "object" ],
-    "id" : "101"
+    "id" : "96"
   }, {
     "iri" : "https://w3id.org/optimar#detectionDateTime",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "104",
+    "range" : "101",
     "label" : {
       "IRI-based" : "detectionDateTime",
       "en" : "Detection date and time",
       "es" : "Fecha y hora de detección"
     },
-    "domain" : "25",
+    "domain" : "100",
     "comment" : {
       "en" : "Detection timestamp when the failure was detected.",
       "es" : "Marca temporal de detección del fallo."
     },
     "attributes" : [ "datatype" ],
-    "id" : "103"
+    "id" : "99"
+  }, {
+    "range" : "110",
+    "domain" : "109",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "108"
   }, {
     "iri" : "https://w3id.org/optimar#detectedBy",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "9",
+    "range" : "8",
     "label" : {
       "IRI-based" : "detectedBy",
       "en" : "Detected by",
       "es" : "Detectado por"
     },
-    "domain" : "22",
+    "domain" : "69",
     "comment" : {
       "en" : "Relates an event to the sensor that detected it.",
       "es" : "Relaciona un evento con el sensor que lo detectó."
     },
     "attributes" : [ "object" ],
-    "id" : "107"
+    "id" : "111"
+  }, {
+    "range" : "86",
+    "domain" : "85",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "112"
+  }, {
+    "range" : "8",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "114"
+  }, {
+    "range" : "8",
+    "domain" : "113",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "115"
   }, {
     "iri" : "https://w3id.org/optimar#diameter",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "43",
+    "range" : "42",
     "label" : {
       "IRI-based" : "diameter",
       "en" : "Diameter",
       "es" : "Diámetro"
     },
-    "domain" : "35",
+    "domain" : "39",
     "comment" : {
       "en" : "Diameter of the component measured in QUDT units.",
       "es" : "Diámetro del componente medido en unidades QUDT."
     },
     "attributes" : [ "object" ],
-    "id" : "109"
+    "id" : "116"
   }, {
     "iri" : "https://w3id.org/optimar#causedBy",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "25",
+    "range" : "100",
     "label" : {
       "IRI-based" : "causedBy",
       "en" : "Caused by",
       "es" : "Causado por"
     },
-    "domain" : "22",
+    "domain" : "69",
     "comment" : {
       "en" : "Relates an event with the failure that caused it.",
       "es" : "Relaciona un evento con el fallo que lo provocó."
     },
     "attributes" : [ "object" ],
-    "id" : "111"
+    "id" : "118"
   }, {
     "iri" : "https://w3id.org/optimar#endDateTime",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "114",
+    "range" : "121",
     "label" : {
       "IRI-based" : "endDateTime",
       "en" : "End date and time",
       "es" : "Fecha y hora de finalización"
     },
-    "domain" : "113",
+    "domain" : "120",
     "comment" : {
       "en" : "End timestamp of the event or maintenance.",
       "es" : "Marca temporal de finalización del evento o mantenimiento."
     },
     "attributes" : [ "datatype" ],
-    "id" : "112"
+    "id" : "119"
   }, {
     "iri" : "https://w3id.org/optimar#imageURL",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "116",
+    "range" : "124",
     "label" : {
       "IRI-based" : "imageURL",
       "en" : "Image URL",
       "es" : "URL de la imagen"
     },
-    "domain" : "94",
+    "domain" : "21",
     "comment" : {
       "en" : "Access URL of the generated or stored image.",
       "es" : "Dirección de acceso a la imagen generada o almacenada."
     },
     "attributes" : [ "datatype" ],
-    "id" : "115"
+    "id" : "123"
   }, {
     "iri" : "https://w3id.org/optimar#duration",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "43",
+    "range" : "42",
     "label" : {
       "IRI-based" : "duration",
       "en" : "Duration",
       "es" : "Duración"
     },
-    "domain" : "118",
+    "domain" : "126",
     "comment" : {
       "en" : "Duration of the event or maintenance expressed as a QUDT quantity value.",
       "es" : "Duración del evento o mantenimiento expresada como valor QUDT."
     },
     "attributes" : [ "object" ],
-    "id" : "117"
-  }, {
-    "range" : "67",
-    "domain" : "72",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "119"
-  }, {
-    "range" : "16",
-    "domain" : "121",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "120"
-  }, {
-    "range" : "16",
-    "domain" : "102",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "122"
-  }, {
-    "range" : "16",
-    "domain" : "124",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "123"
-  }, {
-    "range" : "16",
-    "domain" : "110",
-    "attributes" : [ "object", "anonymous" ],
     "id" : "125"
   }, {
-    "range" : "16",
-    "domain" : "127",
+    "range" : "39",
+    "domain" : "44",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "126"
+    "id" : "127"
   }, {
-    "range" : "9",
-    "domain" : "52",
+    "range" : "44",
+    "domain" : "129",
     "attributes" : [ "object", "anonymous" ],
     "id" : "128"
   }, {
+    "range" : "44",
+    "domain" : "43",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "130"
+  }, {
+    "range" : "44",
+    "domain" : "82",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "131"
+  }, {
+    "range" : "44",
+    "domain" : "70",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "132"
+  }, {
+    "range" : "10",
+    "domain" : "38",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "133"
+  }, {
+    "range" : "39",
+    "domain" : "135",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "134"
+  }, {
     "iri" : "https://w3id.org/optimar#temperature",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "43",
+    "range" : "42",
     "label" : {
       "IRI-based" : "temperature",
       "en" : "Temperature",
       "es" : "Temperatura"
     },
-    "domain" : "81",
+    "domain" : "22",
     "comment" : {
       "en" : "Temperature recorded expressed as a QUDT quantity value.",
       "es" : "Temperatura registrada expresada como un valor con unidad QUDT."
     },
     "attributes" : [ "object" ],
-    "id" : "129"
+    "id" : "136"
   }, {
-    "range" : "67",
-    "domain" : "105",
+    "range" : "39",
+    "domain" : "138",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "130"
+    "id" : "137"
   }, {
-    "range" : "67",
-    "domain" : "132",
+    "range" : "39",
+    "domain" : "141",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "131"
+    "id" : "140"
   }, {
-    "range" : "67",
-    "domain" : "106",
+    "range" : "39",
+    "domain" : "1",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "133"
+    "id" : "142"
   }, {
-    "range" : "67",
-    "domain" : "135",
+    "range" : "39",
+    "domain" : "144",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "134"
+    "id" : "143"
   }, {
     "iri" : "https://w3id.org/optimar#windDirection",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "43",
+    "range" : "42",
     "label" : {
       "IRI-based" : "windDirection",
       "en" : "Wind direction",
       "es" : "Dirección del viento"
     },
-    "domain" : "65",
+    "domain" : "57",
     "comment" : {
       "en" : "Direction from which the wind blows expressed as a QUDT quantity value.",
       "es" : "Dirección desde la que sopla el viento expresada en valores con unidad QUDT."
     },
     "attributes" : [ "object" ],
-    "id" : "136"
+    "id" : "145"
   }, {
     "iri" : "https://w3id.org/optimar#connectedTo",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "35",
+    "range" : "39",
     "label" : {
       "IRI-based" : "connectedTo",
       "en" : "Connected to",
       "es" : "Conectado a"
     },
-    "domain" : "35",
+    "domain" : "39",
     "comment" : {
       "en" : "Indicates that a component is connected to another.",
       "es" : "Indica que un componente está conectado a otro."
     },
     "attributes" : [ "object", "symmetric" ],
-    "id" : "137"
+    "id" : "146"
   }, {
-    "range" : "9",
-    "domain" : "139",
+    "range" : "100",
+    "domain" : "149",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "138"
+    "id" : "148"
   }, {
     "iri" : "https://w3id.org/optimar#locatedIn",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "142",
+    "range" : "151",
     "label" : {
       "IRI-based" : "locatedIn",
       "en" : "Located in",
       "es" : "Ubicado en"
     },
-    "domain" : "141",
+    "domain" : "110",
     "comment" : {
       "en" : "Indicates the location where the wind power platform is located.",
       "es" : "Indica el lugar en el que se encuentra la plataforma eólica."
     },
     "attributes" : [ "object" ],
-    "id" : "140"
-  }, {
-    "range" : "9",
-    "domain" : "20",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "143"
-  }, {
-    "range" : "9",
-    "domain" : "145",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "144"
-  }, {
-    "range" : "9",
-    "domain" : "147",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "146"
-  }, {
-    "range" : "9",
-    "domain" : "149",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "148"
-  }, {
-    "range" : "11",
-    "domain" : "34",
-    "attributes" : [ "object", "anonymous" ],
     "id" : "150"
   }, {
-    "range" : "141",
-    "domain" : "152",
+    "range" : "100",
+    "domain" : "153",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "151"
+    "id" : "152"
   }, {
-    "range" : "97",
-    "domain" : "96",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "153"
-  }, {
-    "range" : "9",
-    "domain" : "8",
+    "range" : "100",
+    "domain" : "155",
     "attributes" : [ "object", "anonymous" ],
     "id" : "154"
   }, {
-    "range" : "9",
-    "domain" : "108",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "155"
-  }, {
-    "range" : "9",
-    "domain" : "59",
+    "range" : "100",
+    "domain" : "157",
     "attributes" : [ "object", "anonymous" ],
     "id" : "156"
   }, {
+    "range" : "39",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "158"
+  }, {
+    "range" : "55",
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "159"
+  }, {
+    "range" : "55",
+    "domain" : "147",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "160"
+  }, {
+    "range" : "55",
+    "domain" : "90",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "161"
+  }, {
+    "range" : "69",
+    "domain" : "37",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "162"
+  }, {
+    "range" : "100",
+    "domain" : "122",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "163"
+  }, {
+    "range" : "100",
+    "domain" : "77",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "164"
+  }, {
     "iri" : "https://w3id.org/optimar#hasTurbineComponent",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "45",
+    "range" : "44",
     "label" : {
       "IRI-based" : "hasTurbineComponent",
       "en" : "Has turbine component",
       "es" : "Tiene componente de turbina"
     },
-    "domain" : "49",
+    "domain" : "47",
     "comment" : {
       "en" : "Indicates that a turbine has a specific turbine component.",
       "es" : "Indica que una turbina tiene un componente de turbina específico."
     },
     "attributes" : [ "object" ],
-    "id" : "92"
+    "id" : "81"
   }, {
     "iri" : "https://w3id.org/optimar#startDateTime",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "159",
+    "range" : "72",
     "label" : {
       "IRI-based" : "startDateTime",
       "en" : "Start date and time",
       "es" : "Fecha y hora de inicio"
     },
-    "domain" : "158",
+    "domain" : "68",
     "comment" : {
       "en" : "Start timestamp of the event or maintenance.",
       "es" : "Marca temporal de inicio del evento o mantenimiento."
     },
     "attributes" : [ "datatype" ],
-    "id" : "157"
+    "id" : "165"
   }, {
     "iri" : "https://w3id.org/optimar#windSpeed",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "43",
+    "range" : "42",
     "label" : {
       "IRI-based" : "windSpeed",
       "en" : "Wind speed",
       "es" : "Velocidad del viento"
     },
-    "domain" : "65",
+    "domain" : "57",
     "comment" : {
       "en" : "Wind speed expressed as a QUDT quantity value.",
       "es" : "Velocidad del viento expresada como valor QUDT."
     },
     "attributes" : [ "object" ],
-    "id" : "160"
+    "id" : "166"
   }, {
-    "range" : "45",
-    "domain" : "162",
+    "range" : "25",
+    "domain" : "14",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "161"
+    "id" : "169"
   }, {
     "iri" : "https://w3id.org/optimar#measuresStress",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "70",
+    "range" : "103",
     "label" : {
       "IRI-based" : "measuresStress",
       "en" : "Measures stress",
       "es" : "Mide tensión"
     },
-    "domain" : "9",
+    "domain" : "8",
     "comment" : {
       "en" : "Indicates that a sensor measures the stress exerted on a component.",
       "es" : "Indica que un sensor mide la tensión ejercida sobre un componente."
     },
     "attributes" : [ "object" ],
-    "id" : "163"
+    "id" : "170"
   }, {
-    "range" : "45",
-    "domain" : "44",
+    "range" : "25",
+    "domain" : "105",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "164"
+    "id" : "171"
   }, {
-    "range" : "45",
-    "domain" : "93",
+    "range" : "11",
+    "domain" : "8",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "165"
+    "id" : "172"
   }, {
-    "range" : "45",
-    "domain" : "79",
+    "range" : "37",
+    "domain" : "139",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "166"
+    "id" : "173"
   }, {
     "iri" : "https://w3id.org/optimar#width",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "43",
+    "range" : "42",
     "label" : {
       "IRI-based" : "width",
       "en" : "Width",
       "es" : "Anchura"
     },
-    "domain" : "35",
+    "domain" : "39",
     "comment" : {
       "en" : "Width of the component expressed as a QUDT quantity value.",
       "es" : "Anchura del componente expresada como un valor con unidad QUDT."
     },
     "attributes" : [ "object" ],
-    "id" : "167"
+    "id" : "174"
   }, {
-    "range" : "35",
-    "domain" : "49",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "168"
-  }, {
-    "range" : "35",
-    "domain" : "170",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "169"
-  }, {
-    "range" : "35",
-    "domain" : "172",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "171"
-  }, {
-    "range" : "35",
-    "domain" : "174",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "173"
-  }, {
-    "range" : "35",
-    "domain" : "1",
+    "range" : "84",
+    "domain" : "92",
     "attributes" : [ "object", "anonymous" ],
     "id" : "175"
   }, {
-    "range" : "35",
-    "domain" : "177",
+    "range" : "84",
+    "domain" : "93",
     "attributes" : [ "object", "anonymous" ],
     "id" : "176"
   }, {
-    "range" : "35",
-    "domain" : "45",
+    "range" : "25",
+    "domain" : "102",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "177"
+  }, {
+    "range" : "25",
+    "domain" : "63",
     "attributes" : [ "object", "anonymous" ],
     "id" : "178"
   }, {
+    "range" : "25",
+    "domain" : "6",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "179"
+  }, {
+    "range" : "25",
+    "domain" : "103",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "180"
+  }, {
+    "range" : "25",
+    "domain" : "104",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "181"
+  }, {
     "iri" : "https://w3id.org/optimar#deformationLevel",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "180",
+    "range" : "183",
     "label" : {
       "IRI-based" : "deformationLevel",
       "en" : "Deformation level",
       "es" : "Nivel de Deformación"
     },
-    "domain" : "81",
+    "domain" : "22",
     "comment" : {
       "en" : "Degree of deformation recorded in the component.",
       "es" : "Grado de deformación registrado en el componente."
     },
     "attributes" : [ "datatype" ],
-    "id" : "179"
+    "id" : "182"
   }, {
     "iri" : "https://w3id.org/optimar#stressLevel",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "43",
+    "range" : "42",
     "label" : {
       "IRI-based" : "stressLevel",
       "en" : "Stress level",
       "es" : "Nivel de tensión"
     },
-    "domain" : "81",
+    "domain" : "22",
     "comment" : {
       "en" : "Stress level recorded in a component.",
       "es" : "Nivel de tensión registrado en un componente."
     },
     "attributes" : [ "object" ],
-    "id" : "181"
+    "id" : "184"
   }, {
     "iri" : "https://w3id.org/optimar#dateTime",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "183",
+    "range" : "186",
     "label" : {
       "IRI-based" : "dateTime",
       "en" : "Date and time",
       "es" : "Fecha y hora"
     },
-    "domain" : "39",
+    "domain" : "25",
     "comment" : {
       "en" : "Associated temporal mark to the measurement.",
       "es" : "Marca temporal asociada a la medición."
     },
     "attributes" : [ "datatype" ],
-    "id" : "182"
+    "id" : "185"
   }, {
-    "range" : "25",
-    "domain" : "185",
+    "range" : "28",
+    "domain" : "87",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "184"
+    "id" : "187"
   }, {
-    "range" : "25",
-    "domain" : "187",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "186"
-  }, {
-    "range" : "25",
-    "domain" : "189",
+    "range" : "28",
+    "domain" : "88",
     "attributes" : [ "object", "anonymous" ],
     "id" : "188"
   }, {
+    "range" : "28",
+    "domain" : "89",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "189"
+  }, {
     "iri" : "https://w3id.org/optimar#rotationSpeed",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "43",
+    "range" : "42",
     "label" : {
       "IRI-based" : "rotationSpeed",
       "en" : "Rotation speed",
       "es" : "Velocidad de rotación"
     },
-    "domain" : "35",
+    "domain" : "39",
     "comment" : {
       "en" : "Angular speed of a component expressed as a QUDT quantity value.",
       "es" : "Velocidad angular de un componente expresada como un valor con unidad QUDT."
@@ -3475,13 +3609,13 @@
     "iri" : "https://w3id.org/optimar#affects",
     "inverse" : "192",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "35",
+    "range" : "39",
     "label" : {
       "IRI-based" : "affects",
       "en" : "Affects",
       "es" : "Afecta"
     },
-    "domain" : "25",
+    "domain" : "100",
     "comment" : {
       "en" : "Indicates that a failure affects a specific component.",
       "es" : "Indica que un fallo afecta un componente específico."
@@ -3489,514 +3623,519 @@
     "attributes" : [ "object" ],
     "id" : "191"
   }, {
-    "range" : "59",
-    "domain" : "108",
+    "range" : "84",
+    "domain" : "167",
     "attributes" : [ "object", "anonymous" ],
     "id" : "193"
   }, {
-    "range" : "20",
-    "domain" : "149",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "194"
-  }, {
-    "range" : "139",
-    "domain" : "149",
+    "range" : "113",
+    "domain" : "167",
     "attributes" : [ "object", "anonymous" ],
     "id" : "195"
   }, {
-    "iri" : "https://w3id.org/optimar#hasFailureCause",
-    "baseIri" : "https://w3id.org/optimar",
-    "range" : "65",
-    "label" : {
-      "IRI-based" : "hasFailureCause",
-      "en" : "Failure cause",
-      "es" : "Causa de fallo"
-    },
-    "domain" : "25",
-    "comment" : {
-      "en" : "Indicates that a failure is caused by a specific environmental condition.",
-      "es" : "Indica que un fallo tiene su origen en una condición ambiental específica."
-    },
-    "attributes" : [ "object" ],
+    "range" : "197",
+    "domain" : "167",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "196"
   }, {
     "iri" : "https://w3id.org/optimar#severity",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "198",
+    "range" : "71",
     "label" : {
       "IRI-based" : "severity",
       "en" : "Severity",
       "es" : "Severidad"
     },
-    "domain" : "25",
+    "domain" : "100",
     "comment" : {
       "en" : "Severity level of the failure: 'low', 'medium', 'high', 'critical'.",
       "es" : "Nivel de severidad del fallo: 'low', 'medium', 'high', 'critical'."
     },
     "attributes" : [ "datatype" ],
-    "id" : "197"
+    "id" : "198"
   }, {
-    "range" : "20",
-    "domain" : "52",
-    "attributes" : [ "object", "anonymous" ],
+    "iri" : "https://w3id.org/optimar#hasFailureCause",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "57",
+    "label" : {
+      "IRI-based" : "hasFailureCause",
+      "en" : "Failure cause",
+      "es" : "Causa de fallo"
+    },
+    "domain" : "100",
+    "comment" : {
+      "en" : "Indicates that a failure is caused by a specific environmental condition.",
+      "es" : "Indica que un fallo tiene su origen en una condición ambiental específica."
+    },
+    "attributes" : [ "object" ],
     "id" : "199"
   }, {
-    "range" : "139",
-    "domain" : "52",
+    "range" : "23",
+    "domain" : "7",
     "attributes" : [ "object", "anonymous" ],
     "id" : "200"
   }, {
-    "range" : "59",
-    "domain" : "149",
+    "range" : "202",
+    "domain" : "7",
     "attributes" : [ "object", "anonymous" ],
     "id" : "201"
   }, {
-    "range" : "108",
-    "domain" : "149",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "202"
-  }, {
-    "range" : "149",
-    "domain" : "52",
+    "range" : "28",
+    "domain" : "167",
     "attributes" : [ "object", "anonymous" ],
     "id" : "203"
   }, {
-    "range" : "20",
-    "domain" : "147",
+    "range" : "13",
+    "domain" : "7",
     "attributes" : [ "object", "anonymous" ],
     "id" : "204"
   }, {
-    "range" : "59",
-    "domain" : "52",
+    "range" : "197",
+    "domain" : "7",
     "attributes" : [ "object", "anonymous" ],
     "id" : "205"
   }, {
+    "range" : "28",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "206"
+  }, {
+    "range" : "84",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "207"
+  }, {
     "iri" : "https://w3id.org/optimar#causesFailure",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "25",
+    "range" : "100",
     "label" : {
       "IRI-based" : "causesFailure",
       "en" : "Causes failure",
       "es" : "Causa fallo"
     },
-    "domain" : "25",
+    "domain" : "100",
     "comment" : {
       "en" : "Indicates that a failure causes another failure (cascade relationship)",
       "es" : "Indica que un fallo causa otro fallo (realación de cascada)"
     },
     "attributes" : [ "object" ],
-    "id" : "206"
+    "id" : "208"
   }, {
-    "range" : "108",
-    "domain" : "52",
+    "range" : "113",
+    "domain" : "7",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "207"
+    "id" : "209"
   }, {
     "iri" : "https://w3id.org/optimar#misalignmentLevel",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "209",
+    "range" : "211",
     "label" : {
       "IRI-based" : "misalignmentLevel",
       "en" : "Misalignment level",
       "es" : "Nivel de desalineación"
     },
-    "domain" : "81",
+    "domain" : "22",
     "comment" : {
       "en" : "Measure of the misalignment level detected in a component.",
       "es" : "Medida del grado de desalineación detectada en un componente."
     },
     "attributes" : [ "datatype" ],
-    "id" : "208"
+    "id" : "210"
   }, {
     "iri" : "https://w3id.org/optimar#displacement",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "211",
+    "range" : "213",
     "label" : {
       "IRI-based" : "displacement",
       "en" : "Displacement",
       "es" : "Desplazamiento"
     },
-    "domain" : "81",
+    "domain" : "22",
     "comment" : {
       "en" : "Displacement or position change recorded in the component.",
       "es" : "Desplazamiento o cambio de posición registrado en el componente."
     },
     "attributes" : [ "datatype" ],
-    "id" : "210"
+    "id" : "212"
   }, {
     "iri" : "https://w3id.org/optimar#measuresTemperatureOf",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "212",
+    "range" : "214",
     "label" : {
       "IRI-based" : "measuresTemperatureOf",
       "en" : "Measures temperature of",
       "es" : "Mide temperatura de"
     },
-    "domain" : "20",
+    "domain" : "23",
     "comment" : {
       "en" : "Relates a temperature sensor with the component or environmental condition whose temperature it measures.",
       "es" : "Relaciona un sensor de temperatura con el componente o condición ambiental cuya temperatura mide."
     },
     "attributes" : [ "object" ],
-    "id" : "32"
+    "id" : "35"
   }, {
     "iri" : "https://w3id.org/optimar#measuresVibration",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "47",
+    "range" : "105",
     "label" : {
       "IRI-based" : "measuresVibration",
       "en" : "Measures vibration",
       "es" : "Mide vibración"
     },
-    "domain" : "9",
+    "domain" : "8",
     "comment" : {
       "en" : "Indicates that a sensor collects vibration data from a component.",
       "es" : "Indica que un sensor obtiene datos de vibración de un componente."
     },
     "attributes" : [ "object" ],
-    "id" : "213"
+    "id" : "215"
   }, {
     "iri" : "https://w3id.org/optimar#mass",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "43",
+    "range" : "42",
     "label" : {
       "IRI-based" : "mass",
       "en" : "Mass",
       "es" : "Masa"
     },
-    "domain" : "35",
+    "domain" : "39",
     "comment" : {
       "en" : "Mass of the component expressed as a QUDT quantity value",
       "es" : "Masa del componente expresada expresada como un valor con unidad QUDT"
     },
     "attributes" : [ "object" ],
-    "id" : "214"
+    "id" : "216"
   }, {
-    "range" : "59",
-    "domain" : "147",
+    "iri" : "https://w3id.org/optimar#monitorsPitchOf",
+    "inverse" : "219",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "monitorsPitchOf",
+      "en" : "Monitors pitch of",
+      "es" : "Monitorea pitch de"
+    },
+    "domain" : "218",
+    "comment" : {
+      "en" : "Relates a pitch sensor with the blade whose angle it monitors.",
+      "es" : "Relaciona un sensor de pitch con la pala cuyo ángulo monitorea."
+    },
+    "attributes" : [ "object" ],
+    "id" : "217"
+  }, {
+    "iri" : "https://w3id.org/optimar#pitchAngleMonitoredBy",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "218",
+    "label" : {
+      "IRI-based" : "pitchAngleMonitoredBy",
+      "en" : "Pitch angle monitored by",
+      "es" : "Ángulo de pitch monitoreado por"
+    },
+    "domain" : "82",
+    "comment" : {
+      "en" : "Relates a blade with the sensor that monitors its pitch angle.",
+      "es" : "Relaciona una pala con el sensor que monitorea su ángulo de pitch."
+    },
+    "attributes" : [ "object" ],
+    "id" : "219"
+  }, {
+    "range" : "13",
+    "domain" : "194",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "215"
+    "id" : "220"
   }, {
     "iri" : "https://w3id.org/optimar#performedMaintenance",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "74",
+    "range" : "65",
     "label" : {
       "IRI-based" : "performedMaintenance",
       "en" : "Performs maintenance",
       "es" : "Realiza mantenimiento"
     },
-    "domain" : "16",
+    "domain" : "18",
     "comment" : {
       "en" : "Relates an actor with the maintenance that it performs.",
       "es" : "Relaciona un actor con el mantenimiento que realiza."
     },
     "attributes" : [ "object" ],
-    "id" : "216"
+    "id" : "221"
   }, {
-    "range" : "108",
-    "domain" : "147",
+    "range" : "23",
+    "domain" : "194",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "217"
+    "id" : "222"
   }, {
     "iri" : "https://w3id.org/optimar#adjusts",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "219",
+    "range" : "224",
     "label" : {
       "IRI-based" : "adjusts",
       "en" : "Adjusts",
       "es" : "Ajusta"
     },
-    "domain" : "16",
+    "domain" : "18",
     "comment" : {
       "en" : "Indicates that an actor makes adjustments on a component or pitch system.",
       "es" : "Indica que un actor realiza ajustes sobre un componente o sistema de pitch."
     },
     "attributes" : [ "object" ],
-    "id" : "218"
-  }, {
-    "range" : "139",
-    "domain" : "147",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "220"
-  }, {
-    "range" : "20",
-    "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "221"
-  }, {
-    "range" : "139",
-    "domain" : "8",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "222"
-  }, {
-    "range" : "149",
-    "domain" : "147",
-    "attributes" : [ "object", "anonymous" ],
     "id" : "223"
   }, {
-    "range" : "52",
-    "domain" : "147",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "224"
-  }, {
-    "range" : "149",
-    "domain" : "8",
+    "range" : "167",
+    "domain" : "7",
     "attributes" : [ "object", "anonymous" ],
     "id" : "225"
   }, {
-    "range" : "59",
-    "domain" : "8",
+    "range" : "113",
+    "domain" : "194",
     "attributes" : [ "object", "anonymous" ],
     "id" : "226"
   }, {
-    "range" : "108",
-    "domain" : "8",
+    "range" : "197",
+    "domain" : "194",
     "attributes" : [ "object", "anonymous" ],
     "id" : "227"
   }, {
-    "iri" : "https://w3id.org/optimar#isSupportedBy",
-    "baseIri" : "https://w3id.org/optimar",
-    "range" : "79",
-    "label" : {
-      "IRI-based" : "isSupportedBy",
-      "en" : "Is supported by",
-      "es" : "Es soportado por"
-    },
-    "domain" : "44",
-    "comment" : {
-      "en" : "Indicates that a component is structurally or functionally supported by another.",
-      "es" : "Indica que un componente depende estructural o funcionalmente de otro para su soporte."
-    },
-    "attributes" : [ "object", "someValues" ],
+    "range" : "202",
+    "domain" : "194",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "228"
   }, {
-    "iri" : "https://w3id.org/optimar#madeBySensor",
-    "baseIri" : "https://w3id.org/optimar",
-    "range" : "9",
-    "label" : {
-      "IRI-based" : "madeBySensor",
-      "en" : "Made by sensor",
-      "es" : "Realizada por sensor"
-    },
-    "domain" : "34",
-    "comment" : {
-      "en" : "Relates an observation to the sensor that made it.",
-      "es" : "Relaciona una observación con el sensor que la realizó."
-    },
-    "attributes" : [ "object", "someValues" ],
+    "range" : "84",
+    "domain" : "194",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "229"
   }, {
-    "iri" : "https://w3id.org/optimar#houses",
-    "baseIri" : "https://w3id.org/optimar",
-    "range" : "170",
-    "label" : {
-      "IRI-based" : "houses",
-      "en" : "Houses",
-      "es" : "Aloja"
-    },
-    "domain" : "44",
-    "comment" : {
-      "en" : "Indicates that a component contains or houses physically another in its structure.",
-      "es" : "Indica que un componente contiene o aloja fisicamente a otro en su estructura."
-    },
-    "attributes" : [ "object", "someValues" ],
+    "range" : "7",
+    "domain" : "194",
+    "attributes" : [ "object", "anonymous" ],
     "id" : "230"
   }, {
+    "range" : "28",
+    "domain" : "194",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "231"
+  }, {
+    "range" : "167",
+    "domain" : "194",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "232"
+  }, {
+    "range" : "23",
+    "domain" : "84",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "233"
+  }, {
+    "range" : "18",
+    "domain" : "235",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "234"
+  }, {
+    "range" : "23",
+    "domain" : "202",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "236"
+  }, {
+    "range" : "13",
+    "domain" : "84",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "237"
+  }, {
     "iri" : "https://w3id.org/optimar#isHousedIn",
-    "inverse" : "232",
+    "inverse" : "239",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "35",
+    "range" : "39",
     "label" : {
       "IRI-based" : "isHousedIn",
       "en" : "Is housed in",
       "es" : "Está alojado en"
     },
-    "domain" : "35",
+    "domain" : "39",
     "comment" : {
       "en" : "Indicates that a component is physically contained within another.",
       "es" : "Indica que un componente está fisicamente contenido dentro de otro."
     },
     "attributes" : [ "object" ],
-    "id" : "231"
+    "id" : "238"
   }, {
     "iri" : "https://w3id.org/optimar#lightCorrosion",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "234",
+    "range" : "242",
     "label" : {
       "IRI-based" : "lightCorrosion",
       "en" : "Light corrosion level",
       "es" : "Nivel de corrosión clara"
     },
-    "domain" : "3",
+    "domain" : "139",
     "comment" : {
       "en" : "Level of light corrosion detected on the material surface.",
       "es" : "Nivel de corrosión clara detectada en la superficie del material."
     },
     "attributes" : [ "datatype" ],
-    "id" : "233"
+    "id" : "241"
   }, {
     "iri" : "https://w3id.org/optimar#pressureLevel",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "43",
+    "range" : "42",
     "label" : {
       "IRI-based" : "pressureLevel",
       "en" : "Pressure level",
       "es" : "Nivel de presión"
     },
-    "domain" : "81",
+    "domain" : "22",
     "comment" : {
       "en" : "Pressure exerted on a component.",
       "es" : "Presión ejercida sobre un componente."
     },
     "attributes" : [ "object" ],
-    "id" : "235"
+    "id" : "243"
   }, {
     "iri" : "https://w3id.org/optimar#precededBy",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "25",
+    "range" : "100",
     "label" : {
       "IRI-based" : "precededBy",
       "en" : "Preceded by",
       "es" : "Precedido por"
     },
-    "domain" : "25",
+    "domain" : "100",
     "comment" : {
       "en" : "Indicates that a failure was preceded temporally by another failure.",
       "es" : "Indica que un fallo fue precedido tempralmente por otro fallo."
     },
     "attributes" : [ "object" ],
-    "id" : "236"
+    "id" : "244"
   }, {
-    "iri" : "https://w3id.org/optimar#connectedTo",
-    "baseIri" : "https://w3id.org/optimar",
-    "range" : "93",
-    "label" : {
-      "IRI-based" : "connectedTo",
-      "en" : "Connected to",
-      "es" : "Conectado a"
-    },
-    "domain" : "162",
-    "comment" : {
-      "en" : "Indicates that a component is connected to another.",
-      "es" : "Indica que un componente está conectado a otro."
-    },
-    "attributes" : [ "object", "someValues", "symmetric" ],
-    "id" : "237"
-  }, {
-    "iri" : "https://w3id.org/optimar#transmitsMovementTo",
-    "baseIri" : "https://w3id.org/optimar",
-    "range" : "170",
-    "label" : {
-      "IRI-based" : "transmitsMovementTo",
-      "en" : "Transmits movement to",
-      "es" : "Transmite movimiento a"
-    },
-    "domain" : "162",
-    "comment" : {
-      "en" : "Indicates that a component transmits mechanical movement to another.",
-      "es" : "Indica que un componente transmite movimiento mecánico a otro."
-    },
-    "attributes" : [ "object", "someValues" ],
-    "id" : "238"
-  }, {
-    "range" : "185",
-    "domain" : "29",
+    "range" : "23",
+    "domain" : "113",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "239"
+    "id" : "245"
   }, {
-    "iri" : "https://w3id.org/optimar#performedBy",
-    "baseIri" : "https://w3id.org/optimar",
-    "range" : "124",
-    "label" : {
-      "IRI-based" : "performedBy",
-      "en" : "Performed by",
-      "es" : "Realizado por"
-    },
-    "domain" : "74",
-    "comment" : {
-      "en" : "Indicates that a maintenance has been performed by an actor.",
-      "es" : "Indica que un mantenimiento se ha realizado por un actor."
-    },
-    "attributes" : [ "object", "someValues" ],
-    "id" : "240"
+    "range" : "63",
+    "domain" : "168",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "246"
+  }, {
+    "range" : "202",
+    "domain" : "113",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "247"
+  }, {
+    "range" : "63",
+    "domain" : "107",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "248"
+  }, {
+    "range" : "202",
+    "domain" : "84",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "249"
+  }, {
+    "range" : "63",
+    "domain" : "251",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "250"
+  }, {
+    "range" : "13",
+    "domain" : "113",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "252"
+  }, {
+    "range" : "63",
+    "domain" : "62",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "253"
   }, {
     "iri" : "https://w3id.org/optimar#value",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "242",
+    "range" : "48",
     "label" : {
       "IRI-based" : "value",
       "en" : "Value",
       "es" : "Valor"
     },
-    "domain" : "39",
+    "domain" : "25",
     "comment" : {
       "en" : "Numeric value of the measurement taken by a sensor.",
       "es" : "Valor numérico de la medición tomada por un sensor."
     },
     "attributes" : [ "datatype" ],
-    "id" : "241"
+    "id" : "254"
   }, {
-    "range" : "29",
-    "domain" : "24",
+    "range" : "23",
+    "domain" : "197",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "243"
+    "id" : "255"
   }, {
-    "range" : "185",
-    "domain" : "3",
+    "range" : "18",
+    "domain" : "257",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "244"
+    "id" : "256"
   }, {
-    "iri" : "https://w3id.org/optimar#causedBy",
-    "baseIri" : "https://w3id.org/optimar",
-    "range" : "25",
-    "label" : {
-      "IRI-based" : "causedBy",
-      "en" : "Caused by",
-      "es" : "Causado por"
-    },
-    "domain" : "4",
-    "comment" : {
-      "en" : "Relates an event with the failure that caused it.",
-      "es" : "Relaciona un evento con el fallo que lo provocó."
-    },
-    "attributes" : [ "object", "someValues" ],
-    "id" : "245"
-  }, {
-    "range" : "185",
-    "domain" : "24",
+    "range" : "202",
+    "domain" : "197",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "246"
+    "id" : "258"
   }, {
-    "iri" : "https://w3id.org/optimar#causedBy",
-    "baseIri" : "https://w3id.org/optimar",
-    "range" : "27",
-    "label" : {
-      "IRI-based" : "causedBy",
-      "en" : "Caused by",
-      "es" : "Causado por"
-    },
-    "domain" : "3",
-    "comment" : {
-      "en" : "Relates an event with the failure that caused it.",
-      "es" : "Relaciona un evento con el fallo que lo provocó."
-    },
-    "attributes" : [ "object", "someValues" ],
-    "id" : "247"
-  }, {
-    "range" : "29",
-    "domain" : "3",
+    "range" : "18",
+    "domain" : "97",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "248"
+    "id" : "259"
+  }, {
+    "range" : "84",
+    "domain" : "113",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "260"
+  }, {
+    "range" : "18",
+    "domain" : "240",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "261"
+  }, {
+    "range" : "13",
+    "domain" : "197",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "262"
+  }, {
+    "range" : "18",
+    "domain" : "117",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "263"
+  }, {
+    "range" : "8",
+    "domain" : "218",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "264"
+  }, {
+    "range" : "8",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "265"
+  }, {
+    "range" : "84",
+    "domain" : "197",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "266"
+  }, {
+    "range" : "63",
+    "domain" : "106",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "267"
+  }, {
+    "range" : "113",
+    "domain" : "197",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "268"
   }, {
     "iri" : "https://w3id.org/optimar#affectedBy",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "25",
+    "range" : "100",
     "label" : {
       "IRI-based" : "affectedBy",
       "en" : "Affected by",
       "es" : "Afectado por"
     },
-    "domain" : "35",
+    "domain" : "39",
     "comment" : {
       "en" : "Indicates that a turbine component is affected by a specific failure.",
       "es" : "Indica que un componente de turbina está afectado por un fallo específico."
@@ -4005,489 +4144,731 @@
     "id" : "192"
   }, {
     "iri" : "https://w3id.org/optimar#detects",
-    "inverse" : "107",
+    "inverse" : "111",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "22",
+    "range" : "69",
     "label" : {
       "IRI-based" : "detects",
       "en" : "Detects",
       "es" : "Detecta"
     },
-    "domain" : "9",
+    "domain" : "8",
     "comment" : {
       "en" : "Relates a sensor to the event that it detects.",
       "es" : "Relaciona un sensor con el evento que detecta."
     },
     "attributes" : [ "object" ],
-    "id" : "249"
+    "id" : "269"
   }, {
     "iri" : "https://w3id.org/optimar#length",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "43",
+    "range" : "42",
     "label" : {
       "IRI-based" : "length",
       "en" : "Length",
       "es" : "Longitud"
     },
-    "domain" : "35",
+    "domain" : "39",
     "comment" : {
       "en" : "Length of a component, expressed as a QUDT quantity value",
       "es" : "Longitud de un componente, expresada como un valor con unidad QUDT"
     },
     "attributes" : [ "object" ],
-    "id" : "250"
+    "id" : "270"
   }, {
-    "range" : "24",
-    "domain" : "27",
+    "range" : "13",
+    "domain" : "28",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "251"
+    "id" : "271"
   }, {
-    "iri" : "https://w3id.org/optimar#connectedTo",
+    "range" : "84",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "272"
+  }, {
+    "range" : "113",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "273"
+  }, {
+    "range" : "8",
+    "domain" : "84",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "274"
+  }, {
+    "iri" : "https://w3id.org/optimar#measuresPitchAngle",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "162",
+    "range" : "104",
     "label" : {
-      "IRI-based" : "connectedTo",
-      "en" : "Connected to",
-      "es" : "Conectado a"
+      "IRI-based" : "measuresPitchAngle",
+      "en" : "Measures pitch angle",
+      "es" : "Mide ángulo de pitch"
     },
-    "domain" : "93",
+    "domain" : "218",
     "comment" : {
-      "en" : "Indicates that a component is connected to another.",
-      "es" : "Indica que un componente está conectado a otro."
+      "en" : "Relates a pitch sensor with the pitch angle data it measures.",
+      "es" : "Relaciona un sensor de pitch con los datos de ángulo de pitch que mide."
     },
-    "attributes" : [ "object", "someValues", "symmetric" ],
-    "id" : "252"
+    "attributes" : [ "object" ],
+    "id" : "275"
   }, {
-    "range" : "20",
-    "domain" : "139",
+    "range" : "23",
+    "domain" : "28",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "253"
+    "id" : "276"
   }, {
-    "range" : "185",
-    "domain" : "27",
+    "range" : "8",
+    "domain" : "202",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "254"
+    "id" : "277"
   }, {
-    "range" : "29",
-    "domain" : "27",
+    "range" : "202",
+    "domain" : "28",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "255"
+    "id" : "278"
   }, {
-    "range" : "20",
-    "domain" : "108",
+    "range" : "8",
+    "domain" : "23",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "256"
+    "id" : "279"
   }, {
-    "range" : "139",
-    "domain" : "108",
+    "range" : "23",
+    "domain" : "167",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "257"
+    "id" : "280"
+  }, {
+    "range" : "8",
+    "domain" : "194",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "281"
+  }, {
+    "range" : "202",
+    "domain" : "167",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "282"
+  }, {
+    "range" : "8",
+    "domain" : "167",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "283"
   }, {
     "iri" : "https://w3id.org/optimar#performedBy",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "16",
+    "range" : "18",
     "label" : {
       "IRI-based" : "performedBy",
       "en" : "Performed by",
       "es" : "Realizado por"
     },
-    "domain" : "74",
+    "domain" : "65",
     "comment" : {
       "en" : "Indicates that a maintenance has been performed by an actor.",
       "es" : "Indica que un mantenimiento se ha realizado por un actor."
     },
     "attributes" : [ "object" ],
-    "id" : "258"
+    "id" : "284"
   }, {
-    "range" : "20",
-    "domain" : "59",
+    "range" : "197",
+    "domain" : "28",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "259"
+    "id" : "285"
+  }, {
+    "range" : "8",
+    "domain" : "197",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "286"
   }, {
     "iri" : "https://w3id.org/optimar#material",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "261",
+    "range" : "288",
     "label" : {
       "IRI-based" : "material",
       "en" : "Material",
       "es" : "Material"
     },
-    "domain" : "35",
+    "domain" : "39",
     "comment" : {
       "en" : "Material of manufacturing of the component (e.g. steel, composite, fiberglass, etc.).",
       "es" : "Material de fabricación del componente (ej. acero, compuesto, fibra de vidrio, etc.)."
     },
     "attributes" : [ "datatype" ],
-    "id" : "260"
+    "id" : "287"
   }, {
-    "range" : "139",
-    "domain" : "59",
+    "range" : "13",
+    "domain" : "167",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "262"
+    "id" : "289"
+  }, {
+    "range" : "8",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "290"
+  }, {
+    "iri" : "https://w3id.org/optimar#supports",
+    "inverse" : "292",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "supports",
+      "en" : "Supports",
+      "es" : "Soporta a"
+    },
+    "domain" : "70",
+    "comment" : {
+      "en" : "Indicates that a component provides structural or functional support to another.",
+      "es" : "Indica que un componente proporciona soporte estructural o funcional a otro."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "291"
+  }, {
+    "iri" : "https://w3id.org/optimar#madeBySensor",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "madeBySensor",
+      "en" : "Made by sensor",
+      "es" : "Realizada por sensor"
+    },
+    "domain" : "38",
+    "comment" : {
+      "en" : "Relates an observation to the sensor that made it.",
+      "es" : "Relaciona una observación con el sensor que la realizó."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "293"
+  }, {
+    "iri" : "https://w3id.org/optimar#isSupportedBy",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "isSupportedBy",
+      "en" : "Is supported by",
+      "es" : "Es soportado por"
+    },
+    "domain" : "70",
+    "comment" : {
+      "en" : "Indicates that a component is structurally or functionally supported by another.",
+      "es" : "Indica que un componente depende estructural o funcionalmente de otro para su soporte."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "294"
+  }, {
+    "iri" : "https://w3id.org/optimar#isSupportedBy",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "70",
+    "label" : {
+      "IRI-based" : "isSupportedBy",
+      "en" : "Is supported by",
+      "es" : "Es soportado por"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "Indicates that a component is structurally or functionally supported by another.",
+      "es" : "Indica que un componente depende estructural o funcionalmente de otro para su soporte."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "295"
   }, {
     "iri" : "https://w3id.org/optimar#materialWear",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "266",
+    "range" : "297",
     "label" : {
       "IRI-based" : "materialWear",
       "en" : "Material wear",
       "es" : "Desgaste material"
     },
-    "domain" : "81",
+    "domain" : "22",
     "comment" : {
       "en" : "Degree of material wear in a component.",
       "es" : "Grado de desgaste de un material en un componente."
     },
     "attributes" : [ "datatype" ],
-    "id" : "265"
+    "id" : "296"
   }, {
     "iri" : "https://w3id.org/optimar#houses",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "35",
+    "range" : "135",
     "label" : {
       "IRI-based" : "houses",
       "en" : "Houses",
       "es" : "Aloja"
     },
-    "domain" : "35",
+    "domain" : "43",
+    "comment" : {
+      "en" : "Indicates that a component contains or houses physically another in its structure.",
+      "es" : "Indica que un componente contiene o aloja fisicamente a otro en su estructura."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "298"
+  }, {
+    "range" : "153",
+    "domain" : "149",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "299"
+  }, {
+    "iri" : "https://w3id.org/optimar#connectedTo",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "connectedTo",
+      "en" : "Connected to",
+      "es" : "Conectado a"
+    },
+    "domain" : "129",
+    "comment" : {
+      "en" : "Indicates that a component is connected to another.",
+      "es" : "Indica que un componente está conectado a otro."
+    },
+    "attributes" : [ "object", "symmetric", "someValues" ],
+    "id" : "300"
+  }, {
+    "iri" : "https://w3id.org/optimar#causedBy",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "100",
+    "label" : {
+      "IRI-based" : "causedBy",
+      "en" : "Caused by",
+      "es" : "Causado por"
+    },
+    "domain" : "37",
+    "comment" : {
+      "en" : "Relates an event with the failure that caused it.",
+      "es" : "Relaciona un evento con el fallo que lo provocó."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "301"
+  }, {
+    "iri" : "https://w3id.org/optimar#performedBy",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "240",
+    "label" : {
+      "IRI-based" : "performedBy",
+      "en" : "Performed by",
+      "es" : "Realizado por"
+    },
+    "domain" : "65",
+    "comment" : {
+      "en" : "Indicates that a maintenance has been performed by an actor.",
+      "es" : "Indica que un mantenimiento se ha realizado por un actor."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "302"
+  }, {
+    "iri" : "https://w3id.org/optimar#transmitsMovementTo",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "135",
+    "label" : {
+      "IRI-based" : "transmitsMovementTo",
+      "en" : "Transmits movement to",
+      "es" : "Transmite movimiento a"
+    },
+    "domain" : "129",
+    "comment" : {
+      "en" : "Indicates that a component transmits mechanical movement to another.",
+      "es" : "Indica que un componente transmite movimiento mecánico a otro."
+    },
+    "attributes" : [ "object", "someValues" ],
+    "id" : "303"
+  }, {
+    "iri" : "https://w3id.org/optimar#houses",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "houses",
+      "en" : "Houses",
+      "es" : "Aloja"
+    },
+    "domain" : "39",
     "comment" : {
       "en" : "Indicates that a component contains or houses physically another in its structure.",
       "es" : "Indica que un componente contiene o aloja fisicamente a otro en su estructura."
     },
     "attributes" : [ "object" ],
-    "id" : "232"
+    "id" : "239"
+  }, {
+    "range" : "149",
+    "domain" : "139",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "304"
+  }, {
+    "range" : "153",
+    "domain" : "139",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "305"
+  }, {
+    "range" : "153",
+    "domain" : "122",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "306"
+  }, {
+    "range" : "149",
+    "domain" : "122",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "307"
   }, {
     "iri" : "https://w3id.org/optimar#externalShape",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "264",
+    "range" : "309",
     "label" : {
       "IRI-based" : "externalShape",
       "en" : "External shape",
       "es" : "Forma externa"
     },
-    "domain" : "35",
+    "domain" : "39",
     "comment" : {
       "en" : "Describe the external shape or geometric of the component.",
       "es" : "Describe la forma externa o geometría del componente."
     },
     "attributes" : [ "datatype" ],
-    "id" : "269"
+    "id" : "308"
   }, {
     "iri" : "https://w3id.org/optimar#corrosionLevel",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "268",
+    "range" : "311",
     "label" : {
       "IRI-based" : "corrosionLevel",
       "en" : "Corrosion level",
       "es" : "Nivel de corrosión"
     },
-    "domain" : "3",
+    "domain" : "139",
     "comment" : {
       "en" : "General corrosion index detected in a component.",
       "es" : "Índice general de corrosión detectada en un componente."
     },
     "attributes" : [ "datatype" ],
-    "id" : "270"
+    "id" : "310"
   }, {
     "iri" : "https://w3id.org/optimar#hasGeneratedData",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "81",
+    "range" : "22",
     "label" : {
       "IRI-based" : "hasGeneratedData",
       "en" : "Generates",
       "es" : "Genera"
     },
-    "domain" : "272",
+    "domain" : "59",
     "comment" : {
       "en" : "Relates an event to the generated data by the same.",
       "es" : "Relaciona un evento con los datos generados por el mismo."
     },
     "attributes" : [ "object" ],
-    "id" : "271"
+    "id" : "312"
   }, {
     "iri" : "https://w3id.org/optimar#darkCorrosionLevel",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "267",
+    "range" : "314",
     "label" : {
       "IRI-based" : "darkCorrosionLevel",
       "en" : "Dark corrosion level",
       "es" : "Nivel de corrosión oscura"
     },
-    "domain" : "3",
+    "domain" : "139",
     "comment" : {
       "en" : "Level of dark corrosion detected on the mmaterial surface.",
       "es" : "Nivel de corrosión oscura detectada en la superficie del material."
     },
     "attributes" : [ "datatype" ],
-    "id" : "273"
+    "id" : "313"
   }, {
     "iri" : "https://w3id.org/optimar#isSupportedBy",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "35",
+    "range" : "39",
     "label" : {
       "IRI-based" : "isSupportedBy",
       "en" : "Is supported by",
       "es" : "Es soportado por"
     },
-    "domain" : "35",
+    "domain" : "39",
     "comment" : {
       "en" : "Indicates that a component is structurally or functionally supported by another.",
       "es" : "Indica que un componente depende estructural o funcionalmente de otro para su soporte."
     },
     "attributes" : [ "object" ],
-    "id" : "274"
+    "id" : "292"
   }, {
-    "iri" : "https://w3id.org/optimar#supports",
-    "inverse" : "274",
+    "range" : "153",
+    "domain" : "77",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "315"
+  }, {
+    "range" : "149",
+    "domain" : "77",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "316"
+  }, {
+    "iri" : "https://w3id.org/optimar#causedBy",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "44",
+    "range" : "77",
     "label" : {
-      "IRI-based" : "supports",
-      "en" : "Supports",
-      "es" : "Soporta a"
+      "IRI-based" : "causedBy",
+      "en" : "Caused by",
+      "es" : "Causado por"
     },
-    "domain" : "79",
+    "domain" : "139",
     "comment" : {
-      "en" : "Indicates that a component provides structural or functional support to another.",
-      "es" : "Indica que un componente proporciona soporte estructural o funcional a otro."
+      "en" : "Relates an event with the failure that caused it.",
+      "es" : "Relaciona un evento con el fallo que lo provocó."
     },
     "attributes" : [ "object", "someValues" ],
-    "id" : "275"
+    "id" : "317"
+  }, {
+    "range" : "13",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "318"
   }, {
     "iri" : "https://w3id.org/optimar#relatedToComponent",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "35",
+    "range" : "39",
     "label" : {
       "IRI-based" : "relatedToComponent",
       "en" : "Related to component",
       "es" : "Relacionado con componente"
     },
-    "domain" : "22",
+    "domain" : "69",
     "comment" : {
       "en" : "Relates an event to the platform component that is affected.",
       "es" : "Relaciona un evento con el componente de la plataforma que se ve afectado."
     },
     "attributes" : [ "object" ],
-    "id" : "276"
+    "id" : "319"
   }, {
-    "iri" : "https://w3id.org/optimar#isSupportedBy",
-    "baseIri" : "https://w3id.org/optimar",
-    "range" : "36",
-    "label" : {
-      "IRI-based" : "isSupportedBy",
-      "en" : "Is supported by",
-      "es" : "Es soportado por"
-    },
-    "domain" : "79",
-    "comment" : {
-      "en" : "Indicates that a component is structurally or functionally supported by another.",
-      "es" : "Indica que un componente depende estructural o funcionalmente de otro para su soporte."
-    },
-    "attributes" : [ "object", "someValues" ],
-    "id" : "277"
+    "range" : "13",
+    "domain" : "202",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "320"
   }, {
     "iri" : "https://w3id.org/optimar#hasRole",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "7",
+    "range" : "55",
     "label" : {
       "IRI-based" : "hasRole",
       "en" : "Has role",
       "es" : "Tiene rol"
     },
-    "domain" : "16",
+    "domain" : "18",
     "comment" : {
       "en" : "Indicates the role that an actor performs within the system.",
       "es" : "Indica el rol que desempeña un actor dentro del sistema."
     },
     "attributes" : [ "object" ],
-    "id" : "278"
+    "id" : "321"
+  }, {
+    "range" : "122",
+    "domain" : "77",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "322"
   }, {
     "iri" : "https://w3id.org/optimar#unit",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "281",
+    "range" : "73",
     "label" : {
       "IRI-based" : "unit",
       "en" : "Unit",
       "es" : "Unidad"
     },
-    "domain" : "39",
+    "domain" : "25",
     "comment" : {
       "en" : "Measurement unit of the recorded value (e.g. m/s, rpm, °C, etc.).",
       "es" : "Unidad de medida del valor registrado (ej. m/s, rpm, °C, etc.)."
     },
     "attributes" : [ "datatype" ],
-    "id" : "280"
+    "id" : "323"
+  }, {
+    "iri" : "https://w3id.org/optimar#connectedTo",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "129",
+    "label" : {
+      "IRI-based" : "connectedTo",
+      "en" : "Connected to",
+      "es" : "Conectado a"
+    },
+    "domain" : "82",
+    "comment" : {
+      "en" : "Indicates that a component is connected to another.",
+      "es" : "Indica que un componente está conectado a otro."
+    },
+    "attributes" : [ "object", "symmetric", "someValues" ],
+    "id" : "324"
   }, {
     "iri" : "https://w3id.org/optimar#monitorsDeformation",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "24",
+    "range" : "122",
     "label" : {
       "IRI-based" : "monitorsDeformation",
       "en" : "Monitors deformation",
       "es" : "Monitorea deformación"
     },
-    "domain" : "9",
+    "domain" : "8",
     "comment" : {
       "en" : "Relates a sensor to the structural deformation it measures or monitors.",
       "es" : "Relaciona un sensor con la deformación estructural que mide o supervisa."
     },
     "attributes" : [ "object" ],
-    "id" : "282"
-  }, {
-    "range" : "38",
-    "domain" : "40",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "283"
-  }, {
-    "range" : "1",
-    "domain" : "36",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "284"
-  }, {
-    "range" : "81",
-    "domain" : "94",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "285"
-  }, {
-    "range" : "38",
-    "domain" : "41",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "286"
+    "id" : "325"
   }, {
     "iri" : "https://w3id.org/optimar#supports",
-    "inverse" : "274",
+    "inverse" : "292",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "35",
+    "range" : "39",
     "label" : {
       "IRI-based" : "supports",
       "en" : "Supports",
       "es" : "Soporta a"
     },
-    "domain" : "35",
+    "domain" : "39",
     "comment" : {
       "en" : "Indicates that a component provides structural or functional support to another.",
       "es" : "Indica que un componente proporciona soporte estructural o funcional a otro."
     },
     "attributes" : [ "object" ],
-    "id" : "288"
+    "id" : "327"
   }, {
-    "range" : "1",
-    "domain" : "0",
-    "attributes" : [ "object", "anonymous" ],
-    "id" : "289"
+    "iri" : "https://w3id.org/optimar#yawAngleMonitoredBy",
+    "inverse" : "329",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "yawAngleMonitoredBy",
+      "en" : "Yaw angle monitored by",
+      "es" : "Ángulo de yaw monitoreado por"
+    },
+    "domain" : "43",
+    "comment" : {
+      "en" : "Relates the nacelle with the sensor that monitors its yaw angle.",
+      "es" : "Relaciona la góndola con el sensor que monitorea su ángulo de orientación."
+    },
+    "attributes" : [ "object" ],
+    "id" : "328"
   }, {
-    "range" : "52",
-    "domain" : "145",
+    "range" : "167",
+    "domain" : "98",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "291"
+    "id" : "330"
   }, {
-    "range" : "149",
-    "domain" : "145",
+    "range" : "28",
+    "domain" : "98",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "292"
+    "id" : "331"
   }, {
-    "range" : "108",
-    "domain" : "145",
+    "range" : "197",
+    "domain" : "98",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "293"
+    "id" : "332"
   }, {
-    "range" : "59",
-    "domain" : "145",
+    "range" : "113",
+    "domain" : "98",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "294"
+    "id" : "333"
   }, {
-    "range" : "139",
-    "domain" : "145",
+    "range" : "84",
+    "domain" : "98",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "295"
+    "id" : "334"
   }, {
-    "range" : "20",
-    "domain" : "145",
+    "range" : "202",
+    "domain" : "98",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "296"
+    "id" : "335"
   }, {
-    "range" : "147",
-    "domain" : "8",
+    "range" : "23",
+    "domain" : "98",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "297"
+    "id" : "336"
   }, {
-    "range" : "52",
-    "domain" : "8",
+    "range" : "13",
+    "domain" : "98",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "298"
+    "id" : "337"
   }, {
     "iri" : "https://w3id.org/optimar#analyzes",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "279",
+    "range" : "339",
     "label" : {
       "IRI-based" : "analyzes",
       "en" : "Analyzes",
       "es" : "Analiza"
     },
-    "domain" : "16",
+    "domain" : "18",
     "comment" : {
       "en" : "Relates an actor to the data or failures that it studies or interprets.",
       "es" : "Relaciona a un actor con los datos o fallos que estudia o interpreta."
     },
     "attributes" : [ "object" ],
-    "id" : "299"
+    "id" : "338"
   }, {
-    "range" : "8",
-    "domain" : "145",
+    "range" : "194",
+    "domain" : "98",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "300"
+    "id" : "340"
   }, {
-    "range" : "147",
-    "domain" : "145",
+    "range" : "7",
+    "domain" : "98",
     "attributes" : [ "object", "anonymous" ],
-    "id" : "301"
+    "id" : "341"
   }, {
     "iri" : "https://w3id.org/optimar#performsTask",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "97",
+    "range" : "86",
     "label" : {
       "IRI-based" : "performsTask",
       "en" : "Performs task",
       "es" : "Realiza tarea"
     },
-    "domain" : "16",
+    "domain" : "18",
     "comment" : {
       "en" : "Relates an actor with a task that it performs as part of its role.",
       "es" : "Relaciona un actor con una tarea que ejecuta como parte de su rol."
     },
     "attributes" : [ "object" ],
-    "id" : "306"
+    "id" : "342"
   }, {
     "iri" : "https://w3id.org/optimar#thickness",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "43",
+    "range" : "42",
     "label" : {
       "IRI-based" : "thickness",
       "en" : "Thickness",
       "es" : "Espesor"
     },
-    "domain" : "35",
+    "domain" : "39",
     "comment" : {
       "en" : "Thickness of the section or wall of a component measured in QUDT units.",
       "es" : "Espesor de la sección o pared de un componente medido en unidades QUDT."
     },
     "attributes" : [ "object" ],
-    "id" : "309"
+    "id" : "343"
+  }, {
+    "iri" : "https://w3id.org/optimar#monitorsYawOf",
+    "baseIri" : "https://w3id.org/optimar",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "monitorsYawOf",
+      "en" : "Monitors yaw of",
+      "es" : "Monitorea yaw de"
+    },
+    "domain" : "13",
+    "comment" : {
+      "en" : "Relates a yaw sensor with the nacelle whose orientation it monitors.",
+      "es" : "Relaciona un sensor de yaw con la góndola cuya orientación monitorea."
+    },
+    "attributes" : [ "object" ],
+    "id" : "329"
   }, {
     "iri" : "https://w3id.org/optimar#materialFatigue",
     "baseIri" : "https://w3id.org/optimar",
-    "range" : "263",
+    "range" : "326",
     "label" : {
       "IRI-based" : "materialFatigue",
       "en" : "Material fatigue",
       "es" : "Fatiga material"
     },
-    "domain" : "81",
+    "domain" : "22",
     "comment" : {
       "en" : "Accumulated material fatigue degree.",
       "es" : "Grado de fatiga acumulada en el material."
     },
     "attributes" : [ "datatype" ],
-    "id" : "310"
+    "id" : "344"
   } ]
 }

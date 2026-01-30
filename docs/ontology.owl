@@ -13,7 +13,7 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:optimar="https://w3id.org/optimar#">
     <owl:Ontology rdf:about="https://w3id.org/optimar">
-        <owl:versionIRI rdf:resource="https://w3id.org/optimar/2.1"/>
+        <owl:versionIRI rdf:resource="https://w3id.org/optimar/2.2"/>
         <dc:creator>Alberto Montero (USAL)</dc:creator>
         <dc:creator>Alejandro Flores (USAL)</dc:creator>
         <dc:creator>Cristina Aceta (Tekniker)</dc:creator>
@@ -33,7 +33,7 @@
         <terms:identifier rdf:resource="https://doi.org/10.5281/zenodo.17962874"/>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-02</terms:issued>
         <terms:license rdf:resource="https://opensource.org/licenses/MIT"/>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-19</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-01-30</terms:modified>
         <terms:publisher xml:lang="es">Universidad de Salamanca, Centro Tecnológico y de Investigación - Tekniker</terms:publisher>
         <terms:publisher xml:lang="en">University of Salamanca, Technology and Research Centre - Tekniker</terms:publisher>
         <terms:rights xml:lang="es">Este trabajo se distribuye bajo la licencia MIT. Se permite copiar, modificar y distribuir bajo los términos de dicha licencia.</terms:rights>
@@ -43,42 +43,24 @@
         <vann:preferredNamespacePrefix>optimar</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/optimar#"/>
         <rdfs:comment xml:lang="es">
-    Version 2.1 (2026-01-19) - Ampliación de sensores, mejoras de completud y robustez:
-    - Añadidas clases de componentes: Gearbox, Transformer
-    - Añadidas clases de sensores eléctricos: ActivePowerSensor, ReactivePowerSensor, CurrentSensor, VoltageSensor, GridFrequencySensor, TorqueSensor
-    - Añadidas clases de datos específicas: ElectricalData, TemperatureData, RotorData y sus subclases
-    - Añadida clase TemperatureSensor general para medir temperatura de componentes y ambiente
-    - Añadida propiedad optimar:measuresTemperatureOf para relacionar sensores de temperatura con componentes o condiciones ambientales
-    - Añadidas propiedades inversas para sensores: temperatureMonitoredBy, electricalParameterMonitoredBy, rotorParameterMonitoredBy
-    - Añadidas clases de sensores de rotor: RotorSensor, RotorSpeedSensor, RotorAngleSensor
-    - Añadida clase base ElectricalSensor para agrupar sensores eléctricos
-    - Añadida propiedad severity para modelar criticidad de fallos
-    - Añadida clase OperationalState para estados operativos detallados
-    - Añadidas propiedades temporales: startDateTime, endDateTime, detectionDateTime, duration
-    - Añadidas relaciones entre fallos: causesFailure, precededBy
-    - Corregidos errores sintácticos
+    Version 2.2 (2026-01-30) - Ampliación de sensores de control:
+    - Añadidos sensores de control: YawSensor (angulo de orientación de góndola), PitchAngleSensor (ángulo de palas)
+    - Añadidas clases de datos: YawAngleData, PitchAngleData
+    - Añadidas propiedades de medición y monitorización para yaw y pitch
+    - Añadidas propiedades inversas: yawAngleMonitoredBy/monitorsYawOf, pitchAngleMonitoredBy/monitorsPitchOf
     </rdfs:comment>
         <rdfs:comment xml:lang="en">
-    Version 2.1 (2026-01-19) - Sensor expansion, completeness and robustness improvements:
-    - Added component classes: Gearbox, Transformer
-    - Added electrical sensor classes: ActivePowerSensor, ReactivePowerSensor, CurrentSensor, VoltageSensor, GridFrequencySensor, TorqueSensor
-    - Added specific data classes: ElectricalData, TemperatureData, RotorData and their subclasses
-    - Added general TemperatureSensor class to measure temperature of components and environment
-    - Added optimar:measuresTemperatureOf property to relate temperature sensors with components or environmental conditions
-    - Added inverse properties for sensors: temperatureMonitoredBy, electricalParameterMonitoredBy, rotorParameterMonitoredBy
-    - Added rotor sensor classes: RotorSensor, RotorSpeedSensor, RotorAngleSensor
-    - Added ElectricalSensor base class to group electrical sensors
-    - Added severity property to model failure criticality
-    - Added OperationalState class for detailed operational states
-    - Added temporal properties: startDateTime, endDateTime, detectionDateTime, duration
-    - Added failure relationships: causesFailure, precededBy
-    - Fixed syntax errors
+    Version 2.2 (2026-01-30) - Control sensors expansion:
+    - Added control sensors: YawSensor (nacelle orientation angle), PitchAngleSensor (blade angle)
+    - Added data classes: YawAngleData, PitchAngleData
+    - Added measurement and monitoring properties for yaw and pitch
+    - Added inverse properties: yawAngleMonitoredBy/monitorsYawOf, pitchAngleMonitoredBy/monitorsPitchOf
     </rdfs:comment>
         <rdfs:seeAlso rdf:resource="https://w3id.org/optimar#changelog"/>
-        <owl:backwardCompatibleWith rdf:resource="https://w3id.org/optimar/2.0"/>
-        <owl:priorVersion rdf:resource="https://w3id.org/optimar/2.0"/>
-        <owl:versionInfo xml:lang="en">Version 2.1 of the Ontology</owl:versionInfo>
-        <owl:versionInfo xml:lang="es">Versión 2.1 de la ontología</owl:versionInfo>
+        <owl:backwardCompatibleWith rdf:resource="https://w3id.org/optimar/2.1"/>
+        <owl:priorVersion rdf:resource="https://w3id.org/optimar/2.1"/>
+        <owl:versionInfo xml:lang="en">Version 2.2 of the Ontology</owl:versionInfo>
+        <owl:versionInfo xml:lang="es">Versión 2.2 de la ontología</owl:versionInfo>
         <foaf:homepage rdf:resource="https://w3id.org/optimar"/>
     </owl:Ontology>
     
@@ -727,6 +709,20 @@
     
 
 
+    <!-- https://w3id.org/optimar#measuresPitchAngle -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#measuresPitchAngle">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#PitchAngleSensor"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#PitchAngleData"/>
+        <rdfs:comment xml:lang="es">Relaciona un sensor de pitch con los datos de ángulo de pitch que mide.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relates a pitch sensor with the pitch angle data it measures.</rdfs:comment>
+        <rdfs:label xml:lang="en">Measures pitch angle</rdfs:label>
+        <rdfs:label xml:lang="es">Mide ángulo de pitch</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/optimar#measuresStress -->
 
 
@@ -790,6 +786,20 @@
     
 
 
+    <!-- https://w3id.org/optimar#measuresYawAngle -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#measuresYawAngle">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#YawSensor"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#YawAngleData"/>
+        <rdfs:comment xml:lang="es">Relaciona un sensor de yaw con los datos de ángulo de orientación que mide.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relates a yaw sensor with the yaw angle data it measures.</rdfs:comment>
+        <rdfs:label xml:lang="en">Measures yaw angle</rdfs:label>
+        <rdfs:label xml:lang="es">Mide ángulo de yaw</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://w3id.org/optimar#monitors -->
 
 
@@ -821,6 +831,35 @@
         <rdfs:comment xml:lang="en">Relates a sensor to the structural deformation it measures or monitors.</rdfs:comment>
         <rdfs:label xml:lang="es">Monitorea deformación</rdfs:label>
         <rdfs:label xml:lang="en">Monitors deformation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/optimar#monitorsPitchOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#monitorsPitchOf">
+        <owl:inverseOf rdf:resource="https://w3id.org/optimar#pitchAngleMonitoredBy"/>
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#PitchAngleSensor"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#Blade"/>
+        <rdfs:comment xml:lang="es">Relaciona un sensor de pitch con la pala cuyo ángulo monitorea.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relates a pitch sensor with the blade whose angle it monitors.</rdfs:comment>
+        <rdfs:label xml:lang="es">Monitorea pitch de</rdfs:label>
+        <rdfs:label xml:lang="en">Monitors pitch of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/optimar#monitorsYawOf -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#monitorsYawOf">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#YawSensor"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#Nacelle"/>
+        <rdfs:comment xml:lang="es">Relaciona un sensor de yaw con la góndola cuya orientación monitorea.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relates a yaw sensor with the nacelle whose orientation it monitors.</rdfs:comment>
+        <rdfs:label xml:lang="es">Monitorea yaw de</rdfs:label>
+        <rdfs:label xml:lang="en">Monitors yaw of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -863,6 +902,20 @@
         <rdfs:comment xml:lang="en">Relates an actor with a task that it performs as part of its role.</rdfs:comment>
         <rdfs:label xml:lang="en">Performs task</rdfs:label>
         <rdfs:label xml:lang="es">Realiza tarea</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/optimar#pitchAngleMonitoredBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#pitchAngleMonitoredBy">
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Blade"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#PitchAngleSensor"/>
+        <rdfs:comment xml:lang="es">Relaciona una pala con el sensor que monitorea su ángulo de pitch.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relates a blade with the sensor that monitors its pitch angle.</rdfs:comment>
+        <rdfs:label xml:lang="en">Pitch angle monitored by</rdfs:label>
+        <rdfs:label xml:lang="es">Ángulo de pitch monitoreado por</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1084,6 +1137,21 @@
         <rdfs:comment xml:lang="en">Wind speed expressed as a QUDT quantity value.</rdfs:comment>
         <rdfs:label xml:lang="es">Velocidad del viento</rdfs:label>
         <rdfs:label xml:lang="en">Wind speed</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/optimar#yawAngleMonitoredBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/optimar#yawAngleMonitoredBy">
+        <owl:inverseOf rdf:resource="https://w3id.org/optimar#monitorsYawOf"/>
+        <rdfs:domain rdf:resource="https://w3id.org/optimar#Nacelle"/>
+        <rdfs:range rdf:resource="https://w3id.org/optimar#YawSensor"/>
+        <rdfs:comment xml:lang="es">Relaciona la góndola con el sensor que monitorea su ángulo de orientación.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Relates the nacelle with the sensor that monitors its yaw angle.</rdfs:comment>
+        <rdfs:label xml:lang="en">Yaw angle monitored by</rdfs:label>
+        <rdfs:label xml:lang="es">Ángulo de yaw monitoreado por</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1426,6 +1494,13 @@
 
 
     <owl:Class rdf:about="http://qudt.org/schema/qudt/QuantityValue"/>
+    
+
+
+    <!-- https://w3id.org/optimar# -->
+
+
+    <owl:Class rdf:about="https://w3id.org/optimar#"/>
     
 
 
@@ -2087,6 +2162,32 @@
     
 
 
+    <!-- https://w3id.org/optimar#PitchAngleData -->
+
+
+    <owl:Class rdf:about="https://w3id.org/optimar#PitchAngleData">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Measurement"/>
+        <rdfs:comment xml:lang="es">Datos del ángulo de pitch de las palas.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Pitch angle data of the blades.</rdfs:comment>
+        <rdfs:label xml:lang="es">Datos de ángulo de pitch</rdfs:label>
+        <rdfs:label xml:lang="en">Pitch Angle Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/optimar#PitchAngleSensor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/optimar#PitchAngleSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Sensor"/>
+        <rdfs:comment xml:lang="es">Sensor que mide el ángulo de pitch (inclinación) de las palas de la turbina.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Sensor that measures the pitch angle (inclination) of the turbine blades.</rdfs:comment>
+        <rdfs:label xml:lang="en">Pitch angle sensor</rdfs:label>
+        <rdfs:label xml:lang="es">Sensor de ángulo de pitch</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://w3id.org/optimar#PitchSystem -->
 
 
@@ -2533,6 +2634,32 @@
     
 
 
+    <!-- https://w3id.org/optimar#YawAngleData -->
+
+
+    <owl:Class rdf:about="https://w3id.org/optimar#YawAngleData">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Measurement"/>
+        <rdfs:comment xml:lang="es">Datos del ángulo de orientación (yaw) de la góndola.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Yaw angle data of the nacelle.</rdfs:comment>
+        <rdfs:label xml:lang="es">Datos de ángulo de orientación</rdfs:label>
+        <rdfs:label xml:lang="en">Yaw Angle Data</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/optimar#YawSensor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/optimar#YawSensor">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/optimar#Sensor"/>
+        <rdfs:comment xml:lang="es">Sensor que mide el ángulo de orientación (yaw) de la góndola respecto a la dirección del viento.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Sensor that measures the yaw angle of the nacelle relative to the wind direction.</rdfs:comment>
+        <rdfs:label xml:lang="es">Sensor de ángulo de orientación</rdfs:label>
+        <rdfs:label xml:lang="en">Yaw angle sensor</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://www.w3.org/ns/sosa/Observation -->
 
 
@@ -2601,6 +2728,7 @@
     <rdf:Description>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="https://w3id.org/optimar#"/>
             <rdf:Description rdf:about="https://w3id.org/optimar#Anemometer"/>
             <rdf:Description rdf:about="https://w3id.org/optimar#CorrosionCamera"/>
             <rdf:Description rdf:about="https://w3id.org/optimar#DynamicMonitor"/>
@@ -2610,6 +2738,7 @@
             <rdf:Description rdf:about="https://w3id.org/optimar#RotorSensor"/>
             <rdf:Description rdf:about="https://w3id.org/optimar#StructuralCamera"/>
             <rdf:Description rdf:about="https://w3id.org/optimar#TemperatureSensor"/>
+            <rdf:Description rdf:about="https://w3id.org/optimar#YawSensor"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>

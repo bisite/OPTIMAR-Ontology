@@ -17,7 +17,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/optimar#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/optimar#","name":"Offshore Wind Power Platform Ontology for OPTiMAR", "headline":"Ontology modeling structural elements, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. Compatible with SOSA for observations and QUDT for units of measure.", "dateReleased":"2025-09-30", "dateModified":"2026-01-19", "version":"Versión 2.1 de la ontología", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Alberto Montero (USAL)"},{"@type":"Person","name":"Alejandro Flores (USAL)"},{"@type":"Person","name":"Cristina Aceta (Tekniker)"},{"@type":"Person","name":"Oihana Garcia (Tekniker)"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/optimar#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/optimar#","name":"Offshore Wind Power Platform Ontology for OPTiMAR", "headline":"Ontology modeling structural elements, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. Compatible with SOSA for observations and QUDT for units of measure.", "dateReleased":"2025-09-30", "dateModified":"2026-01-30", "version":"2.2", "license":"http://purl.org/NET/rdflicense/MIT1.0", "author":[{"@type":"Person","name":"Alberto Montero (USAL)"},{"@type":"Person","name":"Alejandro Flores (USAL)"},{"@type":"Person","name":"Cristina Aceta (Tekniker)"},{"@type":"Person","name":"Oihana Garcia (Tekniker)"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -70,15 +70,15 @@ $(function(){
 
 
 <dl>
-<dt>Modified on: 2026-01-19</dt>
+<dt>Modified on: 2026-01-30</dt>
 <dt>This version:</dt>
-<dd><a href="https://w3id.org/optimar/2.1">https://w3id.org/optimar/2.1</a></dd>
+<dd><a href="https://w3id.org/optimar/2.2">https://w3id.org/optimar/2.2</a></dd>
 <dt>Latest version:</dt>
 <dd><a href="https://w3id.org/optimar#">https://w3id.org/optimar#</a></dd>
 <dt>Previous version:</dt>
-<dd><a href="https://w3id.org/optimar/2.0">https://w3id.org/optimar/2.0</a></dd>
+<dd><a href="https://w3id.org/optimar/2.1">https://w3id.org/optimar/2.1</a></dd>
 <dt>Revision:</dt>
-<dd>2.1</dd>
+<dd>2.2</dd>
 <dt>Issued on:</dt>
 <dd>2025-12-02</dd>
 <dt>Authors:</dt>
@@ -94,10 +94,10 @@ $(function(){
 <!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
 <dd>Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.5281/zenodo.17962874</dd>
 <dt>Compatible with:</dt>
-<dd><a href="https://w3id.org/optimar/2.0">https://w3id.org/optimar/2.0</a></dd>
+<dd><a href="https://w3id.org/optimar/2.1">https://w3id.org/optimar/2.1</a></dd>
 </dl>
 
-<hr/>
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
 </div>
 <div class="status">
 <div>
@@ -287,6 +287,12 @@ This ontology has the following classes and properties.</span>
       <a href="#ParkOwner" title="https://w3id.org/optimar#ParkOwner">Park Owner</a>
    </li>
    <li>
+      <a href="#PitchAngleData" title="https://w3id.org/optimar#PitchAngleData">Pitch Angle Data</a>
+   </li>
+   <li>
+      <a href="#PitchAngleSensor" title="https://w3id.org/optimar#PitchAngleSensor">Pitch angle sensor</a>
+   </li>
+   <li>
       <a href="#PitchSystem" title="https://w3id.org/optimar#PitchSystem">Pitch System</a>
    </li>
    <li>
@@ -375,6 +381,12 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#VoltageSensor" title="https://w3id.org/optimar#VoltageSensor">Voltage sensor</a>
+   </li>
+   <li>
+      <a href="#YawAngleData" title="https://w3id.org/optimar#YawAngleData">Yaw Angle Data</a>
+   </li>
+   <li>
+      <a href="#YawSensor" title="https://w3id.org/optimar#YawSensor">Yaw angle sensor</a>
    </li>
 </ul><h4>Object Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -475,6 +487,9 @@ This ontology has the following classes and properties.</span>
       <a href="#mass" title="https://w3id.org/optimar#mass">Mass</a>
    </li>
    <li>
+      <a href="#measuresPitchAngle" title="https://w3id.org/optimar#measuresPitchAngle">Measures pitch angle</a>
+   </li>
+   <li>
       <a href="#measuresStress" title="https://w3id.org/optimar#measuresStress">Measures stress</a>
    </li>
    <li>
@@ -487,10 +502,19 @@ This ontology has the following classes and properties.</span>
       <a href="#measuresWind" title="https://w3id.org/optimar#measuresWind">Measures wind</a>
    </li>
    <li>
+      <a href="#measuresYawAngle" title="https://w3id.org/optimar#measuresYawAngle">Measures yaw angle</a>
+   </li>
+   <li>
       <a href="#monitors" title="https://w3id.org/optimar#monitors">Monitors</a>
    </li>
    <li>
       <a href="#monitorsDeformation" title="https://w3id.org/optimar#monitorsDeformation">Monitors deformation</a>
+   </li>
+   <li>
+      <a href="#monitorsPitchOf" title="https://w3id.org/optimar#monitorsPitchOf">Monitors pitch of</a>
+   </li>
+   <li>
+      <a href="#monitorsYawOf" title="https://w3id.org/optimar#monitorsYawOf">Monitors yaw of</a>
    </li>
    <li>
       <a href="#hasCapacity" title="https://w3id.org/optimar#hasCapacity">Nominal capacity</a>
@@ -503,6 +527,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#performsTask" title="https://w3id.org/optimar#performsTask">Performs task</a>
+   </li>
+   <li>
+      <a href="#pitchAngleMonitoredBy" title="https://w3id.org/optimar#pitchAngleMonitoredBy">Pitch angle monitored by</a>
    </li>
    <li>
       <a href="#precededBy" title="https://w3id.org/optimar#precededBy">Preceded by</a>
@@ -558,6 +585,9 @@ This ontology has the following classes and properties.</span>
    </li>
    <li>
       <a href="#windSpeed" title="https://w3id.org/optimar#windSpeed">Wind speed</a>
+   </li>
+   <li>
+      <a href="#yawAngleMonitoredBy" title="https://w3id.org/optimar#yawAngleMonitoredBy">Yaw angle monitored by</a>
    </li>
 </ul><h4>Data Properties</h4><ul xmlns:widoco="https://w3id.org/widoco/vocab#"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -730,21 +760,11 @@ This ontology has the following classes and properties.</span>
 <!--DESCRIPTION SECTION-->
     <div id="description"><h2 id="desc" class="list">Offshore Wind Power Platform Ontology for OPTiMAR: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 
-<span class="markdown">
-    Version 2.1 (2026-01-19) - Sensor expansion, completeness and robustness improvements:
-    - Added component classes: Gearbox, Transformer
-    - Added electrical sensor classes: ActivePowerSensor, ReactivePowerSensor, CurrentSensor, VoltageSensor, GridFrequencySensor, TorqueSensor
-    - Added specific data classes: ElectricalData, TemperatureData, RotorData and their subclasses
-    - Added general TemperatureSensor class to measure temperature of components and environment
-    - Added optimar:measuresTemperatureOf property to relate temperature sensors with components or environmental conditions
-    - Added inverse properties for sensors: temperatureMonitoredBy, electricalParameterMonitoredBy, rotorParameterMonitoredBy
-    - Added rotor sensor classes: RotorSensor, RotorSpeedSensor, RotorAngleSensor
-    - Added ElectricalSensor base class to group electrical sensors
-    - Added severity property to model failure criticality
-    - Added OperationalState class for detailed operational states
-    - Added temporal properties: startDateTime, endDateTime, detectionDateTime, duration
-    - Added failure relationships: causesFailure, precededBy
-    - Fixed syntax errors
+<span class="markdown">Version 2.2 (2026-01-30) - Control sensors expansion:
+    - Added control sensors: YawSensor (nacelle orientation angle), PitchAngleSensor (blade angle)
+    - Added data classes: YawAngleData, PitchAngleData
+    - Added measurement and monitoring properties for yaw and pitch
+    - Added inverse properties: yawAngleMonitoredBy/monitorsYawOf, pitchAngleMonitoredBy/monitorsPitchOf
     </span></div>
    
 
@@ -800,6 +820,8 @@ This section provides details for each class and property defined by Offshore Wi
   <li><a href="#WindPowerPlatform" title="https://w3id.org/optimar#WindPowerPlatform">Offshore Wind Power Platform</a></li>
   <li><a href="#OperationalState" title="https://w3id.org/optimar#OperationalState">Operational state</a></li>
   <li><a href="#ParkOwner" title="https://w3id.org/optimar#ParkOwner">Park Owner</a></li>
+  <li><a href="#PitchAngleData" title="https://w3id.org/optimar#PitchAngleData">Pitch Angle Data</a></li>
+  <li><a href="#PitchAngleSensor" title="https://w3id.org/optimar#PitchAngleSensor">Pitch angle sensor</a></li>
   <li><a href="#PitchSystem" title="https://w3id.org/optimar#PitchSystem">Pitch System</a></li>
   <li><a href="#PlatformActuator" title="https://w3id.org/optimar#PlatformActuator">Platform Actuator</a></li>
   <li><a href="#PowerData" title="https://w3id.org/optimar#PowerData">Power Data</a></li>
@@ -830,6 +852,8 @@ This section provides details for each class and property defined by Offshore Wi
   <li><a href="#VibrationData" title="https://w3id.org/optimar#VibrationData">Vibration Data</a></li>
   <li><a href="#VoltageData" title="https://w3id.org/optimar#VoltageData">Voltage Data</a></li>
   <li><a href="#VoltageSensor" title="https://w3id.org/optimar#VoltageSensor">Voltage sensor</a></li>
+  <li><a href="#YawAngleData" title="https://w3id.org/optimar#YawAngleData">Yaw Angle Data</a></li>
+  <li><a href="#YawSensor" title="https://w3id.org/optimar#YawSensor">Yaw angle sensor</a></li>
  </ul>
  <div class="entity" id="ActivePowerSensor">
   <h3>Active power sensor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
@@ -905,7 +929,7 @@ This section provides details for each class and property defined by Offshore Wi
     is disjoint with
    </dt>
    <dd>
-    <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://w3id.org/optimar#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#ElectricalSensor" title="https://w3id.org/optimar#ElectricalSensor">Electrical sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorSensor" title="https://w3id.org/optimar#RotorSensor">Rotor sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSensor" title="https://w3id.org/optimar#TemperatureSensor">Temperature sensor</a> <sup class="type-c" title="class">c</sup>
+    <a href="https://w3id.org/optimar#" target="_blank" title="https://w3id.org/optimar#">:</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://w3id.org/optimar#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#ElectricalSensor" title="https://w3id.org/optimar#ElectricalSensor">Electrical sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorSensor" title="https://w3id.org/optimar#RotorSensor">Rotor sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSensor" title="https://w3id.org/optimar#TemperatureSensor">Temperature sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#YawSensor" title="https://w3id.org/optimar#YawSensor">Yaw angle sensor</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -921,6 +945,18 @@ This section provides details for each class and property defined by Offshore Wi
    </dt>
    <dd>
     <a href="#TurbineComponent" title="https://w3id.org/optimar#TurbineComponent">Turbine Components</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#pitchAngleMonitoredBy" title="https://w3id.org/optimar#pitchAngleMonitoredBy">Pitch angle monitored by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#monitorsPitchOf" title="https://w3id.org/optimar#monitorsPitchOf">Monitors pitch of</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1025,7 +1061,7 @@ This section provides details for each class and property defined by Offshore Wi
     is disjoint with
    </dt>
    <dd>
-    <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://w3id.org/optimar#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#ElectricalSensor" title="https://w3id.org/optimar#ElectricalSensor">Electrical sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorSensor" title="https://w3id.org/optimar#RotorSensor">Rotor sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSensor" title="https://w3id.org/optimar#TemperatureSensor">Temperature sensor</a> <sup class="type-c" title="class">c</sup>
+    <a href="https://w3id.org/optimar#" target="_blank" title="https://w3id.org/optimar#">:</a> <sup class="type-c" title="class">c</sup>, <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://w3id.org/optimar#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#ElectricalSensor" title="https://w3id.org/optimar#ElectricalSensor">Electrical sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorSensor" title="https://w3id.org/optimar#RotorSensor">Rotor sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSensor" title="https://w3id.org/optimar#TemperatureSensor">Temperature sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#YawSensor" title="https://w3id.org/optimar#YawSensor">Yaw angle sensor</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1145,7 +1181,7 @@ This section provides details for each class and property defined by Offshore Wi
     is disjoint with
    </dt>
    <dd>
-    <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#ElectricalSensor" title="https://w3id.org/optimar#ElectricalSensor">Electrical sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorSensor" title="https://w3id.org/optimar#RotorSensor">Rotor sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSensor" title="https://w3id.org/optimar#TemperatureSensor">Temperature sensor</a> <sup class="type-c" title="class">c</sup>
+    <a href="https://w3id.org/optimar#" target="_blank" title="https://w3id.org/optimar#">:</a> <sup class="type-c" title="class">c</sup>, <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#ElectricalSensor" title="https://w3id.org/optimar#ElectricalSensor">Electrical sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorSensor" title="https://w3id.org/optimar#RotorSensor">Rotor sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSensor" title="https://w3id.org/optimar#TemperatureSensor">Temperature sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#YawSensor" title="https://w3id.org/optimar#YawSensor">Yaw angle sensor</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1199,7 +1235,7 @@ This section provides details for each class and property defined by Offshore Wi
     is disjoint with
    </dt>
    <dd>
-    <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://w3id.org/optimar#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorSensor" title="https://w3id.org/optimar#RotorSensor">Rotor sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSensor" title="https://w3id.org/optimar#TemperatureSensor">Temperature sensor</a> <sup class="type-c" title="class">c</sup>
+    <a href="https://w3id.org/optimar#" target="_blank" title="https://w3id.org/optimar#">:</a> <sup class="type-c" title="class">c</sup>, <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://w3id.org/optimar#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorSensor" title="https://w3id.org/optimar#RotorSensor">Rotor sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSensor" title="https://w3id.org/optimar#TemperatureSensor">Temperature sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#YawSensor" title="https://w3id.org/optimar#YawSensor">Yaw angle sensor</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1367,7 +1403,7 @@ This section provides details for each class and property defined by Offshore Wi
     is disjoint with
    </dt>
    <dd>
-    <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://w3id.org/optimar#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#ElectricalSensor" title="https://w3id.org/optimar#ElectricalSensor">Electrical sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorSensor" title="https://w3id.org/optimar#RotorSensor">Rotor sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSensor" title="https://w3id.org/optimar#TemperatureSensor">Temperature sensor</a> <sup class="type-c" title="class">c</sup>
+    <a href="https://w3id.org/optimar#" target="_blank" title="https://w3id.org/optimar#">:</a> <sup class="type-c" title="class">c</sup>, <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://w3id.org/optimar#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#ElectricalSensor" title="https://w3id.org/optimar#ElectricalSensor">Electrical sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorSensor" title="https://w3id.org/optimar#RotorSensor">Rotor sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSensor" title="https://w3id.org/optimar#TemperatureSensor">Temperature sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#YawSensor" title="https://w3id.org/optimar#YawSensor">Yaw angle sensor</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1469,7 +1505,7 @@ This section provides details for each class and property defined by Offshore Wi
     is disjoint with
    </dt>
    <dd>
-    <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://w3id.org/optimar#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#ElectricalSensor" title="https://w3id.org/optimar#ElectricalSensor">Electrical sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorSensor" title="https://w3id.org/optimar#RotorSensor">Rotor sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSensor" title="https://w3id.org/optimar#TemperatureSensor">Temperature sensor</a> <sup class="type-c" title="class">c</sup>
+    <a href="https://w3id.org/optimar#" target="_blank" title="https://w3id.org/optimar#">:</a> <sup class="type-c" title="class">c</sup>, <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://w3id.org/optimar#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#ElectricalSensor" title="https://w3id.org/optimar#ElectricalSensor">Electrical sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorSensor" title="https://w3id.org/optimar#RotorSensor">Rotor sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSensor" title="https://w3id.org/optimar#TemperatureSensor">Temperature sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#YawSensor" title="https://w3id.org/optimar#YawSensor">Yaw angle sensor</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1581,7 +1617,7 @@ This section provides details for each class and property defined by Offshore Wi
     has sub-classes
    </dt>
    <dd>
-    <a href="#ElectricalData" title="https://w3id.org/optimar#ElectricalData">Electrical Data</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorData" title="https://w3id.org/optimar#RotorData">Rotor Data</a> <sup class="type-c" title="class">c</sup>, <a href="#StressData" title="https://w3id.org/optimar#StressData">Stress Data</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureData" title="https://w3id.org/optimar#TemperatureData">Temperature Data</a> <sup class="type-c" title="class">c</sup>, <a href="#VibrationData" title="https://w3id.org/optimar#VibrationData">Vibration Data</a> <sup class="type-c" title="class">c</sup>
+    <a href="#ElectricalData" title="https://w3id.org/optimar#ElectricalData">Electrical Data</a> <sup class="type-c" title="class">c</sup>, <a href="#PitchAngleData" title="https://w3id.org/optimar#PitchAngleData">Pitch Angle Data</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorData" title="https://w3id.org/optimar#RotorData">Rotor Data</a> <sup class="type-c" title="class">c</sup>, <a href="#StressData" title="https://w3id.org/optimar#StressData">Stress Data</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureData" title="https://w3id.org/optimar#TemperatureData">Temperature Data</a> <sup class="type-c" title="class">c</sup>, <a href="#VibrationData" title="https://w3id.org/optimar#VibrationData">Vibration Data</a> <sup class="type-c" title="class">c</sup>, <a href="#YawAngleData" title="https://w3id.org/optimar#YawAngleData">Yaw Angle Data</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
@@ -1661,6 +1697,18 @@ This section provides details for each class and property defined by Offshore Wi
    <dd>
     <a href="#TurbineComponent" title="https://w3id.org/optimar#TurbineComponent">Turbine Components</a> <sup class="type-c" title="class">c</sup>
    </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#yawAngleMonitoredBy" title="https://w3id.org/optimar#yawAngleMonitoredBy">Yaw angle monitored by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#monitorsYawOf" title="https://w3id.org/optimar#monitorsYawOf">Monitors yaw of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
   </dl>
  </div>
  <div class="entity" id="Observation">
@@ -1738,6 +1786,54 @@ This section provides details for each class and property defined by Offshore Wi
    </dt>
    <dd>
     <a href="#Actor" title="https://w3id.org/optimar#Actor">Actor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PitchAngleData">
+  <h3>Pitch Angle Data<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#PitchAngleData</p>
+  <div class="comment">
+   <span class="markdown">Pitch angle data of the blades.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Measurement" title="https://w3id.org/optimar#Measurement">Measurement</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#measuresPitchAngle" title="https://w3id.org/optimar#measuresPitchAngle">Measures pitch angle</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="PitchAngleSensor">
+  <h3>Pitch angle sensor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#PitchAngleSensor</p>
+  <div class="comment">
+   <span class="markdown">Sensor that measures the pitch angle (inclination) of the turbine blades.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Sensor" title="https://w3id.org/optimar#Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#measuresPitchAngle" title="https://w3id.org/optimar#measuresPitchAngle">Measures pitch angle</a> <sup class="type-op" title="object property">op</sup>, <a href="#monitorsPitchOf" title="https://w3id.org/optimar#monitorsPitchOf">Monitors pitch of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#pitchAngleMonitoredBy" title="https://w3id.org/optimar#pitchAngleMonitoredBy">Pitch angle monitored by</a> <sup class="type-op" title="object property">op</sup>
    </dd>
   </dl>
  </div>
@@ -1908,7 +2004,7 @@ This section provides details for each class and property defined by Offshore Wi
     is disjoint with
    </dt>
    <dd>
-    <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://w3id.org/optimar#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#ElectricalSensor" title="https://w3id.org/optimar#ElectricalSensor">Electrical sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSensor" title="https://w3id.org/optimar#TemperatureSensor">Temperature sensor</a> <sup class="type-c" title="class">c</sup>
+    <a href="https://w3id.org/optimar#" target="_blank" title="https://w3id.org/optimar#">:</a> <sup class="type-c" title="class">c</sup>, <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://w3id.org/optimar#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#ElectricalSensor" title="https://w3id.org/optimar#ElectricalSensor">Electrical sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSensor" title="https://w3id.org/optimar#TemperatureSensor">Temperature sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#YawSensor" title="https://w3id.org/optimar#YawSensor">Yaw angle sensor</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -1959,7 +2055,7 @@ This section provides details for each class and property defined by Offshore Wi
     has sub-classes
    </dt>
    <dd>
-    <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://w3id.org/optimar#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#ElectricalSensor" title="https://w3id.org/optimar#ElectricalSensor">Electrical sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorSensor" title="https://w3id.org/optimar#RotorSensor">Rotor sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSensor" title="https://w3id.org/optimar#TemperatureSensor">Temperature sensor</a> <sup class="type-c" title="class">c</sup>
+    <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://w3id.org/optimar#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#ElectricalSensor" title="https://w3id.org/optimar#ElectricalSensor">Electrical sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#PitchAngleSensor" title="https://w3id.org/optimar#PitchAngleSensor">Pitch angle sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorSensor" title="https://w3id.org/optimar#RotorSensor">Rotor sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSensor" title="https://w3id.org/optimar#TemperatureSensor">Temperature sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#YawSensor" title="https://w3id.org/optimar#YawSensor">Yaw angle sensor</a> <sup class="type-c" title="class">c</sup>
    </dd>
    <dt>
     is in domain of
@@ -2013,7 +2109,7 @@ This section provides details for each class and property defined by Offshore Wi
     is disjoint with
    </dt>
    <dd>
-    <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://w3id.org/optimar#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#ElectricalSensor" title="https://w3id.org/optimar#ElectricalSensor">Electrical sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorSensor" title="https://w3id.org/optimar#RotorSensor">Rotor sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSensor" title="https://w3id.org/optimar#TemperatureSensor">Temperature sensor</a> <sup class="type-c" title="class">c</sup>
+    <a href="https://w3id.org/optimar#" target="_blank" title="https://w3id.org/optimar#">:</a> <sup class="type-c" title="class">c</sup>, <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://w3id.org/optimar#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#ElectricalSensor" title="https://w3id.org/optimar#ElectricalSensor">Electrical sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorSensor" title="https://w3id.org/optimar#RotorSensor">Rotor sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSensor" title="https://w3id.org/optimar#TemperatureSensor">Temperature sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#YawSensor" title="https://w3id.org/optimar#YawSensor">Yaw angle sensor</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -2166,7 +2262,7 @@ This section provides details for each class and property defined by Offshore Wi
     is disjoint with
    </dt>
    <dd>
-    <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://w3id.org/optimar#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#ElectricalSensor" title="https://w3id.org/optimar#ElectricalSensor">Electrical sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorSensor" title="https://w3id.org/optimar#RotorSensor">Rotor sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>
+    <a href="https://w3id.org/optimar#" target="_blank" title="https://w3id.org/optimar#">:</a> <sup class="type-c" title="class">c</sup>, <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://w3id.org/optimar#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#ElectricalSensor" title="https://w3id.org/optimar#ElectricalSensor">Electrical sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorSensor" title="https://w3id.org/optimar#RotorSensor">Rotor sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#YawSensor" title="https://w3id.org/optimar#YawSensor">Yaw angle sensor</a> <sup class="type-c" title="class">c</sup>
    </dd>
   </dl>
  </div>
@@ -2347,6 +2443,60 @@ This section provides details for each class and property defined by Offshore Wi
    </dd>
   </dl>
  </div>
+ <div class="entity" id="YawAngleData">
+  <h3>Yaw Angle Data<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#YawAngleData</p>
+  <div class="comment">
+   <span class="markdown">Yaw angle data of the nacelle.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Measurement" title="https://w3id.org/optimar#Measurement">Measurement</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#measuresYawAngle" title="https://w3id.org/optimar#measuresYawAngle">Measures yaw angle</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+  </dl>
+ </div>
+ <div class="entity" id="YawSensor">
+  <h3>Yaw angle sensor<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#YawSensor</p>
+  <div class="comment">
+   <span class="markdown">Sensor that measures the yaw angle of the nacelle relative to the wind direction.</span>
+  </div>
+  <dl class="description">
+   <dt>
+    has super-classes
+   </dt>
+   <dd>
+    <a href="#Sensor" title="https://w3id.org/optimar#Sensor">Sensor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+   <dt>
+    is in domain of
+   </dt>
+   <dd>
+    <a href="#measuresYawAngle" title="https://w3id.org/optimar#measuresYawAngle">Measures yaw angle</a> <sup class="type-op" title="object property">op</sup>, <a href="#monitorsYawOf" title="https://w3id.org/optimar#monitorsYawOf">Monitors yaw of</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is in range of
+   </dt>
+   <dd>
+    <a href="#yawAngleMonitoredBy" title="https://w3id.org/optimar#yawAngleMonitoredBy">Yaw angle monitored by</a> <sup class="type-op" title="object property">op</sup>
+   </dd>
+   <dt>
+    is disjoint with
+   </dt>
+   <dd>
+    <a href="https://w3id.org/optimar#" target="_blank" title="https://w3id.org/optimar#">:</a> <sup class="type-c" title="class">c</sup>, <a href="#Anemometer" title="https://w3id.org/optimar#Anemometer">Anemometer</a> <sup class="type-c" title="class">c</sup>, <a href="#CorrosionCamera" title="https://w3id.org/optimar#CorrosionCamera">Corrosion Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#DynamicMonitor" title="https://w3id.org/optimar#DynamicMonitor">Dynamic Monitor</a> <sup class="type-c" title="class">c</sup>, <a href="#ElectricalSensor" title="https://w3id.org/optimar#ElectricalSensor">Electrical sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#GaugeSystem" title="https://w3id.org/optimar#GaugeSystem">Gauge System</a> <sup class="type-c" title="class">c</sup>, <a href="#ISUMSystem" title="https://w3id.org/optimar#ISUMSystem">ISUM System</a> <sup class="type-c" title="class">c</sup>, <a href="#RotorSensor" title="https://w3id.org/optimar#RotorSensor">Rotor sensor</a> <sup class="type-c" title="class">c</sup>, <a href="#StructuralCamera" title="https://w3id.org/optimar#StructuralCamera">Structural Camera</a> <sup class="type-c" title="class">c</sup>, <a href="#TemperatureSensor" title="https://w3id.org/optimar#TemperatureSensor">Temperature sensor</a> <sup class="type-c" title="class">c</sup>
+   </dd>
+  </dl>
+ </div>
 </div><div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
  <h3 id="properties" class="list">Object Properties</h3>
  <ul class="hlist">
@@ -2380,16 +2530,21 @@ This section provides details for each class and property defined by Offshore Wi
   <li><a href="#madeBySensor" title="https://w3id.org/optimar#madeBySensor">Made by sensor</a></li>
   <li><a href="#manages" title="https://w3id.org/optimar#manages">Manages</a></li>
   <li><a href="#mass" title="https://w3id.org/optimar#mass">Mass</a></li>
+  <li><a href="#measuresPitchAngle" title="https://w3id.org/optimar#measuresPitchAngle">Measures pitch angle</a></li>
   <li><a href="#measuresStress" title="https://w3id.org/optimar#measuresStress">Measures stress</a></li>
   <li><a href="#measuresTemperatureOf" title="https://w3id.org/optimar#measuresTemperatureOf">Measures temperature of</a></li>
   <li><a href="#measuresVibration" title="https://w3id.org/optimar#measuresVibration">Measures vibration</a></li>
   <li><a href="#measuresWind" title="https://w3id.org/optimar#measuresWind">Measures wind</a></li>
+  <li><a href="#measuresYawAngle" title="https://w3id.org/optimar#measuresYawAngle">Measures yaw angle</a></li>
   <li><a href="#monitors" title="https://w3id.org/optimar#monitors">Monitors</a></li>
   <li><a href="#monitorsDeformation" title="https://w3id.org/optimar#monitorsDeformation">Monitors deformation</a></li>
+  <li><a href="#monitorsPitchOf" title="https://w3id.org/optimar#monitorsPitchOf">Monitors pitch of</a></li>
+  <li><a href="#monitorsYawOf" title="https://w3id.org/optimar#monitorsYawOf">Monitors yaw of</a></li>
   <li><a href="#hasCapacity" title="https://w3id.org/optimar#hasCapacity">Nominal capacity</a></li>
   <li><a href="#performedBy" title="https://w3id.org/optimar#performedBy">Performed by</a></li>
   <li><a href="#performedMaintenance" title="https://w3id.org/optimar#performedMaintenance">Performs maintenance</a></li>
   <li><a href="#performsTask" title="https://w3id.org/optimar#performsTask">Performs task</a></li>
+  <li><a href="#pitchAngleMonitoredBy" title="https://w3id.org/optimar#pitchAngleMonitoredBy">Pitch angle monitored by</a></li>
   <li><a href="#precededBy" title="https://w3id.org/optimar#precededBy">Preceded by</a></li>
   <li><a href="#pressureLevel" title="https://w3id.org/optimar#pressureLevel"> <span>Pressure level</span> </a></li>
   <li><a href="#relatedToComponent" title="https://w3id.org/optimar#relatedToComponent">Related to component</a></li>
@@ -2406,6 +2561,7 @@ This section provides details for each class and property defined by Offshore Wi
   <li><a href="#width" title="https://w3id.org/optimar#width">Width</a></li>
   <li><a href="#windDirection" title="https://w3id.org/optimar#windDirection">Wind direction</a></li>
   <li><a href="#windSpeed" title="https://w3id.org/optimar#windSpeed">Wind speed</a></li>
+  <li><a href="#yawAngleMonitoredBy" title="https://w3id.org/optimar#yawAngleMonitoredBy">Yaw angle monitored by</a></li>
  </ul>
  <div class="entity" id="adjusts">
   <h3>Adjusts<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
@@ -3152,6 +3308,29 @@ This section provides details for each class and property defined by Offshore Wi
    </dl>
   </div>
  </div>
+ <div class="entity" id="measuresPitchAngle">
+  <h3>Measures pitch angle<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#measuresPitchAngle</p>
+  <div class="comment">
+   <span class="markdown">Relates a pitch sensor with the pitch angle data it measures.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PitchAngleSensor" title="https://w3id.org/optimar#PitchAngleSensor">Pitch angle sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PitchAngleData" title="https://w3id.org/optimar#PitchAngleData">Pitch Angle Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="measuresStress">
   <h3>Measures stress<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/optimar#measuresStress</p>
@@ -3250,6 +3429,29 @@ This section provides details for each class and property defined by Offshore Wi
    </dl>
   </div>
  </div>
+ <div class="entity" id="measuresYawAngle">
+  <h3>Measures yaw angle<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#measuresYawAngle</p>
+  <div class="comment">
+   <span class="markdown">Relates a yaw sensor with the yaw angle data it measures.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#YawSensor" title="https://w3id.org/optimar#YawSensor">Yaw angle sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#YawAngleData" title="https://w3id.org/optimar#YawAngleData">Yaw Angle Data</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
  <div class="entity" id="monitors">
   <h3>Monitors<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
   <p><strong>IRI:</strong> https://w3id.org/optimar#monitors</p>
@@ -3292,6 +3494,64 @@ This section provides details for each class and property defined by Offshore Wi
     </dt>
     <dd>
      <a href="#Deformation" title="https://w3id.org/optimar#Deformation">Structural deformation</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="monitorsPitchOf">
+  <h3>Monitors pitch of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#monitorsPitchOf</p>
+  <div class="comment">
+   <span class="markdown">Relates a pitch sensor with the blade whose angle it monitors.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#PitchAngleSensor" title="https://w3id.org/optimar#PitchAngleSensor">Pitch angle sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Blade" title="https://w3id.org/optimar#Blade">Blade</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#pitchAngleMonitoredBy" title="https://w3id.org/optimar#pitchAngleMonitoredBy">Pitch angle monitored by</a> <sup class="type-op" title="object property">op</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="monitorsYawOf">
+  <h3>Monitors yaw of<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#monitorsYawOf</p>
+  <div class="comment">
+   <span class="markdown">Relates a yaw sensor with the nacelle whose orientation it monitors.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#YawSensor" title="https://w3id.org/optimar#YawSensor">Yaw angle sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#Nacelle" title="https://w3id.org/optimar#Nacelle">Nacelle</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#yawAngleMonitoredBy" title="https://w3id.org/optimar#yawAngleMonitoredBy">Yaw angle monitored by</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -3384,6 +3644,35 @@ This section provides details for each class and property defined by Offshore Wi
     </dt>
     <dd>
      <a href="#Task" title="https://w3id.org/optimar#Task">Task</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="pitchAngleMonitoredBy">
+  <h3>Pitch angle monitored by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#pitchAngleMonitoredBy</p>
+  <div class="comment">
+   <span class="markdown">Relates a blade with the sensor that monitors its pitch angle.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Blade" title="https://w3id.org/optimar#Blade">Blade</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#PitchAngleSensor" title="https://w3id.org/optimar#PitchAngleSensor">Pitch angle sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#monitorsPitchOf" title="https://w3id.org/optimar#monitorsPitchOf">Monitors pitch of</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -3773,6 +4062,35 @@ This section provides details for each class and property defined by Offshore Wi
     </dt>
     <dd>
      <a href="http://qudt.org/schema/qudt/QuantityValue" target="_blank" title="http://qudt.org/schema/qudt/QuantityValue">Quantity Value</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+   </dl>
+  </div>
+ </div>
+ <div class="entity" id="yawAngleMonitoredBy">
+  <h3>Yaw angle monitored by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+  <p><strong>IRI:</strong> https://w3id.org/optimar#yawAngleMonitoredBy</p>
+  <div class="comment">
+   <span class="markdown">Relates the nacelle with the sensor that monitors its yaw angle.</span>
+  </div>
+  <div class="description">
+   <dl>
+    <dt>
+     has domain
+    </dt>
+    <dd>
+     <a href="#Nacelle" title="https://w3id.org/optimar#Nacelle">Nacelle</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     has range
+    </dt>
+    <dd>
+     <a href="#YawSensor" title="https://w3id.org/optimar#YawSensor">Yaw angle sensor</a> <sup class="type-c" title="class">c</sup>
+    </dd>
+    <dt>
+     is inverse of
+    </dt>
+    <dd>
+     <a href="#monitorsYawOf" title="https://w3id.org/optimar#monitorsYawOf">Monitors yaw of</a> <sup class="type-op" title="object property">op</sup>
     </dd>
    </dl>
   </div>
@@ -4412,289 +4730,144 @@ Add your references here. It is recommended to have them as a list.</span>
 <details><summary><u>Modified classes</u></summary>
 <ul><li><a href="#Anemometer">https://w3id.org/optimar#Anemometer</a>
 <ul>
-<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#&gt; &lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt; &lt;https://w3id.org/optimar#YawSensor&gt;)</li>
 </ul>
 <ul>
-<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt;)</li>
-<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt;)</li>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt;)</li>
 </ul>
 </li>
 <li><a href="#CorrosionCamera">https://w3id.org/optimar#CorrosionCamera</a>
 <ul>
-<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#&gt; &lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt; &lt;https://w3id.org/optimar#YawSensor&gt;)</li>
 </ul>
 <ul>
-<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt;)</li>
-<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt;)</li>
-<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt;)</li>
-</ul>
-</li>
-<li><a href="#CorrosionEvent">https://w3id.org/optimar#CorrosionEvent</a>
-<ul>
-<li>Added: rdfs:label "Evento de detección de corrosión"@es</li>
-</ul>
-<ul>
-<li>Deleted: rdfs:label "Evento de dección de corrosión"@es</li>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt;)</li>
 </ul>
 </li>
 <li><a href="#DynamicMonitor">https://w3id.org/optimar#DynamicMonitor</a>
 <ul>
-<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#&gt; &lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt; &lt;https://w3id.org/optimar#YawSensor&gt;)</li>
 </ul>
 <ul>
-<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt;)</li>
-<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt;)</li>
-</ul>
-</li>
-<li><a href="#GaugeSystem">https://w3id.org/optimar#GaugeSystem</a>
-<ul>
-<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt;)</li>
-</ul>
-</li>
-<li><a href="#ISUMSystem">https://w3id.org/optimar#ISUMSystem</a>
-<ul>
-<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt;)</li>
-</ul>
-</li>
-<li><a href="#StructuralCamera">https://w3id.org/optimar#StructuralCamera</a>
-<ul>
-<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt;)</li>
-</ul>
-<ul>
-<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt;)</li>
-<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt;)</li>
-<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt;)</li>
-</ul>
-</li>
-</ul></details><details><summary><u>Added classes</u></summary>
-<ul><li><a href="#ActivePowerSensor">https://w3id.org/optimar#ActivePowerSensor</a>
-<ul>
-<li>Added: SubClass of https://w3id.org/optimar#ElectricalSensor</li>
-</ul>
-</li>
-<li><a href="#CurrentData">https://w3id.org/optimar#CurrentData</a>
-<ul>
-<li>Added: SubClass of https://w3id.org/optimar#ElectricalData</li>
-</ul>
-</li>
-<li><a href="#CurrentSensor">https://w3id.org/optimar#CurrentSensor</a>
-<ul>
-<li>Added: SubClass of https://w3id.org/optimar#ElectricalSensor</li>
-</ul>
-</li>
-<li><a href="#ElectricalData">https://w3id.org/optimar#ElectricalData</a>
-<ul>
-<li>Added: SubClass of https://w3id.org/optimar#Measurement</li>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt;)</li>
 </ul>
 </li>
 <li><a href="#ElectricalSensor">https://w3id.org/optimar#ElectricalSensor</a>
 <ul>
-<li>Added: SubClass of https://w3id.org/optimar#Sensor</li>
-<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#&gt; &lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt; &lt;https://w3id.org/optimar#YawSensor&gt;)</li>
+</ul>
+<ul>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt;)</li>
 </ul>
 </li>
-<li><a href="#FrequencyData">https://w3id.org/optimar#FrequencyData</a>
+<li><a href="#GaugeSystem">https://w3id.org/optimar#GaugeSystem</a>
 <ul>
-<li>Added: SubClass of https://w3id.org/optimar#ElectricalData</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#&gt; &lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt; &lt;https://w3id.org/optimar#YawSensor&gt;)</li>
+</ul>
+<ul>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt;)</li>
 </ul>
 </li>
-<li><a href="#Gearbox">https://w3id.org/optimar#Gearbox</a>
+<li><a href="#ISUMSystem">https://w3id.org/optimar#ISUMSystem</a>
 <ul>
-<li>Added: SubClass of https://w3id.org/optimar#Component</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#&gt; &lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt; &lt;https://w3id.org/optimar#YawSensor&gt;)</li>
 </ul>
-</li>
-<li><a href="#GridFrequencySensor">https://w3id.org/optimar#GridFrequencySensor</a>
 <ul>
-<li>Added: SubClass of https://w3id.org/optimar#ElectricalSensor</li>
-</ul>
-</li>
-<li><a href="#OperationalState">https://w3id.org/optimar#OperationalState</a>
-</li>
-<li><a href="#PowerData">https://w3id.org/optimar#PowerData</a>
-<ul>
-<li>Added: SubClass of https://w3id.org/optimar#ElectricalData</li>
-</ul>
-</li>
-<li><a href="#ReactivePowerSensor">https://w3id.org/optimar#ReactivePowerSensor</a>
-<ul>
-<li>Added: SubClass of https://w3id.org/optimar#ElectricalSensor</li>
-</ul>
-</li>
-<li><a href="#RotorAngleData">https://w3id.org/optimar#RotorAngleData</a>
-<ul>
-<li>Added: SubClass of https://w3id.org/optimar#RotorData</li>
-</ul>
-</li>
-<li><a href="#RotorAngleSensor">https://w3id.org/optimar#RotorAngleSensor</a>
-<ul>
-<li>Added: SubClass of https://w3id.org/optimar#RotorSensor</li>
-</ul>
-</li>
-<li><a href="#RotorData">https://w3id.org/optimar#RotorData</a>
-<ul>
-<li>Added: SubClass of https://w3id.org/optimar#Measurement</li>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt;)</li>
 </ul>
 </li>
 <li><a href="#RotorSensor">https://w3id.org/optimar#RotorSensor</a>
 <ul>
-<li>Added: SubClass of https://w3id.org/optimar#Sensor</li>
-<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt;)</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#&gt; &lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt; &lt;https://w3id.org/optimar#YawSensor&gt;)</li>
+</ul>
+<ul>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt;)</li>
 </ul>
 </li>
-<li><a href="#RotorSpeedData">https://w3id.org/optimar#RotorSpeedData</a>
+<li><a href="#StructuralCamera">https://w3id.org/optimar#StructuralCamera</a>
 <ul>
-<li>Added: SubClass of https://w3id.org/optimar#RotorData</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#&gt; &lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt; &lt;https://w3id.org/optimar#YawSensor&gt;)</li>
 </ul>
-</li>
-<li><a href="#RotorSpeedSensor">https://w3id.org/optimar#RotorSpeedSensor</a>
 <ul>
-<li>Added: SubClass of https://w3id.org/optimar#RotorSensor</li>
-</ul>
-</li>
-<li><a href="#TemperatureData">https://w3id.org/optimar#TemperatureData</a>
-<ul>
-<li>Added: SubClass of https://w3id.org/optimar#Measurement</li>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt;)</li>
 </ul>
 </li>
 <li><a href="#TemperatureSensor">https://w3id.org/optimar#TemperatureSensor</a>
 <ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#&gt; &lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt; &lt;https://w3id.org/optimar#YawSensor&gt;)</li>
+</ul>
+<ul>
+<li>Deleted: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt;)</li>
+</ul>
+</li>
+</ul></details><details><summary><u>Added classes</u></summary>
+<ul><li><a href="#">https://w3id.org/optimar#</a>
+<ul>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#&gt; &lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt; &lt;https://w3id.org/optimar#YawSensor&gt;)</li>
+</ul>
+</li>
+<li><a href="#PitchAngleData">https://w3id.org/optimar#PitchAngleData</a>
+<ul>
+<li>Added: SubClass of https://w3id.org/optimar#Measurement</li>
+</ul>
+</li>
+<li><a href="#PitchAngleSensor">https://w3id.org/optimar#PitchAngleSensor</a>
+<ul>
 <li>Added: SubClass of https://w3id.org/optimar#Sensor</li>
-<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt;)</li>
 </ul>
 </li>
-<li><a href="#TorqueData">https://w3id.org/optimar#TorqueData</a>
+<li><a href="#YawAngleData">https://w3id.org/optimar#YawAngleData</a>
 <ul>
-<li>Added: SubClass of https://w3id.org/optimar#ElectricalData</li>
+<li>Added: SubClass of https://w3id.org/optimar#Measurement</li>
 </ul>
 </li>
-<li><a href="#TorqueSensor">https://w3id.org/optimar#TorqueSensor</a>
+<li><a href="#YawSensor">https://w3id.org/optimar#YawSensor</a>
 <ul>
-<li>Added: SubClass of https://w3id.org/optimar#ElectricalSensor</li>
+<li>Added: DisjointClasses DisjointClasses(&lt;https://w3id.org/optimar#&gt; &lt;https://w3id.org/optimar#Anemometer&gt; &lt;https://w3id.org/optimar#CorrosionCamera&gt; &lt;https://w3id.org/optimar#DynamicMonitor&gt; &lt;https://w3id.org/optimar#ElectricalSensor&gt; &lt;https://w3id.org/optimar#GaugeSystem&gt; &lt;https://w3id.org/optimar#ISUMSystem&gt; &lt;https://w3id.org/optimar#RotorSensor&gt; &lt;https://w3id.org/optimar#StructuralCamera&gt; &lt;https://w3id.org/optimar#TemperatureSensor&gt; &lt;https://w3id.org/optimar#YawSensor&gt;)</li>
+<li>Added: SubClass of https://w3id.org/optimar#Sensor</li>
 </ul>
-</li>
-<li><a href="#Transformer">https://w3id.org/optimar#Transformer</a>
-<ul>
-<li>Added: SubClass of https://w3id.org/optimar#Component</li>
-</ul>
-</li>
-<li><a href="#VoltageData">https://w3id.org/optimar#VoltageData</a>
-<ul>
-<li>Added: SubClass of https://w3id.org/optimar#ElectricalData</li>
-</ul>
-</li>
-<li><a href="#VoltageSensor">https://w3id.org/optimar#VoltageSensor</a>
-<ul>
-<li>Added: SubClass of https://w3id.org/optimar#ElectricalSensor</li>
-</ul>
-</li>
-</ul></details><details><summary><u>Deleted classes</u></summary>
-<ul><li><a href="#http://www.w3.org/2002/07/owl#SymetricProperty">http://www.w3.org/2002/07/owl#SymetricProperty</a>
 </li>
 </ul></details><h3 id="changeProp" class="list">Object Properties</h3>
-<details><summary><u>Modified object properties</u></summary>
-<ul><li><a href="#connectedTo">https://w3id.org/optimar#connectedTo</a>
+<details><summary><u>Added object properties</u></summary>
+<ul><li><a href="#measuresPitchAngle">https://w3id.org/optimar#measuresPitchAngle</a>
 <ul>
-<li>Added: SymmetricObjectProperty SymmetricObjectProperty(&lt;https://w3id.org/optimar#connectedTo&gt;)</li>
+<li>Added: domain https://w3id.org/optimar#PitchAngleSensor</li>
+<li>Added: Range https://w3id.org/optimar#PitchAngleData</li>
 </ul>
 </li>
-</ul></details><details><summary><u>Added object properties</u></summary>
-<ul><li><a href="#causesFailure">https://w3id.org/optimar#causesFailure</a>
+<li><a href="#measuresYawAngle">https://w3id.org/optimar#measuresYawAngle</a>
 <ul>
-<li>Added: domain https://w3id.org/optimar#Failure</li>
-<li>Added: Range https://w3id.org/optimar#Failure</li>
+<li>Added: domain https://w3id.org/optimar#YawSensor</li>
+<li>Added: Range https://w3id.org/optimar#YawAngleData</li>
 </ul>
 </li>
-<li><a href="#duration">https://w3id.org/optimar#duration</a>
+<li><a href="#monitorsPitchOf">https://w3id.org/optimar#monitorsPitchOf</a>
 <ul>
-<li>Added: domain Union of (https://w3id.org/optimar#Event, https://w3id.org/optimar#Maintenance)</li>
-<li>Added: Range http://qudt.org/schema/qudt/QuantityValue</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/optimar#monitorsPitchOf&gt; &lt;https://w3id.org/optimar#pitchAngleMonitoredBy&gt;)</li>
+<li>Added: Range https://w3id.org/optimar#Blade</li>
+<li>Added: domain https://w3id.org/optimar#PitchAngleSensor</li>
 </ul>
 </li>
-<li><a href="#electricalParameterMonitoredBy">https://w3id.org/optimar#electricalParameterMonitoredBy</a>
+<li><a href="#monitorsYawOf">https://w3id.org/optimar#monitorsYawOf</a>
 <ul>
-<li>Added: Range https://w3id.org/optimar#ElectricalSensor</li>
-<li>Added: domain https://w3id.org/optimar#Component</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/optimar#yawAngleMonitoredBy&gt; &lt;https://w3id.org/optimar#monitorsYawOf&gt;)</li>
+<li>Added: domain https://w3id.org/optimar#YawSensor</li>
+<li>Added: Range https://w3id.org/optimar#Nacelle</li>
 </ul>
 </li>
-<li><a href="#hasGeneratedData">https://w3id.org/optimar#hasGeneratedData</a>
+<li><a href="#pitchAngleMonitoredBy">https://w3id.org/optimar#pitchAngleMonitoredBy</a>
 <ul>
-<li>Added: Range https://w3id.org/optimar#Data</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/optimar#monitorsPitchOf&gt; &lt;https://w3id.org/optimar#pitchAngleMonitoredBy&gt;)</li>
+<li>Added: domain https://w3id.org/optimar#Blade</li>
+<li>Added: Range https://w3id.org/optimar#PitchAngleSensor</li>
 </ul>
 </li>
-<li><a href="#hasOperationalState">https://w3id.org/optimar#hasOperationalState</a>
+<li><a href="#yawAngleMonitoredBy">https://w3id.org/optimar#yawAngleMonitoredBy</a>
 <ul>
-<li>Added: Range https://w3id.org/optimar#OperationalState</li>
-<li>Added: domain https://w3id.org/optimar#Component</li>
+<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/optimar#yawAngleMonitoredBy&gt; &lt;https://w3id.org/optimar#monitorsYawOf&gt;)</li>
+<li>Added: domain https://w3id.org/optimar#Nacelle</li>
+<li>Added: Range https://w3id.org/optimar#YawSensor</li>
 </ul>
-</li>
-<li><a href="#measuresTemperatureOf">https://w3id.org/optimar#measuresTemperatureOf</a>
-<ul>
-<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/optimar#temperatureMonitoredBy&gt; &lt;https://w3id.org/optimar#measuresTemperatureOf&gt;)</li>
-<li>Added: Range Union of (https://w3id.org/optimar#Component, https://w3id.org/optimar#EnvironmentalCondition)</li>
-<li>Added: domain https://w3id.org/optimar#TemperatureSensor</li>
-</ul>
-</li>
-<li><a href="#precededBy">https://w3id.org/optimar#precededBy</a>
-<ul>
-<li>Added: domain https://w3id.org/optimar#Failure</li>
-<li>Added: Range https://w3id.org/optimar#Failure</li>
-</ul>
-</li>
-<li><a href="#rotorParameterMonitoredBy">https://w3id.org/optimar#rotorParameterMonitoredBy</a>
-<ul>
-<li>Added: Range https://w3id.org/optimar#RotorSensor</li>
-<li>Added: domain https://w3id.org/optimar#Component</li>
-</ul>
-</li>
-<li><a href="#temperatureMonitoredBy">https://w3id.org/optimar#temperatureMonitoredBy</a>
-<ul>
-<li>Added: InverseObjectProperties InverseObjectProperties(&lt;https://w3id.org/optimar#temperatureMonitoredBy&gt; &lt;https://w3id.org/optimar#measuresTemperatureOf&gt;)</li>
-<li>Added: domain Union of (https://w3id.org/optimar#Component, https://w3id.org/optimar#EnvironmentalCondition)</li>
-<li>Added: Range https://w3id.org/optimar#TemperatureSensor</li>
-</ul>
-</li>
-</ul></details><details><summary><u>Deleted object properties</u></summary>
-<ul><li><a href="#http://www.w3.org/ns/prov#generated">http://www.w3.org/ns/prov#generated</a>
-</li>
-</ul></details><h3 id="changeDataProp" class="list">Data Properties</h3>
-<details><summary><u>Modified data properties</u></summary>
-<ul><li><a href="#lightCorrosion">https://w3id.org/optimar#lightCorrosion</a>
-<ul>
-<li>Added: SubProperty of https://w3id.org/optimar#corrosionLevel</li>
-</ul>
-<ul>
-<li>Deleted: SubProperty of https://w3id.org/optimar#CorrosionLevel</li>
-</ul>
-</li>
-</ul></details><details><summary><u>Added data properties</u></summary>
-<ul><li><a href="#detectionDateTime">https://w3id.org/optimar#detectionDateTime</a>
-<ul>
-<li>Added: Domain https://w3id.org/optimar#Failure</li>
-<li>Added: Range http://www.w3.org/2001/XMLSchema#dateTime</li>
-</ul>
-</li>
-<li><a href="#duration">https://w3id.org/optimar#duration</a>
-</li>
-<li><a href="#endDateTime">https://w3id.org/optimar#endDateTime</a>
-<ul>
-<li>Added: Domain Union of (https://w3id.org/optimar#Event, https://w3id.org/optimar#Maintenance)</li>
-<li>Added: Range http://www.w3.org/2001/XMLSchema#dateTime</li>
-</ul>
-</li>
-<li><a href="#severity">https://w3id.org/optimar#severity</a>
-<ul>
-<li>Added: Domain https://w3id.org/optimar#Failure</li>
-<li>Added: Range http://www.w3.org/2001/XMLSchema#string</li>
-</ul>
-</li>
-<li><a href="#startDateTime">https://w3id.org/optimar#startDateTime</a>
-<ul>
-<li>Added: Range http://www.w3.org/2001/XMLSchema#dateTime</li>
-<li>Added: Domain Union of (https://w3id.org/optimar#Event, https://w3id.org/optimar#Maintenance)</li>
-</ul>
-</li>
-</ul></details><details><summary><u>Deleted data properties</u></summary>
-<ul><li><a href="#CorrosionLevel">https://w3id.org/optimar#CorrosionLevel</a>
 </li>
 </ul></details></div>
 </div>
