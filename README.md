@@ -26,6 +26,7 @@ The ontology models platform components, turbines, sensors, failures, maintenanc
 | v1.0 | Stable version of the ontology.<br>Consolidation and extension of structural and turbine components.<br>Inclusion of actors and roles with their functional relationships.<br>Detailed definition of specific sensor classes and associated measurement types.<br>More comprehensive modeling of failure events.<br>Inclusion of properties for measured data and environmental conditions. | 2025-10-06 | [v1.0](https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v1.0.ttl) |
 | v2.0 | Major hierarchy improvements and refactoring.<br>Separation of conceptual `Failure` classes from specific `FailureEvent` classes.<br>Introduction of `ex:Generator` and `ex:StructuralComponent`.<br>Enhanced logical constraints (cardinality, symmetric properties, and inverse relationships).<br>Standardized QUDT usage for physical quantities and property renaming for consistency.| 2025-12-01 | [v2.0](https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v2.0.ttl) |
 | v2.1 | New Components added: Gearbox and Transformer.<br>Electrical Sensors: ActivePowerSensor, ReactivePowerSensor, CurrentSensor, VoltageSensor, GridFrequencySensor, and TorqueSensor.<br>Rotor Sensors added: RotorSpeedSensor and RotorAngleSensor.<br>Measurement Data for ElectricalData, TemperatureData, and RotorData.<br>Added severity for failure, and relationships causesFailure / precededBy.<br>Added temporal properties startDateTime, endDateTime, detectionDateTime, and duration.<br>Inverse Properties added for traceability | 2026-01-19 | [v2.1](https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v2.1.ttl) |
+| v2.2 | Control sensors expansion. Added YawSensor (nacelle orientation) and PitchAngleSensor (blade angle). Inclusion of data classes: YawAngleData, PitchAngleData. Definition of measurement and monitoring properties for yaw and pitch with their inverse relationships. | 2026-01-30 | [v2.2](https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v2.2.ttl) |
 
 
 Each version of the ontology is stored in a separate file with its own namespace IRI.  
@@ -54,15 +55,15 @@ The `docs/` folder contains:
 
 ## Ontology IRI and usage
 
-For version 2.1:
+For version 2.2:
 
-- Ontology TTL: `https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v2.1.ttl`
-- Instances TTL: `https://bisite.github.io/OPTIMAR-Ontology/instances/v2.1/instances.ttl`
+- Ontology TTL: `https://bisite.github.io/OPTIMAR-Ontology/ontology/OPTiMAR-v2.2.ttl`
+- Instances TTL: `https://bisite.github.io/OPTIMAR-Ontology/instances/v2.2/instances.ttl`
 
 The ontology uses the following common prefixes:
 
 ```turtle
-@prefix optimar: <https://bisite.github.io/OPTIMAR-Ontology/ontology/v2.1/OPTiMAR-v2.1.ttl#> .
+@prefix optimar: <https://bisite.github.io/OPTIMAR-Ontology/ontology/v2.2/OPTiMAR-v2.2.ttl#> .
 @prefix sosa: <https://www.w3.org/ns/sosa/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
