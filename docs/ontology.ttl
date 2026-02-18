@@ -6,56 +6,57 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <https://w3id.org/optimar#> .
 
-<https://w3id.org/optimar> rdf:type owl:Ontology ;
-                            owl:versionIRI <https://w3id.org/optimar/2.2> ;
-                            <http://purl.org/dc/elements/1.1/creator> "Alberto Montero (USAL)" ,
-                                                                      "Alejandro Flores (USAL)" ,
-                                                                      "Cristina Aceta (Tekniker)" ,
-                                                                      "Oihana Garcia (Tekniker)" ;
-                            <http://purl.org/dc/elements/1.1/description> "Esta ontología describe los componentes, fallos, sensores y eventos relacionados con las plataformas eólicas offshore."@es ,
-                                                                          "This ontology describes the components, failures, sensors, and events related to offshore wind platforms."@en ;
-                            <http://purl.org/dc/elements/1.1/language> "en" ;
-                            <http://purl.org/dc/elements/1.1/name> "OPTiMAR Offshore Wind Ontology"@en ,
-                                                                   "Ontología Offshore OPTiMAR"@es ;
-                            <http://purl.org/dc/elements/1.1/title> "Offshore Wind Power Platform Ontology for OPTiMAR"@en ,
-                                                                    "Ontología de Plataforma Eólica Offshore para OPTiMAR"@es ;
-                            <http://purl.org/dc/terms/abstract> "Ontology modeling structural elements, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. Compatible with SOSA for observations and QUDT for units of measure."@en ,
-                                                                "Ontología que modela los elementos estructurales, sensores, eventos y fallos de plataformas eólicas offshore, incluyendo datos de medición, actores involucrados y relaciones semánticas entre componentes. Compatible con SOSA para observaciones y QUDT para unidades de medida."@es ;
-                            <http://purl.org/dc/terms/bibliographicCitation> "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Offshore Wind Power Platform Ontology for OPTiMAR. DOI: 10.5281/zenodo.17962874"@en ,
-                                                                             "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.5281/zenodo.17962874"@es ;
-                            <http://purl.org/dc/terms/created> "2025-09-30"^^xsd:date ;
-                            <http://purl.org/dc/terms/identifier> <https://doi.org/10.5281/zenodo.17962874> ;
-                            <http://purl.org/dc/terms/issued> "2025-12-02"^^xsd:date ;
-                            <http://purl.org/dc/terms/license> <https://opensource.org/licenses/MIT> ;
-                            <http://purl.org/dc/terms/modified> "2026-01-30"^^xsd:date ;
-                            <http://purl.org/dc/terms/publisher> "Universidad de Salamanca, Centro Tecnológico y de Investigación - Tekniker"@es ,
-                                                                 "University of Salamanca, Technology and Research Centre - Tekniker"@en ;
-                            <http://purl.org/dc/terms/rights> "Este trabajo se distribuye bajo la licencia MIT. Se permite copiar, modificar y distribuir bajo los términos de dicha licencia."@es ,
-                                                              "This work is distributed under the MIT License. It may be copied, modified, and distributed under the terms of this license."@en ;
-                            <http://purl.org/dc/terms/status> "estable"@es ,
-                                                              "stable"@en ;
-                            <http://purl.org/vocab/vann/preferredNamespacePrefix> "optimar" ;
-                            <http://purl.org/vocab/vann/preferredNamespaceUri> : ;
-                            rdfs:comment """
+<https://w3id.org/optimar#> rdf:type owl:Ontology ;
+                             owl:versionIRI <https://w3id.org/optimar/2.2> ;
+                             <http://purl.org/dc/elements/1.1/creator> "Alberto Montero (USAL)" ,
+                                                                       "Alejandro Flores (USAL)" ,
+                                                                       "Cristina Aceta (Tekniker)" ,
+                                                                       "Oihana Garcia (Tekniker)" ;
+                             <http://purl.org/dc/elements/1.1/description> "Esta ontología describe los componentes, fallos, sensores y eventos relacionados con las plataformas eólicas offshore."@es ,
+                                                                           "This ontology describes the components, failures, sensors, and events related to offshore wind platforms."@en ;
+                             <http://purl.org/dc/elements/1.1/language> "en" ;
+                             <http://purl.org/dc/elements/1.1/name> "OPTiMAR Offshore Wind Ontology"@en ,
+                                                                    "Ontología Offshore OPTiMAR"@es ;
+                             <http://purl.org/dc/elements/1.1/rights> "https://opensource.org/licenses/MIT" ;
+                             <http://purl.org/dc/elements/1.1/title> "Offshore Wind Power Platform Ontology for OPTiMAR"@en ,
+                                                                     "Ontología de Plataforma Eólica Offshore para OPTiMAR"@es ;
+                             <http://purl.org/dc/terms/abstract> "Ontology modeling structural elements, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. Compatible with SOSA for observations and QUDT for units of measure."@en ,
+                                                                 "Ontología que modela los elementos estructurales, sensores, eventos y fallos de plataformas eólicas offshore, incluyendo datos de medición, actores involucrados y relaciones semánticas entre componentes. Compatible con SOSA para observaciones y QUDT para unidades de medida."@es ;
+                             <http://purl.org/dc/terms/bibliographicCitation> "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Offshore Wind Power Platform Ontology for OPTiMAR. DOI: 10.5281/zenodo.17962874"@en ,
+                                                                              "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.5281/zenodo.17962874"@es ;
+                             <http://purl.org/dc/terms/created> "2025-09-30"^^xsd:date ;
+                             <http://purl.org/dc/terms/identifier> <https://doi.org/10.5281/zenodo.17962874> ;
+                             <http://purl.org/dc/terms/issued> "2025-12-02"^^xsd:date ;
+                             <http://purl.org/dc/terms/license> <https://opensource.org/licenses/MIT> ;
+                             <http://purl.org/dc/terms/modified> "2026-01-30"^^xsd:date ;
+                             <http://purl.org/dc/terms/publisher> "Universidad de Salamanca, Centro Tecnológico y de Investigación - Tekniker"@es ,
+                                                                  "University of Salamanca, Technology and Research Centre - Tekniker"@en ;
+                             <http://purl.org/dc/terms/rights> "Este trabajo se distribuye bajo la licencia MIT. Se permite copiar, modificar y distribuir bajo los términos de dicha licencia."@es ,
+                                                               "This work is distributed under the MIT License. It may be copied, modified, and distributed under the terms of this license."@en ;
+                             <http://purl.org/dc/terms/status> "estable"@es ,
+                                                               "stable"@en ;
+                             <http://purl.org/vocab/vann/preferredNamespacePrefix> "optimar" ;
+                             <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/optimar#> ;
+                             rdfs:comment """
     Version 2.2 (2026-01-30) - Ampliación de sensores de control:
     - Añadidos sensores de control: YawSensor (angulo de orientación de góndola), PitchAngleSensor (ángulo de palas)
     - Añadidas clases de datos: YawAngleData, PitchAngleData
     - Añadidas propiedades de medición y monitorización para yaw y pitch
     - Añadidas propiedades inversas: yawAngleMonitoredBy/monitorsYawOf, pitchAngleMonitoredBy/monitorsPitchOf
     """@es ,
-                                         """
+                                          """
     Version 2.2 (2026-01-30) - Control sensors expansion:
     - Added control sensors: YawSensor (nacelle orientation angle), PitchAngleSensor (blade angle)
     - Added data classes: YawAngleData, PitchAngleData
     - Added measurement and monitoring properties for yaw and pitch
     - Added inverse properties: yawAngleMonitoredBy/monitorsYawOf, pitchAngleMonitoredBy/monitorsPitchOf
     """@en ;
-                            rdfs:seeAlso :changelog ;
-                            owl:backwardCompatibleWith <https://w3id.org/optimar/2.1> ;
-                            owl:priorVersion <https://w3id.org/optimar/2.1> ;
-                            owl:versionInfo "Version 2.2 of the Ontology"@en ,
-                                            "Versión 2.2 de la ontología"@es ;
-                            <http://xmlns.com/foaf/0.1/homepage> <https://w3id.org/optimar> .
+                             rdfs:seeAlso :changelog ;
+                             owl:backwardCompatibleWith <https://w3id.org/optimar/2.1> ;
+                             owl:priorVersion <https://w3id.org/optimar/2.1> ;
+                             owl:versionInfo "Version 2.2 of the Ontology"@en ,
+                                             "Versión 2.2 de la ontología"@es ;
+                             <http://xmlns.com/foaf/0.1/homepage> <https://w3id.org/optimar> .
 
 #################################################################
 #    Annotation properties
@@ -75,6 +76,10 @@
 
 ###  http://purl.org/dc/elements/1.1/name
 <http://purl.org/dc/elements/1.1/name> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/title

@@ -1,41 +1,42 @@
-<https://w3id.org/optimar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/optimar/2.2> .
-<https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/creator> "Alberto Montero (USAL)" .
-<https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/creator> "Alejandro Flores (USAL)" .
-<https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/creator> "Cristina Aceta (Tekniker)" .
-<https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/creator> "Oihana Garcia (Tekniker)" .
-<https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/description> "Esta ontología describe los componentes, fallos, sensores y eventos relacionados con las plataformas eólicas offshore."@es .
-<https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/description> "This ontology describes the components, failures, sensors, and events related to offshore wind platforms."@en .
-<https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/language> "en" .
-<https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/name> "OPTiMAR Offshore Wind Ontology"@en .
-<https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/name> "Ontología Offshore OPTiMAR"@es .
-<https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/title> "Offshore Wind Power Platform Ontology for OPTiMAR"@en .
-<https://w3id.org/optimar> <http://purl.org/dc/elements/1.1/title> "Ontología de Plataforma Eólica Offshore para OPTiMAR"@es .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/abstract> "Ontology modeling structural elements, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. Compatible with SOSA for observations and QUDT for units of measure."@en .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/abstract> "Ontología que modela los elementos estructurales, sensores, eventos y fallos de plataformas eólicas offshore, incluyendo datos de medición, actores involucrados y relaciones semánticas entre componentes. Compatible con SOSA para observaciones y QUDT para unidades de medida."@es .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/bibliographicCitation> "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Offshore Wind Power Platform Ontology for OPTiMAR. DOI: 10.5281/zenodo.17962874"@en .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/bibliographicCitation> "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.5281/zenodo.17962874"@es .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/created> "2025-09-30"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/identifier> <https://doi.org/10.5281/zenodo.17962874> .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/issued> "2025-12-02"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/license> <https://opensource.org/licenses/MIT> .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/modified> "2026-01-30"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/publisher> "Universidad de Salamanca, Centro Tecnológico y de Investigación - Tekniker"@es .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/publisher> "University of Salamanca, Technology and Research Centre - Tekniker"@en .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/rights> "Este trabajo se distribuye bajo la licencia MIT. Se permite copiar, modificar y distribuir bajo los términos de dicha licencia."@es .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/rights> "This work is distributed under the MIT License. It may be copied, modified, and distributed under the terms of this license."@en .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/status> "estable"@es .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/status> "stable"@en .
-<https://w3id.org/optimar> <http://purl.org/vocab/vann/preferredNamespacePrefix> "optimar" .
-<https://w3id.org/optimar> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/optimar#> .
-<https://w3id.org/optimar> <http://www.w3.org/2000/01/rdf-schema#comment> "\r\n    Version 2.2 (2026-01-30) - Ampliación de sensores de control:\r\n    - Añadidos sensores de control: YawSensor (angulo de orientación de góndola), PitchAngleSensor (ángulo de palas)\r\n    - Añadidas clases de datos: YawAngleData, PitchAngleData\r\n    - Añadidas propiedades de medición y monitorización para yaw y pitch\r\n    - Añadidas propiedades inversas: yawAngleMonitoredBy/monitorsYawOf, pitchAngleMonitoredBy/monitorsPitchOf\r\n    "@es .
-<https://w3id.org/optimar> <http://www.w3.org/2000/01/rdf-schema#comment> "\r\n    Version 2.2 (2026-01-30) - Control sensors expansion:\r\n    - Added control sensors: YawSensor (nacelle orientation angle), PitchAngleSensor (blade angle)\r\n    - Added data classes: YawAngleData, PitchAngleData\r\n    - Added measurement and monitoring properties for yaw and pitch\r\n    - Added inverse properties: yawAngleMonitoredBy/monitorsYawOf, pitchAngleMonitoredBy/monitorsPitchOf\r\n    "@en .
-<https://w3id.org/optimar> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/optimar#changelog> .
-<https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <https://w3id.org/optimar/2.1> .
-<https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/optimar/2.1> .
-<https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#versionInfo> "Version 2.2 of the Ontology"@en .
-<https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#versionInfo> "Versión 2.2 de la ontología"@es .
-<https://w3id.org/optimar> <http://xmlns.com/foaf/0.1/homepage> <https://w3id.org/optimar> .
+<https://w3id.org/optimar#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/optimar#> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/optimar/2.2> .
+<https://w3id.org/optimar#> <http://purl.org/dc/elements/1.1/creator> "Alberto Montero (USAL)" .
+<https://w3id.org/optimar#> <http://purl.org/dc/elements/1.1/creator> "Alejandro Flores (USAL)" .
+<https://w3id.org/optimar#> <http://purl.org/dc/elements/1.1/creator> "Cristina Aceta (Tekniker)" .
+<https://w3id.org/optimar#> <http://purl.org/dc/elements/1.1/creator> "Oihana Garcia (Tekniker)" .
+<https://w3id.org/optimar#> <http://purl.org/dc/elements/1.1/description> "Esta ontología describe los componentes, fallos, sensores y eventos relacionados con las plataformas eólicas offshore."@es .
+<https://w3id.org/optimar#> <http://purl.org/dc/elements/1.1/description> "This ontology describes the components, failures, sensors, and events related to offshore wind platforms."@en .
+<https://w3id.org/optimar#> <http://purl.org/dc/elements/1.1/language> "en" .
+<https://w3id.org/optimar#> <http://purl.org/dc/elements/1.1/name> "OPTiMAR Offshore Wind Ontology"@en .
+<https://w3id.org/optimar#> <http://purl.org/dc/elements/1.1/name> "Ontología Offshore OPTiMAR"@es .
+<https://w3id.org/optimar#> <http://purl.org/dc/elements/1.1/rights> "https://opensource.org/licenses/MIT" .
+<https://w3id.org/optimar#> <http://purl.org/dc/elements/1.1/title> "Offshore Wind Power Platform Ontology for OPTiMAR"@en .
+<https://w3id.org/optimar#> <http://purl.org/dc/elements/1.1/title> "Ontología de Plataforma Eólica Offshore para OPTiMAR"@es .
+<https://w3id.org/optimar#> <http://purl.org/dc/terms/abstract> "Ontology modeling structural elements, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. Compatible with SOSA for observations and QUDT for units of measure."@en .
+<https://w3id.org/optimar#> <http://purl.org/dc/terms/abstract> "Ontología que modela los elementos estructurales, sensores, eventos y fallos de plataformas eólicas offshore, incluyendo datos de medición, actores involucrados y relaciones semánticas entre componentes. Compatible con SOSA para observaciones y QUDT para unidades de medida."@es .
+<https://w3id.org/optimar#> <http://purl.org/dc/terms/bibliographicCitation> "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Offshore Wind Power Platform Ontology for OPTiMAR. DOI: 10.5281/zenodo.17962874"@en .
+<https://w3id.org/optimar#> <http://purl.org/dc/terms/bibliographicCitation> "Flores, A., Montero, A., Garcia, O., & Aceta, C. (2025). Ontología de Plataforma Eólica Offshore para OPTiMAR. DOI: 10.5281/zenodo.17962874"@es .
+<https://w3id.org/optimar#> <http://purl.org/dc/terms/created> "2025-09-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/optimar#> <http://purl.org/dc/terms/identifier> <https://doi.org/10.5281/zenodo.17962874> .
+<https://w3id.org/optimar#> <http://purl.org/dc/terms/issued> "2025-12-02"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/optimar#> <http://purl.org/dc/terms/license> <https://opensource.org/licenses/MIT> .
+<https://w3id.org/optimar#> <http://purl.org/dc/terms/modified> "2026-01-30"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/optimar#> <http://purl.org/dc/terms/publisher> "Universidad de Salamanca, Centro Tecnológico y de Investigación - Tekniker"@es .
+<https://w3id.org/optimar#> <http://purl.org/dc/terms/publisher> "University of Salamanca, Technology and Research Centre - Tekniker"@en .
+<https://w3id.org/optimar#> <http://purl.org/dc/terms/rights> "Este trabajo se distribuye bajo la licencia MIT. Se permite copiar, modificar y distribuir bajo los términos de dicha licencia."@es .
+<https://w3id.org/optimar#> <http://purl.org/dc/terms/rights> "This work is distributed under the MIT License. It may be copied, modified, and distributed under the terms of this license."@en .
+<https://w3id.org/optimar#> <http://purl.org/dc/terms/status> "estable"@es .
+<https://w3id.org/optimar#> <http://purl.org/dc/terms/status> "stable"@en .
+<https://w3id.org/optimar#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "optimar" .
+<https://w3id.org/optimar#> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/optimar#> .
+<https://w3id.org/optimar#> <http://www.w3.org/2000/01/rdf-schema#comment> "\r\n    Version 2.2 (2026-01-30) - Ampliación de sensores de control:\r\n    - Añadidos sensores de control: YawSensor (angulo de orientación de góndola), PitchAngleSensor (ángulo de palas)\r\n    - Añadidas clases de datos: YawAngleData, PitchAngleData\r\n    - Añadidas propiedades de medición y monitorización para yaw y pitch\r\n    - Añadidas propiedades inversas: yawAngleMonitoredBy/monitorsYawOf, pitchAngleMonitoredBy/monitorsPitchOf\r\n    "@es .
+<https://w3id.org/optimar#> <http://www.w3.org/2000/01/rdf-schema#comment> "\r\n    Version 2.2 (2026-01-30) - Control sensors expansion:\r\n    - Added control sensors: YawSensor (nacelle orientation angle), PitchAngleSensor (blade angle)\r\n    - Added data classes: YawAngleData, PitchAngleData\r\n    - Added measurement and monitoring properties for yaw and pitch\r\n    - Added inverse properties: yawAngleMonitoredBy/monitorsYawOf, pitchAngleMonitoredBy/monitorsPitchOf\r\n    "@en .
+<https://w3id.org/optimar#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/optimar#changelog> .
+<https://w3id.org/optimar#> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <https://w3id.org/optimar/2.1> .
+<https://w3id.org/optimar#> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/optimar/2.1> .
+<https://w3id.org/optimar#> <http://www.w3.org/2002/07/owl#versionInfo> "Version 2.2 of the Ontology"@en .
+<https://w3id.org/optimar#> <http://www.w3.org/2002/07/owl#versionInfo> "Versión 2.2 de la ontología"@es .
+<https://w3id.org/optimar#> <http://xmlns.com/foaf/0.1/homepage> <https://w3id.org/optimar> .
 # 
 # 
 # #################################################################
@@ -56,6 +57,9 @@
 # 
 # http://purl.org/dc/elements/1.1/name
 <http://purl.org/dc/elements/1.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/elements/1.1/title
 <http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

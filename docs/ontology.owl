@@ -12,7 +12,7 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:optimar="https://w3id.org/optimar#">
-    <owl:Ontology rdf:about="https://w3id.org/optimar">
+    <owl:Ontology rdf:about="https://w3id.org/optimar#">
         <owl:versionIRI rdf:resource="https://w3id.org/optimar/2.2"/>
         <dc:creator>Alberto Montero (USAL)</dc:creator>
         <dc:creator>Alejandro Flores (USAL)</dc:creator>
@@ -23,6 +23,7 @@
         <dc:language>en</dc:language>
         <dc:name xml:lang="en">OPTiMAR Offshore Wind Ontology</dc:name>
         <dc:name xml:lang="es">Ontología Offshore OPTiMAR</dc:name>
+        <dc:rights>https://opensource.org/licenses/MIT</dc:rights>
         <dc:title xml:lang="en">Offshore Wind Power Platform Ontology for OPTiMAR</dc:title>
         <dc:title xml:lang="es">Ontología de Plataforma Eólica Offshore para OPTiMAR</dc:title>
         <terms:abstract xml:lang="en">Ontology modeling structural elements, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. Compatible with SOSA for observations and QUDT for units of measure.</terms:abstract>
@@ -103,6 +104,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/name"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
     
 
 

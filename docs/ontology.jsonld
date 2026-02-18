@@ -306,6 +306,9 @@
   "@id" : "http://purl.org/dc/elements/1.1/name",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/elements/1.1/rights",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/elements/1.1/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -357,7 +360,7 @@
   "@id" : "http://xmlns.com/foaf/0.1/homepage",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://w3id.org/optimar",
+  "@id" : "https://w3id.org/optimar#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
     "@value" : "Alberto Montero (USAL)"
@@ -384,6 +387,9 @@
   }, {
     "@language" : "es",
     "@value" : "Ontología Offshore OPTiMAR"
+  } ],
+  "http://purl.org/dc/elements/1.1/rights" : [ {
+    "@value" : "https://opensource.org/licenses/MIT"
   } ],
   "http://purl.org/dc/elements/1.1/title" : [ {
     "@language" : "en",

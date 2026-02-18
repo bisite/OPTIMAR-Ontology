@@ -1,4 +1,5 @@
 
+@base <https://w3id.org/optimar#> .
 @prefix optimar: <https://w3id.org/optimar#> .
 @prefix sosa: <https://www.w3.org/ns/sosa/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -18,7 +19,7 @@
 # Ontology metadata
 ##########################################################
 
-<https://w3id.org/optimar>
+<https://w3id.org/optimar#>
     a owl:Ontology ;
 
     dc:title "Ontología de Plataforma Eólica Offshore para OPTiMAR"@es ;
@@ -40,6 +41,7 @@
     dc:language "en" ;
     
     dcterms:license <https://opensource.org/licenses/MIT> ;
+    dc:rights "https://opensource.org/licenses/MIT" ;
     dcterms:rights "Este trabajo se distribuye bajo la licencia MIT. Se permite copiar, modificar y distribuir bajo los términos de dicha licencia."@es ;
     dcterms:rights "This work is distributed under the MIT License. It may be copied, modified, and distributed under the terms of this license."@en ;
 
