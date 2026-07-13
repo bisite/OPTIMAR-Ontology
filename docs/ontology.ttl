@@ -7,7 +7,7 @@
 @base <https://w3id.org/optimar#> .
 
 <https://w3id.org/optimar#> rdf:type owl:Ontology ;
-                             owl:versionIRI <https://w3id.org/optimar/2.2> ;
+                             owl:versionIRI <https://w3id.org/optimar/2.3> ;
                              <http://purl.org/dc/elements/1.1/creator> "Alberto Montero (USAL)" ,
                                                                        "Alejandro Flores (USAL)" ,
                                                                        "Cristina Aceta (Tekniker)" ,
@@ -28,7 +28,7 @@
                              <http://purl.org/dc/terms/identifier> <https://doi.org/10.5281/zenodo.17962874> ;
                              <http://purl.org/dc/terms/issued> "2025-12-02"^^xsd:date ;
                              <http://purl.org/dc/terms/license> <https://opensource.org/licenses/MIT> ;
-                             <http://purl.org/dc/terms/modified> "2026-01-30"^^xsd:date ;
+                             <http://purl.org/dc/terms/modified> "2026-07-13"^^xsd:date ;
                              <http://purl.org/dc/terms/publisher> "Universidad de Salamanca, Centro Tecnológico y de Investigación - Tekniker"@es ,
                                                                   "University of Salamanca, Technology and Research Centre - Tekniker"@en ;
                              <http://purl.org/dc/terms/rights> "Este trabajo se distribuye bajo la licencia MIT. Se permite copiar, modificar y distribuir bajo los términos de dicha licencia."@es ,
@@ -38,24 +38,48 @@
                              <http://purl.org/vocab/vann/preferredNamespacePrefix> "optimar" ;
                              <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/optimar#> ;
                              rdfs:comment """
-    Version 2.2 (2026-01-30) - Ampliación de sensores de control:
-    - Añadidos sensores de control: YawSensor (angulo de orientación de góndola), PitchAngleSensor (ángulo de palas)
-    - Añadidas clases de datos: YawAngleData, PitchAngleData
-    - Añadidas propiedades de medición y monitorización para yaw y pitch
-    - Añadidas propiedades inversas: yawAngleMonitoredBy/monitorsYawOf, pitchAngleMonitoredBy/monitorsPitchOf
+    Version 2.3 (2026-07-13) - Parques eólicos, nuevos sensores/datos y reorganización de la monitorización:
+    - Añadida la clase WindFarm y la jerarquía de composición WindFarm -> WindPowerPlatform -> Turbine/Component
+    - Añadidas clases: Inverter (Component), ApparentPowerSensor (ElectricalSensor), RotationalSpeedSensor (Sensor),
+      WindData/WindDirectionData/WindSpeedData (Measurement)
+    - \"monitors\" y \"monitoredBy\" pasan a ser propiedades genéricas de nivel superior; todas las propiedades
+      \"...Monitors\"/\"...MonitoredBy\" existentes pasan a ser subpropiedades de las mismas
+    - Se crea \"actorMonitors\" (subpropiedad de \"monitors\") para la relación Actor -> Component/Sensor
+    - \"isMonitoredBy\" se renombra a \"turbineComponentMonitoredBy\" (subpropiedad de \"monitoredBy\")
+    - Se crea \"measures\" como superpropiedad genérica; todas las propiedades \"measures...\" pasan a ser subpropiedades
+    - Se crean \"measuresWindSpeed\" y \"measuresWindDirection\" (subpropiedades de \"measures\", dominio Anemometer) para
+      enlazar el anemómetro con WindSpeedData/WindDirectionData, siguiendo el mismo patrón que measuresYawAngle/measuresPitchAngle
+    - Se crean las propiedades \"isInstalledIn\"/\"hasInstalled\" (sensor-componente) y \"hasTurbine\", \"hasPlatform\",
+      \"hasComponent\" (composición de parque/plataforma)
+    - Añadida la data property \"measurementType\"
+    - Correcciones de consistencia: \"duration\", \"pressureLevel\", \"stressLevel\" y \"vibrationLevel\" quedan declaradas
+      únicamente como owl:ObjectProperty (su rango qudt:QuantityValue es una clase, no un tipo de dato); se elimina
+      la doble tipificación de \"hasGeneratedData\"; RotationalSpeedSensor se añade al axioma de disjunción de sensores
     """@es ,
                                           """
-    Version 2.2 (2026-01-30) - Control sensors expansion:
-    - Added control sensors: YawSensor (nacelle orientation angle), PitchAngleSensor (blade angle)
-    - Added data classes: YawAngleData, PitchAngleData
-    - Added measurement and monitoring properties for yaw and pitch
-    - Added inverse properties: yawAngleMonitoredBy/monitorsYawOf, pitchAngleMonitoredBy/monitorsPitchOf
+    Version 2.3 (2026-07-13) - Wind farms, new sensors/data, and monitoring property reorganization:
+    - Added the WindFarm class and the composition hierarchy WindFarm -> WindPowerPlatform -> Turbine/Component
+    - Added classes: Inverter (Component), ApparentPowerSensor (ElectricalSensor), RotationalSpeedSensor (Sensor),
+      WindData/WindDirectionData/WindSpeedData (Measurement)
+    - \"monitors\" and \"monitoredBy\" become generic top-level properties; all existing \"...Monitors\"/\"...MonitoredBy\"
+      properties become subproperties of them
+    - Added \"actorMonitors\" (subproperty of \"monitors\") for the Actor -> Component/Sensor relationship
+    - \"isMonitoredBy\" renamed to \"turbineComponentMonitoredBy\" (subproperty of \"monitoredBy\")
+    - Added \"measures\" as a generic superproperty; all \"measures...\" properties become subproperties of it
+    - Added \"measuresWindSpeed\" and \"measuresWindDirection\" (subproperties of \"measures\", domain Anemometer) linking
+      the anemometer to WindSpeedData/WindDirectionData, following the same pattern as measuresYawAngle/measuresPitchAngle
+    - Added \"isInstalledIn\"/\"hasInstalled\" (sensor-component) and \"hasTurbine\", \"hasPlatform\", \"hasComponent\"
+      (wind farm/platform composition) properties
+    - Added the \"measurementType\" data property
+    - Consistency fixes: \"duration\", \"pressureLevel\", \"stressLevel\" and \"vibrationLevel\" are now declared solely as
+      owl:ObjectProperty (their qudt:QuantityValue range is a class, not a datatype); removed the double typing of
+      \"hasGeneratedData\"; RotationalSpeedSensor added to the sensor disjointness axiom
     """@en ;
                              rdfs:seeAlso :changelog ;
-                             owl:backwardCompatibleWith <https://w3id.org/optimar/2.1> ;
-                             owl:priorVersion <https://w3id.org/optimar/2.1> ;
-                             owl:versionInfo "Version 2.2 of the Ontology"@en ,
-                                             "Versión 2.2 de la ontología"@es ;
+                             owl:backwardCompatibleWith <https://w3id.org/optimar/2.2> ;
+                             owl:priorVersion <https://w3id.org/optimar/2.2> ;
+                             owl:versionInfo "Version 2.3 of the Ontology"@en ,
+                                             "Versión 2.3 de la ontología"@es ;
                              <http://xmlns.com/foaf/0.1/homepage> <https://w3id.org/optimar> .
 
 #################################################################
@@ -134,17 +158,8 @@
 <http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
 
 
-###  http://www.w3.org/ns/prov#generated
-<http://www.w3.org/ns/prov#generated> rdf:type owl:AnnotationProperty .
-
-
 ###  http://xmlns.com/foaf/0.1/homepage
 <http://xmlns.com/foaf/0.1/homepage> rdf:type owl:AnnotationProperty .
-
-
-###  https://w3id.org/optimar#hasGeneratedData
-:hasGeneratedData rdf:type owl:AnnotationProperty ;
-                  rdfs:subPropertyOf <http://www.w3.org/ns/prov#generated> .
 
 
 #################################################################
@@ -158,6 +173,25 @@ xsd:date rdf:type rdfs:Datatype .
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://www.w3.org/ns/prov#generated
+<http://www.w3.org/ns/prov#generated> rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/optimar#actorMonitors
+:actorMonitors rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :monitors ;
+               rdfs:domain :Actor ;
+               rdfs:range [ rdf:type owl:Class ;
+                            owl:unionOf ( :Component
+                                          :Sensor
+                                        )
+                          ] ;
+               rdfs:comment "Relaciona a un actor con los componentes o sensores que supervisa."@es ,
+                            "Relates an actor to the components or sensors they monitor."@en ;
+               rdfs:label "Actor monitorea"@es ,
+                          "Actor monitors"@en .
+
 
 ###  https://w3id.org/optimar#adjusts
 :adjusts rdf:type owl:ObjectProperty ;
@@ -287,11 +321,16 @@ xsd:date rdf:type rdfs:Datatype .
                                       :Maintenance
                                     )
                       ] ;
-          rdfs:range <http://qudt.org/schema/qudt/QuantityValue> .
+          rdfs:range <http://qudt.org/schema/qudt/QuantityValue> ;
+          rdfs:comment "Duración del evento o mantenimiento expresada como valor QUDT."@es ,
+                       "Duration of the event or maintenance expressed as a QUDT quantity value."@en ;
+          rdfs:label "Duración"@es ,
+                     "Duration"@en .
 
 
 ###  https://w3id.org/optimar#electricalParameterMonitoredBy
 :electricalParameterMonitoredBy rdf:type owl:ObjectProperty ;
+                                rdfs:subPropertyOf :monitoredBy ;
                                 rdfs:domain :Component ;
                                 rdfs:range :ElectricalSensor ;
                                 rdfs:comment "Relaciona un componente con el sensor eléctrico que monitorea sus parámetros."@es ,
@@ -320,6 +359,16 @@ xsd:date rdf:type rdfs:Datatype .
                         "Nominal capacity"@en .
 
 
+###  https://w3id.org/optimar#hasComponent
+:hasComponent rdf:type owl:ObjectProperty ;
+              rdfs:domain :WindPowerPlatform ;
+              rdfs:range :Component ;
+              rdfs:comment "Indica que una plataforma eólica offshore tiene un componente específico."@es ,
+                           "Indicates that an offshore wind power platform has a specific component."@en ;
+              rdfs:label "Has component"@en ,
+                         "Tiene componente"@es .
+
+
 ###  https://w3id.org/optimar#hasFailureCause
 :hasFailureCause rdf:type owl:ObjectProperty ;
                  rdfs:domain :Failure ;
@@ -332,7 +381,23 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/optimar#hasGeneratedData
 :hasGeneratedData rdf:type owl:ObjectProperty ;
-                  rdfs:range :Data .
+                  rdfs:subPropertyOf <http://www.w3.org/ns/prov#generated> ;
+                  rdfs:range :Data ;
+                  rdfs:comment "Relaciona un evento con los datos generados por el mismo."@es ,
+                               "Relates an event to the generated data by the same."@en ;
+                  rdfs:label "Genera"@es ,
+                             "Generates"@en .
+
+
+###  https://w3id.org/optimar#hasInstalled
+:hasInstalled rdf:type owl:ObjectProperty ;
+              owl:inverseOf :isInstalledIn ;
+              rdfs:domain :Component ;
+              rdfs:range <https://www.w3.org/ns/sosa/Sensor> ;
+              rdfs:comment "Indica que un componente tiene un sensor instalado."@es ,
+                           "Indicates that a component has a sensor installed."@en ;
+              rdfs:label "Has installed"@en ,
+                         "Tiene instalado"@es .
 
 
 ###  https://w3id.org/optimar#hasOperationalState
@@ -345,6 +410,16 @@ xsd:date rdf:type rdfs:Datatype .
                                 "Tiene estado operativo"@es .
 
 
+###  https://w3id.org/optimar#hasPlatform
+:hasPlatform rdf:type owl:ObjectProperty ;
+             rdfs:domain :WindFarm ;
+             rdfs:range :WindPowerPlatform ;
+             rdfs:comment "Indica la plataforma eólica asociada a un parque eólico."@es ,
+                          "Indicates the wind power platform associated with a wind farm."@en ;
+             rdfs:label "Has platform"@en ,
+                        "Tiene plataforma"@es .
+
+
 ###  https://w3id.org/optimar#hasRole
 :hasRole rdf:type owl:ObjectProperty ;
          rdfs:domain :Actor ;
@@ -353,6 +428,16 @@ xsd:date rdf:type rdfs:Datatype .
                       "Indicates the role that an actor performs within the system."@en ;
          rdfs:label "Has role"@en ,
                     "Tiene rol"@es .
+
+
+###  https://w3id.org/optimar#hasTurbine
+:hasTurbine rdf:type owl:ObjectProperty ;
+            rdfs:domain :WindPowerPlatform ;
+            rdfs:range :Turbine ;
+            rdfs:comment "Indica que una plataforma eólica contiene una turbina eólica."@es ,
+                         "Indicates that a wind power platform contains a wind turbine."@en ;
+            rdfs:label "Has turbine"@en ,
+                       "Tiene turbina"@es .
 
 
 ###  https://w3id.org/optimar#hasTurbineComponent
@@ -396,14 +481,14 @@ xsd:date rdf:type rdfs:Datatype .
                        "Is housed in"@en .
 
 
-###  https://w3id.org/optimar#isMonitoredBy
-:isMonitoredBy rdf:type owl:ObjectProperty ;
-               rdfs:domain :TurbineComponent ;
-               rdfs:range :Sensor ;
-               rdfs:comment "Relaciona un componente de turbina con los sensores que lo supervisan."@es ,
-                            "Relates a turbine component with the sensors it is monitored by."@en ;
-               rdfs:label "Es monitoreado por"@es ,
-                          "Is monitored by"@en .
+###  https://w3id.org/optimar#isInstalledIn
+:isInstalledIn rdf:type owl:ObjectProperty ;
+               rdfs:domain <https://www.w3.org/ns/sosa/Sensor> ;
+               rdfs:range :Component ;
+               rdfs:comment "Indica que un sensor está instalado en un componente."@es ,
+                            "Indicates that a sensor is installed in a component."@en ;
+               rdfs:label "Está instalado en"@es ,
+                          "Is installed in"@en .
 
 
 ###  https://w3id.org/optimar#isPartOf
@@ -481,8 +566,17 @@ xsd:date rdf:type rdfs:Datatype .
                  "Mass"@en .
 
 
+###  https://w3id.org/optimar#measures
+:measures rdf:type owl:ObjectProperty ;
+          rdfs:comment "Indica el tipo de dato medido por un sensor."@es ,
+                       "Indicates the type of data measured by a sensor."@en ;
+          rdfs:label "Measures"@en ,
+                     "Mide"@es .
+
+
 ###  https://w3id.org/optimar#measuresPitchAngle
 :measuresPitchAngle rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :measures ;
                     rdfs:domain :PitchAngleSensor ;
                     rdfs:range :PitchAngleData ;
                     rdfs:comment "Relaciona un sensor de pitch con los datos de ángulo de pitch que mide."@es ,
@@ -493,6 +587,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/optimar#measuresStress
 :measuresStress rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :measures ;
                 rdfs:domain :Sensor ;
                 rdfs:range :StressData ;
                 rdfs:comment "Indica que un sensor mide la tensión ejercida sobre un componente."@es ,
@@ -503,6 +598,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/optimar#measuresTemperatureOf
 :measuresTemperatureOf rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :measures ;
                        rdfs:domain :TemperatureSensor ;
                        rdfs:range [ rdf:type owl:Class ;
                                     owl:unionOf ( :Component
@@ -517,6 +613,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/optimar#measuresVibration
 :measuresVibration rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :measures ;
                    rdfs:domain :Sensor ;
                    rdfs:range :VibrationData ;
                    rdfs:comment "Indica que un sensor obtiene datos de vibración de un componente."@es ,
@@ -527,6 +624,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/optimar#measuresWind
 :measuresWind rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :measures ;
               rdfs:domain :Sensor ;
               rdfs:range :EnvironmentalCondition ;
               rdfs:comment "Relaciona un sensor con la medición de velocidad o dirección del viento."@es ,
@@ -535,8 +633,31 @@ xsd:date rdf:type rdfs:Datatype .
                          "Mide viento"@es .
 
 
+###  https://w3id.org/optimar#measuresWindDirection
+:measuresWindDirection rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :measures ;
+                       rdfs:domain :Anemometer ;
+                       rdfs:range :WindDirectionData ;
+                       rdfs:comment "Relaciona un anemómetro con los datos de dirección del viento que mide."@es ,
+                                    "Relates an anemometer with the wind direction data it measures."@en ;
+                       rdfs:label "Measures wind direction"@en ,
+                                  "Mide dirección del viento"@es .
+
+
+###  https://w3id.org/optimar#measuresWindSpeed
+:measuresWindSpeed rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :measures ;
+                   rdfs:domain :Anemometer ;
+                   rdfs:range :WindSpeedData ;
+                   rdfs:comment "Relaciona un anemómetro con los datos de velocidad del viento que mide."@es ,
+                                "Relates an anemometer with the wind speed data it measures."@en ;
+                   rdfs:label "Measures wind speed"@en ,
+                              "Mide velocidad del viento"@es .
+
+
 ###  https://w3id.org/optimar#measuresYawAngle
 :measuresYawAngle rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :measures ;
                   rdfs:domain :YawSensor ;
                   rdfs:range :YawAngleData ;
                   rdfs:comment "Relaciona un sensor de yaw con los datos de ángulo de orientación que mide."@es ,
@@ -545,22 +666,26 @@ xsd:date rdf:type rdfs:Datatype .
                              "Mide ángulo de yaw"@es .
 
 
+###  https://w3id.org/optimar#monitoredBy
+:monitoredBy rdf:type owl:ObjectProperty ;
+             owl:inverseOf :monitors ;
+             rdfs:comment "Relaciona una entidad con la entidad que la monitoriza."@es ,
+                          "Relates an entity to the entity that monitors it."@en ;
+             rdfs:label "Monitored by"@en ,
+                        "Monitorizado por"@es .
+
+
 ###  https://w3id.org/optimar#monitors
 :monitors rdf:type owl:ObjectProperty ;
-          rdfs:domain :Actor ;
-          rdfs:range [ rdf:type owl:Class ;
-                       owl:unionOf ( :Component
-                                     :Sensor
-                                   )
-                     ] ;
-          rdfs:comment "Relaciona a un actor con los componentes o sensores que supervisa."@es ,
-                       "Relates an actor to the components or sensors they monitor."@en ;
+          rdfs:comment "General monitoring relationship between a monitoring entity and the monitored entity."@en ,
+                       "Relación general de supervisión entre una entidad supervisora y la entidad supervisada."@es ;
           rdfs:label "Monitorea"@es ,
                      "Monitors"@en .
 
 
 ###  https://w3id.org/optimar#monitorsDeformation
 :monitorsDeformation rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :monitors ;
                      rdfs:domain :Sensor ;
                      rdfs:range :Deformation ;
                      rdfs:comment "Relaciona un sensor con la deformación estructural que mide o supervisa."@es ,
@@ -571,6 +696,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/optimar#monitorsPitchOf
 :monitorsPitchOf rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :monitors ;
                  owl:inverseOf :pitchAngleMonitoredBy ;
                  rdfs:domain :PitchAngleSensor ;
                  rdfs:range :Blade ;
@@ -582,6 +708,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/optimar#monitorsYawOf
 :monitorsYawOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :monitors ;
                rdfs:domain :YawSensor ;
                rdfs:range :Nacelle ;
                rdfs:comment "Relaciona un sensor de yaw con la góndola cuya orientación monitorea."@es ,
@@ -622,6 +749,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/optimar#pitchAngleMonitoredBy
 :pitchAngleMonitoredBy rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :monitoredBy ;
                        rdfs:domain :Blade ;
                        rdfs:range :PitchAngleSensor ;
                        rdfs:comment "Relaciona una pala con el sensor que monitorea su ángulo de pitch."@es ,
@@ -643,7 +771,11 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/optimar#pressureLevel
 :pressureLevel rdf:type owl:ObjectProperty ;
                rdfs:domain :Data ;
-               rdfs:range <http://qudt.org/schema/qudt/QuantityValue> .
+               rdfs:range <http://qudt.org/schema/qudt/QuantityValue> ;
+               rdfs:comment "Presión ejercida sobre un componente."@es ,
+                            "Pressure exerted on a component."@en ;
+               rdfs:label "Nivel de presión"@es ,
+                          "Pressure level"@en .
 
 
 ###  https://w3id.org/optimar#relatedToComponent
@@ -678,6 +810,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/optimar#rotorParameterMonitoredBy
 :rotorParameterMonitoredBy rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :monitoredBy ;
                            rdfs:domain :Component ;
                            rdfs:range :RotorSensor ;
                            rdfs:comment "Relaciona un componente con el sensor que monitorea los parámetros del rotor."@es ,
@@ -689,7 +822,11 @@ xsd:date rdf:type rdfs:Datatype .
 ###  https://w3id.org/optimar#stressLevel
 :stressLevel rdf:type owl:ObjectProperty ;
              rdfs:domain :Data ;
-             rdfs:range <http://qudt.org/schema/qudt/QuantityValue> .
+             rdfs:range <http://qudt.org/schema/qudt/QuantityValue> ;
+             rdfs:comment "Nivel de tensión registrado en un componente."@es ,
+                          "Stress level recorded in a component."@en ;
+             rdfs:label "Nivel de tensión"@es ,
+                        "Stress level"@en .
 
 
 ###  https://w3id.org/optimar#supports
@@ -715,6 +852,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/optimar#temperatureMonitoredBy
 :temperatureMonitoredBy rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :monitoredBy ;
                         owl:inverseOf :measuresTemperatureOf ;
                         rdfs:domain [ rdf:type owl:Class ;
                                       owl:unionOf ( :Component
@@ -748,10 +886,25 @@ xsd:date rdf:type rdfs:Datatype .
                                 "Transmits movement to"@en .
 
 
+###  https://w3id.org/optimar#turbineComponentMonitoredBy
+:turbineComponentMonitoredBy rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf :monitoredBy ;
+                             rdfs:domain :TurbineComponent ;
+                             rdfs:range :Sensor ;
+                             rdfs:comment "Relaciona un componente de turbina con los sensores que lo supervisan."@es ,
+                                          "Relates a turbine component with the sensors it is monitored by."@en ;
+                             rdfs:label "Es monitoreado por"@es ,
+                                        "Is monitored by"@en .
+
+
 ###  https://w3id.org/optimar#vibrationLevel
 :vibrationLevel rdf:type owl:ObjectProperty ;
                 rdfs:domain :Data ;
-                rdfs:range <http://qudt.org/schema/qudt/QuantityValue> .
+                rdfs:range <http://qudt.org/schema/qudt/QuantityValue> ;
+                rdfs:comment "Level of vibrations recorded in a component or system."@en ,
+                             "Nivel de vibraciones registradas en un componente o sistema."@es ;
+                rdfs:label "Nivel de Vibracion"@es ,
+                           "Vibration level"@en .
 
 
 ###  https://w3id.org/optimar#width
@@ -786,6 +939,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://w3id.org/optimar#yawAngleMonitoredBy
 :yawAngleMonitoredBy rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :monitoredBy ;
                      owl:inverseOf :monitorsYawOf ;
                      rdfs:domain :Nacelle ;
                      rdfs:range :YawSensor ;
@@ -858,10 +1012,6 @@ xsd:date rdf:type rdfs:Datatype .
                            "Displacement or position change recorded in the component."@en ;
               rdfs:label "Desplazamiento"@es ,
                          "Displacement"@en .
-
-
-###  https://w3id.org/optimar#duration
-:duration rdf:type owl:DatatypeProperty .
 
 
 ###  https://w3id.org/optimar#endDateTime
@@ -939,6 +1089,16 @@ xsd:date rdf:type rdfs:Datatype .
                          "Material wear"@en .
 
 
+###  https://w3id.org/optimar#measurementType
+:measurementType rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Measurement ;
+                 rdfs:range xsd:string ;
+                 rdfs:comment "Especifica el tipo de medida que representa una observación de medida (por ejemplo, máxima, mínima o media)."@es ,
+                              "Specifies the type of measurement represented by a measurement observation (e.g., maximum, minimum or average)."@en ;
+                 rdfs:label "Measurement type"@en ,
+                            "Tipo de medición"@es .
+
+
 ###  https://w3id.org/optimar#misalignmentLevel
 :misalignmentLevel rdf:type owl:DatatypeProperty ;
                    rdfs:domain :Data ;
@@ -957,10 +1117,6 @@ xsd:date rdf:type rdfs:Datatype .
                                 "Estado de funcionamiento actual de la turbina (ej. operativa, parada, en mantenimiento, etc.)."@es ;
                    rdfs:label "Estado operativo"@es ,
                               "Operational status"@en .
-
-
-###  https://w3id.org/optimar#pressureLevel
-:pressureLevel rdf:type owl:DatatypeProperty .
 
 
 ###  https://w3id.org/optimar#severity
@@ -987,10 +1143,6 @@ xsd:date rdf:type rdfs:Datatype .
                           "Start date and time"@en .
 
 
-###  https://w3id.org/optimar#stressLevel
-:stressLevel rdf:type owl:DatatypeProperty .
-
-
 ###  https://w3id.org/optimar#unit
 :unit rdf:type owl:DatatypeProperty ;
       rdfs:domain :Measurement ;
@@ -1009,10 +1161,6 @@ xsd:date rdf:type rdfs:Datatype .
                     "Valor numérico de la medición tomada por un sensor."@es ;
        rdfs:label "Valor"@es ,
                   "Value"@en .
-
-
-###  https://w3id.org/optimar#vibrationLevel
-:vibrationLevel rdf:type owl:DatatypeProperty .
 
 
 #################################################################
@@ -1056,6 +1204,15 @@ xsd:date rdf:type rdfs:Datatype .
                          "Sensor that measures wind speed and direction in the wind farm."@en ;
             rdfs:label "Anemometer"@en ,
                        "Anemómetro"@es .
+
+
+###  https://w3id.org/optimar#ApparentPowerSensor
+:ApparentPowerSensor rdf:type owl:Class ;
+                     rdfs:subClassOf :ElectricalSensor ;
+                     rdfs:comment "Sensor que mide la potencia aparente del sistema eléctrico."@es ,
+                                  "Sensor that measures the apparent power of the electrical system."@en ;
+                     rdfs:label "Apparent power sensor"@en ,
+                                "Sensor de potencia aparente"@es .
 
 
 ###  https://w3id.org/optimar#Base
@@ -1345,6 +1502,15 @@ xsd:date rdf:type rdfs:Datatype .
                   "Imagen"@es .
 
 
+###  https://w3id.org/optimar#Inverter
+:Inverter rdf:type owl:Class ;
+          rdfs:subClassOf :Component ;
+          rdfs:comment "Componente electrónico de potencia que convierte la energía eléctrica."@es ,
+                       "Power electronic component that converts electrical power."@en ;
+          rdfs:label "Inversor"@es ,
+                     "Inverter"@en .
+
+
 ###  https://w3id.org/optimar#Location
 :Location rdf:type owl:Class ;
           rdfs:comment "La ubicación geográfica de la plataforma eólica."@es ,
@@ -1536,6 +1702,23 @@ xsd:date rdf:type rdfs:Datatype .
                    "The roles of the actors that manage, operate or maintain the offshore wind power platform."@en ;
       rdfs:label "Rol"@es ,
                  "Role"@en .
+
+
+###  https://w3id.org/optimar#RotationalSpeedSensor
+:RotationalSpeedSensor rdf:type owl:Class ;
+                       rdfs:subClassOf :Sensor ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :isInstalledIn ;
+                                         owl:someValuesFrom [ rdf:type owl:Class ;
+                                                              owl:unionOf ( :Gearbox
+                                                                            :Generator
+                                                                          )
+                                                            ]
+                                       ] ;
+                       rdfs:comment "Sensor instalado en la caja de cambios o el generador que mide la velocidad rotacional del eje de transmisión."@es ,
+                                    "Sensor installed in the gearbox or the generator that measures the rotational speed of the drivetrain shaft."@en ;
+                       rdfs:label "Rotational speed sensor"@en ,
+                                  "Sensor de velocidad rotacional"@es .
 
 
 ###  https://w3id.org/optimar#RotorAngleData
@@ -1794,12 +1977,55 @@ xsd:date rdf:type rdfs:Datatype .
                           "Voltage sensor"@en .
 
 
+###  https://w3id.org/optimar#WindData
+:WindData rdf:type owl:Class ;
+          rdfs:subClassOf :Measurement ;
+          rdfs:comment "Clase general para representar los datos de viento medidos, como la velocidad o la dirección."@es ,
+                       "General class for representing measured wind data, such as speed or direction."@en ;
+          rdfs:label "Datos de viento"@es ,
+                     "Wind Data"@en .
+
+
+###  https://w3id.org/optimar#WindDirectionData
+:WindDirectionData rdf:type owl:Class ;
+                   rdfs:subClassOf :WindData ;
+                   rdfs:comment "Data of the direction from which the wind blows."@en ,
+                                "Datos de la dirección desde la que sopla el viento."@es ;
+                   rdfs:label "Datos de dirección del viento"@es ,
+                              "Wind Direction Data"@en .
+
+
+###  https://w3id.org/optimar#WindFarm
+:WindFarm rdf:type owl:Class ;
+          rdfs:subClassOf [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasPlatform ;
+                            owl:someValuesFrom :WindPowerPlatform
+                          ] ;
+          rdfs:comment "An offshore wind farm composed of one or more wind power platforms."@en ,
+                       "Un parque eólico offshore compuesto por una o más plataformas eólicas."@es ;
+          rdfs:label "Parque eólico"@es ,
+                     "Wind Farm"@en .
+
+
 ###  https://w3id.org/optimar#WindPowerPlatform
 :WindPowerPlatform rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasComponent ;
+                                     owl:someValuesFrom :Component
+                                   ] ;
                    rdfs:comment "An offshore wind power platform that generates electricity from wind."@en ,
                                 "Una plataforma eólica offshore que genera energía electrica a partir del viento."@es ;
                    rdfs:label "Offshore Wind Power Platform"@en ,
                               "Plataforma eólica offshore"@es .
+
+
+###  https://w3id.org/optimar#WindSpeedData
+:WindSpeedData rdf:type owl:Class ;
+               rdfs:subClassOf :WindData ;
+               rdfs:comment "Datos de la velocidad del viento medida por un sensor."@es ,
+                            "Wind speed data measured by a sensor."@en ;
+               rdfs:label "Datos de velocidad del viento"@es ,
+                          "Wind Speed Data"@en .
 
 
 ###  https://w3id.org/optimar#YawAngleData
@@ -1829,40 +2055,6 @@ xsd:date rdf:type rdfs:Datatype .
 
 
 #################################################################
-#    Annotations
-#################################################################
-
-:duration rdfs:comment "Duración del evento o mantenimiento expresada como valor QUDT."@es ,
-                       "Duration of the event or maintenance expressed as a QUDT quantity value."@en ;
-          rdfs:label "Duración"@es ,
-                     "Duration"@en .
-
-
-:hasGeneratedData rdfs:comment "Relaciona un evento con los datos generados por el mismo."@es ,
-                               "Relates an event to the generated data by the same."@en ;
-                  rdfs:label "Genera"@es ,
-                             "Generates"@en .
-
-
-:pressureLevel rdfs:comment "Presión ejercida sobre un componente."@es ,
-                            "Pressure exerted on a component."@en ;
-               rdfs:label "Nivel de presión"@es ,
-                          "Pressure level"@en .
-
-
-:stressLevel rdfs:comment "Nivel de tensión registrado en un componente."@es ,
-                          "Stress level recorded in a component."@en ;
-             rdfs:label "Nivel de tensión"@es ,
-                        "Stress level"@en .
-
-
-:vibrationLevel rdfs:comment "Level of vibrations recorded in a component or system."@en ,
-                             "Nivel de vibraciones registradas en un componente o sistema."@es ;
-                rdfs:label "Nivel de Vibracion"@es ,
-                           "Vibration level"@en .
-
-
-#################################################################
 #    General axioms
 #################################################################
 
@@ -1874,6 +2066,7 @@ xsd:date rdf:type rdfs:Datatype .
                 :GaugeSystem
                 :ISUMSystem
                 :PitchAngleSensor
+                :RotationalSpeedSensor
                 :RotorSensor
                 :StructuralCamera
                 :TemperatureSensor

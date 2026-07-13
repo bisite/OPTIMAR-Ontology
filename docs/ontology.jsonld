@@ -5,11 +5,21 @@
     "@list" : [ {
       "@id" : "https://w3id.org/optimar#Component"
     }, {
-      "@id" : "https://w3id.org/optimar#PitchSystem"
+      "@id" : "https://w3id.org/optimar#Sensor"
     } ]
   } ]
 }, {
   "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/optimar#Event"
+    }, {
+      "@id" : "https://w3id.org/optimar#Maintenance"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -19,23 +29,13 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid13",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/optimar#Component"
-    }, {
-      "@id" : "https://w3id.org/optimar#EnvironmentalCondition"
-    } ]
-  } ]
-}, {
   "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
       "@id" : "https://w3id.org/optimar#Component"
     }, {
-      "@id" : "https://w3id.org/optimar#Sensor"
+      "@id" : "https://w3id.org/optimar#EnvironmentalCondition"
     } ]
   } ]
 }, {
@@ -151,6 +151,35 @@
   } ]
 }, {
   "@id" : "_:genid37",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/optimar#isInstalledIn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "_:genid38"
+  } ]
+}, {
+  "@id" : "_:genid38",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/optimar#Gearbox"
+    }, {
+      "@id" : "https://w3id.org/optimar#Generator"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/optimar#Component"
+    }, {
+      "@id" : "https://w3id.org/optimar#PitchSystem"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid41",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -162,17 +191,7 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid4",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://w3id.org/optimar#Data"
-    }, {
-      "@id" : "https://w3id.org/optimar#Failure"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid41",
+  "@id" : "_:genid45",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/optimar#isSupportedBy"
@@ -181,7 +200,7 @@
     "@id" : "https://w3id.org/optimar#FloatingSubstructure"
   } ]
 }, {
-  "@id" : "_:genid42",
+  "@id" : "_:genid46",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/optimar#supports"
@@ -190,7 +209,7 @@
     "@id" : "https://w3id.org/optimar#Nacelle"
   } ]
 }, {
-  "@id" : "_:genid43",
+  "@id" : "_:genid47",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -203,7 +222,7 @@
     "@id" : "https://w3id.org/optimar#hasTurbineComponent"
   } ]
 }, {
-  "@id" : "_:genid44",
+  "@id" : "_:genid48",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/optimar#Hub"
@@ -216,7 +235,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid45",
+  "@id" : "_:genid49",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/optimar#Nacelle"
@@ -229,7 +248,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid46",
+  "@id" : "_:genid50",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
     "@id" : "https://w3id.org/optimar#Tower"
@@ -242,7 +261,7 @@
     "@value" : "1"
   } ]
 }, {
-  "@id" : "_:genid47",
+  "@id" : "_:genid51",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
@@ -256,7 +275,25 @@
     } ]
   } ]
 }, {
-  "@id" : "_:genid52",
+  "@id" : "_:genid56",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/optimar#hasPlatform"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/optimar#WindPowerPlatform"
+  } ]
+}, {
+  "@id" : "_:genid57",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/optimar#hasComponent"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/optimar#Component"
+  } ]
+}, {
+  "@id" : "_:genid58",
   "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
   "http://www.w3.org/2002/07/owl#members" : [ {
     "@list" : [ {
@@ -274,6 +311,8 @@
     }, {
       "@id" : "https://w3id.org/optimar#PitchAngleSensor"
     }, {
+      "@id" : "https://w3id.org/optimar#RotationalSpeedSensor"
+    }, {
       "@id" : "https://w3id.org/optimar#RotorSensor"
     }, {
       "@id" : "https://w3id.org/optimar#StructuralCamera"
@@ -288,9 +327,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#unionOf" : [ {
     "@list" : [ {
-      "@id" : "https://w3id.org/optimar#Event"
+      "@id" : "https://w3id.org/optimar#Data"
     }, {
-      "@id" : "https://w3id.org/optimar#Maintenance"
+      "@id" : "https://w3id.org/optimar#Failure"
     } ]
   } ]
 }, {
@@ -355,7 +394,7 @@
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
   "@id" : "http://www.w3.org/ns/prov#generated",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
   "@id" : "http://xmlns.com/foaf/0.1/homepage",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -428,7 +467,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2026-01-30"
+    "@value" : "2026-07-13"
   } ],
   "http://purl.org/dc/terms/publisher" : [ {
     "@language" : "es",
@@ -459,29 +498,29 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "\r\n    Version 2.2 (2026-01-30) - Ampliación de sensores de control:\r\n    - Añadidos sensores de control: YawSensor (angulo de orientación de góndola), PitchAngleSensor (ángulo de palas)\r\n    - Añadidas clases de datos: YawAngleData, PitchAngleData\r\n    - Añadidas propiedades de medición y monitorización para yaw y pitch\r\n    - Añadidas propiedades inversas: yawAngleMonitoredBy/monitorsYawOf, pitchAngleMonitoredBy/monitorsPitchOf\r\n    "
+    "@value" : "\r\n    Version 2.3 (2026-07-13) - Parques eólicos, nuevos sensores/datos y reorganización de la monitorización:\r\n    - Añadida la clase WindFarm y la jerarquía de composición WindFarm -> WindPowerPlatform -> Turbine/Component\r\n    - Añadidas clases: Inverter (Component), ApparentPowerSensor (ElectricalSensor), RotationalSpeedSensor (Sensor),\r\n      WindData/WindDirectionData/WindSpeedData (Measurement)\r\n    - \"monitors\" y \"monitoredBy\" pasan a ser propiedades genéricas de nivel superior; todas las propiedades\r\n      \"...Monitors\"/\"...MonitoredBy\" existentes pasan a ser subpropiedades de las mismas\r\n    - Se crea \"actorMonitors\" (subpropiedad de \"monitors\") para la relación Actor -> Component/Sensor\r\n    - \"isMonitoredBy\" se renombra a \"turbineComponentMonitoredBy\" (subpropiedad de \"monitoredBy\")\r\n    - Se crea \"measures\" como superpropiedad genérica; todas las propiedades \"measures...\" pasan a ser subpropiedades\r\n    - Se crean \"measuresWindSpeed\" y \"measuresWindDirection\" (subpropiedades de \"measures\", dominio Anemometer) para\r\n      enlazar el anemómetro con WindSpeedData/WindDirectionData, siguiendo el mismo patrón que measuresYawAngle/measuresPitchAngle\r\n    - Se crean las propiedades \"isInstalledIn\"/\"hasInstalled\" (sensor-componente) y \"hasTurbine\", \"hasPlatform\",\r\n      \"hasComponent\" (composición de parque/plataforma)\r\n    - Añadida la data property \"measurementType\"\r\n    - Correcciones de consistencia: \"duration\", \"pressureLevel\", \"stressLevel\" y \"vibrationLevel\" quedan declaradas\r\n      únicamente como owl:ObjectProperty (su rango qudt:QuantityValue es una clase, no un tipo de dato); se elimina\r\n      la doble tipificación de \"hasGeneratedData\"; RotationalSpeedSensor se añade al axioma de disjunción de sensores\r\n    "
   }, {
     "@language" : "en",
-    "@value" : "\r\n    Version 2.2 (2026-01-30) - Control sensors expansion:\r\n    - Added control sensors: YawSensor (nacelle orientation angle), PitchAngleSensor (blade angle)\r\n    - Added data classes: YawAngleData, PitchAngleData\r\n    - Added measurement and monitoring properties for yaw and pitch\r\n    - Added inverse properties: yawAngleMonitoredBy/monitorsYawOf, pitchAngleMonitoredBy/monitorsPitchOf\r\n    "
+    "@value" : "\r\n    Version 2.3 (2026-07-13) - Wind farms, new sensors/data, and monitoring property reorganization:\r\n    - Added the WindFarm class and the composition hierarchy WindFarm -> WindPowerPlatform -> Turbine/Component\r\n    - Added classes: Inverter (Component), ApparentPowerSensor (ElectricalSensor), RotationalSpeedSensor (Sensor),\r\n      WindData/WindDirectionData/WindSpeedData (Measurement)\r\n    - \"monitors\" and \"monitoredBy\" become generic top-level properties; all existing \"...Monitors\"/\"...MonitoredBy\"\r\n      properties become subproperties of them\r\n    - Added \"actorMonitors\" (subproperty of \"monitors\") for the Actor -> Component/Sensor relationship\r\n    - \"isMonitoredBy\" renamed to \"turbineComponentMonitoredBy\" (subproperty of \"monitoredBy\")\r\n    - Added \"measures\" as a generic superproperty; all \"measures...\" properties become subproperties of it\r\n    - Added \"measuresWindSpeed\" and \"measuresWindDirection\" (subproperties of \"measures\", domain Anemometer) linking\r\n      the anemometer to WindSpeedData/WindDirectionData, following the same pattern as measuresYawAngle/measuresPitchAngle\r\n    - Added \"isInstalledIn\"/\"hasInstalled\" (sensor-component) and \"hasTurbine\", \"hasPlatform\", \"hasComponent\"\r\n      (wind farm/platform composition) properties\r\n    - Added the \"measurementType\" data property\r\n    - Consistency fixes: \"duration\", \"pressureLevel\", \"stressLevel\" and \"vibrationLevel\" are now declared solely as\r\n      owl:ObjectProperty (their qudt:QuantityValue range is a class, not a datatype); removed the double typing of\r\n      \"hasGeneratedData\"; RotationalSpeedSensor added to the sensor disjointness axiom\r\n    "
   } ],
   "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
     "@id" : "https://w3id.org/optimar#changelog"
   } ],
   "http://www.w3.org/2002/07/owl#backwardCompatibleWith" : [ {
-    "@id" : "https://w3id.org/optimar/2.1"
+    "@id" : "https://w3id.org/optimar/2.2"
   } ],
   "http://www.w3.org/2002/07/owl#priorVersion" : [ {
-    "@id" : "https://w3id.org/optimar/2.1"
+    "@id" : "https://w3id.org/optimar/2.2"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/optimar/2.2"
+    "@id" : "https://w3id.org/optimar/2.3"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@language" : "en",
-    "@value" : "Version 2.2 of the Ontology"
+    "@value" : "Version 2.3 of the Ontology"
   }, {
     "@language" : "es",
-    "@value" : "Versión 2.2 de la ontología"
+    "@value" : "Versión 2.3 de la ontología"
   } ],
   "http://xmlns.com/foaf/0.1/homepage" : [ {
     "@id" : "https://w3id.org/optimar"
@@ -562,6 +601,26 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/optimar#Sensor"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#ApparentPowerSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sensor que mide la potencia aparente del sistema eléctrico."
+  }, {
+    "@language" : "en",
+    "@value" : "Sensor that measures the apparent power of the electrical system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Apparent power sensor"
+  }, {
+    "@language" : "es",
+    "@value" : "Sensor de potencia aparente"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/optimar#ElectricalSensor"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#Base",
@@ -1159,6 +1218,26 @@
     "@id" : "https://w3id.org/optimar#Data"
   } ]
 }, {
+  "@id" : "https://w3id.org/optimar#Inverter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Componente electrónico de potencia que convierte la energía eléctrica."
+  }, {
+    "@language" : "en",
+    "@value" : "Power electronic component that converts electrical power."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Inversor"
+  }, {
+    "@language" : "en",
+    "@value" : "Inverter"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/optimar#Component"
+  } ]
+}, {
   "@id" : "https://w3id.org/optimar#Location",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1559,6 +1638,28 @@
     "@value" : "Role"
   } ]
 }, {
+  "@id" : "https://w3id.org/optimar#RotationalSpeedSensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Sensor instalado en la caja de cambios o el generador que mide la velocidad rotacional del eje de transmisión."
+  }, {
+    "@language" : "en",
+    "@value" : "Sensor installed in the gearbox or the generator that measures the rotational speed of the drivetrain shaft."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Rotational speed sensor"
+  }, {
+    "@language" : "es",
+    "@value" : "Sensor de velocidad rotacional"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/optimar#Sensor"
+  }, {
+    "@id" : "_:genid37"
+  } ]
+}, {
   "@id" : "https://w3id.org/optimar#RotorAngleData",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1759,7 +1860,7 @@
     "@id" : "https://w3id.org/optimar#Component"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid37"
+    "@id" : "_:genid41"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#StructuralInstability",
@@ -1918,9 +2019,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/optimar#TurbineComponent"
   }, {
-    "@id" : "_:genid41"
+    "@id" : "_:genid45"
   }, {
-    "@id" : "_:genid42"
+    "@id" : "_:genid46"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#Transformer",
@@ -1962,13 +2063,13 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/optimar#Component"
   }, {
-    "@id" : "_:genid43"
+    "@id" : "_:genid47"
   }, {
-    "@id" : "_:genid44"
+    "@id" : "_:genid48"
   }, {
-    "@id" : "_:genid45"
+    "@id" : "_:genid49"
   }, {
-    "@id" : "_:genid46"
+    "@id" : "_:genid50"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#TurbineComponent",
@@ -1991,7 +2092,7 @@
     "@id" : "https://w3id.org/optimar#Component"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid47"
+    "@id" : "_:genid51"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#VibrationData",
@@ -2054,6 +2155,66 @@
     "@id" : "https://w3id.org/optimar#ElectricalSensor"
   } ]
 }, {
+  "@id" : "https://w3id.org/optimar#WindData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Clase general para representar los datos de viento medidos, como la velocidad o la dirección."
+  }, {
+    "@language" : "en",
+    "@value" : "General class for representing measured wind data, such as speed or direction."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Datos de viento"
+  }, {
+    "@language" : "en",
+    "@value" : "Wind Data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/optimar#Measurement"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#WindDirectionData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Data of the direction from which the wind blows."
+  }, {
+    "@language" : "es",
+    "@value" : "Datos de la dirección desde la que sopla el viento."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Datos de dirección del viento"
+  }, {
+    "@language" : "en",
+    "@value" : "Wind Direction Data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/optimar#WindData"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#WindFarm",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An offshore wind farm composed of one or more wind power platforms."
+  }, {
+    "@language" : "es",
+    "@value" : "Un parque eólico offshore compuesto por una o más plataformas eólicas."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Parque eólico"
+  }, {
+    "@language" : "en",
+    "@value" : "Wind Farm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid56"
+  } ]
+}, {
   "@id" : "https://w3id.org/optimar#WindPowerPlatform",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2069,6 +2230,29 @@
   }, {
     "@language" : "es",
     "@value" : "Plataforma eólica offshore"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid57"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#WindSpeedData",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Datos de la velocidad del viento medida por un sensor."
+  }, {
+    "@language" : "en",
+    "@value" : "Wind speed data measured by a sensor."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Datos de velocidad del viento"
+  }, {
+    "@language" : "en",
+    "@value" : "Wind Speed Data"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/optimar#WindData"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#YawAngleData",
@@ -2111,6 +2295,32 @@
     "@id" : "https://w3id.org/optimar#Sensor"
   } ]
 }, {
+  "@id" : "https://w3id.org/optimar#actorMonitors",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relaciona a un actor con los componentes o sensores que supervisa."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates an actor to the components or sensors they monitor."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#Actor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Actor monitorea"
+  }, {
+    "@language" : "en",
+    "@value" : "Actor monitors"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/optimar#monitors"
+  } ]
+}, {
   "@id" : "https://w3id.org/optimar#adjusts",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2131,7 +2341,7 @@
     "@value" : "Ajusta"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid1"
+    "@id" : "_:genid4"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#affectedBy",
@@ -2203,7 +2413,7 @@
     "@value" : "Analyzes"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid4"
+    "@id" : "_:genid7"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#causedBy",
@@ -2512,7 +2722,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#duration",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
     "@value" : "Duración del evento o mantenimiento expresada como valor QUDT."
@@ -2521,7 +2731,7 @@
     "@value" : "Duration of the event or maintenance expressed as a QUDT quantity value."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "_:genid7"
+    "@id" : "_:genid10"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -2555,6 +2765,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/optimar#ElectricalSensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/optimar#monitoredBy"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#endDateTime",
@@ -2649,6 +2862,29 @@
     "@id" : "http://qudt.org/schema/qudt/QuantityValue"
   } ]
 }, {
+  "@id" : "https://w3id.org/optimar#hasComponent",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que una plataforma eólica offshore tiene un componente específico."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates that an offshore wind power platform has a specific component."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#WindPowerPlatform"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Has component"
+  }, {
+    "@language" : "es",
+    "@value" : "Tiene componente"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#Component"
+  } ]
+}, {
   "@id" : "https://w3id.org/optimar#hasFailureCause",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2673,7 +2909,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#hasGeneratedData",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty", "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
     "@value" : "Relaciona un evento con los datos generados por el mismo."
@@ -2693,6 +2929,32 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "http://www.w3.org/ns/prov#generated"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#hasInstalled",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que un componente tiene un sensor instalado."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates that a component has a sensor installed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Has installed"
+  }, {
+    "@language" : "es",
+    "@value" : "Tiene instalado"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://www.w3.org/ns/sosa/Sensor"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/optimar#isInstalledIn"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#hasOperationalState",
@@ -2718,6 +2980,29 @@
     "@id" : "https://w3id.org/optimar#OperationalState"
   } ]
 }, {
+  "@id" : "https://w3id.org/optimar#hasPlatform",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica la plataforma eólica asociada a un parque eólico."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates the wind power platform associated with a wind farm."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#WindFarm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Has platform"
+  }, {
+    "@language" : "es",
+    "@value" : "Tiene plataforma"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#WindPowerPlatform"
+  } ]
+}, {
   "@id" : "https://w3id.org/optimar#hasRole",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -2739,6 +3024,29 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/optimar#Role"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#hasTurbine",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica que una plataforma eólica contiene una turbina eólica."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates that a wind power platform contains a wind turbine."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#WindPowerPlatform"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Has turbine"
+  }, {
+    "@language" : "es",
+    "@value" : "Tiene turbina"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#Turbine"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#hasTurbineComponent",
@@ -2859,27 +3167,27 @@
     "@id" : "https://w3id.org/optimar#houses"
   } ]
 }, {
-  "@id" : "https://w3id.org/optimar#isMonitoredBy",
+  "@id" : "https://w3id.org/optimar#isInstalledIn",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Relaciona un componente de turbina con los sensores que lo supervisan."
+    "@value" : "Indica que un sensor está instalado en un componente."
   }, {
     "@language" : "en",
-    "@value" : "Relates a turbine component with the sensors it is monitored by."
+    "@value" : "Indicates that a sensor is installed in a component."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/optimar#TurbineComponent"
+    "@id" : "https://www.w3.org/ns/sosa/Sensor"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
-    "@value" : "Es monitoreado por"
+    "@value" : "Está instalado en"
   }, {
     "@language" : "en",
-    "@value" : "Is monitored by"
+    "@value" : "Is installed in"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/optimar#Sensor"
+    "@id" : "https://w3id.org/optimar#Component"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#isPartOf",
@@ -3046,7 +3354,7 @@
     "@value" : "Manages"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid10"
+    "@id" : "_:genid13"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#mass",
@@ -3141,6 +3449,46 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
+  "@id" : "https://w3id.org/optimar#measurementType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Especifica el tipo de medida que representa una observación de medida (por ejemplo, máxima, mínima o media)."
+  }, {
+    "@language" : "en",
+    "@value" : "Specifies the type of measurement represented by a measurement observation (e.g., maximum, minimum or average)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#Measurement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Measurement type"
+  }, {
+    "@language" : "es",
+    "@value" : "Tipo de medición"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#measures",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Indica el tipo de dato medido por un sensor."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates the type of data measured by a sensor."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Measures"
+  }, {
+    "@language" : "es",
+    "@value" : "Mide"
+  } ]
+}, {
   "@id" : "https://w3id.org/optimar#measuresPitchAngle",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3162,6 +3510,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/optimar#PitchAngleData"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/optimar#measures"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#measuresStress",
@@ -3185,6 +3536,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/optimar#StressData"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/optimar#measures"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#measuresTemperatureOf",
@@ -3207,7 +3561,10 @@
     "@value" : "Mide temperatura de"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid13"
+    "@id" : "_:genid16"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/optimar#measures"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#measuresVibration",
@@ -3231,6 +3588,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/optimar#VibrationData"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/optimar#measures"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#measuresWind",
@@ -3254,6 +3614,61 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/optimar#EnvironmentalCondition"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/optimar#measures"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#measuresWindDirection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relaciona un anemómetro con los datos de dirección del viento que mide."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates an anemometer with the wind direction data it measures."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#Anemometer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Measures wind direction"
+  }, {
+    "@language" : "es",
+    "@value" : "Mide dirección del viento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#WindDirectionData"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/optimar#measures"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#measuresWindSpeed",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relaciona un anemómetro con los datos de velocidad del viento que mide."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates an anemometer with the wind speed data it measures."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#Anemometer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Measures wind speed"
+  }, {
+    "@language" : "es",
+    "@value" : "Mide velocidad del viento"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#WindSpeedData"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/optimar#measures"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#measuresYawAngle",
@@ -3277,6 +3692,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/optimar#YawAngleData"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/optimar#measures"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#misalignmentLevel",
@@ -3302,17 +3720,34 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
   } ]
 }, {
-  "@id" : "https://w3id.org/optimar#monitors",
+  "@id" : "https://w3id.org/optimar#monitoredBy",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Relaciona a un actor con los componentes o sensores que supervisa."
+    "@value" : "Relaciona una entidad con la entidad que la monitoriza."
   }, {
     "@language" : "en",
-    "@value" : "Relates an actor to the components or sensors they monitor."
+    "@value" : "Relates an entity to the entity that monitors it."
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://w3id.org/optimar#Actor"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Monitored by"
+  }, {
+    "@language" : "es",
+    "@value" : "Monitorizado por"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/optimar#monitors"
+  } ]
+}, {
+  "@id" : "https://w3id.org/optimar#monitors",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "General monitoring relationship between a monitoring entity and the monitored entity."
+  }, {
+    "@language" : "es",
+    "@value" : "Relación general de supervisión entre una entidad supervisora y la entidad supervisada."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -3320,9 +3755,6 @@
   }, {
     "@language" : "en",
     "@value" : "Monitors"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "_:genid16"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#monitorsDeformation",
@@ -3346,6 +3778,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/optimar#Deformation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/optimar#monitors"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#monitorsPitchOf",
@@ -3369,6 +3804,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/optimar#Blade"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/optimar#monitors"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/optimar#pitchAngleMonitoredBy"
@@ -3395,6 +3833,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/optimar#Nacelle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/optimar#monitors"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#operationalStatus",
@@ -3510,6 +3951,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/optimar#PitchAngleSensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/optimar#monitoredBy"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#precededBy",
@@ -3536,7 +3980,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#pressureLevel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
     "@value" : "Presión ejercida sobre un componente."
@@ -3648,6 +4092,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/optimar#RotorSensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/optimar#monitoredBy"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#severity",
@@ -3697,7 +4144,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#stressLevel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
     "@value" : "Nivel de tensión registrado en un componente."
@@ -3790,6 +4237,9 @@
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/optimar#TemperatureSensor"
   } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/optimar#monitoredBy"
+  } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/optimar#measuresTemperatureOf"
   } ]
@@ -3840,6 +4290,32 @@
     "@id" : "https://w3id.org/optimar#Component"
   } ]
 }, {
+  "@id" : "https://w3id.org/optimar#turbineComponentMonitoredBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "es",
+    "@value" : "Relaciona un componente de turbina con los sensores que lo supervisan."
+  }, {
+    "@language" : "en",
+    "@value" : "Relates a turbine component with the sensors it is monitored by."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/optimar#TurbineComponent"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "es",
+    "@value" : "Es monitoreado por"
+  }, {
+    "@language" : "en",
+    "@value" : "Is monitored by"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/optimar#Sensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/optimar#monitoredBy"
+  } ]
+}, {
   "@id" : "https://w3id.org/optimar#unit",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -3887,7 +4363,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#vibrationLevel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Level of vibrations recorded in a component or system."
@@ -3999,6 +4475,9 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/optimar#YawSensor"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/optimar#monitoredBy"
   } ],
   "http://www.w3.org/2002/07/owl#inverseOf" : [ {
     "@id" : "https://w3id.org/optimar#monitorsYawOf"
