@@ -684,10 +684,10 @@
   } ],
   "http://purl.org/dc/terms/bibliographicCitation" : [ {
     "@language" : "en",
-    "@value" : "Flores, A., Garcia, O., & Aceta, C. (2026). Offshore Wind Power Platform Ontology for OPTiMAR (v2.4). DOI: 10.5281/zenodo.17962874"
+    "@value" : "Flores, A., Garcia, O., & Aceta, C. (2026). Offshore Wind Power Platform Ontology for OPTiMAR (v2.4). DOI: 10.5281/zenodo.17962873"
   }, {
     "@language" : "es",
-    "@value" : "Flores, A., Garcia, O., & Aceta, C. (2026). Ontología de Plataforma Eólica Offshore para OPTiMAR (v2.4). DOI: 10.5281/zenodo.17962874"
+    "@value" : "Flores, A., Garcia, O., & Aceta, C. (2026). Ontología de Plataforma Eólica Offshore para OPTiMAR (v2.4). DOI: 10.5281/zenodo.17962873"
   } ],
   "http://purl.org/dc/terms/created" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -708,7 +708,7 @@
     "@value" : "This ontology describes the components, failures, sensors, and events related to floating offshore wind platforms."
   } ],
   "http://purl.org/dc/terms/identifier" : [ {
-    "@id" : "https://doi.org/10.5281/zenodo.17962874"
+    "@id" : "https://doi.org/10.5281/zenodo.17962873"
   } ],
   "http://purl.org/dc/terms/issued" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",

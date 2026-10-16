@@ -14,15 +14,15 @@
         <owl:versionIRI rdf:resource="https://w3id.org/optimar/2.4"/>
         <terms:abstract xml:lang="en">Ontology modelling structural elements, mooring systems, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. It reuses SOSA/SSN for observations, PROV-O for event and data provenance, and QUDT for quantities and units.</terms:abstract>
         <terms:abstract xml:lang="es">Ontología que modela los elementos estructurales, sistemas de amarre, sensores, eventos y fallos de plataformas eólicas offshore flotantes, incluyendo datos de medición, actores involucrados y relaciones semánticas entre componentes. Reutiliza SOSA/SSN para observaciones, PROV-O para la procedencia de eventos y datos y QUDT para cantidades y unidades.</terms:abstract>
-        <terms:bibliographicCitation xml:lang="en">Flores, A., Garcia, O., &amp; Aceta, C. (2026). Offshore Wind Power Platform Ontology for OPTiMAR (v2.4). DOI: 10.5281/zenodo.17962874</terms:bibliographicCitation>
-        <terms:bibliographicCitation xml:lang="es">Flores, A., Garcia, O., &amp; Aceta, C. (2026). Ontología de Plataforma Eólica Offshore para OPTiMAR (v2.4). DOI: 10.5281/zenodo.17962874</terms:bibliographicCitation>
+        <terms:bibliographicCitation xml:lang="en">Flores, A., Garcia, O., &amp; Aceta, C. (2026). Offshore Wind Power Platform Ontology for OPTiMAR (v2.4). DOI: 10.5281/zenodo.17962873</terms:bibliographicCitation>
+        <terms:bibliographicCitation xml:lang="es">Flores, A., Garcia, O., &amp; Aceta, C. (2026). Ontología de Plataforma Eólica Offshore para OPTiMAR (v2.4). DOI: 10.5281/zenodo.17962873</terms:bibliographicCitation>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-09-30</terms:created>
         <terms:creator>Alejandro Flores (USAL)</terms:creator>
         <terms:creator>Cristina Aceta (Tekniker)</terms:creator>
         <terms:creator>Oihana Garcia (Tekniker)</terms:creator>
         <terms:description xml:lang="es">Esta ontología describe los componentes, fallos, sensores y eventos relacionados con las plataformas eólicas offshore flotantes.</terms:description>
         <terms:description xml:lang="en">This ontology describes the components, failures, sensors, and events related to floating offshore wind platforms.</terms:description>
-        <terms:identifier rdf:resource="https://doi.org/10.5281/zenodo.17962874"/>
+        <terms:identifier rdf:resource="https://doi.org/10.5281/zenodo.17962873"/>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-12-02</terms:issued>
         <terms:language>en</terms:language>
         <terms:language>es</terms:language>

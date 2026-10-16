@@ -2,15 +2,15 @@
 <https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/optimar/2.4> .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/abstract> "Ontology modelling structural elements, mooring systems, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. It reuses SOSA/SSN for observations, PROV-O for event and data provenance, and QUDT for quantities and units."@en .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/abstract> "Ontología que modela los elementos estructurales, sistemas de amarre, sensores, eventos y fallos de plataformas eólicas offshore flotantes, incluyendo datos de medición, actores involucrados y relaciones semánticas entre componentes. Reutiliza SOSA/SSN para observaciones, PROV-O para la procedencia de eventos y datos y QUDT para cantidades y unidades."@es .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/bibliographicCitation> "Flores, A., Garcia, O., & Aceta, C. (2026). Offshore Wind Power Platform Ontology for OPTiMAR (v2.4). DOI: 10.5281/zenodo.17962874"@en .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/bibliographicCitation> "Flores, A., Garcia, O., & Aceta, C. (2026). Ontología de Plataforma Eólica Offshore para OPTiMAR (v2.4). DOI: 10.5281/zenodo.17962874"@es .
+<https://w3id.org/optimar> <http://purl.org/dc/terms/bibliographicCitation> "Flores, A., Garcia, O., & Aceta, C. (2026). Offshore Wind Power Platform Ontology for OPTiMAR (v2.4). DOI: 10.5281/zenodo.17962873"@en .
+<https://w3id.org/optimar> <http://purl.org/dc/terms/bibliographicCitation> "Flores, A., Garcia, O., & Aceta, C. (2026). Ontología de Plataforma Eólica Offshore para OPTiMAR (v2.4). DOI: 10.5281/zenodo.17962873"@es .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/created> "2025-09-30"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/creator> "Alejandro Flores (USAL)" .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/creator> "Cristina Aceta (Tekniker)" .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/creator> "Oihana Garcia (Tekniker)" .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/description> "Esta ontología describe los componentes, fallos, sensores y eventos relacionados con las plataformas eólicas offshore flotantes."@es .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/description> "This ontology describes the components, failures, sensors, and events related to floating offshore wind platforms."@en .
-<https://w3id.org/optimar> <http://purl.org/dc/terms/identifier> <https://doi.org/10.5281/zenodo.17962874> .
+<https://w3id.org/optimar> <http://purl.org/dc/terms/identifier> <https://doi.org/10.5281/zenodo.17962873> .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/issued> "2025-12-02"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/language> "en" .
 <https://w3id.org/optimar> <http://purl.org/dc/terms/language> "es" .

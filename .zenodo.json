@@ -1,0 +1,16 @@
+{
+  "title": "OPTiMAR: Offshore Wind Power Platform Ontology",
+  "upload_type": "software",
+  "description": "<p>OWL 2 DL ontology for the operation and maintenance of floating offshore wind energy systems, developed within the OPTiMAR project. It represents turbine and drivetrain components, the floating substructure, mooring systems and anchors, site and seabed, sensors and observations (SOSA/SSN), failures and failure events, and the actors, tasks and maintenance activities involved (PROV-O), with quantities and units based on QUDT. The release includes the ontology, an alignment module with SAREF and the Open Energy Ontology, an example instantiation, the competency questions as SPARQL queries and the HTML documentation.</p><p>Ontology IRI: <a href=\"https://w3id.org/optimar\">https://w3id.org/optimar</a></p>",
+  "creators": [
+    {"name": "Flores, Alejandro", "affiliation": "University of Salamanca", "orcid": "0009-0005-6838-9889"},
+    {"name": "Garcia, Oihana", "affiliation": "Tekniker", "orcid": "0009-0000-3720-3707"},
+    {"name": "Aceta, Cristina", "affiliation": "Tekniker", "orcid": "0000-0003-3566-9460"}
+  ],
+  "license": "MIT",
+  "keywords": ["ontology", "OWL", "floating offshore wind", "operation and maintenance", "predictive maintenance", "SOSA/SSN", "PROV-O", "semantic interoperability"],
+  "related_identifiers": [
+    {"identifier": "https://w3id.org/optimar", "relation": "isDocumentedBy", "resource_type": "other"}
+  ],
+  "notes": "Developed within the OPTIMAR project PLEC2023-010352, funded by MICIU/AEI/10.13039/501100011033 and CDTI EXP-00162960 / MIG-20232014 under the 2023 TransMisiones call."
+}

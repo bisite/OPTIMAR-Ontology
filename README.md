@@ -85,7 +85,7 @@ The ontology is maintained by BISITE (University of Salamanca) and Tekniker. Cha
 
 ## How to cite
 
-Flores, A., Garcia, O., & Aceta, C. (2026). Offshore Wind Power Platform Ontology for OPTiMAR (v2.4). Zenodo. https://doi.org/10.5281/zenodo.17962874
+Flores, A., Garcia, O., & Aceta, C. (2026). Offshore Wind Power Platform Ontology for OPTiMAR (v2.4). Zenodo. https://doi.org/10.5281/zenodo.17962873
 
 ---
 

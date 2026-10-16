@@ -41,7 +41,7 @@
     dcterms:publisher "Universidad de Salamanca, Centro Tecnológico y de Investigación - Tekniker"@es ;
     dcterms:publisher "University of Salamanca, Technology and Research Centre - Tekniker"@en ;
 
-    dcterms:identifier <https://doi.org/10.5281/zenodo.17962874> ;
+    dcterms:identifier <https://doi.org/10.5281/zenodo.17962873> ;
 
     owl:versionIRI <https://w3id.org/optimar/2.4> ;
     owl:versionInfo "2.4" ;
@@ -57,8 +57,8 @@
     rdfs:seeAlso <https://github.com/bisite/OPTIMAR-Ontology> ;
     rdfs:seeAlso <https://github.com/bisite/OPTIMAR-Ontology/blob/main/CHANGELOG.md> ;
 
-    dcterms:bibliographicCitation "Flores, A., Garcia, O., & Aceta, C. (2026). Ontología de Plataforma Eólica Offshore para OPTiMAR (v2.4). DOI: 10.5281/zenodo.17962874"@es ;
-    dcterms:bibliographicCitation "Flores, A., Garcia, O., & Aceta, C. (2026). Offshore Wind Power Platform Ontology for OPTiMAR (v2.4). DOI: 10.5281/zenodo.17962874"@en ;
+    dcterms:bibliographicCitation "Flores, A., Garcia, O., & Aceta, C. (2026). Ontología de Plataforma Eólica Offshore para OPTiMAR (v2.4). DOI: 10.5281/zenodo.17962873"@es ;
+    dcterms:bibliographicCitation "Flores, A., Garcia, O., & Aceta, C. (2026). Offshore Wind Power Platform Ontology for OPTiMAR (v2.4). DOI: 10.5281/zenodo.17962873"@en ;
 
     # Notas de la versión actual (el historial completo está en CHANGELOG.md)
     rdfs:comment """
