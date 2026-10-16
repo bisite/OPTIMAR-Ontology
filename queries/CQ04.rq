@@ -1,0 +1,13 @@
+# CQ04 [Structural components] What are the mechanical properties of the nacelle (mass, generator speed)?
+PREFIX optimar: <https://w3id.org/optimar#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?nacelle ?mass ?massUnit ?generator ?speed ?speedUnit WHERE {
+  ?nacelle a optimar:Nacelle .
+  OPTIONAL { ?nacelle optimar:mass [ qudt:numericValue ?mass ; qudt:unit ?massUnit ] }
+  OPTIONAL { ?nacelle optimar:houses ?generator . ?generator a optimar:Generator ;
+             optimar:rotationSpeed [ qudt:numericValue ?speed ; qudt:unit ?speedUnit ] }
+}

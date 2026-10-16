@@ -1,0 +1,12 @@
+# CQ27 [Operational optimisation] Which environmental conditions are associated with failures, and what wind conditions were measured?
+PREFIX optimar: <https://w3id.org/optimar#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?failure ?component ?condition ?windSpeed ?windDirection WHERE {
+  ?failure optimar:hasFailureCause ?condition ; optimar:affects ?component .
+  OPTIONAL { ?condition optimar:windSpeed/qudt:numericValue ?windSpeed }
+  OPTIONAL { ?condition optimar:windDirection/qudt:numericValue ?windDirection }
+}

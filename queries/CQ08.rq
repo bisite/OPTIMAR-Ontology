@@ -1,0 +1,10 @@
+# CQ08 [Substructure & mooring] What are the structural members of a floating substructure?
+PREFIX optimar: <https://w3id.org/optimar#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?fs ?member ?memberType WHERE {
+  ?fs optimar:hasMember ?member . ?member a ?memberType . ?memberType rdfs:subClassOf optimar:SubstructureMember .
+} ORDER BY ?memberType ?member

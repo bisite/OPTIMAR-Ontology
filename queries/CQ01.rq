@@ -1,0 +1,13 @@
+# CQ01 [Structural components] What are the main components of an offshore wind platform?
+PREFIX optimar: <https://w3id.org/optimar#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT DISTINCT ?platform ?component ?type WHERE {
+  ?platform a/rdfs:subClassOf* optimar:WindPowerPlatform ;
+            optimar:hasComponent/optimar:hasTurbineComponent? ?component .
+  ?component a ?type . ?type rdfs:subClassOf* optimar:Component .
+  FILTER NOT EXISTS { ?component a ?sub . ?sub rdfs:subClassOf+ ?type . FILTER(?sub != ?type) }
+} ORDER BY ?component

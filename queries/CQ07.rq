@@ -1,0 +1,12 @@
+# CQ07 [Structural components] What are the main characteristics of the mooring system (anchors, lines, connectors, tensioners)?
+PREFIX optimar: <https://w3id.org/optimar#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?mooring ?elementType (COUNT(?element) AS ?count) WHERE {
+  ?mooring a optimar:MooringSystem ; optimar:hasMooringComponent|optimar:hasMooringLine|optimar:hasAnchor ?element .
+  ?element a ?elementType . ?elementType rdfs:subClassOf+ optimar:MooringComponent .
+  FILTER NOT EXISTS { ?element a ?sub . ?sub rdfs:subClassOf+ ?elementType . FILTER(?sub != ?elementType) }
+} GROUP BY ?mooring ?elementType

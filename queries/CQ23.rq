@@ -1,0 +1,11 @@
+# CQ23 [Actors & operations] Which actors are involved in operating the platform and which roles do they play?
+PREFIX optimar: <https://w3id.org/optimar#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?actor ?actorType ?role ?roleType WHERE {
+  ?actor a ?actorType . ?actorType rdfs:subClassOf optimar:Actor .
+  OPTIONAL { ?actor optimar:hasRole ?role . ?role a ?roleType . ?roleType rdfs:subClassOf optimar:Role }
+}

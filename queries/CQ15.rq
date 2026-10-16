@@ -1,0 +1,11 @@
+# CQ15 [Sensing & failures] Which sensors produce the relevant measurements, and on which component are they installed?
+PREFIX optimar: <https://w3id.org/optimar#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?sensor ?sensorType ?component WHERE {
+  ?sensor a ?sensorType . ?sensorType rdfs:subClassOf+ optimar:Sensor .
+  ?sensor optimar:isInstalledIn ?component .
+} ORDER BY ?sensorType

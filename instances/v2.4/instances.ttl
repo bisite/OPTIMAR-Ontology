@@ -1,0 +1,954 @@
+@prefix optimar: <https://w3id.org/optimar#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ex: <https://w3id.org/optimar/example#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+
+##########################################################
+# OPTiMAR ontology v2.4 - example instantiation
+# Instance IRIs live in their own namespace (ex:), separate from the
+# ontology namespace (optimar:). Values are illustrative; sampling
+# frequencies and formats follow the OPTiMAR requirements (Table 5).
+##########################################################
+
+##########################################################
+# Platform and Location
+##########################################################
+
+ex:NorthSeaLocation a optimar:Location ;
+    rdfs:label "Mar del Norte"@es ;
+    rdfs:label "North Sea"@en .
+
+# --- [NUEVO v2.3] Parque eólico y composición de la plataforma ---
+ex:OptimarWindFarm01 a optimar:WindFarm ;
+    rdfs:label "Parque Eólico OPTiMAR Norte"@es ;
+    rdfs:label "OPTiMAR North Wind Farm"@en ;
+    optimar:hasPlatform ex:OptimarPlatform01 .
+
+ex:OptimarPlatform01 a optimar:FloatingPlatform ;
+    rdfs:label "Plataforma Flotante OPTiMAR 01"@es ;
+    rdfs:label "OPTiMAR Floating Platform 01"@en ;
+    optimar:locatedIn ex:NorthSeaLocation ;
+    # [NUEVO v2.3] Composición explícita de la plataforma
+    optimar:hasTurbine ex:Turbine01 ;
+    optimar:hasComponent ex:Turbine01, ex:Base01, ex:FloatingSubstructure01, ex:MooringSystem01 .
+
+##########################################################
+# Structural Components (Floating & Mooring)
+##########################################################
+
+ex:FloatingSubstructure01 a optimar:FloatingSubstructure ;
+    rdfs:label "Subestructura flotante 01"@es ;
+    optimar:material "Acero Naval"@es ;
+    optimar:supports ex:Tower01 ;
+    optimar:hasOperationalState ex:OperationalState_Normal .
+
+ex:MooringSystem01 a optimar:MooringSystem, optimar:CatenaryMooringSystem, optimar:PermanentMooringSystem ;
+    rdfs:label "Sistema de amarre 01"@es ;
+    optimar:connectedTo ex:FloatingSubstructure01 ;
+    optimar:hasOperationalState ex:OperationalState_Normal .
+
+##########################################################
+# Turbine and its main components
+##########################################################
+
+ex:Turbine01 a optimar:Turbine ;
+    rdfs:label "Turbina Eólica 01"@es ;
+    optimar:hasOperationalState ex:OperationalState_Normal ;
+    
+    # Propiedades QUDT (QuantityValue)
+    optimar:hasCapacity [ 
+        a qudt:QuantityValue ; 
+        qudt:numericValue "15"^^xsd:decimal ; 
+        qudt:unit unit:MegaW 
+    ] ;
+    
+    # Relación con sus componentes principales
+    optimar:hasTurbineComponent ex:Tower01, ex:Nacelle01, ex:Hub01, 
+                                 ex:Blade01, ex:Blade02, ex:Blade03 .
+
+ex:Tower01 a optimar:Tower ;
+    rdfs:label "Torre T1"@es ;
+    optimar:height [ 
+        a qudt:QuantityValue ; 
+        qudt:numericValue "120"^^xsd:decimal ; 
+        qudt:unit unit:M 
+    ] ;
+    optimar:material "Acero estructural S355"@es ;
+    optimar:isSupportedBy ex:FloatingSubstructure01 ;
+    optimar:supports ex:Nacelle01 ;
+    optimar:hasOperationalState ex:OperationalState_Degraded ;
+    optimar:affectedBy ex:TowerCorrosionFailure .
+
+ex:Nacelle01 a optimar:Nacelle ;
+    rdfs:label "Nacelle T1"@es ;
+    optimar:houses ex:Generator01, ex:Gearbox01 ;
+    optimar:isSupportedBy ex:Tower01 ;
+    optimar:hasOperationalState ex:OperationalState_Normal ;
+    optimar:temperatureMonitoredBy ex:TempSensor_Nacelle ;
+    # [NUEVO v2.2] Relación inversa con el sensor de Yaw
+    optimar:yawAngleMonitoredBy ex:YawSensor01 .
+
+ex:Generator01 a optimar:Generator ;
+    rdfs:label "Generador T1"@es ;
+    optimar:mass [ 
+        a qudt:QuantityValue ; 
+        qudt:numericValue "35000"^^xsd:decimal ; 
+        qudt:unit unit:KiloGM 
+    ] ;
+    optimar:isHousedIn ex:Nacelle01 ;
+    optimar:hasOperationalState ex:OperationalState_Normal ;
+    optimar:temperatureMonitoredBy ex:TempSensor_Generator ;
+    optimar:electricalParameterMonitoredBy ex:PowerSensor01, ex:VoltageSensor01, 
+                                           ex:CurrentSensor01, ex:FreqSensor01 .
+
+ex:Gearbox01 a optimar:Gearbox ;
+    rdfs:label "Caja de cambios T1"@es ;
+    optimar:material "Acero aleado"@es ;
+    optimar:isHousedIn ex:Nacelle01 ;
+    optimar:hasOperationalState ex:OperationalState_Normal ;
+    optimar:temperatureMonitoredBy ex:TempSensor_Gearbox ;
+    # [NUEVO v2.3] Relación sensor-componente
+    optimar:hasInstalled ex:RotationalSpeedSensor01 .
+
+ex:Transformer01 a optimar:Transformer ;
+    rdfs:label "Transformador T1"@es ;
+    optimar:hasOperationalState ex:OperationalState_Normal ;
+    optimar:temperatureMonitoredBy ex:TempSensor_Transformer .
+
+# --- [NUEVO v2.3] Inversor ---
+ex:Inverter01 a optimar:Inverter ;
+    rdfs:label "Inversor T1"@es ;
+    optimar:isHousedIn ex:Nacelle01 ;
+    optimar:hasOperationalState ex:OperationalState_Normal ;
+    optimar:electricalParameterMonitoredBy ex:ApparentPowerSensor01 ;
+    # [NUEVO v2.3] Relación sensor-componente
+    optimar:hasInstalled ex:ApparentPowerSensor01 .
+
+ex:Hub01 a optimar:Hub ;
+    rdfs:label "Hub T1"@es ;
+    optimar:connectedTo ex:Nacelle01 ;
+    optimar:transmitsMovementTo ex:Generator01 ;
+    optimar:hasOperationalState ex:OperationalState_Normal ;
+    optimar:rotorParameterMonitoredBy ex:RotorSpeedSensor01, ex:RotorAngleSensor01 .
+
+ex:Blade01 a optimar:Blade ;
+    rdfs:label "Pala 01"@es ;
+    optimar:externalShape "Aerodinámica"@es ;
+    optimar:length [ 
+        a qudt:QuantityValue ; 
+        qudt:numericValue "90"^^xsd:decimal ; 
+        qudt:unit unit:M 
+    ] ;
+    optimar:material "Fibra de Carbono"@es ;
+    optimar:connectedTo ex:Hub01 ;
+    optimar:hasOperationalState ex:OperationalState_Degraded ;
+    optimar:affectedBy ex:BladeCorrosionFailure ;
+    # [NUEVO v2.2] Relación inversa con el sensor de Pitch
+    optimar:pitchAngleMonitoredBy ex:PitchSensor01 .
+
+ex:Blade02 a optimar:Blade ;
+    rdfs:label "Pala 02"@es ;
+    optimar:connectedTo ex:Hub01 ;
+    optimar:hasOperationalState ex:OperationalState_Normal ;
+    # [NUEVO v2.2] Relación inversa con el sensor de Pitch
+    optimar:pitchAngleMonitoredBy ex:PitchSensor02 .
+
+ex:Blade03 a optimar:Blade ;
+    rdfs:label "Pala 03"@es ;
+    optimar:connectedTo ex:Hub01 ;
+    optimar:hasOperationalState ex:OperationalState_Normal ;
+    # [NUEVO v2.2] Relación inversa con el sensor de Pitch
+    optimar:pitchAngleMonitoredBy ex:PitchSensor03 .
+
+ex:PitchSystem01 a optimar:PitchSystem ;
+    rdfs:label "Sistema de Pitch Pala 01"@es ;
+    optimar:connectedTo ex:Blade01 ;
+    optimar:hasOperationalState ex:OperationalState_Normal .
+
+##########################################################
+# Operational States
+##########################################################
+
+ex:OperationalState_Normal a optimar:OperationalState ;
+    rdfs:label "Estado: Operativo Normal"@es .
+
+ex:OperationalState_Degraded a optimar:OperationalState ;
+    rdfs:label "Estado: Degradado"@es .
+
+ex:OperationalState_Stopped a optimar:OperationalState ;
+    rdfs:label "Estado: Detenido"@es .
+
+ex:OperationalState_Maintenance a optimar:OperationalState ;
+    rdfs:label "Estado: En Mantenimiento"@es .
+
+##########################################################
+# Sensors - Monitoring Systems
+##########################################################
+
+# --- Sensores de Viento, Temperatura y Eléctricos (Existentes) ---
+ex:Anemometer01 a optimar:Anemometer ;
+    rdfs:label "Anemómetro Principal"@es ;
+    optimar:measuresWind ex:CurrentWindCondition ;
+    # [NUEVO v2.3] Datos de velocidad/dirección de viento, siguiendo el patrón de measuresYawAngle/measuresPitchAngle
+    optimar:measuresWindSpeed ex:WindSpeedData01 ;
+    optimar:measuresWindDirection ex:WindDirectionData01 .
+
+ex:TempSensor_Ambient a optimar:TemperatureSensor ;
+    rdfs:label "Sensor de Temperatura Ambiente"@es ;
+    optimar:measuresTemperatureOf ex:CurrentWindCondition .
+
+ex:TempSensor_Generator a optimar:TemperatureSensor ;
+    rdfs:label "Sensor de Temperatura - Generador"@es ;
+    optimar:measuresTemperatureOf ex:Generator01 .
+
+ex:TempSensor_Gearbox a optimar:TemperatureSensor ;
+    rdfs:label "Sensor de Temperatura - Gearbox"@es ;
+    optimar:measuresTemperatureOf ex:Gearbox01 .
+
+ex:TempSensor_Transformer a optimar:TemperatureSensor ;
+    rdfs:label "Sensor de Temperatura - Transformador"@es ;
+    optimar:measuresTemperatureOf ex:Transformer01 .
+
+ex:TempSensor_Nacelle a optimar:TemperatureSensor ;
+    rdfs:label "Sensor de Temperatura - Nacelle"@es ;
+    optimar:measuresTemperatureOf ex:Nacelle01 .
+
+ex:PowerSensor01 a optimar:ActivePowerSensor ;
+    rdfs:label "Sensor de Potencia Activa"@es .
+
+ex:ReactivePowerSensor01 a optimar:ReactivePowerSensor ;
+    rdfs:label "Sensor de Potencia Reactiva"@es .
+
+ex:VoltageSensor01 a optimar:VoltageSensor ;
+    rdfs:label "Sensor de Voltaje - Generador"@es .
+
+ex:CurrentSensor01 a optimar:CurrentSensor ;
+    rdfs:label "Sensor de Corriente - Generador"@es .
+
+ex:FreqSensor01 a optimar:GridFrequencySensor ;
+    rdfs:label "Sensor de Frecuencia de Red"@es .
+
+ex:TorqueSensor01 a optimar:TorqueSensor ;
+    rdfs:label "Sensor de Torque - Eje Principal"@es .
+
+ex:RotorSpeedSensor01 a optimar:RotorSpeedSensor ;
+    rdfs:label "Sensor de Velocidad de Rotor"@es .
+
+ex:RotorAngleSensor01 a optimar:RotorAngleSensor ;
+    rdfs:label "Sensor de Ángulo de Rotor"@es .
+
+# --- [NUEVO v2.3] Sensor de potencia aparente y sensor de velocidad rotacional ---
+ex:ApparentPowerSensor01 a optimar:ApparentPowerSensor ;
+    rdfs:label "Sensor de Potencia Aparente - Inversor"@es ;
+    optimar:isInstalledIn ex:Inverter01 .
+
+ex:RotationalSpeedSensor01 a optimar:RotationalSpeedSensor ;
+    rdfs:label "Sensor de Velocidad Rotacional - Gearbox"@es ;
+    optimar:isInstalledIn ex:Gearbox01 .
+
+# --- [NUEVO v2.2] Sensores de Control (Yaw & Pitch) ---
+
+ex:YawSensor01 a optimar:YawSensor ;
+    rdfs:label "Sensor de Orientación (Yaw) Nacelle"@es ;
+    # Relación directa definida en v2.2
+    optimar:monitorsYawOf ex:Nacelle01 ;
+    optimar:measuresYawAngle ex:YawAngleData01 .
+
+ex:PitchSensor01 a optimar:PitchAngleSensor ;
+    rdfs:label "Sensor de Pitch - Pala 01"@es ;
+    # Relación directa definida en v2.2
+    optimar:monitorsPitchOf ex:Blade01 ;
+    optimar:measuresPitchAngle ex:PitchAngleData01 .
+
+ex:PitchSensor02 a optimar:PitchAngleSensor ;
+    rdfs:label "Sensor de Pitch - Pala 02"@es ;
+    optimar:monitorsPitchOf ex:Blade02 ;
+    optimar:measuresPitchAngle ex:PitchAngleData02 .
+
+ex:PitchSensor03 a optimar:PitchAngleSensor ;
+    rdfs:label "Sensor de Pitch - Pala 03"@es ;
+    optimar:monitorsPitchOf ex:Blade03 ;
+    optimar:measuresPitchAngle ex:PitchAngleData03 .
+
+# --- Sensores de corrosión y estructura ---
+ex:CorrosionCam01 a optimar:CorrosionCamera ;
+    rdfs:label "Cámara de corrosión - Pala 01"@es ;
+    optimar:monitors ex:Blade01 ;
+    optimar:detectsCorrosion ex:BladeCorrosionFailure .
+
+ex:CorrosionCam02 a optimar:CorrosionCamera ;
+    rdfs:label "Cámara de corrosión - Torre"@es ;
+    optimar:monitors ex:Tower01 ;
+    optimar:detectsCorrosion ex:TowerCorrosionFailure .
+
+ex:VibrationSensor01 a optimar:DynamicMonitor ;
+    rdfs:label "Sensor de vibración de Torre"@es ;
+    optimar:measuresVibration ex:TowerVibrationData01 .
+
+ex:VibrationSensor02 a optimar:DynamicMonitor ;
+    rdfs:label "Sensor de vibración de Nacelle"@es ;
+    optimar:measuresVibration ex:NacelleVibrationData01 .
+
+ex:GaugeSystem01 a optimar:GaugeSystem ;
+    rdfs:label "Sistema de galgas - Torre"@es ;
+    optimar:measuresStress ex:TowerStressData01 .
+
+##########################################################
+# Actors and Roles
+##########################################################
+
+ex:Operator01 a optimar:MaintenanceOperator ;
+    rdfs:label "Juan Pérez"@es ;
+    optimar:hasRole ex:TechnicalRole01 ;
+    # [v2.3] "monitors" ahora es una propiedad genérica; la relación Actor -> Component/Sensor usa "actorMonitors"
+    optimar:actorMonitors ex:Anemometer01, ex:YawSensor01 ;
+    optimar:performsTask ex:RoutineInspection01 .
+
+ex:Analyst01 a optimar:DataAnalyst ;
+    rdfs:label "Ana García"@es ;
+    optimar:hasRole ex:AnalyticalRole01 ;
+    optimar:analyzes ex:CorrosionEvent01, ex:BladeCorrosionFailure, ex:YawAngleData01 .
+
+ex:CloudAdmin01 a optimar:CloudAdministrator ;
+    rdfs:label "Admin Cloud"@es ;
+    optimar:hasRole ex:ManagementRole01 ;
+    optimar:manages ex:OptimarPlatform01 .
+
+ex:ParkOwner01 a optimar:ParkOwner ;
+    rdfs:label "OPTiMAR Energy Solutions"@es ;
+    optimar:hasRole ex:ManagementRole01 ;
+    optimar:manages ex:OptimarWindFarm01, ex:OptimarPlatform01 .
+
+##########################################################
+# Tasks and Maintenance
+##########################################################
+
+ex:RoutineInspection01 a optimar:MonitoringTask ;
+    rdfs:label "Inspección Rutinaria de Sensores"@es ;
+    optimar:performedBy ex:Operator01 .
+
+ex:BladeRepair01 a optimar:Maintenance ;
+    rdfs:label "Reparación de superficie de Pala 01"@es ;
+    optimar:performedBy ex:Operator01 ;
+    optimar:addressesFailure ex:BladeCorrosionFailure ;
+    optimar:triggeredBy ex:CorrosionEvent01 ;
+    optimar:startDateTime "2026-01-20T08:00:00Z"^^xsd:dateTime ;
+    optimar:endDateTime "2026-01-20T16:30:00Z"^^xsd:dateTime ;
+    optimar:duration [ 
+        a qudt:QuantityValue ; 
+        qudt:numericValue "8.5"^^xsd:decimal ; 
+        qudt:unit unit:HR 
+    ] .
+
+ex:TowerInspection01 a optimar:Maintenance ;
+    rdfs:label "Inspección estructural de Torre"@es ;
+    optimar:performedBy ex:Operator01 ;
+    optimar:addressesFailure ex:TowerCorrosionFailure ;
+    optimar:triggeredBy ex:CorrosionEvent02 ;
+    optimar:startDateTime "2026-01-22T09:00:00Z"^^xsd:dateTime ;
+    optimar:endDateTime "2026-01-22T12:00:00Z"^^xsd:dateTime ;
+    optimar:duration [ 
+        a qudt:QuantityValue ; 
+        qudt:numericValue "3"^^xsd:decimal ; 
+        qudt:unit unit:HR 
+    ] .
+
+##########################################################
+# Failures
+##########################################################
+
+ex:BladeCorrosionFailure a optimar:Corrosion ;
+    rdfs:label "Corrosión por salinidad - Pala 01"@es ;
+    optimar:severity "medium"^^xsd:string ;
+    optimar:detectionDateTime "2026-01-15T14:30:00Z"^^xsd:dateTime ;
+    optimar:affects ex:Blade01 ;
+    optimar:hasFailureCause ex:CurrentWindCondition ;
+    optimar:causesFailure ex:BladeFatigueFailure .
+
+ex:BladeFatigueFailure a optimar:MaterialFatigue ;
+    rdfs:label "Fatiga material - Pala 01"@es ;
+    optimar:severity "high"^^xsd:string ;
+    optimar:detectionDateTime "2026-01-18T10:15:00Z"^^xsd:dateTime ;
+    optimar:affects ex:Blade01 ;
+    optimar:precededBy ex:BladeCorrosionFailure .
+
+ex:TowerCorrosionFailure a optimar:Corrosion ;
+    rdfs:label "Corrosión base de torre"@es ;
+    optimar:severity "low"^^xsd:string ;
+    optimar:detectionDateTime "2026-01-16T11:00:00Z"^^xsd:dateTime ;
+    optimar:affects ex:Tower01 ;
+    optimar:hasFailureCause ex:CurrentWindCondition .
+
+##########################################################
+# Failure Events
+##########################################################
+
+ex:CorrosionEvent01 a optimar:CorrosionEvent ;
+    rdfs:label "Evento de detección de corrosión #234"@es ;
+    optimar:causedBy ex:BladeCorrosionFailure ;
+    optimar:detectedBy ex:CorrosionCam01 ;
+    optimar:relatedToComponent ex:Blade01 ;
+    optimar:startDateTime "2026-01-15T14:30:00Z"^^xsd:dateTime ;
+    optimar:endDateTime "2026-01-15T14:35:00Z"^^xsd:dateTime ;
+    optimar:duration [ 
+        a qudt:QuantityValue ; 
+        qudt:numericValue "5"^^xsd:decimal ; 
+        qudt:unit unit:MIN 
+    ] ;
+    optimar:corrosionLevel "0.45"^^xsd:decimal ;
+    optimar:darkCorrosionLevel "0.30"^^xsd:decimal ;
+    optimar:lightCorrosion "0.15"^^xsd:decimal ;
+    optimar:hasGeneratedData ex:CorrosionImage01 .
+
+ex:CorrosionEvent02 a optimar:CorrosionEvent ;
+    rdfs:label "Evento de detección de corrosión en torre #235"@es ;
+    optimar:causedBy ex:TowerCorrosionFailure ;
+    optimar:detectedBy ex:CorrosionCam02 ;
+    optimar:relatedToComponent ex:Tower01 ;
+    optimar:startDateTime "2026-01-16T11:00:00Z"^^xsd:dateTime ;
+    optimar:corrosionLevel "0.25"^^xsd:decimal ;
+    optimar:hasGeneratedData ex:CorrosionImage02 .
+
+##########################################################
+# Data and Measurements
+##########################################################
+
+# --- Imágenes ---
+ex:CorrosionImage01 a optimar:Image ;
+    rdfs:label "Imagen térmica de corrosión - Pala 01"@es ;
+    optimar:imageURL "http://storage.optimar.w3id.org/img/corr_blade_01.jpg"^^xsd:string .
+
+ex:CorrosionImage02 a optimar:Image ;
+    rdfs:label "Imagen térmica de corrosión - Torre"@es ;
+    optimar:imageURL "http://storage.optimar.w3id.org/img/corr_tower_01.jpg"^^xsd:string .
+
+# --- Datos de Vibración y Tensión ---
+ex:TowerVibrationData01 a optimar:VibrationData ;
+    rdfs:label "Lectura de vibración Torre T1"@es ;
+    optimar:value "0.05"^^xsd:decimal ;
+    optimar:unit "mm/s" ;
+    optimar:dateTime "2026-01-19T10:30:00Z"^^xsd:dateTime .
+
+ex:NacelleVibrationData01 a optimar:VibrationData ;
+    rdfs:label "Lectura de vibración Nacelle"@es ;
+    optimar:value "0.03"^^xsd:decimal ;
+    optimar:unit "mm/s" ;
+    optimar:dateTime "2026-01-19T10:30:00Z"^^xsd:dateTime .
+
+ex:TowerStressData01 a optimar:StressData ;
+    rdfs:label "Lectura de tensión estructural Torre"@es ;
+    optimar:value "125.5"^^xsd:decimal ;
+    optimar:unit "MPa" ;
+    optimar:dateTime "2026-01-19T10:30:00Z"^^xsd:dateTime .
+
+# --- Datos de Temperatura ---
+ex:GeneratorTempData01 a optimar:TemperatureData ;
+    rdfs:label "Temperatura Generador"@es ;
+    optimar:value "85.5"^^xsd:decimal ;
+    optimar:unit "Celsius" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+
+ex:GearboxTempData01 a optimar:TemperatureData ;
+    rdfs:label "Temperatura Gearbox"@es ;
+    optimar:value "72.3"^^xsd:decimal ;
+    optimar:unit "Celsius" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+
+ex:TransformerTempData01 a optimar:TemperatureData ;
+    rdfs:label "Temperatura Transformador"@es ;
+    optimar:value "68.0"^^xsd:decimal ;
+    optimar:unit "Celsius" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+
+ex:AmbientTempData01 a optimar:TemperatureData ;
+    rdfs:label "Temperatura Ambiente"@es ;
+    optimar:value "12.5"^^xsd:decimal ;
+    optimar:unit "Celsius" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+
+# --- Datos Eléctricos ---
+ex:ActivePowerData01 a optimar:PowerData ;
+    rdfs:label "Potencia Activa Generada"@es ;
+    optimar:value "14.2"^^xsd:decimal ;
+    optimar:unit "MW" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+
+ex:ReactivePowerData01 a optimar:PowerData ;
+    rdfs:label "Potencia Reactiva"@es ;
+    optimar:value "2.1"^^xsd:decimal ;
+    optimar:unit "MVAr" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+
+ex:VoltageData01 a optimar:VoltageData ;
+    rdfs:label "Voltaje Generador"@es ;
+    optimar:value "690"^^xsd:decimal ;
+    optimar:unit "V" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+
+ex:CurrentData01 a optimar:CurrentData ;
+    rdfs:label "Corriente Generador"@es ;
+    optimar:value "1250"^^xsd:decimal ;
+    optimar:unit "A" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+
+ex:FrequencyData01 a optimar:FrequencyData ;
+    rdfs:label "Frecuencia de Red"@es ;
+    optimar:value "50.02"^^xsd:decimal ;
+    optimar:unit "Hz" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+
+ex:TorqueData01 a optimar:TorqueData ;
+    rdfs:label "Torque Eje Principal"@es ;
+    optimar:value "2500"^^xsd:decimal ;
+    optimar:unit "kNm" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+
+# --- Datos de Rotor ---
+ex:RotorSpeedData01 a optimar:RotorSpeedData ;
+    rdfs:label "Velocidad de Rotor"@es ;
+    optimar:value "12.5"^^xsd:decimal ;
+    optimar:unit "RPM" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+
+ex:RotorAngleData01 a optimar:RotorAngleData ;
+    rdfs:label "Ángulo de Rotor"@es ;
+    optimar:value "145.8"^^xsd:decimal ;
+    optimar:unit "degrees" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+
+# --- [NUEVO v2.2] Datos de Yaw y Pitch ---
+
+ex:YawAngleData01 a optimar:YawAngleData ;
+    rdfs:label "Dato de orientación Nacelle"@es ;
+    # Viento a 280, Nacelle orientada a 278 (ligera desalineación posible)
+    optimar:value "278.0"^^xsd:decimal ;
+    optimar:unit "degrees" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+
+ex:PitchAngleData01 a optimar:PitchAngleData ;
+    rdfs:label "Dato de Pitch Pala 01"@es ;
+    # Operación normal, ligero ajuste
+    optimar:value "2.5"^^xsd:decimal ;
+    optimar:unit "degrees" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+
+ex:PitchAngleData02 a optimar:PitchAngleData ;
+    rdfs:label "Dato de Pitch Pala 02"@es ;
+    optimar:value "2.5"^^xsd:decimal ;
+    optimar:unit "degrees" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+
+ex:PitchAngleData03 a optimar:PitchAngleData ;
+    rdfs:label "Dato de Pitch Pala 03"@es ;
+    optimar:value "2.5"^^xsd:decimal ;
+    optimar:unit "degrees" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+
+# --- [NUEVO v2.3] Datos de viento, potencia aparente y velocidad rotacional ---
+
+ex:WindSpeedData01 a optimar:WindSpeedData ;
+    rdfs:label "Velocidad de Viento"@es ;
+    optimar:value "12.5"^^xsd:decimal ;
+    optimar:unit "m/s" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime ;
+    optimar:measurementType "average"^^xsd:string .
+
+ex:WindDirectionData01 a optimar:WindDirectionData ;
+    rdfs:label "Dirección de Viento"@es ;
+    optimar:value "280"^^xsd:decimal ;
+    optimar:unit "degrees" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime ;
+    optimar:measurementType "average"^^xsd:string .
+
+ex:ApparentPowerData01 a optimar:PowerData ;
+    rdfs:label "Potencia Aparente - Inversor"@es ;
+    optimar:value "14.4"^^xsd:decimal ;
+    optimar:unit "MVA" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+
+ex:GearboxRotationalSpeedData01 a optimar:RotorSpeedData ;
+    rdfs:label "Velocidad Rotacional - Gearbox"@es ;
+    optimar:value "1800"^^xsd:decimal ;
+    optimar:unit "RPM" ;
+    optimar:dateTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+
+##########################################################
+# Observations (SOSA)
+##########################################################
+
+ex:Observation_Vibration_Tower a optimar:Observation ;
+    rdfs:label "Observación de Vibración Torre 10:30"@es ;
+    optimar:madeBySensor ex:VibrationSensor01 ;
+    sosa:hasResult ex:TowerVibrationData01 .
+
+ex:Observation_Vibration_Nacelle a optimar:Observation ;
+    rdfs:label "Observación de Vibración Nacelle 10:30"@es ;
+    optimar:madeBySensor ex:VibrationSensor02 ;
+    sosa:hasResult ex:NacelleVibrationData01 .
+
+ex:Observation_Stress_Tower a optimar:Observation ;
+    rdfs:label "Observación de Tensión Torre 10:30"@es ;
+    optimar:madeBySensor ex:GaugeSystem01 ;
+    sosa:hasResult ex:TowerStressData01 .
+
+ex:Observation_Temp_Generator a optimar:Observation ;
+    rdfs:label "Observación Temperatura Generador 12:00"@es ;
+    optimar:madeBySensor ex:TempSensor_Generator ;
+    sosa:hasResult ex:GeneratorTempData01 .
+
+ex:Observation_Temp_Gearbox a optimar:Observation ;
+    rdfs:label "Observación Temperatura Gearbox 12:00"@es ;
+    optimar:madeBySensor ex:TempSensor_Gearbox ;
+    sosa:hasResult ex:GearboxTempData01 .
+
+ex:Observation_Temp_Transformer a optimar:Observation ;
+    rdfs:label "Observación Temperatura Transformador 12:00"@es ;
+    optimar:madeBySensor ex:TempSensor_Transformer ;
+    sosa:hasResult ex:TransformerTempData01 .
+
+ex:Observation_Temp_Ambient a optimar:Observation ;
+    rdfs:label "Observación Temperatura Ambiente 12:00"@es ;
+    optimar:madeBySensor ex:TempSensor_Ambient ;
+    sosa:hasResult ex:AmbientTempData01 .
+
+ex:Observation_ActivePower a optimar:Observation ;
+    rdfs:label "Observación Potencia Activa 12:00"@es ;
+    optimar:madeBySensor ex:PowerSensor01 ;
+    sosa:hasResult ex:ActivePowerData01 .
+
+ex:Observation_ReactivePower a optimar:Observation ;
+    rdfs:label "Observación Potencia Reactiva 12:00"@es ;
+    optimar:madeBySensor ex:ReactivePowerSensor01 ;
+    sosa:hasResult ex:ReactivePowerData01 .
+
+ex:Observation_Voltage a optimar:Observation ;
+    rdfs:label "Observación Voltaje 12:00"@es ;
+    optimar:madeBySensor ex:VoltageSensor01 ;
+    sosa:hasResult ex:VoltageData01 .
+
+ex:Observation_Current a optimar:Observation ;
+    rdfs:label "Observación Corriente 12:00"@es ;
+    optimar:madeBySensor ex:CurrentSensor01 ;
+    sosa:hasResult ex:CurrentData01 .
+
+ex:Observation_Frequency a optimar:Observation ;
+    rdfs:label "Observación Frecuencia 12:00"@es ;
+    optimar:madeBySensor ex:FreqSensor01 ;
+    sosa:hasResult ex:FrequencyData01 .
+
+ex:Observation_Torque a optimar:Observation ;
+    rdfs:label "Observación Torque 12:00"@es ;
+    optimar:madeBySensor ex:TorqueSensor01 ;
+    sosa:hasResult ex:TorqueData01 .
+
+ex:Observation_RotorSpeed a optimar:Observation ;
+    rdfs:label "Observación Velocidad Rotor 12:00"@es ;
+    optimar:madeBySensor ex:RotorSpeedSensor01 ;
+    sosa:hasResult ex:RotorSpeedData01 .
+
+ex:Observation_RotorAngle a optimar:Observation ;
+    rdfs:label "Observación Ángulo Rotor 12:00"@es ;
+    optimar:madeBySensor ex:RotorAngleSensor01 ;
+    sosa:hasResult ex:RotorAngleData01 .
+
+# --- [NUEVO v2.2] Observaciones de Yaw y Pitch ---
+
+ex:Observation_YawAngle a optimar:Observation ;
+    rdfs:label "Observación Ángulo Yaw 12:00"@es ;
+    optimar:madeBySensor ex:YawSensor01 ;
+    sosa:hasResult ex:YawAngleData01 .
+
+ex:Observation_PitchAngle_01 a optimar:Observation ;
+    rdfs:label "Observación Pitch Pala 01 12:00"@es ;
+    optimar:madeBySensor ex:PitchSensor01 ;
+    sosa:hasResult ex:PitchAngleData01 .
+
+ex:Observation_PitchAngle_02 a optimar:Observation ;
+    rdfs:label "Observación Pitch Pala 02 12:00"@es ;
+    optimar:madeBySensor ex:PitchSensor02 ;
+    sosa:hasResult ex:PitchAngleData02 .
+
+ex:Observation_PitchAngle_03 a optimar:Observation ;
+    rdfs:label "Observación Pitch Pala 03 12:00"@es ;
+    optimar:madeBySensor ex:PitchSensor03 ;
+    sosa:hasResult ex:PitchAngleData03 .
+
+# --- [NUEVO v2.3] Observaciones de viento, potencia aparente y velocidad rotacional ---
+
+ex:Observation_WindSpeed a optimar:Observation ;
+    rdfs:label "Observación Velocidad de Viento 12:00"@es ;
+    optimar:madeBySensor ex:Anemometer01 ;
+    sosa:hasResult ex:WindSpeedData01 .
+
+ex:Observation_WindDirection a optimar:Observation ;
+    rdfs:label "Observación Dirección de Viento 12:00"@es ;
+    optimar:madeBySensor ex:Anemometer01 ;
+    sosa:hasResult ex:WindDirectionData01 .
+
+ex:Observation_ApparentPower a optimar:Observation ;
+    rdfs:label "Observación Potencia Aparente 12:00"@es ;
+    optimar:madeBySensor ex:ApparentPowerSensor01 ;
+    sosa:hasResult ex:ApparentPowerData01 .
+
+ex:Observation_RotationalSpeed_Gearbox a optimar:Observation ;
+    rdfs:label "Observación Velocidad Rotacional Gearbox 12:00"@es ;
+    optimar:madeBySensor ex:RotationalSpeedSensor01 ;
+    sosa:hasResult ex:GearboxRotationalSpeedData01 .
+
+##########################################################
+# Environmental Conditions
+##########################################################
+
+ex:CurrentWindCondition a optimar:EnvironmentalCondition ;
+    rdfs:label "Condiciones actuales Viento"@es ;
+    optimar:windSpeed [ 
+        a qudt:QuantityValue ; 
+        qudt:numericValue "12.5"^^xsd:decimal ; 
+        qudt:unit unit:M-PER-SEC 
+    ] ;
+    optimar:windDirection [ 
+        a qudt:QuantityValue ; 
+        qudt:numericValue "280"^^xsd:decimal ; 
+        qudt:unit unit:DEG 
+    ] ;
+    optimar:temperatureMonitoredBy ex:TempSensor_Ambient .
+##########################################################
+# [v2.4] Roles as individuals (v2.3 used the role classes as values)
+##########################################################
+
+ex:TechnicalRole01 a optimar:TechnicalRole ;
+    rdfs:label "Rol técnico de mantenimiento"@es .
+
+ex:AnalyticalRole01 a optimar:AnalyticalRole ;
+    rdfs:label "Rol analítico"@es .
+
+ex:ManagementRole01 a optimar:ManagementRole ;
+    rdfs:label "Rol de gestión"@es .
+
+##########################################################
+# [v2.4] Base, floating substructure members and site
+##########################################################
+
+ex:Base01 a optimar:Base ;
+    rdfs:label "Pieza de transición 01"@es ;
+    optimar:material "Acero estructural S355"@es ;
+    optimar:supports ex:Tower01 ;
+    optimar:isSupportedBy ex:FloatingSubstructure01 .
+
+ex:FloatingSubstructure01
+    optimar:hasMember ex:Column01, ex:Column02, ex:Column03,
+                      ex:HeavePlate01, ex:HeavePlate02, ex:HeavePlate03,
+                      ex:Brace01, ex:Brace02, ex:Brace03 ;
+    optimar:draft [ a qudt:QuantityValue ; qudt:numericValue "20"^^xsd:decimal ; qudt:unit unit:M ] ;
+    optimar:displacedVolume [ a qudt:QuantityValue ; qudt:numericValue "15000"^^xsd:decimal ; qudt:unit unit:M3 ] .
+
+ex:Column01 a optimar:Column ; rdfs:label "Columna 01"@es ;
+    optimar:diameter [ a qudt:QuantityValue ; qudt:numericValue "12.5"^^xsd:decimal ; qudt:unit unit:M ] .
+ex:Column02 a optimar:Column ; rdfs:label "Columna 02"@es .
+ex:Column03 a optimar:Column ; rdfs:label "Columna 03"@es .
+ex:HeavePlate01 a optimar:HeavePlate ; rdfs:label "Placa de arfada 01"@es ; optimar:connectedTo ex:Column01 .
+ex:HeavePlate02 a optimar:HeavePlate ; rdfs:label "Placa de arfada 02"@es ; optimar:connectedTo ex:Column02 .
+ex:HeavePlate03 a optimar:HeavePlate ; rdfs:label "Placa de arfada 03"@es ; optimar:connectedTo ex:Column03 .
+ex:Brace01 a optimar:Brace ; rdfs:label "Riostra 01-02"@es ; optimar:connectedTo ex:Column01, ex:Column02 .
+ex:Brace02 a optimar:Brace ; rdfs:label "Riostra 02-03"@es ; optimar:connectedTo ex:Column02, ex:Column03 .
+ex:Brace03 a optimar:Brace ; rdfs:label "Riostra 03-01"@es ; optimar:connectedTo ex:Column03, ex:Column01 .
+
+ex:NorthSeaLocation
+    optimar:hasSeabed ex:Seabed01 ;
+    optimar:waterDepth [ a qudt:QuantityValue ; qudt:numericValue "150"^^xsd:decimal ; qudt:unit unit:M ] .
+
+ex:Seabed01 a optimar:Seabed ;
+    rdfs:label "Fondo marino del emplazamiento"@es ;
+    optimar:soilComposition "Arcilla"@es ;
+    optimar:sedimentThickness [ a qudt:QuantityValue ; qudt:numericValue "12"^^xsd:decimal ; qudt:unit unit:M ] ;
+    optimar:seabedInclination [ a qudt:QuantityValue ; qudt:numericValue "2"^^xsd:decimal ; qudt:unit unit:DEG ] .
+
+##########################################################
+# [v2.4] Mooring system decomposition
+##########################################################
+
+ex:MooringSystem01
+    optimar:numberOfMooringLines "3"^^xsd:nonNegativeInteger ;
+    optimar:hasLineDistribution optimar:EvenlyDistributed ;
+    optimar:hasMooringLine ex:MooringLine01, ex:MooringLine02, ex:MooringLine03 ;
+    optimar:hasAnchor ex:Anchor01, ex:Anchor02, ex:Anchor03 ;
+    optimar:hasMooringComponent ex:Fairlead01, ex:Fairlead02, ex:Fairlead03, ex:Connector01, ex:Tensioner01 .
+
+ex:MooringLine01 a optimar:MooringLine ; rdfs:label "Línea de amarre 01"@es ;
+    optimar:material "Cadena de acero R4"@es ;
+    optimar:length [ a qudt:QuantityValue ; qudt:numericValue "650"^^xsd:decimal ; qudt:unit unit:M ] ;
+    optimar:lineTension [ a qudt:QuantityValue ; qudt:numericValue "1200"^^xsd:decimal ; qudt:unit unit:KiloN ] ;
+    optimar:connectedTo ex:Fairlead01, ex:Connector01 .
+ex:MooringLine02 a optimar:MooringLine ; rdfs:label "Línea de amarre 02"@es ;
+    optimar:connectedTo ex:Fairlead02, ex:Anchor02 ;
+    optimar:affectedBy ex:MooringLineFatigue02 .
+ex:MooringLine03 a optimar:MooringLine ; rdfs:label "Línea de amarre 03"@es ;
+    optimar:connectedTo ex:Fairlead03, ex:Anchor03 .
+
+ex:Fairlead01 a optimar:Fairlead ; rdfs:label "Fairlead 01"@es ; optimar:connectedTo ex:Column01 .
+ex:Fairlead02 a optimar:Fairlead ; rdfs:label "Fairlead 02"@es ; optimar:connectedTo ex:Column02 .
+ex:Fairlead03 a optimar:Fairlead ; rdfs:label "Fairlead 03"@es ; optimar:connectedTo ex:Column03 .
+ex:Connector01 a optimar:MooringConnector ; rdfs:label "Grillete línea 01"@es ; optimar:connectedTo ex:Anchor01 .
+ex:Tensioner01 a optimar:Tensioner ; rdfs:label "Tensor línea 01"@es ; optimar:connectedTo ex:MooringLine01 .
+
+ex:Anchor01 a optimar:DragEmbedmentAnchor ; rdfs:label "Ancla 01 (DEA)"@es ;
+    optimar:anchoredIn ex:Seabed01 ;
+    optimar:mass [ a qudt:QuantityValue ; qudt:numericValue "25000"^^xsd:decimal ; qudt:unit unit:KiloGM ] ;
+    optimar:anchorLoad [ a qudt:QuantityValue ; qudt:numericValue "3500"^^xsd:decimal ; qudt:unit unit:KiloN ] ;
+    optimar:transportLoad [ a qudt:QuantityValue ; qudt:numericValue "250"^^xsd:decimal ; qudt:unit unit:KiloN ] .
+ex:Anchor02 a optimar:DragEmbedmentAnchor ; rdfs:label "Ancla 02 (DEA)"@es ; optimar:anchoredIn ex:Seabed01 .
+ex:Anchor03 a optimar:SuctionPileAnchor ; rdfs:label "Ancla 03 (pilote de succión)"@es ; optimar:anchoredIn ex:Seabed01 .
+
+ex:MooringLineFatigue02 a optimar:MaterialFatigue ;
+    rdfs:label "Fatiga en la línea de amarre 02"@es ;
+    optimar:severity "low"^^xsd:string ;
+    optimar:detectionDateTime "2026-02-03T09:00:00Z"^^xsd:dateTime .
+
+##########################################################
+# [v2.4] Additional mechanical properties
+##########################################################
+
+ex:Blade01
+    optimar:mass [ a qudt:QuantityValue ; qudt:numericValue "65000"^^xsd:decimal ; qudt:unit unit:KiloGM ] ;
+    optimar:stiffness [ a qudt:QuantityValue ; qudt:numericValue "1.8E10"^^xsd:decimal ; qudt:unit unit:N-M2 ] ;
+    optimar:elasticModulus [ a qudt:QuantityValue ; qudt:numericValue "135"^^xsd:decimal ; qudt:unit unit:GigaPA ] ;
+    optimar:reinforcementType "Largueros de fibra de carbono y almas de fibra de vidrio"@es .
+
+ex:Hub01
+    optimar:diameter [ a qudt:QuantityValue ; qudt:numericValue "5"^^xsd:decimal ; qudt:unit unit:M ] ;
+    optimar:mass [ a qudt:QuantityValue ; qudt:numericValue "190000"^^xsd:decimal ; qudt:unit unit:KiloGM ] ;
+    optimar:momentOfInertia [ a qudt:QuantityValue ; qudt:numericValue "9.8E5"^^xsd:decimal ; qudt:unit unit:KiloGM-M2 ] .
+
+ex:Nacelle01
+    optimar:mass [ a qudt:QuantityValue ; qudt:numericValue "630000"^^xsd:decimal ; qudt:unit unit:KiloGM ] .
+
+ex:Generator01
+    optimar:rotationSpeed [ a qudt:QuantityValue ; qudt:numericValue "1800"^^xsd:decimal ; qudt:unit unit:REV-PER-MIN ] .
+
+ex:Tower01
+    optimar:diameter [ a qudt:QuantityValue ; qudt:numericValue "10"^^xsd:decimal ; qudt:unit unit:M ] ;
+    optimar:thickness [ a qudt:QuantityValue ; qudt:numericValue "80"^^xsd:decimal ; qudt:unit unit:MilliM ] .
+
+##########################################################
+# [v2.4] Sensor acquisition metadata (Table 5 of the requirements)
+##########################################################
+
+ex:CorrosionCam01 optimar:samplingFrequency [ a qudt:QuantityValue ; qudt:numericValue "1"^^xsd:decimal ; qudt:unit unit:PER-MIN ] ;
+    optimar:dataFormat "JPG" ; optimar:isInstalledIn ex:Hub01 .
+ex:CorrosionCam02 optimar:samplingFrequency [ a qudt:QuantityValue ; qudt:numericValue "1"^^xsd:decimal ; qudt:unit unit:PER-MIN ] ;
+    optimar:dataFormat "JPG" ; optimar:isInstalledIn ex:FloatingSubstructure01 .
+ex:Anemometer01 optimar:samplingFrequency [ a qudt:QuantityValue ; qudt:numericValue "1"^^xsd:decimal ; qudt:unit unit:PER-MIN ] ;
+    optimar:dataFormat "CSV" ; optimar:isInstalledIn ex:Nacelle01 .
+ex:VibrationSensor01 optimar:dataFormat "CSV" ; optimar:isInstalledIn ex:Tower01 ; optimar:monitors ex:Tower01 .
+ex:VibrationSensor02 optimar:dataFormat "CSV" ; optimar:isInstalledIn ex:Nacelle01 ; optimar:monitors ex:Nacelle01 .
+ex:GaugeSystem01 optimar:samplingFrequency [ a qudt:QuantityValue ; qudt:numericValue "50"^^xsd:decimal ; qudt:unit unit:HZ ] ;
+    optimar:dataFormat "TXT" ; optimar:isInstalledIn ex:Tower01 ; optimar:monitors ex:Tower01 .
+ex:TempSensor_Generator optimar:samplingFrequency [ a qudt:QuantityValue ; qudt:numericValue "0.5"^^xsd:decimal ; qudt:unit unit:PER-MIN ] ;
+    optimar:dataFormat "Modbus" ; optimar:measures ex:GeneratorTempData01 .
+ex:TempSensor_Gearbox optimar:samplingFrequency [ a qudt:QuantityValue ; qudt:numericValue "0.5"^^xsd:decimal ; qudt:unit unit:PER-MIN ] ;
+    optimar:dataFormat "Modbus" ; optimar:measures ex:GearboxTempData01 .
+ex:PowerSensor01 optimar:samplingFrequency [ a qudt:QuantityValue ; qudt:numericValue "0.1"^^xsd:decimal ; qudt:unit unit:PER-MIN ] ;
+    optimar:dataFormat "JSON" ; optimar:measures ex:ActivePowerData01 .
+ex:ReactivePowerSensor01 optimar:dataFormat "JSON" ; optimar:measures ex:ReactivePowerData01 .
+ex:VoltageSensor01 optimar:dataFormat "JSON" ; optimar:measures ex:VoltageData01 .
+ex:CurrentSensor01 optimar:dataFormat "JSON" ; optimar:measures ex:CurrentData01 .
+ex:FreqSensor01 optimar:dataFormat "JSON" ; optimar:measures ex:FrequencyData01 .
+ex:YawSensor01 optimar:samplingFrequency [ a qudt:QuantityValue ; qudt:numericValue "0.1"^^xsd:decimal ; qudt:unit unit:PER-MIN ] ;
+    optimar:dataFormat "JSON" .
+
+ex:ISUM01 a optimar:ISUMSystem ;
+    rdfs:label "Sistema iSUM - Subestructura flotante"@es ;
+    optimar:isInstalledIn ex:FloatingSubstructure01 ;
+    optimar:monitors ex:FloatingSubstructure01 ;
+    optimar:samplingFrequency [ a qudt:QuantityValue ; qudt:numericValue "1"^^xsd:decimal ; qudt:unit unit:PER-DAY ] ;
+    optimar:dataFormat "binary (float32)" .
+
+ex:StructuralCam01 a optimar:StructuralCamera ;
+    rdfs:label "Cámara estructural - Torre"@es ;
+    optimar:monitors ex:Tower01 ;
+    optimar:dataFormat "MP4" .
+
+##########################################################
+# [v2.4] Predictive maintenance chain (use case 2):
+# observation -> failure event -> failure -> maintenance
+##########################################################
+
+ex:GearboxVibrationSensor01 a optimar:DynamicMonitor ;
+    rdfs:label "Acelerómetro del rodamiento principal - Gearbox"@es ;
+    optimar:isInstalledIn ex:Gearbox01 ;
+    optimar:monitors ex:Gearbox01 ;
+    optimar:measuresVibration ex:GearboxVibrationData01 ;
+    optimar:samplingFrequency [ a qudt:QuantityValue ; qudt:numericValue "25"^^xsd:decimal ; qudt:unit unit:HZ ] ;
+    optimar:dataFormat "CSV" .
+
+ex:GearboxVibrationData01 a optimar:VibrationData ;
+    rdfs:label "Nivel de vibración elevado - rodamiento Gearbox"@es ;
+    optimar:vibrationLevel [ a qudt:QuantityValue ; qudt:numericValue "8.5"^^xsd:decimal ; qudt:unit unit:MilliM-PER-SEC ] ;
+    optimar:dateTime "2026-01-30T14:23:00Z"^^xsd:dateTime .
+
+ex:Observation_Vibration_Gearbox a optimar:Observation ;
+    rdfs:label "Observación de vibración del rodamiento de la Gearbox"@es ;
+    optimar:madeBySensor ex:GearboxVibrationSensor01 ;
+    sosa:hasFeatureOfInterest ex:Gearbox01 ;
+    sosa:hasResult ex:GearboxVibrationData01 ;
+    sosa:resultTime "2026-01-30T14:23:00Z"^^xsd:dateTime .
+
+ex:GearboxBearingFatigue a optimar:MaterialFatigue ;
+    rdfs:label "Fatiga del rodamiento principal de la Gearbox"@es ;
+    optimar:affects ex:Gearbox01 ;
+    optimar:severity "high"^^xsd:string ;
+    optimar:detectionDateTime "2026-01-30T14:23:00Z"^^xsd:dateTime .
+
+ex:GearboxFailureEvent01 a optimar:FailureEvent ;
+    rdfs:label "Evento de fallo - rodamiento de la Gearbox"@es ;
+    optimar:causedBy ex:GearboxBearingFatigue ;
+    optimar:detectedBy ex:GearboxVibrationSensor01 ;
+    optimar:failureObservation ex:Observation_Vibration_Gearbox ;
+    optimar:relatedToComponent ex:Gearbox01 ;
+    optimar:startDateTime "2026-01-30T14:23:00Z"^^xsd:dateTime .
+
+ex:GearboxBearingReplacement01 a optimar:Maintenance ;
+    rdfs:label "Sustitución del rodamiento principal de la Gearbox"@es ;
+    optimar:performedBy ex:Operator01 ;
+    optimar:addressesFailure ex:GearboxBearingFatigue ;
+    optimar:triggeredBy ex:GearboxFailureEvent01 ;
+    optimar:startDateTime "2026-01-30T16:00:00Z"^^xsd:dateTime ;
+    optimar:endDateTime "2026-01-30T18:30:00Z"^^xsd:dateTime ;
+    optimar:duration [ a qudt:QuantityValue ; qudt:numericValue "2.5"^^xsd:decimal ; qudt:unit unit:HR ] .
+
+ex:Gearbox01 optimar:requiresMaintenance ex:GearboxBearingReplacement01 .
+ex:Analyst01 optimar:analyzes ex:GearboxVibrationData01, ex:GearboxBearingFatigue .
+
+##########################################################
+# [v2.4] SOSA alignment of the existing observations:
+# feature of interest and result time
+##########################################################
+
+ex:Observation_Vibration_Tower sosa:hasFeatureOfInterest ex:Tower01 ; sosa:resultTime "2026-01-19T10:30:00Z"^^xsd:dateTime .
+ex:Observation_Vibration_Nacelle sosa:hasFeatureOfInterest ex:Nacelle01 ; sosa:resultTime "2026-01-19T10:30:00Z"^^xsd:dateTime .
+ex:Observation_Stress_Tower sosa:hasFeatureOfInterest ex:Tower01 ; sosa:resultTime "2026-01-19T10:30:00Z"^^xsd:dateTime .
+ex:Observation_Temp_Generator sosa:hasFeatureOfInterest ex:Generator01 ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+ex:Observation_Temp_Gearbox sosa:hasFeatureOfInterest ex:Gearbox01 ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+ex:Observation_Temp_Transformer sosa:hasFeatureOfInterest ex:Transformer01 ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+ex:Observation_Temp_Ambient sosa:hasFeatureOfInterest ex:CurrentWindCondition ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+ex:Observation_ActivePower sosa:hasFeatureOfInterest ex:Generator01 ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+ex:Observation_ReactivePower sosa:hasFeatureOfInterest ex:Generator01 ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+ex:Observation_Voltage sosa:hasFeatureOfInterest ex:Generator01 ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+ex:Observation_Current sosa:hasFeatureOfInterest ex:Generator01 ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+ex:Observation_Frequency sosa:hasFeatureOfInterest ex:Generator01 ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+ex:Observation_Torque sosa:hasFeatureOfInterest ex:Generator01 ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+ex:Observation_RotorSpeed sosa:hasFeatureOfInterest ex:Hub01 ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+ex:Observation_RotorAngle sosa:hasFeatureOfInterest ex:Hub01 ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+ex:Observation_YawAngle sosa:hasFeatureOfInterest ex:Nacelle01 ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+ex:Observation_PitchAngle_01 sosa:hasFeatureOfInterest ex:Blade01 ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+ex:Observation_PitchAngle_02 sosa:hasFeatureOfInterest ex:Blade02 ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+ex:Observation_PitchAngle_03 sosa:hasFeatureOfInterest ex:Blade03 ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+ex:Observation_WindSpeed sosa:hasFeatureOfInterest ex:CurrentWindCondition ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+ex:Observation_WindDirection sosa:hasFeatureOfInterest ex:CurrentWindCondition ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+ex:Observation_ApparentPower sosa:hasFeatureOfInterest ex:Inverter01 ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .
+ex:Observation_RotationalSpeed_Gearbox sosa:hasFeatureOfInterest ex:Gearbox01 ; sosa:resultTime "2026-01-19T12:00:00Z"^^xsd:dateTime .

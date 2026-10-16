@@ -1,0 +1,11 @@
+# CQ12 [Substructure & mooring] How are mooring systems classified by duration and configuration?
+PREFIX optimar: <https://w3id.org/optimar#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?mooring ?classification WHERE {
+  ?mooring a ?classification .
+  ?classification rdfs:subClassOf optimar:MooringSystem .
+}

@@ -1,0 +1,12 @@
+# CQ03 [Structural components] What are the mechanical properties of the hub?
+PREFIX optimar: <https://w3id.org/optimar#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?hub ?property ?value ?unit WHERE {
+  ?hub a optimar:Hub ; ?property ?v .
+  VALUES ?property { optimar:diameter optimar:mass optimar:momentOfInertia }
+  ?v qudt:numericValue ?value ; qudt:unit ?unit .
+}

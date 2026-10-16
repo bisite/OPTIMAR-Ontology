@@ -1,0 +1,13 @@
+# CQ25 [Actors & operations] Which maintenance activities were performed, by whom, on which failure and how long did they take?
+PREFIX optimar: <https://w3id.org/optimar#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?maintenance ?actor ?failure ?component ?start ?duration ?unit WHERE {
+  ?maintenance a optimar:Maintenance ; optimar:performedBy ?actor .
+  OPTIONAL { ?maintenance optimar:addressesFailure ?failure . OPTIONAL { ?failure optimar:affects ?component } }
+  OPTIONAL { ?maintenance optimar:startDateTime ?start }
+  OPTIONAL { ?maintenance optimar:duration [ qudt:numericValue ?duration ; qudt:unit ?unit ] }
+} ORDER BY ?start

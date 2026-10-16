@@ -1,0 +1,13 @@
+# CQ06 [Structural components] What are the hydrodynamic and mechanical properties of the floating substructure (incl. connection points)?
+PREFIX optimar: <https://w3id.org/optimar#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?fs ?draft ?volume (COUNT(DISTINCT ?member) AS ?members) (COUNT(DISTINCT ?fairlead) AS ?connectionPoints) WHERE {
+  ?fs a optimar:FloatingSubstructure .
+  OPTIONAL { ?fs optimar:draft/qudt:numericValue ?draft }
+  OPTIONAL { ?fs optimar:displacedVolume/qudt:numericValue ?volume }
+  OPTIONAL { ?fs optimar:hasMember ?member . OPTIONAL { ?fairlead a optimar:Fairlead ; optimar:connectedTo ?member } }
+} GROUP BY ?fs ?draft ?volume

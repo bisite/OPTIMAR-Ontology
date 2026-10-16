@@ -1,0 +1,13 @@
+# CQ11 [Substructure & mooring] What are the mechanical properties of anchors (anchor load, transport load, fatigue)?
+PREFIX optimar: <https://w3id.org/optimar#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?anchor ?anchorLoad ?transportLoad ?unit ?fatigue WHERE {
+  ?anchor a/rdfs:subClassOf* optimar:Anchor .
+  OPTIONAL { ?anchor optimar:anchorLoad [ qudt:numericValue ?anchorLoad ; qudt:unit ?unit ] }
+  OPTIONAL { ?anchor optimar:transportLoad/qudt:numericValue ?transportLoad }
+  OPTIONAL { ?anchor optimar:affectedBy|^optimar:affects ?fatigue . ?fatigue a optimar:MaterialFatigue }
+} ORDER BY ?anchor

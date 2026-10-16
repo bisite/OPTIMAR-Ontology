@@ -1,0 +1,11 @@
+# CQ24 [Actors & operations] What does each actor monitor, adjust, analyse or manage?
+PREFIX optimar: <https://w3id.org/optimar#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?actor ?relation ?target WHERE {
+  ?actor a/rdfs:subClassOf optimar:Actor ; ?relation ?target .
+  VALUES ?relation { optimar:actorMonitors optimar:adjusts optimar:analyzes optimar:manages optimar:performsTask }
+} ORDER BY ?actor ?relation

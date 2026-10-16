@@ -1,0 +1,12 @@
+# CQ14 [Sensing & failures] What data are needed to predict failures? (data observed on components affected by each failure type)
+PREFIX optimar: <https://w3id.org/optimar#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT DISTINCT ?failureType ?component ?dataType WHERE {
+  ?failure a ?failureType ; optimar:affects ?component . ?failureType rdfs:subClassOf optimar:Failure .
+  ?obs sosa:hasFeatureOfInterest ?component ; sosa:hasResult ?data .
+  ?data a ?dataType . ?dataType rdfs:subClassOf+ optimar:Data .
+} ORDER BY ?failureType ?component

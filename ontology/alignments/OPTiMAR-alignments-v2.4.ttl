@@ -1,0 +1,101 @@
+@prefix optimar: <https://w3id.org/optimar#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix saref: <https://saref.etsi.org/core/> .
+@prefix oeo: <https://openenergyplatform.org/ontology/oeo/> .
+
+##########################################################
+# OPTiMAR alignment module (v2.4)
+#
+# Alignments of OPTiMAR with domain ontologies that were analysed during the
+# reuse phase but are NOT imported by the core ontology:
+#
+#  - SAREF core (ETSI, v3.2.1): logical alignments (rdfs:subClassOf). Checked for
+#    consistency by merging this module, the core ontology, the example instances
+#    and saref.ttl and running HermiT.
+#  - Open Energy Ontology (OEO, v2.14.0): SKOS mappings. OEO is grounded in BFO;
+#    asserting rdfs:subClassOf would commit OPTiMAR to the BFO upper ontology, so
+#    lexical/conceptual correspondences are expressed with skos:closeMatch.
+#
+# Ontologies analysed without alignment (no overlapping concepts at the level of
+# detail of OPTiMAR):
+#  - SAREF4INMA: covers production equipment, batches and items in manufacturing;
+#    it does not define maintenance activities, failures or wind assets.
+#  - SAREF4ENER: covers power profiles and flexibility of energy devices; OPTiMAR
+#    does not model demand response or power profiles.
+#  - windIO (IEA Wind Tasks 37 and 55): YAML/JSON schemas for the inputs and outputs of
+#    wind energy system models. They describe turbine and floating platform design in
+#    detail (members, joints, mooring nodes, lines, line types and anchor types) and
+#    plant-level SCADA time series, but they are not an RDF/OWL vocabulary and expose
+#    no IRIs to align with. Its mooring concepts informed the OPTiMAR mooring module.
+#  - OntoWind (Kucuk & Kucuk, 2018): OWL ontology of wind power plants, turbine
+#    components, meteorological sensors and forecasting models. It has no floating,
+#    structural monitoring or maintenance concepts and uses a non-dereferenceable IRI
+#    (http://www.semanticweb.org/ontologies/2011/9/Ontology1318785573683.owl).
+##########################################################
+
+<https://w3id.org/optimar/alignments>
+    a owl:Ontology ;
+    owl:versionIRI <https://w3id.org/optimar/alignments/2.4> ;
+    owl:versionInfo "2.4" ;
+    dcterms:title "OPTiMAR alignments with SAREF and OEO"@en ;
+    dcterms:title "Alineamientos de OPTiMAR con SAREF y OEO"@es ;
+    dcterms:description "Logical alignments with SAREF core and SKOS mappings with the Open Energy Ontology for the OPTiMAR ontology."@en ;
+    dcterms:license <https://opensource.org/licenses/MIT> ;
+    dcterms:modified "2026-10-16"^^xsd:date ;
+    rdfs:seeAlso <https://w3id.org/optimar> , <https://saref.etsi.org/core/v3.2.1/> , <https://openenergyplatform.org/ontology/oeo/releases/2.14.0/> .
+
+dcterms:title a owl:AnnotationProperty .
+dcterms:description a owl:AnnotationProperty .
+dcterms:license a owl:AnnotationProperty .
+dcterms:modified a owl:AnnotationProperty .
+skos:closeMatch a owl:AnnotationProperty .
+
+optimar:Sensor a owl:Class .
+optimar:TemperatureSensor a owl:Class .
+optimar:OperationalState a owl:Class .
+optimar:Component a owl:Class .
+optimar:EnvironmentalCondition a owl:Class .
+optimar:Measurement a owl:Class .
+optimar:WindFarm a owl:Class .
+optimar:Turbine a owl:Class .
+optimar:Generator a owl:Class .
+optimar:Transformer a owl:Class .
+
+saref:Sensor a owl:Class .
+saref:TemperatureSensor a owl:Class .
+saref:State a owl:Class .
+saref:FeatureOfInterest a owl:Class .
+
+##########################################################
+# SAREF core (logical alignments)
+##########################################################
+
+optimar:Sensor rdfs:subClassOf saref:Sensor .
+optimar:TemperatureSensor rdfs:subClassOf saref:TemperatureSensor .
+optimar:OperationalState rdfs:subClassOf saref:State .
+optimar:Component rdfs:subClassOf saref:FeatureOfInterest .
+optimar:EnvironmentalCondition rdfs:subClassOf saref:FeatureOfInterest .
+
+# saref:Measurement carries cardinality restrictions (one value, one unit, one
+# property) that do not hold for every optimar:Measurement, hence a SKOS mapping.
+optimar:Measurement skos:closeMatch saref:Measurement .
+
+##########################################################
+# Open Energy Ontology (SKOS mappings)
+##########################################################
+
+# "offshore wind farm: a wind farm that is build in a body of water"
+optimar:WindFarm skos:closeMatch oeo:OEO_00000308 .
+
+# "wind energy converting unit: a power generating unit that uses wind energy"
+optimar:Turbine skos:closeMatch oeo:OEO_00000044 .
+
+# "generator: an energy converting component that converts other forms of energy into electrical energy"
+optimar:Generator skos:closeMatch oeo:OEO_00000188 .
+
+# "transformer: an electricity grid component that passively transfers electrical energy between circuits"
+optimar:Transformer skos:closeMatch oeo:OEO_00000420 .

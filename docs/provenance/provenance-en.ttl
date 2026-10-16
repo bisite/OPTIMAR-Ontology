@@ -1,0 +1,17 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://w3id.org/optimar/2.4> a prov:Entity;
+	 dc:title "Offshore Wind Power Platform Ontology for OPTiMAR";
+	 prov:wasAttributedTo <https://orcid.org/0009-0005-6838-9889>;
+	 dc:creator <https://orcid.org/0009-0005-6838-9889>;
+	 prov:wasAttributedTo <https://orcid.org/0009-0000-3720-3707>;
+	 dc:creator <https://orcid.org/0009-0000-3720-3707>;
+	 prov:wasAttributedTo <https://orcid.org/0000-0003-3566-9460>;
+	 dc:creator <https://orcid.org/0000-0003-3566-9460>;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:specializationOf <https://w3id.org/optimar>;
+	 prov:wasRevisionOf <https://w3id.org/optimar/2.3>;
+	 prov:wasGeneratedAt "2025-09-30";
+.

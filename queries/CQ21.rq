@@ -1,0 +1,12 @@
+# CQ21 [Sensing & failures] Which failures affect turbine blades, with which severity and when were they detected?
+PREFIX optimar: <https://w3id.org/optimar#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT DISTINCT ?blade ?failure ?failureType ?severity ?detectionDate WHERE {
+  ?blade a optimar:Blade ; optimar:affectedBy|^optimar:affects ?failure .
+  ?failure a ?failureType ; optimar:severity ?severity ; optimar:detectionDateTime ?detectionDate .
+  ?failureType rdfs:subClassOf optimar:Failure .
+} ORDER BY ?detectionDate

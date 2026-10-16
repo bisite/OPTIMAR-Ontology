@@ -1,0 +1,13 @@
+# CQ16 [Sensing & failures] Which property (type of data) does each sensor measure, and what does it monitor?
+PREFIX optimar: <https://w3id.org/optimar#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?sensor ?dataType ?monitored WHERE {
+  ?sensor a/rdfs:subClassOf+ optimar:Sensor .
+  { ?sensor optimar:measures|optimar:measuresVibration|optimar:measuresStress|optimar:measuresYawAngle|optimar:measuresPitchAngle|optimar:measuresWindSpeed|optimar:measuresWindDirection ?data . ?data a ?dataType }
+  UNION
+  { ?sensor optimar:monitors|optimar:measuresTemperatureOf|optimar:monitorsYawOf|optimar:monitorsPitchOf ?monitored }
+} ORDER BY ?sensor

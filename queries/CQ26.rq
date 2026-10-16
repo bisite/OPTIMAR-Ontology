@@ -1,0 +1,15 @@
+# CQ26 [Predictive maintenance] Which observation, sensor and failure triggered each maintenance activity? (observation -> event -> failure -> maintenance)
+PREFIX optimar: <https://w3id.org/optimar#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX qudt: <http://qudt.org/schema/qudt/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?maintenance ?event ?failure ?component ?sensor ?observation ?value ?unit WHERE {
+  ?maintenance a optimar:Maintenance ; optimar:triggeredBy ?event .
+  ?event optimar:causedBy ?failure .
+  OPTIONAL { ?failure optimar:affects ?component }
+  OPTIONAL { ?event optimar:detectedBy ?sensor }
+  OPTIONAL { ?event optimar:failureObservation ?observation .
+             ?observation sosa:hasResult/optimar:vibrationLevel [ qudt:numericValue ?value ; qudt:unit ?unit ] }
+}
