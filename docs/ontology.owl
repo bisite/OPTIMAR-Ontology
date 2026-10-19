@@ -9,7 +9,8 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:terms="http://purl.org/dc/terms/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/">
     <owl:Ontology rdf:about="https://w3id.org/optimar">
         <owl:versionIRI rdf:resource="https://w3id.org/optimar/2.4"/>
         <terms:abstract xml:lang="en">Ontology modelling structural elements, mooring systems, sensors, events, and failures in floating offshore wind platforms, including measurement data, involved actors, and semantic relationships between components. It reuses SOSA/SSN for observations, PROV-O for event and data provenance, and QUDT for quantities and units.</terms:abstract>
@@ -70,6 +71,7 @@
         <owl:versionInfo>2.4</owl:versionInfo>
         <foaf:homepage rdf:resource="https://w3id.org/optimar"/>
         <foaf:logo rdf:resource="https://bisite.github.io/OPTIMAR-Ontology/images/optimar-logo.png"/>
+        <schema:includedInDataCatalog rdf:resource="https://lov.linkeddata.es/dataset/lov"/>
     </owl:Ontology>
     
 
@@ -216,6 +218,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/logo"/>
+    
+
+
+    <!-- https://schema.org/includedInDataCatalog -->
+
+
+    <owl:AnnotationProperty rdf:about="https://schema.org/includedInDataCatalog"/>
     
 
 

@@ -22,7 +22,7 @@ Versions follow `MAJOR.MINOR`: a MINOR release adds terms or fixes axioms; a MAJ
 - Added `rdf:type owl:Restriction` to the restrictions on `Hub`, `Nacelle`, `Blade` and `Tower`, and `rdf:type owl:Class` to anonymous unions.
 - Metadata: replaced `dc:name` and `dcterms:status`, which are not DCMI terms, with `dcterms:title` and `bibo:status`. All metadata now uses DCMI Terms. Removed the reference to the non-existent term `optimar:changelog`.
 - Declared every annotation property and every reused external term: the ontology is now in the OWL 2 DL profile.
-- `rdfs:isDefinedBy` for the reused external terms; `dcterms:source` and `foaf:logo` (project logo in `images/`) in the ontology metadata.
+- `rdfs:isDefinedBy` for the reused external terms; `dcterms:source`, `foaf:logo` (project logo in `images/`) and `schema:includedInDataCatalog` (LOV) in the ontology metadata.
 - Fixed typos in labels and comments.
 
 ### Added

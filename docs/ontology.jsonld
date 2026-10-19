@@ -673,6 +673,9 @@
   "@id" : "http://xmlns.com/foaf/0.1/logo",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "https://schema.org/includedInDataCatalog",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "https://w3id.org/optimar",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/abstract" : [ {
@@ -785,6 +788,9 @@
   } ],
   "http://xmlns.com/foaf/0.1/logo" : [ {
     "@id" : "https://bisite.github.io/OPTIMAR-Ontology/images/optimar-logo.png"
+  } ],
+  "https://schema.org/includedInDataCatalog" : [ {
+    "@id" : "https://lov.linkeddata.es/dataset/lov"
   } ]
 }, {
   "@id" : "https://w3id.org/optimar#ActivePowerSensor",

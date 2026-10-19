@@ -65,7 +65,8 @@
                             owl:priorVersion <https://w3id.org/optimar/2.3> ;
                             owl:versionInfo "2.4" ;
                             <http://xmlns.com/foaf/0.1/homepage> <https://w3id.org/optimar> ;
-                            <http://xmlns.com/foaf/0.1/logo> <https://bisite.github.io/OPTIMAR-Ontology/images/optimar-logo.png> .
+                            <http://xmlns.com/foaf/0.1/logo> <https://bisite.github.io/OPTIMAR-Ontology/images/optimar-logo.png> ;
+                            <https://schema.org/includedInDataCatalog> <https://lov.linkeddata.es/dataset/lov> .
 
 #################################################################
 #    Annotation properties
@@ -145,6 +146,10 @@
 
 ###  http://xmlns.com/foaf/0.1/logo
 <http://xmlns.com/foaf/0.1/logo> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/includedInDataCatalog
+<https://schema.org/includedInDataCatalog> rdf:type owl:AnnotationProperty .
 
 
 #################################################################

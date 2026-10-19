@@ -11,6 +11,7 @@
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix bibo: <http://purl.org/ontology/bibo/> .
+@prefix schema: <https://schema.org/> .
 
 ##########################################################
 # Ontology metadata
@@ -54,6 +55,7 @@
     foaf:homepage <https://w3id.org/optimar> ;
     dcterms:source <https://github.com/bisite/OPTIMAR-Ontology> ;
     foaf:logo <https://bisite.github.io/OPTIMAR-Ontology/images/optimar-logo.png> ;
+    schema:includedInDataCatalog <https://lov.linkeddata.es/dataset/lov> ;
     rdfs:seeAlso <https://github.com/bisite/OPTIMAR-Ontology> ;
     rdfs:seeAlso <https://github.com/bisite/OPTIMAR-Ontology/blob/main/CHANGELOG.md> ;
 
@@ -130,6 +132,7 @@ vann:preferredNamespacePrefix a owl:AnnotationProperty .
 vann:preferredNamespaceUri a owl:AnnotationProperty .
 foaf:homepage a owl:AnnotationProperty .
 foaf:logo a owl:AnnotationProperty .
+schema:includedInDataCatalog a owl:AnnotationProperty .
 
 
 ##########################################################

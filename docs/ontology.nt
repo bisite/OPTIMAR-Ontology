@@ -34,6 +34,7 @@
 <https://w3id.org/optimar> <http://www.w3.org/2002/07/owl#versionInfo> "2.4" .
 <https://w3id.org/optimar> <http://xmlns.com/foaf/0.1/homepage> <https://w3id.org/optimar> .
 <https://w3id.org/optimar> <http://xmlns.com/foaf/0.1/logo> <https://bisite.github.io/OPTIMAR-Ontology/images/optimar-logo.png> .
+<https://w3id.org/optimar> <https://schema.org/includedInDataCatalog> <https://lov.linkeddata.es/dataset/lov> .
 # 
 # 
 # #################################################################
@@ -99,6 +100,9 @@
 # 
 # http://xmlns.com/foaf/0.1/logo
 <http://xmlns.com/foaf/0.1/logo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/includedInDataCatalog
+<https://schema.org/includedInDataCatalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # 
 # 
